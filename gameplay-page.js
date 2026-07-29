@@ -37,7 +37,7 @@ function renderArchive() {
     return;
   }
   grid.innerHTML = posts.map(post => `
-    <a class="card" href="article.html?post=${encodeURIComponent(post.slug)}">
+    <a class="card" href="article-${post.slug}.html">
       <div class="card-top">${badgeHTMLN(post.category)}<time>${post.date}</time></div>
       <h3>${post.title}</h3>
       <p>${post.excerpt}</p>
