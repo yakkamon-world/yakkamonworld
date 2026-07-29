@@ -1,24 +1,48 @@
-// Renders the sidebar + detail view on gameplay.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Mint Goes Live October 1st — Yakkamon Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-function renderGameplayPage() {
-  const params = new URLSearchParams(window.location.search);
-  let slug = params.get("system") || (YAKKAMON_GAMEPLAY[0] && YAKKAMON_GAMEPLAY[0].slug);
-  const current = YAKKAMON_GAMEPLAY.find(g => g.slug === slug) || YAKKAMON_GAMEPLAY[0];
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Yakkamon <span class="portal">Unofficial Portal</span></a>
+    <nav class="tabs"><a class="tab" href="index.html">Home</a>
+<a class="tab" href="pre-registration.html">Pre-registration</a>
+<a class="tab active" href="news.html">News</a>
+<a class="tab" href="gameplay.html">Gameplay</a>
+<a class="tab" href="community.html">Community</a>
+<a class="tab" href="stats.html">Stats</a>
+</nav>
+  </div>
+</header>
 
-  const sidebar = document.getElementById("gp-sidebar-list");
-  const detail = document.getElementById("gp-detail");
-  if (!sidebar || !detail || typeof YAKKAMON_GAMEPLAY === "undefined") return;
+<div id="article-root">
+    <div class="wrap article-head">
+      <a class="back-link" href="news.html">&larr; Back to news</a>
+      <div style="height:22px"></div>
+      <span class="badge badge-event">Event</span>
+      <h1>Free Mint Goes Live October 1st</h1>
+      <div class="article-meta">Jul 29, 2026</div>
+    </div>
+    <div class="wrap"><div class="article-body"><p>On October 1st, the Genesis Monster NFT free mint goes live on Ronin. The mint is open to pre-registered trainers only, so signing up before that date is the only way to take part.</p><h2>What you need to know</h2><p>It's free — you only cover a small network fee, called gas. Supply is limited, and a small number of Legendary Founder NFTs are seeded directly into the mint pool.</p><h2>Why it's worth doing</h2><p>Minting also earns pre-registration points toward your trainer tier, on top of the mint itself. Once you have game access, you'll be able to deposit whatever you mint straight into Yakkamon.</p><p>Full breakdown, including source details, is on the Pre-registration page.</p></div></div>
+  </div>
 
-  sidebar.innerHTML = YAKKAMON_GAMEPLAY.map(g => `
-    <li><a href="?system=${g.slug}" class="${g.slug === current.slug ? "active" : ""}">${g.title}</a></li>
-  `).join("");
+<footer><div class="wrap">
+  <div>
+    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND</span>
+    <div class="footer-links">
+      <a href="https://yakkamon.com/" target="_blank" rel="noopener">Official Pre-Registration &#8599;</a>
+      <a href="https://x.com/playyakkamon" target="_blank" rel="noopener">Official Twitter/X &#8599;</a>
+      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">Official Docs &#8599;</a>
+    </div>
+  </div>
+  <span>BUILT BY THE COMMUNITY</span>
+</div></footer>
 
-  detail.innerHTML = `
-    <div class="gp-detail-icon">${current.icon}</div>
-    <h2>${current.title}</h2>
-    <p>${current.detail}</p>
-  `;
-  document.title = `${current.title} — Gameplay — Yakkamon Portal`;
-}
-
-document.addEventListener("DOMContentLoaded", renderGameplayPage);
+</body>
+</html>
