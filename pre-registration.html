@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-registration — Yakkamon Portal</title>
+<meta name="description" content="Yakkamon pre-registration explained simply: points, rewards, Genesis monsters, the free mint, and FLOWER deposits.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
+
+:root{
+  --sky:#2FA8E8; --sky-deep:#1C7FB8;
+  --cream:#FFF4D6; --panel:#FFFFFF;
+  --ink:#1A1A2E;
+  --yellow:#FFD23F; --yellow-deep:#F0AE00;
+  --green:#3FAE5C; --red:#FF3B3B; --purple:#8A5CF0;
+  --font-display:'Bangers',cursive; --font-body:'Nunito',sans-serif;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{
+  margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);font-weight:600;font-size:1rem;line-height:1.6;
+  background-image:radial-gradient(rgba(26,26,46,.07) 1.6px,transparent 1.8px);
+  background-size:13px 13px;
+}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em; line-height:1.15}
+
+/* Comic burst accent, prefixed onto every major heading for a consistent motif */
+.page-head h1, .section-head h2, .article-head h1{
+  display:flex; align-items:center; gap:.45em;
+}
+.page-head h1::before, .section-head h2::before, .article-head h1::before{
+  content:''; width:1em; height:1em; flex-shrink:0; background:var(--red);
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  transform:rotate(-8deg);
+}
+
+/* ---------- Fixed top tabs ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:var(--ink);border-bottom:5px solid var(--red)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;max-width:1080px;margin:0 auto;padding:0 16px}
+.brand{
+  display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:1.5rem;
+  color:var(--yellow); text-decoration:none; padding:12px 8px; line-height:1; white-space:nowrap;
+  text-shadow:
+    -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 2px 2px 0 var(--ink),
+    -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink),
+    3px 3px 0 var(--red);
+}
+.brand .portal{color:var(--sky)}
+.brand-mark{width:26px;height:26px;flex-shrink:0}
+.tabs{display:flex; gap:4px; padding:8px 0}
+.tab{font-family:var(--font-display);font-size:1.05rem;letter-spacing:.02em;color:#fff;text-decoration:none;padding:9px 16px;border:3px solid transparent;border-radius:999px;transition:background .1s ease, transform .1s ease}
+.tab:hover{background:#2c2c48; transform:translateY(-2px)}
+.tab.active{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+@media(max-width:760px){
+  .topbar-inner{flex-wrap:wrap}
+  .tabs{width:100%;justify-content:space-between; gap:2px}
+  .tab{padding:8px 6px;flex:1;text-align:center;font-size:.85rem}
+}
+
+/* ---------- Card / panel primitives ---------- */
+.pixel-box{
+  background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius);
+  box-shadow:7px 7px 0 var(--ink);
+}
+.pixel-btn{
+  font-family:var(--font-display); font-size:1.15rem; letter-spacing:.02em; color:var(--ink);
+  background:var(--yellow); border:4px solid var(--ink); border-radius:999px; box-shadow:5px 5px 0 var(--ink);
+  padding:12px 26px; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  cursor:pointer; transition:transform .1s ease, box-shadow .1s ease;
+}
+.pixel-btn:hover{transform:translate(2px,2px) rotate(-1deg); box-shadow:3px 3px 0 var(--ink)}
+.pixel-btn:active{transform:translate(5px,5px); box-shadow:0 0 0 var(--ink)}
+.pixel-btn.alt{background:var(--panel)}
+.pixel-btn.green{background:var(--green); color:#fff}
+.pixel-btn.red{background:var(--red); color:#fff}
+.pixel-btn.sky{background:var(--sky); color:#fff}
+
+/* ---------- Hero (home page) ---------- */
+.hero{padding:10px 0 6px; text-align:center; background:var(--panel); background-image:radial-gradient(rgba(26,26,46,.08) 1.8px,transparent 2px); background-size:14px 14px; border-bottom:5px solid var(--ink); margin-bottom:0}
+.hero-eyebrow{display:inline-block; font-family:var(--font-display); font-size:1rem; letter-spacing:.03em; background:var(--ink); color:var(--yellow); padding:8px 16px; margin-bottom:22px; border-radius:999px}
+.hero h1{font-size:clamp(1.6rem,4vw,2.5rem); line-height:1.25; margin:0 0 18px; text-shadow:3px 3px 0 var(--panel)}
+.hero h1 .accent{color:var(--red)}
+.hero .sub{font-size:1.1rem; max-width:44ch; margin:0 auto 26px}
+.hero-art{margin:0 auto 26px; width:180px}
+.hero-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+
+/* ---------- Tile grid (home destination tiles) ---------- */
+.tile-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin:44px 0}
+.dest-tile{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:26px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:12px; transition:transform .1s ease, box-shadow .1s ease}
+.dest-tile:hover{transform:translate(3px,3px) rotate(-.6deg); box-shadow:4px 4px 0 var(--ink)}
+.dest-tile .icon{width:40px; height:40px}
+.dest-tile h3{font-size:1.4rem; margin:0}
+.dest-tile p{font-size:1rem; margin:0; color:#4a4a5c; font-weight:600}
+
+/* ---------- Section head ---------- */
+.page-head{padding:36px 0 6px}
+.page-head h1{font-size:clamp(1.8rem,4vw,2.6rem); margin:0 0 14px}
+.page-head p{font-size:1.1rem; max-width:none; margin:0; font-weight:600; white-space:nowrap}
+@media(max-width:760px){.page-head p{white-space:normal}}
+
+.section-head{display:flex; align-items:baseline; justify-content:space-between; margin:40px 0 20px; flex-wrap:wrap; gap:10px}
+.section-head h2{font-size:1.7rem; margin:0}
+.section-head a.view-all{font-family:var(--font-body); font-size:.95rem; font-weight:800; color:var(--red); text-decoration:none}
+.section-head a.view-all:hover{text-decoration:underline}
+
+/* ---------- Badges ---------- */
+.badge{display:inline-block; font-family:var(--font-display); font-size:.95rem; letter-spacing:.02em; padding:5px 14px; border:3px solid var(--ink); border-radius:999px; color:#fff}
+.badge-patch{background:var(--yellow-deep); color:var(--ink)}
+.badge-event{background:var(--red)}
+.badge-community{background:var(--green)}
+
+/* ---------- News / card grid ---------- */
+.news-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:20px; margin-bottom:8px}
+.card{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); padding:20px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:10px; transition:transform .1s ease, box-shadow .1s ease}
+.card:hover{transform:translate(3px,3px) rotate(-.5deg); box-shadow:3px 3px 0 var(--ink)}
+.card-top{display:flex; justify-content:space-between; align-items:center; gap:10px}
+.card time{font-size:.85rem; color:#6a6a80; font-weight:700}
+.card h3{font-size:1.35rem; margin:0; line-height:1.2}
+.card p{margin:0; font-size:.95rem; color:#3d3d50; flex-grow:1; font-weight:600}
+.card .read-more{font-family:var(--font-display); font-size:1rem; color:var(--red)}
+
+/* ---------- Docs sidebar (News + Gameplay pages) ---------- */
+.docs-layout{display:grid; grid-template-columns:230px 1fr; gap:32px; margin-top:20px}
+@media(max-width:760px){.docs-layout{grid-template-columns:1fr}}
+.sidebar{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); padding:18px; align-self:start}
+.sidebar-label{font-family:var(--font-display); font-size:1rem; letter-spacing:.03em; margin:0 0 14px}
+.sidebar-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:4px}
+.sidebar-list li a{display:block; padding:9px 12px; font-size:1rem; font-weight:700; color:var(--ink); text-decoration:none; border:2px solid transparent; border-radius:10px}
+.sidebar-list li a:hover{border-color:var(--ink)}
+.sidebar-list li a.active{background:var(--yellow); border-color:var(--ink)}
+.sidebar-count{float:right; font-size:.9rem; color:#6a6a80}
+
+.gp-detail{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:30px}
+.gp-detail-icon{width:44px; height:44px; margin-bottom:16px}
+.gp-detail h2{font-size:1.9rem; margin:0 0 14px}
+.gp-detail p{margin:0; font-size:1.05rem; color:#3d3d50; font-weight:600}
+
+/* ---------- Gameplay teaser tiles ---------- */
+.gameplay-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px}
+.gp-tile{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); padding:22px; display:flex; flex-direction:column; gap:10px; text-decoration:none; color:var(--ink); transition:transform .1s ease, box-shadow .1s ease}
+.gp-tile:hover{transform:translate(3px,3px) rotate(-.5deg); box-shadow:3px 3px 0 var(--ink)}
+.gp-icon{width:34px; height:34px}
+.gp-tile h3{font-size:1.3rem; margin:0}
+.gp-tile p{margin:0; font-size:.95rem; color:#4a4a5c; font-weight:600}
+
+/* ---------- Tweets / community ---------- */
+.tweets-panel{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); overflow:hidden}
+.tweets-head{display:flex; align-items:center; gap:10px; padding:14px 20px; border-bottom:5px solid var(--ink); background:var(--sky)}
+.tweets-head svg{width:20px; height:20px; color:#fff}
+.tweets-head span{font-size:.95rem; font-weight:800; color:#fff}
+.tweet{display:flex; gap:14px; padding:18px 20px; border-bottom:3px dashed #ddd}
+.tweet:last-child{border-bottom:none}
+.tweet-avatar{width:40px; height:40px; border-radius:50%; background:var(--yellow); border:3px solid var(--ink); flex-shrink:0; display:grid; place-items:center; font-family:var(--font-display); font-size:1.1rem}
+.tweet-body{flex-grow:1}
+.tweet-name{font-weight:800; font-size:.98rem}
+.tweet-handle{color:#6a6a80; font-size:.9rem; margin-left:6px}
+.tweet-text{font-size:1rem; margin:6px 0 6px; font-weight:600}
+.tweet-meta{font-size:.85rem; color:#6a6a80}
+
+/* ---------- Stats page panel ---------- */
+.panel{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); overflow:hidden}
+.panel-head{display:flex; align-items:center; gap:10px; padding:14px 20px; border-bottom:5px solid var(--ink); background:var(--yellow)}
+.panel-head span.label{font-family:var(--font-display); font-size:1.05rem; letter-spacing:.02em}
+.panel-body-inner{padding:28px 22px; display:flex; align-items:center; gap:22px; flex-wrap:wrap}
+.panel-icon{width:56px; height:56px; border:3px solid var(--ink); border-radius:50%; display:grid; place-items:center; flex-shrink:0}
+.panel-icon svg{width:26px; height:26px}
+.panel-body h3{font-size:1.6rem; margin:0 0 10px}
+.panel-body p{margin:0; font-size:1.02rem; color:#3d3d50; max-width:60ch; font-weight:600}
+.lock-pill{font-family:var(--font-display); font-size:.95rem; background:var(--red); color:#fff; padding:7px 16px; border:3px solid var(--ink); border-radius:999px; margin-left:auto}
+
+/* ---------- Filters (not used with sidebar, kept for compat) ---------- */
+.filter-row{display:flex; gap:10px; margin:24px 0 8px; flex-wrap:wrap}
+.filter-btn{font-family:var(--font-display); font-size:1rem; padding:9px 18px; border:3px solid var(--ink); border-radius:999px; background:var(--panel); color:var(--ink); cursor:pointer}
+.filter-btn.active,.filter-btn:hover{background:var(--yellow)}
+
+/* ---------- Article ---------- */
+.article-head{padding:36px 0 10px}
+.article-head .badge{margin-bottom:18px}
+.article-head h1{font-size:clamp(1.7rem,3.6vw,2.3rem); line-height:1.2; margin:0 0 14px}
+.article-meta{font-size:.9rem; color:#5a5a70; font-weight:700}
+.article-body{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:32px; margin:26px 0 60px; font-size:1.08rem}
+.article-body p{margin:0 0 18px; font-weight:600}
+.article-body h2{font-size:1.5rem; margin:28px 0 12px}
+.back-link{display:inline-flex; align-items:center; gap:6px; color:var(--ink); text-decoration:none; font-size:.95rem; font-weight:800}
+.back-link:hover{color:var(--red)}
+.empty-state{text-align:center; padding:56px 20px; font-size:1.1rem; font-weight:700}
+
+footer{border-top:5px solid var(--red); margin-top:70px; padding:22px 0 40px; background:var(--ink); color:#fff}
+footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.85rem; font-weight:700}
+
+/* ---------- Tiered pre-registration window (matches reference screenshot, retinted) ---------- */
+.yk-window{
+  max-width:660px; margin:0 auto;
+  border:5px solid var(--red); border-radius:var(--radius); box-shadow:0 0 0 2px var(--ink);
+  font-family:var(--font-body); overflow:hidden;
+}
+.yk-titlebar{
+  background:var(--yellow); border-bottom:4px solid var(--ink);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:8px 10px;
+}
+.yk-titlebar .yk-icon-btn{
+  width:26px; height:26px; background:var(--sky); border:3px solid var(--ink); border-radius:8px;
+  display:grid; place-items:center; flex-shrink:0; cursor:pointer;
+}
+.yk-titlebar h2{
+  font-size:1.4rem; margin:0; letter-spacing:.02em;
+}
+.yk-body{
+  background:
+    repeating-linear-gradient(45deg, rgba(0,0,0,.05) 0 6px, transparent 6px 12px),
+    #C98A4E;
+  padding:16px;
+}
+.yk-tab{
+  display:inline-block; background:#D9C98A; border:3px solid var(--ink); border-radius:999px;
+  font-family:var(--font-display); font-size:1rem; letter-spacing:.02em; padding:8px 16px; margin-bottom:14px;
+  color:#1A1A2E;
+}
+
+/* Timeline strip */
+.yk-timeline{
+  background:#B87A3F; border:3px solid var(--ink); border-radius:12px; padding:16px 10px 10px;
+  margin-bottom:16px;
+}
+.yk-timeline-track{
+  display:flex; align-items:flex-start; gap:0; width:100%; position:relative; padding-top:6px;
+}
+.yk-tl-baseline{
+  position:absolute; top:25px; left:0; right:0; height:3px; background:var(--ink); z-index:0;
+}
+.yk-tl-node{flex:1; text-align:center; position:relative; z-index:1}
+.yk-tl-dot{
+  width:22px; height:22px; margin:0 auto 8px; border:3px solid var(--ink); border-radius:50%; position:relative; z-index:1;
+  display:grid; place-items:center; background:#E8B074;
+}
+.yk-tl-dot svg{width:11px; height:11px}
+.yk-tl-node.goal .yk-tl-dot{background:var(--yellow); border-width:4px}
+.yk-tl-node.mint .yk-tl-dot{background:var(--sky)}
+.yk-tl-label{font-size:.85rem; color:var(--ink); line-height:1.15; white-space:nowrap; font-weight:800}
+.yk-tl-node.goal .yk-tl-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
+.yk-tl-date{font-size:.78rem; color:#3B2A1A; display:block; white-space:nowrap; font-weight:700}
+.yk-tl-today-label{font-family:var(--font-display); font-size:.95rem; color:var(--red); display:block; margin-bottom:5px; white-space:nowrap}
+.yk-tl-tick{width:4px; height:20px; background:var(--red); border:2px solid var(--ink); margin:0 auto 8px; position:relative; z-index:1}
+
+.yk-desc{font-size:1rem; color:#2B1D10; margin:0 0 14px; font-weight:700}
+.yk-tier-list{border-top:2px solid var(--ink)}
+.yk-tier-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 2px; border-bottom:2px solid rgba(26,26,46,.35);
+}
+.yk-tier-left{display:flex; align-items:center; gap:8px}
+.yk-tier-left svg{width:16px; height:16px}
+.yk-tier-label{font-size:.98rem; font-weight:800; color:var(--ink)}
+.yk-tier-date{font-size:.95rem; color:var(--ink); font-weight:700}
+
+/* ---------- Pre-registration content page ---------- */
+.prereg-section{margin-bottom:48px; scroll-margin-top:90px}
+.prereg-section h2{font-size:1.6rem; margin:0 0 16px}
+.prereg-section > p{font-size:1.05rem; margin:0 0 14px; font-weight:600}
+.prereg-callout{border:3px solid var(--ink); border-radius:var(--radius); padding:14px 18px; margin:16px 0; font-size:.98rem; font-weight:700}
+.prereg-callout.success{background:#CFEFD6}
+.prereg-callout.warning{background:#FBE7A8}
+.prereg-callout.info{background:#CDE9F7}
+.prereg-table{width:100%; border-collapse:separate; border-spacing:0; margin:16px 0 20px; font-size:.95rem; border:3px solid var(--ink); border-radius:var(--radius); overflow:hidden}
+.prereg-table th,.prereg-table td{border-bottom:2px solid var(--ink); border-right:2px solid var(--ink); padding:10px 14px; text-align:left}
+.prereg-table th:last-child,.prereg-table td:last-child{border-right:none}
+.prereg-table tr:last-child td{border-bottom:none}
+.prereg-table th{background:var(--yellow); font-family:var(--font-display); font-size:1rem; letter-spacing:.02em}
+.prereg-table td{background:var(--panel); font-weight:600}
+.prereg-list{padding-left:22px; font-size:1rem; line-height:1.7; margin:0 0 14px; font-weight:600}
+.prereg-list li{margin-bottom:6px}
+.jargon{border-bottom:2px dotted var(--ink); cursor:help}
+
+/* ---------- Bare timeline (Home page, matches site palette) ---------- */
+.site-timeline{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:26px 20px 16px; margin:40px 0 20px}
+@media(max-width:700px){.site-timeline{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .site-timeline-track{min-width:640px}}
+.site-timeline-track{display:flex; align-items:flex-start; gap:0; width:100%; position:relative; padding-top:6px}
+.st-baseline{position:absolute; top:27px; left:0; right:0; height:3px; background:var(--ink); z-index:0}
+.st-node{flex:1; text-align:center; position:relative; z-index:1}
+.st-dot{width:22px; height:22px; margin:0 auto 8px; border:3px solid var(--ink); border-radius:50%; position:relative; z-index:1; display:grid; place-items:center; background:var(--cream)}
+.st-dot svg{width:11px; height:11px}
+.st-node.mint .st-dot{background:var(--sky)}
+.st-node.goal .st-dot{background:var(--yellow); border-width:4px}
+.st-label{font-size:.85rem; color:var(--ink); line-height:1.15; white-space:nowrap; display:block; font-weight:800}
+.st-node.goal .st-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
+.st-node.mint .st-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
+.st-date{font-size:.78rem; color:#4a4a5c; display:block; white-space:nowrap; font-weight:700}
+.st-today-label{font-family:var(--font-display); font-size:.95rem; color:var(--red); display:block; margin-bottom:5px; white-space:nowrap}
+.st-tick{width:4px; height:20px; background:var(--red); border:2px solid var(--ink); margin:0 auto 8px}
+
+.timeline-notes{display:flex; flex-direction:column; gap:12px; margin-bottom:40px}
+
+/* ---------- "What is Yakkamon?" section (Home page) ---------- */
+.about-section{margin:20px 0 30px}
+.about-box{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:26px}
+.about-box p{font-size:1.05rem; margin:0 0 16px; font-weight:600}
+.about-box p:last-child{margin-bottom:0}
+.about-basics{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:18px 0}
+.about-basic{background:var(--cream); border:3px solid var(--ink); border-radius:12px; padding:12px; text-align:center}
+.about-basic .icon{width:22px; height:22px; margin:0 auto 6px}
+.about-basic span{font-family:var(--font-display); font-size:.95rem; letter-spacing:.02em; display:block}
+.about-box a{color:var(--sky-deep); font-weight:800}
+
+/* ---------- Hero logo lockup ---------- */
+.hero-logo{display:flex; flex-direction:column; align-items:center; gap:0; margin-bottom:0}
+.hero-logo svg{width:150px; height:150px}
+.hero-wordmark{
+  font-family:var(--font-display); font-size:clamp(2.4rem,7vw,4rem); margin:0; line-height:1;
+  letter-spacing:.02em; text-align:center; color:var(--yellow);
+  text-shadow:
+    -3px -3px 0 var(--ink), 3px -3px 0 var(--ink), -3px 3px 0 var(--ink), 3px 3px 0 var(--ink),
+    -3px 0 0 var(--ink), 3px 0 0 var(--ink), 0 -3px 0 var(--ink), 0 3px 0 var(--ink),
+    6px 6px 0 var(--red);
+}
+.hero-wordmark .world{color:var(--sky)}
+
+/* ---------- Footer official links row ---------- */
+.footer-links{margin-top:10px; display:flex; gap:18px; font-size:.85rem; font-weight:800}
+.footer-links a{color:var(--yellow); text-decoration:none}
+.footer-links a:hover{text-decoration:underline; color:var(--sky)}
+
+/* ---------- Sign-up CTA (Home page, Pre-registration section) ---------- */
+.signup-cta{background:var(--ink); border:5px solid var(--ink); border-radius:var(--radius); padding:26px; text-align:center; margin-bottom:40px}
+.signup-cta p{color:#fff; font-size:1.05rem; font-weight:700; margin:0 0 16px}
+
+/* ---------- Follow badge (hero, home page) ---------- */
+.follow-badge{
+  display:inline-flex; align-items:center; gap:8px; margin-top:14px;
+  background:var(--ink); color:#fff; font-family:var(--font-body); font-weight:800; font-size:.95rem;
+  padding:9px 18px; border-radius:999px; text-decoration:none; border:3px solid var(--ink);
+  transition:transform .1s ease, background .1s ease;
+}
+.follow-badge:hover{background:var(--sky); transform:translateY(-2px)}
+.follow-badge svg{width:16px; height:16px; flex-shrink:0}
+
+/* ---------- Latest from Twitter/X callout (News page) ---------- */
+.twitter-callout{
+  background:var(--ink); border:5px solid var(--ink); border-radius:var(--radius);
+  padding:22px 26px; margin:24px 0 8px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+}
+.twitter-callout .tw-icon{
+  width:52px; height:52px; background:var(--sky); border-radius:50%; display:grid; place-items:center; flex-shrink:0;
+}
+.twitter-callout .tw-icon svg{width:26px; height:26px; color:#fff}
+.twitter-callout .tw-body{flex:1; min-width:220px}
+.twitter-callout h2{color:#fff; font-size:1.3rem; margin:0 0 6px}
+.twitter-callout p{color:#c9c8d8; font-size:.95rem; margin:0; font-weight:600}
+
+/* ---------- Discord coming-soon callout (Community page) ---------- */
+.discord-callout{
+  background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius);
+  padding:22px 26px; margin:24px 0 8px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+}
+.discord-callout .dc-icon{
+  width:52px; height:52px; background:var(--purple); border-radius:50%; display:grid; place-items:center; flex-shrink:0;
+}
+.discord-callout .dc-icon svg{width:26px; height:26px; color:#fff}
+.discord-callout .dc-body{flex:1; min-width:220px}
+.discord-callout h2{font-size:1.3rem; margin:0 0 6px}
+.discord-callout p{font-size:.95rem; margin:0; color:#4a4a5c; font-weight:600}
+
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Yakkamon <span class="portal">Unofficial Portal</span></a>
+    <nav class="tabs"><a class="tab" href="index.html">Home</a>
+<a class="tab active" href="pre-registration.html">Pre-registration</a>
+<a class="tab" href="news.html">News</a>
+<a class="tab" href="gameplay.html">Gameplay</a>
+<a class="tab" href="community.html">Community</a>
+<a class="tab" href="stats.html">Stats</a>
+</nav>
+  </div>
+</header>
+
+<div class="wrap page-head">
+  <h1>PRE-REGISTRATION</h1>
+  <p>Everything you need to know about signing up early &mdash; explained without assuming you know crypto or NFTs.</p>
+</div>
+
+<main class="wrap" style="padding-bottom:60px">
+<div class="docs-layout">
+  <aside class="sidebar">
+    <p class="sidebar-label">CATEGORIES</p>
+    <ul class="sidebar-list">
+      <li><a href="#getting-started">Getting started</a></li>
+      <li><a href="#reward-track">Reward track</a></li>
+      <li><a href="#genesis-monsters">Genesis monsters</a></li>
+      <li><a href="#free-mint">Free mint (Oct 1)</a></li>
+      <li><a href="#flower-deposits">FLOWER deposits</a></li>
+    </ul>
+  </aside>
+
+  <div>
+
+  <section class="prereg-section" id="getting-started">
+    <h2>1. GETTING STARTED</h2>
+    <p>Sign up with just an email to claim a starter <strong>Monster Pack</strong>. From there, you earn <strong>points</strong> by staying active before launch &mdash; the more points you earn, the better your rewards when the game opens.</p>
+    <p>Your points decide three things:</p>
+    <ul class="prereg-list">
+      <li><strong>Your trainer number</strong> &mdash; your permanent rank among the founding players.</li>
+      <li><strong>Which wave you join</strong> &mdash; higher-ranked players get in first when early access opens.</li>
+      <li><strong>What you receive at launch</strong> &mdash; including a shot at a free Genesis monster (see below).</li>
+    </ul>
+    <p><strong>How to earn points:</strong></p>
+    <ul class="prereg-list">
+      <li>Tap your egg once a day (bonus points for keeping a daily streak going)</li>
+      <li>Link your Discord and Twitter, and post weekly</li>
+      <li>Refer friends &mdash; you earn points for every signup</li>
+      <li>Take part in the free mint (see below)</li>
+      <li>Deposit $FLOWER early (see below)</li>
+    </ul>
+    <div class="prereg-callout info">Daily actions add up over time. The earlier you start, the harder your rank is for others to catch up to.</div>
+  </section>
+
+  <section class="prereg-section" id="reward-track">
+    <h2>2. REWARD TRACK</h2>
+    <p>As your points grow, you unlock rewards automatically &mdash; no extra steps needed.</p>
+    <table class="prereg-table">
+      <tr><th>Points</th><th>Reward</th></tr>
+      <tr><td>Just for signing up</td><td>Platinum Monster Pack (gems + in-game items)</td></tr>
+      <tr><td>100</td><td>1 raffle ticket</td></tr>
+      <tr><td>250</td><td>Reserve your trainer username</td></tr>
+      <tr><td>400</td><td>Care package</td></tr>
+      <tr><td>600</td><td>5 raffle tickets</td></tr>
+      <tr><td>800</td><td>Bonus monster egg</td></tr>
+      <tr><td>1,000</td><td>Early access &mdash; Tier I</td></tr>
+    </table>
+  </section>
+
+  <section class="prereg-section" id="genesis-monsters">
+    <h2>3. GENESIS MONSTERS</h2>
+    <p>When early access opens, the <strong>5,000 highest-ranked players</strong> each get a free <strong>Genesis Monster</strong> &mdash; a powerful starter creature that will never be available again to anyone, at any price. The top <strong>1,000</strong> get an even rarer <span class="jargon" title="A digital item you truly own and can trade, similar to owning a rare trading card that also happens to be provably one-of-a-kind.">Legendary</span> version.</p>
+    <ul class="prereg-list">
+      <li><strong>Genuinely powerful</strong> &mdash; not just a collectible. It's a real head start in the game.</li>
+      <li><strong>Starts with XP</strong> &mdash; it arrives already leveled up, ahead of monsters caught on day one.</li>
+      <li><strong>Fully yours</strong> &mdash; you can trade it with other players if you want to.</li>
+      <li><strong>Specialised</strong> &mdash; some are built for battle, some for gathering resources, some for other parts of the game.</li>
+    </ul>
+    <table class="prereg-table">
+      <tr><th>Your rank</th><th>You get</th><th>Access wave</th></tr>
+      <tr><td>1 &ndash; 100</td><td>Legendary Genesis Egg A</td><td>Wave 1</td></tr>
+      <tr><td>101 &ndash; 500</td><td>Legendary Genesis Egg B</td><td>Wave 1</td></tr>
+      <tr><td>501 &ndash; 1,000</td><td>Legendary Genesis Egg C</td><td>Wave 1</td></tr>
+      <tr><td>1,001 &ndash; 5,000</td><td>Genesis Monster</td><td>Wave 2</td></tr>
+      <tr><td>5,001 &ndash; 20,000</td><td>Early access only</td><td>Wave 3</td></tr>
+      <tr><td>20,001+</td><td>Early access only</td><td>Wave 4</td></tr>
+    </table>
+    <div class="prereg-callout success"><strong>You won't know what you got until launch.</strong> A live "Reveal Event" unwraps every Genesis monster at once &mdash; part of the fun is finding out where you landed.</div>
+  </section>
+
+  <section class="prereg-section" id="free-mint">
+    <h2>4. FREE MINT &mdash; OCTOBER 1ST</h2>
+    <p>On <strong>October 1st</strong>, pre-registered players can claim a Genesis Monster through a "free mint" &mdash; a one-time claim that costs nothing but a small network fee.</p>
+    <table class="prereg-table">
+      <tr><th>When</th><td>October 1st</td></tr>
+      <tr><th>Where</th><td>Ronin &mdash; the network Yakkamon runs on</td></tr>
+      <tr><th>Cost</th><td>Free (you only pay a small network fee called "gas")</td></tr>
+      <tr><th>Supply</th><td>Limited, including a small number of Legendary items</td></tr>
+      <tr><th>Who</th><td>Pre-registered trainers only</td></tr>
+    </table>
+    <ul class="prereg-list">
+      <li>It's free &mdash; no purchase required, just the small network fee</li>
+      <li>It earns you pre-registration points</li>
+      <li>A few Legendary items are hidden in the mint pool</li>
+      <li>Supply is limited and won't be repeated</li>
+    </ul>
+    <div class="prereg-callout warning"><strong>You must be pre-registered before October 1st to take part.</strong> There's no way to join after the fact.</div>
+  </section>
+
+  <section class="prereg-section" id="flower-deposits">
+    <h2>5. FLOWER DEPOSITS</h2>
+    <p>$FLOWER is the in-game currency already used across the studio's other games &mdash; Yakkamon doesn't launch a new one. Depositing early is like pre-loading credit before the store opens.</p>
+    <p>Every deposit does <strong>two things at once</strong>:</p>
+    <ul class="prereg-list">
+      <li><strong>Saves it for you</strong> &mdash; it's held and ready the moment you get game access.</li>
+      <li><strong>Earns points now</strong> &mdash; bigger deposits earn exponentially more points.</li>
+    </ul>
+    <p>You're not trading one for the other &mdash; you keep the $FLOWER <em>and</em> the points.</p>
+    <p><strong>Once you're in the game</strong>, you can spend it on gear and crafting, or withdraw it with no tax, any time.</p>
+    <div class="prereg-callout info">For security, small percentage-based withdrawal limits may apply during the first few weeks after launch. This only limits how much you can withdraw at once while things stabilise &mdash; not whether you can withdraw at all.</div>
+  </section>
+
+  </div>
+</div>
+</main>
+
+
+<footer><div class="wrap">
+  <div>
+    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND</span>
+    <div class="footer-links">
+      <a href="https://yakkamon.com/" target="_blank" rel="noopener">Official Pre-Registration &#8599;</a>
+      <a href="https://x.com/playyakkamon" target="_blank" rel="noopener">Official Twitter/X &#8599;</a>
+      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">Official Docs &#8599;</a>
+    </div>
+  </div>
+  <span>BUILT BY THE COMMUNITY</span>
+</div></footer>
+
+</body>
+</html>
