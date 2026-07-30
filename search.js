@@ -42,6 +42,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "What each term actually means and how they relate to each other.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Free Mint vs the Genesis Airdrop", excerpt: "They sound similar but work completely differently — here's the side-by-side comparison.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "What is gas? What is Ronin?", excerpt: "The network fee and the blockchain Yakkamon runs on, explained in plain language.", url: "faq.html#mint-vs-airdrop" },
+  { tag: "FAQ", title: "When does the Genesis Drop leaderboard end?", excerpt: "It ends Nov 1 when Early Access starts. Your points decide your rank, your rank decides your egg and wave.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "Can I get my FLOWER back?", excerpt: "Yes, withdraw anytime tax-free, with small security limits in the first weeks after launch.", url: "faq.html#flower" },
   { tag: "FAQ", title: "When does the game actually launch?", excerpt: "November 1st is early access, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];
