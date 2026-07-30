@@ -1,0 +1,8 @@
+# YakkamonWorld — robots.txt
+# This is a public fan portal, so we want it findable everywhere:
+# search engines, and AI answer engines (ChatGPT, Claude, Perplexity).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yakkamonworld.com/sitemap.xml
