@@ -2,6 +2,8 @@
 // Pulls from the same YAKKAMON_POSTS data used by news.html, so this
 // section always stays in sync automatically — no separate copy to
 // maintain. Posts are expected newest-first in posts.js.
+// Rendered as a compact one-row-per-post list (not full cards) so it
+// stays short on the homepage — full detail lives on the News page.
 
 (function () {
   const BADGE_LABEL = { patch: "Patch Notes", event: "Event", community: "Community" };
@@ -20,11 +22,12 @@
       return;
     }
 
+    grid.className = "home-news-list";
     grid.innerHTML = latest.map((post) => `
-      <a class="card" href="article-${post.slug}.html">
-        <div class="card-top">${badgeHTML(post.category)}<time>${post.date}</time></div>
+      <a class="home-news-row" href="article-${post.slug}.html">
+        ${badgeHTML(post.category)}
         <h3>${post.title}</h3>
-        <p>${post.excerpt}</p>
+        <time>${post.date}</time>
         <span class="read-more">Read more &rarr;</span>
       </a>
     `).join("");
