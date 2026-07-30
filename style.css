@@ -65,6 +65,11 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
   .tab{padding:9px 4px; text-align:center; font-size:.8rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
   .tab .label-full{display:none}
   .tab .label-short{display:inline}
+  .search-btn{
+    grid-column:1 / -1; width:100%; height:40px; border-radius:999px; margin:2px 0 0;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .search-btn::after{content:"Search"; font-family:var(--font-display); font-size:.85rem; letter-spacing:.02em}
 }
 
 /* ---------- Card / panel primitives ---------- */
@@ -397,9 +402,8 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .discord-callout p{font-size:.95rem; margin:0; color:#4a4a5c; font-weight:600}
 
 /* ---------- Site search ---------- */
-.brand-search-group{display:flex; align-items:center; gap:10px}
 .search-btn{
-  width:38px; height:38px; border-radius:50%; border:2px solid var(--yellow); background:transparent;
+  width:38px; height:38px; margin-left:8px; border-radius:50%; border:2px solid var(--yellow); background:transparent;
   color:var(--yellow); display:grid; place-items:center; cursor:pointer; flex-shrink:0; transition:background .1s ease;
 }
 .search-btn:hover{background:#2c2c48}
