@@ -6,6 +6,13 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "faq-page-live",
+    category: "event",
+    title: "New: FAQ Page Answers Your Trickiest Pre-Reg Questions",
+    date: "Jul 30, 2026",
+    excerpt: "Wallets, gas, Ronin, and the difference between the Free Mint and the Genesis Airdrop — all explained in plain language."
+  },
+  {
     slug: "access-code-today",
     category: "event",
     title: "Sunflower Land Players (150+ Bumpkin Level): Get Your Access Code Today",
