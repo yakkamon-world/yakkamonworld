@@ -37,6 +37,7 @@ const SEARCH_INDEX = [
   { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" },
 
   { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
+  { tag: "FAQ", title: "How to pre-register (Sunflower Land players)", excerpt: "Access dates by Bumpkin Level, plus step-by-step: find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "faq.html#sunflowerland-guide" },
   { tag: "FAQ", title: "Do I need a crypto wallet?", excerpt: "Pre-registering only needs an email. A wallet only matters if you want to take part in the Free Mint.", url: "faq.html#general" },
   { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "What each term actually means and how they relate to each other.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Free Mint vs the Genesis Airdrop", excerpt: "They sound similar but work completely differently — here's the side-by-side comparison.", url: "faq.html#mint-vs-airdrop" },
