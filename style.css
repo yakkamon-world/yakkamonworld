@@ -274,9 +274,9 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .prereg-callout.success{background:#CFEFD6}
 .prereg-callout.warning{background:#FBE7A8}
 .prereg-callout.info{background:#CDE9F7}
-.prereg-table{width:100%; border-collapse:separate; border-spacing:0; margin:16px 0 20px; font-size:.95rem; border:3px solid var(--ink); border-radius:var(--radius); overflow:hidden}
+.table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:16px 0 20px; border-radius:var(--radius)}
+.prereg-table{width:100%; border-collapse:separate; border-spacing:0; margin:0; font-size:.95rem; border:3px solid var(--ink); border-radius:var(--radius); overflow:hidden}
 @media(max-width:600px){
-  .prereg-table{display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:12px}
   .prereg-table th,.prereg-table td{white-space:nowrap}
 }
 .prereg-table th,.prereg-table td{border-bottom:2px solid var(--ink); border-right:2px solid var(--ink); padding:10px 14px; text-align:left}
