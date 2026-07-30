@@ -11,7 +11,12 @@
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="index.html">Yakkamon <span class="portal"><span class="portal-full">Unofficial Portal</span><span class="portal-short">Portal</span></span></a>
+        <div class="brand-search-group">
+      <a class="brand" href="index.html">Yakkamon <span class="portal"><span class="portal-full">Unofficial Portal</span><span class="portal-short">Portal</span></span></a>
+      <button class="search-btn" id="search-btn" aria-label="Search the site" type="button">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    </div>
     <nav class="tabs"><a class="tab active" href="index.html">Home</a>
 <a class="tab" href="pre-registration.html"><span class="label-full">Pre-registration</span><span class="label-short">Pre-Reg</span></a>
 <a class="tab" href="news.html">News</a>
@@ -21,6 +26,18 @@
 </nav>
   </div>
 </header>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-panel">
+    <div class="search-panel-head">
+      <input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
+    </div>
+    <p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
 
 <section class="hero"><div class="wrap">
   <div class="hero-logo">
@@ -173,5 +190,6 @@
   <span>BUILT BY THE COMMUNITY</span>
 </div></footer>
 
+<script src="search.js"></script>
 </body>
 </html>
