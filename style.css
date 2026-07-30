@@ -290,21 +290,38 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 
 /* ---------- Bare timeline (Home page, matches site palette) ---------- */
 .site-timeline{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:26px 20px 16px; margin:40px 0 20px}
-@media(max-width:700px){.site-timeline{overflow-x:auto; -webkit-overflow-scrolling:touch}
-  .site-timeline-track{min-width:640px}}
 .site-timeline-track{display:flex; align-items:flex-start; gap:0; width:100%; position:relative; padding-top:6px}
 .st-baseline{position:absolute; top:27px; left:0; right:0; height:3px; background:var(--ink); z-index:0}
-.st-node{flex:1; text-align:center; position:relative; z-index:1}
+.st-node{flex:1; min-width:0; text-align:center; position:relative; z-index:1}
 .st-dot{width:22px; height:22px; margin:0 auto 8px; border:3px solid var(--ink); border-radius:50%; position:relative; z-index:1; display:grid; place-items:center; background:var(--cream)}
 .st-dot svg{width:11px; height:11px}
 .st-node.mint .st-dot{background:var(--sky)}
 .st-node.goal .st-dot{background:var(--yellow); border-width:4px}
+.st-node.hit .st-dot{background:var(--green); border-color:var(--ink)}
+.st-node.hit .st-label{color:var(--green); font-weight:900}
+.st-node.hit .st-date{color:var(--green); font-weight:800}
 .st-label{font-size:.85rem; color:var(--ink); line-height:1.15; white-space:nowrap; display:block; font-weight:800}
 .st-node.goal .st-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
 .st-node.mint .st-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
 .st-date{font-size:.78rem; color:#4a4a5c; display:block; white-space:nowrap; font-weight:700}
 .st-today-label{font-family:var(--font-display); font-size:.95rem; color:var(--red); display:block; margin-bottom:5px; white-space:nowrap}
 .st-tick{width:4px; height:20px; background:var(--red); border:2px solid var(--ink); margin:0 auto 8px}
+.lvl-short{display:none}
+
+@media(max-width:640px){
+  .site-timeline{padding:18px 4px 10px}
+  .st-baseline{top:19px}
+  .st-dot{width:15px; height:15px; margin-bottom:4px; border-width:2px}
+  .st-dot svg{width:7px; height:7px}
+  .st-node.goal .st-dot{border-width:3px}
+  .st-label{font-size:.52rem; white-space:normal; overflow-wrap:break-word; line-height:1.1}
+  .st-node.goal .st-label,.st-node.mint .st-label{font-size:.5rem; line-height:1.2}
+  .st-date{font-size:.46rem; white-space:normal; overflow-wrap:break-word}
+  .st-today-label{font-size:.48rem; margin-bottom:3px}
+  .st-tick{width:3px; height:15px; margin-bottom:4px}
+  .lvl-full{display:none}
+  .lvl-short{display:inline}
+}
 
 .timeline-notes{display:flex; flex-direction:column; gap:12px; margin-bottom:40px}
 
