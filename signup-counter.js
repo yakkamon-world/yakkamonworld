@@ -10,7 +10,7 @@
 // fails for any reason (worker not deployed yet, offline, etc.) — the
 // page always shows *something* correct-looking rather than breaking.
 
-const COUNTER_WORKER_URL = "https://yakkamon-counter-worker.yakkamonworld.workers.dev/count";
+const COUNTER_WORKER_URL = "https://yakkamon-counter-worker.YOUR-SUBDOMAIN.workers.dev/count";
 const FALLBACK_CLAIMED = 35;
 const FALLBACK_DATE = "Jul 30, 2026";
 const LIVE_META_TEXT = "auto-refreshed every 30 min";
