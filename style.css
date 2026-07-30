@@ -55,7 +55,7 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
 .tab .label-short{display:none}
 @media(max-width:760px){
   .topbar-inner{flex-wrap:wrap; padding:0 12px}
-  .brand{font-size:1.1rem; padding:10px 4px}
+  .brand{font-size:1.1rem; padding:10px 4px; white-space:normal}
   .brand .portal-full{display:none}
   .brand .portal-short{display:inline}
   .tabs{
@@ -132,6 +132,7 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
 
 /* ---------- Docs sidebar (News + Gameplay pages) ---------- */
 .docs-layout{display:grid; grid-template-columns:230px 1fr; gap:32px; margin-top:20px}
+.docs-layout > *{min-width:0}
 @media(max-width:760px){.docs-layout{grid-template-columns:1fr}}
 .sidebar{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); padding:18px; align-self:start}
 .sidebar-label{font-family:var(--font-display); font-size:1rem; letter-spacing:.03em; margin:0 0 14px}
