@@ -33,7 +33,15 @@ const SEARCH_INDEX = [
   { tag: "Community", title: "Follow YakkamonWorld on X", excerpt: "This portal's own account — site updates and behind-the-scenes posts.", url: "community.html" },
   { tag: "Community", title: "Official Discord", excerpt: "The official Discord isn't open yet — coming soon.", url: "community.html" },
 
-  { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" }
+  { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" },
+
+  { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
+  { tag: "FAQ", title: "Do I need a crypto wallet?", excerpt: "Pre-registering only needs an email. A wallet only matters if you want to take part in the Free Mint.", url: "faq.html#general" },
+  { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "What each term actually means and how they relate to each other.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "Free Mint vs the Genesis Airdrop", excerpt: "They sound similar but work completely differently — here's the side-by-side comparison.", url: "faq.html#mint-vs-airdrop" },
+  { tag: "FAQ", title: "What is gas? What is Ronin?", excerpt: "The network fee and the blockchain Yakkamon runs on, explained in plain language.", url: "faq.html#mint-vs-airdrop" },
+  { tag: "FAQ", title: "Can I get my FLOWER back?", excerpt: "Yes, withdraw anytime tax-free, with small security limits in the first weeks after launch.", url: "faq.html#flower" },
+  { tag: "FAQ", title: "When does the game actually launch?", excerpt: "November 1st is early access, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];
 
 (function () {
