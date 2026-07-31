@@ -31,7 +31,10 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
   { tag: "Gameplay", title: "Arena Battles", excerpt: "Face off against the best trainers in PvP arena combat.", url: "gameplay.html?system=arena-battles" },
 
-  { tag: "Community", title: "Community", excerpt: "Follow YakkamonWorld and the official Yakkamon channels.", url: "community.html" },
+  { tag: "Community", title: "Community", excerpt: "Join the YakkamonWorld Telegram channel and chat, and follow the official Yakkamon channels.", url: "community.html" },
+  { tag: "Community", title: "Telegram channel — YakkamonWorld", excerpt: "Pre-registration tiers as they unlock, new guides, and news. The main place to follow the portal.", url: "community.html" },
+  { tag: "Community", title: "Telegram chat — YakkamonWorld Chat", excerpt: "Ask anything about wallets, gas, free mint, or access dates. Other players and our bot answer.", url: "community.html" },
+  { tag: "Community", title: "Access bot — check your access date", excerpt: "Send our Telegram bot your Bumpkin Level and it tells you when your access code unlocks.", url: "community.html" },
   { tag: "Community", title: "Follow YakkamonWorld on X", excerpt: "This portal's own account — site updates and behind-the-scenes posts.", url: "community.html" },
   { tag: "Community", title: "Official Discord", excerpt: "The official Discord isn't open yet — coming soon.", url: "community.html" },
 
@@ -39,6 +42,7 @@ const SEARCH_INDEX = [
 
   { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
   { tag: "FAQ", title: "How to pre-register (Sunflower Land players)", excerpt: "Access dates by Bumpkin Level, plus step-by-step: find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "faq.html#sunflowerland-guide" },
+  { tag: "FAQ", title: "Where can I ask a question?", excerpt: "Our unofficial Telegram channel and chat group — plus an access bot that answers Bumpkin Level lookups.", url: "faq.html#general" },
   { tag: "FAQ", title: "Do I need a crypto wallet?", excerpt: "Pre-registering only needs an email. A wallet only matters if you want to take part in the Free Mint.", url: "faq.html#general" },
   { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "What each term actually means and how they relate to each other.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Free Mint vs the Genesis Airdrop", excerpt: "They sound similar but work completely differently — here's the side-by-side comparison.", url: "faq.html#mint-vs-airdrop" },
