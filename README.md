@@ -69,6 +69,28 @@ Netlify/Vercel) rather than the drag-and-drop method — any static host
 works fine since it's plain HTML/CSS/JS with zero build step. Framework
 preset: none. Build command: none. Output directory: `/`.
 
+## 5. Adding a new page — checklist
+
+Every page on this site shares the same `<head>` boilerplate: favicon
+tags, the stylesheet link, and the search overlay markup. The easiest and
+safest way to add a new page is to **copy an existing page** (e.g. copy
+`article-access-code-today.html` for a new article) rather than writing
+one from scratch — that way all of this comes along automatically:
+
+- [ ] Favicon tags present (`rel="icon"`, `apple-touch-icon`)
+- [ ] `<link rel="stylesheet" href="style.css">`
+- [ ] Search button + search overlay markup, and `<script src="search.js">`
+  before `</body>`
+- [ ] Correct `active` class on the matching nav tab
+- [ ] Added to `search.js`'s `SEARCH_INDEX` array so it's actually findable
+- [ ] If it's a news post: added to `posts.js` too
+
+To double check nothing was missed across the whole site at once, this
+one-liner checks every page for the favicon tags specifically:
+```
+grep -L 'rel="icon"' *.html   # should print nothing if all pages are covered
+```
+
 ## File map
 
 ```
