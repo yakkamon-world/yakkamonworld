@@ -12,11 +12,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="topbar">
-  <div class="topbar-inner">
-        <a class="brand" href="index.html">Yakkamon <span class="portal"><span class="portal-full">Unofficial Portal</span><span class="portal-short">Portal</span></span></a>
-    <nav class="tabs"><a class="tab active" href="index.html">Home</a>
+<div class="topbar-inner">
+<a class="brand" href="index.html">Yakkamon <span class="portal"><span class="portal-full">Unofficial Portal</span><span class="portal-short">Portal</span></span></a>
+<nav class="tabs"><a class="tab active" href="index.html">Home</a>
 <a class="tab" href="pre-registration.html"><span class="label-full">Pre-registration</span><span class="label-short">Pre-Reg</span></a>
 <a class="tab" href="news.html">News</a>
 <a class="tab" href="gameplay.html">Gameplay</a>
@@ -24,190 +23,185 @@
 <a class="tab" href="stats.html">Stats</a>
 <a class="tab tab-wide" href="faq.html">FAQ</a>
 <button class="search-btn" id="search-btn" aria-label="Search the site" type="button">
-      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
+<svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
 </nav>
-  </div>
-</header>
-
-<div class="search-overlay" id="search-overlay">
-  <div class="search-panel">
-    <div class="search-panel-head">
-      <input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
-      <button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
-    </div>
-    <p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
-    <div class="search-results" id="search-results"></div>
-  </div>
 </div>
-
-
+</header>
+<div class="search-overlay" id="search-overlay">
+<div class="search-panel">
+<div class="search-panel-head">
+<input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
+<button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
+</div>
+<p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
+<div class="search-results" id="search-results"></div>
+</div>
+</div>
 <section class="hero"><div class="wrap">
-  <div class="hero-logo">
-    <p class="hero-wordmark">YAKKAMON<span class="world">WORLD</span></p>
-    <a class="follow-badge" href="https://x.com/Yakkamo_World" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/></svg>
-      Follow @Yakkamo_World
-    </a>
-  </div>
+<div class="hero-logo">
+<p class="hero-wordmark">YAKKAMON<span class="world">WORLD</span></p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;min-width:0">
+<a class="follow-badge" href="https://t.me/YakkamonWorld" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg>
+Join on Telegram
+</a>
+<a class="follow-badge" href="https://x.com/Yakkamo_World" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/></svg>
+Follow @Yakkamo_World
+</a>
+</div>
+</div>
 </div></section>
-
 <main class="wrap" style="padding-bottom:0">
-  <section class="latest-news-section">
-    <div class="section-head"><h2>LATEST NEWS</h2><a class="view-all" href="news.html">View all &rarr;</a></div>
-    <div class="home-news-list" id="home-news-grid">
-      <div class="empty-state">Loading news&hellip;</div>
-    </div>
-  </section>
-
-  <section class="about-section">
-    <div class="section-head"><h2>WHAT IS YAKKAMON?</h2></div>
-    <div class="about-box">
-      <p>Yakkamon is a creature-collector game with a twist &mdash; it's also about building something. You explore the world to hunt and catch wild monsters, then put them to work gathering resources and farming while you're off doing other things.</p>
-      <p>The world itself is alive: deserts, volcanoes, and oceans that shift between day and night, and change with the seasons. Every three months, brand-new monsters show up in the wild for players to compete to find first.</p>
-      <div class="about-basics">
-        <div class="about-basic">
-          <svg class="icon" viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="19" fill="#FF6B57" stroke="#1A1A2E" stroke-width="3"/>
-            <path d="M5 24a19 19 0 0 0 38 0Z" fill="#FFF7E0" stroke="#1A1A2E" stroke-width="3"/>
-            <path d="M5 24h38" stroke="#1A1A2E" stroke-width="4"/>
-            <circle cx="24" cy="24" r="7" fill="#FFF7E0" stroke="#1A1A2E" stroke-width="3"/>
-            <circle cx="24" cy="24" r="2.6" fill="#1A1A2E"/>
-          </svg>
-          <span>CATCH</span>
-        </div>
-        <div class="about-basic">
-          <svg class="icon" viewBox="0 0 48 48" fill="none">
-            <path d="M15 33l16-16" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
-            <path d="M15 33l16-16" stroke="#8B5A2B" stroke-width="4.5" stroke-linecap="round"/>
-            <rect x="24" y="5" width="20" height="13" rx="3" transform="rotate(45 24 5)" fill="#3FAE5C" stroke="#1A1A2E" stroke-width="3"/>
-            <path d="M6 40l5-5M9 42l5-5" stroke="#1A1A2E" stroke-width="2.6" stroke-linecap="round"/>
-          </svg>
-          <span>CRAFT</span>
-        </div>
-        <div class="about-basic">
-          <svg class="icon" viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="19" fill="#FFF7E0" stroke="#1A1A2E" stroke-width="3"/>
-            <path d="M24 8v5M24 35v5M8 24h5M35 24h5" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
-            <path d="M24 24l9-11-4 13Z" fill="#FF6B57" stroke="#1A1A2E" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M24 24l-9 11 4-13Z" fill="#2FA8E8" stroke="#1A1A2E" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="24" cy="24" r="3" fill="#1A1A2E"/>
-          </svg>
-          <span>EXPLORE</span>
-        </div>
-        <div class="about-basic">
-          <svg class="icon" viewBox="0 0 48 48" fill="none">
-            <path d="M9 22 24 8l15 14" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 20v18a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V20" fill="#8A5CF0" stroke="#1A1A2E" stroke-width="3" stroke-linejoin="round"/>
-            <rect x="20" y="29" width="8" height="11" fill="#1A1A2E"/>
-            <path d="M32 12v5" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
-            <ellipse cx="33" cy="8" rx="3.4" ry="2.4" fill="#fff" stroke="#1A1A2E" stroke-width="2"/>
-          </svg>
-          <span>BUILD</span>
-        </div>
-        <div class="about-basic">
-          <svg class="icon" viewBox="0 0 48 48" fill="none">
-            <path d="M9 9l26 26" stroke="#1A1A2E" stroke-width="7" stroke-linecap="round"/>
-            <path d="M9 9l26 26" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
-            <path d="M17 17l-6-6M6 14l4-4" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="9" cy="9" r="3.2" fill="#1A1A2E"/>
-            <path d="M39 9L13 35" stroke="#1A1A2E" stroke-width="7" stroke-linecap="round"/>
-            <path d="M39 9L13 35" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
-            <path d="M31 17l6-6M42 14l-4-4" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="39" cy="9" r="3.2" fill="#1A1A2E"/>
-            <path d="M24 15l-3.4 3.4L24 22l3.4-3.6Z" fill="#FF6B57" stroke="#1A1A2E" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-          <span>BATTLE</span>
-        </div>
-      </div>
-      <p>As you play, you'll catch creatures, craft gear, and build up your own gym &mdash; grinding it out, or trading with other players, however you like.</p>
-      <p>Yakkamon comes from the team behind Sunflower Land, an established game with over a million players, so it's being built by people with years of experience running a live game. <a href="gameplay.html">See all the gameplay systems &rarr;</a></p>
-    </div>
-  </section>
+<section class="latest-news-section">
+<div class="section-head"><h2>LATEST NEWS</h2><a class="view-all" href="news.html">View all &rarr;</a></div>
+<div class="home-news-list" id="home-news-grid">
+<div class="empty-state">Loading news&hellip;</div>
+</div>
+</section>
+<section class="about-section">
+<div class="section-head"><h2>WHAT IS YAKKAMON?</h2></div>
+<div class="about-box">
+<p>Yakkamon is a creature-collector game with a twist &mdash; it's also about building something. You explore the world to hunt and catch wild monsters, then put them to work gathering resources and farming while you're off doing other things.</p>
+<p>The world itself is alive: deserts, volcanoes, and oceans that shift between day and night, and change with the seasons. Every three months, brand-new monsters show up in the wild for players to compete to find first.</p>
+<div class="about-basics">
+<div class="about-basic">
+<svg class="icon" viewBox="0 0 48 48" fill="none">
+<circle cx="24" cy="24" r="19" fill="#FF6B57" stroke="#1A1A2E" stroke-width="3"/>
+<path d="M5 24a19 19 0 0 0 38 0Z" fill="#FFF7E0" stroke="#1A1A2E" stroke-width="3"/>
+<path d="M5 24h38" stroke="#1A1A2E" stroke-width="4"/>
+<circle cx="24" cy="24" r="7" fill="#FFF7E0" stroke="#1A1A2E" stroke-width="3"/>
+<circle cx="24" cy="24" r="2.6" fill="#1A1A2E"/>
+</svg>
+<span>CATCH</span>
+</div>
+<div class="about-basic">
+<svg class="icon" viewBox="0 0 48 48" fill="none">
+<path d="M15 33l16-16" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+<path d="M15 33l16-16" stroke="#8B5A2B" stroke-width="4.5" stroke-linecap="round"/>
+<rect x="24" y="5" width="20" height="13" rx="3" transform="rotate(45 24 5)" fill="#3FAE5C" stroke="#1A1A2E" stroke-width="3"/>
+<path d="M6 40l5-5M9 42l5-5" stroke="#1A1A2E" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
+<span>CRAFT</span>
+</div>
+<div class="about-basic">
+<svg class="icon" viewBox="0 0 48 48" fill="none">
+<circle cx="24" cy="24" r="19" fill="#FFF7E0" stroke="#1A1A2E" stroke-width="3"/>
+<path d="M24 8v5M24 35v5M8 24h5M35 24h5" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+<path d="M24 24l9-11-4 13Z" fill="#FF6B57" stroke="#1A1A2E" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M24 24l-9 11 4-13Z" fill="#2FA8E8" stroke="#1A1A2E" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="24" cy="24" r="3" fill="#1A1A2E"/>
+</svg>
+<span>EXPLORE</span>
+</div>
+<div class="about-basic">
+<svg class="icon" viewBox="0 0 48 48" fill="none">
+<path d="M9 22 24 8l15 14" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 20v18a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V20" fill="#8A5CF0" stroke="#1A1A2E" stroke-width="3" stroke-linejoin="round"/>
+<rect x="20" y="29" width="8" height="11" fill="#1A1A2E"/>
+<path d="M32 12v5" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="33" cy="8" rx="3.4" ry="2.4" fill="#fff" stroke="#1A1A2E" stroke-width="2"/>
+</svg>
+<span>BUILD</span>
+</div>
+<div class="about-basic">
+<svg class="icon" viewBox="0 0 48 48" fill="none">
+<path d="M9 9l26 26" stroke="#1A1A2E" stroke-width="7" stroke-linecap="round"/>
+<path d="M9 9l26 26" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
+<path d="M17 17l-6-6M6 14l4-4" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+<circle cx="9" cy="9" r="3.2" fill="#1A1A2E"/>
+<path d="M39 9L13 35" stroke="#1A1A2E" stroke-width="7" stroke-linecap="round"/>
+<path d="M39 9L13 35" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
+<path d="M31 17l6-6M42 14l-4-4" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+<circle cx="39" cy="9" r="3.2" fill="#1A1A2E"/>
+<path d="M24 15l-3.4 3.4L24 22l3.4-3.6Z" fill="#FF6B57" stroke="#1A1A2E" stroke-width="2" stroke-linejoin="round"/>
+</svg>
+<span>BATTLE</span>
+</div>
+</div>
+<p>As you play, you'll catch creatures, craft gear, and build up your own gym &mdash; grinding it out, or trading with other players, however you like.</p>
+<p>Yakkamon comes from the team behind Sunflower Land, an established game with over a million players, so it's being built by people with years of experience running a live game. <a href="gameplay.html">See all the gameplay systems &rarr;</a></p>
+</div>
+</section>
 </main>
-
 <main class="wrap" style="padding-bottom:0">
-  <div style="text-align:center; margin:8px 0 4px">
-    <a class="pixel-btn" style="font-size:1.4rem; padding:18px 40px" href="https://yakkamon.com/" target="_blank" rel="noopener">SIGN UP &#8599;</a>
-  </div>
+<div style="text-align:center; margin:8px 0 4px">
+<a class="pixel-btn" style="font-size:1.4rem; padding:18px 40px" href="https://yakkamon.com/" target="_blank" rel="noopener">SIGN UP &#8599;</a>
+</div>
 </main>
-
 <main class="wrap" style="padding-bottom:20px">
 <div class="section-head"><h2>PRE-REGISTRATION</h2><a class="view-all" href="pre-registration.html">Full details &rarr;</a></div>
-
 <div class="egg-counter">
-  <span class="egg-counter-icon">&#129370;</span>
-  <div class="egg-counter-text">
-    <strong><span class="signup-count-value">&hellip;</span> / 10,000</strong> Platinum Monster Egg signup slots claimed
-    <div class="egg-counter-meta">Last verified <span class="signup-count-date">&hellip;</span> (checked manually, not live) &middot; <a href="https://yakkamon.com/" target="_blank" rel="noopener">see current count &#8599;</a></div>
-  </div>
+<span class="egg-counter-icon">&#129370;</span>
+<div class="egg-counter-text">
+<strong><span class="signup-count-value">&hellip;</span> / 10,000</strong> Platinum Monster Egg signup slots claimed
+<div class="egg-counter-meta">Last verified <span class="signup-count-date">&hellip;</span> (checked manually, not live) &middot; <a href="https://yakkamon.com/" target="_blank" rel="noopener">see current count &#8599;</a></div>
+</div>
 </div>
 <div class="site-timeline">
-  <div class="site-timeline-track">
-    <div class="st-baseline"></div><div class="st-node hit">
-      <div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="7" y="2" width="1" height="1" fill="#FFF"/><rect x="6" y="3" width="1" height="1" fill="#FFF"/><rect x="5" y="4" width="1" height="1" fill="#FFF"/><rect x="4" y="5" width="1" height="1" fill="#FFF"/><rect x="2" y="4" width="1" height="1" fill="#FFF"/><rect x="3" y="5" width="1" height="1" fill="#FFF"/></svg></div>
-      <span class="st-label"><span class="lvl-full">Lv 150+</span><span class="lvl-short">150+</span></span><span class="st-date">Jul 30</span>
-    </div><div class="st-node">
-      <div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="7" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="1" y="4" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="5" width="6" height="3" fill="#FFF7E0"/><rect x="4" y="6" width="2" height="2" fill="#1A1A2E"/></svg></div>
-      <span class="st-label"><span class="lvl-full">Lv 100+</span><span class="lvl-short">100+</span></span><span class="st-date">Jul 31</span>
-    </div><div class="st-node">
-      <div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="7" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="1" y="4" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="5" width="6" height="3" fill="#FFF7E0"/><rect x="4" y="6" width="2" height="2" fill="#1A1A2E"/></svg></div>
-      <span class="st-label"><span class="lvl-full">Lv 50+</span><span class="lvl-short">50+</span></span><span class="st-date">Aug 1</span>
-    </div><div class="st-node">
-      <div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="7" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="1" y="4" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="5" width="6" height="3" fill="#FFF7E0"/><rect x="4" y="6" width="2" height="2" fill="#1A1A2E"/></svg></div>
-      <span class="st-label"><span class="lvl-full">Lv 20+</span><span class="lvl-short">20+</span></span><span class="st-date">Aug 2</span>
-    </div><div class="st-node mint" title="On October 1st, the Genesis Monster NFT free mint goes live on Ronin.">
-  <div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="6" height="1" fill="#1A1A2E"/><rect x="1" y="3" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="4" width="6" height="3" fill="#4FC3E8"/></svg></div>
-  <span class="st-label">FREE<br>MINT</span><span class="st-date">Oct 1</span>
+<div class="site-timeline-track">
+<div class="st-baseline"></div><div class="st-node hit">
+<div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="7" y="2" width="1" height="1" fill="#FFF"/><rect x="6" y="3" width="1" height="1" fill="#FFF"/><rect x="5" y="4" width="1" height="1" fill="#FFF"/><rect x="4" y="5" width="1" height="1" fill="#FFF"/><rect x="2" y="4" width="1" height="1" fill="#FFF"/><rect x="3" y="5" width="1" height="1" fill="#FFF"/></svg></div>
+<span class="st-label"><span class="lvl-full">Lv 150+</span><span class="lvl-short">150+</span></span><span class="st-date">Jul 30</span>
+</div><div class="st-node">
+<div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="7" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="1" y="4" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="5" width="6" height="3" fill="#FFF7E0"/><rect x="4" y="6" width="2" height="2" fill="#1A1A2E"/></svg></div>
+<span class="st-label"><span class="lvl-full">Lv 100+</span><span class="lvl-short">100+</span></span><span class="st-date">Jul 31</span>
+</div><div class="st-node">
+<div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="7" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="1" y="4" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="5" width="6" height="3" fill="#FFF7E0"/><rect x="4" y="6" width="2" height="2" fill="#1A1A2E"/></svg></div>
+<span class="st-label"><span class="lvl-full">Lv 50+</span><span class="lvl-short">50+</span></span><span class="st-date">Aug 1</span>
+</div><div class="st-node">
+<div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="7" y="2" width="1" height="2" fill="#1A1A2E"/><rect x="1" y="4" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="5" width="6" height="3" fill="#FFF7E0"/><rect x="4" y="6" width="2" height="2" fill="#1A1A2E"/></svg></div>
+<span class="st-label"><span class="lvl-full">Lv 20+</span><span class="lvl-short">20+</span></span><span class="st-date">Aug 2</span>
+</div><div class="st-node mint" title="On October 1st, the Genesis Monster NFT free mint goes live on Ronin.">
+<div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="3" y="1" width="4" height="1" fill="#1A1A2E"/><rect x="2" y="2" width="6" height="1" fill="#1A1A2E"/><rect x="1" y="3" width="8" height="5" fill="#1A1A2E"/><rect x="2" y="4" width="6" height="3" fill="#4FC3E8"/></svg></div>
+<span class="st-label">FREE<br>MINT</span><span class="st-date">Oct 1</span>
 </div><div class="st-node goal">
-  <div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="2" y="1" width="1" height="8" fill="#1A1A2E"/><rect x="3" y="1" width="5" height="1" fill="#1A1A2E"/><rect x="3" y="2" width="5" height="3" fill="#FF6B57"/><rect x="3" y="5" width="5" height="1" fill="#1A1A2E"/></svg></div>
-  <span class="st-label">EARLY<br>ACCESS</span><span class="st-date">Nov 1</span>
+<div class="st-dot"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><rect x="2" y="1" width="1" height="8" fill="#1A1A2E"/><rect x="3" y="1" width="5" height="1" fill="#1A1A2E"/><rect x="3" y="2" width="5" height="3" fill="#FF6B57"/><rect x="3" y="5" width="5" height="1" fill="#1A1A2E"/></svg></div>
+<span class="st-label">EARLY<br>ACCESS</span><span class="st-date">Nov 1</span>
 </div>
-  </div>
 </div>
-
+</div>
 <div class="timeline-notes">
-  <div class="prereg-callout info">Levels shown (Lv 150+, 100+, etc.) refer to your <strong>Bumpkin Level in Sunflower Land</strong>, Yakkamon's sister game. New to Sunflower Land? No problem &mdash; pre-registration is open to everyone. A higher Bumpkin level just unlocks your access code a few days earlier; everyone else catches up automatically as each tier opens.</div>
-  <div class="prereg-callout info"><strong>FREE MINT (Oct 1)</strong> &mdash; pre-registered trainers can claim a Genesis Monster NFT for free that day (you only pay a small network fee). It's a one-time claim window &mdash; miss it, and it won't come back. <a href="pre-registration.html">Read the full details &rarr;</a></div>
-  <div class="prereg-callout success"><strong>EARLY ACCESS (Nov 1)</strong> &mdash; this is when Yakkamon actually opens to players. Your trainer tier decides which wave you get in on; once you're in, you can start collecting creatures, exploring regions, and battling for real. <a href="pre-registration.html">Read the full details &rarr;</a></div>
+<div class="prereg-callout info">Levels shown (Lv 150+, 100+, etc.) refer to your <strong>Bumpkin Level in Sunflower Land</strong>, Yakkamon's sister game. New to Sunflower Land? No problem &mdash; pre-registration is open to everyone. A higher Bumpkin level just unlocks your access code a few days earlier; everyone else catches up automatically as each tier opens.</div>
+<div class="prereg-callout info"><strong>FREE MINT (Oct 1)</strong> &mdash; pre-registered trainers can claim a Genesis Monster NFT for free that day (you only pay a small network fee). It's a one-time claim window &mdash; miss it, and it won't come back. <a href="pre-registration.html">Read the full details &rarr;</a></div>
+<div class="prereg-callout success"><strong>EARLY ACCESS (Nov 1)</strong> &mdash; this is when Yakkamon actually opens to players. Your trainer tier decides which wave you get in on; once you're in, you can start collecting creatures, exploring regions, and battling for real. <a href="pre-registration.html">Read the full details &rarr;</a></div>
 </div>
 </main>
-
 <main class="wrap"><div class="tile-grid">
-  <a class="dest-tile" href="pre-registration.html">
-    <svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#FFD54A"/><rect x="4" y="4" width="8" height="2" fill="#1A1A2E"/><rect x="4" y="7" width="8" height="1" fill="#1A1A2E"/><rect x="4" y="10" width="5" height="1" fill="#1A1A2E"/></svg>
-    <h3>PRE-REGISTRATION</h3><p>Points, tiers, free mint, and Genesis monsters &mdash; explained simply.</p>
-  </a>
-  <a class="dest-tile" href="news.html">
-    <svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="none"/><rect x="2" y="2" width="12" height="12" fill="#FF6B57"/><rect x="4" y="5" width="8" height="1" fill="#1A1A2E"/><rect x="4" y="8" width="8" height="1" fill="#1A1A2E"/><rect x="4" y="11" width="5" height="1" fill="#1A1A2E"/></svg>
-    <h3>NEWS</h3><p>Patch notes, events, and community updates.</p>
-  </a>
-  <a class="dest-tile" href="gameplay.html">
-    <svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#4CAF6D"/><rect x="5" y="5" width="2" height="2" fill="#1A1A2E"/><rect x="9" y="5" width="2" height="2" fill="#1A1A2E"/><rect x="5" y="9" width="6" height="2" fill="#1A1A2E"/></svg>
-    <h3>GAMEPLAY</h3><p>The six core systems that make up Yakkamon.</p>
-  </a>
-  <a class="dest-tile" href="community.html">
-    <svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#4FC3E8"/><circle cx="8" cy="8" r="0"/><rect x="5" y="5" width="3" height="3" fill="#1A1A2E"/><rect x="9" y="7" width="3" height="3" fill="#1A1A2E"/></svg>
-    <h3>COMMUNITY</h3><p>The latest from the official Twitter/X account.</p>
-  </a>
-  <a class="dest-tile" href="stats.html">
-    <svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#7C5CD1"/><rect x="4" y="9" width="2" height="4" fill="#fff"/><rect x="7" y="6" width="2" height="7" fill="#fff"/><rect x="10" y="4" width="2" height="9" fill="#fff"/></svg>
-    <h3>STATS</h3><p>Trainer stat lookup &mdash; coming soon.</p>
-  </a>
+<a class="dest-tile" href="pre-registration.html">
+<svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#FFD54A"/><rect x="4" y="4" width="8" height="2" fill="#1A1A2E"/><rect x="4" y="7" width="8" height="1" fill="#1A1A2E"/><rect x="4" y="10" width="5" height="1" fill="#1A1A2E"/></svg>
+<h3>PRE-REGISTRATION</h3><p>Points, tiers, free mint, and Genesis monsters &mdash; explained simply.</p>
+</a>
+<a class="dest-tile" href="news.html">
+<svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="none"/><rect x="2" y="2" width="12" height="12" fill="#FF6B57"/><rect x="4" y="5" width="8" height="1" fill="#1A1A2E"/><rect x="4" y="8" width="8" height="1" fill="#1A1A2E"/><rect x="4" y="11" width="5" height="1" fill="#1A1A2E"/></svg>
+<h3>NEWS</h3><p>Patch notes, events, and community updates.</p>
+</a>
+<a class="dest-tile" href="gameplay.html">
+<svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#4CAF6D"/><rect x="5" y="5" width="2" height="2" fill="#1A1A2E"/><rect x="9" y="5" width="2" height="2" fill="#1A1A2E"/><rect x="5" y="9" width="6" height="2" fill="#1A1A2E"/></svg>
+<h3>GAMEPLAY</h3><p>The six core systems that make up Yakkamon.</p>
+</a>
+<a class="dest-tile" href="community.html">
+<svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#4FC3E8"/><circle cx="8" cy="8" r="0"/><rect x="5" y="5" width="3" height="3" fill="#1A1A2E"/><rect x="9" y="7" width="3" height="3" fill="#1A1A2E"/></svg>
+<h3>COMMUNITY</h3><p>Join the Telegram chat and follow the accounts worth following.</p>
+</a>
+<a class="dest-tile" href="stats.html">
+<svg class="icon" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#7C5CD1"/><rect x="4" y="9" width="2" height="4" fill="#fff"/><rect x="7" y="6" width="2" height="7" fill="#fff"/><rect x="10" y="4" width="2" height="9" fill="#fff"/></svg>
+<h3>STATS</h3><p>Trainer stat lookup &mdash; coming soon.</p>
+</a>
 </div></main>
-
 <footer><div class="wrap">
-  <div>
-    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND</span>
-    <div class="footer-links">
-      <a href="https://yakkamon.com/" target="_blank" rel="noopener">Official Pre-Registration &#8599;</a>
-      <a href="https://x.com/playyakkamon" target="_blank" rel="noopener">Official Twitter/X &#8599;</a>
-      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">Official Docs &#8599;</a>
-    </div>
-  </div>
-  <span>BUILT BY THE COMMUNITY</span>
+<div>
+<span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND</span>
+<div class="footer-links">
+<a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener">Telegram &#8599;</a>
+<a href="https://yakkamon.com/" target="_blank" rel="noopener">Official Pre-Registration &#8599;</a>
+<a href="https://x.com/playyakkamon" target="_blank" rel="noopener">Official Twitter/X &#8599;</a>
+<a href="https://docs.yakkamon.com" target="_blank" rel="noopener">Official Docs &#8599;</a>
+</div>
+</div>
+<span>BUILT BY THE COMMUNITY</span>
 </div></footer>
-
 <script src="posts.js"></script>
 <script src="home-news.js"></script>
 <script src="signup-counter.js"></script>
