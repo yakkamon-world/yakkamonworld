@@ -6,6 +6,13 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "access-code-100-plus",
+    category: "event",
+    title: "Sunflower Land Players (100+ Bumpkin Level): Get Your Access Code Today",
+    date: "Jul 31, 2026",
+    excerpt: "Bumpkin Level 100+? Your access code unlocks today \u2014 same steps as yesterday's Lv 150+ drop: find Yakkamon in the Plaza, then sign up at yakkamon.com."
+  },
+  {
     slug: "faq-page-live",
     category: "event",
     title: "New: FAQ Page Answers Your Trickiest Pre-Reg Questions",
