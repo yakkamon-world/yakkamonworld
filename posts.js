@@ -76,11 +76,11 @@ const YAKKAMON_POSTS = [
     category: "community",
     title: "Reward Track: What You Unlock as You Climb",
     date: "Jul 20, 2026",
-    excerpt: "From your first Monster Pack to Tier I early access \u2014 here's what each points milestone actually gets you.",
+    excerpt: "Rewards rotate on a 7-day cycle \u2014 here's how the track works and why you need to check back weekly.",
     body: [
       "Pre-registration points unlock rewards automatically as they add up \u2014 no extra steps needed beyond staying active.",
       "## The track",
-      "Signing up alone claims a Platinum Monster Pack. From there: 100 points gets a raffle ticket, 250 lets you reserve your trainer username, 400 unlocks a care package, 600 grants five raffle tickets, 800 adds a bonus monster egg, and 1,000 points is Early Access \u2014 Tier I.",
+      "Every 7 days a new list of rewards appears for you to claim. Claimed items go into your inventory and stay there. Each new list replaces the last, so check back weekly.",
       "## How to earn points",
       "Daily egg nurturing, Discord and Twitter quests, referring friends, the free mint, and early FLOWER deposits all contribute.",
       "Full reward track is on the Pre-registration page."

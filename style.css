@@ -550,6 +550,9 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .rl-row.bronze .rl-prize{background:#F6E3D0}
 .rl-row.rare .rl-prize{background:#EAE0FB}
 .rl-row.plain .rl-prize{background:var(--panel); font-weight:700; color:#4a4a60}
+.rl-row.out .rl-prize{background:#F7E4E4; font-weight:700; color:#8a2b2b}
+.rl-row.out .rl-wave{background:#C9C9D4; color:var(--ink)}
+.rl-row.out .rl-rank{background:#6a6a7d}
 .rl-row.gold .rl-wave, .rl-row.silver .rl-wave, .rl-row.bronze .rl-wave{background:var(--green); color:#fff}
 .rl-row.rare .rl-wave{background:var(--purple); color:#fff}
 .rl-row.plain .rl-wave{background:var(--yellow)}
