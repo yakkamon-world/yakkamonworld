@@ -47,6 +47,10 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
   { tag: "FAQ", title: "How to pre-register (Sunflower Land players)", excerpt: "Access dates by Bumpkin Level, plus step-by-step: find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "faq.html#sunflowerland-guide" },
   { tag: "FAQ", title: "Where can I ask a question?", excerpt: "Our unofficial Telegram channel and chat group — plus an access bot that answers Bumpkin Level lookups.", url: "faq.html#general" },
+  { tag: "FAQ", title: "Terminology decoder", excerpt: "The official docs use several names for the same things \u2014 Monster Egg, Genesis airdrop, Trainer Point airdrop, free mint, trainer number, wave, gas, Ronin, all decoded.", url: "faq.html#decoder" },
+  { tag: "FAQ", title: "Genesis airdrop vs Trainer Point airdrop", excerpt: "Same thing. Also called the NFT Airdrop and the Genesis Drop \u2014 all four names mean the 5,000 NFTs given to the top 5,000 on points.", url: "faq.html#decoder" },
+  { tag: "FAQ", title: "What is gas? What is Ronin?", excerpt: "Gas is the small network fee for an on-chain action. Ronin is the games-focused blockchain Yakkamon runs on.", url: "faq.html#decoder" },
+  { tag: "FAQ", title: "What is a wave?", excerpt: "The batch you're let into the game with. Wave 1 enters first, Wave 4 last, and rank 100,001+ gets no wave at all.", url: "faq.html#decoder" },
   { tag: "FAQ", title: "The three rewards compared", excerpt: "Monster Egg vs Free Mint vs Genesis Airdrop \u2014 how you get each one, whether it's an NFT, whether you need a wallet, and when it arrives.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "Monster Egg tiers", excerpt: "Sign-up position decides your egg: Platinum, Gold, Silver, Bronze or Basic, up to 500,000 sign-ups. It sets nothing else.", url: "faq.html#egg-tiers" },
   { tag: "FAQ", title: "Is my Monster Egg an NFT?", excerpt: "No \u2014 it's an in-game item. Nothing to mint, no wallet needed. It appears on your farm the first time you log in.", url: "faq.html#egg-tiers" },
@@ -75,7 +79,6 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "How do I earn points?", excerpt: "Daily egg nurture and streaks, Discord and Twitter quests, referrals, the October free mint, and $FLOWER deposits.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do I find out my rank?", excerpt: "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Is the Genesis Monster tradable?", excerpt: "Yes \u2014 fully tradable, arrives with in-game XP, revealed at launch, and never minted again. Supply fixed at 5,000.", url: "faq.html#ranks-tiers" },
-  { tag: "FAQ", title: "What is gas? What is Ronin?", excerpt: "The network fee and the blockchain Yakkamon runs on, explained in plain language.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "When does the Genesis Drop leaderboard end?", excerpt: "Trainer numbers and tiers are revealed shortly before early access in Q4 2026; no exact cut-off has been published.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "When does the game actually launch?", excerpt: "November 1st is early access, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];
