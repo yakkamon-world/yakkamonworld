@@ -507,3 +507,52 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   .poster-link img{border-width:3px; box-shadow:4px 4px 0 var(--ink)}
   .poster-actions{justify-content:flex-start}
 }
+
+
+/* ── Three-way reward comparison ─────────────────────────────
+   Cards on mobile, aligned columns on desktop. Avoids a 4-column
+   table, which is unreadable on a phone. */
+.reward-compare{display:grid; gap:18px; margin:20px 0 26px; grid-template-columns:1fr; min-width:0}
+@media(min-width:820px){.reward-compare{grid-template-columns:repeat(3,1fr); gap:20px}}
+.rc-card{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:0; overflow:hidden; display:flex; flex-direction:column; min-width:0}
+.rc-head{padding:16px 18px 14px; border-bottom:4px solid var(--ink); display:flex; align-items:center; gap:10px; min-width:0}
+.rc-head .rc-emoji{font-size:1.6rem; line-height:1; flex:0 0 auto}
+.rc-head h3{font-family:var(--font-display); font-size:1.25rem; margin:0; letter-spacing:.02em; line-height:1.1; min-width:0; overflow-wrap:break-word}
+.rc-card.egg .rc-head{background:var(--yellow)}
+.rc-card.airdrop .rc-head{background:var(--purple); color:#fff}
+.rc-card.mint .rc-head{background:var(--sky); color:#fff}
+.rc-tagline{margin:0; padding:12px 18px; font-size:.92rem; font-weight:700; color:#3d3d50; border-bottom:3px dashed rgba(26,26,46,.25)}
+.rc-rows{margin:0; padding:6px 18px 16px; list-style:none; flex:1}
+.rc-rows li{padding:11px 0; border-bottom:2px dotted rgba(26,26,46,.18); min-width:0}
+.rc-rows li:last-child{border-bottom:none}
+.rc-label{display:block; font-family:var(--font-display); font-size:.82rem; letter-spacing:.05em; color:#7a7a92; margin-bottom:3px}
+.rc-val{display:block; font-weight:800; font-size:1rem; line-height:1.35; overflow-wrap:break-word}
+.rc-yes{color:var(--green)}
+.rc-no{color:var(--red)}
+.rc-verdict{background:var(--yellow); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); padding:18px 20px; margin:0 0 26px; min-width:0}
+.rc-verdict p{margin:0 0 10px; font-weight:700}
+.rc-verdict p:last-child{margin-bottom:0}
+
+
+/* ── Rank ladder infographic ─────────────────────────────────
+   The Genesis Drop rank table, rebuilt as stacked cartoon rungs
+   so it stays readable on a phone. */
+.rank-ladder{margin:22px 0 26px; min-width:0}
+.rl-row{display:grid; grid-template-columns:1fr; gap:0; background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); margin-bottom:16px; overflow:hidden; min-width:0}
+@media(min-width:700px){.rl-row{grid-template-columns:150px 1fr 130px; align-items:stretch}}
+.rl-rank{background:var(--ink); color:#fff; font-family:var(--font-display); font-size:1.15rem; letter-spacing:.03em; padding:12px 16px; display:flex; align-items:center; gap:8px; min-width:0}
+.rl-prize{padding:14px 18px; display:flex; align-items:center; gap:12px; font-weight:800; min-width:0; overflow-wrap:break-word}
+.rl-prize .rl-medal{font-size:1.5rem; line-height:1; flex:0 0 auto}
+.rl-wave{padding:12px 16px; font-family:var(--font-display); font-size:1.05rem; display:flex; align-items:center; justify-content:center; border-top:4px solid var(--ink); min-width:0}
+@media(min-width:700px){.rl-wave{border-top:none; border-left:4px solid var(--ink)}}
+.rl-row.gold .rl-prize{background:#FFF3C4}
+.rl-row.silver .rl-prize{background:#EFEFF5}
+.rl-row.bronze .rl-prize{background:#F6E3D0}
+.rl-row.rare .rl-prize{background:#EAE0FB}
+.rl-row.plain .rl-prize{background:var(--panel); font-weight:700; color:#4a4a60}
+.rl-row.gold .rl-wave, .rl-row.silver .rl-wave, .rl-row.bronze .rl-wave{background:var(--green); color:#fff}
+.rl-row.rare .rl-wave{background:var(--purple); color:#fff}
+.rl-row.plain .rl-wave{background:var(--yellow)}
+.rl-note{font-size:.9rem; color:#6a6a80; font-weight:600; margin:0 0 4px}
+.rl-key{display:flex; flex-wrap:wrap; gap:10px 20px; margin:0 0 18px; padding:14px 18px; background:var(--panel); border:4px dashed rgba(26,26,46,.3); border-radius:var(--radius); min-width:0}
+.rl-key span{font-size:.9rem; font-weight:700; min-width:0}
