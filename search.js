@@ -24,6 +24,8 @@ const SEARCH_INDEX = [
   { tag: "News", title: "Reward Track: What You Unlock as You Climb", excerpt: "From your first Monster Pack to Tier I early access.", url: "article-reward-track-explained.html" },
 
   { tag: "Gameplay", title: "Gameplay systems", excerpt: "The six core systems that make up Yakkamon.", url: "gameplay.html" },
+  { tag: "Gameplay", title: "How Yakkamon works \u2014 poster", excerpt: "One-page field guide: the idle half where monsters farm around the clock, the active half of hunting, crafting and arena battles, plus the six-step core loop.", url: "gameplay.html" },
+  { tag: "Gameplay", title: "The core loop", excerpt: "Catch a monster, put it to work, gather resources, craft better gear, hunt rarer prey, battle in the arena \u2014 then back to step one with a stronger roster.", url: "gameplay.html" },
   { tag: "Gameplay", title: "Creature Collecting", excerpt: "Hunt and catch monsters, then put them to work gathering resources and farming.", url: "gameplay.html?system=creature-collecting" },
   { tag: "Gameplay", title: "Regional Exploration", excerpt: "Deserts, volcanoes, and oceans, each shifting through day and night and the seasons.", url: "gameplay.html?system=regional-exploration" },
   { tag: "Gameplay", title: "Crafting & Hunting", excerpt: "Refine gathered resources into gear to track down rarer, tougher monsters.", url: "gameplay.html?system=crafting-hunting" },
