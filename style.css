@@ -314,13 +314,13 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .st-node.goal .st-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
 .st-node.mint .st-label{font-family:var(--font-display); font-size:1rem; line-height:1.4}
 .st-date{font-size:.78rem; color:#4a4a5c; display:block; white-space:nowrap; font-weight:700}
-.st-utc{display:block; font-size:.62rem; letter-spacing:.03em; color:#8a8a9c; font-weight:800; white-space:nowrap}
+.st-et{display:block; font-size:.64rem; letter-spacing:.03em; color:#8a8a9c; font-weight:800; white-space:nowrap}
 .st-countdown{display:block; margin-top:3px; font-size:.68rem; font-weight:800; color:#6a6a80; white-space:nowrap; min-height:1em}
 .st-countdown.soon{color:var(--red)}
 .st-countdown.done{color:var(--green)}
-.st-node.hit .st-utc{color:var(--green)}
+.st-node.hit .st-et{color:var(--green)}
 @media(max-width:520px){
-  .st-utc{font-size:.55rem}
+  .st-et{font-size:.56rem}
   .st-countdown{font-size:.6rem}
 }
 .st-today-label{font-family:var(--font-display); font-size:.95rem; color:var(--red); display:block; margin-bottom:5px; white-space:nowrap}
