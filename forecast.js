@@ -104,7 +104,7 @@
 
   // Least-squares fit + the ensemble of parameter sets that fit within tol
   function fit(readings) {
-    var best = null, ens = [];
+    var best = null, ens = [], all = [];
     var post = readings.some(function (r) { return Date.parse(r.t) > REFERRALS_OPEN; });
     for (var ci = 0; ci < G_CMAX.length; ci++)
       for (var li = 0; li < G_L50.length; li++)
@@ -120,10 +120,18 @@
               if (Math.abs(pred - readings[r].n) > 0.05 * Math.max(readings[r].n, 1)) ok = false;
             }
             if (!best || sse < best.sse) best = { sse: sse, term: term, lam: lam };
+            all.push({ sse: sse, term: term, lam: lam });
             if (ok) ens.push({ term: term, lam: lam });
           }
         }
-    if (!ens.length) ens.push({ term: best.term, lam: best.lam });
+    // A hard tolerance can leave a single survivor, which would publish a
+    // band of zero width — false precision. Always keep the parameter sets
+    // that fit nearly as well as the best one.
+    all.sort(function (x, y) { return x.sse - y.sse; });
+    var floor = Math.max(best.sse * 4, 1);
+    var near = all.filter(function (p) { return p.sse <= floor; });
+    if (near.length < 8) near = all.slice(0, 8);
+    ens = near.map(function (p) { return { term: p.term, lam: p.lam }; });
     return { best: best, ens: ens };
   }
 
@@ -174,6 +182,11 @@
       for (var k = 0; k < runs.length; k++) vals.push(at(runs[k], t).N);
       vals.sort(function (a, b) { return a - b; });
       var lo = vals[Math.floor(vals.length * 0.1)], hi = vals[Math.floor(vals.length * 0.9)];
+      // The band must always contain the central estimate — if a reading
+      // sits outside what the parameter grid can reach, widen rather than
+      // publish a mid that falls outside its own interval.
+      if (m.N < lo) lo = m.N;
+      if (m.N > hi) hi = m.N;
       var cls = (note === "FREE MINT" || note === "EARLY ACCESS") ? " class='key'" : (note ? " class='evt'" : "");
       html += "<tr" + cls + ">" +
         '<td class="d">' + dayLabel(iso) + "</td>" +
@@ -193,21 +206,58 @@
     host.innerHTML = html;
   }
 
+  // Readings seen in this browser are remembered, so a returning visitor's
+  // fit is built on a real time series rather than a single snapshot.
+  var STORE = "yw_readings_v1";
+
+  function loadStored() {
+    try {
+      var raw = localStorage.getItem(STORE);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+
+  function storeReading(iso, n) {
+    try {
+      var arr = loadStored();
+      // Only keep a new point if the count actually moved.
+      if (arr.length && arr[arr.length - 1].n === n) return arr;
+      arr.push({ t: iso, n: n });
+      if (arr.length > 200) arr = arr.slice(-200);
+      localStorage.setItem(STORE, JSON.stringify(arr));
+      return arr;
+    } catch (e) { return loadStored(); }
+  }
+
+  function merge(a, b) {
+    var seen = {}, out = [];
+    a.concat(b).forEach(function (r) {
+      var k = r.t + "|" + r.n;
+      if (!seen[k]) { seen[k] = 1; out.push(r); }
+    });
+    out.sort(function (x, y) { return Date.parse(x.t) - Date.parse(y.t); });
+    return out;
+  }
+
   function start() {
     var host = document.getElementById("forecast-table");
     if (!host) return;
-    render(READINGS);
-    // If the live counter is available, fold today's number in as a reading.
+
+    render(merge(READINGS, loadStored()));
+
+    // COUNTER_WORKER_URL already ends in /count — do not append to it.
     if (typeof COUNTER_WORKER_URL === "string" && COUNTER_WORKER_URL.indexOf("http") === 0) {
-      fetch(COUNTER_WORKER_URL + "/count")
-        .then(function (r) { return r.json(); })
+      fetch(COUNTER_WORKER_URL, { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(function (d) {
-          var n = d && (d.count || d.value);
-          if (!n) return;
-          var live = READINGS.concat([{ t: new Date().toISOString(), n: n }]);
-          render(live);
+          if (typeof d.claimed !== "number") return;
+          var iso = d.checkedAt || new Date().toISOString();
+          var stored = storeReading(iso, d.claimed);
+          render(merge(READINGS, stored));
         })
-        .catch(function () { /* keep the static fit */ });
+        .catch(function (e) {
+          console.warn("Forecast: live counter unavailable, using recorded readings.", e);
+        });
     }
   }
 
