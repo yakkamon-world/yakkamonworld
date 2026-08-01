@@ -35,7 +35,7 @@ const YAKKAMON_POSTS = [
     body: [
       "On October 1st, the Genesis Monster NFT free mint goes live on Ronin. The mint is open to pre-registered trainers only, so signing up before that date is the only way to take part.",
       "## What you need to know",
-      "It's free \u2014 you only cover a small network fee, called gas. Supply is limited, and a small number of Legendary Founder NFTs are seeded directly into the mint pool.",
+      "It's free \u2014 you only cover a small network fee, called gas. Only 10,000 can be minted, first in first minted, with 5 Legendary monsters seeded into the pool.",
       "## Why it's worth doing",
       "Minting also earns pre-registration points toward your trainer tier, on top of the mint itself. Once you have game access, you'll be able to deposit whatever you mint straight into Yakkamon.",
       "Full breakdown, including source details, is on the Pre-registration page."
