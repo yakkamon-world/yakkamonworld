@@ -18,6 +18,7 @@ const SEARCH_INDEX = [
 
   { tag: "News", title: "News archive", excerpt: "Every patch note, event, and community update in one place.", url: "news.html" },
   { tag: "News", title: "New: FAQ Page Answers Your Trickiest Pre-Reg Questions", excerpt: "Wallets, gas, Ronin, and Free Mint vs Genesis Airdrop, all explained in plain language.", url: "article-faq-page-live.html" },
+  { tag: "News", title: "Sunflower Land Players (50+ Bumpkin Level): Get Your Access Code Tonight", excerpt: "Bumpkin Level 50+? Your access code unlocks tonight at 8:00 PM ET \u2014 find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "article-access-code-50-plus.html" },
   { tag: "News", title: "Sunflower Land Players (100+ Bumpkin Level): Get Your Access Code Today", excerpt: "Bumpkin Level 100+? Your access code unlocks today \u2014 same steps as yesterday's Lv 150+ drop.", url: "article-access-code-100-plus.html" },
   { tag: "News", title: "Sunflower Land Players (150+ Bumpkin Level): Get Your Access Code Today", excerpt: "Bumpkin Level 150+? Get your code from the Yakkamon sign next to Stella in the Plaza, then sign up at yakkamon.com.", url: "article-access-code-today.html" },
   { tag: "News", title: "Free Mint Goes Live October 1st", excerpt: "Pre-registered trainers can claim a Genesis Monster NFT for free on Ronin.", url: "article-free-mint-october-1.html" },
