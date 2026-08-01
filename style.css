@@ -147,7 +147,9 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
 .sidebar-list li a.active{background:var(--yellow); border-color:var(--ink)}
 .sidebar-count{float:right; font-size:.9rem; color:#6a6a80}
 
-.gp-detail{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:30px}
+.gp-detail{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:30px; overflow-anchor:none}
+/* Swapping the detail panel must not let the browser re-anchor the scroll. */
+.docs-layout{overflow-anchor:none}
 .gp-detail-icon{width:44px; height:44px; margin-bottom:16px}
 .gp-detail h2{font-size:1.9rem; margin:0 0 14px}
 .gp-detail p{margin:0; font-size:1.05rem; color:#3d3d50; font-weight:600}
