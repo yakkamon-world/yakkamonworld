@@ -6,6 +6,13 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "access-code-20-plus",
+    category: "event",
+    title: "Sunflower Land Players (20+ Bumpkin Level): The Final Wave Opens Tonight",
+    date: "Aug 2, 2026",
+    excerpt: "Bumpkin Level 20+? The last Sunflower Land access wave unlocks tonight at 8:00 PM ET \u2014 and referral codes open Aug 4 for everyone else."
+  },
+  {
     slug: "access-code-50-plus",
     category: "event",
     title: "Sunflower Land Players (50+ Bumpkin Level): Get Your Access Code Tonight",
