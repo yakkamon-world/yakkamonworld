@@ -10,17 +10,17 @@
 
   var MINUTE = 60000, HOUR = 3600000, DAY = 86400000;
 
-  // Always includes seconds so it's visibly counting, never a static string.
+  // Days, hours and minutes — no seconds. A ticking seconds field is noise
+  // on a countdown measured in weeks.
   function timeLeft(ms) {
     if (ms <= 0) return null;
     var d = Math.floor(ms / DAY);
     var h = Math.floor((ms % DAY) / HOUR);
     var m = Math.floor((ms % HOUR) / MINUTE);
-    var s = Math.floor((ms % MINUTE) / 1000);
-    if (d > 0) return d + "d " + h + "h " + m + "m " + s + "s";
-    if (h > 0) return h + "h " + m + "m " + s + "s";
-    if (m > 0) return m + "m " + s + "s";
-    return s + "s";
+    if (d > 0) return d + "d " + h + "h " + m + "m";
+    if (h > 0) return h + "h " + m + "m";
+    if (m > 0) return m + "m";
+    return "under a minute";
   }
 
   // "8:00 PM ET" — the milestone's own moment, in US Eastern.
@@ -87,7 +87,7 @@
 
   function start() {
     if (render() === false) return;      // no timeline on this page
-    timer = setInterval(render, 1000);
+    timer = setInterval(render, 15000);
   }
 
   if (document.readyState === "loading") {
