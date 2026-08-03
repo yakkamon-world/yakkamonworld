@@ -599,6 +599,7 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 }
 .prereg-ticket img{display:block; width:100%; height:auto}
 .ticket-link{display:block; text-decoration:none; overflow:hidden}
+.article-body .prereg-ticket{margin:0 0 24px}
 .ticket-link img{transition:transform .18s ease}
 .ticket-link:hover img{transform:scale(1.015)}
 .ticket-link:focus-visible{outline:4px solid var(--red); outline-offset:-4px}
