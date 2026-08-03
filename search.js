@@ -16,6 +16,9 @@ const SEARCH_INDEX = [
   { tag: "Pre-registration", title: "Free mint — October 1st", excerpt: "How the free Genesis Monster mint works on Ronin, and who's eligible.", url: "pre-registration.html#free-mint" },
   { tag: "Pre-registration", title: "FLOWER deposits", excerpt: "Depositing $FLOWER early banks your balance for launch and earns pre-reg points.", url: "pre-registration.html#flower-deposits" },
 
+  { tag: "News", title: "Early Access Leaderboard Guideline: How to Climb", excerpt: "Every points value: nurture 6\u201310/day, referrals 30, free mint 250, $FLOWER deposits up to 70,000 \u2014 and what each rank takes.", url: "article-leaderboard-guideline.html" },
+  { tag: "News", title: "How do streaks work?", excerpt: "Tap 3 times daily. 6 points rising to 10 at a 30-day streak, 36-hour grace period, day rolls at midnight UTC.", url: "article-leaderboard-guideline.html" },
+  { tag: "News", title: "How many points is a referral worth?", excerpt: "30 points per verified friend. The Oct 1 free mint is 250 \u2014 the same as eight referrals for one click.", url: "article-leaderboard-guideline.html" },
   { tag: "News", title: "News archive", excerpt: "Every patch note, event, and community update in one place.", url: "news.html" },
   { tag: "News", title: "New: FAQ Page Answers Your Trickiest Pre-Reg Questions", excerpt: "Wallets, gas, Ronin, and Free Mint vs Genesis Airdrop, all explained in plain language.", url: "article-faq-page-live.html" },
   { tag: "News", title: "Sunflower Land Players (20+ Bumpkin Level): The Final Wave Opens Tonight", excerpt: "Bumpkin Level 20+? The last Sunflower Land access wave unlocks tonight at 8:00 PM ET \u2014 and referral codes open Aug 4 for everyone else.", url: "article-access-code-20-plus.html" },
