@@ -317,6 +317,14 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .st-date{font-size:.78rem; color:#4a4a5c; display:block; white-space:nowrap; font-weight:700}
 .st-et{display:block; font-size:.64rem; letter-spacing:.03em; color:#8a8a9c; font-weight:800; white-space:nowrap}
 .st-countdown{display:block; margin-top:3px; font-size:.68rem; font-weight:800; color:#6a6a80; white-space:nowrap; min-height:1em}
+.st-code{
+  display:inline-block; margin:4px auto 1px; max-width:100%; min-width:0;
+  font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace; font-weight:700;
+  font-size:.66rem; letter-spacing:.02em; line-height:1.25; color:var(--ink); text-decoration:none;
+  background:var(--cream); border:2px solid var(--ink); border-radius:6px; padding:1px 6px;
+  overflow-wrap:break-word;
+}
+.st-code:hover{background:var(--yellow)}
 .st-countdown.soon{color:var(--red)}
 .st-countdown.done{color:var(--green)}
 .st-node.hit .st-et{color:var(--green)}
@@ -334,6 +342,7 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
   .st-dot{width:15px; height:15px; margin-bottom:4px; border-width:2px}
   .st-dot svg{width:7px; height:7px}
   .st-node.goal .st-dot{border-width:3px}
+  .st-code{font-size:.5rem; padding:1px 3px; border-width:2px}
   .st-label{font-size:.52rem; white-space:normal; overflow-wrap:break-word; line-height:1.1}
   .st-node.goal .st-label,.st-node.mint .st-label{font-size:.5rem; line-height:1.2}
   .st-date{font-size:.46rem; white-space:normal; overflow-wrap:break-word}
@@ -600,6 +609,7 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .prereg-ticket img{display:block; width:100%; height:auto}
 .ticket-link{display:block; text-decoration:none; overflow:hidden}
 .article-body .prereg-ticket{margin:0 0 16px}
+.page-head + .wrap .prereg-ticket{margin:0 0 26px}
 .code-big{
   margin:0 0 26px; text-align:center; font-family:var(--font-display);
   font-size:2rem; font-size:clamp(1.5rem,5vw,2.2rem); letter-spacing:.04em; color:var(--ink);
