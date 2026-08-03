@@ -6,6 +6,13 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "leaderboard-guideline",
+    category: "guideline",
+    title: "Early Access Leaderboard Guideline: How to Climb",
+    date: "Aug 3, 2026",
+    excerpt: "Every way to earn points ranked by value, what each rank actually takes, and the mistakes that cost people their place."
+  },
+  {
     slug: "access-code-20-plus",
     category: "event",
     title: "Sunflower Land Players (20+ Bumpkin Level): The Final Wave Opens Tonight",

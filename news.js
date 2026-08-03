@@ -1,8 +1,8 @@
 // Renders the full news archive with sidebar category filtering (news.html)
 // Filtering via ?category= URL parameter so sidebar links are plain <a> tags.
 
-const BADGE_LABEL_N = { patch: "Patch Notes", event: "Event", community: "Community" };
-const CATEGORY_LABELS = { all: "All posts", patch: "Patch Notes", event: "Events", community: "Community" };
+const BADGE_LABEL_N = { patch: "Patch Notes", event: "Event", community: "Community", guideline: "Guideline" };
+const CATEGORY_LABELS = { all: "All posts", guideline: "Guidelines", patch: "Patch Notes", event: "Events", community: "Community" };
 
 function badgeHTMLN(category) {
   return `<span class="badge badge-${category}">${BADGE_LABEL_N[category] || category}</span>`;
@@ -17,7 +17,7 @@ function renderSidebar() {
   const list = document.getElementById("news-sidebar-list");
   if (!list || typeof YAKKAMON_POSTS === "undefined") return;
   const active = currentCategory();
-  const counts = { all: YAKKAMON_POSTS.length, patch: 0, event: 0, community: 0 };
+  const counts = { all: YAKKAMON_POSTS.length, guideline: 0, patch: 0, event: 0, community: 0 };
   YAKKAMON_POSTS.forEach(p => counts[p.category] = (counts[p.category] || 0) + 1);
 
   list.innerHTML = Object.keys(CATEGORY_LABELS).map(cat => `

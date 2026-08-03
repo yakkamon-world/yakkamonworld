@@ -124,6 +124,7 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
 .badge-patch{background:var(--yellow-deep); color:var(--ink)}
 .badge-event{background:var(--red)}
 .badge-community{background:var(--green)}
+.badge-guideline{background:var(--purple)}
 
 /* ---------- News / card grid ---------- */
 .news-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; margin-bottom:8px}
