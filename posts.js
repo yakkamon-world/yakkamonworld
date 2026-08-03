@@ -6,6 +6,13 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "yakkamon-referral-code",
+    category: "event",
+    title: "Yakkamon Referral Code: Pre-Registration Opens to Everyone Aug 4",
+    date: "Aug 3, 2026",
+    excerpt: "Referral codes open Aug 4 at 8:00 PM ET \u2014 no Sunflower Land account, no Bumpkin Level, no wallet. How to get a Yakkamon access code and where to enter it."
+  },
+  {
     slug: "leaderboard-guideline",
     category: "guideline",
     title: "Early Access Leaderboard Guideline: How to Climb",

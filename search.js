@@ -16,6 +16,9 @@ const SEARCH_INDEX = [
   { tag: "Pre-registration", title: "Free mint — October 1st", excerpt: "How the free Genesis Monster mint works on Ronin, and who's eligible.", url: "pre-registration.html#free-mint" },
   { tag: "Pre-registration", title: "FLOWER deposits", excerpt: "Depositing $FLOWER early banks your balance for launch and earns pre-reg points.", url: "pre-registration.html#flower-deposits" },
 
+  { tag: "News", title: "Yakkamon Referral Code: Pre-Registration Opens to Everyone Aug 4", excerpt: "Referral codes open Aug 4 at 8:00 PM ET \u2014 no Sunflower Land account, no Bumpkin Level, no wallet needed.", url: "article-yakkamon-referral-code.html" },
+  { tag: "News", title: "How to get a Yakkamon access code", excerpt: "Access codes came from the Sunflower Land Plaza by Bumpkin Level; from Aug 4 a referral code from any registered trainer works for anyone.", url: "article-yakkamon-referral-code.html" },
+  { tag: "News", title: "Where do I enter my Yakkamon trainer code?", excerpt: "On the Enter Trainer Code screen at yakkamon.com \u2014 the same field for access codes and referral codes alike.", url: "article-yakkamon-referral-code.html" },
   { tag: "News", title: "Early Access Leaderboard Guideline: How to Climb", excerpt: "Every points value: nurture 6\u201310/day, referrals 30, free mint 250, $FLOWER deposits up to 70,000 \u2014 and what each rank takes.", url: "article-leaderboard-guideline.html" },
   { tag: "News", title: "How do streaks work?", excerpt: "Tap 3 times daily. 6 points rising to 10 at a 30-day streak, 36-hour grace period, day rolls at midnight UTC.", url: "article-leaderboard-guideline.html" },
   { tag: "News", title: "How many points is a referral worth?", excerpt: "30 points per verified friend. The Oct 1 free mint is 250 \u2014 the same as eight referrals for one click.", url: "article-leaderboard-guideline.html" },
