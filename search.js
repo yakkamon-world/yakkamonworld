@@ -90,7 +90,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "Does signing up early guarantee early access?", excerpt: "No \u2014 signing up early sets your Monster Egg tier and nothing else. Every leaderboard rank is won on points.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "Do I need a crypto wallet?", excerpt: "Pre-registering only needs an email. A wallet only matters if you want to take part in the Free Mint.", url: "faq.html#general" },
   { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "Your trainer number is your leaderboard rank, a tier is a points milestone, and a wave is the batch you enter the game with.", url: "faq.html#ranks-tiers" },
-  { tag: "FAQ", title: "What does my rank get me?", excerpt: "The full ladder from rank 1 to 100,001+, which egg each band receives, which wave \u2014 and the hard cutoff at 100,000.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "What does my rank get me?", excerpt: "The full ladder from rank 1 to 100,001+ \u2014 Legendary Monster A/B/C, Rare Monster, Waves 1 to 5, and the hard cutoff at 100,000.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "How do I earn points?", excerpt: "Daily egg nurture and streaks, Discord and Twitter quests, referrals, the October free mint, and $FLOWER deposits.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do I find out my rank?", excerpt: "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Is the Genesis Monster tradable?", excerpt: "Yes \u2014 fully tradable, arrives with in-game XP, revealed at launch, and never minted again. Supply fixed at 5,000.", url: "faq.html#ranks-tiers" },
