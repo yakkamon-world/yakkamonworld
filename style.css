@@ -592,3 +592,54 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .dc-what strong{color:var(--ink)}
 .dc-warn{display:block; margin-top:8px; font-size:.88rem; color:#8a2b2b; font-weight:800}
 
+/* ---------- Pre-registration ticket + countdown (home) ---------- */
+.prereg-ticket{
+  margin:0; border:5px solid var(--ink); border-radius:var(--radius);
+  box-shadow:7px 7px 0 var(--ink); background:var(--ink); overflow:hidden; min-width:0;
+}
+.prereg-ticket img{display:block; width:100%; height:auto}
+.ticket-link{display:block; text-decoration:none; overflow:hidden}
+.ticket-link img{transition:transform .18s ease}
+.ticket-link:hover img{transform:scale(1.015)}
+.ticket-link:focus-visible{outline:4px solid var(--red); outline-offset:-4px}
+
+.prereg-cd{
+  background:var(--panel); border-top:5px solid var(--ink);
+  padding:18px 20px 22px; text-align:center; min-width:0;
+}
+.cd-head{
+  margin:0; font-family:var(--font-display); font-size:1.5rem; letter-spacing:.05em; color:var(--ink);
+}
+.countdown{
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:14px 0 0; min-width:0;
+}
+.cd-unit{
+  background:var(--ink); border:4px solid var(--ink); border-radius:12px;
+  box-shadow:5px 5px 0 var(--red); padding:10px 4px 8px; width:104px; min-width:0;
+}
+.cd-num{
+  display:block; font-family:var(--font-display); font-size:2.6rem; line-height:1;
+  color:var(--yellow); letter-spacing:.04em;
+}
+.cd-lab{
+  display:block; margin-top:3px; font-size:.7rem; font-weight:800; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--cream);
+}
+.cd-open{
+  margin:14px 0 0; font-family:var(--font-display); font-size:1.9rem; color:var(--green);
+  letter-spacing:.03em;
+}
+.cd-local{margin:14px 0 0; font-size:.95rem; color:#4a4a63}
+.cd-local strong{color:var(--ink)}
+.cd-local .cd-tz{color:#6b6b85; font-size:.85rem}
+.prereg-note{
+  margin:10px auto 0; max-width:640px; font-size:.9rem; line-height:1.5; color:#4a4a63;
+}
+
+@media(max-width:560px){
+  .prereg-cd{padding:16px 14px 18px}
+  .cd-head{font-size:1.25rem}
+  .cd-unit{width:calc(50% - 8px)}
+  .cd-num{font-size:2.1rem}
+  .cd-open{font-size:1.5rem}
+}
