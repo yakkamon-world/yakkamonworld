@@ -410,6 +410,8 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .twitter-callout .tw-body{flex:1 1 200px; min-width:0}
 .twitter-callout h2{color:#fff; font-size:1.3rem; margin:0 0 6px; min-width:0; overflow-wrap:break-word}
 .twitter-callout p{color:#c9c8d8; font-size:.95rem; margin:0; font-weight:600}
+/* YouTube variant of the same callout — red bubble instead of sky blue */
+.twitter-callout .tw-icon.yt-icon{background:var(--red)}
 
 /* ---------- Discord coming-soon callout (Community page) ---------- */
 .discord-callout{

@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "youtube-channel-live",
+    category: "community",
+    title: "YakkamonWorld Is Now on YouTube",
+    date: "Aug 4, 2026",
+    excerpt: "Our brand-new channel is live \u2014 short, plain-language explainer videos on pre-registration, the free mint, and every gameplay system.",
+    body: [
+      "The portal has a YouTube channel. It's brand new, and it covers the same ground as this site \u2014 pre-registration, access codes, the free mint, and how the game actually plays \u2014 in short videos you can watch instead of read.",
+      "## What's on the channel",
+      "Every video is 2\u20133 minutes and sticks to one topic: how pre-registration points work, what the Monster Egg tiers mean, the October 1st free mint, the Genesis airdrop, and each of the six gameplay systems. No filler, no hype \u2014 just the part you came for.",
+      "## Why video",
+      "Some of this is easier to watch than to read. Wallets, gas, Ronin, and the difference between the Free Mint and the Genesis Airdrop all click faster when someone walks you through them. The written versions stay right here on the portal \u2014 the channel is an extra way in, not a replacement.",
+      "## Subscribe",
+      "New videos land as the pre-registration waves roll out, so subscribing is the easiest way to catch them. Find us at youtube.com/@YakkamonWorld, or through the Community page along with our Telegram channel, chat, and X account."
+    ]
+  },
+  {
     slug: "yakkamon-referral-code",
     category: "event",
     title: "Yakkamon Referral Code: Pre-Registration Opens to Everyone Aug 4",

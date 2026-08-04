@@ -16,6 +16,8 @@ const SEARCH_INDEX = [
   { tag: "Pre-registration", title: "Free mint — October 1st", excerpt: "How the free Genesis Monster mint works on Ronin, and who's eligible.", url: "pre-registration.html#free-mint" },
   { tag: "Pre-registration", title: "FLOWER deposits", excerpt: "Depositing $FLOWER early banks your balance for launch and earns pre-reg points.", url: "pre-registration.html#flower-deposits" },
 
+  { tag: "News", title: "YakkamonWorld Is Now on YouTube", excerpt: "Our brand-new YouTube channel is live \u2014 short explainer videos on pre-registration, the free mint, and every gameplay system.", url: "article-youtube-channel-live.html" },
+  { tag: "News", title: "YakkamonWorld YouTube channel", excerpt: "2\u20133 minute explainers covering pre-registration points, Monster Egg tiers, the Oct 1 free mint, the Genesis airdrop and the six gameplay systems.", url: "article-youtube-channel-live.html" },
   { tag: "News", title: "Yakkamon Referral Code: Pre-Registration Opens to Everyone Aug 4", excerpt: "Referral codes open Aug 4 at 8:00 PM ET \u2014 no Sunflower Land account, no Bumpkin Level, no wallet needed.", url: "article-yakkamon-referral-code.html" },
   { tag: "News", title: "How to get a Yakkamon access code", excerpt: "Access codes came from the Sunflower Land Plaza by Bumpkin Level; from Aug 4 a referral code from any registered trainer works for anyone.", url: "article-yakkamon-referral-code.html" },
   { tag: "News", title: "Where do I enter my Yakkamon trainer code?", excerpt: "On the Enter Trainer Code screen at yakkamon.com \u2014 the same field for access codes and referral codes alike.", url: "article-yakkamon-referral-code.html" },
@@ -43,10 +45,11 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
   { tag: "Gameplay", title: "Arena Battles", excerpt: "Face off against the best trainers in PvP arena combat.", url: "gameplay.html?system=arena-battles" },
 
-  { tag: "Community", title: "Community", excerpt: "Join the YakkamonWorld Telegram channel and chat, and follow the official Yakkamon channels.", url: "community.html" },
+  { tag: "Community", title: "Community", excerpt: "Join the YakkamonWorld Telegram channel and chat, subscribe on YouTube, and follow the official Yakkamon channels.", url: "community.html" },
   { tag: "Community", title: "Telegram channel — YakkamonWorld", excerpt: "Pre-registration tiers as they unlock, new guides, and news. The main place to follow the portal.", url: "community.html" },
   { tag: "Community", title: "Telegram chat — YakkamonWorld Chat", excerpt: "Ask anything about wallets, gas, free mint, or access dates. Other players and our bot answer.", url: "community.html" },
   { tag: "Community", title: "Access bot — check your access date", excerpt: "Send our Telegram bot your Bumpkin Level and it tells you when your access code unlocks.", url: "community.html" },
+  { tag: "Community", title: "YouTube \u2014 YakkamonWorld", excerpt: "Subscribe to the portal's YouTube channel for short explainer videos on pre-registration, access codes, the free mint and gameplay.", url: "community.html" },
   { tag: "Community", title: "Follow @Yakkamon_World on X", excerpt: "This portal's own account — site updates, announcements and behind-the-scenes posts.", url: "community.html" },
   { tag: "Community", title: "Official Discord", excerpt: "The official Discord isn't open yet — coming soon.", url: "community.html" },
 
