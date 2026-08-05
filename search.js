@@ -106,7 +106,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "When do I find out my rank?", excerpt: "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Is the Genesis Monster tradable?", excerpt: "Yes \u2014 fully tradable, arrives with in-game XP, revealed at launch, and never minted again. Supply fixed at 5,000.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When does the Genesis Drop leaderboard end?", excerpt: "Trainer numbers and tiers are revealed shortly before early access in Q4 2026; no exact cut-off has been published.", url: "faq.html#mint-vs-airdrop" },
-  { tag: "FAQ", title: "When does the game actually launch?", excerpt: "November 1st is early access, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
+  { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is Q4 2026, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];
 
 (function () {
