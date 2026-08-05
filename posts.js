@@ -14,7 +14,7 @@ const YAKKAMON_POSTS = [
     body: [
       "You can reach early access without spending anything. You can't reach the top of the leaderboard without spending \u2014 a 50,000 $FLOWER deposit is worth 70,000 points, more than a hundred days of perfect free play. This guide is about playing the game that's actually winnable.",
       "## Aim at top 5,000",
-      "Top 5,000 is where a Monster NFT starts and top 100,000 is where early access starts. Ranks 1\u20131,000 are realistically a paid bracket. Everything between the thresholds is a question of which wave you get in, not whether you get in.",
+      "Top 5,000 is where a Monster NFT starts and top 100,000 is where early access starts. The genuinely paid bracket is the <strong>top 100</strong>, not the top 1,000 \u2014 referrals are uncapped, so a Legendary band is reachable free if you can drive enough of them. Everything between the thresholds is a question of which wave you get in, not whether you get in.",
       "## Do today",
       "<strong>Get verified</strong> \u2014 the October 1st free mint runs on a verified whitelist, and signing up isn't the same thing. Then clear the one-time quests: link a wallet, connect X, join Discord and post five times. That's 55 points for about ten minutes, and it never comes round again. Start your nurture streak the same day.",
       "## Every day, two minutes",
