@@ -6,6 +6,27 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "free-to-play-guide",
+    category: "guideline",
+    title: "The Free-to-Play Guide to Early Access",
+    date: "Aug 5, 2026",
+    excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realistic free total.",
+    body: [
+      "You can reach early access without spending anything. You can't reach the top of the leaderboard without spending \u2014 a 50,000 $FLOWER deposit is worth 70,000 points, more than a hundred days of perfect free play. This guide is about playing the game that's actually winnable.",
+      "## Aim at top 5,000",
+      "Top 5,000 is where a Monster NFT starts and top 100,000 is where early access starts. Ranks 1\u20131,000 are realistically a paid bracket. Everything between the thresholds is a question of which wave you get in, not whether you get in.",
+      "## Do today",
+      "<strong>Get verified</strong> \u2014 the October 1st free mint runs on a verified whitelist, and signing up isn't the same thing. Then clear the one-time quests: link a wallet, connect X, join Discord and post five times. That's 55 points for about ten minutes, and it never comes round again. Start your nurture streak the same day.",
+      "## Every day, two minutes",
+      "Tap your egg three times, <strong>after 12:00 UTC</strong> so the 36-hour grace period actually covers a missed day. That's roughly 526 points between now and the free mint. Breaking the streak costs about 44 points climbing back.",
+      "## The one date that matters",
+      "<strong>October 1st.</strong> 250 points for one click \u2014 the same as eight referrals, and the best value on the entire board. You pay only the Ronin network fee.",
+      "## Referrals are the whole free game",
+      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
+      "The full guide, with the daily and weekly routines and the points budget, is on the portal."
+    ]
+  },
+  {
     slug: "tip-nurture-after-noon-utc",
     category: "tips",
     title: "Tip: Nurture After 12:00 UTC, Every Day",

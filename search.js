@@ -18,6 +18,9 @@ const SEARCH_INDEX = [
   { tag: "Pre-registration", title: "Free mint — October 1st", excerpt: "How the free Genesis Monster mint works on Ronin, and who's eligible.", url: "pre-registration.html#free-mint" },
   { tag: "Pre-registration", title: "FLOWER deposits", excerpt: "Depositing $FLOWER early banks your balance for launch and earns pre-reg points.", url: "pre-registration.html#flower-deposits" },
 
+  { tag: "News", title: "The Free-to-Play Guide to Early Access", excerpt: "The daily routine, the one date that matters, and why referrals are 60% of a realistic free total.", url: "article-free-to-play-guide.html" },
+  { tag: "News", title: "How to reach early access without depositing", excerpt: "Get verified, clear the one-time quests, nurture daily after 12:00 UTC, mint on Oct 1, and refer real people.", url: "article-free-to-play-guide.html" },
+  { tag: "News", title: "Free-to-play points budget", excerpt: "Roughly 990 points by Oct 1 with no referrals, about 2,490 with fifty.", url: "article-free-to-play-guide.html" },
   { tag: "News", title: "Tip: Nurture After 12:00 UTC, Every Day", excerpt: "The 36-hour streak grace period only covers a missed day if you nurture in the second half of the UTC day.", url: "article-tip-nurture-after-noon-utc.html" },
   { tag: "News", title: "Tip: Split Your $FLOWER Deposits Weekly", excerpt: "Weekly slices earn the same points as one bulk deposit and enter you into every weekly reward race.", url: "article-tip-split-flower-deposits.html" },
   { tag: "News", title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET", excerpt: "Deposit address issued, bonus rates by deposited total, and why the docs say 10 August.", url: "article-flower-deposits-open-august-9.html" },

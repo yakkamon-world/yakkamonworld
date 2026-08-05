@@ -761,6 +761,9 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .tip-figure .tf-dot{fill:var(--yellow); stroke:var(--ink); stroke-width:3}
 .tip-figure .tf-deadline{stroke:var(--red); stroke-width:4}
 .tip-figure .tf-inbar{font-family:var(--font-body); font-size:11px; font-weight:800; fill:var(--ink)}
+.tip-figure .tf-bar-green{fill:var(--green); stroke:var(--ink); stroke-width:3}
+.tip-figure .tf-bar-yellow{fill:var(--yellow); stroke:var(--ink); stroke-width:3}
+.tip-figure .tf-bar-purple{fill:var(--purple); stroke:var(--ink); stroke-width:3}
 .tip-caption{margin:14px 0 0; font-size:.9rem; line-height:1.5; color:#4a4a63}
 @media(max-width:560px){
   .tip-figure{padding:12px}
