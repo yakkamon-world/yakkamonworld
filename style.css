@@ -381,9 +381,29 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .hero-wordmark .world{color:var(--sky)}
 
 /* ---------- Footer official links row ---------- */
-.footer-links{margin-top:10px; display:flex; gap:18px; font-size:.85rem; font-weight:800}
-.footer-links a{color:var(--yellow); text-decoration:none}
-.footer-links a:hover{text-decoration:underline; color:var(--sky)}
+.footer-links{margin-top:10px; display:flex; flex-wrap:wrap; gap:16px; font-size:.85rem; font-weight:800}
+.footer-links a{
+  color:var(--yellow); text-decoration:none;
+  display:inline-flex; align-items:center; gap:7px; min-width:0;
+}
+.footer-links a:hover{color:var(--sky)}
+.footer-links a:hover .fl-label{text-decoration:underline}
+.footer-links a:focus-visible{outline:3px solid var(--sky); outline-offset:3px; border-radius:6px}
+.footer-links svg{width:21px; height:21px; flex:none; display:block}
+
+/* Mobile: icons only. Five text links wrapped onto three cramped rows down
+   here. The label is display:none, which also drops it from the
+   accessibility tree — that's why every link carries its own aria-label. */
+@media(max-width:640px){
+  .footer-links{gap:8px; margin-top:14px}
+  .footer-links .fl-label{display:none}
+  .footer-links a{
+    justify-content:center; min-width:44px; min-height:44px;   /* touch target */
+    border:3px solid var(--yellow); border-radius:12px;
+  }
+  .footer-links a:hover{border-color:var(--sky)}
+  .footer-links svg{width:24px; height:24px}
+}
 
 /* ---------- Sign-up CTA (Home page, Pre-registration section) ---------- */
 .signup-cta{background:var(--ink); border:5px solid var(--ink); border-radius:var(--radius); padding:26px; text-align:center; margin-bottom:40px}
