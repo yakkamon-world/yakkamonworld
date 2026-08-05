@@ -8,7 +8,7 @@ Community / Stats. No scrolling hub; every tab is its own destination.
 
 No installation, no coding, no build step. Just plain web files.
 
-All pages share **one real CSS file** (`css/style.css`) via a normal
+All pages share **one real CSS file** (`style.css`) via a normal
 `<link>` tag, and the News/Gameplay pages load their content from real
 `.js` files via `<script src>`. Earlier drafts of this site had
 everything pasted inline into every page instead — that was a workaround
@@ -27,29 +27,31 @@ to Cloudflare Pages, GitHub Pages, Netlify, or any other real host.)
 
 ## 2. Editing content
 
-- **Site-wide styling** — edit `css/style.css`. One file, every page
+- **Site-wide styling** — edit `style.css`. One file, every page
   picks up the change automatically.
-- **News posts** — edit `js/posts.js` (search for `const YAKKAMON_POSTS`).
+- **News posts** — edit `posts.js` (search for `const YAKKAMON_POSTS`).
   Copy a post block, paste, edit the text — this makes the card show up
   on the News page. Then also create the matching article page (see
   below) so "Read more" has somewhere to go.
-- **Gameplay systems** — edit `js/gameplay.js`.
-- **Gameplay/News rendering logic** — `js/gameplay-page.js` and
-  `js/news.js`. Only touch these if you want to change *how* things are
+- **Gameplay systems** — edit `gameplay.js`.
+- **Gameplay/News rendering logic** — `gameplay-page.js` and
+  `news.js`. Only touch these if you want to change *how* things are
   displayed, not the content itself.
 
-**Community page** is fully static — no placeholder tweets. It links out
-to @YakkamonWorld and @playyakkamon on X, shows Discord as "Coming Soon"
-(no link yet), and links to the official docs and pre-registration site.
-When the Discord opens, add the real invite link and swap the "Coming
-Soon" badge for something else.
+**Community page** is fully static — no placeholder tweets. It groups
+our own channels first (Telegram channel + chat, YouTube, @Yakkamon_World
+on X, and our own Discord) and the official ones after (@playyakkamon,
+docs, pre-registration site). The Discord listed there is **YakkamonWorld's
+own server, not the official Yakkamon Discord** — it shows "Coming Soon"
+with no link yet. When it opens, add the invite and swap the badge for a
+JOIN button like the Telegram and YouTube blocks.
 
 **News articles are individual static pages** (`article-{slug}.html`)
 rather than one template driven by a URL parameter — this was originally
 a reliability fix, but it's also just simpler to reason about: every
 article is a real, complete page. To add one:
 
-1. Add a post block to `js/posts.js` (this makes the card appear).
+1. Add a post block to `posts.js` (this makes the card appear).
 2. Copy any existing `article-*.html` file, rename it to
    `article-your-slug.html` — the slug must match what you used in step 1.
 3. Inside that copied file, update the badge category, title, date, and
@@ -83,6 +85,7 @@ one from scratch — that way all of this comes along automatically:
   before `</body>`
 - [ ] Correct `active` class on the matching nav tab
 - [ ] Added to `search.js`'s `SEARCH_INDEX` array so it's actually findable
+- [ ] Added to `sitemap.xml` (every page belongs there)
 - [ ] If it's a news post: added to `posts.js` too
 
 To double check nothing was missed across the whole site at once, this
@@ -94,21 +97,27 @@ grep -L 'rel="icon"' *.html   # should print nothing if all pages are covered
 ## File map
 
 ```
-yakkamon-pixel/
-├── index.html                          ← Home tab
+yakkamonworld/                           ← everything is flat, no css/ or js/ dirs
+├── index.html                           ← Home tab (ticket, trailer, timeline)
 ├── pre-registration.html                ← Pre-registration tab
 ├── news.html                            ← News tab (sidebar + archive)
 ├── gameplay.html                        ← Gameplay tab (sidebar + detail)
 ├── community.html                       ← Community tab
+├── faq.html                             ← FAQ tab
 ├── stats.html                           ← Stats tab (locked trainer lookup teaser)
-├── article-free-mint-october-1.html     ← individual news article
-├── article-genesis-airdrop-5000.html    ← individual news article
-├── article-flower-deposits-explained.html ← individual news article
-├── article-reward-track-explained.html  ← individual news article
-├── css/style.css                        ← all site styling (single source of truth)
-└── js/
-    ├── posts.js           ← news content — edit this to add/change posts
-    ├── gameplay.js         ← gameplay systems content
-    ├── news.js             ← renders the news sidebar + archive grid
-    └── gameplay-page.js    ← renders the gameplay sidebar + detail view
+├── article-*.html                       ← one static page per news post
+├── style.css                            ← all site styling (single source of truth)
+├── posts.js                             ← news content — edit to add/change posts
+├── gameplay.js                          ← gameplay systems content
+├── news.js / gameplay-page.js           ← render the archive + detail views
+├── home-news.js                         ← renders the 3 latest posts on Home
+├── search.js                            ← SEARCH_INDEX + the search overlay
+├── prereg-ticket.js                     ← ticket-card countdown (Home)
+├── timeline-countdown.js                ← timeline countdowns (currently dormant:
+│                                          no milestone has an exact date right now)
+├── trailer-embed.js                     ← click-to-play YouTube facade (Home)
+├── trailer-poster.webp / -2x.webp       ← trailer poster, 1x and 2x
+├── sitemap.xml / robots.txt             ← keep the sitemap in sync with new pages
+└── wrangler.jsonc                       ← Cloudflare config
 ```
+
