@@ -119,10 +119,16 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "Do I need a crypto wallet?", excerpt: "Pre-registering only needs an email. A wallet only matters if you want to take part in the Free Mint.", url: "faq.html#general" },
   { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "Your trainer number is your leaderboard rank, a tier is a points milestone, and a wave is the batch you enter the game with.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "What does my rank get me?", excerpt: "The full ladder from rank 1 to 100,001+ \u2014 Legendary Monster A/B/C, Rare Monster, Waves 1 to 5, and the hard cutoff at 100,000.", url: "faq.html#ranks-tiers" },
-  { tag: "FAQ", title: "How do I earn points?", excerpt: "Daily egg nurture and streaks, Discord and Twitter quests, referrals, the October free mint, and $FLOWER deposits.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "How do I earn points?", excerpt: "Daily egg nurture and streaks, Discord and X quests, referrals, the October free mint, and $FLOWER deposits.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do I find out my rank?", excerpt: "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Is the Genesis Monster tradable?", excerpt: "Yes \u2014 fully tradable, arrives with in-game XP, revealed at launch, and never minted again. Supply fixed at 5,000.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When does the Genesis Drop leaderboard end?", excerpt: "Trainer numbers and tiers are revealed shortly before early access in Q4 2026; no exact cut-off has been published.", url: "faq.html#mint-vs-airdrop" },
+  { tag: "FAQ", title: "Is there more than one leaderboard?", excerpt: "Two \u2014 an all-time final ranking that pays once, and a weekly ranking that resets and pays boxes every week.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "What time of day should I nurture?", excerpt: "After 12:00 UTC \u2014 that is the cutoff where the 36-hour grace period actually covers a whole missed day.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "Can I reach a Legendary rank without depositing?", excerpt: "The top 100 is a paid bracket, but referrals are uncapped \u2014 about 165 match a 5,000 $FLOWER deposit.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "When do $FLOWER deposits open?", excerpt: "Sunday 9 August at 8:00 PM ET \u2014 the docs say 10 August because they quote the UTC date.", url: "faq.html#flower" },
+  { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "Spread it out \u2014 the rate follows your deposited total, so slices earn the same points and win more weekly boxes.", url: "faq.html#flower" },
+  { tag: "FAQ", title: "Is there a video version of the guides?", excerpt: "Short explainers on the YakkamonWorld YouTube channel, plus the trailer on the home page.", url: "faq.html#general" },
   { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is Q4 2026, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];
 
