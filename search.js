@@ -53,7 +53,7 @@ const SEARCH_INDEX = [
   { tag: "Community", title: "Access bot — check your access date", excerpt: "Send our Telegram bot your Bumpkin Level and it tells you when your access code unlocks.", url: "community.html" },
   { tag: "Community", title: "YouTube \u2014 YakkamonWorld", excerpt: "Subscribe to the portal's YouTube channel for short explainer videos on pre-registration, access codes, the free mint and gameplay.", url: "community.html" },
   { tag: "Community", title: "Follow @Yakkamon_World on X", excerpt: "This portal's own account — site updates, announcements and behind-the-scenes posts.", url: "community.html" },
-  { tag: "Community", title: "Official Discord", excerpt: "The official Discord isn't open yet — coming soon.", url: "community.html" },
+  { tag: "Community", title: "YakkamonWorld Discord", excerpt: "The portal's own community server — not the official Yakkamon Discord. Not open yet.", url: "community.html" },
 
   { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" },
 
