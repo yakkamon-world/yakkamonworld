@@ -57,6 +57,11 @@ const SEARCH_INDEX = [
 
   { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" },
 
+  { tag: "Tips", title: "Trainer Tips", excerpt: "Practical leaderboard tactics worked through with real numbers.", url: "tips.html" },
+  { tag: "Tips", title: "Spread your $FLOWER deposits weekly", excerpt: "Weekly slices enter every weekly reward race instead of one \u2014 costing roughly 8% of your points.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "Weekly vs final leaderboard ranking", excerpt: "Final ranking is all-time points and pays once; the weekly board resets and pays boxes, tickets and loot every week.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "Should I deposit $FLOWER in bulk?", excerpt: "Only if you are chasing the top 100 with a 50,000 stack \u2014 that is where the +40% tier outweighs the weekly boxes.", url: "tips.html#weekly-flower" },
+
   { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
   { tag: "FAQ", title: "How to pre-register (Sunflower Land players)", excerpt: "Access dates by Bumpkin Level, plus step-by-step: find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "faq.html#sunflowerland-guide" },
   { tag: "FAQ", title: "Where can I ask a question?", excerpt: "Our unofficial Telegram channel and chat group — plus an access bot that answers Bumpkin Level lookups.", url: "faq.html#general" },

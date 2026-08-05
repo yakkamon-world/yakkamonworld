@@ -103,6 +103,7 @@ yakkamonworld/                           ← everything is flat, no css/ or js/ 
 ├── news.html                            ← News tab (sidebar + archive)
 ├── gameplay.html                        ← Gameplay tab (sidebar + detail)
 ├── community.html                       ← Community tab
+├── tips.html                            ← Trainer Tips tab (leaderboard tactics)
 ├── faq.html                             ← FAQ tab
 ├── stats.html                           ← Stats tab (locked trainer lookup teaser)
 ├── article-*.html                       ← one static page per news post

@@ -65,9 +65,9 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
   .brand .portal-short{display:inline}
   .tabs{
     width:100%; padding:6px 0 10px; gap:6px;
-    display:grid; grid-template-columns:repeat(3,1fr);
+    display:grid; grid-template-columns:repeat(4,1fr);   /* 8 tabs = 2 even rows */
   }
-  .tab{padding:9px 4px; text-align:center; font-size:.8rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
+  .tab{padding:9px 3px; text-align:center; font-size:.74rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
   .tab .label-full{display:none}
   .tab .label-short{display:inline}
   .tab.tab-wide{grid-column:1 / -1}
@@ -740,4 +740,24 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   .cd-num{font-size:2.1rem}
   .cd-open{font-size:1.5rem}
   .cd-cta{font-size:1.25rem; padding:12px 32px}
+}
+
+
+/* ---------- Tips page: comparison figure ---------- */
+.tip-figure{
+  background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius);
+  box-shadow:7px 7px 0 var(--ink); padding:18px; margin:20px 0; min-width:0;
+}
+.tip-figure svg{width:100%; height:auto; display:block; overflow:visible}
+.tip-figure .tf-title{font-family:var(--font-display); font-size:17px; fill:var(--ink)}
+.tip-figure .tf-sub{font-family:var(--font-body); font-size:11px; font-weight:700; fill:#6b6b85}
+.tip-figure .tf-bar{fill:var(--sky); stroke:var(--ink); stroke-width:3}
+.tip-figure .tf-bar-big{fill:var(--red); stroke:var(--ink); stroke-width:3}
+.tip-figure .tf-bar-none{fill:#d5d4e4; stroke:var(--ink); stroke-width:3}
+.tip-figure .tf-star{font-size:18px; fill:var(--yellow); stroke:var(--ink); stroke-width:.8}
+.tip-figure .tf-axis{stroke:var(--ink); stroke-width:3}
+.tip-caption{margin:14px 0 0; font-size:.9rem; line-height:1.5; color:#4a4a63}
+@media(max-width:560px){
+  .tip-figure{padding:12px}
+  .tip-caption{font-size:.85rem}
 }
