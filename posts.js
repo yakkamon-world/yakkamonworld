@@ -6,6 +6,25 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "flower-deposits-open-august-9",
+    category: "event",
+    title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET",
+    date: "Aug 5, 2026",
+    excerpt: "The biggest points lever in pre-registration goes live. Your deposit address is issued the same moment \u2014 and how you time your deposits matters more than you'd think.",
+    body: [
+      "$FLOWER deposits open on <strong>Sunday, August 9 at 8:00 PM ET</strong>. That's when your deposit address is issued, and when deposited $FLOWER starts converting into leaderboard points.",
+      "## What you can do from that moment",
+      "Send any amount of $FLOWER to your deposit address on <strong>Base or Ronin</strong>, minimum 5 $FLOWER. Every $FLOWER earns a point, and your <strong>deposited total</strong> unlocks bonus rates on top: a 500 total earns +10%, 5,000 earns +20%, and 50,000 earns +40%. Points land in the week the deposit confirms.",
+      "It's the single biggest points lever in pre-registration \u2014 a 50,000 deposited total is worth 70,000 points, which no amount of daily nurturing will match. We're not telling you to deposit; we're telling you what the numbers say.",
+      "## Why the docs say \"10 August\"",
+      "Because they're quoting the <strong>UTC</strong> date. 8:00 PM ET on Sunday Aug 9 is midnight UTC, which is already Monday Aug 10 in London and everywhere east of it. Same instant, two calendar dates \u2014 if you're in the Americas, the evening you want is <strong>Sunday the 9th</strong>.",
+      "## Don't rush the whole stack in",
+      "The obvious move is to deposit everything the moment the address appears. It's usually the wrong one. The leaderboard runs two competitions at once: a <strong>final ranking</strong> on your all-time points, and a <strong>weekly ranking</strong> that resets every week and pays a resource box, food box, raffle ticket and loot box each time.",
+      "One bulk deposit gives you a single enormous week and nothing after it. The same $FLOWER split into weekly slices enters you into every weekly race between now and early access \u2014 and because the bonus rate follows your deposited total rather than each individual deposit, it earns exactly the same points either way.",
+      "All $FLOWER can be <strong>withdrawn</strong> once you gain access to the game. The full breakdown, with the case study, is on the Tips page."
+    ]
+  },
+  {
     slug: "tips-section-live",
     category: "community",
     title: "New on the Portal: Trainer Tips",

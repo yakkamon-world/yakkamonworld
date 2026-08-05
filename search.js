@@ -18,6 +18,8 @@ const SEARCH_INDEX = [
   { tag: "Pre-registration", title: "Free mint — October 1st", excerpt: "How the free Genesis Monster mint works on Ronin, and who's eligible.", url: "pre-registration.html#free-mint" },
   { tag: "Pre-registration", title: "FLOWER deposits", excerpt: "Depositing $FLOWER early banks your balance for launch and earns pre-reg points.", url: "pre-registration.html#flower-deposits" },
 
+  { tag: "News", title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET", excerpt: "Deposit address issued, bonus rates by deposited total, and why the docs say 10 August.", url: "article-flower-deposits-open-august-9.html" },
+  { tag: "News", title: "When do $FLOWER deposits open?", excerpt: "Aug 9 at 8:00 PM ET \u2014 midnight UTC, which the official docs render as 10 August.", url: "article-flower-deposits-open-august-9.html" },
   { tag: "News", title: "New on the Portal: Trainer Tips", excerpt: "A new section for leaderboard tactics \u2014 first tip is splitting your $FLOWER deposits weekly instead of in bulk.", url: "article-tips-section-live.html" },
   { tag: "News", title: "Trainer Tips section announcement", excerpt: "Why the portal now separates what the rules are from what to do with them.", url: "article-tips-section-live.html" },
   { tag: "News", title: "YakkamonWorld Is Now on YouTube", excerpt: "Our brand-new YouTube channel is live \u2014 short explainer videos on pre-registration, the free mint, and every gameplay system.", url: "article-youtube-channel-live.html" },
