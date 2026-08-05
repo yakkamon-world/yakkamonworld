@@ -709,12 +709,6 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   letter-spacing:.03em;
 }
 .cd-cta{margin:18px auto 0; font-size:1.45rem; padding:14px 44px}
-.cd-local{margin:14px 0 0; font-size:.95rem; color:#4a4a63}
-.cd-local strong{color:var(--ink)}
-.cd-local .cd-tz{color:#6b6b85; font-size:.85rem}
-.prereg-note{
-  margin:10px auto 0; max-width:640px; font-size:.9rem; line-height:1.5; color:#4a4a63;
-}
 
 @media(max-width:560px){
   .prereg-cd{padding:16px 14px 18px}
