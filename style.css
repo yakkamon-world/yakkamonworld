@@ -632,6 +632,42 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   background:var(--panel); border-top:5px solid var(--ink);
   padding:18px 20px 22px; text-align:center; min-width:0;
 }
+
+/* ---------- Trailer facade (home, between ticket and countdown) ---------- */
+.prereg-trailer{border-top:5px solid var(--ink); background:var(--ink); min-width:0}
+.yt-facade{
+  position:relative; display:block; width:100%; aspect-ratio:16/9;
+  padding:0; margin:0; border:0; background:var(--ink);
+  cursor:pointer; overflow:hidden; min-width:0;
+}
+.yt-facade img{width:100%; height:100%; object-fit:cover; transition:transform .18s ease, filter .18s ease}
+.yt-facade:hover img, .yt-facade:focus-visible img{transform:scale(1.02); filter:brightness(.8)}
+.yt-facade:focus-visible{outline:4px solid var(--red); outline-offset:-4px}
+.prereg-trailer iframe{display:block; width:100%; aspect-ratio:16/9; border:0}
+.yt-play{
+  /* Sits below dead-centre on purpose: the poster's creature has its face
+     and glowing eyes right in the middle, and a centred button buries them. */
+  position:absolute; left:50%; top:60%; transform:translate(-50%,-50%);
+  display:grid; place-items:center; width:104px; height:74px;
+  background:var(--yellow); border:4px solid var(--ink); border-radius:18px;
+  box-shadow:5px 5px 0 var(--ink); pointer-events:none;
+  transition:transform .12s ease;
+}
+.yt-facade:hover .yt-play, .yt-facade:focus-visible .yt-play{transform:translate(-50%,-50%) scale(1.07) rotate(-2deg)}
+.yt-play svg{width:36px; height:36px; color:var(--ink)}
+.yt-label{
+  position:absolute; left:14px; bottom:14px; pointer-events:none;
+  font-family:var(--font-display); font-size:1rem; letter-spacing:.08em; color:var(--ink);
+  background:var(--cream); border:3px solid var(--ink); border-radius:999px;
+  box-shadow:3px 3px 0 var(--ink); padding:2px 14px;
+}
+.yt-noscript{margin:0; padding:16px; text-align:center}
+.yt-noscript a{color:var(--yellow); font-weight:800}
+@media(max-width:560px){
+  .yt-play{width:78px; height:56px; border-width:3px; box-shadow:4px 4px 0 var(--ink)}
+  .yt-play svg{width:27px; height:27px}
+  .yt-label{left:10px; bottom:10px; font-size:.85rem; padding:1px 11px}
+}
 .cd-head{
   margin:0; font-family:var(--font-display); font-size:1.5rem; letter-spacing:.05em; color:var(--ink);
 }
@@ -655,6 +691,10 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .countdown{
   display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:14px 0 0; min-width:0;
 }
+/* display:flex above beats the browser's default [hidden]{display:none}, so
+   the script's root.hidden = true left the empty "--" boxes on screen once
+   registration opened. This puts [hidden] back in charge. */
+.countdown[hidden]{display:none}
 .cd-unit{
   background:var(--ink); border:4px solid var(--ink); border-radius:12px;
   box-shadow:5px 5px 0 var(--red); padding:10px 4px 8px; width:104px; min-width:0;
