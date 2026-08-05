@@ -53,6 +53,7 @@
     <p class="sidebar-label">TIPS</p>
     <ul class="sidebar-list">
       <li><a href="#weekly-flower">1. Spread $FLOWER deposits weekly</a></li>
+      <li><a href="#streak-timing">2. Nurture after 12:00 UTC</a></li>
     </ul>
     <p class="sidebar-label" style="margin-top:22px">RELATED</p>
     <ul class="sidebar-list">
@@ -180,6 +181,93 @@
       <li>Weekly points come from every source, not just deposits &mdash; daily nurture, referrals and X posts all count toward the same weekly total.</li>
     </ul>
 
+  </section>
+
+
+  <section class="prereg-section" id="streak-timing">
+    <h2>2. NURTURE AFTER 12:00 UTC, EVERY DAY</h2>
+    <p>Daily nurture is the main points lever for anyone not depositing, and it pays more the longer your run goes. There's also a grace period built into it &mdash; but the grace period only actually protects you if you nurture in the <strong>second half of the UTC day</strong>. That's the whole tip, and the reason is a quirk of how two separate clocks interact.</p>
+
+    <h3>What a streak is worth</h3>
+    <p>Tap your egg three times to nurture it, once a day. Each nurture pays 5 points plus a streak bonus that climbs with the run:</p>
+    <div class="table-scroll"><table class="prereg-table">
+      <tr><th>Streak day</th><th>Points per day</th></tr>
+      <tr><td>Day 1 &ndash; 2</td><td>+6</td></tr>
+      <tr><td>Day 3 &ndash; 4</td><td>+7</td></tr>
+      <tr><td>Day 5 &ndash; 9</td><td>+8</td></tr>
+      <tr><td>Day 10 &ndash; 29</td><td>+9</td></tr>
+      <tr><td><strong>Day 30+</strong></td><td><strong>+10</strong></td></tr>
+    </table></div>
+    <p>A full week at day 30+ is 70 points. Run it unbroken from early August to the free mint on October 1 &mdash; 57 days &mdash; and daily nurture alone is worth about <strong>526 points</strong>.</p>
+
+    <h3>What breaking it costs</h3>
+    <p>Miss the window and your next nurture starts again at day 1. You don't just lose one day &mdash; you drop from 10 points a day back to 6, and it takes 29 days to climb back to the top rate. That rebuild is <strong>44 points</strong> you'd have banked by staying on the ladder, on top of the day you missed.</p>
+    <div class="table-scroll"><table class="prereg-table">
+      <tr><th>Over 57 days</th><th>Points from nurture</th></tr>
+      <tr><td>Never broken</td><td><strong>526</strong></td></tr>
+      <tr><td>Broken once</td><td>~474</td></tr>
+      <tr><td>Broken four times</td><td>~420</td></tr>
+    </table></div>
+
+    <h3>The two clocks</h3>
+    <p>Two rules govern the streak, and they don't line up:</p>
+    <ul class="prereg-list">
+      <li><strong>One nurture per day</strong>, and the day rolls over at <strong>midnight UTC</strong>.</li>
+      <li>You always have <strong>36 hours</strong> from your last nurture before the run resets.</li>
+    </ul>
+    <p>36 hours is a day and a half, which is where the &ldquo;a single missed day need not cost you the streak&rdquo; promise comes from. But whether it actually covers a missed day depends entirely on <em>when</em> in the UTC day you tapped.</p>
+
+    <div class="tip-figure">
+      <svg viewBox="0 0 640 250" role="img" aria-label="Two timelines over three UTC days. Nurturing at 08:00 UTC leaves a 36-hour window that expires partway through the next day, so a missed day breaks the streak. Nurturing at 20:00 UTC leaves a window that reaches into the day after next, so a missed day is survivable.">
+        <line x1="260" y1="30" x2="260" y2="230" class="tf-grid"/>
+        <line x1="500" y1="30" x2="500" y2="230" class="tf-grid"/>
+        <text x="130" y="24" text-anchor="middle" class="tf-sub">DAY 1 (UTC)</text>
+        <text x="380" y="24" text-anchor="middle" class="tf-sub">DAY 2</text>
+        <text x="570" y="24" text-anchor="middle" class="tf-sub">DAY 3</text>
+
+        <text x="20" y="52" class="tf-title">NURTURE 08:00 UTC</text>
+        <rect x="100" y="62" width="360" height="22" class="tf-bar-none"/>
+        <text x="280" y="78" text-anchor="middle" class="tf-inbar">36-HOUR WINDOW</text>
+        <circle cx="100" cy="73" r="8" class="tf-dot"/>
+        <line x1="460" y1="58" x2="460" y2="94" class="tf-deadline"/>
+        <text x="20" y="108" class="tf-sub">Window dies inside Day 2 &#8212; you must nurture tomorrow or the run resets.</text>
+
+        <text x="20" y="152" class="tf-title">NURTURE 20:00 UTC</text>
+        <rect x="220" y="162" width="360" height="22" class="tf-bar"/>
+        <text x="400" y="178" text-anchor="middle" class="tf-inbar">36-HOUR WINDOW</text>
+        <circle cx="220" cy="173" r="8" class="tf-dot"/>
+        <line x1="580" y1="158" x2="580" y2="194" class="tf-deadline"/>
+        <text x="20" y="208" class="tf-sub">Window reaches into Day 3 &#8212; skip Day 2 entirely and the streak survives.</text>
+        <line x1="20" y1="228" x2="620" y2="228" class="tf-axis"/>
+      </svg>
+      <p class="tip-caption">Same 36 hours, different protection. Nurture before noon UTC and the grace period expires before the next day is over; nurture after noon and it carries you past it.</p>
+    </div>
+
+    <h3>Why noon UTC is the line</h3>
+    <p>Nurture at time T and your deadline is T plus 36 hours. For that deadline to land <em>past</em> the end of the next day, T has to be at least 12:00 UTC. Tap at 08:00 and your window closes at 20:00 the following day &mdash; you're still on the hook tomorrow. Tap at 20:00 and it closes at 08:00 the day after &mdash; you can miss a whole day and be fine.</p>
+    <div class="table-scroll"><table class="prereg-table">
+      <tr><th>12:00 UTC is&hellip;</th><th>Local time</th></tr>
+      <tr><td>Los Angeles</td><td>5:00 AM</td></tr>
+      <tr><td>New York</td><td>8:00 AM</td></tr>
+      <tr><td>S&atilde;o Paulo</td><td>9:00 AM</td></tr>
+      <tr><td>London</td><td>1:00 PM</td></tr>
+      <tr><td>Berlin</td><td>2:00 PM</td></tr>
+      <tr><td>Istanbul</td><td>3:00 PM</td></tr>
+      <tr><td>Mumbai</td><td>5:30 PM</td></tr>
+      <tr><td>Manila</td><td>8:00 PM</td></tr>
+      <tr><td>Tokyo</td><td>9:00 PM</td></tr>
+      <tr><td>Sydney</td><td>10:00 PM</td></tr>
+    </table></div>
+    <div class="prereg-callout info"><strong>The practical version.</strong> In the Americas almost any waking-hours nurture already clears noon UTC, so you're fine by default. In Europe, Asia and Australia it's the opposite &mdash; a morning nurture is <em>before</em> the cutoff and leaves you no slack at all. If you're east of London, make it an evening habit.</div>
+
+    <h3>Practical notes</h3>
+    <ul class="prereg-list">
+      <li>Nurturing late one day and early the next is fine &mdash; they're different UTC days, so both count and the run continues.</li>
+      <li>The 36-hour grace is a safety net, not a schedule. Using it every other day means you're nurturing half as often and earning half as many points.</li>
+      <li>Nurture points feed your <strong>weekly</strong> total as well as your all-time one, so a consistent run helps in both competitions at once.</li>
+      <li>Set a repeating alarm for the same time each evening. That single habit is worth more than any other free action on the board.</li>
+      <li>Be realistic about scale: 526 points over 57 days is a fraction of what a large $FLOWER deposit pays. It's the best free lever there is, not a way to out-earn capital.</li>
+    </ul>
   </section>
 
   </div>

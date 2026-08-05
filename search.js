@@ -61,6 +61,9 @@ const SEARCH_INDEX = [
 
   { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" },
 
+  { tag: "Tips", title: "Nurture after 12:00 UTC every day", excerpt: "The 36-hour streak grace period only covers a whole missed day if you nurtured in the second half of the UTC day.", url: "tips.html#streak-timing" },
+  { tag: "Tips", title: "How much is a nurture streak worth?", excerpt: "6 points a day rising to 10 at day 30+ \u2014 about 526 points over 57 unbroken days.", url: "tips.html#streak-timing" },
+  { tag: "Tips", title: "What does breaking a nurture streak cost?", excerpt: "You restart at 6 points a day and need 29 days to climb back \u2014 roughly 44 points on top of the day you missed.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "Trainer Tips", excerpt: "Practical leaderboard tactics worked through with real numbers.", url: "tips.html" },
   { tag: "Tips", title: "Spread your $FLOWER deposits weekly", excerpt: "Bonus rates key off your deposited total, so weekly slices earn the same points and enter every weekly reward race.", url: "tips.html#weekly-flower" },
   { tag: "Tips", title: "Weekly vs final leaderboard ranking", excerpt: "Final ranking is all-time points and pays once; the weekly board resets and pays boxes, tickets and loot every week.", url: "tips.html#weekly-flower" },
