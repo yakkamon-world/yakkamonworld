@@ -6,6 +6,40 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "tip-nurture-after-noon-utc",
+    category: "tips",
+    title: "Tip: Nurture After 12:00 UTC, Every Day",
+    date: "Aug 5, 2026",
+    excerpt: "The 36-hour streak grace period only covers a missed day if you nurture in the second half of the UTC day. The cutoff is exactly noon UTC.",
+    body: [
+      "Everyone knows about the 36-hour grace period on nurture streaks \u2014 the one that means a single missed day shouldn't break your run. It works less often than people assume.",
+      "## Two clocks, not one",
+      "The game day rolls over at <strong>midnight UTC</strong>, and separately you get <strong>36 hours</strong> from your last nurture before the streak resets. 36 hours is a day and a half, and whether that spare half-day actually covers a missed day depends entirely on what time you tapped.",
+      "Nurture at 08:00 UTC and your window closes at 20:00 tomorrow \u2014 still inside tomorrow, so you have to nurture again. Nurture at 20:00 UTC and it closes at 08:00 the day after \u2014 you can miss a whole day and survive.",
+      "## The cutoff is noon UTC",
+      "Noon plus 36 hours lands exactly at the end of the next day. Before noon, no safety net. After noon, a real one. That's 8:00 AM in New York, 1:00 PM in London, 8:00 PM in Manila and 9:00 PM in Tokyo \u2014 so in the Americas you're mostly covered already, while east of London a morning nurture leaves you no slack at all.",
+      "## Why bother",
+      "Breaking a streak doesn't cost you one day. You drop from 10 points a day back to 6 and need 29 days to climb back \u2014 roughly <strong>44 points</strong> on top of the day you missed. An unbroken run to the free mint is worth about 526 points.",
+      "Full write-up, with the timings and a timezone table, is on the Tips page."
+    ]
+  },
+  {
+    slug: "tip-split-flower-deposits",
+    category: "tips",
+    title: "Tip: Split Your $FLOWER Deposits Weekly",
+    date: "Aug 5, 2026",
+    excerpt: "Weekly slices earn exactly the same points as one bulk deposit \u2014 and enter you into every weekly reward race instead of just one.",
+    body: [
+      "If you're planning to deposit $FLOWER, how you time it matters more than most people realise. Sending it in weekly slices beats one lump, and it costs you nothing to do.",
+      "## The leaderboard is two competitions",
+      "Your <strong>final ranking</strong> is your all-time points and pays out once, at early access in Q4 2026. The <strong>weekly ranking</strong> resets every week and pays a resource box, food box, raffle ticket and loot box each time.",
+      "A bulk deposit gives you one enormous week and nothing after it. The weekly board doesn't reward winning by a wide margin either \u2014 finishing first with 60,000 points pays the same as finishing first with 7,500. Everything above the line you needed is surplus.",
+      "## And it's free to spread out",
+      "The bonus rate is set by your <strong>deposited total</strong>, not by the size of each individual deposit. So 5,000 $FLOWER sent in eight slices earns the same 6,000 points as 5,000 sent in one lump \u2014 same points, same final rank, eight times the weekly rewards. This holds at every stack size, including 50,000.",
+      "Deposits open Sunday, August 9 at 8:00 PM ET. The full case study is on the Tips page."
+    ]
+  },
+  {
     slug: "flower-deposits-open-august-9",
     category: "event",
     title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET",
