@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "tips-section-live",
+    category: "community",
+    title: "New on the Portal: Trainer Tips",
+    date: "Aug 5, 2026",
+    excerpt: "A new section for leaderboard tactics, worked through with real numbers. First tip: split your $FLOWER deposits weekly instead of depositing in bulk.",
+    body: [
+      "There's a new tab on the portal. <strong>Trainer Tips</strong> is where we work through the tactical side of the pre-registration leaderboard \u2014 the decisions that actually change what you walk away with, with the maths shown rather than asserted.",
+      "## Why a separate section",
+      "The rest of the site explains what the rules <em>are</em>. The FAQ decodes terminology, the pre-registration guide walks through signing up, and the leaderboard guideline lists every points value. None of that tells you what to <em>do</em> with the rules. Tips is for that, and keeping it separate means the reference pages stay neutral.",
+      "## The first tip: split your $FLOWER deposits",
+      "The leaderboard is really two competitions running at once. Your <strong>final ranking</strong> is your all-time points total and pays out once, at early access in Q4 2026. The <strong>weekly ranking</strong> resets every week and pays resource boxes, food boxes, raffle tickets and loot boxes each time.",
+      "A single bulk deposit enters you into one enormous week and then nothing. Spreading the same $FLOWER across weekly slices enters you into every weekly race between now and Q4.",
+      "And it costs nothing to do. The bonus rate is set by your <strong>deposited total</strong>, not by the size of each individual deposit \u2014 so 5,000 $FLOWER sent in eight slices earns the same 6,000 points as 5,000 sent in one lump. Same points, same final rank, eight times the weekly rewards.",
+      "## More to come",
+      "Tips will grow as the leaderboard runs and patterns become clear. The full write-up, including the case study and the numbers at every stack size, is on the Tips page."
+    ]
+  },
+  {
     slug: "youtube-channel-live",
     category: "community",
     title: "YakkamonWorld Is Now on YouTube",
