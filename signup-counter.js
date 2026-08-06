@@ -1,26 +1,32 @@
-// YAKKAMON PORTAL — SIGNUP SLOT COUNTER
+// YAKKAMON PORTAL — SIGNUP COUNTER
 //
-// This now fetches a near-live number from our own "counter worker" — a
-// separate small Cloudflare Worker that checks yakkamon.com every 30
-// minutes using a real headless browser (since their counter has no
-// public API and is rendered by their own JavaScript). See the
-// yakkamon-counter-worker project for that piece.
+// Reads from our counter worker, which now calls Yakkamon's own JSON endpoint
+// directly (no headless browser, no Browser Rendering quota), so the number
+// refreshes every few minutes instead of hourly.
 //
-// FALLBACK_CLAIMED/FALLBACK_DATE below are only used if that live fetch
-// fails for any reason (worker not deployed yet, offline, etc.) — the
-// page always shows *something* correct-looking rather than breaking.
+// Shape returned by /count:
+//   claimed, total, tier, tierUntil, remainingInTier, remainingOverall,
+//   tiers[], checkedAt, changedAt, ageMinutes, stale
+//
+// NOTE ON "remaining": their API's `remaining` counts slots left in the
+// CURRENT TIER, not overall — claimed + remaining = tierUntil. The worker
+// splits these into remainingInTier / remainingOverall so this page can't
+// accidentally imply only a few thousand slots exist in all of Season 0.
 
 const COUNTER_WORKER_URL = "https://yakkamon-counter-worker.yakkamonworld.workers.dev/count";
-const FALLBACK_CLAIMED = 35;
-const FALLBACK_DATE = "Jul 30, 2026";
-const LIVE_META_TEXT = "auto-refreshed every 30 min";
-const FALLBACK_META_TEXT = "checked manually, not live";
+
+// Only shown if the worker is unreachable.
+const FALLBACK_CLAIMED = 44797;
+const FALLBACK_DATE = "Aug 6, 2026";
+
+const META_LIVE     = "auto-refreshed every few minutes";
+const META_STALE    = "last successful check";
+const META_FALLBACK = "last known figure, not live";
 
 (function () {
-  function formatLiveDate(iso) {
+  function formatDate(iso) {
     try {
-      const d = new Date(iso);
-      return d.toLocaleString("en-US", {
+      return new Date(iso).toLocaleString("en-US", {
         month: "short", day: "numeric", year: "numeric",
         hour: "numeric", minute: "2-digit",
       });
@@ -29,32 +35,48 @@ const FALLBACK_META_TEXT = "checked manually, not live";
     }
   }
 
-  function applyValue(claimed, dateLabel, isLive) {
+  function setText(root, sel, value) {
+    const el = root.querySelector(sel);
+    if (el) el.textContent = value;
+  }
+
+  function apply({ claimed, tier, remainingInTier, dateLabel, metaText }) {
     document.querySelectorAll(".egg-counter").forEach((el) => {
-      const valueEl = el.querySelector(".signup-count-value");
-      const dateEl = el.querySelector(".signup-count-date");
-      const metaEl = el.querySelector(".egg-counter-meta");
-      if (valueEl) valueEl.textContent = claimed.toLocaleString();
-      if (dateEl) dateEl.textContent = dateLabel;
-      if (metaEl) {
-        metaEl.innerHTML = metaEl.innerHTML.replace(
-          isLive ? FALLBACK_META_TEXT : LIVE_META_TEXT,
-          isLive ? LIVE_META_TEXT : FALLBACK_META_TEXT
-        );
+      setText(el, ".signup-count-value", claimed.toLocaleString());
+      setText(el, ".signup-count-date", dateLabel);
+      setText(el, ".signup-count-status", metaText);
+
+      // Tier line is optional — hidden entirely unless we have real data,
+      // so it never sits there showing a dash.
+      const tierEl = el.querySelector(".signup-count-tier");
+      if (!tierEl) return;
+      if (tier && typeof remainingInTier === "number") {
+        setText(el, ".signup-tier-name", tier);
+        setText(el, ".signup-tier-left", remainingInTier.toLocaleString());
+        tierEl.hidden = false;
+      } else {
+        tierEl.hidden = true;
       }
     });
   }
 
   async function render() {
-    applyValue(FALLBACK_CLAIMED, FALLBACK_DATE, false);
+    // Paint the fallback first so there's never a blank or "0" flash.
+    apply({ claimed: FALLBACK_CLAIMED, dateLabel: FALLBACK_DATE, metaText: META_FALLBACK });
 
     try {
       const res = await fetch(COUNTER_WORKER_URL, { cache: "no-store" });
       if (!res.ok) throw new Error("counter worker returned " + res.status);
-      const data = await res.json();
-      if (typeof data.claimed === "number") {
-        applyValue(data.claimed, formatLiveDate(data.checkedAt), true);
-      }
+      const d = await res.json();
+      if (typeof d.claimed !== "number") return;
+
+      apply({
+        claimed: d.claimed,
+        tier: d.tier,
+        remainingInTier: d.remainingInTier,
+        dateLabel: formatDate(d.checkedAt),
+        metaText: d.stale ? META_STALE : META_LIVE,
+      });
     } catch (err) {
       console.warn("Live signup counter unavailable, showing last-known value:", err);
     }
