@@ -10,9 +10,9 @@ const YAKKAMON_POSTS = [
     category: "community",
     title: "Referral Rule Change: Friends Now Need 100 Points to Count",
     date: "Aug 5, 2026",
-    excerpt: "After 4,783 farming accounts were banned, a referral only counts once the trainer you referred reaches 100 points. Sign-ups alone no longer pay.",
+    excerpt: "After 4,783 farming accounts were banned, referrals 6+ need the friend to verify Discord, verify Twitter/X and reach 100 points. First five stay instant.",
     body: [
-      "The Yakkamon team has raised the bar for what counts as a valid referral. From now on, <strong>a referral only counts once the trainer you referred has earned 100 points</strong> of their own. A sign-up on its own no longer pays anything.",
+      "The Yakkamon team has raised the bar for what counts as a valid referral. <strong>Your first five referrals still pay instantly</strong> \u2014 from the sixth onward, your friend must verify their Discord, verify their Twitter/X, and reach 100 points before you receive anything.",
       "## Why it changed",
       "Referral codes spread fast enough overnight to cause scaling problems, and in reviewing the surge the team found <strong>4,783 accounts</strong> that had signed up using temporary-domain email addresses as part of a referral farming operation. Those accounts have been banned. The 100-point requirement is the fix that keeps the reward pointed at people who actually bring in real players.",
       "The team also flagged that email codes and X connections were failing under load, with a fix rolling out.",
@@ -41,7 +41,7 @@ const YAKKAMON_POSTS = [
       "## The one date that matters",
       "<strong>October 1st.</strong> 250 points for one click \u2014 the same as eight referrals, and the best value on the entire board. You pay only the Ronin network fee.",
       "## Referrals are the whole free game",
-      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Since August 2026 each one only counts once that friend reaches 100 points of their own, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
+      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Your first five are instant; after that your friend must verify Discord, verify Twitter/X and reach 100 points, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
       "The full guide, with the daily and weekly routines and the points budget, is on the portal."
     ]
   },
