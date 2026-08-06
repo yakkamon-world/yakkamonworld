@@ -7,8 +7,6 @@
 const SEARCH_INDEX = [
   { tag: "Home", title: "YakkamonWorld", excerpt: "The unofficial Yakkamon player portal — news, gameplay, and pre-registration all in one place.", url: "index.html" },
 
-  { tag: "Home", title: "Yakkamon trailer", excerpt: "Watch the trailer on the home page \u2014 what Yakkamon actually looks like before you register.", url: "index.html" },
-
   { tag: "Pre-registration", title: "Pre-registration", excerpt: "Points, tiers, free mint, and Genesis monsters — explained simply.", url: "pre-registration.html" },
   { tag: "Pre-registration", title: "Getting started", excerpt: "What pre-registration is, how points work, and how to earn them.", url: "pre-registration.html#getting-started" },
   { tag: "Pre-registration", title: "Reward track", excerpt: "Rewards rotate on a 7-day cycle \u2014 a new claimable list every week, and each one replaces the last.", url: "pre-registration.html#reward-track" },
@@ -131,7 +129,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "Can I reach a Legendary rank without depositing?", excerpt: "The top 100 is a paid bracket, but referrals are uncapped \u2014 about 165 match a 5,000 $FLOWER deposit.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do $FLOWER deposits open?", excerpt: "Sunday 9 August at 8:00 PM ET \u2014 the docs say 10 August because they quote the UTC date.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "Spread it out \u2014 the rate follows your deposited total, so slices earn the same points and win more weekly boxes.", url: "faq.html#flower" },
-  { tag: "FAQ", title: "Is there a video version of the guides?", excerpt: "Short explainers on the YakkamonWorld YouTube channel, plus the trailer on the home page.", url: "faq.html#general" },
+  { tag: "FAQ", title: "Is there a video version of the guides?", excerpt: "Short explainers on the YakkamonWorld YouTube channel.", url: "faq.html#general" },
   { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is Q4 2026, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];
 
