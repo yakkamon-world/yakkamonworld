@@ -16,7 +16,13 @@
 (function () {
   "use strict";
 
-  var EMBED_HOST = "https://www.youtube-nocookie.com";  // no cookies until playback
+  // youtube-nocookie.com sets no cookies, which is better for privacy — but a
+  // cookieless request with autoplay is also what YouTube's anti-bot heuristic
+  // looks like, and it can answer with "Sign in to confirm you're not a bot"
+  // instead of the video. The normal embed host is far less likely to trip it.
+  // Nothing loads from YouTube until the visitor clicks either way, so the
+  // privacy cost of this is small.
+  var EMBED_HOST = "https://www.youtube.com";
   var warmed = false;
 
   // Open the connections the moment intent shows (hover / touch / focus),
@@ -24,7 +30,7 @@
   function warm() {
     if (warmed) return;
     warmed = true;
-    ["https://www.youtube-nocookie.com", "https://www.google.com"].forEach(function (href) {
+    ["https://www.youtube.com", "https://i.ytimg.com", "https://www.google.com"].forEach(function (href) {
       var l = document.createElement("link");
       l.rel = "preconnect";
       l.href = href;
@@ -37,8 +43,11 @@
     if (!id || id === "VIDEO_ID") return;   // not configured yet — let the fallback link handle it
 
     var frame = document.createElement("iframe");
+    // origin= tells YouTube which page the embed is on. It's a legitimacy
+    // signal as well as an API requirement, and helps avoid the bot check.
     frame.src = EMBED_HOST + "/embed/" + encodeURIComponent(id) +
-                "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+                "?autoplay=1&rel=0&modestbranding=1&playsinline=1" +
+                "&origin=" + encodeURIComponent(window.location.origin);
     frame.title = facade.getAttribute("data-title") || "Trailer";
     frame.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
     frame.setAttribute("allowfullscreen", "");
