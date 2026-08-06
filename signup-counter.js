@@ -40,8 +40,19 @@ const META_FALLBACK = "last known figure, not live";
     if (el) el.textContent = value;
   }
 
-  function apply({ claimed, tier, remainingInTier, dateLabel, metaText }) {
-    document.querySelectorAll(".egg-counter").forEach((el) => {
+  // `live` = we got a fresh reading from the worker just now. The compact
+  // strip on the pre-registration page always renders (it labels itself
+  // honestly when the data is old); the home-page hero has no room for
+  // that caveat, so it stays hidden entirely unless the number is current.
+  function apply({ claimed, tier, remainingInTier, dateLabel, metaText, live }) {
+    // Two presentations of the same data: the compact strip on the
+// pre-registration page and the big hero counter on the home page.
+    document.querySelectorAll(".egg-counter, .trainer-counter").forEach((el) => {
+      if (el.classList.contains("trainer-counter")) {
+        el.hidden = !live;
+        if (!live) return;   // nothing to fill in — it isn't on screen
+      }
+
       setText(el, ".signup-count-value", claimed.toLocaleString());
       setText(el, ".signup-count-date", dateLabel);
       setText(el, ".signup-count-status", metaText);
@@ -62,7 +73,7 @@ const META_FALLBACK = "last known figure, not live";
 
   async function render() {
     // Paint the fallback first so there's never a blank or "0" flash.
-    apply({ claimed: FALLBACK_CLAIMED, dateLabel: FALLBACK_DATE, metaText: META_FALLBACK });
+    apply({ claimed: FALLBACK_CLAIMED, dateLabel: FALLBACK_DATE, metaText: META_FALLBACK, live: false });
 
     try {
       const res = await fetch(COUNTER_WORKER_URL, { cache: "no-store" });
@@ -76,6 +87,7 @@ const META_FALLBACK = "last known figure, not live";
         remainingInTier: d.remainingInTier,
         dateLabel: formatDate(d.checkedAt),
         metaText: d.stale ? META_STALE : META_LIVE,
+        live: !d.stale,
       });
     } catch (err) {
       console.warn("Live signup counter unavailable, showing last-known value:", err);

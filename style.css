@@ -534,6 +534,33 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   .home-news-row .read-more{order:3; margin-left:auto}
 }
 
+/* ---------- Home-page trainer counter (above the SIGN UP button) ---------- */
+/* Deliberately louder than the .egg-counter strip on the pre-registration
+   page: this one is the hook, so the number is the loudest thing in the card. */
+.trainer-counter{margin:4px 0 18px; text-align:center; min-width:0}
+.trainer-counter .tc-num{
+  font-family:var(--font-display); font-size:clamp(2.6rem,9vw,3.8rem); line-height:1;
+  color:var(--ink); letter-spacing:.01em;
+  text-shadow:3px 3px 0 var(--yellow), 6px 6px 0 var(--ink);
+}
+.trainer-counter .tc-label{
+  font-family:var(--font-display); font-size:1.15rem; letter-spacing:.07em;
+  color:var(--ink); margin-top:10px;
+}
+.trainer-counter .tc-tier{
+  display:inline-block; margin-top:12px; padding:5px 16px;
+  background:var(--ink); color:var(--cream); border-radius:999px;
+  font-size:.85rem; font-weight:800; line-height:1.35;
+}
+.trainer-counter .signup-tier-left{color:var(--yellow)}
+.trainer-counter .signup-tier-name{color:var(--yellow)}
+@media(max-width:560px){
+  .trainer-counter{margin-bottom:14px}
+  .trainer-counter .tc-num{text-shadow:2px 2px 0 var(--yellow), 4px 4px 0 var(--ink)}
+  .trainer-counter .tc-label{font-size:1rem}
+  .trainer-counter .tc-tier{font-size:.8rem; padding:5px 13px}
+}
+
 /* ---------- Signup slot counter (manually verified, not live) ---------- */
 .egg-counter{
   display:flex; align-items:center; gap:16px; background:var(--cream); border:3px solid var(--ink);
