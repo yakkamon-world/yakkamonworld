@@ -6,6 +6,25 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "referral-rule-change-100-points",
+    category: "community",
+    title: "Referral Rule Change: Friends Now Need 100 Points to Count",
+    date: "Aug 5, 2026",
+    excerpt: "After 4,783 farming accounts were banned, a referral only counts once the trainer you referred reaches 100 points. Sign-ups alone no longer pay.",
+    body: [
+      "The Yakkamon team has raised the bar for what counts as a valid referral. From now on, <strong>a referral only counts once the trainer you referred has earned 100 points</strong> of their own. A sign-up on its own no longer pays anything.",
+      "## Why it changed",
+      "Referral codes spread fast enough overnight to cause scaling problems, and in reviewing the surge the team found <strong>4,783 accounts</strong> that had signed up using temporary-domain email addresses as part of a referral farming operation. Those accounts have been banned. The 100-point requirement is the fix that keeps the reward pointed at people who actually bring in real players.",
+      "The team also flagged that email codes and X connections were failing under load, with a fix rolling out.",
+      "## What it means in practice",
+      "Referrals still pay 30 points each, and they're still uncapped \u2014 but the work no longer ends when someone signs up. Your friend has to actually start playing:",
+      "If they clear the one-time quests first (link a wallet, connect X, join Discord, five Discord posts \u2014 55 points) and then nurture daily, they'll cross 100 points in about <strong>a week</strong>. Nurturing alone, with no quests, takes about <strong>13 days</strong>. Depositing even the 5 $FLOWER minimum gets them there faster.",
+      "## What to do differently",
+      "Stop treating a sign-up as the finish line. The highest-value thing you can do now is help the people you refer get started \u2014 send them the one-time quest list, tell them to nurture daily, and check in during their first week. Fifty sign-ups who never open the game are now worth nothing; twenty who play for a week are worth 600 points.",
+      "It also makes bulk code-spamming pointless, which is the intention. Real friends, actually onboarded, is the only approach that pays."
+    ]
+  },
+  {
     slug: "free-to-play-guide",
     category: "guideline",
     title: "The Free-to-Play Guide to Early Access",
@@ -22,7 +41,7 @@ const YAKKAMON_POSTS = [
       "## The one date that matters",
       "<strong>October 1st.</strong> 250 points for one click \u2014 the same as eight referrals, and the best value on the entire board. You pay only the Ronin network fee.",
       "## Referrals are the whole free game",
-      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
+      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Since August 2026 each one only counts once that friend reaches 100 points of their own, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
       "The full guide, with the daily and weekly routines and the points budget, is on the portal."
     ]
   },
