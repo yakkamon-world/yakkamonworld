@@ -39,14 +39,30 @@
   }
 
   function play(facade) {
+    // Self-hosted route: set data-video-src="trailer.mp4" on the facade and
+    // YouTube is bypassed entirely. Nothing to rate-limit, nothing to gate.
+    var localSrc = facade.getAttribute("data-video-src");
+    if (localSrc) {
+      var v = document.createElement("video");
+      v.src = localSrc;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute("poster", facade.querySelector("img") ? facade.querySelector("img").src : "");
+      facade.parentNode.replaceChild(v, facade);
+      v.focus();
+      return;
+    }
+
     var id = facade.getAttribute("data-video-id");
     if (!id || id === "VIDEO_ID") return;   // not configured yet — let the fallback link handle it
 
     var frame = document.createElement("iframe");
     // origin= tells YouTube which page the embed is on. It's a legitimacy
     // signal as well as an API requirement, and helps avoid the bot check.
+    var auto = facade.getAttribute("data-autoplay") === "0" ? "0" : "1";
     frame.src = EMBED_HOST + "/embed/" + encodeURIComponent(id) +
-                "?autoplay=1&rel=0&modestbranding=1&playsinline=1" +
+                "?autoplay=" + auto + "&rel=0&playsinline=1" +
                 "&origin=" + encodeURIComponent(window.location.origin);
     frame.title = facade.getAttribute("data-title") || "Trailer";
     frame.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
@@ -65,11 +81,13 @@
     // thumbnail if it isn't there, so a missing image never leaves a hole.
     var img = facade.querySelector("img");
     if (img && id && id !== "VIDEO_ID") {
+      // maxresdefault.jpg only exists for HD uploads, so fall back to
+      // hqdefault.jpg, which YouTube generates for every video.
       img.addEventListener("error", function onErr() {
         img.removeEventListener("error", onErr);
         img.removeAttribute("srcset");   // srcset wins over src, so it has to go first
         img.removeAttribute("sizes");
-        img.src = "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/maxresdefault.jpg";
+        img.src = "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/hqdefault.jpg";
       });
     }
 
