@@ -20,7 +20,7 @@ const SEARCH_INDEX = [
   { tag: "News", title: "How to reach early access without depositing", excerpt: "Get verified, clear the one-time quests, nurture daily after 12:00 UTC, mint on Oct 1, and refer real people.", url: "article-free-to-play-guide.html" },
   { tag: "News", title: "Free-to-play points budget", excerpt: "Roughly 990 points by Oct 1 with no referrals, about 2,490 with fifty.", url: "article-free-to-play-guide.html" },
   { tag: "News", title: "First Yakkamon Dev Stream: Everything They Announced", excerpt: "Deposit system rebuilt with a decaying weekly multiplier, a new official X account, and PvP confirmed post-launch.", url: "article-dev-stream-aug-7-recap.html" },
-  { tag: "News", title: "How does the $FLOWER deposit multiplier work?", excerpt: "Week one pays 3 points per $FLOWER and the multiplier drops every week after. A separate size bonus applies per deposit.", url: "article-dev-stream-aug-7-recap.html" },
+  { tag: "News", title: "How does the $FLOWER deposit multiplier work?", excerpt: "3x through the opening week, then 0.2x less every week until it rests at 1x. Depositing later is worth substantially less.", url: "article-dev-stream-aug-7-recap.html" },
   { tag: "News", title: "10 bonus points for reconnecting X", excerpt: "Reconnect to the new @yakkamon_game account \u2014 previous connectors get 20 points total instead of 10.", url: "article-dev-stream-aug-7-recap.html" },
   { tag: "News", title: "Is PvP in early access?", excerpt: "No \u2014 the team confirmed PvP and advanced breeding are post-launch. Early access ships gathering, monsters, hunting and basic combat.", url: "article-dev-stream-aug-7-recap.html" },
   { tag: "News", title: "Referral Rule Change: Three Steps Before a Referral Counts", excerpt: "From your sixth referral on, the friend must verify Discord, verify X and reach 100 points. 4,783 farming accounts were banned.", url: "article-referral-rule-change-100-points.html" },
@@ -75,9 +75,11 @@ const SEARCH_INDEX = [
   { tag: "Tips", title: "How much is a nurture streak worth?", excerpt: "6 points a day rising to 10 at day 30+ \u2014 about 526 points over 57 unbroken days.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "What does breaking a nurture streak cost?", excerpt: "You restart at 6 points a day and need 29 days to climb back \u2014 roughly 44 points on top of the day you missed.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "Trainer Tips", excerpt: "Practical leaderboard tactics worked through with real numbers.", url: "tips.html" },
-  { tag: "Tips", title: "Deposit your $FLOWER early, in one transfer", excerpt: "A weekly multiplier that decays from 3x, plus a size bonus applied per deposit \u2014 both reward moving early.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "$FLOWER deposit multiplier schedule", excerpt: "Week 1 is 3.0x, week 2 is 2.8x, dropping 0.2x weekly until it rests at 1.0x from week 11.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "$FLOWER size bonus rates", excerpt: "+10% at 50, +20% at 500, +40% at 5,000, +80% at 50,000 \u2014 rated per deposit, so the full amount must land in one transfer.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "Deposit your $FLOWER early, in one transfer", excerpt: "Week-by-week multiplier schedule from 3x down to 1x, the per-deposit size bonus, and what waiting or splitting actually costs.", url: "tips.html#weekly-flower" },
   { tag: "Tips", title: "Weekly vs final leaderboard ranking", excerpt: "Final ranking is all-time points and pays once; the weekly board resets and pays boxes, tickets and loot every week.", url: "tips.html#weekly-flower" },
-  { tag: "Tips", title: "Should I deposit $FLOWER in bulk?", excerpt: "Yes \u2014 one larger transfer beats several small ones, because the size bonus is per deposit and the weekly multiplier decays.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "Should I deposit $FLOWER in bulk?", excerpt: "Yes. The size bonus is rated per deposit and doubles at every step to +80%, so one large transfer beats several small ones.", url: "tips.html#weekly-flower" },
 
   { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
   { tag: "FAQ", title: "How to pre-register (Sunflower Land players)", excerpt: "Access dates by Bumpkin Level, plus step-by-step: find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "faq.html#sunflowerland-guide" },
@@ -134,7 +136,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "What time of day should I nurture?", excerpt: "After 12:00 UTC \u2014 that is the cutoff where the 36-hour grace period actually covers a whole missed day.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Can I reach a Legendary rank without depositing?", excerpt: "The top 100 is a paid bracket, but referrals are uncapped \u2014 about 165 match a 5,000 $FLOWER deposit.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do $FLOWER deposits open?", excerpt: "Sunday 9 August at 8:00 PM ET \u2014 the docs say 10 August because they quote the UTC date.", url: "faq.html#flower" },
-  { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "All at once, and early \u2014 the multiplier is highest in week one and the size bonus is per deposit.", url: "faq.html#flower" },
+  { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "All at once and early \u2014 5,000 sent once in the opening week earns 17,000 points; as ten later deposits it earns 6,000.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Is there a video version of the guides?", excerpt: "Short explainers on the YakkamonWorld YouTube channel.", url: "faq.html#general" },
   { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is Q4 2026, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];

@@ -777,6 +777,7 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .tip-figure .tf-bar-yellow{fill:var(--yellow); stroke:var(--ink); stroke-width:3}
 .tip-figure .tf-bar-purple{fill:var(--purple); stroke:var(--ink); stroke-width:3}
 .tip-caption{margin:14px 0 0; font-size:.9rem; line-height:1.5; color:#4a4a63}
+.muted{color:#6b6b85; font-weight:700}
 @media(max-width:560px){
   .tip-figure{padding:12px}
   .tip-caption{font-size:.85rem}

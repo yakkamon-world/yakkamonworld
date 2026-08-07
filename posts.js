@@ -15,8 +15,8 @@ const YAKKAMON_POSTS = [
       "Thought Farm ran their first Yakkamon-only Discord stream on August 7th. A lot changed, and some of it reverses advice that was correct last week \u2014 including ours. Here's everything that matters.",
       "## 1. The $FLOWER deposit system has been rebuilt",
       "There are now <strong>two separate bonuses</strong>, and both reward depositing <em>early</em> and <em>in larger single transfers</em>.",
-      "<strong>A weekly multiplier.</strong> Set per week, highest in week one, dropping every week after. Week one pays <strong>three points per $FLOWER</strong> \u2014 deposit 5 and 15 points land on your tracker. You keep the $FLOWER; the multiplier applies to points only.",
-      "<strong>A size bonus, applied per deposit.</strong> 50 $FLOWER earns 5 bonus points, 500 earns 100, scaling up from there. This is per transfer, not cumulative: depositing 25 and then another 25 does <strong>not</strong> reach the 50 tier.",
+      "<strong>A weekly multiplier.</strong> <strong>3\u00d7</strong> through the opening week, then falling <strong>0.2\u00d7 every week</strong> until it rests at 1\u00d7. You keep the $FLOWER; the multiplier applies to points only.",
+      "<strong>A size bonus, rated per deposit.</strong> It doubles at every step \u2014 +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000 \u2014 and the full amount must land in one transfer. Depositing 25 and then another 25 does <strong>not</strong> reach the 50 tier.",
       "The stated intent is to stop a last-minute rush before launch. <strong>This reverses our own tip</strong>, which advised splitting deposits weekly on the basis that the bonus followed your cumulative total. Our tip has been rewritten to match.",
       "## 2. The official X account, and 10 free points",
       "The compromise of @playyakkamon is confirmed \u2014 a phishing link was posted from it. Support was slow enough that the team gave up waiting and <strong>created a new account, @yakkamon_game</strong>.",
@@ -102,8 +102,8 @@ const YAKKAMON_POSTS = [
     body: [
       "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on 7 August described a different structure, and the advice reverses with it.",
       "## Two bonuses, both rewarding early",
-      "The <strong>weekly multiplier</strong> is highest in week one and drops every week after. Week one pays <strong>three points per $FLOWER</strong> \u2014 send 5 and 15 points land on your tracker. It applies to points, not your balance: you keep the $FLOWER and can withdraw it once you have game access.",
-      "The <strong>size bonus</strong> is applied <strong>per deposit</strong>, not on your running total. 50 $FLOWER pays +5 points, 500 pays +100. Depositing 25 and then another 25 does not reach the 50 tier \u2014 it has to be one transaction.",
+      "The <strong>weekly multiplier</strong> pays <strong>3\u00d7</strong> through the opening week, then falls 0.2\u00d7 every week until it settles at 1\u00d7. The same 5,000 $FLOWER is worth 17,000 points in the opening week and 7,000 once it bottoms out. It applies to points, not your balance \u2014 you keep the $FLOWER and can withdraw it once you have game access.",
+      "The <strong>size bonus</strong> is rated <strong>per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount must land in one transfer \u2014 ten deposits of 500 earn ten 20% bonuses instead of one 40% bonus.",
       "## What to do",
       "Deposit as early in the window as you're comfortable with, and send it in a single transfer so the size bonus lands on the full amount. Holding back to deposit near the end is exactly what this structure penalises \u2014 and the leaderboard gets hidden close to launch anyway.",
       "The full schedule lives in the deposit panel on your own trainer dashboard. Check it there before sending, rather than trusting any published figure, including ours."
@@ -118,13 +118,13 @@ const YAKKAMON_POSTS = [
     body: [
       "$FLOWER deposits open on <strong>Sunday, August 9 at 8:00 PM ET</strong>. That's when your deposit address is issued, and when deposited $FLOWER starts converting into leaderboard points.",
       "## What you can do from that moment",
-      "Send any amount of $FLOWER to your deposit address on <strong>Base or Ronin</strong>, minimum 5 $FLOWER. Points are boosted two ways: a <strong>weekly multiplier</strong> paying three points per $FLOWER in week one and decaying every week after, and a <strong>size bonus applied per deposit</strong> \u2014 50 pays +5, 500 pays +100. Points land in the week the deposit confirms.",
+      "Send any amount of $FLOWER to your deposit address on <strong>Base or Ronin</strong>, minimum 5 $FLOWER. Points are boosted two ways: a <strong>weekly multiplier</strong> of 3\u00d7 through the opening week, falling 0.2\u00d7 weekly to a floor of 1\u00d7, and a <strong>size bonus rated per deposit</strong> doubling from +10% at 50 $FLOWER to +80% at 50,000. Points land in the week the deposit confirms.",
       "It's the single biggest points lever in pre-registration \u2014 a large deposit is worth tens of thousands of points, which no amount of daily nurturing will match. We're not telling you to deposit; we're telling you what the numbers say.",
       "## Why the docs say \"10 August\"",
       "Because they're quoting the <strong>UTC</strong> date. 8:00 PM ET on Sunday Aug 9 is midnight UTC, which is already Monday Aug 10 in London and everywhere east of it. Same instant, two calendar dates \u2014 if you're in the Americas, the evening you want is <strong>Sunday the 9th</strong>.",
       "## Deposit early, and in one transfer",
       "The instinct is to wait \u2014 watch the leaderboard, see where you stand, and deposit near the end to lock in a rank. The deposit system is built specifically to punish that.",
-      "The <strong>weekly multiplier</strong> is highest in week one at three points per $FLOWER and drops every week after, and the <strong>size bonus</strong> is applied per deposit rather than on your running total \u2014 so 25 followed by another 25 does not reach the 50 tier. Both favour depositing early, in a single transfer.",
+      "5,000 $FLOWER sent as one transfer in the opening week earns <strong>17,000 points</strong>. The same 5,000 sent as ten deposits of 500, once the multiplier has bottomed out, earns <strong>6,000</strong> \u2014 a 65% loss on identical money.",
       "All $FLOWER can be <strong>withdrawn</strong> once you gain access to the game. The full breakdown, with the case study, is on the Tips page."
     ]
   },
@@ -140,7 +140,7 @@ const YAKKAMON_POSTS = [
       "The rest of the site explains what the rules <em>are</em>. The FAQ decodes terminology, the pre-registration guide walks through signing up, and the leaderboard guideline lists every points value. None of that tells you what to <em>do</em> with the rules. Tips is for that, and keeping it separate means the reference pages stay neutral.",
       "## The first tip: how to time your $FLOWER deposits",
       "The leaderboard is really two competitions running at once. Your <strong>final ranking</strong> is your all-time points total and pays out once, at early access in Q4 2026. The <strong>weekly ranking</strong> resets every week and pays resource boxes, food boxes, raffle tickets and loot boxes each time.",
-      "Deposits carry a <strong>weekly multiplier</strong> that is highest in week one and decays every week after, plus a <strong>size bonus applied per deposit</strong> rather than on your running total. Both reward depositing early, in single larger transfers.",
+      "Deposits carry a <strong>weekly multiplier</strong> \u2014 3\u00d7 in the opening week, falling 0.2\u00d7 weekly to a floor of 1\u00d7 \u2014 plus a <strong>size bonus rated per deposit</strong> that doubles at every step up to +80%. Both reward depositing early, in single larger transfers.",
       "Note: this tip originally said the opposite \u2014 split weekly, because the bonus appeared to follow your cumulative total. The dev stream on 7 August described a different structure, and the tip was rewritten to match.",
       "## More to come",
       "Tips will grow as the leaderboard runs and patterns become clear. The full write-up, including the case study and the numbers at every stack size, is on the Tips page."
