@@ -6,6 +6,43 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "dev-stream-aug-7-recap",
+    category: "community",
+    title: "First Yakkamon Dev Stream: Everything They Announced",
+    date: "Aug 7, 2026",
+    excerpt: "The deposit system has been rebuilt, there's a new official X account worth 10 bonus points, and PvP won't be in early access. Full recap.",
+    body: [
+      "Thought Farm ran their first Yakkamon-only Discord stream on August 7th. A lot changed, and some of it reverses advice that was correct last week \u2014 including ours. Here's everything that matters.",
+      "## 1. The $FLOWER deposit system has been rebuilt",
+      "This is the big one, and it lands two days before deposits open. There are now <strong>two separate bonuses</strong>, and both reward depositing <em>early</em> and <em>in larger single transfers</em>.",
+      "<strong>A weekly multiplier.</strong> It's set per week, it's highest in week one, and it drops every week after. In week one you earn <strong>three points per $FLOWER</strong> \u2014 deposit 5 $FLOWER and 15 points land on your tracker. You keep the $FLOWER; the multiplier applies to points only.",
+      "<strong>A size bonus, applied per deposit.</strong> 50 $FLOWER earns 5 bonus points, 500 earns 100, and it scales up from there. Craig was explicit that this is per transfer, not cumulative: depositing 25 and then another 25 does <strong>not</strong> reach the 50 tier. It has to be one transaction.",
+      "The stated intent is to stop a last-minute rush before launch \u2014 they want points earned early rather than everyone piling in on the final day.",
+      "<strong>This reverses our own tip.</strong> We previously advised splitting deposits weekly, because the bonus appeared to follow your cumulative deposited total. It doesn't any more, and the decaying multiplier makes later slices worth less. We're updating those pages now.",
+      "## 2. The official X account, and 10 free points",
+      "The compromise of @playyakkamon is confirmed \u2014 a phishing link was posted from it. Support was slow enough that the team gave up waiting and <strong>created a new account, @yakkamon_game</strong>.",
+      "Two things matter for you. First, <strong>the game itself was never compromised</strong> \u2014 you don't need to re-register or do anything to your account. Second, there are <strong>10 bonus points</strong> sitting in the trainer dashboard: reconnect to the new X account and anyone who had connected the old one keeps those points and earns more, for 20 total. New connections earn the usual 10.",
+      "They've also had three or four fake Yakkamon websites taken down already.",
+      "## 3. The numbers, and the crackdown",
+      "<strong>45,000 pre-registered trainers</strong> at the time of the stream. Around 10,000 came in through private codes distributed via Sunflower Land and Ronin, and another 8,000 to 9,000 tried to sign up before referrals opened to everyone.",
+      "Roughly <strong>4,500 to 5,000 bot accounts have been banned</strong>. Referrals will be <strong>double-verified</strong> before the leaderboard is finalised, so suspicious entries you see now are expected to be cleaned up.",
+      "<strong>Discord points are off.</strong> The emoji reward system turned into reaction farming \u2014 at one point the chat was running ten messages a second \u2014 so it was switched off. It'll return as a manual weekly reward rather than an automated one.",
+      "<strong>The leaderboard will be hidden</strong> as launch approaches, to stop last-day gaming. Only the top 100 is visible now. Their advice: start climbing early, while you can still see where you stand.",
+      "## 4. What early access will actually include",
+      "Early access in Q4 will ship the <strong>fundamentals only</strong>: gathering, monsters, hunting, and basic combat.",
+      "<strong>PvP is not in early access.</strong> Neither is advanced breeding. Both are described as post-launch, arriving through Sunflower Land-style chapter releases rather than all at once on day one.",
+      "Two other design notes. The <strong>day/night cycle runs on a sped-up in-game clock</strong>, deliberately not tied to your real-world time \u2014 they've played games that do that and found it oppressive. And the <strong>season system may be weekly rather than quarterly</strong>: they're considering a Sunflower Land-style model with a winter week, a summer week, and different Yakkamon appearing week to week.",
+      "## 5. What the game is turning into",
+      "The clearest description yet: <strong>idle farming, plus automation, plus creature collecting</strong>. Named influences were Pokémon, Palworld, and Zachtronics \u2014 that last one being the automation-puzzle lineage, which tells you a lot about the depth they're aiming for.",
+      "The third pillar is <strong>hunting</strong>, and it's the part they think other web3 games get wrong. You'll place snacks, send your monsters to search, and combine the day/night and seasonal systems to find specific creatures. Legendaries and rares are meant to be genuinely hunted, not bought.",
+      "<strong>Monsters have hidden genetics.</strong> Each spawns with stat ranges and initial values you can't fully see, and how you train it shapes what it becomes. A defensive species with a high attack roll, trained into attack, produces something distinct. Breeding and bloodlines are planned as a specialisation you can build an entire playstyle around.",
+      "<strong>Specialisation comes from your monsters</strong>, not from separate boost items \u2014 the team you farm with and the team you fight with are the primary way you get bonuses. And there's <strong>no forging</strong>: no combining ten commons into one rare.",
+      "<strong>Mobile is confirmed</strong>, as a PWA you save to your home screen. Not an app store download, at least initially.",
+      "## 6. Take all of it with a grain of salt",
+      "The team said this repeatedly and it's worth repeating here. They are running hundreds of experiments, and anything discussed can change before launch. Nothing above is a promise \u2014 it's where the project stands on August 7th."
+    ]
+  },
+  {
     slug: "referral-rule-change-100-points",
     category: "community",
     title: "Referral Rule Change: Friends Now Need 100 Points to Count",
