@@ -27,10 +27,10 @@ const SEARCH_INDEX = [
   { tag: "News", title: "Why did my referral not count?", excerpt: "Past your first five, the friend must verify Discord, verify X and reach 100 points before the referral pays.", url: "article-referral-rule-change-100-points.html" },
   { tag: "News", title: "How long until a referred friend counts?", excerpt: "About a week with the one-time quests plus daily nurture, or about 13 days on nurture alone.", url: "article-referral-rule-change-100-points.html" },
   { tag: "News", title: "Tip: Nurture After 12:00 UTC, Every Day", excerpt: "The 36-hour streak grace period only covers a missed day if you nurture in the second half of the UTC day.", url: "article-tip-nurture-after-noon-utc.html" },
-  { tag: "News", title: "Tip: Split Your $FLOWER Deposits Weekly", excerpt: "Weekly slices earn the same points as one bulk deposit and enter you into every weekly reward race.", url: "article-tip-split-flower-deposits.html" },
-  { tag: "News", title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET", excerpt: "Deposit address issued, bonus rates by deposited total, and why the docs say 10 August.", url: "article-flower-deposits-open-august-9.html" },
+  { tag: "News", title: "Tip: Deposit Your $FLOWER Early, In One Transfer", excerpt: "The weekly multiplier decays from 3x and the size bonus is per deposit, so splitting now costs you points.", url: "article-tip-split-flower-deposits.html" },
+  { tag: "News", title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET", excerpt: "Deposit address issued, the weekly multiplier and size bonus explained, and why the docs say 10 August.", url: "article-flower-deposits-open-august-9.html" },
   { tag: "News", title: "When do $FLOWER deposits open?", excerpt: "Aug 9 at 8:00 PM ET \u2014 midnight UTC, which the official docs render as 10 August.", url: "article-flower-deposits-open-august-9.html" },
-  { tag: "News", title: "New on the Portal: Trainer Tips", excerpt: "A new section for leaderboard tactics \u2014 first tip is splitting your $FLOWER deposits weekly instead of in bulk.", url: "article-tips-section-live.html" },
+  { tag: "News", title: "New on the Portal: Trainer Tips", excerpt: "A new section for leaderboard tactics, with the maths shown rather than asserted.", url: "article-tips-section-live.html" },
   { tag: "News", title: "Trainer Tips section announcement", excerpt: "Why the portal now separates what the rules are from what to do with them.", url: "article-tips-section-live.html" },
   { tag: "News", title: "YakkamonWorld Is Now on YouTube", excerpt: "Our brand-new YouTube channel is live \u2014 short explainer videos on pre-registration, the free mint, and every gameplay system.", url: "article-youtube-channel-live.html" },
   { tag: "News", title: "YakkamonWorld YouTube channel", excerpt: "2\u20133 minute explainers covering pre-registration points, Monster Egg tiers, the Oct 1 free mint, the Genesis airdrop and the six gameplay systems.", url: "article-youtube-channel-live.html" },
@@ -59,7 +59,7 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Crafting & Hunting", excerpt: "Refine gathered resources into gear to track down rarer, tougher monsters.", url: "gameplay.html?system=crafting-hunting" },
   { tag: "Gameplay", title: "Day & Night Cycle", excerpt: "A living world that shifts between day and night, changing what you'll find in the wild.", url: "gameplay.html?system=day-night-cycle" },
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
-  { tag: "Gameplay", title: "Arena Battles", excerpt: "Face off against the best trainers in PvP arena combat.", url: "gameplay.html?system=arena-battles" },
+  { tag: "Gameplay", title: "Arena Battles", excerpt: "PvP arena combat \u2014 confirmed as post-launch, not part of early access.", url: "gameplay.html?system=arena-battles" },
 
   { tag: "Community", title: "Community", excerpt: "Join the YakkamonWorld Telegram channel and chat, subscribe on YouTube, and follow the official Yakkamon channels.", url: "community.html" },
   { tag: "Community", title: "Telegram channel — YakkamonWorld", excerpt: "Pre-registration tiers as they unlock, new guides, and news. The main place to follow the portal.", url: "community.html" },
@@ -75,9 +75,9 @@ const SEARCH_INDEX = [
   { tag: "Tips", title: "How much is a nurture streak worth?", excerpt: "6 points a day rising to 10 at day 30+ \u2014 about 526 points over 57 unbroken days.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "What does breaking a nurture streak cost?", excerpt: "You restart at 6 points a day and need 29 days to climb back \u2014 roughly 44 points on top of the day you missed.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "Trainer Tips", excerpt: "Practical leaderboard tactics worked through with real numbers.", url: "tips.html" },
-  { tag: "Tips", title: "Spread your $FLOWER deposits weekly", excerpt: "Bonus rates key off your deposited total, so weekly slices earn the same points and enter every weekly reward race.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "Deposit your $FLOWER early, in one transfer", excerpt: "A weekly multiplier that decays from 3x, plus a size bonus applied per deposit \u2014 both reward moving early.", url: "tips.html#weekly-flower" },
   { tag: "Tips", title: "Weekly vs final leaderboard ranking", excerpt: "Final ranking is all-time points and pays once; the weekly board resets and pays boxes, tickets and loot every week.", url: "tips.html#weekly-flower" },
-  { tag: "Tips", title: "Should I deposit $FLOWER in bulk?", excerpt: "No advantage at any stack size \u2014 the bonus rate follows your deposited total, so bulk just forfeits weekly rewards.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "Should I deposit $FLOWER in bulk?", excerpt: "Yes \u2014 one larger transfer beats several small ones, because the size bonus is per deposit and the weekly multiplier decays.", url: "tips.html#weekly-flower" },
 
   { tag: "FAQ", title: "FAQ", excerpt: "Answers to the most confusing parts of pre-registration, in plain language.", url: "faq.html" },
   { tag: "FAQ", title: "How to pre-register (Sunflower Land players)", excerpt: "Access dates by Bumpkin Level, plus step-by-step: find Yakkamon in the Plaza, then sign up at yakkamon.com.", url: "faq.html#sunflowerland-guide" },
@@ -134,7 +134,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "What time of day should I nurture?", excerpt: "After 12:00 UTC \u2014 that is the cutoff where the 36-hour grace period actually covers a whole missed day.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Can I reach a Legendary rank without depositing?", excerpt: "The top 100 is a paid bracket, but referrals are uncapped \u2014 about 165 match a 5,000 $FLOWER deposit.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do $FLOWER deposits open?", excerpt: "Sunday 9 August at 8:00 PM ET \u2014 the docs say 10 August because they quote the UTC date.", url: "faq.html#flower" },
-  { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "Spread it out \u2014 the rate follows your deposited total, so slices earn the same points and win more weekly boxes.", url: "faq.html#flower" },
+  { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "All at once, and early \u2014 the multiplier is highest in week one and the size bonus is per deposit.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Is there a video version of the guides?", excerpt: "Short explainers on the YakkamonWorld YouTube channel.", url: "faq.html#general" },
   { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is Q4 2026, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
 ];

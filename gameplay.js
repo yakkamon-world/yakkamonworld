@@ -36,14 +36,14 @@ const YAKKAMON_GAMEPLAY = [
     slug: "seasonal-system",
     title: "Seasonal System",
     desc: "Seasons change the world, and every three months new monsters enter the wild.",
-    detail: "Seasons change the world around you, and every three months brand-new monsters are released into the wild for players to compete to hunt down and claim first. Each season resets the race for the newest catches.",
+    detail: "Seasons change the world around you, and brand-new monsters are released into the wild for players to compete to hunt down and claim first \u2014 each season resets the race for the newest catches. The cadence isn't settled: the docs describe a three-month cycle, while the team said on 7 August they are now considering a Sunflower Land-style weekly season, with a winter week, a summer week and different Yakkamon appearing week to week.",
     icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>'
   },
   {
     slug: "arena-battles",
     title: "Arena Battles",
-    desc: "Face off against the best players in PvP arena combat for glory.",
-    detail: "Face off against the best trainers in PvP arena combat for glory. Early access to the arena opens in Q4 2026, with higher-tier trainers entering first as access rolls out in waves.",
+    desc: "Face off against the best players in PvP arena combat \u2014 arriving after launch, not in early access.",
+    detail: "Face off against the best trainers in PvP arena combat for glory. Note the timing: the team confirmed on 7 August that <strong>PvP is not in early access</strong> \u2014 Q4 2026 ships gathering, monsters, hunting and basic combat, with PvP and advanced breeding arriving after launch in chapter releases.",
     icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.6 6.2L21 9l-5 4.4L17.4 20 12 16.6 6.6 20 8 13.4 3 9l6.4-.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>'
   }
 ];
