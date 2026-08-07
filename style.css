@@ -117,6 +117,9 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
 .section-head{display:flex; align-items:baseline; justify-content:space-between; margin:40px 0 20px; flex-wrap:wrap; gap:10px}
 .section-head h2{font-size:clamp(1.25rem,5.5vw,1.7rem); margin:0; min-width:0; overflow-wrap:anywhere}
 .section-head a.view-all{font-family:var(--font-body); font-size:.95rem; font-weight:800; color:var(--red); text-decoration:none}
+/* Small "watch this bit instead" link, usable outside .section-head too. */
+.watch-link{display:inline-block; margin:0 0 14px; font-size:.95rem; font-weight:800; color:var(--red); text-decoration:none}
+.watch-link:hover{text-decoration:underline}
 .section-head a.view-all:hover{text-decoration:underline}
 
 /* ---------- Badges ---------- */
