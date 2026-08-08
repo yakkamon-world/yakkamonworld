@@ -17,7 +17,7 @@
 // Prefer a different relay (Formspree, Getform, Basin)? Change ENDPOINT and the
 // field names in buildPayload() — nothing else depends on the provider.
 
-const ACCESS_KEY = "PASTE-YOUR-WEB3FORMS-ACCESS-KEY-HERE";
+const ACCESS_KEY = "9af18005-deaf-4b33-81cf-544549fdb031";
 const ENDPOINT   = "https://api.web3forms.com/submit";
 const FALLBACK_EMAIL = "yakkamonworld@gmail.com";
 
