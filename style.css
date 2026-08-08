@@ -65,9 +65,9 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
   .brand .portal-short{display:inline}
   .tabs{
     width:100%; padding:6px 0 10px; gap:6px;
-    display:grid; grid-template-columns:repeat(4,1fr);   /* 8 tabs = 2 even rows */
+    display:grid; grid-template-columns:repeat(3,1fr);   /* 9 tabs = 3 even rows */
   }
-  .tab{padding:9px 3px; text-align:center; font-size:.74rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
+  .tab{padding:9px 4px; text-align:center; font-size:.82rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
   .tab .label-full{display:none}
   .tab .label-short{display:inline}
   .tab.tab-wide{grid-column:1 / -1}
@@ -781,4 +781,66 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 @media(max-width:560px){
   .tip-figure{padding:12px}
   .tip-caption{font-size:.85rem}
+}
+
+/* ---------- Footer sitemap ---------- */
+.footer-map{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:26px;
+  padding-bottom:24px; margin-bottom:20px;
+  border-bottom:3px solid #33334f; align-items:start;
+}
+.footer-col{min-width:0}
+.footer-col h3{
+  font-family:var(--font-display); font-size:1.05rem; letter-spacing:.06em;
+  color:var(--yellow); margin:0 0 10px;
+}
+.footer-col a{
+  display:block; color:#c9c8d8; text-decoration:none;
+  font-size:.85rem; font-weight:700; line-height:1.5; padding:3px 0;
+}
+.footer-col a:hover{color:#fff; text-decoration:underline}
+.footer-base{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+@media(max-width:760px){
+  .footer-map{grid-template-columns:repeat(2,1fr); gap:20px}
+}
+@media(max-width:420px){
+  .footer-map{grid-template-columns:1fr}
+}
+
+/* ---------- Contact form ---------- */
+.contact-form{
+  background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius);
+  box-shadow:7px 7px 0 var(--ink); padding:24px; margin:0 0 22px; min-width:0;
+}
+.cf-row{margin-bottom:18px; min-width:0}
+.cf-row label{
+  display:block; margin-bottom:7px; font-weight:800; font-size:.95rem; color:var(--ink);
+}
+.cf-opt{color:#6b6b85; font-weight:700; font-size:.85rem}
+.cf-req{
+  color:var(--red); font-weight:800; font-size:.72rem; letter-spacing:.06em;
+  text-transform:uppercase; margin-left:4px;
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form select,
+.contact-form textarea{
+  width:100%; font-family:var(--font-body); font-size:1rem; font-weight:600; color:var(--ink);
+  background:#fff; border:3px solid var(--ink); border-radius:12px; padding:11px 13px;
+  min-width:0;
+}
+.contact-form textarea{resize:vertical; line-height:1.5}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
+  outline:3px solid var(--sky); outline-offset:2px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder{color:#9a99ad; font-weight:600}
+/* Honeypot — off-screen rather than display:none, which some bots skip. */
+.cf-hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+.cf-submit{margin-top:4px}
+.cf-submit:disabled{opacity:.6; cursor:not-allowed; transform:none}
+.cf-status{margin:14px 0 0; font-weight:800; font-size:.95rem; min-height:1.2em}
+.cf-status.ok{color:var(--green)}
+.cf-status.err{color:var(--red)}
+@media(max-width:560px){
+  .contact-form{padding:18px; box-shadow:5px 5px 0 var(--ink)}
 }
