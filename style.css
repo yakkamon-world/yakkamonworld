@@ -890,6 +890,7 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   background:var(--sky-deep); color:#fff; border-radius:999px; padding:2px 12px; white-space:nowrap;
 }
 .vid-ep-alt{background:var(--purple)}
+.vid-time{flex:none; font-size:.82rem; font-weight:800; color:#6b6b85; white-space:nowrap}
 .vid-title{
   font-family:var(--font-display); font-size:1.25rem; line-height:1.25; letter-spacing:.01em;
   color:var(--ink); text-decoration:none; min-width:0;

@@ -2,22 +2,21 @@
 //
 // Data only. videos-render.js turns this into the list on videos.html.
 //
-// To add a video: paste one object at the TOP of the block it belongs to.
-// Nothing else needs editing — the page, the counts and the section headings
-// all read from here.
+// To add a video: paste one object at the TOP of its block. Nothing else needs
+// editing — the page, the header count and the section headings read from here.
 //
-// Deliberately no thumbnails. YouTube thumbnails are hotlinked from
-// i.ytimg.com, which is a third-party request on every page load and the same
-// dependency we removed when the trailer embed came off the home page.
+// Deliberately no thumbnails. YouTube thumbnails are hotlinked from i.ytimg.com,
+// which is a third-party request on every page load — the same dependency we
+// removed when the trailer embed came off the home page.
 //
-// `related` points at the written version on this site, so the page sends
-// people further in rather than straight out to YouTube.
+// `related` points at the written version on this site, so the page sends people
+// further in rather than straight out to YouTube.
 
 const YAKKAMON_VIDEO_BLOCKS = [
-  { key: "start",    title: "START HERE",        note: "New to Yakkamon? Watch these in order." },
-  { key: "tactics",  title: "TACTICS",           note: "Timing, points and the things that cost people rank." },
-  { key: "analysis", title: "ANALYSIS",          note: "Longer pieces on how the game is being built." },
-  { key: "trailers", title: "TRAILERS",          note: "Cinematics and first looks." },
+  { key: "start",    title: "START HERE", note: "New to Yakkamon? Watch these in order." },
+  { key: "tactics",  title: "TACTICS",    note: "Timing, points, and the things that cost people rank." },
+  { key: "analysis", title: "ANALYSIS",   note: "Longer pieces on how the game is being built." },
+  { key: "trailers", title: "TRAILERS",   note: "Cinematics and first looks." },
 ];
 
 const YAKKAMON_VIDEOS = [
@@ -25,58 +24,65 @@ const YAKKAMON_VIDEOS = [
   {
     id: "ZNN8DrZc4O8",
     ep: "09",
+    runtime: "22:11",
     block: "analysis",
-    title: "I Graded Yakkamon's First Dev Stream",
+    title: "I Graded Yakkamon's First Dev Stream \u2014 One Decision Gets a C",
     blurb: "Nine decisions from the first dev stream, graded A to C \u2014 what the team got right, and the one call that makes the top of the leaderboard purchased rather than contested.",
     related: { href: "article-dev-stream-graded.html", label: "Read the written version" },
   },
 
   // ---------- TACTICS ----------
   {
-    id: "Tk0v9lgrM2A",
-    ep: "08",
+    id: "aJLPrAnhs0I",
+    ep: "05",
+    runtime: "2:29",
     block: "tactics",
-    title: "Week One Pays 3\u00d7 \u2014 Then It Drops",
-    blurb: "Everything about $FLOWER deposits before you send anything: the decaying multiplier, the per-deposit size bonus, and the trap that costs people points.",
+    title: "Yakkamon $FLOWER Deposits: Week One Pays 3\u00d7 \u2014 Then It Drops",
+    blurb: "Everything about deposits before you send anything: the decaying weekly multiplier, the per-deposit size bonus, and the trap that costs people points.",
     related: { href: "tips.html#weekly-flower", label: "The full deposit breakdown" },
   },
 
   // ---------- START HERE ----------
   {
+    id: "Tk0v9lgrM2A",
+    ep: "08",
+    runtime: "2:04",
+    block: "start",
+    title: "Yakkamon Egg Tiers: Platinum, Gold, Silver \u2014 Does It Actually Matter?",
+    blurb: "How tiers are handed out, why the counter makes people panic, and the team's own answer: they're mainly cosmetic.",
+    related: { href: "faq.html#egg-tiers", label: "Egg tiers in the FAQ" },
+  },
+  {
     id: "J0LgLC_wnfY",
     ep: "07",
+    runtime: "2:06",
     block: "start",
-    title: "Monster Egg Tiers \u2014 Does It Actually Matter?",
-    blurb: "Platinum, Gold, Silver, Bronze, Basic. How tiers are handed out, and why the team says they're mainly cosmetic.",
-    related: { href: "faq.html#egg-tiers", label: "Egg tiers in the FAQ" },
+    title: "The Three Rewards (Monster Egg \u2014 Airdrop \u2014 Free Mint), Side By Side",
+    blurb: "Three separate rewards, decided three completely different ways. None of them cancels out another, and you can have all three.",
+    related: { href: "faq.html#mint-vs-airdrop", label: "The three rewards compared" },
   },
   {
     id: "-PjrTPgIwxQ",
     ep: "06",
+    runtime: "2:10",
     block: "start",
-    title: "The Three Rewards, Side By Side",
-    blurb: "The Monster Egg, the Trainer Point airdrop and the Ronin free mint are three different things decided three different ways. You can have all three.",
-    related: { href: "faq.html#mint-vs-airdrop", label: "The three rewards compared" },
-  },
-  {
-    id: "aJLPrAnhs0I",
-    ep: "05",
-    block: "start",
-    title: "Rank, Wave, Trainer Number \u2014 The Words Everyone Mixes Up",
+    title: "Rank, Wave, Trainer Number: The Yakkamon Words Everyone Mixes Up",
     blurb: "Points, rank, wave, trainer number and egg tier all mean different things. Only one is decided the day you sign up, and it's the one that matters least.",
     related: { href: "faq.html#ranks-tiers", label: "The full rank ladder" },
   },
   {
     id: "tkD362tQUa0",
     ep: "04",
+    runtime: "2:29",
     block: "start",
-    title: "How To Pre-Register (And The Step Most People Skip)",
-    blurb: "Signing up takes a minute and needs only an email. But linking X and Discord is what verifies you \u2014 and verification is what decides whether you can mint on October 1st.",
+    title: "How To Pre-Register For Yakkamon (And The Step Most People Skip)",
+    blurb: "Signing up takes a minute and needs only an email. But linking X and Discord is what verifies you \u2014 and verification decides whether you can mint on October 1st.",
     related: { href: "pre-registration.html", label: "The written walkthrough" },
   },
   {
     id: "cLRGC67tmLQ",
     ep: "03",
+    runtime: "1:57",
     block: "start",
     title: "What Is Yakkamon? The 2-Minute Explainer",
     blurb: "A creature collector that's also an idle farming game. What it is, who's building it, and why pre-registration matters before early access opens in Q4 2026.",
@@ -87,17 +93,19 @@ const YAKKAMON_VIDEOS = [
   {
     id: "GsUrYD4sAro",
     ep: "02",
-block: "trailers",
-    title: "Yakkamon \u2014 Trailer",
-    blurb: "A first look at the world: regions, creatures and the loop that runs while you're offline.",
+    runtime: "0:30",
+    block: "trailers",
+    title: "Yakkamon \u2014 Ready to Catch All?",
+    blurb: "A thirty-second look at the creatures.",
     related: { href: "gameplay.html", label: "Gameplay systems" },
   },
   {
     id: "ebC2vyUlnXs",
     ep: "01",
-block: "trailers",
-    title: "Yakkamon \u2014 First Trailer",
-    blurb: "The original cut.",
+    runtime: "1:08",
+    block: "trailers",
+    title: "Yakkamon \u2014 Unofficial Fan Trailer | Pre-Registration Is Open",
+    blurb: "The first one. Regions, creatures, and the loop that runs while you're offline.",
     related: { href: "gameplay.html", label: "Gameplay systems" },
   },
 ];

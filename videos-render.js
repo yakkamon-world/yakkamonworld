@@ -16,14 +16,15 @@
   }
 
   function card(v) {
-    const ep = v.ep ? `<span class="vid-ep">EP ${esc(v.ep)}</span>` : `<span class="vid-ep vid-ep-alt">TRAILER</span>`;
+    const ep = v.ep ? `<span class="vid-ep">EP ${esc(v.ep)}</span>` : "";
+    const time = v.runtime ? `<span class="vid-time">${esc(v.runtime)}</span>` : "";
     const related = v.related
       ? `<a class="vid-related" href="${esc(v.related.href)}">${esc(v.related.label)} &rarr;</a>`
       : "";
     return `
       <li class="vid-item">
         <div class="vid-head">
-          ${ep}
+          ${ep}${time}
           <a class="vid-title" href="${WATCH}${esc(v.id)}" target="_blank" rel="noopener">${esc(v.title)} &#8599;</a>
         </div>
         <p class="vid-blurb">${esc(v.blurb)}</p>
