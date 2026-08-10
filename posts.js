@@ -15,7 +15,7 @@ const YAKKAMON_POSTS = [
       "We've already published the factual recap of Thought Farm's first Yakkamon dev stream. This is the other half: what we think of it. Nine decisions, graded. Some of it is critical \u2014 that's the point.",
       "The team asked people not to screen-record the stream because things will change. We've respected that, and everything below is where the project stood on 7 August rather than a promise.",
       "## What they got right",
-      "<strong>Specialisation comes from your monsters</strong>, not from separate boost items. Best decision of the stream, and the one that makes everything else cohere \u2014 it means the creatures <em>are</em> the game, so hunting, breeding and trading reinforce each other instead of competing.",
+      "<strong>Specialization comes from your monsters</strong>, not from separate boost items. Best decision of the stream, and the one that makes everything else cohere \u2014 it means the creatures <em>are</em> the game, so hunting, breeding and trading reinforce each other instead of competing.",
       "<strong>Abandoning the compromised X account fast.</strong> Every hour it stayed compromised it was a weapon pointed at their own community, with their verification badge on it. Wiring the reconnect into the dashboard as a points reward was smart \u2014 it makes the migration actually happen.",
       "<strong>No new token.</strong> In a space where a new project almost always means a new token to sell, reusing $FLOWER is the strongest signal of intent they've given.",
       "<strong>Shipping narrow.</strong> Q4 ships gathering, monsters, hunting and basic combat; PvP and advanced breeding come later in chapters. Right call \u2014 though it sits awkwardly with an airdrop sold on monsters built for combat.",
@@ -27,7 +27,7 @@ const YAKKAMON_POSTS = [
       "<strong>Black-box genetics</strong> is a great instinct in a risky context: hidden stats plus tradable assets makes information itself an asset. Publish the ranges, hide the rolls.",
       "## The thing nobody mentioned",
       "By the team's own description the Yakkamon core is roughly one developer at ninety percent, one at fifty-fifty, and a twelve-week intern. That's a small team for a Q4 early access \u2014 and the deposit launch already moved five days because one developer was ill.",
-      "It isn't a criticism of competence. It does mean the window is tight, and that the biggest risk isn't anything they decided. It's bandwidth.",
+      "It isn't a criticizm of competence. It does mean the window is tight, and that the biggest risk isn't anything they decided. It's bandwidth.",
       "They're being unusually honest about all of it \u2014 the bot numbers, the illness, the things they don't know yet. That doesn't guarantee anything, but it's a better starting position than most projects in this space ever manage."
     ]
   },
@@ -73,7 +73,7 @@ const YAKKAMON_POSTS = [
       "Three or four fake Yakkamon websites have already been taken down.",
       "## 3. The numbers, and the crackdown",
       "<strong>45,000 pre-registered trainers</strong> at the time of the stream. Around 10,000 came through private codes distributed via Sunflower Land and Ronin, and another 8,000 to 9,000 tried to sign up before referrals opened.",
-      "Roughly <strong>4,500 to 5,000 bot accounts have been banned</strong>, and referrals will be <strong>double-verified</strong> before the leaderboard is finalised. <strong>Discord points are switched off</strong> after the emoji system turned into reaction farming; they return later as a manual weekly reward. And <strong>the leaderboard will be hidden</strong> as launch approaches, so start climbing while you can still see where you stand.",
+      "Roughly <strong>4,500 to 5,000 bot accounts have been banned</strong>, and referrals will be <strong>double-verified</strong> before the leaderboard is finalized. <strong>Discord points are switched off</strong> after the emoji system turned into reaction farming; they return later as a manual weekly reward. And <strong>the leaderboard will be hidden</strong> as launch approaches, so start climbing while you can still see where you stand.",
       "## 4. What early access will actually include",
       "Early access in Q4 ships the <strong>fundamentals only</strong>: gathering, monsters, hunting, and basic combat. <strong>PvP is not in early access</strong>, and neither is advanced breeding \u2014 both are post-launch, arriving in chapters.",
       "The <strong>day/night cycle runs on a sped-up in-game clock</strong>, deliberately not tied to real-world time. And the <strong>season system may be weekly rather than quarterly</strong>, following the Sunflower Land model.",
@@ -108,7 +108,7 @@ const YAKKAMON_POSTS = [
     category: "guideline",
     title: "The Free-to-Play Guide to Early Access",
     date: "Aug 5, 2026",
-    excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realistic free total.",
+    excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realiztic free total.",
     body: [
       "You can reach early access without spending anything. You can't reach the top of the leaderboard without spending \u2014 a 50,000 $FLOWER deposit is worth 70,000 points, more than a hundred days of perfect free play. This guide is about playing the game that's actually winnable.",
       "## Aim at top 5,000",
@@ -120,7 +120,7 @@ const YAKKAMON_POSTS = [
       "## The one date that matters",
       "<strong>October 1st.</strong> 250 points for one click \u2014 the same as eight referrals, and the best value on the entire board. You pay only the Ronin network fee.",
       "## Referrals are the whole free game",
-      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Your first five are instant; after that your friend must verify Discord, verify Twitter/X and reach 100 points, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
+      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realiztic free total. Your first five are instant; after that your friend must verify Discord, verify Twitter/X and reach 100 points, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
       "The full guide, with the daily and weekly routines and the points budget, is on the portal."
     ]
   },

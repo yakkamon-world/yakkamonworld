@@ -201,7 +201,7 @@
       'Only Lv 20+ can register directly &mdash; 54,202 Sunflower Land players. The other 295,063 sit below ' +
       'Lv 20 and need a referral code from Aug 5. Fitted conversion falls steeply with level, so the wave ' +
       'schedule alone tops out around 9,400; everything past that has to be referred in. The band is wide ' +
-      'after Aug 5 because referral behaviour has no data behind it yet.</p>';
+      'after Aug 5 because referral behavior has no data behind it yet.</p>';
 
     host.innerHTML = html;
   }
