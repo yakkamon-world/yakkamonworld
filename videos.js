@@ -24,7 +24,7 @@ const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
     id: "ZNN8DrZc4O8",
-    ep: "30",
+    ep: "09",
     block: "analysis",
     title: "I Graded Yakkamon's First Dev Stream",
     blurb: "Nine decisions from the first dev stream, graded A to C \u2014 what the team got right, and the one call that makes the top of the leaderboard purchased rather than contested.",
@@ -34,7 +34,7 @@ const YAKKAMON_VIDEOS = [
   // ---------- TACTICS ----------
   {
     id: "Tk0v9lgrM2A",
-    ep: "09",
+    ep: "08",
     block: "tactics",
     title: "Week One Pays 3\u00d7 \u2014 Then It Drops",
     blurb: "Everything about $FLOWER deposits before you send anything: the decaying multiplier, the per-deposit size bonus, and the trap that costs people points.",
@@ -44,7 +44,7 @@ const YAKKAMON_VIDEOS = [
   // ---------- START HERE ----------
   {
     id: "J0LgLC_wnfY",
-    ep: "05",
+    ep: "07",
     block: "start",
     title: "Monster Egg Tiers \u2014 Does It Actually Matter?",
     blurb: "Platinum, Gold, Silver, Bronze, Basic. How tiers are handed out, and why the team says they're mainly cosmetic.",
@@ -52,7 +52,7 @@ const YAKKAMON_VIDEOS = [
   },
   {
     id: "-PjrTPgIwxQ",
-    ep: "04",
+    ep: "06",
     block: "start",
     title: "The Three Rewards, Side By Side",
     blurb: "The Monster Egg, the Trainer Point airdrop and the Ronin free mint are three different things decided three different ways. You can have all three.",
@@ -60,7 +60,7 @@ const YAKKAMON_VIDEOS = [
   },
   {
     id: "aJLPrAnhs0I",
-    ep: "03",
+    ep: "05",
     block: "start",
     title: "Rank, Wave, Trainer Number \u2014 The Words Everyone Mixes Up",
     blurb: "Points, rank, wave, trainer number and egg tier all mean different things. Only one is decided the day you sign up, and it's the one that matters least.",
@@ -68,7 +68,7 @@ const YAKKAMON_VIDEOS = [
   },
   {
     id: "tkD362tQUa0",
-    ep: "02",
+    ep: "04",
     block: "start",
     title: "How To Pre-Register (And The Step Most People Skip)",
     blurb: "Signing up takes a minute and needs only an email. But linking X and Discord is what verifies you \u2014 and verification is what decides whether you can mint on October 1st.",
@@ -76,7 +76,7 @@ const YAKKAMON_VIDEOS = [
   },
   {
     id: "cLRGC67tmLQ",
-    ep: "01",
+    ep: "03",
     block: "start",
     title: "What Is Yakkamon? The 2-Minute Explainer",
     blurb: "A creature collector that's also an idle farming game. What it is, who's building it, and why pre-registration matters before early access opens in Q4 2026.",
@@ -86,14 +86,16 @@ const YAKKAMON_VIDEOS = [
   // ---------- TRAILERS ----------
   {
     id: "GsUrYD4sAro",
-    block: "trailers",
+    ep: "02",
+block: "trailers",
     title: "Yakkamon \u2014 Trailer",
     blurb: "A first look at the world: regions, creatures and the loop that runs while you're offline.",
     related: { href: "gameplay.html", label: "Gameplay systems" },
   },
   {
     id: "ebC2vyUlnXs",
-    block: "trailers",
+    ep: "01",
+block: "trailers",
     title: "Yakkamon \u2014 First Trailer",
     blurb: "The original cut.",
     related: { href: "gameplay.html", label: "Gameplay systems" },
