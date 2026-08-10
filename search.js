@@ -72,6 +72,8 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
   { tag: "Gameplay", title: "Arena Battles", excerpt: "PvP arena combat \u2014 confirmed as post-launch, not part of early access.", url: "gameplay.html?system=arena-battles" },
 
+  { tag: "Videos", title: "All YakkamonWorld videos", excerpt: "Every episode in one place \u2014 short explainers on pre-registration, points, deposits and gameplay, each linked to the written version.", url: "videos.html" },
+  { tag: "Videos", title: "Watch instead of reading", excerpt: "Prefer video? Start with episode 1 \u2014 the whole game in two minutes.", url: "videos.html" },
   { tag: "Contact", title: "Contact us", excerpt: "Corrections, questions, tip submissions, scam reports and collaboration \u2014 pick a topic and it reaches us directly.", url: "contact.html" },
   { tag: "Contact", title: "Report a mistake on this site", excerpt: "Found something wrong? Tell us \u2014 corrections get priority and we would rather fix it than leave it up.", url: "contact.html" },
   { tag: "Contact", title: "Submit a tip or strategy", excerpt: "Send us a tactic that works. If it holds up it goes on the Tips page with your name on it.", url: "contact.html" },
