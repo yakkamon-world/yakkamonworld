@@ -6,6 +6,32 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "dev-stream-graded",
+    category: "community",
+    title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream",
+    date: "Aug 11, 2026",
+    excerpt: "Nine decisions, graded A to C. Three A's, one C \u2014 and a wallet-splitting hole in the deposit system that costs 10% of your points and multiplies your reward slots by ten.",
+    body: [
+      "We've already published the factual recap of Thought Farm's first Yakkamon dev stream. This is the other half: what we think of it. Nine decisions, graded. Some of it is critical \u2014 that's the point.",
+      "The team asked people not to screen-record the stream because things will change. We've respected that, and everything below is where the project stood on 7 August rather than a promise.",
+      "## What they got right",
+      "<strong>Specialisation comes from your monsters</strong>, not from separate boost items. Best decision of the stream, and the one that makes everything else cohere \u2014 it means the creatures <em>are</em> the game, so hunting, breeding and trading reinforce each other instead of competing.",
+      "<strong>Abandoning the compromised X account fast.</strong> Every hour it stayed compromised it was a weapon pointed at their own community, with their verification badge on it. Wiring the reconnect into the dashboard as a points reward was smart \u2014 it makes the migration actually happen.",
+      "<strong>No new token.</strong> In a space where a new project almost always means a new token to sell, reusing $FLOWER is the strongest signal of intent they've given.",
+      "<strong>Shipping narrow.</strong> Q4 ships gathering, monsters, hunting and basic combat; PvP and advanced breeding come later in chapters. Right call \u2014 though it sits awkwardly with an airdrop sold on monsters built for combat.",
+      "## Where we'd push back",
+      "<strong>The doubling size bonus is our only C.</strong> Stacked on the opening week's 3\u00d7, a single 50,000 $FLOWER deposit produces <strong>190,000 points</strong> \u2014 against roughly 900 for two months of perfect free play with no referrals. That's about 190 to 1, which makes the top of the leaderboard purchased rather than contested. We'd taper the bonus rather than double it.",
+      "<strong>And it opens a wallet-splitting hole.</strong> Because the size bonus is rated per deposit, splitting 50,000 across ten wallets costs only 10.5% of your points \u2014 and turns one reward slot into ten. Give up one top-100 finish, gain roughly ten top-1,000 finishes, for a tenth of your points.",
+      "The cheapest fix is their own precedent: require verified Discord, verified X and a minimum of <em>non-deposit</em> points for airdrop eligibility, exactly as they already do for referrals. Ten split wallets would each need aged accounts and a week of daily play.",
+      "<strong>Hiding the leaderboard</strong> solves the right problem bluntly. Show the band rather than the exact rank \u2014 you keep the motivational feedback and remove the sniping target.",
+      "<strong>Black-box genetics</strong> is a great instinct in a risky context: hidden stats plus tradable assets makes information itself an asset. Publish the ranges, hide the rolls.",
+      "## The thing nobody mentioned",
+      "By the team's own description the Yakkamon core is roughly one developer at ninety percent, one at fifty-fifty, and a twelve-week intern. That's a small team for a Q4 early access \u2014 and the deposit launch already moved five days because one developer was ill.",
+      "It isn't a criticism of competence. It does mean the window is tight, and that the biggest risk isn't anything they decided. It's bandwidth.",
+      "They're being unusually honest about all of it \u2014 the bot numbers, the illness, the things they don't know yet. That doesn't guarantee anything, but it's a better starting position than most projects in this space ever manage."
+    ]
+  },
+  {
     slug: "flower-deposit-guideline",
     category: "guideline",
     title: "The Official $FLOWER Deposit Guideline, Explained",
