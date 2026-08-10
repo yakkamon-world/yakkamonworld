@@ -844,3 +844,21 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 @media(max-width:560px){
   .contact-form{padding:18px; box-shadow:5px 5px 0 var(--ink)}
 }
+
+/* ---------- Live deposit-week indicator ---------- */
+.deposit-week{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap; min-width:0;
+  background:var(--ink); color:var(--cream); border:4px solid var(--yellow);
+  border-radius:var(--radius); box-shadow:5px 5px 0 var(--ink);
+  padding:13px 17px; margin:0 0 20px; font-size:.95rem; font-weight:700; line-height:1.5;
+}
+.deposit-week[hidden]{display:none}
+.deposit-week .dw-tag{
+  flex:none; font-family:var(--font-display); font-size:.95rem; letter-spacing:.06em;
+  background:var(--yellow); color:var(--ink); border-radius:999px; padding:2px 12px; white-space:nowrap;
+}
+.deposit-week .dw-body{min-width:0}
+.deposit-week strong{color:var(--yellow)}
+@media(max-width:560px){
+  .deposit-week{padding:11px 13px; font-size:.88rem; box-shadow:4px 4px 0 var(--ink)}
+}

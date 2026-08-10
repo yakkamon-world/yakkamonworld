@@ -6,6 +6,29 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "flower-deposit-guideline",
+    category: "guideline",
+    title: "The Official $FLOWER Deposit Guideline, Explained",
+    date: "Aug 10, 2026",
+    excerpt: "Yakkamon has published its deposit guideline. What a deposit actually does, the week-by-week rate schedule, and the withdrawal limit nobody's discussing.",
+    body: [
+      "Yakkamon has published a dedicated $FLOWER deposits page in the official docs. Here's the whole thing in one place \u2014 the official guideline, plus the live rate schedule from your trainer dashboard, which the docs page doesn't include.",
+      "## A deposit does two things, not one",
+      "Every deposit <strong>credits your in-game balance</strong> and <strong>earns you leaderboard points</strong>. You are not trading one for the other \u2014 the $FLOWER is held for you and waiting when access opens, and the points are separate.",
+      "## What you get back, and when",
+      "Once early access opens you can spend the $FLOWER in-game, or <strong>withdraw it with no withdrawal tax</strong>. The docs are explicit: no lock-up, no penalty.",
+      "## The safeguard nobody's talking about",
+      "Buried in the guideline is the detail most worth knowing: <strong>percentage-based withdrawal limits may apply for the first few weeks after launch</strong>. It caps how much can be withdrawn in a given period, not whether you can withdraw, and the limits lift as the project settles. Reasonable and common \u2014 but it does mean your deposit isn't instantly liquid on day one.",
+      "## The rates the docs don't give you",
+      "The guideline says bigger deposits earn <strong>exponentially</strong> more, which is accurate but vague. The numbers live in your dashboard's deposit panel, and there are two bonuses stacked together.",
+      "<strong>The weekly multiplier decays.</strong> The opening week (10\u201316 Aug) pays <strong>3\u00d7</strong>, falling 0.2\u00d7 every week until it rests at 1\u00d7 from around 19 October.",
+      "<strong>The size bonus is per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount has to land in one transfer \u2014 25 then another 25 does not reach the 50 tier.",
+      "## What that means",
+      "Both bonuses push the same way: deposit early, in single larger transfers. The same 5,000 $FLOWER is worth <strong>17,000 points</strong> as one transfer in the opening week, and <strong>6,000</strong> as ten deposits of 500 after the multiplier bottoms out. Same money, a 65% swing.",
+      "We can't tell you whether to deposit \u2014 that's your call, and everything in pre-registration works without it. We can tell you what the rules are."
+    ]
+  },
+  {
     slug: "dev-stream-aug-7-recap",
     category: "community",
     title: "First Yakkamon Dev Stream: Everything They Announced",
