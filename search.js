@@ -74,6 +74,8 @@ const SEARCH_INDEX = [
 
   { tag: "Videos", title: "All YakkamonWorld videos", excerpt: "Every episode in one place \u2014 short explainers on pre-registration, points, deposits and gameplay, each linked to the written version.", url: "videos.html" },
   { tag: "Videos", title: "Watch instead of reading", excerpt: "Prefer video? Start with episode 1 \u2014 the whole game in two minutes.", url: "videos.html" },
+  { tag: "Privacy", title: "Privacy \u2014 what we collect", excerpt: "Analytics only with your consent, a contact form that emails us, no ads and nothing sold. Turn analytics off any time.", url: "privacy.html" },
+  { tag: "Privacy", title: "Turn analytics off", excerpt: "Change your mind about analytics whenever you like \u2014 the control is on the privacy page.", url: "privacy.html#your-choices" },
   { tag: "Contact", title: "Contact us", excerpt: "Corrections, questions, tip submissions, scam reports and collaboration \u2014 pick a topic and it reaches us directly.", url: "contact.html" },
   { tag: "Contact", title: "Report a mistake on this site", excerpt: "Found something wrong? Tell us \u2014 corrections get priority and we would rather fix it than leave it up.", url: "contact.html" },
   { tag: "Contact", title: "Submit a tip or strategy", excerpt: "Send us a tactic that works. If it holds up it goes on the Tips page with your name on it.", url: "contact.html" },
