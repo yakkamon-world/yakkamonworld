@@ -36,7 +36,14 @@
   }
 
   const html = YAKKAMON_VIDEO_BLOCKS.map((block) => {
-    const items = YAKKAMON_VIDEOS.filter((v) => v.block === block.key);
+    // Sort by episode number rather than trusting the order in the data file,
+    // so a video pasted anywhere still lands in the right place.
+    const items = YAKKAMON_VIDEOS
+      .filter((v) => v.block === block.key)
+      .sort((a, b) => {
+        const diff = Number(a.ep || 0) - Number(b.ep || 0);
+        return block.sort === "asc" ? diff : -diff;
+      });
     if (!items.length) return "";
     return `
       <section class="vid-block">

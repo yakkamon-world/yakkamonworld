@@ -12,11 +12,13 @@
 // `related` points at the written version on this site, so the page sends people
 // further in rather than straight out to YouTube.
 
+// `sort: "asc"` lists oldest episode first — use it for anything meant to be
+// watched in sequence. Everything else lists newest first.
 const YAKKAMON_VIDEO_BLOCKS = [
-  { key: "start",    title: "START HERE", note: "New to Yakkamon? Watch these in order." },
-  { key: "tactics",  title: "TACTICS",    note: "Timing, points, and the things that cost people rank." },
-  { key: "analysis", title: "ANALYSIS",   note: "Longer pieces on how the game is being built." },
-  { key: "trailers", title: "TRAILERS",   note: "Cinematics and first looks." },
+  { key: "start",    sort: "asc",  title: "START HERE", note: "New to Yakkamon? Start at the top and work down." },
+  { key: "tactics",  sort: "desc", title: "TACTICS",    note: "Timing, points, and the things that cost people rank." },
+  { key: "analysis", sort: "desc", title: "ANALYSIS",   note: "Longer pieces on how the game is being built." },
+  { key: "trailers", sort: "desc", title: "TRAILERS",   note: "Cinematics and first looks." },
 ];
 
 const YAKKAMON_VIDEOS = [
