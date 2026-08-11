@@ -27,7 +27,7 @@ const YAKKAMON_POSTS = [
       "<strong>Black-box genetics</strong> is a great instinct in a risky context: hidden stats plus tradable assets makes information itself an asset. Publish the ranges, hide the rolls.",
       "## The thing nobody mentioned",
       "By the team's own description the Yakkamon core is roughly one developer at ninety percent, one at fifty-fifty, and a twelve-week intern. That's a small team for a Q4 early access \u2014 and the deposit launch already moved five days because one developer was ill.",
-      "It isn't a criticizm of competence. It does mean the window is tight, and that the biggest risk isn't anything they decided. It's bandwidth.",
+      "It isn't a criticism of competence. It does mean the window is tight, and that the biggest risk isn't anything they decided. It's bandwidth.",
       "They're being unusually honest about all of it \u2014 the bot numbers, the illness, the things they don't know yet. That doesn't guarantee anything, but it's a better starting position than most projects in this space ever manage."
     ]
   },
@@ -108,7 +108,7 @@ const YAKKAMON_POSTS = [
     category: "guideline",
     title: "The Free-to-Play Guide to Early Access",
     date: "Aug 5, 2026",
-    excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realiztic free total.",
+    excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realistic free total.",
     body: [
       "You can reach early access without spending anything. You can't reach the top of the leaderboard without spending \u2014 a 50,000 $FLOWER deposit is worth 70,000 points, more than a hundred days of perfect free play. This guide is about playing the game that's actually winnable.",
       "## Aim at top 5,000",
@@ -120,7 +120,7 @@ const YAKKAMON_POSTS = [
       "## The one date that matters",
       "<strong>October 1st.</strong> 250 points for one click \u2014 the same as eight referrals, and the best value on the entire board. You pay only the Ronin network fee.",
       "## Referrals are the whole free game",
-      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realiztic free total. Your first five are instant; after that your friend must verify Discord, verify Twitter/X and reach 100 points, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
+      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Your first five are instant; after that your friend must verify Discord, verify Twitter/X and reach 100 points, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
       "The full guide, with the daily and weekly routines and the points budget, is on the portal."
     ]
   },
