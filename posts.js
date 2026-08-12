@@ -6,6 +6,36 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "reward-ladder-analysis",
+    category: "community",
+    title: "Was The Reward Ladder Nerfed? An Honest Look At The Numbers",
+    date: "Aug 12, 2026",
+    excerpt: "Legendary supply halved, the same number of eggs went out, and the wallet-splitting incentive is completely untouched. Who gained, who lost, and what the team gets right.",
+    body: [
+      "We've published the new ladder. This is the analysis: who gained, who lost, whether \u201cnothing has been nerfed\u201d holds up, and one consequence we don't think anyone has spotted.",
+      "## The same number of eggs, half the Legendaries",
+      "Total eggs barely moved \u2014 5,000 to 5,010. The composition changed enormously. <strong>Legendary supply fell from 1,000 to 510</strong>, and the Rare tier was split into two grades where there used to be one.",
+      "If you hold a Legendary, this update was unambiguously good for you: halving the supply of a tradable asset while demand stays flat makes it scarcer. That's worth saying, because most commentary has focused on the people who dropped a band.",
+      "## The middle took the hit",
+      "Ten ranks improved. Roughly 3,800 moved down a grade. About 1,200 were untouched.",
+      "The sharpest change is <strong>ranks 501\u20131,000</strong>, which fell out of the Legendary bracket entirely \u2014 500 trainers who were planning around a Legendary Egg C now have a Rare Egg A.",
+      "The awkward part is timing. Deposits opened on 9 August with a multiplier that rewards moving early. This ladder changed on 12 August. Anyone who deposited in the opening week aimed at a target that has since moved.",
+      "## Does \u201cnothing has been nerfed\u201d hold up?",
+      "The statement is precise and, taken literally, accurate: no monster was made weaker. But it answers a question about <em>power</em>, and most of the concern is about <em>scarcity</em> \u2014 and in a game with tradable assets, scarcity is half of what a reward is worth.",
+      "Our position: this is a <strong>rebalance with winners and losers</strong>, not a nerf and not a pure upgrade. Describing it as neither would have cost the team nothing.",
+      "## The thing nobody has mentioned",
+      "We wrote last week about a wallet-splitting problem: because the size bonus is rated per deposit and rewards are granted per account, a large depositor can split across wallets, lose ~10% of their points and multiply their reward slots.",
+      "<strong>The new ladder doesn't fix it. The double-egg reward is per account, so a splitter collects it on every wallet.</strong> One wallet at rank 1 went from 1 egg to 2. Ten wallets across ranks 1\u201310 went from 10 eggs to 20. The advantage of splitting is unchanged at 10\u00d7 \u2014 while the absolute prize doubled.",
+      "The available fix is the team's own precedent: require verified Discord, verified X and a minimum of non-deposit points for reward eligibility, exactly as they already do for referrals.",
+      "## What we still don't know",
+      "One number decides whether this was good or bad for you, and it hasn't been published. If the utility gap between Legendary Egg C and Rare Egg A is small, ranks 501\u20131,000 lost little and the team's framing is right. If it's large, 500 trainers lost a lot on three days' notice. <strong>Utilities are due in September.</strong>",
+      "## Our verdict",
+      "Top 10: a clear win. Ranks 11\u201350 and 101\u2013250: unchanged and now sitting on a scarcer asset \u2014 quietly the best outcome on the board. Ranks 251\u20131,000: the real losers. Ranks 1,001\u20135,000: broadly neutral. Outside 5,000: unaffected.",
+      "The change itself is defensible \u2014 the top 100 being uniformly identical was a genuine design weakness. What we'd push back on is the framing. \u201cNothing has been nerfed\u201d is a claim about power in an update that was mostly about scarcity, and it arrived three days into a deposit window that penalises waiting.",
+      "We'll update this when the September utilities land. If they show the gap is small, we'll say so as plainly as we've said this."
+    ]
+  },
+  {
     slug: "reward-egg-ladder-update",
     category: "event",
     title: "The Reward Egg Ladder Just Changed",
