@@ -83,6 +83,7 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
   { tag: "Gameplay", title: "Arena Battles", excerpt: "PvP arena combat \u2014 confirmed as post-launch, not part of early access.", url: "gameplay.html?system=arena-battles" },
 
+  { tag: "Videos", title: "Video: The Reward Ladder Changed", excerpt: "A 14-minute analysis \u2014 Legendary supply halved, and only 500 ranks genuinely lost a tier, not the 3,800 being quoted.", url: "videos.html" },
   { tag: "Videos", title: "All YakkamonWorld videos", excerpt: "Every episode in one place \u2014 short explainers on pre-registration, points, deposits and gameplay, each linked to the written version.", url: "videos.html" },
   { tag: "Videos", title: "Watch instead of reading", excerpt: "Prefer video? Start with episode 1 \u2014 the whole game in two minutes.", url: "videos.html" },
   { tag: "Privacy", title: "Privacy \u2014 what we collect", excerpt: "Analytics only with your consent, a contact form that emails us, no ads and nothing sold. Turn analytics off any time.", url: "privacy.html" },

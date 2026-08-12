@@ -24,6 +24,15 @@ const YAKKAMON_VIDEO_BLOCKS = [
 const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
+    id: "ZjDPcqiDtBU",
+    ep: "10",
+    runtime: "14:28",
+    block: "analysis",
+    title: "The Yakkamon Reward Ladder Changed \u2014 I Was Wrong About How Bad It Was",
+    blurb: "Legendary supply halved while total eggs stayed flat. Counting properly, only 500 ranks genuinely lost a tier \u2014 not the 3,800 everyone is quoting.",
+    related: { href: "article-reward-ladder-analysis.html", label: "Read the written analysis" },
+  },
+  {
     id: "ZNN8DrZc4O8",
     ep: "09",
     runtime: "22:11",
