@@ -374,7 +374,9 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 /* ---------- Hero logo lockup ---------- */
 .hero-logo{display:flex; flex-direction:column; align-items:center; gap:0; margin-bottom:0}
 .hero-logo svg{width:150px; height:150px}
-.hero-wordmark{
+/* h1.hero-wordmark — the selector must out-specify `.hero h1` below, which
+   would otherwise shrink the wordmark and replace its red offset shadow. */
+.hero h1.hero-wordmark, .hero-wordmark{
   font-family:var(--font-display); font-size:clamp(1.7rem,8vw,4rem); margin:0; line-height:1; max-width:100%; overflow-wrap:break-word; min-width:0;
   letter-spacing:.02em; text-align:center; color:var(--yellow);
   text-shadow:
