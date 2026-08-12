@@ -4,13 +4,467 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="analytics.js"></script>
-<title>FAQ — Yakkamon Portal</title>
+<title>Yakkamon FAQ: Ranks, Waves, Deposits & Egg Tiers</title>
+<link rel="canonical" href="https://yakkamonworld.com/faq.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YakkamonWorld">
+<meta property="og:title" content="Yakkamon FAQ: Ranks, Waves, Deposits & Egg Tiers">
+<meta property="og:description" content="Answers to the most confusing parts of Yakkamon pre-registration: wallets, gas, Ronin, Free Mint vs the Genesis Airdrop, and more.">
+<meta property="og:url" content="https://yakkamonworld.com/faq.html">
+<meta property="og:image" content="https://yakkamonworld.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Yakkamon_World">
+<meta name="twitter:title" content="Yakkamon FAQ: Ranks, Waves, Deposits & Egg Tiers">
+<meta name="twitter:description" content="Answers to the most confusing parts of Yakkamon pre-registration: wallets, gas, Ronin, Free Mint vs the Genesis Airdrop, and more.">
+<meta name="twitter:image" content="https://yakkamonworld.com/og-default.png">
 <meta name="description" content="Answers to the most confusing parts of Yakkamon pre-registration: wallets, gas, Ronin, Free Mint vs the Genesis Airdrop, and more.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is YakkamonWorld the official Yakkamon website?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. The official pre-registration site is yakkamon.com, and the official documentation is at docs.yakkamon.com. This site is a fan-run portal that explains things in plainer language and isn't affiliated with the Yakkamon team or SunflowerLand."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is Yakkamon?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A creature collector crossed with idle farming. You hunt and catch wild monsters out in the world, then put them to work farming, gathering and producing around the clock — so your farm keeps running while you're away. You can craft gear and take other trainers on in the arena."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Yakkamon free to pre-register?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Season 0 pre-registration is free and needs nothing but an email address. You don't need a wallet, and you don't need to be an existing Sunflower Land player."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to be an existing Sunflower Land player?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Yakkamon is a completely new game and anyone can pre-register with just an email address. Sunflower Land players are welcome — your Bumpkin Level decides when your access code unlocks — but nothing about Sunflower Land is a requirement."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a video version of any of this?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We run a YouTube channel at youtube.com/@YakkamonWorld with short 2–3 minute explainers covering pre-registration, access codes, the free mint and each gameplay system. Every episode is indexed on our videos page, each one linked to the written version — the same ground as this site, for anyone who'd rather watch than read. The channel is also linked from the Community page. Two to start with: What Is Yakkamon? The 2-Minute Explainer ↗ covers the game, the team behind it and why pre-registration matters. How To Pre-Register ↗ walks through signing up, and the verification step that decide"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where can I ask a question that isn't answered here?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We run an unofficial Telegram channel and chat group. The channel posts pre-registration updates as tiers unlock; the chat group is where you can ask anything, and our access bot will tell you your access date if you send it your Bumpkin Level. Join at t.me/YakkamonWorld, or see the Community page for all the links."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to know about crypto, or own a wallet, to take part?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not to pre-register — that only needs an email address. A wallet only becomes relevant if you want to take part in the Free Mint on October 1st, since that's an on-chain claim. If you plan to do that, you'll want a Ronin-compatible wallet set up beforehand. The Genesis Monster airdrop at launch doesn't require any action or wallet setup on your part — it's based purely on your final leaderboard rank."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What's the difference between my rank, my tier, and my wave?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Three words that get used close together, so they're easy to blur:"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does my rank actually get me?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Your trainer number decides two things at once: which Genesis egg (the egg your founding monster hatches from) you're given, and which wave you play in. Here's the full ladder: Of those who do get in, the top 5,000 also receive a Genesis Monster NFT, and within that the top 1,000 get the Legendary version."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When do I find out my rank?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026. Until then the leaderboard is still moving, so a rank you hold today isn't locked in — and neither is anyone else's."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does signing up early guarantee me a good rank?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, and this is the single most common misunderstanding. Signing up early sets your Monster Egg tier (which starting egg you get) and nothing else. It doesn't reserve a leaderboard position and it doesn't guarantee early access. Every rank is won on points."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I actually earn points?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Daily actions compound: streaks and referrals stack over time, so an early start is genuinely harder for someone else to overtake later."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there more than one leaderboard?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and they pay out completely differently: Most people only play the first one. The weekly board is a fresh contest each week against everyone else's weekly total — not their all-time one — which makes it far more winnable. How to play both at once →"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I reach a Legendary rank without depositing $FLOWER?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The top 100 is realistically a paid bracket — a 50,000 $FLOWER deposited total is worth 70,000 points, which no amount of free play matches. Below that it's genuinely contestable. Referrals pay 30 points each and are uncapped — your first five instantly, and after that only once your friend has verified Discord, verified Twitter/X and reached 100 points, so it takes real onboarding rather than just handing out codes. Roughly 165 valid referrals are worth as much as a 5,000 $FLOWER deposit. A free player with real reach can compete for the 101–1,000 Legendary bands; without it, aim at the top 5"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if I'm not Bumpkin Level 100+, or don't play Sunflower Land at all?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You're not shut out. Your Bumpkin Level only affects when your access code unlocks during pre-registration — it has nothing to do with your leaderboard rank. Lower tiers opened automatically day by day, and anyone can now use a referral code from another trainer. See the access code walkthrough."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the Genesis Monster tradable, or is it locked to my account?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fully tradable. Genesis Monsters arrive with in-game XP already on them, they're revealed live when early access launches, and they will never be minted again — so the supply is fixed at 5,000 forever."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When does the leaderboard for the Genesis Drop end?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026 — the official docs haven't published an exact cut-off date. Your points decide your rank, and your rank decides which Genesis egg you receive and which early-access wave you join, so every point still counts right up to the reveal."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is \"gas,\" and do I need real money?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gas is a tiny processing fee paid in the network's own currency to complete an on-chain action — similar to a card processing fee, except it goes to the network, not to Yakkamon. On Ronin this is usually a small fraction of a dollar. You'll need a small amount of RON (Ronin's currency) sitting in your wallet to cover it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is Ronin?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ronin is the blockchain network Yakkamon runs on — built specifically for games, with much lower fees than networks like Ethereum. Items living on Ronin (like your Genesis monster) are provably yours and can be traded with other players, rather than being locked inside one company's database."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does signing up early actually get me?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "One thing: your Monster Egg tier. Eggs are handed out in registration order, and once a tier fills up it's gone. A Platinum egg is mainly a cosmetic and early-collectible difference — the team has confirmed the sign-up tiers function that way rather than as a power difference. Every monster works as a worker for you regardless of which egg it came from. It is not a head start on the leaderboard and carries no claim on early access."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which Legendary Egg should I want?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You don’t get to pick — your points rank decides it. But since all three are the same power level, there’s no version of this where you should feel short-changed by landing in a lower band. If you’re collecting, A is the scarce one. If you’re playing, the useful question is whether the monster you get is a battle type or a farm-utility type, and that’s decided by species rather than by letter grade. The exact species and their utilities haven’t been published yet — the team is holding those back until after testing so they can see the effect on the game’s economy first."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How is this different from the sign-up egg tiers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Completely different systems, and they get confused constantly. One is decided the day you sign up and matters least. The other is earned over months. The full rank ladder →"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the egg counter I keep seeing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It tracks Monster Egg tiers only — how many Platinum sign-up slots are left. That is all it tracks. It is not an early-access counter, and it is not counting down Genesis Monster NFTs. When a tier fills, the only thing you've missed is that egg type; everything that actually decides your rank is still wide open."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is my Monster Egg an NFT?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. It's an in-game item — nothing to mint, nothing to claim, no wallet needed. It simply appears on your farm the first time you log into Yakkamon."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I signed up late. Am I out of the running?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not at all. A Basic egg holder who earns points every day will finish above a Platinum egg holder who signed up and never came back. Rank is earned, not reserved."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do referral points work — and can they be taken away?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, they can. Referrals are reviewed before rewards are finalized, so referral points stay provisional until then. A referral only counts if the friend is a real, separate person with a verified account who actually takes part in pre-registration. Your first five referrals are instant. From the sixth onward, your friend must do all three of these before the points land: verify their Discord, verify their Twitter/X, and reach 100 points in their trainer dashboard. A sign-up alone pays nothing. The rule change → These don't count:"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does the reward track work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It runs on a 7-day cycle rather than fixed points milestones. Every week a new list of rewards appears for you to claim; claimed items go into your inventory and stay there, and you'll be able to claim them in-game once you have early access. Each new list replaces the last, so anything left unclaimed is gone — check back weekly."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What exactly is a Genesis Monster?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A Genesis Monster is one of 5,000 founding creatures handed out free when early access opens through the Genesis airdrop (the official docs also call this the Trainer Point airdrop or the NFT airdrop — all three names mean the same thing), as a thank-you to players who backed Yakkamon before launch. There is no sale, no second window, and no way to buy in afterwards. Once the leaderboard locks, the Genesis line closes permanently."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Are they just collectibles, or do they actually do something?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "They're playable creatures that sit at the top end of the power curve — not cosmetic items. Three things make them worth having:"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I get to choose which one I get?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No — and you won't even know what you have until launch day. At early access launch there's a Genesis Reveal Event (a live unwrapping), where every Genesis Monster is revealed at once. Some trainers will find a top-tier battler, some a gathering monster that quietly produces resources for months, and a few will reveal something the rest of the server spends the season trying to trade for."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the airdrop first come, first served?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. The 5,000 Genesis Monster NFTs go to the top 5,000 trainers on the points leaderboard — not the first 5,000 to sign up. Registering on day one earns you nothing here; points do."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "So what decides whether I get one at all?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Only your final leaderboard rank on points: Only your final leaderboard rank:"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the free mint?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "On October 1st, a free mint goes live on Ronin. Mint one and you're holding an exclusive early Yakkamon monster. It costs nothing beyond the network fee (gas) — there's no mint price."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need a good rank to take part?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No — and this is what separates it from the airdrop. The free mint is open to every pre-registered trainer whatever your leaderboard position. It's won on speed, not points. You do have to be pre-registered before October 1st, though; there's no joining after the fact."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to do anything before mint day?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — complete your verification. The mint is whitelist-gated, and only verified pre-registered accounts make the list. Signing up isn't enough on its own; an unverified account can't mint. The whitelist also means:"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I get to see what I minted?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not straight away. You're minting blind — all 10,000 stay sealed until Early Access launches, and that's the moment every one of them is revealed at once. Nobody knows what's in the pool until the doors open."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there anything rare in there?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Seeded into the 10,000 are 5 Legendary monsters — the exact same legendary, top-of-the-power-curve creatures handed out in the Trainer Point airdrop (the Genesis airdrop). Five mints out of ten thousand. Someone is going to open one."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why bother if I'm already pre-registered?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Because minting earns pre-registration points, and points decide your trainer number, your Genesis airdrop, and your access wave. The mint isn't a side quest — it feeds directly into your leaderboard rank. It also runs a full month ahead of early access, so mint holders are the founding trainers."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to mint on October 1st to get my Monster Egg?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No — the two are completely unrelated. Your Monster Egg is already yours from signing up and appears on your farm automatically. The free mint is a separate, optional event for a different thing entirely: an NFT monster."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What do I do with it once I've minted?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You'll be able to deposit minted monsters into Yakkamon once you have game access."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is $FLOWER, and is it a new token?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, it isn't new. Yakkamon deliberately doesn't launch its own token — it reuses $FLOWER, the same one already running across the studio's other games. That means you can start building an in-game balance before early access even opens."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does depositing actually do for me?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Two things at once, and this is the part people miss: You aren't trading one for the other. You keep the $FLOWER and the points, and those points push you toward better trainer tiers, earlier access waves, and the Genesis airdrop."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When did deposits open, and why do the docs say 10 August?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Deposits opened on 9 August at 8:00 PM ET, which is when deposit addresses were issued. They’re live now. The official docs say 10 August because they quote the UTC date — 8:00 PM ET is midnight UTC, already the 10th in London and everywhere east of it. Same instant, two calendar dates. Minimum deposit is 5 $FLOWER on Base or Ronin, and points land in the week the deposit confirms."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I deposit all at once or spread it out?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "All at once, and as early as you can — both bonuses push the same way. The weekly multiplier is 3× in the opening week and falls 0.2× weekly to a floor of 1×, and the size bonus is rated per deposit, so the full amount has to land in one transfer. Concretely: 5,000 $FLOWER sent once in the opening week earns 17,000 points; the same 5,000 sent as ten deposits of 500 once the multiplier bottoms out earns 6,000. The full breakdown →"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I get my $FLOWER back if I change my mind?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. There's no lock-up and no penalty. You can withdraw with no withdrawal tax once you have game access."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where do I get $FLOWER in the first place?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Two routes. You can earn it free by playing Sunflower Land — selling crops, deliveries, seasonal chapters — since $FLOWER is that game’s in-game token. Or you can buy it — $FLOWER already trades on the Base network, and Yakkamon accepts deposits on Base or Ronin, so Base needs no bridging. For anything to do with acquiring or depositing it, work from the official Yakkamon deposits guideline and the deposit panel in your own trainer dashboard. Never take a contract address or deposit address from a reply or a DM — fake tokens with the same name and ticker are a common way people lose money. Ful"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which deposit week am I in right now?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The rate steps down every week, so it depends when you read this. Week one (10–16 Aug) paid 3×, and it falls 0.2× each week until it rests at 1× from around 19 October. The deposit guideline carries the full week-by-week table with a live indicator showing the current rate."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When can I actually withdraw — is it Q4 this year?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, this year, but with two qualifications. The official guideline says your $FLOWER can be spent in-game or withdrawn once you gain access to the game, and early access opens in Q4 2026."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the withdrawal limits I've heard about?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "For security, percentage-based limits may apply during the first few weeks after launch. These cap how much can be withdrawn in a given period — they don't stop you withdrawing. It's a standard safeguard while the game economy stabilises, and the limits are lifted as things settle."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is depositing risky?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We're not financial advisors and can't tell you whether to deposit — that's your call. What we can say factually: $FLOWER isn't a new speculative token, deposits are held on-chain rather than in a company account, there's no lock-up, and withdrawal is tax-free. As with any on-chain asset, smart-contract and platform risk still apply, the same as with any blockchain system."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When does the game actually come out?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Early access opens in Q4 2026, and it rolls out in waves rather than all at once. Higher-ranked trainers are in Wave 1 and later waves follow. A full public launch date beyond early access hasn't been announced."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a hard date?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The official docs commit to Q4 2026 for early access; the free mint has a firm date of October 1st. No exact early-access day has been announced, so our timeline shows the quarter rather than a specific date — check the News page for confirmation once one is set."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I lose my place if I can't play on day one?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Your wave decides when the door opens for you, not how long it stays open. Your trainer number is permanent, and your Genesis Monster is airdropped to you regardless of when you first log in."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Yakkamon mean Sunflower Land gets less attention?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The team's answer is no, and they've published their reasoning in some detail. The short version: It's worth reading their full answer if this is a concern for you — and Sunflower Land is live today, so you can judge the release cadence yourself."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
