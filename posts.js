@@ -6,6 +6,28 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "reward-egg-ladder-update",
+    category: "event",
+    title: "The Reward Egg Ladder Just Changed",
+    date: "Aug 12, 2026",
+    excerpt: "The top 10 now get two eggs, Rare Egg B is new, and the Legendary bands tightened sharply \u2014 rank 600 no longer earns a Legendary at all.",
+    body: [
+      "Yakkamon has rewritten the reward egg ladder. The bands are tighter, the top 10 now receive <strong>two</strong> eggs, and there's a new <strong>Rare Egg B</strong> tier.",
+      "## The new ladder",
+      "<strong>1\u20133:</strong> Legendary Egg A + Egg B. <strong>4\u201310:</strong> Legendary Egg A + Egg C. <strong>11\u201350:</strong> Egg A. <strong>51\u2013250:</strong> Egg B. <strong>251\u2013500:</strong> Egg C. <strong>501\u20132,000:</strong> Rare Egg A. <strong>2,001\u20135,000:</strong> Rare Egg B. <strong>5,001+:</strong> no reward egg.",
+      "Only the top 10 receive two eggs. Ranks 11 to 5,000 receive one, decided on points alone.",
+      "## What the team says",
+      "Their stated position is that <strong>nothing has been nerfed</strong>: lower-tier Yakkamon utility is being lifted to match previously expected traits, and more monsters are being released, so every rank still gets the kind of utility it was in line for. Monster utilities are due in <strong>September</strong>.",
+      "## What changed, plainly",
+      "The bands tightened, particularly in the middle. Rank 100 previously earned Legendary Egg A and now earns Egg B. Rank 300 went from Egg B to Egg C. Rank 600 previously earned Legendary Egg C and now earns Rare Egg A \u2014 out of the Legendary bracket entirely.",
+      "Total Legendary supply fell from roughly <strong>1,000</strong> to about <strong>510</strong>. Against that, the top 10 now get two eggs, Rare Egg B extends rewards deeper than before, and per-egg utility is rising rather than falling.",
+      "<strong>Our read:</strong> \u201cnot a nerf\u201d is fair on utility and questionable on scarcity. If you were at rank 400 expecting an Egg B you're now looking at Egg C, and at rank 600 you've dropped out of Legendary altogether. Whether lifted utility makes up for that is genuinely unknowable until September.",
+      "## What to do",
+      "If you were targeting a Legendary, the line moved from rank 1,000 to <strong>rank 500</strong> \u2014 a materially harder target. If you were targeting top 5,000, nothing got worse. If you're outside 5,000, your position is unchanged and early access still runs to rank 100,000.",
+      "The early-access wave bands are unchanged \u2014 this update covered reward eggs only."
+    ]
+  },
+  {
     slug: "dev-stream-graded",
     category: "community",
     title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream",
@@ -280,7 +302,7 @@ const YAKKAMON_POSTS = [
     category: "event",
     title: "The Genesis Airdrop: 5,000 Monsters, One Chance",
     date: "Jul 27, 2026",
-    excerpt: "The top 5,000 trainers on the leaderboard get a free Genesis Monster at launch \u2014 the top 1,000 get a Legendary.",
+    excerpt: "The top 5,000 trainers on the leaderboard get a free reward egg at launch \u2014 the top 500 get a Legendary.",
     body: [
       "When early access opens, 5,000 Genesis Monster NFTs will be airdropped to the players who registered earliest and ranked highest. There's no sale and no second window \u2014 once the leaderboard locks, the Genesis line closes for good.",
       "## Who gets what",
