@@ -5,6 +5,13 @@
 */
 const YAKKAMON_GAMEPLAY = [
   {
+    slug: "genesis-legendaries",
+    title: "The Genesis Legendaries",
+    desc: "Storm, Echo, Bloom and Tide — the four founding Legendary monsters, earned on leaderboard rank alone.",
+    detail: "The founding set of four Legendary monsters, awarded to the top 2,000 trainers on the pre-registration leaderboard and never obtainable any other way. <strong>Storm</strong> is the newest and hardest to earn \u2014 it sits above the rest, and only a top-50 finish is airdropped one. <strong>Echo</strong> goes to ranks 51\u2013250, <strong>Bloom</strong> to 251\u2013500 and <strong>Tide</strong> to 501\u20132,000, while the top 10 receive Storm plus a second Legendary alongside it. Echo, Bloom and Tide were previously called Legendary Eggs A, B and C; they differ in species and role rather than raw strength, and their utilities are due to be published in September.",
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>'
+  },
+  {
     slug: "creature-collecting",
     title: "Creature Collecting",
     desc: "Hunt and catch monsters across the wild, then send them out on farming and gathering tasks.",

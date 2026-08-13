@@ -29,7 +29,7 @@ const YAKKAMON_VIDEOS = [
     runtime: "14:28",
     block: "analysis",
     title: "The Yakkamon Reward Ladder Changed \u2014 I Was Wrong About How Bad It Was",
-    blurb: "Legendary supply halved while total eggs stayed flat. Counting properly, only 500 ranks genuinely lost a tier \u2014 not the 3,800 everyone is quoting.",
+    blurb: "A full breakdown of the 12 August ladder change. \u26a0 Its supply conclusion was later corrected \u2014 the monster names published on 14 August show Legendary supply doubled rather than halved, and no band lost out.",
     related: { href: "article-reward-ladder-analysis.html", label: "Read the written analysis" },
   },
   {
