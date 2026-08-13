@@ -6,6 +6,37 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "airdrop-breakdown",
+    category: "community",
+    title: "What Actually Changed in the Airdrop \u2014 A Full Breakdown",
+    date: "Aug 14, 2026",
+    excerpt: "Legendary supply doubled, Storm was added above the old top tier, and the leaderboard now locks. Every band, the odds, and the problem this update makes worse.",
+    body: [
+      "Yakkamon rewrote the Monster NFT airdrop on 12 August and published the monster names on the 14th. Between the two, the picture only became legible this week \u2014 and it's a bigger change than the first announcement suggested.",
+      "## The mapping that explains everything",
+      "One line in the team's comparison table is the key: <strong>\u201cEcho <em>is</em> the old Legendary A.\u201d</strong> Bloom was Legendary Egg B, Tide was Egg C, and <strong>Storm is entirely new</strong> \u2014 added <em>above</em> the existing ladder rather than inserted into it.",
+      "With that, every band becomes comparable: <strong>1,200 ranks improved, 3,800 held their slot with utility lifted, and zero moved down.</strong> That's why \u201cnothing has been nerfed\u201d survives scrutiny.",
+      "## The supply maths",
+      "Genesis Legendaries went from <strong>1,000 to 2,010</strong>. Rare Eggs fell from 4,000 to 3,000. Total Monster NFTs went 5,000 to 5,010 \u2014 the extra ten are the second monsters at ranks 1\u201310. Official counts: Storm 50, Echo 203, Bloom 257, Tide 1,500.",
+      "The striking part is composition: <strong>Legendaries went from 20% of all airdropped NFTs to 40%.</strong> And nobody was diluted \u2014 nothing has been minted yet, so doubling the supply of an asset nobody holds costs nobody anything.",
+      "## Your actual odds",
+      "Against roughly 68,700 registered trainers: a Genesis Legendary went from <strong>1.46% to 2.91%</strong> of the field \u2014 about one in 69, now about one in 34. Storm alone is 0.07%. Any Monster NFT is 7.28%.",
+      "## Storm changes the design, not just the ladder",
+      "Under the old ladder, ranks 1 through 100 all received an identical reward \u2014 so finishing first and finishing ninety-ninth were worth exactly the same. We flagged that as a design weakness after the first dev stream.",
+      "Adding a scarcer monster <em>above</em> the ladder fixes it without breaking the same-power-level design the other three rest on. Neat solution, and worth crediting.",
+      "## The leaderboard locks",
+      "New terminology, and the most consequential thing in the update. You have to <strong>earn your rank and hold it until the leaderboard locks</strong> \u2014 after which the airdrop is closed for good. No lock date announced, no second chance, no sale and no way to buy in.",
+      "Combined with the leaderboard being hidden as launch approaches, \u201ccoast now, sprint at the end\u201d fails twice over: you won't know where the line is, or whether you've crossed it.",
+      "## Where climbing actually pays",
+      "Most of the ladder is flat. Ranks 501\u20132,000 all receive Tide \u2014 1,500 ranks, one reward. Climbing from 1,900 to 600 gains you nothing. The value sits entirely at the edges: ranks 10, 50, 250, 500, 2,000, 5,000 and 100,000.",
+      "## The problem this makes worse",
+      "Extending the Legendary band to rank 2,000 makes wallet-splitting <em>more</em> attractive, because more split wallets land inside Legendary territory. A hundred wallets occupying the top ranks would collect 110 monsters, all Legendary, against 2 for a single concentrated wallet.",
+      "The fix is the team's own precedent: require verified Discord, verified X and a minimum of non-deposit points for airdrop eligibility, exactly as they already do for referrals.",
+      "## What's still unknown",
+      "The utilities land in September. The lock date hasn't been announced. And whether the two monsters at ranks 1\u201310 are separate creatures isn't stated \u2014 though the 5,010-across-5,000 total suggests they are."
+    ]
+  },
+  {
     slug: "genesis-legendaries",
     category: "event",
     title: "Meet Storm, Echo, Bloom and Tide",
