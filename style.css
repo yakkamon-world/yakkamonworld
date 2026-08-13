@@ -939,3 +939,28 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   .consent-bar p{font-size:.88rem}
   .consent-actions{width:100%; justify-content:space-between}
 }
+
+/* ---------- Sign-up CTA + referral disclosure ---------- */
+.signup-cta{
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap; min-width:0;
+  background:var(--ink); border:5px solid var(--yellow); border-radius:var(--radius);
+  box-shadow:7px 7px 0 var(--ink); padding:20px 24px; margin:0 0 10px;
+}
+.signup-cta-body{flex:1 1 300px; min-width:0}
+.signup-cta-body h3{
+  font-family:var(--font-display); font-size:1.35rem; letter-spacing:.04em;
+  color:var(--yellow); margin:0 0 8px;
+}
+.signup-cta-body p{margin:0; color:var(--cream); font-size:.95rem; line-height:1.55; font-weight:600}
+.signup-cta-body strong{color:var(--yellow)}
+.cta-note{
+  margin:0 0 22px; font-size:.85rem; line-height:1.5; color:#6b6b85; font-weight:600;
+}
+.cd-cta + .cta-note{
+  max-width:520px; margin:14px auto 0; text-align:center; color:#4a4a63;
+}
+@media(max-width:560px){
+  .signup-cta{padding:16px 18px; box-shadow:5px 5px 0 var(--ink)}
+  .signup-cta .pixel-btn{width:100%; text-align:center}
+}
+.ref-note{color:#6b6b85; font-weight:600}

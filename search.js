@@ -93,6 +93,7 @@ const SEARCH_INDEX = [
   { tag: "Videos", title: "Video: The Reward Ladder Changed", excerpt: "A 14-minute analysis of the 12 August change. Note: its supply conclusion was later corrected \u2014 see the written correction.", url: "videos.html" },
   { tag: "Videos", title: "All YakkamonWorld videos", excerpt: "Every episode in one place \u2014 short explainers on pre-registration, points, deposits and gameplay, each linked to the written version.", url: "videos.html" },
   { tag: "Videos", title: "Watch instead of reading", excerpt: "Prefer video? Start with episode 1 \u2014 the whole game in two minutes.", url: "videos.html" },
+  { tag: "Privacy", title: "Do you use referral links?", excerpt: "Yes, and we say so. Registering through our code gets you a Gold Box and earns us points \u2014 it costs you nothing and you can ignore it.", url: "privacy.html#referral-links" },
   { tag: "Privacy", title: "Privacy \u2014 what we collect", excerpt: "Analytics only with your consent, a contact form that emails us, no ads and nothing sold. Turn analytics off any time.", url: "privacy.html" },
   { tag: "Privacy", title: "Turn analytics off", excerpt: "Change your mind about analytics whenever you like \u2014 the control is on the privacy page.", url: "privacy.html#your-choices" },
   { tag: "Contact", title: "Contact us", excerpt: "Corrections, questions, tip submissions, scam reports and collaboration \u2014 pick a topic and it reaches us directly.", url: "contact.html" },
