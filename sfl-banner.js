@@ -5,11 +5,18 @@
 //
 // Placement:
 //   - If the page contains <div class="sfl-slot"></div>, it renders there.
-//     (index.html uses this to sit the banner above the pre-registration ticket.)
+//     (index.html uses this to sit it BELOW the ticket and countdown, so the
+//     Yakkamon sign-up stays the first call to action on the page.)
 //   - Otherwise it renders directly above the footer, so it never pushes an
 //     article headline down the page.
+//   - Pages in SKIP never show it: privacy.html because a page about our
+//     disclosure practices shouldn't carry an undisclosed promo, and
+//     pre-registration.html because a reader there is mid-task on the one
+//     thing we most want them to finish.
 //
 // To retire the banner: delete the two lines below and it disappears everywhere.
+
+const SFL_BANNER_SKIP = ["privacy.html", "pre-registration.html"];
 
 const SFL_BANNER = {
   href: "https://sunflower-land.com/play/?ref=Airerdem",
@@ -28,6 +35,9 @@ const SFL_BANNER = {
   const b = SFL_BANNER;
   if (!b || !b.href) return;
 
+  const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  if (SFL_BANNER_SKIP.indexOf(page) !== -1) return;
+
   const wrap = document.createElement("aside");
   wrap.className = "sfl-banner";
   wrap.innerHTML =
@@ -38,14 +48,31 @@ const SFL_BANNER = {
     "</a>";
 
   const slot = document.querySelector(".sfl-slot");
+  let placement = null;
+
   if (slot) {
     slot.appendChild(wrap);
-    return;
+    placement = "home_below_ticket";
+  } else {
+    const footer = document.querySelector("footer");
+    if (footer && footer.parentNode) {
+      wrap.classList.add("sfl-banner-tail");
+      footer.parentNode.insertBefore(wrap, footer);
+      placement = "above_footer";
+    }
   }
+  if (!placement) return;
 
-  const footer = document.querySelector("footer");
-  if (footer && footer.parentNode) {
-    wrap.classList.add("sfl-banner-tail");
-    footer.parentNode.insertBefore(wrap, footer);
+  // Tell us which placement actually earns clicks. Only fires once analytics
+  // consent has been granted — gtag simply won't exist otherwise.
+  const link = wrap.querySelector(".sfl-link");
+  if (link) {
+    link.addEventListener("click", function () {
+      if (typeof window.gtag !== "function") return;
+      window.gtag("event", "sfl_banner_click", {
+        page_path: location.pathname,
+        placement: placement,
+      });
+    });
   }
 })();

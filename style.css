@@ -679,8 +679,8 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .sfl-banner{ margin:34px 0 0; min-width:0 }
 /* reserve the strip's height before the script runs, so nothing jumps */
 .sfl-slot:empty{ display:block; aspect-ratio:1600/192; margin:34px 0 0 }
-/* banner sits just above the ticket — small gap, reads as one unit */
-.sfl-slot + .prereg-ticket{ margin-top:14px }
+/* home: banner sits under the ticket/countdown block */
+.prereg-ticket + .sfl-slot .sfl-banner{ margin-top:14px }
 /* above the footer on inner pages */
 .sfl-banner-tail{ max-width:1080px; margin:44px auto 40px; padding:0 24px; box-sizing:border-box }
 .sfl-link{
