@@ -99,12 +99,12 @@ const YAKKAMON_POSTS = [
   {
     slug: "dev-stream-graded",
     category: "community",
-    title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream",
+    title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream (6 August)",
     date: "Aug 11, 2026",
     excerpt: "Nine decisions, graded A to C. Three A's, one C \u2014 and a wallet-splitting hole in the deposit system that costs 10% of your points and multiplies your reward slots by ten.",
     body: [
       "We've already published the factual recap of Thought Farm's first Yakkamon dev stream. This is the other half: what we think of it. Nine decisions, graded. Some of it is critical \u2014 that's the point.",
-      "The team asked people not to screen-record the stream because things will change. We've respected that, and everything below is where the project stood on 7 August rather than a promise.",
+      "The team asked people not to screen-record the stream because things will change. We've respected that, and everything below is where the project stood on 6 August rather than a promise.",
       "## What they got right",
       "<strong>Specialization comes from your monsters</strong>, not from separate boost items. Best decision of the stream, and the one that makes everything else cohere \u2014 it means the creatures <em>are</em> the game, so hunting, breeding and trading reinforce each other instead of competing.",
       "<strong>Abandoning the compromised X account fast.</strong> Every hour it stayed compromised it was a weapon pointed at their own community, with their verification badge on it. Wiring the reconnect into the dashboard as a points reward was smart \u2014 it makes the migration actually happen.",
@@ -148,11 +148,11 @@ const YAKKAMON_POSTS = [
   {
     slug: "dev-stream-aug-7-recap",
     category: "community",
-    title: "First Yakkamon Dev Stream: Everything They Announced",
+    title: "First Yakkamon Dev Stream (6 August): Everything They Announced",
     date: "Aug 7, 2026",
     excerpt: "The deposit system has been rebuilt, there's a new official X account worth 10 bonus points, and PvP won't be in early access. Full recap.",
     body: [
-      "Thought Farm ran their first Yakkamon-only Discord stream on August 7th. A lot changed, and some of it reverses advice that was correct last week \u2014 including ours. Here's everything that matters.",
+      "Thought Farm ran their first Yakkamon-only Discord stream on August 6th. A lot changed, and some of it reverses advice that was correct last week \u2014 including ours. Here's everything that matters.",
       "## 1. The $FLOWER deposit system has been rebuilt",
       "There are now <strong>two separate bonuses</strong>, and both reward depositing <em>early</em> and <em>in larger single transfers</em>.",
       "<strong>A weekly multiplier.</strong> <strong>3\u00d7</strong> through the opening week, then falling <strong>0.2\u00d7 every week</strong> until it rests at 1\u00d7. You keep the $FLOWER; the multiplier applies to points only.",
@@ -240,7 +240,7 @@ const YAKKAMON_POSTS = [
     date: "Aug 7, 2026",
     excerpt: "Updated after the dev stream \u2014 the weekly multiplier decays from 3x and the size bonus is per deposit, so splitting now costs you.",
     body: [
-      "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on 7 August described a different structure, and the advice reverses with it.",
+      "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on 6 August described a different structure, and the advice reverses with it.",
       "## Two bonuses, both rewarding early",
       "The <strong>weekly multiplier</strong> pays <strong>3\u00d7</strong> through the opening week, then falls 0.2\u00d7 every week until it settles at 1\u00d7. The same 5,000 $FLOWER is worth 17,000 points in the opening week and 7,000 once it bottoms out. It applies to points, not your balance \u2014 you keep the $FLOWER and can withdraw it once you have game access.",
       "The <strong>size bonus</strong> is rated <strong>per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount must land in one transfer \u2014 ten deposits of 500 earn ten 20% bonuses instead of one 40% bonus.",
@@ -281,7 +281,7 @@ const YAKKAMON_POSTS = [
       "## The first tip: how to time your $FLOWER deposits",
       "The leaderboard is really two competitions running at once. Your <strong>final ranking</strong> is your all-time points total and pays out once, at early access in Q4 2026. The <strong>weekly ranking</strong> resets every week and pays resource boxes, food boxes, raffle tickets and loot boxes each time.",
       "Deposits carry a <strong>weekly multiplier</strong> \u2014 3\u00d7 in the opening week, falling 0.2\u00d7 weekly to a floor of 1\u00d7 \u2014 plus a <strong>size bonus rated per deposit</strong> that doubles at every step up to +80%. Both reward depositing early, in single larger transfers.",
-      "Note: this tip originally said the opposite \u2014 split weekly, because the bonus appeared to follow your cumulative total. The dev stream on 7 August described a different structure, and the tip was rewritten to match.",
+      "Note: this tip originally said the opposite \u2014 split weekly, because the bonus appeared to follow your cumulative total. The dev stream on 6 August described a different structure, and the tip was rewritten to match.",
       "## More to come",
       "Tips will grow as the leaderboard runs and patterns become clear. The full write-up, including the case study and the numbers at every stack size, is on the Tips page."
     ]

@@ -37,8 +37,8 @@ const YAKKAMON_VIDEOS = [
     ep: "09",
     runtime: "22:11",
     block: "analysis",
-    title: "I Graded Yakkamon's First Dev Stream \u2014 One Decision Gets a C",
-    blurb: "Nine decisions from the first dev stream, graded A to C \u2014 what the team got right, and the one call that makes the top of the leaderboard purchased rather than contested.",
+    title: "I Graded Yakkamon's First Dev Stream (6 Aug) \u2014 One Decision Gets a C",
+    blurb: "Nine decisions from the 6 August dev stream, graded A to C \u2014 what the team got right, and the one call that makes the top of the leaderboard purchased rather than contested.",
     related: { href: "article-dev-stream-graded.html", label: "Read the written version" },
   },
 
