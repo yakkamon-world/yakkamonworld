@@ -100,6 +100,8 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
   { tag: "Gameplay", title: "Arena Battles", excerpt: "PvP arena combat \u2014 confirmed as post-launch, not part of early access.", url: "gameplay.html?system=arena-battles" },
 
+  { tag: "Videos", title: "Video: Legendary Supply Just Doubled \u2014 And The Rule Nobody's Reading", excerpt: "EP 11, 7:33 \u2014 the four Genesis Legendaries named, the ladder change explained band by band, and the odds recalculated.", url: "videos.html" },
+  { tag: "Videos", title: "Is there a video on the airdrop change?", excerpt: "Yes \u2014 EP 11 covers the named Legendaries, the corrected supply maths and the leaderboard lock rule.", url: "videos.html" },
   { tag: "Videos", title: "Video: The Reward Ladder Changed", excerpt: "A 14-minute analysis of the 12 August change. Note: its supply conclusion was later corrected \u2014 see the written correction.", url: "videos.html" },
   { tag: "Videos", title: "All YakkamonWorld videos", excerpt: "Every episode in one place \u2014 short explainers on pre-registration, points, deposits and gameplay, each linked to the written version.", url: "videos.html" },
   { tag: "Videos", title: "Watch instead of reading", excerpt: "Prefer video? Start with episode 1 \u2014 the whole game in two minutes.", url: "videos.html" },

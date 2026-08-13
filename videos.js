@@ -24,12 +24,21 @@ const YAKKAMON_VIDEO_BLOCKS = [
 const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
+    id: "KBhqtyYx-MM",
+    ep: "11",
+    runtime: "7:33",
+    block: "analysis",
+    title: "Yakkamon Airdrop: Legendary Supply Just Doubled \u2014 And The Rule Nobody's Reading",
+    blurb: "The four Genesis Legendaries named, the ladder change explained band by band, and the odds recalculated against 77,763 trainers. Includes the correction to EP 10 below, and the rule that decides whether you keep the rank you're sitting on.",
+    related: { href: "article-airdrop-breakdown.html", label: "Read the full airdrop breakdown" },
+  },
+  {
     id: "ZjDPcqiDtBU",
     ep: "10",
     runtime: "14:28",
     block: "analysis",
     title: "The Yakkamon Reward Ladder Changed \u2014 I Was Wrong About How Bad It Was",
-    blurb: "A full breakdown of the 12 August ladder change. \u26a0 Its supply conclusion was later corrected \u2014 the monster names published on 14 August show Legendary supply doubled rather than halved, and no band lost out.",
+    blurb: "A full breakdown of the 12 August ladder change. \u26a0 Its supply conclusion was later corrected \u2014 the monster names published on 14 August show Legendary supply doubled rather than halved, and no band lost out. EP 11 above has the corrected version.",
     related: { href: "article-reward-ladder-analysis.html", label: "Read the written analysis" },
   },
   {
