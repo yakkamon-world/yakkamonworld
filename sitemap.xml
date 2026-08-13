@@ -136,6 +136,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakkamonworld.com/article-dev-stream-two-recap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakkamonworld.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -6,6 +6,31 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "dev-stream-two-recap",
+    category: "community",
+    title: "Second Dev Stream: The Airdrop U-Turn Explained, and a Free Mint That May Move to September",
+    date: "Aug 14, 2026",
+    excerpt: "Adam owns the airdrop announcement, the 501\u20132,000 band is confirmed Legendary, 2.5M $FLOWER is already deposited, and the free mint was described as likely landing in mid-September.",
+    body: [
+      "Thought Farm's second Yakkamon stream ran about an hour with Adam, Craig, Spencer and Bryn. It moved two dates, put a number on the deposit pool, and explained for the first time what your monsters will actually do.",
+      "## The airdrop change, in the team's words",
+      "Adam took the blame for the announcement rather than the change: sign-ups exploded and the top of the board moved fast, so they extended a solid reward to the <strong>top 2,000</strong> instead of 1,000 and added a new Legendary <em>above</em> the old top tier. Nobody received a worse monster.",
+      "Crucially, he confirmed out loud that the rare tier running to 2,000 supply <strong>is a Legendary</strong> \u2014 the exact reading our correction settled on.",
+      "## Legendary vs Rare is a capability gap",
+      "New definitions: <strong>Legendary</strong> means pre-minted, fixed, scarce supply. <strong>Rare</strong> means time-limited availability, with supply set by how much players hunt. And Legendaries will carry <strong>traits no other monster can have</strong>. Full utilities land in September.",
+      "## The free mint may move to mid-September",
+      "Answering a leaderboard question, Adam laid out the sequence: free mint <strong>likely mid-September</strong>, reveal mid-October, leaderboard finalised after that, then rewards and early access. The published date is still October 1st \u2014 but if it moves, your verification deadline moves up two weeks with it. Supply may also land between 10,000 and 15,000, with a whitelist deliberately larger than supply.",
+      "## 2.5 million $FLOWER is already deposited",
+      "Craig's number, estimated at a fifth to a quarter of Sunflower Land's circulating $FLOWER. The paid bracket is being contested harder than most assume, and the points cost of a given rank keeps climbing.",
+      "## OG status has an exact price",
+      "50,000 points in a single week \u2014 about <strong>15,000 $FLOWER</strong> at this week's 3\u00d7 multiplier, rising toward ~35,700 once the multiplier bottoms out. Permanent once claimed. The team deliberately attached only a title, to avoid setting expectations of a big payout.",
+      "## What your monsters do",
+      "Bryn's section was the best explanation yet: monsters are tradable workers with randomly rolled traits that define your build, real genetics and base stats, breeding lines with degradation but no hard cap, and planned evolutions. Current thinking \u2014 not a promise \u2014 is Legendaries as NFTs, Rares as SFTs, commons as plain game assets.",
+      "## Also covered",
+      "A three-day Discord restriction after the bot bans (no images, broken invites), AI-generated game audio with community submissions on the table, the vertical slice being built around cloud-parting expansion and lure-based hunting, an early idea for activity-gated export limits, and confirmation that the client will be open sourced."
+    ]
+  },
+  {
     slug: "airdrop-breakdown",
     category: "community",
     title: "What Actually Changed in the Airdrop \u2014 A Full Breakdown",
