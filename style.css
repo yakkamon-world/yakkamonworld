@@ -957,7 +957,8 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   margin:0 0 22px; font-size:.85rem; line-height:1.5; color:#6b6b85; font-weight:600;
 }
 .cd-cta + .cta-note{
-  max-width:520px; margin:14px auto 0; text-align:center; color:#4a4a63;
+  max-width:780px; margin:14px auto 0; text-align:center; color:#4a4a63;
+  text-wrap:balance;
 }
 @media(max-width:560px){
   .signup-cta{padding:16px 18px; box-shadow:5px 5px 0 var(--ink)}
