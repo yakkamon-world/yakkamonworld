@@ -1,4 +1,4 @@
-// Renders the latest 3 news posts on the Home page.
+// Renders the latest 5 news posts on the Home page.
 // Pulls from the same YAKKAMON_POSTS data used by news.html, so this
 // section always stays in sync automatically — no separate copy to
 // maintain. Posts are expected newest-first in posts.js.
@@ -16,7 +16,8 @@
     const grid = document.getElementById("home-news-grid");
     if (!grid || typeof YAKKAMON_POSTS === "undefined") return;
 
-    const latest = YAKKAMON_POSTS.slice(0, 3);
+    const HOME_NEWS_COUNT = 5;
+    const latest = YAKKAMON_POSTS.slice(0, HOME_NEWS_COUNT);
     if (latest.length === 0) {
       grid.innerHTML = '<div class="empty-state">No news posted yet.</div>';
       return;
