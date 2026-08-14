@@ -6,6 +6,26 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "gameplay-guide-live",
+    category: "community",
+    title: "What We Now Know About How Yakkamon Actually Plays",
+    date: "Aug 14, 2026",
+    excerpt: "Type locking, stamina, storage bins that overflow and monsters with needs \u2014 the gathering loop has far more shape than the docs let on. Our Gameplay section is rebuilt around it, seven systems to fourteen.",
+    body: [
+      "Almost everything written about Yakkamon so far \u2014 ours included \u2014 has been about pre-registration: points, ranks, the airdrop, the mint. Meanwhile a steady drip of official screenshots and dev messages has been filling in what you'll actually be <em>doing</em> once the doors open.",
+      "## Four mechanics that change how you'd play",
+      "<strong>Type locking.</strong> Every resource is gated to a monster type \u2014 a Grass type gathers Wood, and a Fire type simply can't, with the game refusing outright. Your roster caps what you're able to produce at all, so collecting more species is how you unlock more of the map's materials.",
+      "<strong>Stamina.</strong> Monsters work a timed cycle, burn stamina, drop a haul, and repeat automatically \u2014 then sleep, recover and restart by themselves. Output is bounded by stamina rather than by how long you leave the game open.",
+      "<strong>Storage bins.</strong> Resources stack in a bin that fills offline but caps at 20 early and 120 later. Every hour a bin sits at MAX is production you never banked, which quietly makes check-in frequency a real variable.",
+      "<strong>Upkeep.</strong> Monsters get hungry, hurt, tired or ask for a specific item, and a monster in a bad state stops producing. Upkeep is part of the economy, not flavour.",
+      "## Plus the dev stream detail",
+      "Around <strong>50\u201360 species at launch</strong> with real genetics and base stats; randomly rolled traits that define your build, roughly 80\u201390% predictable; breeding with line degradation but no hard cap, and evolutions planned. Day and night run on a sped-up in-game clock rather than real time, so no timezone gets an advantage. Weather is a separate system. PvP is still not in early access.",
+      "## What we've deliberately not done",
+      "A lot of circulating numbers come from <strong>UI mock-ups rather than tuned builds</strong> \u2014 the 999,999 currency figures and the level 99 cap are almost certainly filler. Every figure in our quick-reference table is labelled with where it came from, and we've kept an honest list of what isn't confirmed: stat ranges, rarity tiers, work-cycle durations, the full type chart, the levelling curve, the trait list and the battle rules. That list is why nobody can build a trustworthy farming calculator yet.",
+      "The rebuilt <a href=\"gameplay.html\">Gameplay section</a> now runs to fourteen systems, each with a plain-English analogy, and the new <a href=\"gameplay-guide.html\">full field guide</a> reads the whole thing top to bottom on any screen size."
+    ]
+  },
+  {
     slug: "referral-rule-change-flower-deposit",
     category: "event",
     title: "Referrals Now Cost Your Friend Money \u2014 And Pay You 75 Points",
