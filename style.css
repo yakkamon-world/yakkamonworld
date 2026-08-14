@@ -20,7 +20,10 @@ body{
 a{color:inherit}
 img,svg{max-width:100%;display:block}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px;min-width:0}
-html,body{max-width:100%;overflow-x:hidden}
+/* overflow-x:clip, not hidden: `hidden` turns <body> into a scroll container,
+   which silently broke position:sticky on the tab strip. `clip` gives the same
+   runaway-width protection without creating a scrollport. */
+html,body{max-width:100%;overflow-x:clip}
 a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
 h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em; line-height:1.15}
 
@@ -34,35 +37,70 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
   transform:rotate(-8deg);
 }
 
-/* ---------- Fixed top tabs ---------- */
-.topbar{position:sticky;top:0;z-index:30;background:var(--ink);border-bottom:5px solid var(--red)}
-.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:8px;max-width:1080px;margin:0 auto;padding:0 16px;flex-wrap:wrap;min-width:0}
-.brand{
-  display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:1.5rem;
-  color:var(--yellow); text-decoration:none; padding:12px 8px; line-height:1; white-space:nowrap;
+/* ---------- Site header ----------
+   Two stacked --ink blocks with no seam between them, so they read as one
+   dark header. Only .topbar is sticky: the wordmark scrolls away and the
+   tab strip follows you down, which keeps the sticky area small on phones. */
+.masthead{background:var(--ink); text-align:center}
+.mh-inner{max-width:1080px; margin:0 auto; padding:22px 16px 16px; min-width:0}
+
+/* The wordmark is an <h1> on the home page and an <a> everywhere else, so
+   both are styled here. clamp() is the whole mobile story: at 320px it
+   resolves to ~1.7rem, which fits YAKKAMONWORLD on one line with room to
+   spare. overflow-wrap is a backstop that should never fire. */
+.mh-wordmark{
+  display:block; margin:0; font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.7rem,7.4vw,3.9rem); line-height:1; letter-spacing:.02em;
+  color:var(--yellow); text-decoration:none;
+  max-width:100%; min-width:0; overflow-wrap:break-word;
   text-shadow:
-    -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 2px 2px 0 var(--ink),
-    -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink),
-    3px 3px 0 var(--red);
+    -3px -3px 0 var(--ink), 3px -3px 0 var(--ink), -3px 3px 0 var(--ink), 3px 3px 0 var(--ink),
+    -3px 0 0 var(--ink), 3px 0 0 var(--ink), 0 -3px 0 var(--ink), 0 3px 0 var(--ink),
+    6px 6px 0 var(--red);
 }
-.brand .portal{color:var(--sky)}
-.brand .portal-full{display:inline}
-.brand .portal-short{display:none}
-.brand-mark{width:26px;height:26px;flex-shrink:0}
-.tabs{display:flex; gap:4px; padding:8px 0; flex-wrap:wrap; justify-content:flex-end; min-width:0}
+.mh-wordmark .world{color:var(--sky)}
+a.mh-wordmark:hover .world{color:var(--sky)}
+a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px; border-radius:8px}
+
+.mh-tagline{
+  margin:14px 0 0; font-family:var(--font-display); font-weight:400;
+  font-size:clamp(.82rem,2.6vw,1rem); letter-spacing:.09em; line-height:1.35;
+  color:rgba(255,255,255,.72);
+}
+.mh-social{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:16px; min-width:0}
+
+/* Ghost treatment: the shared .follow-badge is ink-on-ink here, which would
+   be invisible against the masthead. */
+.mh-social .follow-badge{background:transparent; border-color:var(--yellow); color:#fff}
+.mh-social .follow-badge svg{color:var(--yellow)}
+.mh-social .follow-badge:hover{background:var(--sky); border-color:var(--sky); color:#fff}
+.mh-social .follow-badge:hover svg{color:#fff}
+
+/* ---------- Sticky tab strip ---------- */
+.topbar{position:sticky; top:0; z-index:30; background:var(--ink); border-bottom:5px solid var(--red)}
+.topbar-inner{display:flex; align-items:center; justify-content:center; gap:8px; max-width:1080px; margin:0 auto; padding:0 16px; flex-wrap:wrap; min-width:0}
+.tabs{display:flex; gap:4px; padding:8px 0; flex-wrap:wrap; justify-content:center; min-width:0}
 .tab{font-family:var(--font-display);font-size:1.05rem;letter-spacing:.02em;color:#fff;text-decoration:none;padding:9px 16px;border:3px solid transparent;border-radius:999px;transition:background .1s ease, transform .1s ease; white-space:nowrap}
 .tab:hover{background:#2c2c48; transform:translateY(-2px)}
 .tab.active{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
 .tab .label-short{display:none}
 @media(max-width:1140px) and (min-width:761px){
   .tab{padding:9px 10px; font-size:.98rem}
-  .brand{font-size:1.15rem}
 }
 @media(max-width:760px){
+  .topbar{position:static}
+  .mh-inner{padding:16px 12px 12px}
+  /* Lighter outline: the 3px/6px shadow is heavy under ~2rem and paints
+     outside the glyph box, which is what would poke past the viewport. */
+  .mh-wordmark{
+    text-shadow:
+      -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 2px 2px 0 var(--ink),
+      -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink),
+      4px 4px 0 var(--red);
+  }
+  .mh-tagline{margin-top:10px; letter-spacing:.05em}
+  .mh-social{gap:12px; margin-top:14px}
   .topbar-inner{flex-wrap:wrap; padding:0 12px}
-  .brand{font-size:1.1rem; padding:10px 4px; white-space:normal}
-  .brand .portal-full{display:none}
-  .brand .portal-short{display:inline}
   .tabs{
     width:100%; padding:6px 0 10px; gap:6px;
     display:grid; grid-template-columns:repeat(3,1fr);   /* 9 tabs = 3 even rows */
@@ -91,13 +129,7 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
 .pixel-btn.red{background:var(--red); color:#fff}
 .pixel-btn.sky{background:var(--sky); color:#fff}
 
-/* ---------- Hero (home page) ---------- */
-.hero{padding:10px 0 6px; text-align:center; background:var(--panel); background-image:radial-gradient(rgba(26,26,46,.08) 1.8px,transparent 2px); background-size:14px 14px; border-bottom:5px solid var(--ink); margin-bottom:0}
-.hero-eyebrow{display:inline-block; font-family:var(--font-display); font-size:1rem; letter-spacing:.03em; background:var(--ink); color:var(--yellow); padding:8px 16px; margin-bottom:22px; border-radius:999px}
-.hero h1{font-size:clamp(1.6rem,4vw,2.5rem); line-height:1.25; margin:0 0 18px; text-shadow:3px 3px 0 var(--panel)}
-.hero h1 .accent{color:var(--red)}
-.hero .sub{font-size:1.1rem; max-width:44ch; margin:0 auto 26px}
-.hero-art{margin:0 auto 26px; width:180px}
+/* ---------- Shared action row (community.html) ---------- */
 .hero-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
 
 /* ---------- Tile grid (home destination tiles) ---------- */
@@ -371,21 +403,6 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .about-basic span{font-family:var(--font-display); font-size:.95rem; letter-spacing:.02em; display:block}
 .about-box a{color:var(--sky-deep); font-weight:800}
 
-/* ---------- Hero logo lockup ---------- */
-.hero-logo{display:flex; flex-direction:column; align-items:center; gap:0; margin-bottom:0}
-.hero-logo svg{width:150px; height:150px}
-/* h1.hero-wordmark — the selector must out-specify `.hero h1` below, which
-   would otherwise shrink the wordmark and replace its red offset shadow. */
-.hero h1.hero-wordmark, .hero-wordmark{
-  font-family:var(--font-display); font-size:clamp(1.7rem,8vw,4rem); margin:0; line-height:1; max-width:100%; overflow-wrap:break-word; min-width:0;
-  letter-spacing:.02em; text-align:center; color:var(--yellow);
-  text-shadow:
-    -3px -3px 0 var(--ink), 3px -3px 0 var(--ink), -3px 3px 0 var(--ink), 3px 3px 0 var(--ink),
-    -3px 0 0 var(--ink), 3px 0 0 var(--ink), 0 -3px 0 var(--ink), 0 3px 0 var(--ink),
-    6px 6px 0 var(--red);
-}
-.hero-wordmark .world{color:var(--sky)}
-
 /* ---------- Footer official links row ---------- */
 .footer-links{margin-top:10px; display:flex; flex-wrap:wrap; gap:16px; font-size:.85rem; font-weight:800}
 .footer-links a{
@@ -417,7 +434,7 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 
 /* ---------- Follow badge (hero, home page) ---------- */
 .follow-badge{
-  display:inline-flex; align-items:center; gap:8px; margin-top:14px;
+  display:inline-flex; align-items:center; gap:8px;
   background:var(--ink); color:#fff; font-family:var(--font-body); font-weight:800; font-size:.95rem;
   padding:9px 18px; border-radius:999px; text-decoration:none; border:3px solid var(--ink);
   transition:transform .1s ease, background .1s ease;
