@@ -31,7 +31,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "What does OG mean?", excerpt: "Slang for \u201cOriginal Gangster\u201d \u2014 in everyday use it simply means the original, someone who was there first. A compliment, not a crime reference.", url: "faq.html#egg-tiers" },
   { tag: "FAQ", title: "How do I claim OG Status?", excerpt: "Hit 50,000 points in one week, any week before early access starts. It resets weekly, so a missed week isn\u2019t final.", url: "faq.html#egg-tiers" },
   { tag: "FAQ", title: "Are deposit points one-time, or ongoing?", excerpt: "One-time, per deposit \u2014 scored once in the week it confirms. The week and the transfer size are locked in at that moment.", url: "faq.html#flower" },
-  { tag: "FAQ", title: "When can I withdraw my deposited $FLOWER?", excerpt: "Once you gain access to the game \u2014 early access is Q4 2026, staged by wave, with percentage limits for the first few weeks.", url: "faq.html#flower" },
+  { tag: "FAQ", title: "When can I withdraw my deposited $FLOWER?", excerpt: "Once you gain access to the game \u2014 early access is November or December 2026, staged by wave, with percentage limits for the first few weeks.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Where do I get $FLOWER?", excerpt: "Earn it free by playing Sunflower Land, or buy it on Base or Ronin \u2014 same token, same contract address, no bridging either way.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Should I buy $FLOWER on Base or Ronin?", excerpt: "Either \u2014 it's the same ERC20 token at one identical contract address on both chains, so use whichever holds your funds.", url: "faq.html#flower" },
   { tag: "News", title: "Where to get $FLOWER \u2014 and how to avoid a fake one", excerpt: "Base or Ronin, no bridging needed. The official docs now publish the contract address; verify every swap against it.", url: "article-flower-deposit-guideline.html" },
@@ -175,7 +175,7 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "Do I need to verify before mint day?", excerpt: "Yes \u2014 the mint is whitelist-gated. Only verified pre-registered accounts make the list, one mint per trainer, bots filtered out beforehand.", url: "faq.html#free-mint" },
   { tag: "FAQ", title: "Do I mint blind?", excerpt: "Yes \u2014 all 10,000 stay sealed until Early Access launches, when every one is revealed at the same moment.", url: "faq.html#free-mint" },
   { tag: "FAQ", title: "5 Legendary monsters in the mint pool", excerpt: "Five of the 10,000 free mints are Legendary \u2014 the same top-of-the-power-curve creatures as the Trainer Point airdrop.", url: "faq.html#free-mint" },
-  { tag: "FAQ", title: "Do I need a good rank to free mint?", excerpt: "No. The mint is open to every verified pre-registered trainer whatever your rank. It's won on speed, not points \u2014 but you must be verified to make the whitelist.", url: "faq.html#free-mint" },
+  { tag: "FAQ", title: "Do I need a good rank to free mint?", excerpt: "No. The mint is open to every verified pre-registered trainer whatever your rank. It's decided by the verified whitelist, not by points and not by speed \u2014 get verified before mid-September.", url: "faq.html#free-mint" },
   { tag: "FAQ", title: "Why mint if I'm already pre-registered?", excerpt: "Minting earns pre-registration points, which feed your trainer number, your Genesis airdrop, and your access wave.", url: "faq.html#free-mint" },
   { tag: "FAQ", title: "How many free mints are there?", excerpt: "Only 10,000, first in first minted. When the last one goes the mint closes for good \u2014 no restock, no second wave.", url: "faq.html#free-mint" },
   { tag: "FAQ", title: "What is $FLOWER?", excerpt: "Not a new token \u2014 Yakkamon reuses the same $FLOWER already used across the studio's other games.", url: "faq.html#flower" },
@@ -189,16 +189,16 @@ const SEARCH_INDEX = [
   { tag: "FAQ", title: "Rank vs tier vs wave", excerpt: "Your trainer number is your leaderboard rank, a tier is a points milestone, and a wave is the batch you enter the game with.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "What does my rank get me?", excerpt: "The full ladder from rank 1 to 100,001+ \u2014 Storm, Echo, Bloom, Tide, Rare Egg, the waves, and the cutoff at 100,000.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "How do I earn points?", excerpt: "Daily egg nurture and streaks, Discord and X quests, referrals, the October free mint, and $FLOWER deposits.", url: "faq.html#ranks-tiers" },
-  { tag: "FAQ", title: "When do I find out my rank?", excerpt: "Trainer numbers and tiers are revealed shortly before early access opens in Q4 2026.", url: "faq.html#ranks-tiers" },
+  { tag: "FAQ", title: "When do I find out my rank?", excerpt: "Trainer numbers and tiers are revealed shortly before early access opens in November or December 2026.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Is the Genesis Monster tradable?", excerpt: "Yes \u2014 fully tradable, arrives with in-game XP, revealed at launch, and never minted again. Supply fixed at 5,000.", url: "faq.html#ranks-tiers" },
-  { tag: "FAQ", title: "When does the Genesis Drop leaderboard end?", excerpt: "Trainer numbers and tiers are revealed shortly before early access in Q4 2026; no exact cut-off has been published.", url: "faq.html#mint-vs-airdrop" },
+  { tag: "FAQ", title: "When does the Genesis Drop leaderboard end?", excerpt: "Trainer numbers and tiers are revealed shortly before early access in November or December 2026; the leaderboard finalises one week before launch.", url: "faq.html#mint-vs-airdrop" },
   { tag: "FAQ", title: "Is there more than one leaderboard?", excerpt: "Two \u2014 an all-time final ranking that pays once, and a weekly ranking that resets and pays boxes every week.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "What time of day should I nurture?", excerpt: "After 12:00 UTC \u2014 that is the cutoff where the 36-hour grace period actually covers a whole missed day.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "Can I reach a Legendary rank without depositing?", excerpt: "The top 100 is a paid bracket, but referrals are uncapped \u2014 about 165 match a 5,000 $FLOWER deposit.", url: "faq.html#ranks-tiers" },
   { tag: "FAQ", title: "When do $FLOWER deposits open?", excerpt: "Sunday 9 August at 8:00 PM ET \u2014 the docs say 10 August because they quote the UTC date.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Should I deposit $FLOWER all at once or spread it out?", excerpt: "All at once and early \u2014 5,000 sent once in the opening week earns 17,000 points; as ten later deposits it earns 6,000.", url: "faq.html#flower" },
   { tag: "FAQ", title: "Is there a video version of the guides?", excerpt: "Short explainers on the YakkamonWorld YouTube channel.", url: "faq.html#general" },
-  { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is Q4 2026, rolled out in waves — not a single day for everyone.", url: "faq.html#launch" }
+  { tag: "FAQ", title: "When does the game actually launch?", excerpt: "Early access is November or December 2026, rolled out in waves — Wave 1 on launch day, then a week apart.", url: "faq.html#launch" }
 ];
 
 (function () {

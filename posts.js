@@ -73,7 +73,7 @@ const YAKKAMON_POSTS = [
       "Under the old ladder, ranks 1 through 100 all received an identical reward \u2014 so finishing first and finishing ninety-ninth were worth exactly the same. We flagged that as a design weakness after the first dev stream.",
       "Adding a scarcer monster <em>above</em> the ladder fixes it without breaking the same-power-level design the other three rest on. Neat solution, and worth crediting.",
       "## The leaderboard locks",
-      "New terminology, and the most consequential thing in the update. You have to <strong>earn your rank and hold it until the leaderboard locks</strong> \u2014 after which the airdrop is closed for good. No lock date announced, no second chance, no sale and no way to buy in.",
+      "New terminology, and the most consequential thing in the update. You have to <strong>earn your rank and hold it until the leaderboard locks</strong> \u2014 after which the airdrop is closed for good. The lock lands one week before early access launch, with rewards three days later \u2014 exact date still to be announced. No second chance, no sale and no way to buy in.",
       "Combined with the leaderboard being hidden as launch approaches, \u201ccoast now, sprint at the end\u201d fails twice over: you won't know where the line is, or whether you've crossed it.",
       "## Where climbing actually pays",
       "Most of the ladder is flat. Ranks 501\u20132,000 all receive Tide \u2014 1,500 ranks, one reward. Climbing from 1,900 to 600 gains you nothing. The value sits entirely at the edges: ranks 10, 50, 250, 500, 2,000, 5,000 and 100,000.",
@@ -81,7 +81,7 @@ const YAKKAMON_POSTS = [
       "Extending the Legendary band to rank 2,000 makes wallet-splitting <em>more</em> attractive, because more split wallets land inside Legendary territory. A hundred wallets occupying the top ranks would collect 110 monsters, all Legendary, against 2 for a single concentrated wallet.",
       "The fix is the team's own precedent: require verified Discord, verified X and a minimum of non-deposit points for airdrop eligibility, exactly as they already do for referrals.",
       "## What's still unknown",
-      "The utilities land in September. The lock date hasn't been announced. And whether the two monsters at ranks 1\u201310 are separate creatures isn't stated \u2014 though the 5,010-across-5,000 total suggests they are."
+      "The utilities land in September. The lock now has a position \u2014 one week before early access launch \u2014 though not yet an exact date. And whether the two monsters at ranks 1\u201310 are separate creatures isn't stated \u2014 though the 5,010-across-5,000 total suggests they are."
     ]
   },
   {
@@ -327,7 +327,7 @@ const YAKKAMON_POSTS = [
       "## Why a separate section",
       "The rest of the site explains what the rules <em>are</em>. The FAQ decodes terminology, the pre-registration guide walks through signing up, and the leaderboard guideline lists every points value. None of that tells you what to <em>do</em> with the rules. Tips is for that, and keeping it separate means the reference pages stay neutral.",
       "## The first tip: how to time your $FLOWER deposits",
-      "The leaderboard is really two competitions running at once. Your <strong>final ranking</strong> is your all-time points total and pays out once, at early access in Q4 2026. The <strong>weekly ranking</strong> resets every week and pays resource boxes, food boxes, raffle tickets and loot boxes each time.",
+      "The leaderboard is really two competitions running at once. Your <strong>final ranking</strong> is your all-time points total and pays out once, at early access in November or December 2026. The <strong>weekly ranking</strong> resets every week and pays resource boxes, food boxes, raffle tickets and loot boxes each time.",
       "Deposits carry a <strong>weekly multiplier</strong> \u2014 3\u00d7 in the opening week, falling 0.2\u00d7 weekly to a floor of 1\u00d7 \u2014 plus a <strong>size bonus rated per deposit</strong> that doubles at every step up to +80%. Both reward depositing early, in single larger transfers.",
       "Note: this tip originally said the opposite \u2014 split weekly, because the bonus appeared to follow your cumulative total. The dev stream on 6 August described a different structure, and the tip was rewritten to match.",
       "## More to come",

@@ -96,7 +96,7 @@ const YAKKAMON_VIDEOS = [
     runtime: "2:29",
     block: "start",
     title: "How To Pre-Register For Yakkamon (And The Step Most People Skip)",
-    blurb: "Signing up takes a minute and needs only an email. But linking X and Discord is what verifies you \u2014 and verification decides whether you can mint on October 1st.",
+    blurb: "Signing up takes a minute and needs only an email. But linking X and Discord is what verifies you \u2014 and verification decides whether you can mint in mid-September.",
     related: { href: "pre-registration.html", label: "The written walkthrough" },
   },
   {
@@ -105,7 +105,7 @@ const YAKKAMON_VIDEOS = [
     runtime: "1:57",
     block: "start",
     title: "What Is Yakkamon? The 2-Minute Explainer",
-    blurb: "A creature collector that's also an idle farming game. What it is, who's building it, and why pre-registration matters before early access opens in Q4 2026.",
+    blurb: "A creature collector that's also an idle farming game. What it is, who's building it, and why pre-registration matters before early access opens in November or December 2026.",
     related: { href: "index.html", label: "What is Yakkamon?" },
   },
 

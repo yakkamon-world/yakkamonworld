@@ -50,7 +50,7 @@ const YAKKAMON_GAMEPLAY = [
     slug: "arena-battles",
     title: "Arena Battles",
     desc: "Face off against the best players in PvP arena combat \u2014 arriving after launch, not in early access.",
-    detail: "Face off against the best trainers in PvP arena combat for glory. Note the timing: the team confirmed on 6 August that <strong>PvP is not in early access</strong> \u2014 Q4 2026 ships gathering, monsters, hunting and basic combat, with PvP and advanced breeding arriving after launch in chapter releases.",
+    detail: "Face off against the best trainers in PvP arena combat for glory. Note the timing: the team confirmed on 6 August that <strong>PvP is not in early access</strong> \u2014 early access (November or December 2026) ships gathering, monsters, hunting and basic combat, with PvP and advanced breeding arriving after launch in chapter releases.",
     icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.6 6.2L21 9l-5 4.4L17.4 20 12 16.6 6.6 20 8 13.4 3 9l6.4-.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>'
   }
 ];
