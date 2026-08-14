@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="analytics.js"></script>
+<title>How Yakkamon Works — The Full Field Guide — Yakkamon Portal</title>
+<link rel="canonical" href="https://yakkamonworld.com/gameplay-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YakkamonWorld">
+<meta property="og:title" content="How Yakkamon Works — The Full Field Guide">
+<meta property="og:description" content="Every Yakkamon mechanic explained in plain English: type locking, the work cycle, stamina, storage bins, monster care, your base, regions, seasons, hunting, crafting, battling and trading.">
+<meta property="og:url" content="https://yakkamonworld.com/gameplay-guide.html">
+<meta property="og:image" content="https://yakkamonworld.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Yakkamon_World">
+<meta name="twitter:title" content="How Yakkamon Works — The Full Field Guide">
+<meta name="twitter:description" content="Every Yakkamon mechanic explained in plain English: type locking, the work cycle, stamina, storage bins, monster care, your base, regions, seasons, hunting, crafting, battling and trading.">
+<meta name="twitter:image" content="https://yakkamonworld.com/og-default.png">
+<meta name="description" content="Every Yakkamon mechanic explained in plain English: type locking, the work cycle, stamina, storage bins, monster care, your base, regions, seasons, hunting, crafting, battling and trading.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+        <a class="brand" href="index.html">Yakkamon <span class="portal"><span class="portal-full">Unofficial Portal</span><span class="portal-short">Portal</span></span></a>
+    <nav class="tabs"><a class="tab" href="index.html">Home</a>
+<a class="tab" href="pre-registration.html"><span class="label-full">Pre-registration</span><span class="label-short">Pre-Reg</span></a>
+<a class="tab" href="news.html">News</a>
+<a class="tab active" href="gameplay.html">Gameplay</a>
+<a class="tab" href="community.html">Community</a>
+<a class="tab" href="stats.html">Stats</a>
+<a class="tab" href="tips.html">Tips</a>
+<a class="tab" href="faq.html">FAQ</a>
+<a class="tab" href="contact.html">Contact</a>
+<a class="tab tab-wide" href="videos.html">Videos</a>
+<button class="search-btn" id="search-btn" aria-label="Search the site" type="button">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+</nav>
+  </div>
+</header>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-panel">
+    <div class="search-panel-head">
+      <input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
+    </div>
+    <p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+
+<div class="wrap page-head">
+  <h1>HOW YAKKAMON WORKS</h1>
+  <p>The full field guide &mdash; every mechanic we know about, explained so anyone can follow it. Built from the <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">official docs</a>, the dev streams, and the official screenshots. <a href="gameplay.html">Prefer it split by system? &rarr;</a></p>
+</div>
+
+<div class="wrap">
+  <div class="gg-intro">
+    <p><strong>The short version:</strong> it's a farming game where the monsters do the farming &mdash; and your job is to go catch better ones.</p>
+    <p class="gg-intro-sub">The name is thought to come from <em>yakka</em>, the Australian word for hard work. That is the whole idea: your monsters don't only fight, they hold down jobs.</p>
+  </div>
+
+  <nav class="gg-toc" aria-label="Guide contents">
+    <p class="gg-toc-label">ON THIS PAGE</p>
+    <ol>
+      <li><a href="#two-halves">Two halves, one game</a></li>
+      <li><a href="#core-loop">The core loop</a></li>
+      <li><a href="#your-yakkamon">Your Yakkamon</a></li>
+      <li><a href="#type-locking">Type locking</a></li>
+      <li><a href="#work-cycle">The work cycle</a></li>
+      <li><a href="#bins">Storage bins</a></li>
+      <li><a href="#care">Looking after them</a></li>
+      <li><a href="#base">Your base</a></li>
+      <li><a href="#world">The living world</a></li>
+      <li><a href="#hunt-craft">Hunting &amp; crafting</a></li>
+      <li><a href="#battle-trade">Battling &amp; trading</a></li>
+      <li><a href="#numbers">Quick reference</a></li>
+      <li><a href="#unknowns">Not confirmed yet</a></li>
+    </ol>
+  </nav>
+
+<section class="gg-sec" id="two-halves">
+  <div class="gg-num">01</div>
+  <p class="gg-kicker">THE SHAPE OF IT</p>
+  <h2>Two halves, one game</h2>
+  <p class="gg-lede">Half of Yakkamon plays itself. Half of it needs you &mdash; and each half feeds the other.</p>
+  <div class="gg-split">
+    <div class="gg-half">
+      <h3>The idle half</h3>
+      <p>Your monsters farm, gather and produce around the clock. Set them up, walk away, come back to progress. <strong>This keeps running even when the game is closed</strong>, so you log back in to a pile of stuff waiting for you.</p>
+    </div>
+    <div class="gg-half">
+      <h3>The active half</h3>
+      <p>You go out hunting rare creatures, craft your gear, and fight other trainers in the arena. <strong>This only moves when you're actually playing</strong> &mdash; and better hunts feed a better farm.</p>
+    </div>
+  </div>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>Your farm is a slow cooker that keeps going all night. Hunting is the trip to the shops for better ingredients.</p></div>
+</section>
+
+<section class="gg-sec" id="core-loop">
+  <div class="gg-num">02</div>
+  <p class="gg-kicker">THE ENGINE</p>
+  <h2>The core loop</h2>
+  <p class="gg-lede">Five things you do over and over. Every system in the game bolts onto this circle.</p>
+  <ol class="gg-steps">
+    <li><strong>Catch</strong> &mdash; head into the wild and hunt Yakkamon. Every one you catch joins your roster.</li>
+    <li><strong>Work</strong> &mdash; send them out to gather resources. They repeat the job automatically, even offline.</li>
+    <li><strong>Collect</strong> &mdash; their haul stacks up in a storage bin. Tap the bin to move it into your inventory.</li>
+    <li><strong>Craft</strong> &mdash; turn raw resources into gear, items and buildings, including the gear that catches rarer monsters.</li>
+    <li><strong>Level up</strong> &mdash; higher-level Yakkamon gather faster. Better gear plus a better team means you go catch something rarer, and you're back at step one.</li>
+  </ol>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>It's a snowball. Small team, small resources, small upgrades, slightly bigger team. Do that twenty times and you have an empire.</p></div>
+</section>
+
+<section class="gg-sec" id="your-yakkamon">
+  <div class="gg-num">03</div>
+  <p class="gg-kicker">THE ROSTER</p>
+  <h2>Your Yakkamon</h2>
+  <p class="gg-lede">Expect roughly <strong>50&ndash;60 species at launch</strong> &mdash; and four separate things decide whether one individual is worth keeping.</p>
+  <div class="gg-grid">
+    <div class="gg-card"><h3>Its type</h3><p>Type decides what it can gather. A Grass type gathers Wood. A Fire type <em>can't</em> &mdash; the game refuses outright.</p></div>
+    <div class="gg-card"><h3>Its stats</h3><p>Every monster rolls slightly different stats. Two of the same species won't be identical, so it's worth hunting the same one again for a better roll.</p></div>
+    <div class="gg-card"><h3>Its rarity</h3><p>Rares sit in tiers, and certain rares are more powerful than other rares in the same tier.</p></div>
+    <div class="gg-card"><h3>Its traits</h3><p>Rare monsters can carry special traits that change how they farm, opening strategies ordinary monsters can't run.</p></div>
+  </div>
+  <p>The second dev stream filled in the machinery underneath: monsters have <strong>real genetics and base stats</strong>, traits are randomly rolled and define your build, and there are <strong>breeding lines with degradation but no hard cap</strong>, with evolutions planned. The team put roll predictability at roughly 80&ndash;90%.</p>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>Think trading cards. Same picture on the front, better numbers on the back — and that's the one everybody wants.</p></div>
+</section>
+
+<section class="gg-sec" id="type-locking">
+  <div class="gg-num">04</div>
+  <p class="gg-kicker">THE RULE THAT MATTERS MOST</p>
+  <h2>Type locking</h2>
+  <p class="gg-lede">Every resource can only be gathered by the right type, so <strong>your roster decides what you're able to gather at all</strong>.</p>
+  <div class="table-scroll"><table class="prereg-table">
+    <tr><th>Resource</th><th>Who can gather it</th><th>Status</th></tr>
+    <tr><td>Wood</td><td>Grass types</td><td><span class="gg-pill ok">CONFIRMED</span></td></tr>
+    <tr><td>Wood</td><td>Fire types &mdash; blocked. In-game message: &ldquo;Fire type cannot harvest wood!&rdquo;</td><td><span class="gg-pill no">BLOCKED</span></td></tr>
+    <tr><td>Stone</td><td>Type not yet announced</td><td><span class="gg-pill tbc">UNKNOWN</span></td></tr>
+    <tr><td>Berries / crops</td><td>Type not yet announced</td><td><span class="gg-pill tbc">UNKNOWN</span></td></tr>
+    <tr><td>Region materials</td><td>Deserts, volcanoes, fire regions and waters each hold their own</td><td><span class="gg-pill tbc">MAPPING TBC</span></td></tr>
+  </table></div>
+  <p>The consequence is worth sitting with: <strong>collecting more species literally unlocks more of the map's materials</strong>. A narrow roster caps what you can produce no matter how well you play.</p>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>You wouldn't ask a fish to chop firewood. Same rule — except here the game enforces it.</p></div>
+</section>
+
+<section class="gg-sec" id="work-cycle">
+  <div class="gg-num">05</div>
+  <p class="gg-kicker">THE ENGINE ROOM</p>
+  <h2>The work cycle</h2>
+  <p class="gg-lede">Gathering runs on a repeating work-and-rest cycle that keeps going without you.</p>
+  <ol class="gg-steps">
+    <li><strong>A cycle starts</strong> &mdash; you assign a Yakkamon to a resource it's allowed to gather.</li>
+    <li><strong>It takes time</strong> &mdash; each work cycle runs for a set duration before it pays out.</li>
+    <li><strong>It costs stamina</strong> &mdash; working burns stamina, which limits how much a monster can do in one stretch.</li>
+    <li><strong>It produces resources</strong> &mdash; the cycle finishes and drops its haul into a storage bin.</li>
+    <li><strong>It repeats automatically</strong> &mdash; no tapping needed. Work continues while you're off hunting or battling.</li>
+    <li><strong>It sleeps when tired</strong> &mdash; out of stamina, the Yakkamon goes to bed, recovers, then gets back to work on its own.</li>
+  </ol>
+  <div class="gg-flow"><span>WORKING</span><span class="gg-arrow">&rarr;</span><span>OUT OF STAMINA</span><span class="gg-arrow">&rarr;</span><span>SLEEPING</span><span class="gg-arrow">&rarr;</span><span>WORKING</span></div>
+  <p>A monster that's asleep isn't broken, it's recharging. There are two ways to raise output: <strong>level them up</strong>, since higher levels make them more efficient farmers, and <strong>collect more of them</strong>, since that unlocks more resource types and lets you gather several at once.</p>
+  <div class="prereg-callout info">Cycle duration, stamina cost, yield per cycle and sleep recovery rate are all unpublished. Nobody can build an accurate farming calculator until they land.</div>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>Each monster is a little worker with a battery. Work drains it, sleep charges it, and it clocks back on without being told.</p></div>
+</section>
+
+<section class="gg-sec" id="bins">
+  <div class="gg-num">06</div>
+  <p class="gg-kicker">WHERE THE LOOT GOES</p>
+  <h2>Storage bins</h2>
+  <p class="gg-lede">Gathered resources pile into a bin that keeps filling while you're gone &mdash; until it fills up and stops.</p>
+  <p>Resources don't go straight to your bag. They stack in a <strong>storage bin</strong> that keeps filling on its own, <strong>even while you're offline</strong>, until you tap it to collect the haul into your inventory.</p>
+  <div class="gg-bins">
+    <div class="gg-bin"><span class="gg-bin-label">EARLY BIN</span><strong>5 / 20</strong></div>
+    <div class="gg-bin"><span class="gg-bin-label">FILLING</span><strong>84 / 120</strong></div>
+    <div class="gg-bin full"><span class="gg-bin-label">FULL &mdash; MAX</span><strong>120 / 120</strong></div>
+  </div>
+  <p><strong>The catch:</strong> bins have a cap. Once a bin hits MAX it stops accepting, and every hour it spends full is production you never banked. That turns bin capacity and how often you check in into a genuine strategic variable &mdash; the difference between a farm that runs all night and one that quietly stops at 2am.</p>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>A piggy bank that fills itself. Once it's full, extra coins bounce off the top — so empty it before it overflows.</p></div>
+</section>
+
+<section class="gg-sec" id="care">
+  <div class="gg-num">07</div>
+  <p class="gg-kicker">UPKEEP</p>
+  <h2>Looking after them</h2>
+  <p class="gg-lede">Your monsters have needs, and a monster that needs something isn't earning.</p>
+  <p>Status icons float above a Yakkamon when something's up, and a notification feed calls it out by name &mdash; screenshots show messages in the form of &ldquo;[name] is Hungry&rdquo;.</p>
+  <div class="gg-grid four">
+    <div class="gg-card"><h3>Hungry</h3><p>Needs feeding before it will carry on.</p></div>
+    <div class="gg-card"><h3>Hurt</h3><p>Injured or knocked out, and out of action until treated.</p></div>
+    <div class="gg-card"><h3>Sleeping</h3><p>Recovering stamina. Not broken &mdash; it restarts itself.</p></div>
+    <div class="gg-card"><h3>Needs an item</h3><p>Can ask directly with a speech bubble, e.g. a stone icon with a &ldquo;!&rdquo;.</p></div>
+  </div>
+  <p>An item bar sits along the bottom of the screen for exactly this &mdash; milk, flowers, mushrooms, a health item and more, ready to use on whoever's struggling. Because a monster in a bad state stops producing, <strong>upkeep is part of the economy rather than flavour</strong>.</p>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>They're pets with jobs. Feed them, patch them up, let them nap — and they keep earning for you.</p></div>
+</section>
+
+<section class="gg-sec" id="base">
+  <div class="gg-num">08</div>
+  <p class="gg-kicker">HOME</p>
+  <h2>Your base</h2>
+  <p class="gg-lede">The place they all work from &mdash; and the doorway out into the wild.</p>
+  <div class="gg-grid">
+    <div class="gg-card"><h3>Expand your land</h3><p>Land expansion carries a resource price right on the button &mdash; the starter one reads <strong>10 Wood + 1 Stone</strong>. More land means more room for workstations and farm plots.</p></div>
+    <div class="gg-card"><h3>Buildings &amp; stations</h3><p>Workbenches with their own storage counters, a workshop marked with an axe, houses with beds for sleeping monsters, crop plots and rock nodes.</p></div>
+    <div class="gg-card"><h3>Hunting Area</h3><p>A dedicated zone with an entry cost shown on the sign &mdash; <strong>5 berries</strong> in the launch screenshot. This is your doorway from farming into hunting.</p></div>
+  </div>
+  <p><strong>The menu buttons you'll live in:</strong> Squad (your active team), Items, Quests, Shop, Trade (the player market) and Log (notification history).</p>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>A workshop yard. More space means more benches — and more benches mean more gets made at once.</p></div>
+</section>
+
+<section class="gg-sec" id="world">
+  <div class="gg-num">09</div>
+  <p class="gg-kicker">THE WORLD</p>
+  <h2>The living world</h2>
+  <p class="gg-lede">A clock, weather, seasons and four kinds of region &mdash; all of it changing what's out there.</p>
+  <div class="gg-grid four">
+    <div class="gg-card"><h3>Day &amp; night</h3><p>A clock runs in the corner with a sun or moon icon, and what you find in the wild changes with it.</p></div>
+    <div class="gg-card"><h3>Weather</h3><p>Separate weather indicators sit next to the clock &mdash; sunshine and rain are both shown in the HUD.</p></div>
+    <div class="gg-card"><h3>Seasons</h3><p>Seasons change the world around you, and each region shifts along with them.</p></div>
+    <div class="gg-card"><h3>Regions</h3><p>Deserts, volcanoes, fire regions and oceans, each holding unique resources to gather and craft with.</p></div>
+  </div>
+  <div class="prereg-callout success"><strong>Every three months, new monsters drop into the wild.</strong> Brand-new Yakkamon are released on a quarterly schedule and <strong>players compete to hunt them down and claim them first</strong>. Being ready when a drop lands is a real advantage &mdash; and one of the better reasons to keep your farm and gear strong between seasons.</div>
+  <div class="prereg-callout info"><strong>Two caveats.</strong> The team said on 6 August that the cadence may become <strong>weekly</strong> rather than quarterly, Sunflower Land style. And day/night runs on a <strong>sped-up in-game clock, not real time</strong> &mdash; so no timezone gets a better night shift.</div>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>The world has its own little day that runs faster than yours. Nobody gets a head start on sunrise.</p></div>
+</section>
+
+<section class="gg-sec" id="hunt-craft">
+  <div class="gg-num">10</div>
+  <p class="gg-kicker">GETTING STRONGER</p>
+  <h2>Hunting &amp; crafting</h2>
+  <p class="gg-lede">Gear is how you reach the rare stuff &mdash; and the gear is built from what your ordinary monsters gathered.</p>
+  <div class="gg-split">
+    <div class="gg-half"><h3>Crafting</h3><p>You refine gathered resources into the gear and items you need. That gear is what lets you <strong>track down and capture rarer, tougher monsters</strong>.</p></div>
+    <div class="gg-half"><h3>Hunting</h3><p>You venture out across the world to hunt and collect wild monsters &mdash; then bring them home and put them to work gathering for you.</p></div>
+  </div>
+  <p>Crafting is the thing to watch, because it's what actually gates progress. Raw gathering scales easily once you have a roster; what limits most players is turning that pile into the specific items a harder hunt needs.</p>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>You need a better fishing rod to catch the big fish — and you build the rod out of what the small fish helped you collect.</p></div>
+</section>
+
+<section class="gg-sec" id="battle-trade">
+  <div class="gg-num">11</div>
+  <p class="gg-kicker">WHAT IT'S ALL FOR</p>
+  <h2>Battling &amp; trading</h2>
+  <p class="gg-lede">The arena, your gym, an on-chain market, and the quests and events running alongside.</p>
+  <div class="gg-grid">
+    <div class="gg-card"><h3>Arena battles &amp; your gym</h3><p>You face other players in PvP arena combat and build your own gym. Since rarity and stat rolls both affect power, <strong>the team you build on the farm is the team you fight with</strong>.</p></div>
+    <div class="gg-card"><h3>Player trading, on-chain</h3><p>Every core resource and creature is tradable on-chain, with a Trade button in the main menu. Two valid ways to build an empire: grind it, or trade your way there.</p></div>
+    <div class="gg-card"><h3>Quests &amp; timed events</h3><p>Quests appear in a feed with names like &ldquo;Capture the Spikemon&rdquo;, and timed events run on a countdown with a milestone bar filling toward marked rewards.</p></div>
+  </div>
+  <div class="prereg-callout warning"><strong>PvP is not in early access.</strong> The team confirmed on 6 August that early access &mdash; November or December 2026 &mdash; ships gathering, monsters, hunting and basic combat. PvP and advanced breeding arrive after launch in chapter releases. <a href="pre-registration.html#important-dates">The full schedule &rarr;</a></div>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>The farm is practice, the arena is the match — and the market is there if you'd rather buy a good player than raise one.</p></div>
+</section>
+
+<section class="gg-sec" id="numbers">
+  <div class="gg-num">12</div>
+  <p class="gg-kicker">THE HARD NUMBERS</p>
+  <h2>Quick reference</h2>
+  <p class="gg-lede">Every figure the team or the screenshots have actually shown, with where each one came from.</p>
+  <div class="table-scroll"><table class="prereg-table">
+    <tr><th>Thing</th><th>Value</th><th>Source</th></tr>
+    <tr><td>Yakkamon at launch</td><td><strong>50&ndash;60 species</strong></td><td>Dev statement</td></tr>
+    <tr><td>Starter storage bin</td><td>Cap of 20</td><td>Early-game screenshot</td></tr>
+    <tr><td>Later storage bin</td><td>Cap of 120, shows &ldquo;MAX&rdquo; when full</td><td>UI mock-up</td></tr>
+    <tr><td>First land expansion</td><td>10 Wood + 1 Stone</td><td>Early-game screenshot</td></tr>
+    <tr><td>Hunting Area entry</td><td>5 berries</td><td>Early-game screenshot</td></tr>
+    <tr><td>New monster drops</td><td>Every 3 months (weekly under consideration)</td><td>Docs + 6 Aug stream</td></tr>
+    <tr><td>Type locking</td><td>Grass gathers Wood; Fire blocked outright</td><td>In-game message</td></tr>
+    <tr><td>Currencies visible</td><td>Coins, gems, and a $FLOWER counter</td><td>HUD screenshots</td></tr>
+    <tr><td>Trait roll predictability</td><td>Roughly 80&ndash;90%</td><td>Second dev stream</td></tr>
+    <tr><td>Chain and token</td><td>Ronin, using $FLOWER &mdash; no new token</td><td>Official docs</td></tr>
+    <tr><td>PvP</td><td>After launch, not in early access</td><td>6 Aug stream</td></tr>
+  </table></div>
+  <div class="prereg-callout warning"><strong>Treat mock-up numbers as placeholders.</strong> Several circulating screenshots are UI mock-ups rather than tuned builds &mdash; the 999,999 currency figures and the level 99 cap are filler, not confirmed limits.</div>
+</section>
+
+<section class="gg-sec" id="unknowns">
+  <div class="gg-num">13</div>
+  <p class="gg-kicker">THE GAPS</p>
+  <h2>Not confirmed yet</h2>
+  <p class="gg-lede">If you're planning calculators, roster planners or market tools, these are the numbers that don't exist publicly yet.</p>
+  <ul class="gp-unknowns">
+    <li><strong>Stat system</strong><span>Stats vary per individual, but the roll range, which stats exist, and whether they're visible in game are all unknown.</span></li>
+    <li><strong>Rarity tiers</strong><span>Tier names, how many there are, drop rates, and which rares are the stronger ones inside a tier.</span></li>
+    <li><strong>Egg mechanics</strong><span>Hatch rates and sources aren't public. Breeding itself is confirmed &mdash; with line degradation and no hard cap.</span></li>
+    <li><strong>Work cycle numbers</strong><span>Cycle duration, stamina cost per cycle, yield per cycle, and sleep recovery rate.</span></li>
+    <li><strong>Full type chart</strong><span>Only Grass&rarr;Wood is confirmed. The complete type list and the resource each unlocks is missing.</span></li>
+    <li><strong>Levelling curve</strong><span>XP costs, the real level cap, and how much efficiency each level actually adds.</span></li>
+    <li><strong>Trait list</strong><span>Which special traits exist, what each changes, and how you obtain them.</span></li>
+    <li><strong>Battle rules</strong><span>Turn structure, the move system, type effectiveness, and how gyms work.</span></li>
+    <li><strong>Monster utilities</strong><span>What each Genesis Legendary actually does. The team has said these land in September.</span></li>
+  </ul>
+</section>
+
+<div class="prereg-callout info" style="margin-bottom:46px"><strong>This is a player-made reference sheet.</strong> Compiled from official Yakkamon screenshots, the official game description and dev messages &mdash; not an official document. Everything here is pre-launch and subject to change. <a href="gameplay.html">Browse the same material system by system &rarr;</a></div>
+</div>
+
+<footer>
+<div class="wrap footer-map">
+  <div class="footer-col">
+    <h3>START HERE</h3>
+    <a href="index.html">Home</a>
+    <a href="pre-registration.html">Pre-registration guide</a>
+    <a href="pre-registration.html#important-dates">Important dates</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+  <div class="footer-col">
+    <h3>GUIDES &amp; TACTICS</h3>
+    <a href="tips.html">Trainer Tips</a>
+    <a href="article-free-to-play-guide.html">Free-to-play guide</a>
+    <a href="article-leaderboard-guideline.html">Leaderboard guideline</a>
+    <a href="gameplay.html">Gameplay systems</a>
+  </div>
+  <div class="footer-col">
+    <h3>LATEST NEWS</h3>
+    <a href="news.html">All news</a>
+    <a href="article-dev-stream-two-recap.html">Dev stream recap</a>
+    <a href="article-referral-rule-change-flower-deposit.html">Referral rule change</a>
+    <a href="article-flower-deposits-open-august-9.html">$FLOWER deposits</a>
+  </div>
+  <div class="footer-col">
+    <h3>COMMUNITY</h3>
+    <a href="community.html">Community &amp; channels</a>
+    <a href="videos.html">Videos</a>
+    <a href="stats.html">Trainer stats</a>
+    <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener">Telegram &#8599;</a>
+    <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener">YouTube &#8599;</a>
+    <a href="https://x.com/Yakkamon_World" target="_blank" rel="noopener">X &#8599;</a>
+  </div>
+</div>
+<div class="wrap footer-base">
+  <div>
+    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND &middot; <a href="privacy.html">PRIVACY</a></span>
+    <div class="footer-links">
+      <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on Telegram" title="YakkamonWorld on Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fl-label">Telegram &#8599;</span></a>
+      <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on YouTube" title="YakkamonWorld on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fl-label">YouTube &#8599;</span></a>
+      <a href="https://yakkamon.com/" target="_blank" rel="noopener" aria-label="Official Yakkamon pre-registration" title="Official Yakkamon pre-registration"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 7a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v3.2a2 2 0 0 0 0 3.6V17a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-3.2a2 2 0 0 0 0-3.6V7Z"/><g fill="#1A1A2E"><rect x="15" y="8" width="1.1" height="2.2"/><rect x="15" y="10.9" width="1.1" height="2.2"/><rect x="15" y="13.8" width="1.1" height="2.2"/></g></svg><span class="fl-label">Official Pre-Registration &#8599;</span></a>
+      <a href="https://x.com/yakkamon_game" target="_blank" rel="noopener" aria-label="Official Yakkamon on X" title="Official Yakkamon on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Z"/></svg><span class="fl-label">Official Twitter/X &#8599;</span></a>
+      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener" aria-label="Official Yakkamon docs" title="Official Yakkamon docs"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h8l4 4v16H6V2Zm7 1.6V7h3.4L13 3.6ZM8.5 11h7v1.5h-7V11Zm0 3.5h7V16h-7v-1.5Zm0-7h3V9h-3V7.5Z"/></svg><span class="fl-label">Official Docs &#8599;</span></a>
+    </div>
+  </div>
+  <span>BUILT BY THE COMMUNITY</span>
+</div>
+</footer>
+
+<script src="gameplay.js"></script>
+<script src="search.js"></script>
+<script src="sfl-banner.js" defer></script>
+</body>
+</html>

@@ -15,10 +15,14 @@ function gpRenderDetail(current) {
   // Hold the scroll position across the swap: replacing the panel's
   // contents can otherwise make the browser re-anchor and jump.
   const keepY = window.scrollY;
+  const like = current.like
+    ? `<div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>${current.like}</p></div>`
+    : "";
   detail.innerHTML = `
     <div class="gp-detail-icon">${current.icon}</div>
     <h2>${current.title}</h2>
     <p>${current.detail}</p>
+    ${like}
   `;
   document.title = `${current.title} — Gameplay — Yakkamon Portal`;
   if (window.scrollY !== keepY) window.scrollTo(0, keepY);

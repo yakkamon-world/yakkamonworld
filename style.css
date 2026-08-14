@@ -999,3 +999,69 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   .signup-cta .pixel-btn{width:100%; text-align:center}
 }
 .ref-note{color:#6b6b85; font-weight:600}
+
+/* --- Gameplay: plain-English analogy block --- */
+.gp-like{margin:18px 0 0; padding:14px 18px; border:3px solid var(--ink); border-radius:var(--radius); background:#CFEFD6}
+.gp-like-tag{display:inline-block; font-size:.7rem; font-weight:900; letter-spacing:.12em; background:var(--ink); color:#fff; padding:3px 9px; border-radius:6px; margin-bottom:7px}
+.gp-like p{margin:0; font-weight:700; font-size:.98rem; line-height:1.5}
+
+/* --- Gameplay: quick reference + open questions --- */
+.gp-extra{margin:44px 0 0; min-width:0}
+.gp-extra h2{margin:0 0 6px}
+.gp-extra .gp-extra-note{margin:0 0 14px; font-size:.92rem; font-weight:700; opacity:.8}
+.gp-unknowns{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:16px 0 0; padding:0; list-style:none}
+.gp-unknowns li{border:3px solid var(--ink); border-radius:var(--radius); padding:13px 16px; background:var(--card,#fff); min-width:0}
+.gp-unknowns strong{display:block; margin-bottom:4px}
+.gp-unknowns span{font-size:.92rem; font-weight:700; line-height:1.45; opacity:.85}
+
+/* ================= Gameplay field guide (gameplay-guide.html) ================= */
+.gg-intro{border:3px solid var(--ink); border-radius:var(--radius); background:var(--yellow); padding:18px 20px; margin:0 0 22px; min-width:0}
+.gg-intro p{margin:0; font-weight:800; font-size:1.08rem; line-height:1.5}
+.gg-intro-sub{margin-top:8px !important; font-weight:700 !important; font-size:.95rem !important; opacity:.85}
+
+.gg-toc{border:3px solid var(--ink); border-radius:var(--radius); background:var(--panel); padding:16px 20px; margin:0 0 34px; min-width:0}
+.gg-toc-label{font-family:var(--font-display); font-size:1rem; letter-spacing:.03em; margin:0 0 10px}
+.gg-toc ol{margin:0; padding-left:1.2em; columns:1}
+.gg-toc li{margin:5px 0; font-weight:700}
+.gg-toc a{color:var(--sky-deep); text-decoration:none; border-bottom:2px solid transparent}
+.gg-toc a:hover{border-bottom-color:var(--sky-deep)}
+@media(min-width:700px){ .gg-toc ol{columns:2; column-gap:32px} }
+
+.gg-sec{position:relative; border-top:4px solid var(--ink); padding:26px 0 30px; min-width:0; scroll-margin-top:80px}
+.gg-sec .gg-num{font-family:var(--font-display); font-size:1.5rem; color:var(--red); line-height:1; margin-bottom:2px}
+.gg-kicker{font-family:var(--font-display); font-size:.95rem; letter-spacing:.08em; margin:0 0 4px; opacity:.7}
+.gg-sec h2{margin:0 0 8px; font-size:1.85rem}
+.gg-lede{margin:0 0 16px; font-weight:700; font-size:1.05rem}
+.gg-sec p{min-width:0}
+
+.gg-split{display:grid; grid-template-columns:1fr; gap:14px; margin:0 0 16px}
+@media(min-width:720px){ .gg-split{grid-template-columns:1fr 1fr} }
+.gg-half{border:3px solid var(--ink); border-radius:var(--radius); background:var(--panel); padding:15px 18px; min-width:0}
+.gg-half h3{margin:0 0 6px; font-size:1.3rem}
+.gg-half p{margin:0; font-size:.98rem}
+
+.gg-grid{display:grid; grid-template-columns:1fr; gap:14px; margin:0 0 16px}
+@media(min-width:600px){ .gg-grid{grid-template-columns:1fr 1fr} }
+@media(min-width:920px){ .gg-grid.four{grid-template-columns:repeat(4,1fr)} }
+.gg-card{border:3px solid var(--ink); border-radius:var(--radius); background:var(--panel); padding:14px 16px; min-width:0}
+.gg-card h3{margin:0 0 5px; font-size:1.2rem}
+.gg-card p{margin:0; font-size:.95rem; line-height:1.5}
+
+.gg-steps{margin:0 0 16px; padding-left:0; list-style:none; counter-reset:gg}
+.gg-steps li{counter-increment:gg; position:relative; padding:11px 14px 11px 52px; margin:0 0 9px; border:3px solid var(--ink); border-radius:var(--radius); background:var(--panel); font-size:.98rem; min-width:0}
+.gg-steps li::before{content:counter(gg,decimal-leading-zero); position:absolute; left:12px; top:10px; font-family:var(--font-display); font-size:1.15rem; color:var(--red)}
+
+.gg-flow{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 16px}
+.gg-flow span{font-family:var(--font-display); font-size:.95rem; letter-spacing:.04em; background:var(--ink); color:var(--yellow); padding:6px 13px; border-radius:999px}
+.gg-flow .gg-arrow{background:none; color:var(--ink); padding:0; font-size:1.2rem}
+
+.gg-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:0 0 16px}
+.gg-bin{border:3px solid var(--ink); border-radius:var(--radius); background:var(--panel); padding:12px 14px; text-align:center; min-width:0}
+.gg-bin.full{background:#FFD9D9}
+.gg-bin-label{display:block; font-family:var(--font-display); font-size:.8rem; letter-spacing:.06em; opacity:.75; margin-bottom:3px}
+.gg-bin strong{font-family:var(--font-display); font-size:1.5rem}
+
+.gg-pill{display:inline-block; font-size:.72rem; font-weight:900; letter-spacing:.07em; padding:3px 9px; border-radius:999px; border:2px solid var(--ink); white-space:nowrap}
+.gg-pill.ok{background:#CFEFD6}
+.gg-pill.no{background:#FFD9D9}
+.gg-pill.tbc{background:#EDE7F6}
