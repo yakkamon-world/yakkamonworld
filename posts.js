@@ -6,6 +6,28 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "important-dates-roadmap",
+    category: "event",
+    title: "The Launch Schedule, Finally \u2014 And the Free Mint Just Moved Two Weeks Earlier",
+    date: "Aug 14, 2026",
+    excerpt: "An official Important Dates page puts early access in November or December, moves the Ronin free mint to mid-September, and dates the leaderboard lock for the first time.",
+    body: [
+      "Yakkamon has published an Important Dates page \u2014 the first time everything between now and early access has been laid out in one place. It narrows early access from \u201cQ4\u201d to November or December, dates the leaderboard lock, and quietly moves the free mint two weeks earlier.",
+      "## The five things that changed",
+      "<strong>The free mint moved to mid-September</strong>, from October 1st. <strong>The reveal is mid-October</strong>, one month after the mint rather than at launch. <strong>Early access is November or December.</strong> <strong>The leaderboard finalises one week before launch</strong>, with rewards sent three days later. And <strong>waves have a cadence</strong>: Wave 1 on launch day, Wave 2 a week later, Wave 3 a week after that.",
+      "## The real deadline",
+      "Nothing on the page is a fixed date \u2014 everything hangs off a launch window that spans two months. Chaining it together gives roughly <strong>11 to 16 more weeks of leaderboard</strong> from today. Plan for the short end: if it runs long you keep the points anyway.",
+      "## The asymmetry worth acting on",
+      "The deposit multiplier reaches its 1\u00d7 floor on 19 October \u2014 between two and seven weeks <em>before</em> the leaderboard locks. The most competitive stretch of the race is also the stretch where $FLOWER buys the fewest points, which front-loads every deposit decision to right now.",
+      "## What's good",
+      "The lock is anchored and will be announced with notice, so nobody wakes up to a board that closed overnight. Rewards land three days after the lock and before launch. The mint reveal in mid-October arrives while you can still climb. And Waves 1 to 3 are only two weeks apart, so mid-table finishes cost far less time than the rank gap suggests.",
+      "## What's concerning",
+      "Wave 4 \u2014 ranks 20,001 to 100,000, most of everyone who gets in \u2014 has no timing at all. Deposited $FLOWER only unlocks when you get access, so for those trainers it is an undated lockup on real money. Two official pages also still disagree on the mint date: the free mint page says mid-September, the Early Access comparison table still says October 1st.",
+      "## What we'd do",
+      "Treat 1 September as your verification deadline. Front-load deposits, because it's the only variable that strictly worsens with time. Aim at a band edge \u2014 2,000, 5,000, 20,000, 100,000 \u2014 since the ladder is flat between them. Protect the nurture streak through mid-November. And don't move a sealed mint before mid-October."
+    ]
+  },
+  {
     slug: "dev-stream-two-recap",
     category: "community",
     title: "Second Dev Stream: The Airdrop U-Turn Explained, and a Free Mint That May Move to September",
@@ -382,7 +404,7 @@ const YAKKAMON_POSTS = [
     category: "event",
     title: "Free Mint Goes Live October 1st",
     date: "Jul 29, 2026",
-    excerpt: "Pre-registered trainers can claim a Genesis Monster NFT for free on Ronin — no purchase, just a small network fee.",
+    excerpt: "SUPERSEDED \u2014 the mint has since moved to mid-September. Pre-registered trainers can claim a Genesis Monster NFT for free on Ronin, no purchase, just a small network fee.",
     body: [
       "On October 1st, the Genesis Monster NFT free mint goes live on Ronin. The mint is open to pre-registered trainers only, so signing up before that date is the only way to take part.",
       "## What you need to know",
