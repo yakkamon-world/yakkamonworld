@@ -64,6 +64,15 @@ const YAKKAMON_VIDEOS = [
 
   // ---------- START HERE ----------
   {
+    id: "AeLErRg8Vzk",
+    ep: "12",
+    runtime: "4:14",
+    block: "start",
+    title: "Yakkamon Gameplay Explained in 4 Minutes \u2014 What We Know So Far",
+    blurb: "What you'll actually be doing once the game opens: monsters that gather while you're offline, type locking, the stamina cycle, storage bins that overflow, and the upkeep that keeps it all running. Includes what still isn't confirmed.",
+    related: { href: "gameplay-guide.html", label: "Read the full field guide" },
+  },
+  {
     id: "Tk0v9lgrM2A",
     ep: "08",
     runtime: "2:04",
