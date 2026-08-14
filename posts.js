@@ -6,6 +6,29 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "referral-rule-change-flower-deposit",
+    category: "event",
+    title: "Referrals Now Cost Your Friend Money \u2014 And Pay You 75 Points",
+    date: "Aug 14, 2026",
+    excerpt: "Discord and X no longer verify a referral. From your sixth onward the friend must link a wallet and deposit 100 $FLOWER of their own \u2014 and each counting referral rises from 30 points to 75.",
+    body: [
+      "Yakkamon has changed how a referral is verified for the second time in ten days \u2014 and this one is a different kind of change. The first tightened who counts. This one attaches a price.",
+      "## The three changes",
+      "Verification moves from <strong>Discord + Twitter/X + 100 points</strong> to <strong>link a wallet and deposit 100 $FLOWER</strong>. Points per referral go from <strong>30 to 75</strong>. Your first five stay instant on sign-up. The team dropped Discord and X because bot accounts were clearing that bar in bulk, flooding both channels while filtering nobody.",
+      "## The part that matters",
+      "The bar moved from <em>effort</em> to <em>money</em> \u2014 and not your money, your friend's. Under the old rule you could walk a sign-up to 100 points in a week of free play. Under the new one there is nothing you can do on their behalf: they need a wallet, they need 100 $FLOWER, and they have to send it themselves.",
+      "## What it does to the numbers",
+      "A strictly free player \u2014 no money, and friends with no money \u2014 tops out at their five instant referrals and gains about <strong>225 points</strong> from this change. A player who can find 45 friends willing to deposit gains about <strong>2,250</strong>. The change is worth ten times more to the second player than the first.",
+      "## What's good about it",
+      "It genuinely stops the farming: a hundred wallets funded with 100 $FLOWER each is 10,000 $FLOWER at risk of being stripped in review, which is a bad trade rather than a cheap one. It also stops using Discord and X as an anti-bot filter they were never suited for. And the deposit isn't purely a cost \u2014 your friend's 100 $FLOWER earns them points too and stays theirs, spendable or withdrawable once they have access.",
+      "## What's concerning",
+      "Referrals were the one uncapped <em>free</em> lever on this leaderboard. Both lanes now route through $FLOWER. The cost also lands on the person with the least information \u2014 your friend is being asked to send real money to a pre-registration on the strength of your recommendation. And funding a friend's wallet so they can clear the bar looks, in a review, a great deal like the multi-accounting the rule exists to stop.",
+      "## What we'd do",
+      "Use your five instant referrals first \u2014 free, unconditional, and now worth 375 points. Past five, ask people who were going to deposit anyway; someone already planning to put $FLOWER in loses nothing by routing 100 of it through your link. Be straight about what you're asking, and don't front the deposit for them. And if your rank plan assumed 50 free referrals, that plan needed rewriting this morning.",
+      "Note that docs.yakkamon.com still lists the old three-step rule as of publication; the updated rules are on yakkamon.com's own info pages. Assume the stricter one applies."
+    ]
+  },
+  {
     slug: "important-dates-roadmap",
     category: "event",
     title: "The Launch Schedule, Finally \u2014 And the Free Mint Just Moved Two Weeks Earlier",
@@ -79,7 +102,7 @@ const YAKKAMON_POSTS = [
       "Most of the ladder is flat. Ranks 501\u20132,000 all receive Tide \u2014 1,500 ranks, one reward. Climbing from 1,900 to 600 gains you nothing. The value sits entirely at the edges: ranks 10, 50, 250, 500, 2,000, 5,000 and 100,000.",
       "## The problem this makes worse",
       "Extending the Legendary band to rank 2,000 makes wallet-splitting <em>more</em> attractive, because more split wallets land inside Legendary territory. A hundred wallets occupying the top ranks would collect 110 monsters, all Legendary, against 2 for a single concentrated wallet.",
-      "The fix is the team's own precedent: require verified Discord, verified X and a minimum of non-deposit points for airdrop eligibility, exactly as they already do for referrals.",
+      "The fix is the team's own precedent: require a verified wallet and a minimum of non-deposit points for airdrop eligibility, in the same spirit as the referral rules.",
       "## What's still unknown",
       "The utilities land in September. The lock now has a position \u2014 one week before early access launch \u2014 though not yet an exact date. And whether the two monsters at ranks 1\u201310 are separate creatures isn't stated \u2014 though the 5,010-across-5,000 total suggests they are."
     ]
@@ -161,7 +184,7 @@ const YAKKAMON_POSTS = [
       "## Where we'd push back",
       "<strong>The doubling size bonus is our only C.</strong> Stacked on the opening week's 3\u00d7, a single 50,000 $FLOWER deposit produces <strong>190,000 points</strong> \u2014 against roughly 900 for two months of perfect free play with no referrals. That's about 190 to 1, which makes the top of the leaderboard purchased rather than contested. We'd taper the bonus rather than double it.",
       "<strong>And it opens a wallet-splitting hole.</strong> Because the size bonus is rated per deposit, splitting 50,000 across ten wallets costs only 10.5% of your points \u2014 and turns one reward slot into ten. Give up one top-100 finish, gain roughly ten top-1,000 finishes, for a tenth of your points.",
-      "The cheapest fix is their own precedent: require verified Discord, verified X and a minimum of <em>non-deposit</em> points for airdrop eligibility, exactly as they already do for referrals. Ten split wallets would each need aged accounts and a week of daily play.",
+      "The cheapest fix is their own precedent: require a verified wallet and a minimum of <em>non-deposit</em> points for airdrop eligibility, in the same spirit as the referrals. Ten split wallets would each need aged accounts and a week of daily play.",
       "<strong>Hiding the leaderboard</strong> solves the right problem bluntly. Show the band rather than the exact rank \u2014 you keep the motivational feedback and remove the sniping target.",
       "<strong>Black-box genetics</strong> is a great instinct in a risky context: hidden stats plus tradable assets makes information itself an asset. Publish the ranges, hide the rolls.",
       "## The thing nobody mentioned",
@@ -228,14 +251,14 @@ const YAKKAMON_POSTS = [
     category: "community",
     title: "Referral Rule Change: Friends Now Need 100 Points to Count",
     date: "Aug 5, 2026",
-    excerpt: "After 4,783 farming accounts were banned, referrals 6+ need the friend to verify Discord, verify Twitter/X and reach 100 points. First five stay instant.",
+    excerpt: "SUPERSEDED on 14 Aug \u2014 Discord and X no longer verify a referral at all. After 4,783 farming accounts were banned, referrals 6+ needed the friend to verify Discord, verify Twitter/X and reach 100 points.",
     body: [
       "The Yakkamon team has raised the bar for what counts as a valid referral. <strong>Your first five referrals still pay instantly</strong> \u2014 from the sixth onward, your friend must verify their Discord, verify their Twitter/X, and reach 100 points before you receive anything.",
       "## Why it changed",
       "Referral codes spread fast enough overnight to cause scaling problems, and in reviewing the surge the team found <strong>4,783 accounts</strong> that had signed up using temporary-domain email addresses as part of a referral farming operation. Those accounts have been banned. The 100-point requirement is the fix that keeps the reward pointed at people who actually bring in real players.",
       "The team also flagged that email codes and X connections were failing under load, with a fix rolling out.",
       "## What it means in practice",
-      "Referrals still pay 30 points each, and they're still uncapped \u2014 but the work no longer ends when someone signs up. Your friend has to actually start playing:",
+      "Referrals still pay 30 points each, and they're still uncapped \u2014 but the work no longer ends when someone signs up. <em>(Since superseded: referrals now pay 75, and the friend must deposit 100 $FLOWER.)</em> Your friend has to actually start playing:",
       "If they clear the one-time quests first (link a wallet, connect X, join Discord, five Discord posts \u2014 55 points) and then nurture daily, they'll cross 100 points in about <strong>a week</strong>. Nurturing alone, with no quests, takes about <strong>13 days</strong>. Depositing even the 5 $FLOWER minimum gets them there faster.",
       "## What to do differently",
       "Stop treating a sign-up as the finish line. The highest-value thing you can do now is help the people you refer get started \u2014 send them the one-time quest list, tell them to nurture daily, and check in during their first week. Fifty sign-ups who never open the game are now worth nothing; twenty who play for a week are worth 600 points.",
@@ -259,7 +282,7 @@ const YAKKAMON_POSTS = [
       "## The one date that matters",
       "<strong>October 1st.</strong> 250 points for one click \u2014 the same as eight referrals, and the best value on the entire board. You pay only the Ronin network fee.",
       "## Referrals are the whole free game",
-      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 30 points each they make up about <strong>60%</strong> of a realistic free total. Your first five are instant; after that your friend must verify Discord, verify Twitter/X and reach 100 points, so the work is in onboarding, not broadcasting. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
+      "Every other free action is capped by the calendar. Referrals aren't capped at all, and at 75 points each they make up about <strong>79%</strong> of a realistic total. Your first five are instant and stay free; after that your friend must link a wallet and deposit 100 $FLOWER of their own, so past your fifth this is no longer a free lever. Real people only \u2014 fake sign-ups are deducted and can pull your rank down.",
       "The full guide, with the daily and weekly routines and the points budget, is on the portal."
     ]
   },
