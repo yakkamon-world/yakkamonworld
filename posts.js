@@ -6,6 +6,26 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "yakkamon-roster-revealed",
+    category: "event",
+    title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
+    date: "Aug 17, 2026",
+    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch. Portraits only \u2014 no names, no types, no rarities \u2014 so here's what can and can't be read into it.",
+    body: [
+      "An official roster sheet has surfaced showing <strong>eighteen Yakkamon</strong> side by side \u2014 the first proper look at the creatures themselves rather than the systems around them.",
+      "## The one number that gives it context",
+      "The team has said to expect roughly <strong>50 to 60 Yakkamon at launch</strong>. Against that, eighteen is about <strong>a third of the early access roster</strong> \u2014 enough to read the art direction, nowhere near enough to plan around. Roughly two in every three creatures you'll meet are still unseen.",
+      "## What's actually on the sheet",
+      "Portraits, and nothing else: <strong>no names, no types, no rarities, no stats</strong>. The line-up leans on real animals given a chunky, expressive treatment \u2014 bears, foxes, pandas, badgers, ducks, frogs, deer, horses, a boar \u2014 plus two clear dragons and at least one plant-based creature. If there's a design thesis, it's recognisable rather than abstract: animals first, monsters second.",
+      "## The missing field that matters most is type",
+      "Because of type locking, a monster's type decides which resources it can gather at all \u2014 a Grass type gathers Wood, a Fire type is refused outright. A portrait therefore tells you almost nothing about whether you'd want one on a farm. Until types are attached, nobody can say which of these eighteen are worth chasing.",
+      "## What we're not going to do with it",
+      "We're not guessing types from colours (red might be Fire, or might be a Rock type that happens to be red), not reading rarity from grid position (that's production order, not a tier list), not attaching names (none are published, and the team has said names aren't final and may be community-influenced), and not assuming any of these are the Genesis Legendaries \u2014 Storm, Echo, Bloom and Tide are a separate pre-minted supply.",
+      "## What it does confirm",
+      "Modestly but genuinely: the creatures exist, they're finished to a consistent standard, and the art style is settled. For a project with early access in November or December, a coherent roster sheet a third of the way to the launch count is a reasonable place to be. It also lines up with the September commitment on monster and egg utilities \u2014 that's the release where these portraits start to mean something."
+    ]
+  },
+  {
     slug: "gameplay-guide-live",
     category: "community",
     title: "What We Now Know About How Yakkamon Actually Plays",
