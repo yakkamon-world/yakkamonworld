@@ -6,6 +6,28 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "after-the-race",
+    category: "guideline",
+    title: "The Race Ends in November \u2014 Here's the Game That Starts the Next Morning",
+    date: "Aug 18, 2026",
+    excerpt: "Your rank decides your monster and your entry date, then stops mattering. An opening-game plan for early access: why breadth beats depth, why your storage bin is your real ceiling, and why your wave is a market position rather than a head start.",
+    body: [
+      "Every serious piece written about Yakkamon so far \u2014 ours very much included \u2014 has been about the same eleven weeks. But the race does end. The board locks, the airdrop lands three days later, the doors open four days after that, and a completely different game begins that almost nobody has planned for.",
+      "## What your rank actually bought",
+      "Exactly three things: a monster if you land top 5,000, a trainer number that is pure cosmetics, and an entry date. It buys no resources, no land, no gear, no currency. A rank-800 trainer and a rank-15,000 trainer both start with an empty base and the same tutorial.",
+      "## Breadth beats depth",
+      "<strong>Type locking</strong> is a hard block, not an efficiency penalty \u2014 a Grass type gathers Wood and a Fire type is refused outright. Against roughly 50\u201360 species and regions holding unique materials, that means <strong>roster breadth, not quality, sets the ceiling on what you can produce at all</strong>. Twelve mediocre monsters of twelve types work twelve resource lines; four excellent monsters of two types work two. Catch widely before you catch well \u2014 and don't build around your Legendary in week one, because it is one type and cannot harvest what it isn't.",
+      "## Your storage bin is your real ceiling",
+      "Gathering stacks in a bin that fills offline and caps \u2014 20 early, 120 later, showing MAX when full. At MAX it stops accepting, so every hour spent full is production that never happened. The counter-intuitive result: past a point, adding monsters to a job doesn't raise output, it fills the bin faster and wastes more. Bin capacity is probably the highest-value early investment in the game.",
+      "## Your wave is a market position",
+      "Because every core resource and creature is tradable on-chain from day one, Wave 1 doesn't mainly enter a game two weeks early \u2014 it enters <strong>a market with no sellers</strong>. Later waves enter a cheaper, deeper market where gear can be bought rather than farmed, behind on progress but ahead on information. The real risk is Wave 4: no confirmed date, and deposited $FLOWER unlocks with your access rather than launch day, making it an undated lockup on real money.",
+      "## Upkeep is an unpriced tax",
+      "Monsters get hungry, hurt and tired, and a monster in a bad state isn't earning. Upkeep scales with roster size, which puts a natural limit on the breadth strategy: catch one of everything you can keep fed.",
+      "## What would overturn this",
+      "Cycle and stamina numbers are unpublished, only Grass\u2192Wood is confirmed of the type chart, monster utilities land in September and could make building around your Legendary correct after all, PvP isn't in early access, and market behavior is a guess. The reasoning is laid out so you can see where it breaks when the numbers arrive."
+    ]
+  },
+  {
     slug: "yakkamon-roster-revealed",
     category: "event",
     title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
