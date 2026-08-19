@@ -6,6 +6,28 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "updates-panel",
+    category: "event",
+    title: "Nobody Noticed the Number in Yakkamon's Own Screenshot",
+    date: "Aug 18, 2026",
+    excerpt: "An official screenshot of the in-game Updates panel: a news feed with nine days of history, bait and berries as a hunting cost, the first named region \u2014 and a storage bin sitting at 20/20 in the background.",
+    body: [
+      "There is a storage bin sitting at <strong>20/20</strong> in Yakkamon's own screenshot \u2014 full, stopped, banking nothing, on a world the studio has been playing for over a week. It is the most useful thing in the image, and it is in the background behind the thing we were meant to be looking at. Most Yakkamon reveals so far have been artifacts \u2014 a roster sheet, a HUD mock-up, a table in the docs. Static. The Updates panel is different: a live world with a history, a news feed with five dated posts, working bin counters in the background, and a button that drops you into the activity being announced.",
+      "## A live-ops system, running for at least nine days",
+      "The feed lists a new wild yakkamon sighting 4 hours ago, the Lumber Yard opening 1 day ago, weekly rewards rotating 2 days ago, referral boxes 5 days ago, and a welcome post 9 days back. That spread is what a real feed looks like, not what someone types into a mock-up \u2014 though timestamps in a test build can be seeded, and a staging world isn't the launch world.",
+      "## Hunting has an economy",
+      "The open post tells trainers to prepare bait and monsters, bring berries, and <strong>rest their squad first</strong>. Three mechanics fall out of one paragraph: bait exists, so hunting isn't walk-up-and-catch; berries are the consumable you spend to hunt; and stamina gates hunting as well as gathering, which means the idle and active halves of the game draw on the same pool.",
+      "## Bins cap at 20, and one is sitting full",
+      "Four storage counters are visible behind the panel: <strong>3/20</strong>, <strong>20/20</strong>, <strong>0/20</strong>, <strong>0/20</strong>. That's the first confirmation of the 20 cap in a live build rather than a mock-up \u2014 and one bin is at max, stopped, banking nothing, in the studio's own screenshot of a world they've played for a week. Overflow isn't a mistake careless players make. It's the default state of any bin you don't empty.",
+      "## Grasslands, and a changed menu",
+      "<strong>Grasslands</strong> is the first named region and looks like the starter area, which makes its type requirements the ones every new trainer meets first. The menu has also shifted from six buttons to five \u2014 Log became News and Items has gone, probably folded into the item bar. The UI is still moving.",
+      "## This changes our own advice",
+      "We argued that the opening week should be played breadth-first. We still think so, but this adds a cost we didn't account for: going wide means hunting a lot, and hunting costs berries plus squad stamina \u2014 the same stamina your gatherers use. Every catching trip is paid for twice. The revised version: <strong>go wide on types, but fund it first</strong>. Get a berry supply running before the spree, and stagger hunts so the whole squad isn't resting at once.",
+      "## What we still can't tell",
+      "Whether bins upgrade past 20 and at what cost. What bait actually does. How much stamina a hunt burns or how long a rest takes. Whether this is the launch build at all. And what the four new Grasslands creatures are \u2014 no names, no types, no images."
+    ]
+  },
+  {
     slug: "after-the-race",
     category: "guideline",
     title: "The Race Ends in November \u2014 Here's the Game That Starts the Next Morning",
