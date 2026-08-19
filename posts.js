@@ -6,6 +6,26 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "leaderboard-live",
+    category: "community",
+    title: "The Whole Deposit Board Is Now Public \u2014 And It Isn't Full",
+    date: "Aug 19, 2026",
+    excerpt: "A new Leaderboard section ranks every $FLOWER deposit on Base and Ronin, works out what each reward band costs today, and shows something you can't see anywhere else: barely 3,000 addresses have deposited at all, against 5,000 airdrop places.",
+    body: [
+      "There is a new tab on the portal. <a href=\"leaderboard.html\">Leaderboard</a> ranks every $FLOWER deposit made on Base and Ronin, scored on the published point rules, and lets you find your own position in it \u2014 then works out what the reward you are chasing would cost you today, and what the same reward costs if you leave it a month. Deposits are transfers on public blockchains, so none of it depends on anyone's word for it.",
+      "## Fewer addresses have deposited than there are prizes",
+      "A little over <strong>3,000 deposit addresses</strong> have ever received $FLOWER across both chains. The Genesis airdrop has <strong>5,000 places</strong>. That does not mean only 3,000 people are in the race \u2014 most pre-registered trainers have never deposited. It means that <strong>on deposit points alone the board does not yet reach 5,000 names</strong>: the Tide band at rank 2,000 is full, the Rare Egg band at 5,000 is not. The top of the real leaderboard is settled by money; the bottom half of the reward zone is settled by streaks, referrals and quests.",
+      "## The formula, checked against a real account",
+      "Points are <strong>amount \u00d7 (week multiplier + bulk bonus)</strong>. The two bonuses <strong>add</strong>, they do not multiply \u2014 at 2.8\u00d7 a 500 $FLOWER deposit earns 1,400 points plus a 100 bonus, because the bonus is 20% of the deposit and not 20% of the points. Before publishing, we rebuilt a real account's deposits from chain data and ran them through the formula: it returned 71,217 points and the game showed that account 71,217 points. Identical, not close.",
+      "## One transfer is worth more than ten",
+      "The bulk bonus is rated on each transfer separately \u2014 +10% at 50, +20% at 500, +40% at 5,000, +80% at 50,000. One address on the ranking shows 50,200 $FLOWER and just over 190,000 points, a total that only fits a single 50,000 transfer in the opening week. The same money in ten transfers of 5,000 would have paid roughly 170,000. For 5,000 $FLOWER today, one transfer pays 16,000 points against 15,000 split ten ways \u2014 and 7,000 if you wait for the 1.0\u00d7 floor. Splitting costs a little. Waiting costs more than half.",
+      "## What the board does not count",
+      "<strong>Nurture streaks and referral points do not exist on any blockchain</strong>, so nobody outside the team can see them. Every score here is a <em>floor</em>: real totals are higher and the official ranking will differ. A daily nurturer with a few referrals may be carrying a thousand-odd points we cannot see \u2014 enough to clear a great many small depositors, nowhere near enough to matter at the top, where single addresses hold six figures. Good picture of the top of the race, rough picture of the middle, poor one of the tail.",
+      "## The clock behind it",
+      "The multiplier steps down 0.2\u00d7 a week to a 1.0\u00d7 floor from 19 October, windows turn at <strong>02:00 UTC</strong> rather than midnight, and the final window closes at <strong>01:59 UTC on 16 November</strong>. Every line on the page only moves upwards from here, because everyone else is still depositing \u2014 which is why the planner asks how much headroom you want rather than aiming at today's number."
+    ]
+  },
+  {
     slug: "updates-panel",
     category: "event",
     title: "Nobody Noticed the Number in Yakkamon's Own Screenshot",
