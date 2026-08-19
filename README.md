@@ -105,7 +105,8 @@ yakkamonworld/                           ← everything is flat, no css/ or js/ 
 ├── community.html                       ← Community tab
 ├── tips.html                            ← Trainer Tips tab (leaderboard tactics)
 ├── faq.html                             ← FAQ tab
-├── stats.html                           ← Stats tab (locked trainer lookup teaser)
+├── leaderboard.html                     ← Leaderboard tab (deposit leaderboard, Base + Ronin)
+├── leaderboard.js                       ← fetches + renders the leaderboard from the worker
 ├── article-*.html                       ← one static page per news post
 ├── style.css                            ← all site styling (single source of truth)
 ├── posts.js                             ← news content — edit to add/change posts

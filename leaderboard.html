@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="analytics.js"></script>
+<title>Yakkamon Deposit Leaderboard &mdash; Base + Ronin Points</title>
+<link rel="canonical" href="https://yakkamonworld.com/leaderboard.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YakkamonWorld">
+<meta property="og:title" content="Yakkamon Deposit Leaderboard — Base + Ronin Points">
+<meta property="og:description" content="Live Yakkamon $FLOWER deposit leaderboard. Base and Ronin deposits combined, scored on the published point rules. Look up your deposit address and see your rank.">
+<meta property="og:url" content="https://yakkamonworld.com/leaderboard.html">
+<meta property="og:image" content="https://yakkamonworld.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Yakkamon_World">
+<meta name="twitter:title" content="Yakkamon Deposit Leaderboard — Base + Ronin Points">
+<meta name="twitter:description" content="Live Yakkamon $FLOWER deposit leaderboard. Base and Ronin deposits combined, scored on the published point rules. Look up your deposit address and see your rank.">
+<meta name="twitter:image" content="https://yakkamonworld.com/og-default.png">
+<meta name="description" content="Live Yakkamon $FLOWER deposit leaderboard. Base and Ronin deposits combined, scored on the published point rules. Look up your deposit address and see your rank.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Yakkamon Deposit Leaderboard",
+  "url": "https://yakkamonworld.com/leaderboard.html",
+  "description": "Live Yakkamon $FLOWER deposit leaderboard. Base and Ronin deposits combined, scored on the published point rules.",
+  "isPartOf": { "@type": "WebSite", "name": "YakkamonWorld", "url": "https://yakkamonworld.com/" },
+  "about": { "@type": "Thing", "name": "Yakkamon Season 0 pre-registration points" }
+}
+</script>
+<style>
+/* Leaderboard page only. Kept here rather than in style.css so the other
+   43 pages cannot be affected by a change made for this one. Uses the same
+   tokens as everything else, so it inherits the house style. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.lb-note{
+  background:var(--panel); border:4px solid var(--ink); border-left-width:11px; border-left-color:var(--red);
+  border-radius:var(--radius); padding:16px 20px; margin:8px 0 26px;
+}
+.lb-note p{margin:0; font-size:1rem; color:#3d3d50}
+
+.lb-stats{display:flex; gap:14px; flex-wrap:wrap; margin:0 0 8px}
+.lb-stat{
+  flex:1 1 170px; min-width:0; background:var(--panel);
+  border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink);
+  padding:14px 16px;
+}
+.lb-stat b{display:block; font-family:var(--font-display); font-size:1.9rem; line-height:1.1; letter-spacing:.02em}
+.lb-stat span{display:block; font-size:.76rem; text-transform:uppercase; letter-spacing:.06em; font-weight:800; color:#3d3d50}
+
+.lb-find{padding:22px}
+.lb-help{margin:0 0 14px; font-size:.97rem; color:#3d3d50}
+.lb-find-row{display:flex; gap:12px; flex-wrap:wrap; align-items:stretch}
+.lb-find-row input{
+  flex:1 1 320px; min-width:0; font-family:var(--font-body); font-weight:700; font-size:1rem;
+  padding:12px 14px; border:4px solid var(--ink); border-radius:999px; background:var(--cream); color:var(--ink);
+}
+.lb-find-row .pixel-btn{flex:0 0 auto}
+.lb-status{margin:12px 0 0; font-size:.95rem; min-height:1.3em; font-weight:800}
+.lb-status.err{color:var(--red)}
+
+.lb-result{background:var(--ink); color:#fff; border-radius:var(--radius); padding:18px 20px; margin:16px 0 0}
+.lb-result b{display:block; font-family:var(--font-display); font-size:clamp(1.8rem,6vw,2.6rem); line-height:1.1; letter-spacing:.03em; color:var(--yellow)}
+.lb-result p{margin:8px 0 0; font-size:1rem; color:#e9e9f2}
+.lb-result .lb-chase{color:var(--yellow); font-weight:800}
+.lb-result .lb-page-btn{margin-top:14px; font-size:.98rem; padding:7px 18px}
+
+.lb-bands{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:0 0 12px}
+.lb-band{background:var(--panel); border:4px solid var(--ink); border-radius:var(--radius); box-shadow:5px 5px 0 var(--ink); padding:12px 14px; min-width:0}
+.lb-band b{display:block; font-family:var(--font-display); font-size:1.4rem; line-height:1.15; letter-spacing:.02em}
+.lb-band .rank{font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; font-weight:800; color:#3d3d50}
+.lb-band .pts{margin-top:6px; font-size:1rem; font-weight:800}
+.lb-band .pts.open{color:var(--green)}
+.lb-band .cost{
+  margin-top:8px; padding-top:8px; border-top:2px dashed rgba(26,26,46,.25);
+  font-size:.9rem; font-weight:800; line-height:1.35;
+}
+.lb-band .cost span{display:block; font-weight:700; color:var(--sky-deep)}
+
+.lb-tablewrap{
+  overflow-x:auto; background:var(--panel);
+  border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink);
+}
+.lb-table{border-collapse:collapse; width:100%; font-size:.94rem; min-width:560px}
+.lb-table th,.lb-table td{padding:10px 14px; text-align:left; border-bottom:3px solid rgba(26,26,46,.14); white-space:nowrap}
+.lb-table th{background:var(--ink); color:#fff; font-family:var(--font-display); font-size:1rem; letter-spacing:.03em}
+.lb-table th.n,.lb-table td.n{text-align:right}
+.lb-table td.n{font-variant-numeric:tabular-nums}
+.lb-table tbody tr:last-child td{border-bottom:0}
+.lb-table tbody tr:nth-child(even){background:rgba(255,210,63,.16)}
+.lb-table tr.you{background:var(--yellow)!important}
+.lb-table tr.you td{font-weight:900}
+.lb-rank{font-family:var(--font-display); font-size:1.2rem; letter-spacing:.03em}
+.lb-addr{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem}
+.lb-empty{text-align:center; color:#3d3d50; font-weight:700}
+.lb-chip{
+  display:inline-block; font-size:.66rem; font-weight:900; text-transform:uppercase; letter-spacing:.05em;
+  border:2px solid var(--ink); border-radius:999px; padding:1px 8px; margin-left:8px; vertical-align:1px;
+}
+.lb-chip.base{background:var(--sky); color:#fff}
+.lb-chip.ronin{background:var(--green); color:#fff}
+.lb-chip.both{background:var(--yellow); color:var(--ink)}
+
+.lb-foot{font-size:.9rem; color:#3d3d50; margin:12px 0 0}
+
+/* --- history --- */
+/* style.css sets .section-head{display:flex}, which would beat the browser
+   default [hidden]{display:none}. Third time this has bitten — guard it. */
+.section-head[hidden]{display:none}
+
+/* --- planner --- */
+.lb-plan{padding:22px}
+/* style.css caps .panel-body p at 60ch — this page wants the full box */
+.panel .lb-find p, .panel .lb-plan p, .panel .lb-how p{max-width:none}
+.lb-label{display:block; font-family:var(--font-display); font-size:1.15rem; letter-spacing:.02em; margin:18px 0 8px}
+.lb-plan .lb-label:first-of-type{margin-top:0}
+.lb-points-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+.lb-points-row input{
+  flex:0 1 220px; min-width:0; font-family:var(--font-body); font-weight:800; font-size:1rem;
+  padding:11px 14px; border:4px solid var(--ink); border-radius:999px; background:var(--cream); color:var(--ink);
+}
+.lb-hint{flex:1 1 240px; min-width:0; font-size:.88rem; color:#3d3d50; font-weight:600}
+.lb-plan select{
+  width:100%; font-family:var(--font-body); font-weight:700; font-size:1rem;
+  padding:11px 14px; border:4px solid var(--ink); border-radius:999px; background:var(--cream); color:var(--ink);
+}
+.lb-plan p.lb-hint{flex:none; margin:8px 0 0}
+.lb-prizes{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px}
+.lb-prize{
+  text-align:left; font-family:var(--font-body); font-weight:800; font-size:.95rem;
+  background:var(--cream); border:3px solid var(--ink); border-radius:12px; box-shadow:3px 3px 0 var(--ink);
+  padding:11px 13px; cursor:pointer; transition:transform .08s ease, box-shadow .08s ease; min-width:0;
+}
+.lb-prize:hover{transform:translate(1px,1px); box-shadow:2px 2px 0 var(--ink)}
+.lb-prize[aria-pressed=true]{background:var(--sky); color:#fff}
+.lb-prize b{display:block; font-family:var(--font-display); font-size:1.3rem; letter-spacing:.02em; line-height:1.15}
+.lb-prize span{display:block; font-size:.76rem; font-weight:700; opacity:.9}
+.lb-plan-actions{margin:20px 0 0}
+
+.lb-verdict{background:var(--ink); color:#fff; border-radius:var(--radius); padding:20px 22px; margin:18px 0 0}
+.lb-verdict .big{
+  display:block; font-family:var(--font-display); letter-spacing:.03em; line-height:1.1;
+  font-size:clamp(1.9rem,6.5vw,2.9rem); color:var(--yellow);
+}
+.lb-verdict .usd{display:block; font-size:1.05rem; font-weight:800; margin-top:4px; color:#9fe0ff}
+.lb-verdict p{margin:10px 0 0; font-size:1rem; color:#e9e9f2}
+.lb-verdict.good .big{color:#7ff0a5}
+
+.lb-plan .lb-tablewrap{margin-top:20px; box-shadow:5px 5px 0 var(--ink)}
+/* Headings inside the planner result sit centred over their table, with room
+   above so they read as a break rather than a label stuck to the box. */
+#lb-plan-out .lb-label{text-align:center; margin:32px 0 20px}
+.lb-weeks{border-collapse:collapse; width:100%; font-size:.92rem; min-width:460px}
+.lb-weeks th,.lb-weeks td{padding:9px 13px; text-align:left; border-bottom:3px solid rgba(26,26,46,.14); white-space:nowrap}
+.lb-weeks th{background:var(--ink); color:#fff; font-family:var(--font-display); font-size:.95rem; letter-spacing:.03em}
+.lb-weeks th.n,.lb-weeks td.n{text-align:right}
+.lb-weeks td.n{font-variant-numeric:tabular-nums}
+.lb-weeks tbody tr:last-child td{border-bottom:0}
+.lb-weeks tr.now{background:var(--yellow)}
+.lb-weeks tr.now td{font-weight:900}
+.lb-weeks tr.past td{opacity:.4}
+
+/* --- where to find your deposit address --- */
+.lb-where{margin:0 0 16px; border:3px solid var(--ink); border-radius:12px; background:var(--cream); padding:0 14px}
+.lb-where summary{cursor:pointer; font-family:var(--font-display); font-size:1.05rem; letter-spacing:.02em; padding:11px 0; list-style:none}
+.lb-where summary::-webkit-details-marker{display:none}
+.lb-where summary::before{content:'\25B8 '; display:inline-block; transition:transform .12s ease}
+.lb-where[open] summary::before{transform:rotate(90deg)}
+.lb-where ol{margin:0 0 10px; padding-left:22px}
+.lb-where li{margin:0 0 7px; font-size:.95rem; color:#3d3d50}
+.lb-where .lb-help{margin:0 0 12px}
+
+/* --- pager --- */
+.lb-pager{display:flex; gap:14px; align-items:center; justify-content:center; flex-wrap:wrap; margin:16px 0 0}
+/* Author display:flex beats the browser default [hidden]{display:none}, so
+   the hidden attribute has to be restated. Same trap as .fx-price. */
+.lb-pager[hidden]{display:none}
+.lb-page-btn{
+  font-family:var(--font-display); font-size:1.05rem; letter-spacing:.02em; color:var(--ink);
+  background:var(--yellow); border:3px solid var(--ink); border-radius:999px; box-shadow:4px 4px 0 var(--ink);
+  padding:8px 20px; cursor:pointer; transition:transform .08s ease, box-shadow .08s ease;
+}
+.lb-page-btn:hover:not(:disabled){transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink)}
+.lb-page-btn:disabled{opacity:.4; cursor:not-allowed}
+.lb-page-info{font-weight:800; font-size:.95rem; min-width:0}
+.lb-jumpto{display:flex; gap:8px; align-items:center; min-width:0}
+.lb-jumpto input{
+  width:96px; font-family:var(--font-body); font-weight:800; font-size:.95rem; text-align:center;
+  padding:7px 10px; border:3px solid var(--ink); border-radius:999px; background:var(--panel); color:var(--ink);
+}
+.lb-jumpto .lb-page-btn{background:var(--sky); color:#fff; padding:7px 16px; font-size:1rem}
+@media(max-width:560px){
+  .lb-pager{gap:10px}
+  .lb-jumpto{flex:1 1 100%; justify-content:center}
+}
+
+@media(max-width:760px){
+  .lb-stat{box-shadow:5px 5px 0 var(--ink); padding:12px 14px}
+  .lb-stat b{font-size:1.55rem}
+  .lb-find-row .pixel-btn{width:100%; justify-content:center}
+  .lb-tablewrap{box-shadow:5px 5px 0 var(--ink)}
+  .lb-plan-actions .pixel-btn{width:100%; justify-content:center}
+  .lb-points-row input{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+<div class="mh-inner">
+<a class="mh-wordmark" href="index.html">YAKKAMON<span class="world">WORLD</span></a>
+<p class="mh-tagline">The Unofficial Yakkamon Player Portal</p>
+<div class="mh-social">
+<a class="follow-badge" href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="Join YakkamonWorld on Telegram" title="Join on Telegram">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fb-label">Join on Telegram</span>
+</a>
+<a class="follow-badge" href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="Subscribe to YakkamonWorld on YouTube" title="Subscribe on YouTube">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fb-label">Subscribe on YouTube</span>
+</a>
+<a class="follow-badge" href="https://x.com/Yakkamon_World" target="_blank" rel="noopener" aria-label="Follow @Yakkamon_World on X" title="Follow @Yakkamon_World">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/></svg><span class="fb-label">Follow @Yakkamon_World</span>
+</a>
+</div>
+<div class="mh-price">
+<a class="fx-price" id="flower-price" href="https://www.coingecko.com/en/coins/flower-2" target="_blank" rel="noopener" hidden aria-label="Live FLOWER token price on CoinGecko">
+<span class="fx-dot" aria-hidden="true"></span>
+<span class="fx-k">$FLOWER</span>
+<span class="fx-v" id="flower-price-value">&mdash;</span>
+<span class="fx-c" id="flower-price-change"></span>
+</a>
+</div>
+</div>
+</header>
+<div class="topbar">
+<div class="topbar-inner">
+<nav class="tabs"><a class="tab" href="index.html">Home</a>
+<a class="tab" href="pre-registration.html">Early Access</a>
+<a class="tab" href="news.html">News</a>
+<a class="tab" href="gameplay.html">Gameplay</a>
+<a class="tab" href="community.html">Community</a>
+<a class="tab active" href="leaderboard.html">Leaderboard</a>
+<a class="tab" href="tips.html">Tips</a>
+<a class="tab" href="faq.html">FAQ</a>
+<a class="tab" href="contact.html">Contact</a>
+<a class="tab tab-wide" href="videos.html">Videos</a>
+<button class="search-btn" id="search-btn" aria-label="Search the site" type="button">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+</nav>
+</div>
+</div>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-panel">
+    <div class="search-panel-head">
+      <input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
+    </div>
+    <p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+
+<div class="wrap page-head">
+  <h1>DEPOSIT LEADERBOARD</h1>
+  <p>Every $FLOWER deposit on Base and Ronin, scored on the published rules and ranked. Read straight off both blockchains, not from anyone's word for it.</p>
+</div>
+<main class="wrap">
+
+<section class="lb-note" id="how">
+  <p><strong>This counts deposits only.</strong> Nurture streaks and referral points do not exist on any blockchain, so nobody outside the team can see them. Everyone's real score is higher than the number here, and the real ranking will differ. Treat these lines as a floor, not a verdict.</p>
+</section>
+
+<div class="lb-stats" id="lb-stats" aria-live="polite"></div>
+
+<div class="section-head" id="find-me"><h2>FIND YOUR RANK</h2></div>
+
+<div class="panel">
+  <div class="panel-head"><span class="label">YOUR DEPOSIT ADDRESS</span></div>
+  <div class="lb-find">
+    <p class="lb-help">This is the address Yakkamon gave you to deposit to &mdash; the same one on Base and Ronin. <strong>It is not your wallet address.</strong></p>
+    <details class="lb-where">
+      <summary>Where do I find it?</summary>
+      <ol>
+        <li>Open your account on <a href="https://yakkamon.com/" target="_blank" rel="noopener">yakkamon.com</a> and scroll to <strong>QUESTS</strong>.</li>
+        <li>On the <strong>EARLY-DEPOSIT $FLOWER</strong> row, click the <strong>DEPOSIT</strong> button.</li>
+        <li>A panel opens showing the point tiers. Keep scrolling &mdash; your address sits near the bottom, under <strong>YOUR DEPOSIT ADDRESS &middot; BASE + RONIN</strong>.</li>
+      </ol>
+      <p class="lb-help">Safe to share: it only ever receives your own deposits, and anyone can read it off the blockchain anyway.</p>
+    </details>
+    <div class="lb-find-row">
+      <label class="sr-only" for="lb-addr">Your deposit address</label>
+      <input type="text" id="lb-addr" placeholder="0x&hellip;" spellcheck="false" autocomplete="off" inputmode="text">
+      <button class="pixel-btn" id="lb-go" type="button">FIND ME</button>
+    </div>
+    <div id="lb-me"></div>
+    <p class="lb-status" id="lb-status"></p>
+  </div>
+</div>
+
+<div class="section-head" id="plan"><h2>PLAN YOUR CLIMB</h2></div>
+
+<div class="panel">
+  <div class="panel-head"><span class="label">WHAT WOULD IT TAKE?</span></div>
+  <div class="lb-plan">
+    <p class="lb-help">Pick the monster you are chasing. This works out the deposit that would get you there, what it costs at today's $FLOWER price, and what the same goal costs if you leave it until later.</p>
+
+    <label class="lb-label" for="lb-points">Your points now</label>
+    <div class="lb-points-row">
+      <input type="number" id="lb-points" min="0" step="1" placeholder="e.g. 71217" inputmode="numeric">
+      <span class="lb-hint" id="lb-points-hint">Take this from your Yakkamon account, or look up your address above and it fills itself in.</span>
+    </div>
+
+    <label class="lb-label">What are you aiming for?</label>
+    <div class="lb-prizes" id="lb-prizes"></div>
+
+    <label class="lb-label" for="lb-margin">How safe do you want to play it?</label>
+    <select id="lb-margin">
+      <option value="1.15">Cutting it fine &mdash; aim 15% above today&rsquo;s line</option>
+      <option value="1.35" selected>Sensible &mdash; aim 35% above today&rsquo;s line</option>
+      <option value="1.6">Comfortable &mdash; aim 60% above today&rsquo;s line</option>
+    </select>
+    <p class="lb-hint">Everyone else keeps depositing, so the line to beat rises until the leaderboard locks. Aiming exactly at today&rsquo;s line means being overtaken.</p>
+
+    <div class="lb-plan-actions"><button class="pixel-btn" id="lb-plan-go" type="button">WORK IT OUT</button></div>
+    <div id="lb-plan-out"></div>
+  </div>
+</div>
+
+<div class="section-head" id="bands"><h2>WHAT EACH PRIZE TAKES</h2></div>
+<div class="lb-bands" id="lb-bands"></div>
+<p class="lb-foot" id="lb-bands-note"></p>
+<p class="lb-foot">These lines move every time someone deposits, and they only account for deposit points. The leaderboard that decides the airdrop locks one week before early access &mdash; holding a place matters as much as reaching it.</p>
+
+<div class="section-head" id="top"><h2>FULL RANKING</h2></div>
+<div class="lb-tablewrap">
+  <table class="lb-table">
+    <thead>
+      <tr>
+        <th class="n">#</th>
+        <th>Deposit address</th>
+        <th class="n">Points</th>
+        <th class="n">$FLOWER</th>
+        <th class="n">Deposits</th>
+      </tr>
+    </thead>
+    <tbody id="lb-rows">
+      <tr><td colspan="5" class="lb-empty">Loading the board&hellip;</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="lb-pager" id="lb-pager" hidden>
+  <button class="lb-page-btn" id="lb-prev" type="button">&larr; Previous</button>
+  <span class="lb-page-info" id="lb-page-info"></span>
+  <button class="lb-page-btn" id="lb-next" type="button">Next &rarr;</button>
+  <span class="lb-jumpto">
+    <label class="sr-only" for="lb-rank-input">Jump to rank</label>
+    <input type="number" id="lb-rank-input" min="1" placeholder="Rank" inputmode="numeric">
+    <button class="lb-page-btn" id="lb-rank-go" type="button">Go</button>
+  </span>
+</div>
+<p class="lb-foot" id="lb-updated"></p>
+
+<div class="section-head"><h2>HOW THE POINTS ARE WORKED OUT</h2></div>
+<div class="panel">
+  <div class="panel-head"><span class="label">THE FORMULA</span></div>
+  <div class="lb-how">
+    <p class="lb-formula">points = amount &times; (week multiplier + bulk bonus)</p>
+    <p>The two bonuses <strong>add together</strong>, they do not multiply. At 2.8&times;, a 500 $FLOWER deposit earns 1,400 points plus a 100 bonus &mdash; the bonus is 20% of the deposit, not 20% of the points.</p>
+    <p>The bulk bonus is rated on <strong>each transfer on its own</strong>: +10% at 50, +20% at 500, +40% at 5,000, +80% at 50,000. Splitting one deposit into several can drop each piece into a lower band. The week multiplier starts at 3.0&times; and falls 0.2&times; a week to a 1.0&times; floor, with windows turning at 02:00 UTC.</p>
+    <p>Deposits made on both chains are added together, because one deposit address covers Base and Ronin alike. Everything here is read from public blockchain data and recalculated regularly.</p>
+    <p class="lb-links"><a href="tips.html">Trainer tips</a> &middot; <a href="article-flower-deposit-guideline.html">Deposit guideline</a> &middot; <a href="article-leaderboard-guideline.html">Leaderboard guideline</a></p>
+  </div>
+</div>
+
+</main>
+
+
+<footer>
+<div class="wrap footer-map">
+  <div class="footer-col">
+    <h3>START HERE</h3>
+    <a href="index.html">Home</a>
+    <a href="pre-registration.html">Pre-registration guide</a>
+    <a href="pre-registration.html#important-dates">Important dates</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+  <div class="footer-col">
+    <h3>GUIDES &amp; TACTICS</h3>
+    <a href="tips.html">Trainer Tips</a>
+    <a href="article-free-to-play-guide.html">Free-to-play guide</a>
+    <a href="article-leaderboard-guideline.html">Leaderboard guideline</a>
+    <a href="gameplay.html">Gameplay systems</a>
+  </div>
+  <div class="footer-col">
+    <h3>LATEST NEWS</h3>
+    <a href="news.html">All news</a>
+    <a href="article-dev-stream-two-recap.html">Dev stream recap</a>
+    <a href="article-referral-rule-change-flower-deposit.html">Referral rule change</a>
+    <a href="article-flower-deposits-open-august-9.html">$FLOWER deposits</a>
+  </div>
+  <div class="footer-col">
+    <h3>COMMUNITY</h3>
+    <a href="community.html">Community &amp; channels</a>
+    <a href="videos.html">Videos</a>
+    <a href="leaderboard.html">Deposit leaderboard</a>
+    <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener">Telegram &#8599;</a>
+    <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener">YouTube &#8599;</a>
+    <a href="https://x.com/Yakkamon_World" target="_blank" rel="noopener">X &#8599;</a>
+  </div>
+</div>
+<div class="wrap footer-base">
+  <div>
+    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND &middot; <a href="privacy.html">PRIVACY</a></span>
+    <div class="footer-links">
+      <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on Telegram" title="YakkamonWorld on Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fl-label">Telegram &#8599;</span></a>
+      <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on YouTube" title="YakkamonWorld on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fl-label">YouTube &#8599;</span></a>
+      <a href="https://yakkamon.com/" target="_blank" rel="noopener" aria-label="Official Yakkamon pre-registration" title="Official Yakkamon pre-registration"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 7a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v3.2a2 2 0 0 0 0 3.6V17a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-3.2a2 2 0 0 0 0-3.6V7Z"/><g fill="#1A1A2E"><rect x="15" y="8" width="1.1" height="2.2"/><rect x="15" y="10.9" width="1.1" height="2.2"/><rect x="15" y="13.8" width="1.1" height="2.2"/></g></svg><span class="fl-label">Official Pre-Registration &#8599;</span></a>
+      <a href="https://x.com/yakkamon_game" target="_blank" rel="noopener" aria-label="Official Yakkamon on X" title="Official Yakkamon on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Z"/></svg><span class="fl-label">Official Twitter/X &#8599;</span></a>
+      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener" aria-label="Official Yakkamon docs" title="Official Yakkamon docs"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h8l4 4v16H6V2Zm7 1.6V7h3.4L13 3.6ZM8.5 11h7v1.5h-7V11Zm0 3.5h7V16h-7v-1.5Zm0-7h3V9h-3V7.5Z"/></svg><span class="fl-label">Official Docs &#8599;</span></a>
+    </div>
+  </div>
+  <span>BUILT BY THE COMMUNITY</span>
+</div>
+</footer>
+
+
+<script src="search.js"></script>
+<script src="leaderboard.js" defer></script>
+<script src="sfl-banner.js" defer></script>
+<script src="flower-price.js" defer></script>
+</body>
+</html>

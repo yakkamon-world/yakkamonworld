@@ -163,7 +163,13 @@ const SEARCH_INDEX = [
   { tag: "Community", title: "Follow @Yakkamon_World on X", excerpt: "This portal's own account — site updates, announcements and behind-the-scenes posts.", url: "community.html" },
   { tag: "Community", title: "YakkamonWorld Discord", excerpt: "The portal's own community server — not the official Yakkamon Discord. Not open yet.", url: "community.html" },
 
-  { tag: "Stats", title: "Trainer stats", excerpt: "Look up your roster, match history, and stats. Goes live once connected to real game data.", url: "stats.html" },
+  { tag: "Leaderboard", title: "Deposit leaderboard", excerpt: "Every $FLOWER deposit on Base and Ronin, scored on the published rules and ranked. Find your own deposit address.", url: "leaderboard.html" },
+  { tag: "Leaderboard", title: "What rank am I?", excerpt: "Paste your deposit address to see your deposit points, your position, and how far off the next airdrop band you are.", url: "leaderboard.html#find-me" },
+  { tag: "Leaderboard", title: "How many points does each airdrop band need?", excerpt: "Live point lines for Storm, Echo, Bloom, Tide and the Rare Egg, worked out from deposits made so far.", url: "leaderboard.html#bands" },
+  { tag: "Leaderboard", title: "How are deposit points calculated?", excerpt: "Amount \u00d7 (week multiplier + bulk bonus). The bonuses add together rather than multiplying, and each transfer is rated on its own.", url: "leaderboard.html#how" },
+  { tag: "Leaderboard", title: "Does the leaderboard include Ronin deposits?", excerpt: "Yes \u2014 Base and Ronin are read separately and added together, because one deposit address covers both chains.", url: "leaderboard.html#how" },
+  { tag: "Leaderboard", title: "Why is this not the official leaderboard?", excerpt: "It counts deposits only. Nurture streaks and referral points are not on any blockchain, so the real ranking sits above these numbers.", url: "leaderboard.html#how" },
+  { tag: "Leaderboard", title: "Who is depositing the most $FLOWER?", excerpt: "The top 100 deposit addresses by points, showing which chain each used and how many separate deposits they made.", url: "leaderboard.html#top" },
 
   { tag: "Tips", title: "Nurture after 12:00 UTC every day", excerpt: "The 36-hour streak grace period only covers a whole missed day if you nurtured in the second half of the UTC day.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "How much is a nurture streak worth?", excerpt: "6 points a day rising to 10 at day 30+ \u2014 about 526 points over 57 unbroken days.", url: "tips.html#streak-timing" },
