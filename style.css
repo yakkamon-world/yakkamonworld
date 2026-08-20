@@ -726,40 +726,6 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .dc-warn{display:block; margin-top:8px; font-size:.88rem; color:#8a2b2b; font-weight:800}
 
 /* ---------- Pre-registration ticket + countdown (home) ---------- */
-/* --- Sunflower Land referral banner (home, above the ticket) --- */
-.sfl-banner{ margin:34px 0 0; min-width:0 }
-/* reserve the strip's height before the script runs, so nothing jumps */
-.sfl-slot:empty{ display:block; aspect-ratio:1600/192; margin:34px 0 0 }
-/* home: banner sits under the ticket/countdown block */
-.prereg-ticket + .sfl-slot .sfl-banner{ margin-top:14px }
-/* above the footer on inner pages */
-.sfl-banner-tail{ max-width:1080px; margin:44px auto 40px; padding:0 24px; box-sizing:border-box }
-.sfl-link{
-  position:relative; display:block; overflow:hidden; text-decoration:none;
-  border:4px solid var(--ink); border-radius:var(--radius);
-  box-shadow:5px 5px 0 var(--ink); background:#8ed0f2; line-height:0;
-  transition:transform .12s ease, box-shadow .12s ease;
-}
-.sfl-link:hover{ transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--ink) }
-.sfl-link:active{ transform:translate(2px,2px); box-shadow:3px 3px 0 var(--ink) }
-.sfl-link img{ display:block; width:100%; height:auto; image-rendering:pixelated }
-.sfl-cta{
-  position:absolute; left:14px; bottom:11px; z-index:2;
-  font-family:var(--font-display); font-size:.95rem; letter-spacing:.4px;
-  color:var(--ink); background:var(--yellow); padding:7px 15px;
-  border:3px solid var(--ink); border-radius:999px; box-shadow:3px 3px 0 var(--ink);
-  line-height:1.15; white-space:nowrap;
-}
-.sfl-link:hover .sfl-cta{ background:#ffe27a }
-.sfl-link:hover img{ filter:saturate(1.06) }
-@media(max-width:720px){
-  .sfl-banner{ margin-top:26px }
-  .sfl-cta{ position:static; display:block; margin:0; border-radius:0;
-    border:0; border-top:4px solid var(--ink); box-shadow:none;
-    text-align:center; padding:10px 12px; font-size:1rem }
-  .sfl-link{ line-height:normal }
-}
-
 .prereg-ticket{
   margin:40px 0 0; border:5px solid var(--ink); border-radius:var(--radius);
   box-shadow:7px 7px 0 var(--ink); background:var(--ink); overflow:hidden; min-width:0;

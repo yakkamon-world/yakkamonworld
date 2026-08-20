@@ -142,7 +142,6 @@ const SEARCH_INDEX = [
   { tag: "Gameplay", title: "Seasonal System", excerpt: "Every three months, brand-new monsters are released into the wild.", url: "gameplay.html?system=seasonal-system" },
   { tag: "Gameplay", title: "Arena Battles", excerpt: "PvP arena combat \u2014 confirmed as post-launch, not part of early access.", url: "gameplay.html?system=arena-battles" },
 
-  { tag: "Guide", title: "Sunflower Land \u2014 the live game from the Yakkamon team", excerpt: "Thought Farm's farming game is playable now, free, browser-only, no wallet needed. Our link starts you with 3 Time Warp Totems, 20 Gems and 25 Love Charms.", url: "index.html" },
   { tag: "Videos", title: "Video: Legendary Supply Just Doubled \u2014 And The Rule Nobody's Reading", excerpt: "EP 11, 7:33 \u2014 the four Genesis Legendaries named, the ladder change explained band by band, and the odds recalculated.", url: "videos.html" },
   { tag: "Videos", title: "Is there a video on the airdrop change?", excerpt: "Yes \u2014 EP 11 covers the named Legendaries, the corrected supply maths and the leaderboard lock rule.", url: "videos.html" },
   { tag: "Videos", title: "Video: The Reward Ladder Changed", excerpt: "A 14-minute analysis of the 12 August change. Note: its supply conclusion was later corrected \u2014 see the written correction.", url: "videos.html" },
