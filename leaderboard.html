@@ -80,6 +80,9 @@
 .lb-band .rank{font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; font-weight:800; color:#3d3d50}
 .lb-band .pts{margin-top:6px; font-size:1rem; font-weight:800}
 .lb-band .pts.open{color:var(--green)}
+.lb-band.out{opacity:.62; box-shadow:none; border-style:dashed}
+.lb-band .pts.out{color:#8a2b2b}
+.lb-band .pts.unknown{color:#5a5a6e; font-weight:700}
 .lb-band .cost{
   margin-top:8px; padding-top:8px; border-top:2px dashed rgba(26,26,46,.25);
   font-size:.9rem; font-weight:800; line-height:1.35;
@@ -313,7 +316,7 @@
 <div class="panel">
   <div class="panel-head"><span class="label">WHAT WOULD IT TAKE?</span></div>
   <div class="lb-plan">
-    <p class="lb-help">Pick the monster you are chasing. This works out the deposit that would get you there, what it costs at today's $FLOWER price, and what the same goal costs if you leave it until later.</p>
+    <p class="lb-help">Pick the band you are chasing. This works out the deposit that would get you there, what it costs at today's $FLOWER price, and what the same goal costs if you leave it until later.</p>
 
     <label class="lb-label" for="lb-points">Your points now</label>
     <div class="lb-points-row">
@@ -321,7 +324,7 @@
       <span class="lb-hint" id="lb-points-hint">Take this from your Yakkamon account, or look up your address above and it fills itself in.</span>
     </div>
 
-    <label class="lb-label">What are you aiming for?</label>
+    <label class="lb-label">Which band are you aiming for?</label>
     <div class="lb-prizes" id="lb-prizes"></div>
 
     <label class="lb-label" for="lb-margin">How safe do you want to play it?</label>
@@ -337,10 +340,11 @@
   </div>
 </div>
 
-<div class="section-head" id="bands"><h2>WHAT EACH PRIZE TAKES</h2></div>
+<div class="section-head" id="bands"><h2>WHAT EACH BAND TAKES</h2></div>
+<p class="lb-foot lb-bands-intro">The airdrop pays by <strong>band</strong>, not by a sliding scale. Everyone who finishes between 51st and 250th takes home the same Echo; 50th takes a Storm; 5,001st takes nothing at all. Points spent inside a band you have already cleared buy you nothing &mdash; only crossing into the next one does.</p>
 <div class="lb-bands" id="lb-bands"></div>
 <p class="lb-foot" id="lb-bands-note"></p>
-<p class="lb-foot">These lines move every time someone deposits, and they only account for deposit points. The leaderboard that decides the airdrop locks one week before early access &mdash; holding a place matters as much as reaching it.</p>
+<p class="lb-foot">These lines move every time someone deposits, and they only account for deposit points. The leaderboard that decides the airdrop locks one week before early access &mdash; holding a band matters as much as reaching it, because there is no partial credit for finishing 5,001st.</p>
 
 <div class="section-head" id="top"><h2>FULL RANKING</h2></div>
 <div class="lb-tablewrap">

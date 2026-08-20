@@ -37,6 +37,21 @@
   var MIN_DEPOSIT = 5;
   var PAGE_SIZE = 100;
 
+  // The published airdrop ladder. Ranks are inclusive, and the reward is what
+  // you get for finishing anywhere INSIDE the range - so 51st and 250th both
+  // take home an Echo, and 50th takes a Storm. The worker only knows where the
+  // points lines sit; the names and the bands live here.
+  var LADDER = [
+    { from: 1,    to: 3,    name: "Storm + Echo" },
+    { from: 4,    to: 10,   name: "Storm + Bloom" },
+    { from: 11,   to: 50,   name: "Storm" },
+    { from: 51,   to: 250,  name: "Echo" },
+    { from: 251,  to: 500,  name: "Bloom" },
+    { from: 501,  to: 2000, name: "Tide" },
+    { from: 2001, to: 5000, name: "Rare Egg" },
+    { from: 5001, to: null, name: "Not eligible", none: true }
+  ];
+
   var data = null;
   var you = null;
   var price = null;
@@ -116,6 +131,39 @@
     return d(start) + " \u2013 " + d(end);
   }
 
+  // Ranks are the join between the ladder above and whatever the worker sends,
+  // so a renamed band on the server cannot silently change what the page says
+  // you win. A band with no line yet is one nobody has filled.
+  function bands() {
+    if (!data) return [];
+    var byRank = {};
+    (data.thresholds || []).forEach(function (t) { byRank[t.rank] = t.points; });
+    var players = data.players || 0;
+
+    return LADDER.map(function (b) {
+      var pts = b.none ? null : byRank[b.to];
+      return {
+        from: b.from,
+        to: b.to,
+        rank: b.to,
+        name: b.name,
+        none: !!b.none,
+        points: (typeof pts === "number" && pts > 0) ? pts : null,
+        // Told apart deliberately: an empty band because nobody has filled it,
+        // versus a line the worker simply did not send.
+        unfilled: !b.none && !pts && players < b.to,
+        range: rangeLabel(b)
+      };
+    });
+  }
+  function rangeLabel(b) {
+    return b.to ? fmt(b.from) + "\u2013" + fmt(b.to) : fmt(b.from) + "+";
+  }
+  // Everything a trainer can actually aim at: real bands with a known line.
+  function pickable() {
+    return bands().filter(function (b) { return !b.none; });
+  }
+
   function renderStats() {
     var el = $("lb-stats");
     if (!el || !data) return;
@@ -132,27 +180,37 @@
     var now = Math.floor(Date.now() / 1000);
     var m = multiplierAt(now);
 
-    el.innerHTML = data.thresholds.map(function (t) {
+    el.innerHTML = bands().map(function (b) {
+      if (b.none) {
+        return '<div class="lb-band out"><b>' + esc(b.name) + "</b>" +
+          '<span class="rank">Ranks ' + b.range + "</span>" +
+          '<div class="pts out">No airdrop</div></div>';
+      }
+      var line = b.points
+        ? fmt(b.points) + " pts"
+        : (b.unfilled ? "Not full yet" : "No line yet");
       var cost = "";
-      if (t.points) {
+      if (b.points) {
         // What it would take from a standing start: one deposit, this week.
-        var flower = amountFor(t.points, m);
+        var flower = amountFor(b.points, m);
         var dollars = usd(flower);
         cost = '<div class="cost">' + fmt(Math.ceil(flower)) + " $FLOWER" +
-          (dollars ? '<span>' + dollars + "</span>" : "") + "</div>";
+          (dollars ? "<span>" + dollars + "</span>" : "") + "</div>";
       }
-      return '<div class="lb-band"><b>' + esc(t.name) + "</b>" +
-        '<span class="rank">Top ' + fmt(t.rank) + "</span>" +
-        '<div class="pts' + (t.points ? "" : " open") + '">' +
-        (t.points ? fmt(t.points) + " pts" : "Not full yet") + "</div>" +
+      var ptsClass = b.points ? "" : (b.unfilled ? " open" : " unknown");
+      return '<div class="lb-band"><b>' + esc(b.name) + "</b>" +
+        '<span class="rank">Ranks ' + b.range + "</span>" +
+        '<div class="pts' + ptsClass + '">' + line + "</div>" +
         cost + "</div>";
     }).join("");
 
     var note = $("lb-bands-note");
     if (note) {
-      note.textContent = "The $FLOWER figure is what it would take to reach that line " +
-        "from zero, deposited this week in one transfer at " + m.toFixed(1) +
-        "\u00d7." + (price ? " Dollar amounts use the live $FLOWER price." :
+      note.textContent = "The reward is whatever band you finish in, not a running " +
+        "total \u2014 51st and 250th both take an Echo, 50th takes a Storm. Each points " +
+        "figure is the line at the bottom rank of that band, and the $FLOWER figure is " +
+        "what it would take to clear it from zero, deposited this week in one transfer at " +
+        m.toFixed(1) + "\u00d7." + (price ? " Dollar amounts use the live $FLOWER price." :
         " The $FLOWER price feed is unavailable, so dollar amounts are hidden.");
     }
   }
@@ -233,10 +291,10 @@
 
   function nextBandAbove(points) {
     if (!data) return null;
-    // thresholds run from hardest to easiest, so walk them backwards
-    for (var i = data.thresholds.length - 1; i >= 0; i--) {
-      var t = data.thresholds[i];
-      if (t.points && points < t.points) return t;
+    // bands run from hardest to easiest, so walk them backwards
+    var b = pickable();
+    for (var i = b.length - 1; i >= 0; i--) {
+      if (b[i].points && points < b[i].points) return b[i];
     }
     return null;
   }
@@ -261,8 +319,9 @@
     }
     var next = nextBandAbove(res.points);
     var chase = next
-      ? ' Next band up is <span class="lb-chase">' + esc(next.name) + "</span>, about " +
-        fmt(next.points - res.points) + " points away on deposits alone."
+      ? ' Next band up is <span class="lb-chase">' + esc(next.name) + "</span> at ranks " +
+        next.range + ", about " + fmt(next.points - res.points) +
+        " points away on deposits alone."
       : " That is inside the top band on deposits alone.";
 
     var target = Math.floor((res.rank - 1) / PAGE_SIZE);
@@ -281,10 +340,10 @@
   function drawPrizes() {
     var el = $("lb-prizes");
     if (!el || !data) return;
-    el.innerHTML = data.thresholds.map(function (t, i) {
+    el.innerHTML = pickable().map(function (b, i) {
       return '<button class="lb-prize" type="button" data-i="' + i + '" aria-pressed="' +
-        (pick === i ? "true" : "false") + '"><b>' + esc(t.name) + "</b><span>Top " +
-        fmt(t.rank) + "</span></button>";
+        (pick === i ? "true" : "false") + '"><b>' + esc(b.name) + "</b><span>Ranks " +
+        b.range + "</span></button>";
     }).join("");
   }
 
@@ -319,28 +378,35 @@
       return;
     }
     if (pick === null) {
-      out.innerHTML = '<div class="lb-verdict"><b class="big">Pick a monster</b>' +
-        "<p>Choose what you are aiming for and this will work out the deposit.</p></div>";
+      out.innerHTML = '<div class="lb-verdict"><b class="big">Pick a band</b>' +
+        "<p>Choose the band you are aiming for and this will work out the deposit.</p></div>";
       return;
     }
 
-    var prize = data.thresholds[pick];
+    var prize = pickable()[pick];
+    if (!prize) return;
     var margin = parseFloat(($("lb-margin") || {}).value) || 1.35;
     var target = prize.points * margin;
     var need = target - score;
     var now = Math.floor(Date.now() / 1000);
 
     if (!prize.points) {
-      out.innerHTML = '<div class="lb-verdict good"><b class="big">Band not full yet</b><p>Fewer than ' +
-        fmt(prize.rank) + " addresses have deposited, so " + esc(prize.name) +
-        " is open today. That will not last, and this estimate only counts deposit points.</p></div>";
+      out.innerHTML = '<div class="lb-verdict' + (prize.unfilled ? " good" : "") +
+        '"><b class="big">' + (prize.unfilled ? "Band not full yet" : "No line for that band") +
+        "</b><p>" +
+        (prize.unfilled
+          ? "Fewer than " + fmt(prize.rank) + " addresses have deposited, so " +
+            esc(prize.name) + " at ranks " + prize.range + " is open today. That will not last, " +
+            "and this estimate only counts deposit points."
+          : "There is no points line for " + esc(prize.name) + " at ranks " + prize.range +
+            " right now, so there is nothing honest to work back from.") + "</p></div>";
       return;
     }
 
     if (need <= 0) {
       out.innerHTML = '<div class="lb-verdict good"><b class="big">You are already there</b><p>Your ' +
-        fmt(score) + " points clear the " + esc(prize.name) +
-        " line with room to spare. Holding it to the lock is the job now, not adding to it.</p></div>" +
+        fmt(score) + " points clear the " + esc(prize.name) + " line at rank " + fmt(prize.rank) +
+        " with room to spare. Holding it to the lock is the job now, not adding to it.</p></div>" +
         "<h3 class=\"lb-label\">If you want more headroom</h3>" +
         weeksTable(Math.max(1, target * 0.1));
       return;
@@ -357,7 +423,8 @@
 
     out.innerHTML = '<div class="lb-verdict"><b class="big">' + fmt(Math.ceil(today)) + " $FLOWER</b>" +
       (costLine ? '<span class="usd">' + costLine + " at today\u2019s price</span>" : "") +
-      "<p>That is one single deposit this week to reach " + esc(prize.name) + ". You need about " +
+      "<p>That is one single deposit this week to reach " + esc(prize.name) +
+      " at ranks " + prize.range + ". You need about " +
       fmt(Math.ceil(need)) + " more points, and this week each $FLOWER is worth " +
       multiplierAt(now).toFixed(1) + "\u00d7 plus the bulk bonus.</p>" + splitNote + "</div>" +
       "<h3 class=\"lb-label\">What waiting costs</h3>" + weeksTable(need);
