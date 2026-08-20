@@ -853,6 +853,13 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 }
 .footer-col a:hover{color:#fff; text-decoration:underline}
 .footer-base{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+/* Credits / usage line. Sits under the disclaimer in the same column, quieter
+   than it so it reads as a footnote rather than a second disclaimer. */
+.footer-credit{display:block; margin-top:8px; max-width:96ch; font-weight:600;
+  font-size:.78rem; line-height:1.5; letter-spacing:0; text-transform:none;
+  opacity:.72}
+.footer-credit a{text-decoration:underline; text-underline-offset:2px}
+@media(max-width:760px){.footer-credit{font-size:.8rem; margin-top:10px}}
 @media(max-width:760px){
   .footer-map{grid-template-columns:repeat(2,1fr); gap:20px}
   /* 15px-tall links are a thumb-width apart on a phone; 8px of padding takes
