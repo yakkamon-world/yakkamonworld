@@ -185,7 +185,7 @@
 /* --- pager --- */
 .lb-pager{display:flex; gap:14px; align-items:center; justify-content:center; flex-wrap:wrap; margin:16px 0 0}
 /* Author display:flex beats the browser default [hidden]{display:none}, so
-   the hidden attribute has to be restated. Same trap as .fx-price. */
+   the hidden attribute has to be restated. */
 .lb-pager[hidden]{display:none}
 .lb-page-btn{
   font-family:var(--font-display); font-size:1.05rem; letter-spacing:.02em; color:var(--ink);
@@ -231,14 +231,6 @@
 </a>
 <a class="follow-badge" href="https://x.com/Yakkamon_World" target="_blank" rel="noopener" aria-label="Follow @Yakkamon_World on X" title="Follow @Yakkamon_World">
 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/></svg><span class="fb-label">Follow @Yakkamon_World</span>
-</a>
-</div>
-<div class="mh-price">
-<a class="fx-price" id="flower-price" href="https://www.coingecko.com/en/coins/flower-2" target="_blank" rel="noopener" hidden aria-label="Live FLOWER token price on CoinGecko">
-<span class="fx-dot" aria-hidden="true"></span>
-<span class="fx-k">$FLOWER</span>
-<span class="fx-v" id="flower-price-value">&mdash;</span>
-<span class="fx-c" id="flower-price-change"></span>
 </a>
 </div>
 </div>
@@ -444,6 +436,5 @@
 
 <script src="search.js"></script>
 <script src="leaderboard.js" defer></script>
-<script src="flower-price.js" defer></script>
 </body>
 </html>

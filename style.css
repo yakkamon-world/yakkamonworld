@@ -76,36 +76,6 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .mh-social .follow-badge:hover{background:var(--sky); border-color:var(--sky); color:#fff}
 .mh-social .follow-badge:hover svg{color:#fff}
 
-/* ---------- Live $FLOWER price (masthead, under the socials) ----------
-   Hidden until flower-price.js has a real number, so a failed fetch shows
-   nothing rather than a dash. The [hidden] rule is required: an author
-   display:inline-flex beats the browser default [hidden]{display:none}. */
-.mh-price{margin-top:16px; display:flex; justify-content:center; min-width:0}
-.fx-price{
-  display:inline-flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;
-  max-width:100%; min-width:0; padding:9px 20px; text-decoration:none;
-  background:rgba(255,255,255,.05); border:3px solid rgba(255,255,255,.16); border-radius:16px;
-  transition:border-color .1s ease;
-}
-.fx-price[hidden]{display:none}
-.fx-price:hover{border-color:var(--yellow)}
-.fx-price:focus-visible{outline:3px solid var(--yellow); outline-offset:3px}
-/* The dot means "this number is live", never the direction of the move,
-   so it stays green on a down day. */
-.fx-dot{width:8px; height:8px; border-radius:50%; background:var(--green); flex:none;
-  box-shadow:0 0 0 3px rgba(63,174,92,.25)}
-.fx-k{font-family:var(--font-display); font-weight:400; font-size:1rem; letter-spacing:.05em; color:var(--yellow)}
-.fx-v{font-family:var(--font-body); font-weight:900; font-size:1.3rem; color:#fff;
-  font-variant-numeric:tabular-nums; line-height:1.2}
-.fx-c{font-family:var(--font-body); font-weight:900; font-size:.9rem; color:var(--green); white-space:nowrap}
-.fx-c.down{color:var(--red)}
-@media(max-width:760px){
-  .mh-price{margin-top:12px}
-  .fx-price{padding:8px 16px; gap:10px}
-  .fx-v{font-size:1.15rem}
-  .fx-c{font-size:.85rem}
-}
-
 /* ---------- Sticky tab strip ---------- */
 .topbar{position:sticky; top:0; z-index:30; background:var(--ink); border-bottom:5px solid var(--red)}
 .topbar-inner{display:flex; align-items:center; justify-content:center; gap:8px; max-width:1080px; margin:0 auto; padding:0 16px; flex-wrap:wrap; min-width:0}

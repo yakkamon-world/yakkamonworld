@@ -1,7 +1,7 @@
 /* leaderboard.js — reads the deposit leaderboard from the worker and renders it.
  *
  * The worker holds the Dune API key and does the heavy lifting; this file only
- * ever sees a small JSON payload. Same defensive habits as flower-price.js:
+ * ever sees a small JSON payload. Defensive habits throughout:
  * render nothing rather than something wrong, and never leave a half-drawn page.
  *
  * Point WORKER at your deployed worker before this does anything.
