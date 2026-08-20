@@ -172,7 +172,10 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .dest-tile p{font-size:.85rem; margin:0; color:#4a4a5c; font-weight:600; line-height:1.4}
 
 /* ---------- Section head ---------- */
-.page-head{padding:36px 0 6px}
+/* Longhand on purpose: the shorthand used to reset the 24px side padding
+   .wrap supplies, which put every page title flush against the phone
+   screen edge while the content below it stayed inset. */
+.page-head{padding-top:36px; padding-bottom:6px}
 .page-head h1{font-size:clamp(1.8rem,4vw,2.6rem); margin:0 0 14px}
 .page-head p{font-size:1.1rem; max-width:none; margin:0; font-weight:600}
 
@@ -260,17 +263,18 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .filter-btn.active,.filter-btn:hover{background:var(--yellow)}
 
 /* ---------- Article ---------- */
-.article-head{padding:36px 0 10px}
+.article-head{padding-top:36px; padding-bottom:10px}  /* side padding stays with .wrap - see .page-head */
 .article-head .badge{margin-bottom:18px}
 .article-head h1{font-size:clamp(1.7rem,3.6vw,2.3rem); line-height:1.2; margin:0 0 14px}
 .article-meta{font-size:.9rem; color:#5a5a70; font-weight:700}
-.article-body{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:32px; margin:26px 0 60px; font-size:1.08rem}
+.article-body{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:32px; margin:26px 0 60px; font-size:1.08rem; overflow-wrap:break-word}
 @media(max-width:500px){.article-body{padding:20px 18px}}
 .article-body img,.prereg-section img{border:3px solid var(--ink); border-radius:14px; margin:18px 0}
 .article-body .img-caption,.prereg-section .img-caption{font-size:.85rem; color:#6a6a80; font-weight:600; margin:-10px 0 20px; text-align:center}
 .article-body p{margin:0 0 18px; font-weight:600}
 .article-body h2{font-size:1.5rem; margin:28px 0 12px}
 .back-link{display:inline-flex; align-items:center; gap:6px; color:var(--ink); text-decoration:none; font-size:.95rem; font-weight:800}
+@media(max-width:760px){.back-link{padding:6px 0}}
 .back-link:hover{color:var(--red)}
 .empty-state{text-align:center; padding:56px 20px; font-size:1.1rem; font-weight:700}
 
@@ -885,6 +889,10 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .footer-base{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
 @media(max-width:760px){
   .footer-map{grid-template-columns:repeat(2,1fr); gap:20px}
+  /* 15px-tall links are a thumb-width apart on a phone; 8px of padding takes
+     each row to ~30px without changing how the footer looks. */
+  .footer-col a{padding:8px 0}
+  .footer-base .footer-links a{padding:4px 0}
 }
 @media(max-width:420px){
   .footer-map{grid-template-columns:1fr}
