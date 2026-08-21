@@ -103,7 +103,7 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
   .topbar-inner{flex-wrap:wrap; padding:0 12px}
   .tabs{
     width:100%; padding:6px 0 10px; gap:6px;
-    display:grid; grid-template-columns:repeat(3,1fr);   /* 9 tabs = 3 even rows */
+    display:grid; grid-template-columns:repeat(3,1fr);   /* 10 tabs = 3 rows of 3, then .tab-wide (Contact) takes a full row, then Search */
   }
   .tab{padding:9px 4px; text-align:center; font-size:.82rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
   .tab .label-full{display:none}

@@ -24,6 +24,15 @@ const YAKKAMON_VIDEO_BLOCKS = [
 const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
+    id: "b75C5mtcKvo",
+    ep: "13",
+    runtime: "4:40",
+    block: "analysis",
+    title: "Yakkamon \u2014 Your Rank Buys Less Than You Think",
+    blurb: "Your wave is a market position, not a head start. Everything is tradable from day one, so Wave 1 walks into a market with no sellers, while a later wave arrives to cheaper, deeper stock and two weeks of everyone else's mistakes already priced in. What rank actually buys you \u2014 and the four assumptions that would overturn the whole argument.",
+    related: { href: "article-after-the-race.html", label: "Read the written version" },
+  },
+  {
     id: "KBhqtyYx-MM",
     ep: "11",
     runtime: "7:33",
@@ -52,6 +61,15 @@ const YAKKAMON_VIDEOS = [
   },
 
   // ---------- TACTICS ----------
+  {
+    id: "qz_CFPic72Q",
+    ep: "14",
+    runtime: "4:33",
+    block: "tactics",
+    title: "Yakkamon Leaderboard Is Live",
+    blurb: "The deposit leaderboard is now on this site, scored from on-chain Base and Ronin transfers on the published point rules. What it shows once you look: roughly 3,000 addresses have deposited against 5,000 airdrop places, and the weekly multiplier drops 0.2\u00d7 every Monday whether or not the timing ever feels right.",
+    related: { href: "leaderboard.html", label: "Open the deposit leaderboard" },
+  },
   {
     id: "aJLPrAnhs0I",
     ep: "05",
