@@ -24,6 +24,15 @@ const YAKKAMON_VIDEO_BLOCKS = [
 const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
+    id: "P-BK9OjLNME",
+    ep: "15",
+    runtime: "5:04",
+    block: "analysis",
+    title: "Yakkamon Dev Stream 8-21-26 Recap and Game Economy",
+    blurb: "The third dev stream in five minutes, plus the economy post that landed the same day. Combat turned out to be a lane-based 3v3 auto-battler, farm plots now degrade and need refertilising, identical boosts don't stack, and rarity is fixed at species level \u2014 so a good common can out-stat a middling rare. The economy half covers the split between free-to-play gathered resources and the tradeable layer, and what that does to the Wave 1 argument.",
+    related: { href: "article-dev-stream-three-recap.html", label: "Read the written version" },
+  },
+  {
     id: "b75C5mtcKvo",
     ep: "13",
     runtime: "4:40",
