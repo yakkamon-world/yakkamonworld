@@ -6,6 +6,28 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "economy-explained",
+    category: "event",
+    title: "Yakkamon Just Split Its Economy in Two \u2014 And It Breaks One of Our Arguments",
+    date: "Aug 21, 2026",
+    excerpt: "The official economy post walls free-to-play gathered resources off from the tradeable economy, gives basic monsters limited tradeability, gates rares behind an availability window and puts a burning fee on the in-game market. It also undoes part of what we published three days ago.",
+    body: [
+      "The team has published an economy and trading guide, and it is the most consequential release since the reward ladder changed. Seven numbered points \u2014 four of them genuinely new, one of which quietly rewrites how the first month of the game will work.",
+      "## Two economies, not one",
+      "The load-bearing point: <strong>assets are split into two classes</strong>. Easily gathered free-to-play resources are kept separate from the ones that take real effort, and the stated reason is that the gathering loops can be automated. That is an unusually honest admission \u2014 the team expects scripts, and rather than fight them with detection it has removed the incentive by making automated output economically inert. In practice that means the wood, stone and berries piling up in your <a href=\"gameplay.html?system=storage-bins\">storage bin</a> overnight are unlikely to be sellable to anyone. It matches what the dev streams already told us: Legendaries are NFTs, rares are SFTs, and commons are plain assets with no token behind them.",
+      "## This breaks one of our own arguments",
+      "Three days ago we argued that <a href=\"article-after-the-race.html\">your wave is a market position</a> \u2014 that Wave 1 enters a market with no sellers and captures a scarcity premium on ordinary materials. That rested on an assumption we named at the time: that every core resource is tradable. It isn't. <strong>The Wave 1 premium on ordinary materials probably doesn't exist, and the \u201cyou can buy your way to parity later\u201d comfort for Waves 3 and 4 is weaker too.</strong> The argument survives where it points at monsters and crafted goods, which are the tradeable layer. We have flagged the correction on the original piece.",
+      "## And reinforces another",
+      "If basic monsters have <strong>limited tradeability</strong>, you cannot buy your way out of a type gap. Every missing type is an expedition you personally fund with berries and squad stamina. <a href=\"gameplay.html?system=type-locking\">Type locking</a> just got more expensive and more valuable at once.",
+      "## Rares unlock late, and all at once",
+      "Legendaries and rares release in limited supplies or windows and only become tradeable once that window closes. Two consequences: <strong>you may not be able to sell your airdrop monster when it lands</strong>, and when the window does open it opens for everyone simultaneously \u2014 5,010 monsters becoming sellable on the same morning, held by people who have been waiting to sell.",
+      "## Shinies, and the burn nobody can check",
+      "Every monster carries rolled traits, and <strong>collectible shinies</strong> are confirmed for the first time \u2014 a rarity axis running crosswise to the Legendary/rare ladder, which means a common can outprice a rare. Whether that scarcity holds depends on breeding rules nobody has published. The in-game market runs on $FLOWER with a percentage fee described as a soft burn, either destroyed or recycled into rewards \u2014 two very different mechanisms with no split given. The fee rate, the burn share and the emission rate are all unpublished, so the deflationary claim is not false so much as <strong>currently unfalsifiable</strong>. Treat it as stated intent, not as a fact about the token.",
+      "## What to do about it",
+      "Get a Ronin wallet ready before the mid-September mint even if you deposited on Base; don't budget around flipping your airdrop monster; plan a week-one catching campaign rather than a shopping trip; and don't pay a premium for shinies until breeding is explained. None of it changes the deposit maths \u2014 the multiplier still steps down 0.2\u00d7 a week and the board still locks a week before early access."
+    ]
+  },
+  {
     slug: "leaderboard-live",
     category: "community",
     title: "The Whole Deposit Board Is Now Public \u2014 And It Isn't Full",

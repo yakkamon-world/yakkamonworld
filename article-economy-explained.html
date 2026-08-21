@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="analytics.js"></script>
+<title>Yakkamon's Economy Explained: Two Asset Tiers, Shinies and a FLOWER Burn</title>
+<link rel="canonical" href="https://yakkamonworld.com/article-economy-explained.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="YakkamonWorld">
+<meta property="og:title" content="Yakkamon's Economy Explained: Two Asset Tiers, Shinies and a FLOWER Burn">
+<meta property="og:description" content="The official economy post splits Yakkamon's assets into a free-to-play tier and a tradeable tier, gives basic monsters limited tradeability, gates rares behind an availability window and puts a burning fee on the in-game market. What it means for players — including the argument of ours it breaks.">
+<meta property="og:url" content="https://yakkamonworld.com/article-economy-explained.html">
+<meta property="og:image" content="https://yakkamonworld.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Yakkamon_World">
+<meta name="twitter:title" content="Yakkamon's Economy Explained: Two Asset Tiers, Shinies and a FLOWER Burn">
+<meta name="twitter:description" content="The official economy post splits Yakkamon's assets into a free-to-play tier and a tradeable tier, gives basic monsters limited tradeability, gates rares behind an availability window and puts a burning fee on the in-game market. What it means for players — including the argument of ours it breaks.">
+<meta name="twitter:image" content="https://yakkamonworld.com/og-default.png">
+<meta name="description" content="The official economy post splits Yakkamon's assets into a free-to-play tier and a tradeable tier, gives basic monsters limited tradeability, gates rares behind an availability window and puts a burning fee on the in-game market. What it means for players — including the argument of ours it breaks.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Yakkamon's Economy Explained: Two Asset Tiers, Shinies and a FLOWER Burn",
+ "description": "The official economy post splits Yakkamon's assets into a free-to-play tier and a tradeable tier, gives basic monsters limited tradeability, gates rares behind an availability window and puts a burning fee on the in-game market. What it means for players — including the argument of ours it breaks.",
+ "image": "https://yakkamonworld.com/og-default.png",
+ "author": {
+  "@type": "Organization",
+  "name": "YakkamonWorld",
+  "url": "https://yakkamonworld.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "YakkamonWorld",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://yakkamonworld.com/favicon-192.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://yakkamonworld.com/article-economy-explained.html"
+ },
+ "datePublished": "2026-08-21",
+ "dateModified": "2026-08-21"
+}
+</script>
+</head>
+<body>
+
+<header class="masthead">
+<div class="mh-inner">
+<a class="mh-wordmark" href="index.html">YAKKAMON<span class="world">WORLD</span></a>
+<p class="mh-tagline">The Unofficial Yakkamon Player Portal</p>
+<div class="mh-social">
+<a class="follow-badge" href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="Join YakkamonWorld on Telegram" title="Join on Telegram">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fb-label">Join on Telegram</span>
+</a>
+<a class="follow-badge" href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="Subscribe to YakkamonWorld on YouTube" title="Subscribe on YouTube">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fb-label">Subscribe on YouTube</span>
+</a>
+<a class="follow-badge" href="https://x.com/Yakkamon_World" target="_blank" rel="noopener" aria-label="Follow @Yakkamon_World on X" title="Follow @Yakkamon_World">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/></svg><span class="fb-label">Follow @Yakkamon_World</span>
+</a>
+</div>
+</div>
+</header>
+<div class="topbar">
+<div class="topbar-inner">
+<nav class="tabs"><a class="tab" href="index.html">Home</a>
+<a class="tab" href="pre-registration.html">Early Access</a>
+<a class="tab active" href="news.html">News</a>
+<a class="tab" href="gameplay.html">Gameplay</a>
+<a class="tab" href="community.html">Community</a>
+<a class="tab" href="leaderboard.html">Leaderboard</a>
+<a class="tab" href="tips.html">Tips</a>
+<a class="tab" href="videos.html">Videos</a>
+<a class="tab" href="faq.html">FAQ</a>
+<a class="tab tab-wide" href="contact.html">Contact</a>
+<button class="search-btn" id="search-btn" aria-label="Search the site" type="button">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+</nav>
+</div>
+</div>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-panel">
+    <div class="search-panel-head">
+      <input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
+    </div>
+    <p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+
+<div id="article-root">
+    <div class="wrap article-head">
+      <a class="back-link" href="news.html">&larr; Back to news</a>
+      <div style="height:22px"></div>
+      <span class="badge badge-event">Event</span>
+      <h1>Yakkamon Just Split Its Economy in Two</h1>
+      <div class="article-meta">Aug 21, 2026</div>
+    </div>
+
+    <div class="wrap"><div class="article-body">
+      <p>The Yakkamon team has published an economy and trading guide, and it is the most consequential thing they've released since the reward ladder changed. Seven numbered points, most of them a paragraph long. One of them quietly rewrites how the first month of the game will work &mdash; and, we think, breaks one of the arguments we published three days ago.</p>
+      <p>Here's what it says, what follows from it, and what it costs you if you plan around the wrong half.</p>
+
+      <h2>The seven points, in plain terms</h2>
+      <div class="table-scroll"><table class="prereg-table">
+        <tr><th>#</th><th>What the post says</th><th>New?</th></tr>
+        <tr><td>1</td><td>The economy is player-driven and peer-to-peer. Expect trainers to specialise &mdash; gathering, building, hunting, battling &mdash; and trade for what they don't produce.</td><td>Framing</td></tr>
+        <tr><td>2</td><td><strong>Assets are split into two classes.</strong> Easily gathered free-to-play resources are kept separate from things that take real effort. The stated reason: gathering loops can be automated, so cheap resources are walled off from the tradeable economy.</td><td><strong>New</strong></td></tr>
+        <tr><td>3</td><td><strong>Basic monsters have limited tradeability.</strong> Some you'll have to hunt yourself.</td><td><strong>New</strong></td></tr>
+        <tr><td>4</td><td><strong>Legendaries and rares release in limited supplies or windows, and become tradeable once that window closes.</strong></td><td><strong>New</strong></td></tr>
+        <tr><td>5</td><td>Every monster NFT carries unique traits &mdash; including collectible shinies.</td><td><strong>New</strong> (shinies)</td></tr>
+        <tr><td>6</td><td>Free mint and trainer airdrop launch on the Ronin marketplace. Once the game is live you deposit monsters in and use the in-game market.</td><td>Confirms</td></tr>
+        <tr><td>7</td><td>The in-game market runs on $FLOWER with a percentage fee acting as a soft burn &mdash; removed from circulation or recycled into rewards. The design intent is deflationary.</td><td><strong>New</strong></td></tr>
+      </table></div>
+      <p>Point 6 isn't news to anyone who watched the second dev stream; we <a href="article-dev-stream-two-recap.html">reported that mint-on-Ronin-then-deposit sequence</a> weeks ago. Points 2, 3, 4 and 7 are the ones worth reading twice.</p>
+
+      <h2>The headline: two economies, not one</h2>
+      <p>Point 2 is the load-bearing one. Yakkamon is not building a single market where everything you touch has a price. It is building <strong>a walled free-to-play layer and a tradeable layer above it</strong>, deliberately separated.</p>
+      <p>The reasoning given is anti-bot, and it's honest in a way studios usually aren't: the team says outright that the gathering loops can be automated. That is a notable admission. It means they expect scripts to run the idle half of the game, they have decided not to fight that with detection, and they have instead removed the incentive by making automated output economically inert.</p>
+      <div class="prereg-callout warning"><strong>What this almost certainly means in practice.</strong> Wood, stone, berries and the other things your monsters pile into a <a href="gameplay.html?system=storage-bins">storage bin</a> overnight are unlikely to be sellable to other players for real value. They feed your own base. The things that <em>are</em> tradeable will be the ones a script can't farm: hunted monsters, rare drops, crafted goods, and NFTs. The post doesn't draw that boundary explicitly &mdash; which is exactly the thing to ask them to publish.</div>
+      <p>This also lines up with something already on the record from the dev streams: <strong>Legendaries are NFTs, rares are semi-fungible tokens, and commons are plain in-game assets with no token behind them at all.</strong> That three-tier structure and this two-class asset split are the same design seen from two angles. Point 3 &mdash; basic monsters having limited tradeability &mdash; is that structure stated in gameplay terms rather than token terms.</p>
+
+      <h2>This breaks one of our own arguments</h2>
+      <p>Three days ago we argued in <a href="article-after-the-race.html">The Game That Starts the Next Morning</a> that your wave is a market position rather than a head start: that Wave 1 enters a market with no sellers and captures a scarcity premium on ordinary materials, while later waves arrive to a cheaper, deeper market where basic gear can be bought instead of farmed.</p>
+      <p>That reasoning rested on an assumption we stated at the time &mdash; that every core resource and creature is tradable from day one. Point 2 says otherwise. So:</p>
+      <ul class="prereg-list">
+        <li><strong>The Wave 1 scarcity premium on ordinary materials probably doesn't exist.</strong> If wood and berries aren't tradeable, there is no seven-day window in which the first cohort is the only supplier of them. That part of the argument was wrong.</li>
+        <li><strong>The Wave 3 and 4 consolation is weaker too.</strong> &ldquo;You can buy your way to parity on basics&rdquo; only works if basics have a market. Later waves keep their information advantage, but they do have to farm the free-to-play layer themselves, from scratch, the same as everyone.</li>
+        <li><strong>The argument survives where it points at monsters.</strong> Hunted creatures, rares and crafted goods <em>are</em> the tradeable layer. Wave position still determines who is selling those first, and to whom.</li>
+      </ul>
+      <p>Net effect: waves matter for the monster and item market, not for the resource market. That is a narrower claim than we made, and we'd rather correct it in public than let it sit. We've flagged the same note on the original piece.</p>
+
+      <h2>And it reinforces another one</h2>
+      <p>The same piece argued that <a href="gameplay.html?system=type-locking">type locking</a> makes roster <em>breadth</em>, not quality, the ceiling on what you can produce &mdash; and that catching one of everything beats perfecting a few.</p>
+      <p>Point 3 makes that argument stronger, not weaker. If basic monsters have limited tradeability, <strong>you cannot buy your way out of a type gap.</strong> A Fire type isn't a purchase, it's an expedition. Every missing type is a lane you personally have to go and open, using berries and squad stamina you also need for gathering. Breadth just got more expensive and more valuable at the same time.</p>
+
+      <h2>Rares unlock late &mdash; and everyone's unlock at once</h2>
+      <p>Point 4 is the one with a date attached to it, even if the date isn't given. Legendaries and rares drop in limited supplies or limited windows, and only become tradeable once that availability period ends.</p>
+      <p>Two consequences, and they pull in opposite directions:</p>
+      <ul class="prereg-list">
+        <li><strong>You may not be able to sell your airdrop monster when you get it.</strong> Anyone treating a top-5,000 finish as a liquid asset they can flip on reveal day should plan for a lockup of unknown length. The <a href="article-airdrop-breakdown.html">airdrop</a> pays out three days after the board locks; nothing says the trading window opens then.</li>
+        <li><strong>When it does open, it opens for everyone simultaneously.</strong> A supply cliff is the predictable result: 5,010 monsters, all of which become sellable on the same day, held by people who have been waiting to sell. If you intend to exit, being early in that queue is worth more than holding out for a headline price.</li>
+      </ul>
+      <p>The flip side is that a window-gated supply is a genuinely scarce one. <a href="article-genesis-legendaries.html">Storm at 50 units, Echo at 203, Bloom at 257</a> aren't numbers that get diluted later &mdash; unless breeding dilutes them, which is the open question below.</p>
+
+      <h2>Shinies: a rarity axis nobody can price yet</h2>
+      <p>Point 5 confirms per-monster unique traits and adds one word that wasn't in any previous material: <strong>shinies</strong>. Collectible variants, presumably visual, presumably rare.</p>
+      <p>This creates a second rarity axis running crosswise to the first. Your monster's tier &mdash; Legendary, rare, common &mdash; is set by the airdrop ladder and by supply caps. Its traits and shininess are rolled. That means <strong>a common can be worth more than a rare</strong>, which is normal for this genre and is the single most reliable way for new players to find value that money didn't already claim.</p>
+      <div class="prereg-callout warning"><strong>The caveat that matters.</strong> The dev streams described breeding lines with genetic degradation and <em>no hard cap on breeding</em>. Trait scarcity and shiny scarcity are only real if the roll can't be farmed. If breeding lets a large operation grind for shinies, the supply of them is limited by patience rather than by design, and today's collector premium won't hold. Nothing published tells us which it is.</div>
+
+      <h2>The fee, the burn, and the word &ldquo;deflationary&rdquo;</h2>
+      <p>Point 7 is where to be most careful, because it's the point most likely to be quoted as an investment thesis by people who didn't read it closely.</p>
+      <p>What it actually commits to: the in-game market is denominated in $FLOWER, and it takes a percentage fee. What it describes that fee as: a soft burn, which either removes $FLOWER from circulation <em>or</em> feeds it back into rewards. And the stated design goal is that the game is built so there is &ldquo;more taken out than given out&rdquo;.</p>
+      <p>Those two halves of the fee description are not the same mechanism at all. A burn destroys supply permanently. Recycling into rewards moves supply from traders to players &mdash; that's redistribution, and it's mildly inflationary in the hands of anyone who then sells. The post reserves the right to do either, and gives no split between them.</p>
+      <div class="table-scroll"><table class="prereg-table">
+        <tr><th>To judge the deflation claim you'd need</th><th>Published?</th></tr>
+        <tr><td>The marketplace fee percentage</td><td>No</td></tr>
+        <tr><td>What share of the fee burns vs. recycles</td><td>No</td></tr>
+        <tr><td>$FLOWER emission into the game per day</td><td>No</td></tr>
+        <tr><td>Expected market volume</td><td>Unknowable pre-launch</td></tr>
+        <tr><td>Other sinks &mdash; the contract-delivery burn from the dev streams</td><td>Mentioned, not sized</td></tr>
+      </table></div>
+      <p><strong>So the claim isn't false; it's currently unfalsifiable.</strong> &ldquo;Deflationary&rdquo; is a statement of intent about net flows, and every number needed to check it is unpublished. Treat it as a design goal the team is stating in good faith, and not as a fact about what $FLOWER will do.</p>
+
+      <h2>Ronin first, game second</h2>
+      <p>Point 6 restates the sequence: <a href="pre-registration.html#important-dates">free mint in mid-September</a>, monsters live on the Ronin marketplace immediately, in-game market only once early access opens in November or December.</p>
+      <p>Two practical things fall out of that. First, <strong>if you deposited on Base, you still need a Ronin wallet</strong> &mdash; the mint and the airdrop land there regardless of which chain your $FLOWER went in on. Set that up well before mid-September rather than on the day.</p>
+      <p>Second, there is a two-to-three month stretch where Yakkamon monsters trade on a public marketplace <em>with no game attached to them.</em> No utilities are live, no gameplay proves what a trait is worth, and the reveal isn't until mid-October. Prices in that window are pure narrative. If you're buying then, you're buying a story; if you're selling then, you're selling to someone who is.</p>
+
+      <h2>What's genuinely good here</h2>
+      <ul class="prereg-list">
+        <li><strong>The bot problem was addressed head-on.</strong> Walling off automatable output is a structural answer, not a detection arms race, and it's the approach with the better track record.</li>
+        <li><strong>Free-to-play is protected.</strong> The gathering loop stays available to everyone and can't be strip-mined by capital, because its output has no resale value to capital.</li>
+        <li><strong>Effort is where the value is.</strong> Hunting, rares and traits are the tradeable layer &mdash; things time and skill produce, not things a wallet produces.</li>
+        <li><strong>A real sink exists.</strong> A fee on every trade, plus the contract-delivery burn from the dev streams, is more sink design than most games this size ship with.</li>
+        <li><strong>Specialisation is a stated goal.</strong> A game that wants you to be a hunter or a builder rather than everything at once has more interesting trade than one where everyone farms the same thing.</li>
+      </ul>
+
+      <h2>What to be wary of</h2>
+      <ul class="prereg-list">
+        <li><strong>The free-to-play layer may have no earning path at all.</strong> If gathered resources can't be sold, the honest read is that free play buys progress, not income. Anyone pre-registering on the expectation of grinding into value should hear that clearly.</li>
+        <li><strong>&ldquo;Limited tradeability&rdquo; is undefined.</strong> It could mean untradeable, bound-on-catch, cooldown-gated, or capped per week. Those have wildly different consequences and the post picks none of them.</li>
+        <li><strong>The boundary line is unpublished.</strong> Nobody outside the team can currently say which resources sit on which side. That's the single most useful thing they could add.</li>
+        <li><strong>Window-gated tradeability creates a synchronised sell.</strong> See above.</li>
+        <li><strong>The deflation claim has no numbers behind it.</strong> See above.</li>
+        <li><strong>Liquidity concentrates on one chain.</strong> Ronin-only launch is simpler for the team; it's an extra step and an extra bridge risk for Base depositors.</li>
+      </ul>
+
+      <h2>What to actually do</h2>
+      <ul class="prereg-list">
+        <li><strong>Get a Ronin wallet ready before mid-September.</strong> Cheapest possible action, hard deadline, and the free mint doesn't wait.</li>
+        <li><strong>Don't budget around selling your airdrop monster.</strong> Assume it's locked until an unannounced window closes, and that everyone else's unlocks the same morning.</li>
+        <li><strong>Stop planning to buy your way to type coverage.</strong> Basic monsters are yours to hunt. Plan berries and squad stamina for a catching campaign in week one, not a shopping trip.</li>
+        <li><strong>Pick a lane early.</strong> The post is telling you specialisation is intended. Deciding now whether you're a hunter, a builder or a battler shapes which types you chase on day one.</li>
+        <li><strong>Don't pay a premium for shinies yet.</strong> Until breeding rules are published, nobody knows whether shiny supply is capped or grindable.</li>
+        <li><strong>Nothing here changes the deposit maths.</strong> The <a href="leaderboard.html">multiplier still steps down 0.2&times; a week</a> and the board still locks a week before early access. The economy post is about the game after the race, not the race.</li>
+      </ul>
+
+      <h2>The four questions we'd put to the team</h2>
+      <ul class="prereg-list">
+        <li>Which specific resources are on the tradeable side of the line, and which aren't?</li>
+        <li>What does &ldquo;limited tradeability&rdquo; mean mechanically for a basic monster?</li>
+        <li>How long is the availability window before Legendaries and rares become tradeable?</li>
+        <li>What is the marketplace fee, and what proportion of it is burned rather than recycled?</li>
+      </ul>
+      <p>All four are answerable today without revealing anything competitive, and all four change how a careful player spends the next three months.</p>
+
+      <div class="prereg-callout info"><strong>Source and standing.</strong> This is our reading of an official Yakkamon economy post, published on the team's own channels. The seven points above are summarised in our words; the analysis, the corrections and the criticisms are ours and are not endorsed by anyone. Where we've been wrong before we say so on the page it happened, and this piece contains one such correction.</div>
+
+      <h2>Read next</h2>
+      <ul class="prereg-list">
+        <li><a href="article-after-the-race.html">The Game That Starts the Next Morning</a> &mdash; the opening-week plan this post partly corrects</li>
+        <li><a href="article-dev-stream-two-recap.html">Dev stream recap</a> &mdash; where the NFT / SFT / plain-asset tiering was first confirmed</li>
+        <li><a href="article-airdrop-breakdown.html">The airdrop, band by band</a> &mdash; what actually lands in your wallet</li>
+        <li><a href="gameplay.html?system=arena-battles">Battling &amp; trading</a> &mdash; the system page for the market</li>
+      </ul>
+    </div></div>
+</div>
+
+
+<footer>
+<div class="wrap footer-map">
+  <div class="footer-col">
+    <h3>START HERE</h3>
+    <a href="index.html">Home</a>
+    <a href="pre-registration.html">Pre-registration guide</a>
+    <a href="pre-registration.html#important-dates">Important dates</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+  <div class="footer-col">
+    <h3>GUIDES &amp; TACTICS</h3>
+    <a href="tips.html">Trainer Tips</a>
+    <a href="article-free-to-play-guide.html">Free-to-play guide</a>
+    <a href="article-leaderboard-guideline.html">Leaderboard guideline</a>
+    <a href="gameplay.html">Gameplay systems</a>
+  </div>
+  <div class="footer-col">
+    <h3>LATEST NEWS</h3>
+    <a href="news.html">All news</a>
+    <a href="article-dev-stream-two-recap.html">Dev stream recap</a>
+    <a href="article-referral-rule-change-flower-deposit.html">Referral rule change</a>
+    <a href="article-flower-deposits-open-august-9.html">$FLOWER deposits</a>
+  </div>
+  <div class="footer-col">
+    <h3>COMMUNITY</h3>
+    <a href="community.html">Community &amp; channels</a>
+    <a href="videos.html">Videos</a>
+    <a href="leaderboard.html">Deposit leaderboard</a>
+    <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener">Telegram &#8599;</a>
+    <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener">YouTube &#8599;</a>
+    <a href="https://x.com/Yakkamon_World" target="_blank" rel="noopener">X &#8599;</a>
+  </div>
+</div>
+<div class="wrap footer-base">
+  <div>
+    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND &middot; <a href="about.html">ABOUT</a> &middot; <a href="privacy.html">PRIVACY</a></span>
+    <span class="footer-credit">Game content and images &copy; Thought Farm, from the official <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">docs.yakkamon.com</a> &mdash; used here for reference and commentary. <a href="about.html#usage">Usage&nbsp;&rarr;</a></span>
+    <div class="footer-links">
+      <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on Telegram" title="YakkamonWorld on Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fl-label">Telegram &#8599;</span></a>
+      <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on YouTube" title="YakkamonWorld on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fl-label">YouTube &#8599;</span></a>
+      <a href="https://yakkamon.com/" target="_blank" rel="noopener" aria-label="Official Yakkamon pre-registration" title="Official Yakkamon pre-registration"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 7a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v3.2a2 2 0 0 0 0 3.6V17a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-3.2a2 2 0 0 0 0-3.6V7Z"/><g fill="#1A1A2E"><rect x="15" y="8" width="1.1" height="2.2"/><rect x="15" y="10.9" width="1.1" height="2.2"/><rect x="15" y="13.8" width="1.1" height="2.2"/></g></svg><span class="fl-label">Official Pre-Registration &#8599;</span></a>
+      <a href="https://x.com/yakkamon_game" target="_blank" rel="noopener" aria-label="Official Yakkamon on X" title="Official Yakkamon on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Z"/></svg><span class="fl-label">Official Twitter/X &#8599;</span></a>
+      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener" aria-label="Official Yakkamon docs" title="Official Yakkamon docs"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h8l4 4v16H6V2Zm7 1.6V7h3.4L13 3.6ZM8.5 11h7v1.5h-7V11Zm0 3.5h7V16h-7v-1.5Zm0-7h3V9h-3V7.5Z"/></svg><span class="fl-label">Official Docs &#8599;</span></a>
+    </div>
+  </div>
+  <span>BUILT BY THE COMMUNITY</span>
+</div>
+</footer>
+
+<script src="search.js"></script>
+</body>
+</html>
