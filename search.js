@@ -5,6 +5,22 @@
 // so it shows up in search results too.
 
 const SEARCH_INDEX = [
+  { tag: "News", title: "Third Dev Stream: Combat Has Rules, Farms Wear Out, Rarity Isn\u2019t What You Thought", excerpt: "A lane-based 3v3 auto-battler, plots that degrade, boosts that don\u2019t stack, and rarity fixed at species level.", url: "article-dev-stream-three-recap.html" },
+  { tag: "News", title: "What changed in Yakkamon this week?", excerpt: "Combat became a lane-based 3v3 auto-battler, farm plots now degrade, identical boosts stopped stacking, and rarity was fixed at species level.", url: "article-dev-stream-three-recap.html" },
+  { tag: "Gameplay", title: "The Battle System \u2014 lane-based 3v3 auto-battling", excerpt: "Fixed lanes set before the fight, skills in a visible order, 3\u20135 rounds typical, MMR matchmaking, expensive respecs.", url: "gameplay.html?system=combat-system" },
+  { tag: "Gameplay", title: "How long does a Yakkamon battle last?", excerpt: "Three to five rounds as a rule of thumb \u2014 under a minute \u2014 with deliberate variance either side.", url: "gameplay.html?system=combat-system" },
+  { tag: "Gameplay", title: "Can I skip battles?", excerpt: "You can speed them up. Full skipping likely won\u2019t ship, because real-time interaction mechanics are in testing.", url: "gameplay.html?system=combat-system" },
+  { tag: "Gameplay", title: "Upkeep & Degradation \u2014 farms wear out", excerpt: "Plots degrade with use (1.6\u00d7 slower in the example shown) and refertilising costs resources. Plot groups scale non-linearly.", url: "gameplay.html?system=upkeep" },
+  { tag: "Gameplay", title: "Do I have to log in regularly?", excerpt: "Yes \u2014 an absence costs you twice: the bin caps out and your plots degrade, so what does run, runs slower.", url: "gameplay.html?system=upkeep" },
+  { tag: "Gameplay", title: "Do Yakkamon boosts stack?", excerpt: "Same-named boosts don\u2019t stack; differently named or higher-ranked ones do. Breadth of roster beats duplicates.", url: "gameplay.html?system=boost-stacking" },
+  { tag: "Gameplay", title: "Rarity & what it actually buys", excerpt: "Rarity is set at species level \u2014 no rare variants of commons \u2014 and the best commons can out-stat a middling rare.", url: "gameplay.html?system=rarity-tiers" },
+  { tag: "Gameplay", title: "Are legendaries always stronger?", excerpt: "No. They have a higher ceiling and exclusive traits, but a strong common can beat a middling rare on raw stats.", url: "gameplay.html?system=rarity-tiers" },
+  { tag: "Gameplay", title: "Breeding & genetics", excerpt: "Bloodlines carry stats down the line. No hard cap \u2014 degradation via rising random noise. Roughly 80\u201390% predictable.", url: "gameplay.html?system=breeding-genetics" },
+  { tag: "Gameplay", title: "Evolutions \u2014 and why they\u2019re hidden", excerpt: "Per-monster triggers: a level, an item, or a hidden condition. The game hints rather than explains, by design.", url: "gameplay.html?system=evolutions" },
+  { tag: "Gameplay", title: "Progression & endgame", excerpt: "Infinite levels, chapter releases, no economy resets \u2014 and a meta expected to shift from farming to fighting.", url: "gameplay.html?system=endgame" },
+  { tag: "Gameplay", title: "How do I log in to Yakkamon?", excerpt: "Email is the primary login method \u2014 no wallet required. Browser first, with a PWA you can install to your home screen.", url: "gameplay.html?system=platform-access" },
+  { tag: "Gameplay", title: "Is Yakkamon free to play?", excerpt: "Yes \u2014 free sign-up, email login, and wallets or NFTs are an optional layer on top.", url: "gameplay.html?system=platform-access" },
+  { tag: "Gameplay", title: "Can I customise my land?", excerpt: "Probably not at launch. Your gym is the exception \u2014 full customisation planned, and visiting trainers see it.", url: "gameplay.html?system=your-base" },
   { tag: "Home", title: "YakkamonWorld", excerpt: "The unofficial Yakkamon player portal — news, gameplay, and pre-registration all in one place.", url: "index.html" },
 
   { tag: "Pre-registration", title: "Pre-registration", excerpt: "Points, tiers, free mint, and Genesis monsters — explained simply.", url: "pre-registration.html" },

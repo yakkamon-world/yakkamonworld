@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://yakkamonworld.com/gameplay.html</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
@@ -236,5 +236,10 @@
     <loc>https://yakkamonworld.com/article-leaderboard-live.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yakkamonworld.com/article-dev-stream-three-recap.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

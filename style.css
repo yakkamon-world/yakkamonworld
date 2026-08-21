@@ -1063,3 +1063,10 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .gg-pill.ok{background:#CFEFD6}
 .gg-pill.no{background:#FFD9D9}
 .gg-pill.tbc{background:#EDE7F6}
+
+/* --- Gameplay section additions (21 Aug 2026 revision) --- */
+.page-updated{margin:10px 0 0; font-size:.92rem; font-weight:700; padding:10px 14px; border:3px solid var(--ink); border-radius:var(--radius); background:#FFE9A8}
+.page-updated a{font-weight:900}
+.gp-detail .gp-list{margin:12px 0 0; padding:0 0 0 20px}
+.gp-detail .gp-list li{margin:0 0 8px; line-height:1.55}
+.poster-rev{margin:0 0 14px; font-size:.95rem; font-weight:800; color:#1A1A2E; background:#FFD23F; border:3px solid var(--ink); border-radius:var(--radius); padding:9px 14px; display:inline-block}
