@@ -114,6 +114,9 @@
 .lb-chip.both{background:var(--yellow); color:var(--ink)}
 
 .lb-foot{font-size:.9rem; color:#3d3d50; margin:12px 0 0}
+/* "Updated X ago / next update in Y" beside the FULL RANKING heading. Sits
+   right-aligned on the .section-head flex row, wraps under it on phones. */
+.lb-fresh{font-family:var(--font-body); font-size:.9rem; font-weight:800; color:#3d3d50; text-align:right; min-width:0}
 
 /* --- history --- */
 /* style.css sets .section-head{display:flex}, which would beat the browser
@@ -338,7 +341,7 @@
 <p class="lb-foot" id="lb-bands-note"></p>
 <p class="lb-foot">These lines move every time someone deposits, and they only account for deposit points. The leaderboard that decides the airdrop locks one week before early access &mdash; holding a band matters as much as reaching it, because there is no partial credit for finishing 5,001st.</p>
 
-<div class="section-head" id="top"><h2>FULL RANKING</h2></div>
+<div class="section-head" id="top"><h2>FULL RANKING</h2><span class="lb-fresh" id="lb-fresh-top"></span></div>
 <div class="lb-tablewrap">
   <table class="lb-table">
     <thead>

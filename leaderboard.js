@@ -38,6 +38,10 @@
   ];
   var MIN_DEPOSIT = 5;
   var PAGE_SIZE = 100;
+  // How often the worker rebuilds the board from Dune (its REFRESH_HOURS
+  // setting). Only used for the "next update in..." countdown - keep in sync
+  // with the worker if that cadence ever changes.
+  var REFRESH_MS = 6 * 60 * 60 * 1000;
 
   // The published airdrop ladder. Ranks are inclusive, and the reward is what
   // you get for finishing anywhere INSIDE the range - so 51st and 250th both
@@ -90,6 +94,31 @@
     if (hrs < 24) return hrs + (hrs === 1 ? " hour ago" : " hours ago");
     var days = Math.round(hrs / 24);
     return days + (days === 1 ? " day ago" : " days ago");
+  }
+  // Writes the freshness line in two places: beside the FULL RANKING heading
+  // and under the table. Called on every render and ticked every 30s so the
+  // countdown moves without a reload.
+  function renderFresh() {
+    if (!data || !data.generatedAt) return;
+    var left = Date.parse(data.generatedAt) + REFRESH_MS - Date.now();
+    var next = "";
+    if (isFinite(left)) {
+      if (left <= 0) {
+        // The worker collects on a cron tick, so "overdue" can last a little
+        // while - promise "shortly", not a time we can't keep.
+        next = "next update due shortly";
+      } else {
+        var mins = Math.ceil(left / 60000);
+        next = "next update in about " + (mins < 60
+          ? mins + (mins === 1 ? " minute" : " minutes")
+          : Math.floor(mins / 60) + "h " + ((mins % 60) < 10 ? "0" : "") + (mins % 60) + "m");
+      }
+    }
+    var top = $("lb-fresh-top");
+    if (top) top.textContent = "Updated " + ago(data.generatedAt) + (next ? " \u00b7 " + next : "");
+    var stamp = $("lb-updated");
+    if (stamp) stamp.textContent = "Recalculated from Base and Ronin " + ago(data.generatedAt) + "." +
+      (next ? " " + next.charAt(0).toUpperCase() + next.slice(1) + "." : "");
   }
   function chainChip(row) {
     if (row.base > 0 && row.ronin > 0) return '<span class="lb-chip both">Both</span>';
@@ -251,8 +280,7 @@
         '<td class="n">' + r.deposits + "</td></tr>";
     }).join("");
 
-    var stamp = $("lb-updated");
-    if (stamp && data) stamp.textContent = "Recalculated from Base and Ronin " + ago(data.generatedAt) + ".";
+    renderFresh();
   }
 
   // Pages past the first are fetched on demand, so a 3,000-name board does not
@@ -334,7 +362,16 @@
       '">See my place in the table</button></div>';
 
     var jump = $("lb-jump");
-    if (jump) jump.addEventListener("click", function () { goToPage(target); });
+    if (jump) jump.addEventListener("click", function () {
+      // goToPage(n) returns early when page n is already showing - which it
+      // always is for a top-100 rank - so the scroll must happen here, on the
+      // row itself, after the page is guaranteed loaded.
+      goToPage(target, true).then(function () {
+        var row = document.querySelector("#lb-rows tr.you");
+        var dest = row || $("top");
+        if (dest) dest.scrollIntoView({ behavior: "smooth", block: row ? "center" : "start" });
+      });
+    });
 
     renderTable();
   }
@@ -534,11 +571,8 @@
       if (e.key === "Enter") { e.preventDefault(); jumpToRank(); }
     });
 
-    var jump = $("lb-jump");
-    if (jump) jump.addEventListener("click", function () {
-      var n = parseInt(jump.getAttribute("data-page"), 10);
-      if (isFinite(n)) goToPage(n);
-    });
+    // Keep the countdown moving between renders.
+    setInterval(renderFresh, 30000);
 
     loadPrice().then(load);
   }
