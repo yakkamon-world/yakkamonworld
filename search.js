@@ -215,7 +215,7 @@ const SEARCH_INDEX = [
   { tag: "Tips", title: "How much is a nurture streak worth?", excerpt: "6 points a day rising to 10 at day 30+ \u2014 about 526 points over 57 unbroken days.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "What does breaking a nurture streak cost?", excerpt: "You restart at 6 points a day and need 29 days to climb back \u2014 roughly 44 points on top of the day you missed.", url: "tips.html#streak-timing" },
   { tag: "Tips", title: "Trainer Tips", excerpt: "Practical leaderboard tactics worked through with real numbers.", url: "tips.html" },
-  { tag: "Tips", title: "$FLOWER deposit multiplier schedule", excerpt: "Week 1 is 3.0x, week 2 is 2.8x, dropping 0.2x weekly until it rests at 1.0x from week 11.", url: "tips.html#weekly-flower" },
+  { tag: "Tips", title: "$FLOWER deposit multiplier schedule", excerpt: "Week 1 is 3.0x and weeks 2 and 3 are both 2.8x \u2014 the drop was skipped after the week-2 pause \u2014 then 0.2x weekly until it rests at 1.0x from week 12.", url: "tips.html#weekly-flower" },
   { tag: "Tips", title: "$FLOWER size bonus rates", excerpt: "+10% at 50, +20% at 500, +40% at 5,000, +80% at 50,000 \u2014 rated per deposit, so the full amount must land in one transfer.", url: "tips.html#weekly-flower" },
   { tag: "Tips", title: "Deposit your $FLOWER early, in one transfer", excerpt: "Week-by-week multiplier schedule from 3x down to 1x, the per-deposit size bonus, and what waiting or splitting actually costs.", url: "tips.html#weekly-flower" },
   { tag: "Tips", title: "Weekly vs final leaderboard ranking", excerpt: "Final ranking is all-time points and pays once; the weekly board resets and pays boxes, tickets and loot every week.", url: "tips.html#weekly-flower" },

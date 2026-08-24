@@ -5,12 +5,18 @@
 // 3x" means the site quietly goes wrong every Monday, so this works it out from
 // the date instead.
 //
+// ONE EXCEPTION: depositing was paused during week 2, so the team held week 3
+// (24 Aug) at 2.8x instead of dropping to 2.6x. The -0.2x step resumes from
+// week 4, which shifts every later week — and the 1.0x floor — one week later
+// (floor now from week 12, 26 Oct).
+//
 // Renders into any element with class .deposit-week.
 //
-// Week 1 starts 10 Aug 2026 (00:00 UTC) — the moment deposits opened, which is
-// 9 Aug 8:00 PM ET. Weeks run Monday to Sunday from there.
+// Week 1 starts 10 Aug 2026 at 02:00 UTC — the official windows run 02:00 UTC
+// Monday to 01:59 UTC the next Monday, NOT midnight to midnight. The displayed
+// date range is the Monday-to-Sunday span, matching the schedule tables.
 
-const WEEK_ONE_START_UTC = Date.UTC(2026, 7, 10);   // 10 Aug 2026
+const WEEK_ONE_START_UTC = Date.UTC(2026, 7, 10, 2);   // 10 Aug 2026, 02:00 UTC
 const START_RATE = 3.0;
 const STEP = 0.2;
 const FLOOR_RATE = 1.0;
@@ -20,7 +26,10 @@ const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
   "use strict";
 
   function rateForWeek(week) {
-    return Math.max(FLOOR_RATE, +(START_RATE - STEP * (week - 1)).toFixed(1));
+    // Week 3 was held at week 2's 2.8x after the week-2 deposit pause, so from
+    // week 3 onward the schedule runs one step behind the original plan.
+    var steps = week <= 2 ? week - 1 : week - 2;
+    return Math.max(FLOOR_RATE, +(START_RATE - STEP * steps).toFixed(1));
   }
 
   function fmt(ms) {
@@ -47,7 +56,8 @@ const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
     const week = Math.floor((now - WEEK_ONE_START_UTC) / WEEK_MS) + 1;
     const rate = rateForWeek(week);
     const weekStart = WEEK_ONE_START_UTC + (week - 1) * WEEK_MS;
-    const weekEnd = weekStart + WEEK_MS - 1;
+    const weekEnd = weekStart + WEEK_MS - 1;          // next Monday 01:59 UTC
+    const shownEnd = weekStart + 6 * 24 * 60 * 60 * 1000;  // the Sunday, for display
     const atFloor = rate <= FLOOR_RATE;
     const nextRate = rateForWeek(week + 1);
 
@@ -55,7 +65,7 @@ const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
       el.innerHTML =
         '<span class="dw-tag">LIVE NOW</span>' +
         '<span class="dw-body">Deposit week <strong>' + week + '</strong> &middot; ' +
-        fmt(weekStart) + '&ndash;' + fmt(weekEnd) + ' &middot; paying <strong>' +
+        fmt(weekStart) + '&ndash;' + fmt(shownEnd) + ' &middot; paying <strong>' +
         rate.toFixed(1) + '&times;</strong>' +
         (atFloor
           ? '. This is the floor &mdash; the rate no longer drops.'

@@ -84,7 +84,7 @@ const YAKKAMON_POSTS = [
       "## What the board does not count",
       "<strong>Nurture streaks and referral points do not exist on any blockchain</strong>, so nobody outside the team can see them. Every score here is a <em>floor</em>: real totals are higher and the official ranking will differ. A daily nurturer with a few referrals may be carrying a thousand-odd points we cannot see \u2014 enough to clear a great many small depositors, nowhere near enough to matter at the top, where single addresses hold six figures. Good picture of the top of the race, rough picture of the middle, poor one of the tail.",
       "## The clock behind it",
-      "The multiplier steps down 0.2\u00d7 a week to a 1.0\u00d7 floor from 19 October, windows turn at <strong>02:00 UTC</strong> rather than midnight, and the final window closes at <strong>01:59 UTC on 16 November</strong>. Every line on the page only moves upwards from here, because everyone else is still depositing \u2014 which is why the planner asks how much headroom you want rather than aiming at today's number."
+      "The multiplier steps down 0.2\u00d7 a week to a 1.0\u00d7 floor from 26 October (week 3 held at 2.8\u00d7 after the week-2 deposit pause), windows turn at <strong>02:00 UTC</strong> rather than midnight, and the final window closes at <strong>01:59 UTC on 16 November</strong>. Every line on the page only moves upwards from here, because everyone else is still depositing \u2014 which is why the planner asks how much headroom you want rather than aiming at today's number."
     ]
   },
   {
@@ -207,7 +207,7 @@ const YAKKAMON_POSTS = [
       "## The real deadline",
       "Nothing on the page is a fixed date \u2014 everything hangs off a launch window that spans two months. Chaining it together gives roughly <strong>11 to 16 more weeks of leaderboard</strong> from today. Plan for the short end: if it runs long you keep the points anyway.",
       "## The asymmetry worth acting on",
-      "The deposit multiplier reaches its 1\u00d7 floor on 19 October \u2014 between two and seven weeks <em>before</em> the leaderboard locks. The most competitive stretch of the race is also the stretch where $FLOWER buys the fewest points, which front-loads every deposit decision to right now.",
+      "The deposit multiplier reaches its 1\u00d7 floor on 26 October \u2014 a week later than first scheduled after the week-2 pause, still between one and six weeks <em>before</em> the leaderboard locks. The most competitive stretch of the race is also the stretch where $FLOWER buys the fewest points, which front-loads every deposit decision to right now.",
       "## What's good",
       "The lock is anchored and will be announced with notice, so nobody wakes up to a board that closed overnight. Rewards land three days after the lock and before launch. The mint reveal in mid-October arrives while you can still climb. And Waves 1 to 3 are only two weeks apart, so mid-table finishes cost far less time than the rank gap suggests.",
       "## What's concerning",
@@ -375,7 +375,7 @@ const YAKKAMON_POSTS = [
       "Buried in the guideline is the detail most worth knowing: <strong>percentage-based withdrawal limits may apply for the first few weeks after launch</strong>. It caps how much can be withdrawn in a given period, not whether you can withdraw, and the limits lift as the project settles. Reasonable and common \u2014 but it does mean your deposit isn't instantly liquid on day one.",
       "## The rates the docs don't give you",
       "The guideline says bigger deposits earn <strong>exponentially</strong> more, which is accurate but vague. The numbers live in your dashboard's deposit panel, and there are two bonuses stacked together.",
-      "<strong>The weekly multiplier decays.</strong> The opening week (10\u201316 Aug) pays <strong>3\u00d7</strong>, falling 0.2\u00d7 every week until it rests at 1\u00d7 from around 19 October.",
+      "<strong>The weekly multiplier decays.</strong> The opening week (10\u201316 Aug) pays <strong>3\u00d7</strong>, falling 0.2\u00d7 every week \u2014 held at 2.8\u00d7 in week 3 after the week-2 deposit pause \u2014 until it rests at 1\u00d7 from around 26 October.",
       "<strong>The size bonus is per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount has to land in one transfer \u2014 25 then another 25 does not reach the 50 tier.",
       "## What that means",
       "Both bonuses push the same way: deposit early, in single larger transfers. The same 5,000 $FLOWER is worth <strong>17,000 points</strong> as one transfer in the opening week, and <strong>6,000</strong> as ten deposits of 500 after the multiplier bottoms out. Same money, a 65% swing.",
@@ -392,7 +392,7 @@ const YAKKAMON_POSTS = [
       "Thought Farm ran their first Yakkamon-only Discord stream on August 6th. A lot changed, and some of it reverses advice that was correct last week \u2014 including ours. Here's everything that matters.",
       "## 1. The $FLOWER deposit system has been rebuilt",
       "There are now <strong>two separate bonuses</strong>, and both reward depositing <em>early</em> and <em>in larger single transfers</em>.",
-      "<strong>A weekly multiplier.</strong> <strong>3\u00d7</strong> through the opening week, then falling <strong>0.2\u00d7 every week</strong> until it rests at 1\u00d7. You keep the $FLOWER; the multiplier applies to points only.",
+      "<strong>A weekly multiplier.</strong> <strong>3\u00d7</strong> through the opening week, then falling <strong>0.2\u00d7 every week</strong> until it rests at 1\u00d7 (week 3 held at 2.8\u00d7 after the week-2 pause). You keep the $FLOWER; the multiplier applies to points only.",
       "<strong>A size bonus, rated per deposit.</strong> It doubles at every step \u2014 +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000 \u2014 and the full amount must land in one transfer. Depositing 25 and then another 25 does <strong>not</strong> reach the 50 tier.",
       "The stated intent is to stop a last-minute rush before launch. <strong>This reverses our own tip</strong>, which advised splitting deposits weekly on the basis that the bonus followed your cumulative total. Our tip has been rewritten to match.",
       "## 2. The official X account, and 10 free points",

@@ -18,11 +18,13 @@
     "https://yakkamon-counter-worker.yakkamonworld.workers.dev/flower";
 
   // Deposit windows: each starts 02:00 UTC, last closes 16 Nov 2026 01:59 UTC.
+  // Week 3 (24 Aug) held at 2.8x after the week-2 deposit pause, so every
+  // later window - and the 1.0x floor - lands one week later than first planned.
   var WINDOWS = [
-    ["2026-08-10", 3.0], ["2026-08-17", 2.8], ["2026-08-24", 2.6],
-    ["2026-08-31", 2.4], ["2026-09-07", 2.2], ["2026-09-14", 2.0],
-    ["2026-09-21", 1.8], ["2026-09-28", 1.6], ["2026-10-05", 1.4],
-    ["2026-10-12", 1.2], ["2026-10-19", 1.0]
+    ["2026-08-10", 3.0], ["2026-08-17", 2.8], ["2026-08-24", 2.8],
+    ["2026-08-31", 2.6], ["2026-09-07", 2.4], ["2026-09-14", 2.2],
+    ["2026-09-21", 2.0], ["2026-09-28", 1.8], ["2026-10-05", 1.6],
+    ["2026-10-12", 1.4], ["2026-10-19", 1.2], ["2026-10-26", 1.0]
   ].map(function (w) {
     return { start: Date.parse(w[0] + "T02:00:00Z") / 1000, mult: w[1] };
   });
