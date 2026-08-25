@@ -136,8 +136,9 @@ const YAKKAMON_POSTS = [
     category: "event",
     title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
     date: "Aug 17, 2026",
-    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch. Portraits only \u2014 no names, no types, no rarities \u2014 so here's what can and can't be read into it.",
+    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated 25 Aug as the sheet grew to twenty-one. Portraits only \u2014 no names, no types, no rarities.",
     body: [
+      "<em>Update, 25 August:</em> a newer official sheet keeps the original eighteen and starts a fourth row with <strong>three new creatures</strong> \u2014 a pink owl, a blossom-pink creature carrying a small bowl, and a pale hooded creature \u2014 taking the revealed roster to <strong>twenty-one</strong>, roughly two-fifths of the expected 50\u201360. Still no names, no types, no rarities. The original piece follows as written.",
       "An official roster sheet has surfaced showing <strong>eighteen Yakkamon</strong> side by side \u2014 the first proper look at the creatures themselves rather than the systems around them.",
       "## The one number that gives it context",
       "The team has said to expect roughly <strong>50 to 60 Yakkamon at launch</strong>. Against that, eighteen is about <strong>a third of the early access roster</strong> \u2014 enough to read the art direction, nowhere near enough to plan around. Roughly two in every three creatures you'll meet are still unseen.",
