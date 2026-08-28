@@ -22,7 +22,7 @@ const YAKKAMON_POSTS = [
       "## The line that matters: logistics",
       "Moving and sharing resources between Regions \u201cbecomes a core part of the strategy\u201d. That sentence only makes sense if <strong>resources are held per Region</strong>. What a transfer costs is unpublished \u2014 and it is the number every planning tool for this game would need. New system page: <a href=\"gameplay.html?system=logistics\">Logistics Between Regions</a>.",
       "## What we changed",
-      "The Regions system is rewritten around three layers, a 23rd system (Logistics) is added, the field guide, quick reference, not-confirmed list and FAQ carry the new facts. The poster is not redrawn."
+      "The Regions system is rewritten around three layers, a 23rd system (Logistics) is added, the field guide, quick reference, not-confirmed list and FAQ carry the new facts, and the poster is redrawn gameplay-only with nineteen panels."
     ]
   },
   {

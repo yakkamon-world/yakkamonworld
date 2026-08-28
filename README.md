@@ -175,8 +175,9 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 └─ IMAGES
    ├─ favicon.ico / -32 / -192 / apple-touch-icon
    ├─ og-default.png              1200×630 — default social card
-   ├─ gameplay-poster.png         1800×1373 — in-page field guide poster
-   ├─ gameplay-poster-full.png    4000×3051 — full size, under X's 4096px limit
+   ├─ gameplay-poster.png         1800×1605 — in-page field guide poster (rendered from gameplay-poster-source.html)
+   ├─ gameplay-poster-full.png    4000×3567 — full size, under X's 4096px limit
+   ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
    ├─ yakkamon-roster.jpg / -2x   Official 18-creature roster sheet
    ├─ prereg-ticket.webp          Ticket card art
    ├─ faq-og-status.png           FAQ social card
