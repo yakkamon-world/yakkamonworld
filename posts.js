@@ -6,6 +6,26 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "regions-explained",
+    category: "event",
+    title: "Yakkamon\u2019s World Has Three Layers \u2014 And Your Resources Won\u2019t Travel for Free",
+    date: "Aug 28, 2026",
+    excerpt: "The official Regions post makes expansion tile by tile, gates new Regions behind growing your first one, names a Water Region with its own monster types, keeps every old Region live \u2014 and calls moving resources between them \u201cthe real puzzle\u201d. Our read: inventory is probably per Region. Gameplay section updated, 23 systems.",
+    body: [
+      "The Yakkamon team has published the next guide in its series, this one on expansion and Regions. Seven numbered points. Points 3 and 7 restate the chapter cadence; points 1, 2, 4, 5 and 6 are the ones to read twice.",
+      "## Layer one: tiles are a cap on how much you can run",
+      "Your Region is made of <strong>tiles</strong>, unlocked with gathered resources (the starter button reads 10 Wood + 1 Stone). Each tile expands <em>what you can do and how much you can run at once</em> \u2014 a concurrency limit, not just floor space. A tile can hold fresh resources, room to build, or a hunting area, so every tile is an opportunity cost.",
+      "## Layer two: a new Region is a bootstrapping problem",
+      "Each Region has its own resources <em>and its own monster types</em>; a Water Region has water hunting areas full of Yakkamon you could not catch back home. With <a href=\"gameplay.html?system=type-locking\">type locking</a> and the economy post\u2019s limited tradeability for basic monsters, every Region has to be earned with the Region before it.",
+      "## Nothing sunsets",
+      "Old Regions stay part of your operation, and the team says to learn to <strong>automate</strong> across several at once. With bin caps and plot degradation, an unvisited Region decays rather than pauses.",
+      "## The line that matters: logistics",
+      "Moving and sharing resources between Regions \u201cbecomes a core part of the strategy\u201d. That sentence only makes sense if <strong>resources are held per Region</strong>. What a transfer costs is unpublished \u2014 and it is the number every planning tool for this game would need. New system page: <a href=\"gameplay.html?system=logistics\">Logistics Between Regions</a>.",
+      "## What we changed",
+      "The Regions system is rewritten around three layers, a 23rd system (Logistics) is added, the field guide, quick reference, not-confirmed list and FAQ carry the new facts. The poster is not redrawn."
+    ]
+  },
+  {
     slug: "dev-stream-three-recap",
     category: "community",
     title: "Third Dev Stream: Combat Finally Has Rules, Farms Now Wear Out, and Rarity Doesn\u2019t Mean What You Thought",

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="analytics.js"></script>
+<title>Yakkamon's World Has Three Layers: Tiles, Regions and the Logistics Between Them</title>
+<link rel="canonical" href="https://yakkamonworld.com/article-regions-explained.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="YakkamonWorld">
+<meta property="og:title" content="Yakkamon's World Has Three Layers: Tiles, Regions and the Logistics Between Them">
+<meta property="og:description" content="The official Regions post makes expansion tile by tile, gates new Regions behind growing your first one, names a Water Region with its own monster types, keeps every old Region live and calls moving resources between them “the real puzzle”. What it implies — including that your inventory is probably per Region.">
+<meta property="og:url" content="https://yakkamonworld.com/article-regions-explained.html">
+<meta property="og:image" content="https://yakkamonworld.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Yakkamon_World">
+<meta name="twitter:title" content="Yakkamon's World Has Three Layers: Tiles, Regions and the Logistics Between Them">
+<meta name="twitter:description" content="The official Regions post makes expansion tile by tile, gates new Regions behind growing your first one, names a Water Region with its own monster types, keeps every old Region live and calls moving resources between them “the real puzzle”. What it implies — including that your inventory is probably per Region.">
+<meta name="twitter:image" content="https://yakkamonworld.com/og-default.png">
+<meta name="description" content="The official Regions post makes expansion tile by tile, gates new Regions behind growing your first one, names a Water Region with its own monster types, keeps every old Region live and calls moving resources between them “the real puzzle”. What it implies — including that your inventory is probably per Region.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Yakkamon's World Has Three Layers: Tiles, Regions and the Logistics Between Them",
+ "description": "The official Regions post makes expansion tile by tile, gates new Regions behind growing your first one, names a Water Region with its own monster types, keeps every old Region live and calls moving resources between them “the real puzzle”. What it implies — including that your inventory is probably per Region.",
+ "image": "https://yakkamonworld.com/og-default.png",
+ "author": {
+  "@type": "Organization",
+  "name": "YakkamonWorld",
+  "url": "https://yakkamonworld.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "YakkamonWorld",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://yakkamonworld.com/favicon-192.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://yakkamonworld.com/article-regions-explained.html"
+ },
+ "datePublished": "2026-08-28",
+ "dateModified": "2026-08-28"
+}
+</script>
+</head>
+<body>
+
+<header class="masthead">
+<div class="mh-inner">
+<a class="mh-wordmark" href="index.html">YAKKAMON<span class="world">WORLD</span></a>
+<p class="mh-tagline">The Unofficial Yakkamon Player Portal</p>
+<div class="mh-social">
+<a class="follow-badge" href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="Join YakkamonWorld on Telegram" title="Join on Telegram">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fb-label">Join on Telegram</span>
+</a>
+<a class="follow-badge" href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="Subscribe to YakkamonWorld on YouTube" title="Subscribe on YouTube">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fb-label">Subscribe on YouTube</span>
+</a>
+<a class="follow-badge" href="https://x.com/Yakkamon_World" target="_blank" rel="noopener" aria-label="Follow @Yakkamon_World on X" title="Follow @Yakkamon_World">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/></svg><span class="fb-label">Follow @Yakkamon_World</span>
+</a>
+</div>
+</div>
+</header>
+<div class="topbar">
+<div class="topbar-inner">
+<nav class="tabs"><a class="tab" href="index.html">Home</a>
+<a class="tab" href="pre-registration.html">Early Access</a>
+<a class="tab active" href="news.html">News</a>
+<a class="tab" href="gameplay.html">Gameplay</a>
+<a class="tab" href="community.html">Community</a>
+<a class="tab" href="leaderboard.html">Leaderboard</a>
+<a class="tab" href="tips.html">Tips</a>
+<a class="tab" href="videos.html">Videos</a>
+<a class="tab" href="faq.html">FAQ</a>
+<a class="tab tab-wide" href="contact.html">Contact</a>
+<button class="search-btn" id="search-btn" aria-label="Search the site" type="button">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+</nav>
+</div>
+</div>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-panel">
+    <div class="search-panel-head">
+      <input class="search-input" id="search-input" type="text" placeholder="Search news, gameplay, pre-reg..." autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="Close search" type="button">&times;</button>
+    </div>
+    <p class="search-hint" id="search-hint">Search news, gameplay systems, pre-registration info, and more.</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+
+<div id="article-root">
+    <div class="wrap article-head">
+      <a class="back-link" href="news.html">&larr; Back to news</a>
+      <div style="height:22px"></div>
+      <span class="badge badge-event">Event</span>
+      <h1>Yakkamon's World Has Three Layers &mdash; And Your Resources Won't Travel for Free</h1>
+      <div class="article-meta">Aug 28, 2026</div>
+    </div>
+
+    <div class="wrap"><div class="article-body">
+      <p>The Yakkamon team has published the next guide in its series, this one on expansion and Regions. It is shorter than the economy post and reads, on a first pass, like flavour: more land, more resources, more monsters to hunt. Read it a second time and it is the most structural thing they have published about how the idle half of the game is actually laid out &mdash; and one line in the middle of it, about &ldquo;logistics&rdquo;, quietly changes how a farm in this game has to be planned.</p>
+      <p>Here is what the seven points say, what follows from each, and what it does to the advice already on this site.</p>
+
+      <h2>The seven points, in plain terms</h2>
+      <div class="table-scroll"><table class="prereg-table">
+        <tr><th>#</th><th>What the post says</th><th>New?</th></tr>
+        <tr><td>1</td><td>Your Region is made of <strong>tiles</strong>. You gather resources to unlock more, and each tile you claim expands <em>what you can do and how much you can run at once</em>.</td><td><strong>New</strong> (tiles as a cap on concurrency)</td></tr>
+        <tr><td>2</td><td>Tiles are not just space. A tile can hold <strong>fresh resources</strong>, <strong>room to build</strong>, or a <strong>hunting area</strong> where wild Yakkamon roam.</td><td><strong>New</strong> (hunting areas are tiles)</td></tr>
+        <tr><td>3</td><td>Grow your starting Region far enough and you unlock <strong>entirely new Regions</strong>.</td><td>Confirms, with a gate</td></tr>
+        <tr><td>4</td><td>Each new Region brings <strong>its own resources and its own monster types</strong>. A <strong>Water Region</strong> has water hunting areas full of Yakkamon you could not catch back home.</td><td><strong>New</strong> (first named Region type; monsters are Region-local)</td></tr>
+        <tr><td>5</td><td><strong>You keep everything you unlock.</strong> Old Regions stay part of your operation, which means learning to <strong>automate</strong> and manage your Yakkamon across several Regions at once.</td><td><strong>New</strong></td></tr>
+        <tr><td>6</td><td>Managing that spread is &ldquo;the real puzzle&rdquo;. <strong>Moving and sharing resources between your Regions</strong> becomes a core part of the strategy &mdash; &ldquo;the trainers who master logistics get ahead&rdquo;.</td><td><strong>New</strong> (and the big one)</td></tr>
+        <tr><td>7</td><td>Regions get <strong>progressively bigger</strong> each time you expand, and more roll out in upcoming <strong>Chapters</strong>.</td><td>Confirms the chapter cadence</td></tr>
+      </table></div>
+      <p>Points 3 and 7 restate things the dev streams had already said &mdash; one Region per Chapter, roughly, across the first year. Points 1, 2, 4, 5 and 6 are the ones to read twice.</p>
+
+      <h2>Layer one: tiles are a cap on how much you can run, not just where</h2>
+      <p>Everyone assumed expansion meant land. The post says something more specific: each tile &ldquo;expands what you can do and <em>how much you can run at once</em>&rdquo;. That second clause is a concurrency limit. Your tile count decides how many jobs, stations and plots can be live in parallel, which makes it the hard ceiling on the idle half of the game &mdash; above the <a href="gameplay.html?system=storage-bins">storage bin</a>, above the monster count, above everything.</p>
+      <p>That reframes an argument we made ten days ago. In <a href="article-after-the-race.html">The Game That Starts the Next Morning</a> we said your storage bin is your ceiling: past a point, adding monsters to a job only fills the bin faster and wastes more. That is still true within a tile. But the number that decides how many bins you have in the first place is tiles &mdash; and the price of a tile is paid in the resources those bins hold. The loop closes on itself: <strong>gathered resources buy tiles, tiles raise how much you can gather, and the only thing that breaks the loop is running out of monsters of the right type to fill them.</strong></p>
+      <div class="prereg-callout warning"><strong>The one number we have.</strong> The starter expansion button reads <strong>10 Wood + 1 Stone</strong>. Nothing else about tile pricing is public &mdash; not how the cost climbs, not how many tiles a Region holds, not how many parallel jobs one tile adds. Anyone who tells you the &ldquo;optimal expansion order&rdquo; today is guessing.</div>
+
+      <h2>Layer one, continued: every tile is a choice</h2>
+      <p>Point 2 gives tiles three possible contents: resource nodes, build space, or a hunting area. That is an opportunity cost the earlier material never had. A tile spent on a hunting area is a tile not spent on plots, and vice versa.</p>
+      <p>It also changes what a hunting area <em>is</em>. The launch screenshot showed a sign with an entry cost of 5 berries, which read like a toll on a public place. The post makes hunting areas land you claim first and pay to enter second. Two costs, not one &mdash; and the first of them competes directly with your production.</p>
+      <p>Read that against <a href="gameplay.html?system=upkeep">plot groups</a> from the third dev stream, where growing tiles come in groups and upkeep scales more slowly than production within a group. If tiles are the unit and groups are how plots pack onto them, then the team's stated push &mdash; invest deep in a group before spreading &mdash; now has a second reason behind it: the tiles you would spread onto are the same tiles you need for hunting areas.</p>
+
+      <h2>Layer two: a new Region is a bootstrapping problem</h2>
+      <p>Point 4 is where the post connects to the rule that already shapes this game. <a href="gameplay.html?system=type-locking">Type locking</a> says each resource can only be gathered by the right type. The Regions post says each Region has its own resources <em>and</em> its own monster types, and that the monsters of a Water Region live in that Region's water hunting areas.</p>
+      <p>Put those together and arriving somewhere new does not make it productive. The sequence for a Water Region, as far as the published rules allow us to reconstruct it:</p>
+      <ol class="prereg-list">
+        <li>Unlock the Region by growing your starter Region &mdash; paid for in grasslands resources.</li>
+        <li>Claim at least one tile there as a water hunting area &mdash; paid for in resources you had to bring, because you cannot gather water materials yet.</li>
+        <li>Send a monster in with lures and berries from home, and catch your first water type.</li>
+        <li>Only now can the Region's own resources be gathered, and only by that monster and whatever you catch after it.</li>
+      </ol>
+      <p>Every step before the last one is funded from somewhere else. And the <a href="article-economy-explained.html">economy post</a> closed the shortcut a week ago: basic monsters have limited tradeability, so you cannot buy a water type on day one and skip the expedition. <strong>A Region is a place you have to earn your way into with the Region before it.</strong> That is elegant design, and it is also the reason the first player into each Region will be weeks ahead of the second, not hours.</p>
+
+      <h2>Layer three: chapters, and why the newest Region will always matter most</h2>
+      <p>Point 7 says two things. More Regions arrive with Chapters, which matches what the team said on stream about pairing each Chapter with a new Region and new species. And Regions get <em>progressively bigger</em> each time you expand.</p>
+      <p>The second part is a hint about where the meta will live. If each Region is larger than the last, the newest Region is always the largest reservoir of tiles, and therefore of concurrency. Combined with seasonal monster drops that players race to claim, the shape of a Chapter launch looks like this: everyone who can reach the new Region rushes it, because it is both the biggest and the only place the new monsters are. The Regions you already own become the supply chain that funds that rush &mdash; which brings us to the line that matters.</p>
+
+      <h2>The line that matters: your resources do not travel for free</h2>
+      <p>Point 6 is written casually and it is the most important sentence in the post. Moving and sharing resources between your Regions &ldquo;becomes a core part of the strategy&rdquo;, and &ldquo;the trainers who master logistics get ahead&rdquo;.</p>
+      <p>That sentence has no meaning if your inventory is global. You do not &ldquo;move&rdquo; wood between two places that share a bag. The only reading under which logistics is a puzzle at all is that <strong>resources are held per Region</strong>: what a monster gathers in the grasslands stays in the grasslands until something carries it out.</p>
+      <div class="prereg-callout warning"><strong>What that implies, if it holds.</strong> A second Region is not simply more production. It is production that lands in the wrong place, plus a transport step to get it where it is needed. Every new Region has to be <em>fed</em> before it feeds you. Bin caps almost certainly apply per Region, so a Region you stop visiting fills up and stops earning, exactly like an unvisited bin. And any tool that plans production for this game will need a transport cost in it &mdash; a number that does not exist yet.</div>
+      <p>The post is silent on the mechanism. Whether moving resources costs time, a monster's stamina, a building on each end, a fee, or nothing beyond a tap; whether monsters themselves move freely between Regions; whether the Trade menu is also the transport layer &mdash; none of it is stated. What <em>is</em> stated is that it will be hard enough to separate good players from average ones. We would read that as: it costs something real.</p>
+      <p>This is also where specialisation stops being a slogan. The economy post said to expect trainers to specialise and trade for what they do not produce. If type-locked materials exist only in one Region and shipping them is a cost, then a trainer who has settled the Water Region and one who has not are natural counterparties. Logistics is what turns the two-economies design into an actual market.</p>
+
+      <h2>Nothing sunsets &mdash; and that is a cost as well as a promise</h2>
+      <p>Point 5 is framed as reassurance: old Regions do not get left behind. It is also the sentence that tells you how your attention scales. Two things already on the record make an unattended Region expensive: <a href="gameplay.html?system=storage-bins">bins cap</a> and stop banking output, and <a href="gameplay.html?system=upkeep">plots degrade</a> so that what does run, runs worse. A Region you stop visiting does not pause. It decays, and it does so on every Region you own at once.</p>
+      <p>The team's own answer is in the same sentence: learn to <strong>automate</strong>. That word is doing a lot of work. The work cycle already repeats and restarts itself, so &ldquo;automate&rdquo; may mean nothing more than assigning monsters well and trusting the loop. But it lands a week after an economy post that said out loud that the gathering loops <em>can be automated</em>, and that the tradeable economy is walled off from them for that reason. The consistent reading of both posts is that the team expects the idle half of this game to run with very little of you in it, whether through in-game tooling or otherwise, and has designed the economy so that this is fine. Anyone planning to hand-manage four Regions from a phone should hear that.</p>
+
+      <h2>How this squares with the dev stream</h2>
+      <p>On 21 August the team drew a line between <em>gathering regions</em> you build on and <em>hunting regions</em> you explore, and Adam described hunting regions as the deliberate Pok&eacute;mon reference &mdash; the feeling of arriving at the beach and sensing new possibilities. The Regions post instead puts hunting areas on tiles <em>inside</em> a Region.</p>
+      <p>We do not think those contradict each other. The most likely reading is that a hunting area is a tile you claim within a Region, and that the &ldquo;arriving at the beach&rdquo; moment is your first visit to a new Region's hunting areas rather than a separate map. But the post does not say so, and we have rewritten the <a href="gameplay.html?system=regional-exploration">Regions system page</a> to flag the two framings side by side rather than pick one.</p>
+
+      <h2>What we changed on the site</h2>
+      <ul class="prereg-list">
+        <li>The <a href="gameplay.html?system=regional-exploration">Regions, Tiles &amp; The World</a> system is rewritten around the three layers.</li>
+        <li>A new <a href="gameplay.html?system=logistics">Logistics Between Regions</a> system &mdash; the 23rd &mdash; carries the per-Region inference and everything that is unpublished about transfers.</li>
+        <li>The <a href="gameplay-guide.html#world">field guide</a>, the quick-reference table and the not-confirmed list on both gameplay pages now carry the tile, Region and logistics facts, each sourced to this post.</li>
+        <li>Four new answers in the <a href="faq.html#how-does-the-world-expand">FAQ</a>.</li>
+        <li>The poster has <em>not</em> been redrawn; it still shows 22 panels.</li>
+      </ul>
+
+      <h2>What's genuinely good here</h2>
+      <ul class="prereg-list">
+        <li><strong>Expansion is paid in the free layer.</strong> Tiles cost gathered resources, which the economy post walled off from money. You cannot buy land with $FLOWER on the published rules, so the idle half stays a game of time and roster rather than wallet.</li>
+        <li><strong>Regions are earned, not sold.</strong> The Region gate is &ldquo;grow your starting Region&rdquo;, not a mint. Progress carries progress.</li>
+        <li><strong>Type locking finally has a map to live on.</strong> Region-local monsters give the type system a reason to exist beyond a refusal message.</li>
+        <li><strong>Logistics is a skill expression the idle half was missing.</strong> A farm that runs itself has no way to reward a better player. A supply chain does.</li>
+        <li><strong>Nothing you build becomes obsolete.</strong> Old Regions feed new ones, which is the opposite of the throwaway starter zone most games ship.</li>
+      </ul>
+
+      <h2>What to be wary of</h2>
+      <ul class="prereg-list">
+        <li><strong>The transfer mechanic is the whole game and it is unpublished.</strong> A free tap and a two-hour caravan produce completely different games, and the post picks neither.</li>
+        <li><strong>Attention scales with Regions.</strong> Decay applies everywhere you own at once. The more you unlock, the more a weekend away costs.</li>
+        <li><strong>First-mover gaps compound per Region.</strong> Each Region is bootstrapped from the last, so a lead in the grasslands becomes a bigger lead in the Water Region, and bigger again in the one after. Wave 1 has more to gain from this post than from anything in the economy one.</li>
+        <li><strong>&ldquo;Automate&rdquo; is undefined.</strong> If it means in-game tooling, fine. If it means the team expects scripts to run the idle half, that has consequences for what a free player's time is worth.</li>
+        <li><strong>The stream and the post use &ldquo;region&rdquo; differently.</strong> Until the team reconciles hunting regions with hunting-area tiles, any guide that speaks confidently about &ldquo;the hunting region&rdquo; is ahead of the source.</li>
+      </ul>
+
+      <h2>What to actually do</h2>
+      <ul class="prereg-list">
+        <li><strong>Plan tiles as a budget, not a map.</strong> Every tile is a hunting area <em>or</em> production. Decide the split before you spend the first 10 Wood.</li>
+        <li><strong>Treat your starter Region as the factory for everything after it.</strong> Grasslands output funds the Water Region's first tiles, lures and berries. Under-build it and every later Region starts late.</li>
+        <li><strong>Catch one of every local type before you leave.</strong> You cannot buy your way into the next Region's type, and the monsters that work it live there. Breadth at home is what makes the next Region open quickly.</li>
+        <li><strong>Assume a transport cost until told otherwise.</strong> Build the second Region to be self-sufficient in its own materials as early as possible, rather than shipping everything in.</li>
+        <li><strong>Do not build a Region planner yet.</strong> Tile pricing, Region gates and transfer costs are all missing. We are not building one either, and that is the honest reason.</li>
+      </ul>
+
+      <h2>The five questions we'd put to the team</h2>
+      <ul class="prereg-list">
+        <li>Is inventory per Region, and if so, what does moving a stack of resources between Regions cost?</li>
+        <li>Do monsters move between Regions freely, or is a squad assigned to one?</li>
+        <li>What is the condition that unlocks the second Region &mdash; tile count, quest, level or payment?</li>
+        <li>Do storage bins and plot degradation apply per Region, and does an unvisited Region keep degrading?</li>
+        <li>Is a &ldquo;hunting region&rdquo; from the dev stream the same thing as a hunting-area tile in this post?</li>
+      </ul>
+      <p>All five are answerable today, and the first one alone would tell tool-builders whether a production planner for this game is a spreadsheet or a routing problem.</p>
+
+      <div class="prereg-callout info"><strong>Source and standing.</strong> This is our reading of an official Yakkamon guide on expansion and Regions, published on the team's own channels. The seven points above are summarised in our words; every inference &mdash; per-Region inventory most of all &mdash; is ours, is marked as such, and is not endorsed by anyone. If the transfer mechanic turns out to be a free tap, we will say so on this page.</div>
+
+      <h2>Read next</h2>
+      <ul class="prereg-list">
+        <li><a href="gameplay.html?system=logistics">Logistics Between Regions</a> &mdash; the new system page</li>
+        <li><a href="article-economy-explained.html">Yakkamon Just Split Its Economy in Two</a> &mdash; the post this one should be read alongside</li>
+        <li><a href="article-after-the-race.html">The Game That Starts the Next Morning</a> &mdash; the bin-ceiling argument this post extends</li>
+        <li><a href="article-updates-panel.html">What the Updates panel shows</a> &mdash; where Grasslands was first named</li>
+      </ul>
+    </div></div>
+</div>
+
+<footer>
+<div class="wrap footer-map">
+  <div class="footer-col">
+    <h3>START HERE</h3>
+    <a href="index.html">Home</a>
+    <a href="pre-registration.html">Pre-registration guide</a>
+    <a href="pre-registration.html#important-dates">Important dates</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+  <div class="footer-col">
+    <h3>GUIDES &amp; TACTICS</h3>
+    <a href="tips.html">Trainer Tips</a>
+    <a href="article-free-to-play-guide.html">Free-to-play guide</a>
+    <a href="article-leaderboard-guideline.html">Leaderboard guideline</a>
+    <a href="gameplay.html">Gameplay systems</a>
+  </div>
+  <div class="footer-col">
+    <h3>LATEST NEWS</h3>
+    <a href="news.html">All news</a>
+    <a href="article-dev-stream-three-recap.html">Dev stream recap</a>
+    <a href="article-referral-rule-change-flower-deposit.html">Referral rule change</a>
+    <a href="article-flower-deposits-open-august-9.html">$FLOWER deposits</a>
+  </div>
+  <div class="footer-col">
+    <h3>COMMUNITY</h3>
+    <a href="community.html">Community &amp; channels</a>
+    <a href="videos.html">Videos</a>
+    <a href="leaderboard.html">Deposit leaderboard</a>
+    <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener">Telegram &#8599;</a>
+    <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener">YouTube &#8599;</a>
+    <a href="https://x.com/Yakkamon_World" target="_blank" rel="noopener">X &#8599;</a>
+  </div>
+</div>
+<div class="wrap footer-base">
+  <div>
+    <span>YAKKAMON PORTAL &middot; UNOFFICIAL FAN PROJECT &middot; NOT AFFILIATED WITH SUNFLOWERLAND &middot; <a href="about.html">ABOUT</a> &middot; <a href="privacy.html">PRIVACY</a></span>
+    <span class="footer-credit">Game content and images &copy; Thought Farm, from the official <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">docs.yakkamon.com</a> &mdash; used here for reference and commentary. <a href="about.html#usage">Usage&nbsp;&rarr;</a></span>
+    <div class="footer-links">
+      <a href="https://t.me/YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on Telegram" title="YakkamonWorld on Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 2.9 11.6c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.2-.5-1.8-1.1-1.2Zm-12.6 11 8.5-5.4c.4-.3.8-.1.5.2l-7.3 6.6-.3 3.4-1.4-4.8Z"/></svg><span class="fl-label">Telegram &#8599;</span></a>
+      <a href="https://www.youtube.com/@YakkamonWorld" target="_blank" rel="noopener" aria-label="YakkamonWorld on YouTube" title="YakkamonWorld on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2a2.8 2.8 0 0 0 2 2c1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2C23 15.5 23 12 23 12ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg><span class="fl-label">YouTube &#8599;</span></a>
+      <a href="https://yakkamon.com/" target="_blank" rel="noopener" aria-label="Official Yakkamon pre-registration" title="Official Yakkamon pre-registration"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 7a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v3.2a2 2 0 0 0 0 3.6V17a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-3.2a2 2 0 0 0 0-3.6V7Z"/><g fill="#1A1A2E"><rect x="15" y="8" width="1.1" height="2.2"/><rect x="15" y="10.9" width="1.1" height="2.2"/><rect x="15" y="13.8" width="1.1" height="2.2"/></g></svg><span class="fl-label">Official Pre-Registration &#8599;</span></a>
+      <a href="https://x.com/yakkamon_game" target="_blank" rel="noopener" aria-label="Official Yakkamon on X" title="Official Yakkamon on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-7.6 8.7L23.4 21h-7.1l-5.6-6.8L4.3 21H1.2l8.1-9.3L1 3h7.3l5 6.2L18.9 3Z"/></svg><span class="fl-label">Official Twitter/X &#8599;</span></a>
+      <a href="https://docs.yakkamon.com" target="_blank" rel="noopener" aria-label="Official Yakkamon docs" title="Official Yakkamon docs"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h8l4 4v16H6V2Zm7 1.6V7h3.4L13 3.6ZM8.5 11h7v1.5h-7V11Zm0 3.5h7V16h-7v-1.5Zm0-7h3V9h-3V7.5Z"/></svg><span class="fl-label">Official Docs &#8599;</span></a>
+    </div>
+  </div>
+  <span>BUILT BY THE COMMUNITY</span>
+</div>
+</footer>
+
+<script src="search.js"></script>
+</body>
+</html>

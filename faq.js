@@ -402,7 +402,7 @@ var FAQ_CATEGORIES = [
  {
   "id": "gameplay",
   "name": "Playing the game",
-  "intro": "<p>Short answers on how the game itself plays. The long versions live on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; 22 systems, each explained with a plain-English analogy &mdash; and in the <a href=\"gameplay-guide.html\">field guide</a>.</p>",
+  "intro": "<p>Short answers on how the game itself plays. The long versions live on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; 23 systems, each explained with a plain-English analogy &mdash; and in the <a href=\"gameplay-guide.html\">field guide</a>.</p>",
   "rich": "",
   "items": [
    {
@@ -419,6 +419,26 @@ var FAQ_CATEGORIES = [
     "id": "should-i-collect-duplicates-of-my-best-monster",
     "q": "Should I collect duplicates of my best monster?",
     "a": "<p>No &mdash; the game is designed against it. <strong>Identically named boosts don't stack</strong>: two monsters with &ldquo;Wood Gatherer I&rdquo; give you the effect once. Differently named or higher-ranked boosts do stack. The stated intent is to reward <strong>breadth</strong> &mdash; a wide roster with one strong specialist per job beats five copies of your best monster. See <a href=\"gameplay.html?system=boost-stacking\">boost stacking</a>.</p>"
+   },
+   {
+    "id": "how-does-the-world-expand",
+    "q": "How does the world expand?",
+    "a": "<p>In three layers, per the official Regions post. Your Region is made of <strong>tiles</strong>: you gather resources to unlock more of them (the starter one costs <strong>10 Wood + 1 Stone</strong>), and each tile can hold fresh resources, room to build, or a hunting area &mdash; and raises how much you can run at once. Grow your starting Region far enough and you unlock <strong>entirely new Regions</strong>, each with its own resources and monster types. More Regions arrive in later <strong>Chapters</strong>, each bigger than the last. <a href=\"gameplay.html?system=regional-exploration\">Regions, tiles &amp; the world &rarr;</a></p>"
+   },
+   {
+    "id": "what-regions-are-there",
+    "q": "What Regions are there?",
+    "a": "<p>Two are named officially: <strong>Grasslands</strong>, which appears in the in-game Updates panel and looks like the starter area, and a <strong>Water Region</strong>, named in the Regions post as the example of a place with water hunting areas full of Yakkamon you could not catch back home. Deserts, volcanoes and fire regions have been described on the dev streams without names. Each Region has its own resources <em>and</em> its own monster types, so reaching one is only half the job &mdash; you also need the right type to gather there.</p>"
+   },
+   {
+    "id": "do-i-lose-my-old-region-when-i-unlock-a-new-one",
+    "q": "Do I lose my old Region when I unlock a new one?",
+    "a": "<p>No. You keep everything you have unlocked, and old Regions stay part of your operation. The team frames that as the reason you will need to <strong>automate and manage your Yakkamon across several Regions at once</strong>. Read it with <a href=\"gameplay.html?system=upkeep\">plot degradation</a> and <a href=\"gameplay.html?system=storage-bins\">bin caps</a> in mind: a Region you stop visiting does not pause, it decays.</p>"
+   },
+   {
+    "id": "can-i-use-resources-from-one-region-in-another",
+    "q": "Can I use resources from one Region in another?",
+    "a": "<p>Only by moving them, it seems. The Regions post says that <strong>moving and sharing resources between your Regions</strong> becomes a core part of the strategy and that &ldquo;the trainers who master logistics get ahead&rdquo; &mdash; which only makes sense if resources are held per Region rather than in one global inventory. What a transfer costs (time, stamina, a building, a fee) is not published. <a href=\"gameplay.html?system=logistics\">Logistics between Regions &rarr;</a></p>"
    },
    {
     "id": "does-my-farm-keep-running-while-i-m-offline",

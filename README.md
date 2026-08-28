@@ -129,7 +129,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ index.html                  Home — ticket card, counter, timeline, latest news
 │  ├─ pre-registration.html       "Early Access" tab — points, tiers, important dates
 │  ├─ news.html                   News archive with category sidebar
-│  ├─ gameplay.html               22 gameplay systems, sidebar + detail panel
+│  ├─ gameplay.html               23 gameplay systems, sidebar + detail panel
 │  ├─ gameplay-guide.html         Same material as one long mobile-readable page
 │  ├─ community.html              Our channels, then the official ones
 │  ├─ leaderboard.html            Deposit leaderboard (Base + Ronin, via Dune)
