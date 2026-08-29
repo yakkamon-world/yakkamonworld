@@ -91,6 +91,15 @@ const YAKKAMON_VIDEOS = [
 
   // ---------- START HERE ----------
   {
+    id: "hY5VxK3_Wo8",
+    ep: "16",
+    runtime: "1:58",
+    block: "start",
+    title: "Yakkamon Regions Explained \u2014 How to Expand Your World",
+    blurb: "Your Region is made of tiles, tiles cap how much you can run at once, and growing far enough unlocks whole new Regions with monsters you can't catch back home. You keep everything you unlock \u2014 which is why the team calls managing the spread \u2018the real puzzle\u2019: the trainers who master logistics get ahead.",
+    related: { href: "article-regions-explained.html", label: "Read the full regions breakdown" },
+  },
+  {
     id: "AeLErRg8Vzk",
     ep: "12",
     runtime: "4:14",
