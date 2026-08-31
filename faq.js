@@ -448,7 +448,7 @@ var FAQ_CATEGORIES = [
    {
     "id": "how-many-yakkamon-are-there",
     "q": "How many Yakkamon are there?",
-    "a": "<p><strong>Twenty-one</strong> have been officially shown so far, on the roster sheet &mdash; you can see it on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; out of roughly <strong>50&ndash;60 species at launch</strong>. The rest of the roster arrives after launch across chapter releases, each typically paired with a new region. No names, types or rarities have been attached to the portraits yet: <a href=\"article-yakkamon-roster-revealed.html\">what can and can't be read into the sheet</a>.</p>"
+    "a": "<p><strong>Twenty-two</strong> have been officially shown so far, on the roster sheet &mdash; you can see it on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; out of roughly <strong>50&ndash;60 species at launch</strong>. The rest of the roster arrives after launch across chapter releases, each typically paired with a new region. No names, types or rarities have been attached to the portraits yet: <a href=\"article-yakkamon-roster-revealed.html\">what can and can't be read into the sheet</a>.</p>"
    },
    {
     "id": "do-the-yakkamon-have-names-yet",

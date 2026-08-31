@@ -178,7 +178,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ gameplay-poster.png         1800×1605 — in-page field guide poster (rendered from gameplay-poster-source.html)
    ├─ gameplay-poster-full.png    4000×3567 — full size, under X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
-   ├─ yakkamon-roster.jpg / -2x   Official 18-creature roster sheet
+   ├─ yakkamon-roster*.jpg        Official roster sheets — original 18, the 21-sheet (25 Aug), current 22-sheet (31 Aug), each with a -2x
    ├─ prereg-ticket.webp          Ticket card art
    ├─ faq-og-status.png           FAQ social card
    └─ news-*.jpg / news-*.png     Per-article images

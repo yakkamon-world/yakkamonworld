@@ -156,8 +156,9 @@ const YAKKAMON_POSTS = [
     category: "event",
     title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
     date: "Aug 17, 2026",
-    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated 25 Aug as the sheet grew to twenty-one. Portraits only \u2014 no names, no types, no rarities.",
+    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated as the sheet grew, twenty-two as of 31 Aug. Portraits only \u2014 no names, no types, no rarities.",
     body: [
+      "<em>Update, 31 August:</em> the sheet has grown to <strong>twenty-two</strong> \u2014 the fourth row gains a <strong>pastel moth</strong> with patterned wings, with two slots still empty. The other twenty-one are unchanged and in the same order; still no names, no types, no rarities.",
       "<em>Update, 25 August:</em> a newer official sheet starts a fourth row with <strong>three new creatures</strong> \u2014 a pink owl, a blossom-pink creature carrying a small bowl, and a pale hooded creature \u2014 and a follow-up version corrects one of the original eighteen: the badger's slot now holds an upright purple-and-cream creature with a red nose. Twenty-one shown in total, roughly two-fifths of the expected 50\u201360; still no names, no types, no rarities. The original piece follows as written.",
       "An official roster sheet has surfaced showing <strong>eighteen Yakkamon</strong> side by side \u2014 the first proper look at the creatures themselves rather than the systems around them.",
       "## The one number that gives it context",
