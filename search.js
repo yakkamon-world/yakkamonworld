@@ -5,6 +5,12 @@
 // so it shows up in search results too.
 
 const SEARCH_INDEX = [
+  { tag: "News", title: "We Graded Every Decision From Yakkamon\u2019s Free-Mint Dev Stream", excerpt: "Sixteen grades, A to F: a guaranteed mint for the top 1,000, a click race for everyone else, and the two-track economy that earns our A.", url: "article-free-mint-stream-graded.html" },
+  { tag: "News", title: "When is the Yakkamon free mint?", excerpt: "14 September 2026, on the Ronin Launchpad, running as waves over a few days. Hidden until the 14 October reveal, tradable the whole time.", url: "article-free-mint-stream-graded.html" },
+  { tag: "News", title: "When is the leaderboard snapshot?", excerpt: "10 September 2026. The rank you hold that day decides your free-mint wave \u2014 top 1,000 mint guaranteed, top 10,000 race for 3,000 supply.", url: "article-free-mint-stream-graded.html" },
+  { tag: "News", title: "How do the free mint waves work?", excerpt: "Top 1,000 guaranteed; 3,000 supply for the top 10,000 with a five-flower minimum; a 2,000-mint Ronin wave; then ranks 1\u201320,000 and 1\u201350,000. Plus a 1,500 manual-airdrop reserve.", url: "article-free-mint-stream-graded.html" },
+  { tag: "News", title: "What legendaries are in the free mint?", excerpt: "3 Storm, 5 Echo, 10 Ghost and 50 Bloom hidden among the 10,000 \u2014 roughly a 0.7% chance per mint. Ghost\u2019s naming is still being untangled.", url: "article-free-mint-stream-graded.html" },
+  { tag: "News", title: "Is Yakkamon\u2019s free-to-play layer really free?", excerpt: "Yes \u2014 an infinite, untradable production layer. Tradable output is gated behind limited coin faucets. Free play is progress, not income.", url: "article-free-mint-stream-graded.html" },
   { tag: "News", title: "Third Dev Stream: Combat Has Rules, Farms Wear Out, Rarity Isn\u2019t What You Thought", excerpt: "A lane-based 3v3 auto-battler, plots that degrade, boosts that don\u2019t stack, and rarity fixed at species level.", url: "article-dev-stream-three-recap.html" },
   { tag: "News", title: "What changed in Yakkamon this week?", excerpt: "Combat became a lane-based 3v3 auto-battler, farm plots now degrade, identical boosts stopped stacking, and rarity was fixed at species level.", url: "article-dev-stream-three-recap.html" },
   { tag: "Gameplay", title: "The Battle System \u2014 lane-based 3v3 auto-battling", excerpt: "Fixed lanes set before the fight, skills in a visible order, 3\u20135 rounds typical, MMR matchmaking, expensive respecs.", url: "gameplay.html?system=combat-system" },

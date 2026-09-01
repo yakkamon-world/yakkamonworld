@@ -6,6 +6,28 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "free-mint-stream-graded",
+    category: "community",
+    title: "We Graded Every Decision From Yakkamon\u2019s Free-Mint Dev Stream \u2014 Sixteen Grades, and a 10 September Deadline",
+    date: "Sep 1, 2026",
+    excerpt: "The Ronin free mint is 14 September and the snapshot is 10 September. Sixteen decisions graded A to F: a guaranteed mint for the top 1,000, a click race for everyone else, a 1,500-mint reserve with no published criteria, legendary auras that double production \u2014 and the two-track economy that earns our A.",
+    body: [
+      "The free mint finally has a date, a structure and a deadline \u2014 and following <a href=\"article-dev-stream-graded.html\">our grading of the first dev stream</a>, we graded all sixteen decisions from this one. Nothing scored an F. Nothing beat the pattern either: game design earns A\u2019s, distribution keeps importing web3\u2019s bad habits.",
+      "## The dates",
+      "<strong>10 September</strong>: leaderboard snapshot \u2014 the rank you hold that day builds the waves. <strong>14 September</strong>: free mint on the Ronin Launchpad, hidden Yakkamon, gas only. <strong>14 October</strong>: the reveal. Minted Yakkamon are NFTs and tradable the whole time, and this collection is THE Yakkamon collection every future release joins.",
+      "## The waves",
+      "Top 1,000 trainers: a guaranteed mint at your own pace \u2014 the best community decision since the referral fix (A). Top 10,000: a race for 3,000 supply, with a withdrawable five-flower minimum deposit as bot protection (B+). A \u201cRonin wave\u201d hands 2,000 mints to players from other Ronin games for exposure (B). Then ranks 1\u201320,000 and 1\u201350,000 chase whatever remains. Hidden inside: 3 Storm, 5 Echo, 10 Ghost and 50 Bloom \u2014 68 legendary-tier pulls in 10,000.",
+      "## Our lowest grade: the click race (C+)",
+      "Every wave past the first is fastest-click-wins \u2014 the team said so plainly. Wave 2 manufactures at least 7,000 disappointed eligible trainers, sorted by time zone and latency. A raffle among opted-in eligible wallets inside a 24-hour window keeps the scarcity and deletes the race. And the 1,500-mint manual reserve (B\u2212) \u2014 15% of supply \u2014 still has no published criteria.",
+      "## The snapshot contradiction",
+      "Stream one told us the leaderboard would hide near deadlines to stop sniping. Instead: a hard 10 September deadline announced with exact ranks fully visible, during a 2.6\u00d7-falling-to-2.4\u00d7 deposit week (B). If you sit near rank 1,000 or 10,000, your rank today is not your rank on the 10th \u2014 move early, in one large transfer.",
+      "## The game half keeps earning A\u2019s",
+      "The two-track economy is the decision of the stream (A): an infinite, untradable free-to-play layer, with tradable production gated behind limited coin faucets \u2014 free players get a real game that cannot crush the market. No wearable gear, again, under direct questioning (A). Logging off pauses the game rather than punishing you (A). Breeding caps scale with rarity, so supply grows where assets are cheap and freezes where scarcity carries value (A\u2212). Legendary utilities are economic auras \u2014 storm-charged doubles work speed in range (A\u2212). Combat gets real player input on a swappable architecture (A\u2212), rare/uncommon utilities are random-rolled (B+), and evolutions wait past launch for an honest supply-dynamics reason (B+).",
+      "## Before the 10th",
+      "Check your rank against the 1,000 and 10,000 lines, move early if you\u2019re near one, and get mint-ready: Ronin wallet, RON for gas, five-flower minimum deposited, online when your wave opens. The full sixteen grades, the wave table and our questions for the next stream are in the article."
+    ]
+  },
+  {
     slug: "regions-explained",
     category: "event",
     title: "Yakkamon\u2019s World Has Three Layers \u2014 And Your Resources Won\u2019t Travel for Free",
