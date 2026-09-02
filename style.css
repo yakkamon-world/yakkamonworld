@@ -1131,10 +1131,20 @@ html.cb-lock, html.cb-lock body{overflow:hidden}
 .cb-close:active{transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink)}
 
 /* Starter block: TOPICS (small pills, one per FAQ category) + MOST ASKED (five question rows).
-   Shown until the first question, then folded into a slim toggle bar. */
-.cb-starter{flex:0 0 auto; max-height:52%; overflow-y:auto; overscroll-behavior:contain; padding:8px 12px 6px; display:grid; gap:8px;
-  background:var(--cream); background-image:radial-gradient(rgba(26,26,46,.07) 1.6px,transparent 1.8px); background-size:13px 13px; border-bottom:3px solid var(--ink)}
+   A dropdown under a slim toggle bar — closed by default, closes itself on any interaction. */
+.cb-starter-wrap{position:relative; flex:0 0 auto; z-index:5}
+.cb-starter-toggle{display:flex; align-items:center; justify-content:center; gap:6px; width:100%; min-height:36px;
+  font-family:var(--font-display); font-size:.92rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink);
+  background:var(--yellow); border:0; border-bottom:3px solid var(--ink); cursor:pointer}
+.cb-starter-toggle i{font-style:normal; transition:transform .2s}
+.cb-starter-toggle[aria-expanded="true"] i{transform:rotate(180deg)}
+.cb-starter-toggle:hover{background:var(--yellow-deep)}
+.cb-starter{position:absolute; top:100%; left:0; right:0; max-height:min(440px, 62vh); overflow-y:auto; overscroll-behavior:contain;
+  padding:10px 12px 12px; display:grid; gap:10px; background:var(--cream);
+  background-image:radial-gradient(rgba(26,26,46,.07) 1.6px,transparent 1.8px); background-size:13px 13px;
+  border-bottom:4px solid var(--ink); box-shadow:0 8px 0 rgba(26,26,46,.18); animation:cb-drop .18s ease-out}
 .cb-starter[hidden]{display:none}
+@keyframes cb-drop{from{transform:translateY(-8px);opacity:0}to{transform:none;opacity:1}}
 .cb-sec{display:grid; gap:5px}
 .cb-sec-h{font-family:var(--font-display); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:#4A4A62; line-height:1}
 .cb-topics{display:flex; flex-wrap:wrap; gap:5px 6px}
@@ -1146,13 +1156,8 @@ html.cb-lock, html.cb-lock body{overflow:hidden}
 .cb-q{display:flex; align-items:center; gap:8px; min-height:32px; width:100%; text-align:left; font-family:var(--font-body); font-weight:700; font-size:.8rem; line-height:1.25;
   background:var(--panel); color:var(--ink); border:2px solid var(--ink); border-radius:10px; padding:5px 10px; cursor:pointer}
 .cb-q i{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:var(--sky); color:#fff; font-family:var(--font-display); font-style:normal; font-size:.85rem; line-height:18px; text-align:center}
-.cb-q:hover{background:var(--sky-pale, #DDF1FC)}
+.cb-q:hover{background:#DDF1FC}
 .cb-q:active{transform:translate(1px,1px)}
-.cb-starter-toggle{flex:0 0 auto; width:100%; min-height:34px; font-family:var(--font-display); font-size:.9rem; letter-spacing:.06em; text-transform:uppercase; color:#4A4A62;
-  background:var(--cream); border:0; border-bottom:3px solid var(--ink); cursor:pointer}
-.cb-starter-toggle i{font-style:normal; margin-left:4px}
-.cb-starter-toggle:hover{color:var(--ink)}
-.cb-starter-toggle[hidden]{display:none}
 
 .cb-msgs{flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
   padding:12px 12px 6px; display:flex; flex-direction:column; gap:12px;
