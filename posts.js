@@ -157,7 +157,7 @@ const YAKKAMON_POSTS = [
     title: "The Race Ends in November \u2014 Here's the Game That Starts the Next Morning",
     date: "Aug 18, 2026",
     excerpt: "Your rank decides your monster and your entry date, then stops mattering. An opening-game plan for early access: why breadth beats depth, why your storage bin is your real ceiling, and why your wave is a market position rather than a head start.",
-    body: [
+    body: ["<em>Update, 2 September:</em> the free-mint stream retires the “market with no sellers” detail — hidden free-mint NFTs are tradable on Ronin from 14 September, and the in-game marketplace opens at Chapter 0, a month after early access. The broader wave-as-market-position point survives; the seven-day monopoly does not.",
       "Every serious piece written about Yakkamon so far \u2014 ours very much included \u2014 has been about the same eleven weeks. But the race does end. The board locks, the airdrop lands three days later, the doors open four days after that, and a completely different game begins that almost nobody has planned for.",
       "## What your rank actually bought",
       "Exactly three things: a monster if you land top 5,000, a trainer number that is pure cosmetics, and an entry date. It buys no resources, no land, no gear, no currency. A rank-800 trainer and a rank-15,000 trainer both start with an empty base and the same tutorial.",
@@ -291,7 +291,7 @@ const YAKKAMON_POSTS = [
     title: "What Actually Changed in the Airdrop \u2014 A Full Breakdown",
     date: "Aug 14, 2026",
     excerpt: "Legendary supply doubled, Storm was added above the old top tier, and the leaderboard now locks. Every band, the odds, and the problem this update makes worse.",
-    body: [
+    body: ["<em>Update, 2 September:</em> the names used below have changed — the 251–500 Legendary is now called <strong>Ghost</strong> and the 501–2,000 Legendary is now <strong>Bloom</strong> (formerly Bloom and Tide). Bands and supply are unchanged; utilities are now published in the official Yakkapedia.",
       "Yakkamon rewrote the Monster NFT airdrop on 12 August and published the monster names on the 14th. Between the two, the picture only became legible this week \u2014 and it's a bigger change than the first announcement suggested.",
       "## The mapping that explains everything",
       "One line in the team's comparison table is the key: <strong>\u201cEcho <em>is</em> the old Legendary A.\u201d</strong> Bloom was Legendary Egg B, Tide was Egg C, and <strong>Storm is entirely new</strong> \u2014 added <em>above</em> the existing ladder rather than inserted into it.",
@@ -322,8 +322,8 @@ const YAKKAMON_POSTS = [
     category: "event",
     title: "Meet Storm, Echo, Bloom and Tide",
     date: "Aug 14, 2026",
-    excerpt: "The four Genesis Legendaries have names \u2014 and Legendary monsters now run to rank 2,000 instead of 1,000. Twice as many as before.",
-    body: [
+    excerpt: "The four Genesis Legendaries have names \u2014 and Legendary monsters now run to rank 2,000 instead of 1,000. Twice as many as before. Updated 2 Sep: Bloom and Tide are now called Ghost and Bloom.",
+    body: ["<em>Update, 2 September:</em> two of the four names have changed. The official Yakkapedia now runs <strong>Storm / Echo / Ghost / Bloom</strong> — the 251–500 monster called Bloom here is now <strong>Ghost</strong>, and the 501–2,000 monster called Tide is now <strong>Bloom</strong>. Same monsters, same boosts. Utilities are published too: Storm, in-range work 2× as fast (large AOE); Echo, in-range double resources (small AOE); Ghost, in-range always at max stamina (small AOE); Bloom, HP regeneration every combat turn.",
       "The founding Legendary monsters have names. Yakkamon has published the four <strong>Genesis Legendaries</strong> \u2014 and with them, the detail that makes the 12 August ladder change finally legible.",
       "## The four",
       "<strong>Storm</strong> goes to ranks 1\u201350 and is new. <strong>Echo</strong> to 51\u2013250 (previously Legendary Egg A). <strong>Bloom</strong> to 251\u2013500 (Egg B). <strong>Tide</strong> to 501\u20132,000 (Egg C). Ranks 2,001\u20135,000 receive a Rare Egg, and 5,001+ receive no airdrop.",

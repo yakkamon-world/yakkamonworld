@@ -47,13 +47,15 @@
   // you get for finishing anywhere INSIDE the range - so 51st and 250th both
   // take home an Echo, and 50th takes a Storm. The worker only knows where the
   // points lines sit; the names and the bands live here.
+  // Names follow the official docs as of 2 Sep 2026: Storm / Echo / Ghost / Bloom.
+  // (Tide was renamed Bloom, and the old Bloom band became Ghost.)
   var LADDER = [
     { from: 1,    to: 3,    name: "Storm + Echo" },
-    { from: 4,    to: 10,   name: "Storm + Bloom" },
+    { from: 4,    to: 10,   name: "Storm + Ghost" },
     { from: 11,   to: 50,   name: "Storm" },
     { from: 51,   to: 250,  name: "Echo" },
-    { from: 251,  to: 500,  name: "Bloom" },
-    { from: 501,  to: 2000, name: "Tide" },
+    { from: 251,  to: 500,  name: "Ghost" },
+    { from: 501,  to: 2000, name: "Bloom" },
     { from: 2001, to: 5000, name: "Rare Egg" },
     { from: 5001, to: null, name: "Not eligible", none: true }
   ];
