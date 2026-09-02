@@ -1130,14 +1130,29 @@ html.cb-lock, html.cb-lock body{overflow:hidden}
   font-family:var(--font-display); font-size:1.5rem; line-height:1; cursor:pointer; box-shadow:3px 3px 0 var(--ink); flex-shrink:0}
 .cb-close:active{transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink)}
 
-.cb-chips{display:flex; flex-wrap:wrap; gap:7px 8px; padding:10px 12px 8px; flex:0 0 auto;
-  background:var(--cream); background-image:radial-gradient(rgba(26,26,46,.07) 1.6px,transparent 1.8px); background-size:13px 13px}
-.cb-chips button{min-height:36px; font-family:var(--font-display); font-size:.88rem; letter-spacing:.04em;
-  background:var(--yellow); color:var(--ink); border:3px solid var(--ink); border-radius:999px; padding:5px 12px 3px;
-  box-shadow:3px 3px 0 var(--ink); cursor:pointer; white-space:nowrap}
-/* On phones the quick questions step aside once a conversation has started, so answers get the room */
-@media (max-width:759px){.cb-sheet.cb-started .cb-chips{display:none}}
-.cb-chips button:active{transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink)}
+/* Starter block: TOPICS (small pills, one per FAQ category) + MOST ASKED (five question rows).
+   Shown until the first question, then folded into a slim toggle bar. */
+.cb-starter{flex:0 0 auto; max-height:52%; overflow-y:auto; overscroll-behavior:contain; padding:8px 12px 6px; display:grid; gap:8px;
+  background:var(--cream); background-image:radial-gradient(rgba(26,26,46,.07) 1.6px,transparent 1.8px); background-size:13px 13px; border-bottom:3px solid var(--ink)}
+.cb-starter[hidden]{display:none}
+.cb-sec{display:grid; gap:5px}
+.cb-sec-h{font-family:var(--font-display); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:#4A4A62; line-height:1}
+.cb-topics{display:flex; flex-wrap:wrap; gap:5px 6px}
+.cb-topic{min-height:28px; font-family:var(--font-body); font-weight:800; font-size:.72rem; line-height:1.1; letter-spacing:.01em;
+  background:var(--yellow); color:var(--ink); border:2px solid var(--ink); border-radius:999px; padding:4px 10px; box-shadow:2px 2px 0 var(--ink);
+  cursor:pointer; white-space:nowrap}
+.cb-topic:active{transform:translate(1px,1px); box-shadow:1px 1px 0 var(--ink)}
+.cb-qs{display:grid; gap:4px}
+.cb-q{display:flex; align-items:center; gap:8px; min-height:32px; width:100%; text-align:left; font-family:var(--font-body); font-weight:700; font-size:.8rem; line-height:1.25;
+  background:var(--panel); color:var(--ink); border:2px solid var(--ink); border-radius:10px; padding:5px 10px; cursor:pointer}
+.cb-q i{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:var(--sky); color:#fff; font-family:var(--font-display); font-style:normal; font-size:.85rem; line-height:18px; text-align:center}
+.cb-q:hover{background:var(--sky-pale, #DDF1FC)}
+.cb-q:active{transform:translate(1px,1px)}
+.cb-starter-toggle{flex:0 0 auto; width:100%; min-height:34px; font-family:var(--font-display); font-size:.9rem; letter-spacing:.06em; text-transform:uppercase; color:#4A4A62;
+  background:var(--cream); border:0; border-bottom:3px solid var(--ink); cursor:pointer}
+.cb-starter-toggle i{font-style:normal; margin-left:4px}
+.cb-starter-toggle:hover{color:var(--ink)}
+.cb-starter-toggle[hidden]{display:none}
 
 .cb-msgs{flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
   padding:12px 12px 6px; display:flex; flex-direction:column; gap:12px;
