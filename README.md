@@ -13,6 +13,7 @@ in this repo is served exactly as it sits here.
 - [Running it locally](#running-it-locally)
 - [Deployment](#deployment)
 - [The workers](#the-workers)
+- [The chatbot](#the-chatbot)
 - [Repo layout](#repo-layout)
 - [Common tasks](#common-tasks)
 - [House rules](#house-rules)
@@ -113,11 +114,54 @@ repo — **none of their code is in here.**
 | Counter | `yakkamon-counter-worker` | `signup-counter.js`, plus the `/flower` price route `leaderboard.js` uses |
 | Leaderboard | `yakkamon-leaderboard-worker` | `leaderboard.js` — pulls a Dune query, caches in KV |
 | Access bot | `yakkamon-access-bot` | Telegram only, not used by the site |
+| Chat | `yakkamon-chat-worker` | `chatbot.js` — answers the "Ask me anything" bar (see [The chatbot](#the-chatbot)) |
 
 > **Deploy gotcha:** pushing to `yakkamon-counter-worker` does **not** deploy it
 > — that repo has no CI workflow. It must be deployed by hand from the
 > Cloudflare dashboard (Quick Edit → *Save and deploy*). This site's repo
 > deploys from Git fine; the counter worker is the exception.
+
+---
+
+## The chatbot
+
+The "Ask me anything…" bar at the bottom of every page is `chatbot.js`
+(markup injected at load, styles in `style.css` under *Ask me anything bar*,
+character `chatbot-bird.webp`). It talks to the `yakkamon-chat-worker`, which
+answers with Claude after searching three tiers **in this order**:
+
+1. **Official** — `docs.yakkamon.com`, fetched live by the worker (markdown
+   pages, cached one hour). Always wins on a conflict.
+2. **This site** — everything in `chatbot-knowledge.json`: `faq.js`,
+   `gameplay.js`, `videos.js`, every article and hub page.
+3. **Dev streams** — `chatbot-digest.md`, the Cumulative Dev Stream digest
+   (later stream beats earlier). Also inside `chatbot-knowledge.json`.
+
+Every reply carries its source chips, and the worker is told to say "not
+confirmed" rather than guess.
+
+**Keeping it current.** `chatbot-knowledge.json` is *generated* — never edit it
+by hand. `build-chatbot-knowledge.mjs` rebuilds it from the files above:
+
+```sh
+node build-chatbot-knowledge.mjs
+```
+
+The GitHub Action in `.github/workflows/chatbot-knowledge.yml` runs that on
+every push to `main` and commits the result, so in normal use you never run it
+yourself. When a new dev-stream digest is published, replace
+`chatbot-digest.md` with the new markdown and push — the Action does the rest.
+The worker picks up a new JSON within ten minutes; no worker redeploy needed.
+
+**Free questions.** `FREE_PER_DAY` (default 3) questions a day per browser,
+then a follow-us card (X / YouTube) unlocks the chat for `UNLOCK_DAYS`. It is
+counted in the visitor's `localStorage` only — an honour system and a nudge,
+not a wall; the worker's rate limit and `DAILY_CAP` are the real cost control.
+
+**Wiring.** `WORKER_URL` at the top of `chatbot.js` must be the worker's URL.
+Until it is, the bar renders and replies say the helper isn't connected.
+`privacy.html#chatbot` discloses what the chat sends where; keep it true.
+`index.html#ask` opens the chat on load (used by the search entry).
 
 ---
 
@@ -146,7 +190,8 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
 │  ├─ gameplay.js                 Gameplay systems (25 entries)
 │  ├─ videos.js                   Video index (17 entries, 4 blocks)
-│  └─ search.js                   SEARCH_INDEX + the search overlay behaviour
+│  ├─ search.js                   SEARCH_INDEX + the search overlay behaviour
+│  └─ chatbot.js                  "Ask me anything" bar + sheet (talks to yakkamon-chat-worker)
 │
 ├─ RENDERERS — how that data is displayed
 │  ├─ news.js                     News archive + category filtering
@@ -160,7 +205,10 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ prereg-ticket.js            Ticket-card countdown (Home)
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
-│  └─ contact-form.js             Contact form relay
+│  ├─ contact-form.js             Contact form relay
+│  ├─ chatbot-knowledge.json      GENERATED chatbot index — rebuild with build-chatbot-knowledge.mjs
+│  ├─ chatbot-digest.md           Dev-stream digest the chatbot reads (replace when republished)
+│  └─ build-chatbot-knowledge.mjs Builds chatbot-knowledge.json (also run by the GitHub Action)
 │
 ├─ INFRASTRUCTURE
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
@@ -217,6 +265,9 @@ that 404s, so these always ship together.
    2 Sep 2026), so whenever you bump an article's `dateModified`, mirror it
    here — a sitemap whose dates are only sometimes right gets ignored.
 
+> After any content change the chatbot index rebuilds itself on push (see
+> [The chatbot](#the-chatbot)); nothing to do by hand.
+
 ### Add a video
 
 1. **`videos.js`** — paste an object at the top of its block. Blocks are
@@ -248,7 +299,8 @@ masthead, tab strip, search overlay and footer all come along for free.
 
 - [ ] Favicon tags + `<link rel="stylesheet" href="style.css">`
 - [ ] `<script src="analytics.js"></script>` in `<head>`
-- [ ] Search overlay markup + `<script src="search.js"></script>` before `</body>`
+- [ ] Search overlay markup + `<script src="chatbot.js" defer></script>` and
+      `<script src="search.js"></script>` before `</body>`
 - [ ] `active` class on the correct nav tab
 - [ ] Canonical, OG and Twitter tags updated (all four title/description pairs)
 - [ ] `<title>` is front-loaded with the page name and ends in ` | YakkamonWorld`
@@ -296,6 +348,9 @@ commentary. Every page footer says so and links to `about.html#usage`.
 
 **No ads.** `privacy.html` and `about.html` both state this plainly. If that
 ever changes, both pages must be rewritten *first*.
+
+**The chat stores nothing.** `privacy.html#chatbot` promises that questions are
+not kept. If the worker ever starts logging them, rewrite that section *first*.
 
 ---
 

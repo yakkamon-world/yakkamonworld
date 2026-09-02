@@ -8,5 +8,7 @@ Allow: /
 Disallow: /*.md$
 Disallow: /wrangler.jsonc
 Disallow: /*.zip$
+Disallow: /chatbot-knowledge.json
+Disallow: /.github/
 
 Sitemap: https://yakkamonworld.com/sitemap.xml

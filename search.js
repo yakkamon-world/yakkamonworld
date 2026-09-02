@@ -5,6 +5,7 @@
 // so it shows up in search results too.
 
 const SEARCH_INDEX = [
+  { tag: "Help", title: "Ask me anything \u2014 the site chatbot", excerpt: "Type a question into the bar at the bottom of any page. Answers come from the official docs first, then YakkamonWorld, then the dev streams, and every reply shows its source.", url: "index.html#ask" },
   { tag: "News", title: "Tip: Deposit on Ronin If You Haven\u2019t Yet", excerpt: "Same points on either chain, but the 14 September mint is Ronin-only and gas is in RON. The next deposit is easier on the chain you will mint on.", url: "article-tip-deposit-on-ronin.html" },
   { tag: "News", title: "Tip: Your $FLOWER Deposit Is Also Your Launch War-Chest", excerpt: "Early-access-only offers \u2014 discounted Gems, VIP, exclusive items, Chapter 0 auctions \u2014 go to trainers who arrive with a balance. What that changes about how much you deposit.", url: "article-tip-launch-war-chest.html" },
   { tag: "News", title: "The Ultimate Ronin Free Mint Guide: How to Mint Your Hidden Yakkamon", excerpt: "10,000 hidden Yakkamon, free on the Ronin Launchpad 14\u201318 September. Which waves your rank unlocks, the pre-snapshot checklist, mint day step by step.", url: "article-ronin-free-mint-guide.html" },

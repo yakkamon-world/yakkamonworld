@@ -108,6 +108,7 @@
       <li><a href="#what-we-collect">What we collect</a></li>
       <li><a href="#analytics">Analytics</a></li>
       <li><a href="#contact-form">The contact form</a></li>
+      <li><a href="#chatbot">The &ldquo;Ask me anything&rdquo; chat</a></li>
       <li><a href="#referral-links">Referral links</a></li>
       <li><a href="#what-we-dont">What we don&rsquo;t do</a></li>
       <li><a href="#your-choices">Your choices</a></li>
@@ -117,10 +118,11 @@
   <div>
     <section class="prereg-section" id="what-we-collect">
       <h2>WHAT WE COLLECT</h2>
-      <p>Two things, and only two:</p>
+      <p>Three things, and only three:</p>
       <ul class="prereg-list">
         <li><strong>Anonymous visit statistics</strong>, through Google Analytics &mdash; but only if you agree when asked. If you decline, nothing is loaded and nothing is sent.</li>
         <li><strong>Whatever you type into the contact form</strong>, which is emailed to us so we can reply.</li>
+        <li><strong>Whatever you type into the &ldquo;Ask me anything&rdquo; chat</strong>, which is sent off to generate an answer and then not kept (see below).</li>
       </ul>
       <p>We don&rsquo;t have accounts, logins or profiles. There is nothing here to sign into, so there is no database of you to keep.</p>
     </section>
@@ -137,6 +139,12 @@
       <h2>THE CONTACT FORM</h2>
       <p>The <a href="contact.html">contact form</a> passes your message through <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a>, which emails it to our inbox at <strong>yakkamonworld@gmail.com</strong>. That means your name, email address and message pass through their servers on the way to us.</p>
       <p>We keep those emails so we can follow up, and we don&rsquo;t add you to any list. If you&rsquo;d rather skip the form entirely, email us directly &mdash; same inbox, one fewer party involved.</p>
+    </section>
+
+    <section class="prereg-section" id="chatbot">
+      <h2>THE &ldquo;ASK ME ANYTHING&rdquo; CHAT</h2>
+      <p>The chat bar at the bottom of every page answers questions from the official Yakkamon docs, this site and the dev-stream digest. Your question, and the last few messages of the same conversation, go to a small Cloudflare Worker we run and from there to <a href="https://www.anthropic.com/" target="_blank" rel="noopener">Anthropic</a>, whose Claude model writes the reply. Anthropic&rsquo;s handling of that text is covered by <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">their privacy policy</a>.</p>
+      <p>We don&rsquo;t store your questions. The only things kept are a count of how many questions were asked each day and, for a few hours, cached answers to questions that were asked word-for-word before &mdash; neither is linked to you. The conversation itself lives in your browser tab and disappears when you close it, and a small counter of how many questions you&rsquo;ve asked today stays in your browser so we can ask you to follow us after the free ones &mdash; that counter never leaves your device. Please don&rsquo;t type personal details, wallet addresses or seed phrases into it; the helper will never ask for them.</p>
     </section>
 
     <section class="prereg-section" id="referral-links">
@@ -179,7 +187,7 @@
 
     <div class="prereg-callout warning"><strong>One thing worth repeating.</strong> Your Yakkamon deposit address comes only from your own logged-in account on yakkamon.com, and nobody legitimate will ever ask for your seed phrase. Not us, not the team, not support. <a href="faq.html#general">More on staying safe &rarr;</a></div>
 
-    <p class="tip-caption">Last updated 12 August 2026. If any of this changes, this page changes with it.</p>
+    <p class="tip-caption">Last updated 2 September 2026. If any of this changes, this page changes with it.</p>
   </div>
 </div>
 </main>
@@ -237,6 +245,7 @@
 </footer>
 
 <script src="privacy-consent.js"></script>
+<script src="chatbot.js" defer></script>
 <script src="search.js"></script>
 </body>
 </html>
