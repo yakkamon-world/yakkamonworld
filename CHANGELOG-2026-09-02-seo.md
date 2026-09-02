@@ -36,6 +36,13 @@ The page was called "Early Access" (nav tab), "Pre-registration guide" (footer o
 - `gameplay-poster-source.html` (the poster render source, publicly served): `<meta name="robots" content="noindex">` so it can't be indexed as a duplicate of the field guide.
 - `robots.txt`: `Disallow: /*.md$`, `/wrangler.jsonc`, `/*.zip$` — `assets.directory: "."` serves the README, changelogs and config as public URLs; keep them out of results. Everything else stays `Allow: /`.
 
+## Sitemap: `<lastmod>` on all 51 URLs
+
+- Coverage was already complete (51 indexable pages, 51 URLs; the noindexed poster source is correctly absent), but only 5 URLs had a `<lastmod>`. Google only trusts `lastmod` when it is consistently accurate, so a sitemap where 46 of 51 entries have none tells it nothing.
+- Backfilled: every article URL now carries its own JSON-LD `dateModified` (the site's editorial record, which already excludes nav-only edits). Hub pages carry their last page-specific content change, taken from the repo history with shared header/footer edits filtered out: home, Early Access, News, Gameplay, Field Guide, FAQ, Videos → 2026-09-02; Leaderboard, Tips → 2026-08-24; About → 2026-08-20; Privacy → 2026-08-13; Community, Contact → 2026-08-12.
+- The 5 existing values were already correct and are unchanged. `changefreq` / `priority` left as they were (Google ignores both).
+- Rule from here on: bumping an article's `dateModified` means mirroring it to `sitemap.xml` (README updated).
+
 ## README
 
 - The "known wording mismatch" note is retired; two new house rules (one label per page + ` | YakkamonWorld` titles; breadcrumbs are structural, no bumps); breadcrumb steps added to "Add a news article" and "Add a whole new page".
@@ -43,7 +50,7 @@ The page was called "Early Access" (nav tab), "Pre-registration guide" (footer o
 ## Validation (against GitHub main `1e51f5f`, which the uploaded zip matched byte-for-byte)
 
 - `node --check` on every .js: clean. Every JSON-LD block on all 52 pages parses. Tag-balance pass: clean. `sitemap.xml` parses; every URL exists. Every `posts.js` slug has a file. Every internal `href`/`src` resolves; `#anchor` targets resolve to page ids or `faq.js` category ids. Playwright render of six pages at 320/375/430/768/1440: zero horizontal overflow, crumb trail one line at every width.
-- Not touched: `sitemap.xml` (title/nav changes aren't content changes, so no `lastmod` edits), article bodies, `posts.js`, `faq.js`, `videos.js`, `gameplay.js`.
+- Not touched: article bodies, `posts.js`, `faq.js`, `videos.js`, `gameplay.js`.
 
 ## What this can and cannot do
 

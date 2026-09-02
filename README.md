@@ -212,7 +212,10 @@ that 404s, so these always ship together.
 3. **`search.js`** — add entries near the top. The convention is one for the
    article itself plus a few phrased as questions a reader would actually type,
    all pointing at the same URL.
-4. **`sitemap.xml`** — add a `<url>` block.
+4. **`sitemap.xml`** — add a `<url>` block **with a `<lastmod>`** equal to the
+   article's `dateModified`. Every URL in the sitemap carries one (backfilled
+   2 Sep 2026), so whenever you bump an article's `dateModified`, mirror it
+   here — a sitemap whose dates are only sometimes right gets ignored.
 
 ### Add a video
 
@@ -276,7 +279,8 @@ block from `faq.js`, replace only the FAQPage one.
 
 **Corrections are published, not hidden.** Evergreen and reference pages get
 fixed in place. Dated news posts get a visible correction callout and a bumped
-`dateModified`, never a silent rewrite. Dated commentary that was accurate when
+`dateModified` (mirrored to that URL's `<lastmod>` in `sitemap.xml`), never a
+silent rewrite. Dated commentary that was accurate when
 published is left alone. The site has publicly corrected its own wrong analysis
 before; that's the standard.
 
