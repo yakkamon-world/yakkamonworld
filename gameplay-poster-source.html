@@ -8,14 +8,14 @@
   Render: open in Chromium at a 1800px-wide viewport, full-page screenshot;
   the 4000px version is the same page at deviceScaleFactor 2.222.
   Edit the panels below, re-render, replace both PNGs and the width/height
-  attributes on gameplay.html's <img>. Revision: 28 August 2026.
+  attributes on gameplay.html's <img>. Revision: 2 September 2026 (21 panels).
 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
 :root{--cream:#FFF4D6;--ink:#1A1A2E;--sky:#2FA8E8;--yellow:#FFD23F;--red:#FF3B3B;--green:#3FAE5C;--purple:#8A5CF0;--panel:#fff}
 *{box-sizing:border-box}
 html,body{margin:0}
-body{width:1800px;background:var(--cream);background-image:radial-gradient(rgba(26,26,46,.12) 1px,transparent 1px);background-size:14px 14px;font-family:Nunito,Arial,sans-serif;color:var(--ink);font-weight:600;font-size:9.8px;line-height:1.3}
+body{width:1800px;background:var(--cream);background-image:radial-gradient(rgba(26,26,46,.12) 1px,transparent 1px);background-size:14px 14px;font-family:Nunito,Arial,sans-serif;color:var(--ink);font-weight:600;font-size:9.5px;line-height:1.27}
 .sheet{padding:24px 24px 0}
 .head{display:flex;gap:18px;align-items:stretch}
 .head-l{flex:1;background:var(--sky);border:5px solid var(--ink);border-radius:18px;padding:16px 22px;box-shadow:7px 7px 0 var(--ink)}
@@ -46,9 +46,9 @@ p{margin:0 0 6px}
 ol.steps{list-style:none;margin:0 0 6px;padding:0;counter-reset:s}
 ol.steps li{counter-increment:s;position:relative;padding:4px 6px 4px 24px;border:2.5px solid var(--ink);border-radius:8px;margin-bottom:4px;background:#fff}
 ol.steps li::before{content:"0" counter(s);position:absolute;left:7px;top:5px;font-family:Bangers,Impact,sans-serif;color:var(--red);font-size:12px}
-table{width:100%;border-collapse:collapse;font-size:9.6px;margin:0 0 6px}
+table{width:100%;border-collapse:collapse;font-size:9.2px;margin:0 0 6px;table-layout:fixed}
 th{background:var(--ink);color:#fff;text-align:left;padding:3px 5px;font-size:9.6px;letter-spacing:.05em;text-transform:uppercase}
-td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
+td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wrap:anywhere}
 .kv{display:flex;justify-content:space-between;align-items:center;gap:4px;border-bottom:1.5px solid var(--ink);padding:3px 2px;font-weight:700}
 .kv+.kv+.kv+.kv+.kv{border-bottom:0}
 .pill{display:inline-block;white-space:nowrap;font-size:9px;font-weight:900;padding:1px 5px;border:1.5px solid var(--ink);border-radius:5px;letter-spacing:.04em}
@@ -57,7 +57,7 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
 .flow span{background:var(--yellow);border:2px solid var(--ink);border-radius:6px;padding:2px 6px;font-family:Bangers,Impact,sans-serif;font-size:10px;letter-spacing:.06em}
 .flow i{font-style:normal;font-weight:900}
 .foot{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;padding:10px 24px;margin:6px -24px 0;font-size:11px;font-weight:700}
-.foot b{font-family:Bangers,Impact,sans-serif;font-size:22px;letter-spacing:.06em;color:var(--yellow)}
+.foot b{font-family:Bangers,Impact,sans-serif;font-size:22px;letter-spacing:.06em;color:var(--yellow);white-space:nowrap;margin-right:24px}
 </style>
 </head>
 <body>
@@ -71,12 +71,12 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED 28 AUG 2026 &mdash; OFFICIAL REGIONS POST. TILES, REGION UNLOCKS, LOGISTICS ADDED. GAMEPLAY ONLY.</div>
+    <div class="rev">REVISED 2 SEP 2026 &mdash; YAKKAPEDIA + FREE-MINT STREAM. UTILITIES &amp; AURAS, TWO-TRACK ECONOMY, HUNTING GROUNDS, GHOST &amp; BLOOM.</div>
   </div>
 </div>
 
 <div class="chips">
-  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">3v3 AUTO-BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">50&ndash;60 YAKKAMON AT LAUNCH</span>
+  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">3v3 AUTO-BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">50&ndash;60 YAKKAMON AT LAUNCH</span><span class="chip green">13 TYPES</span>
 </div>
 
 <div class="cols">
@@ -108,10 +108,10 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
   <p>Around 50&ndash;60 species at launch, the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
   <div class="card sky"><b>Its species</b>Decides what it can gather &mdash; and fixes its rarity tier.</div>
   <div class="card green"><b>Its stats</b>Every monster rolls differently. Two of the same species aren&rsquo;t identical.</div>
-  <div class="card yellow"><b>Its traits</b>Randomly rolled percentage bonuses that change how it farms.</div>
+  <div class="card yellow"><b>Its utility</b>A boost it carries. Named on Legendaries; randomly rolled on everyone else, separately from stats.</div>
   <div class="card red"><b>Its skills</b>What it actually does in battle.</div>
   <p>Underneath: real genetics, hidden starting values, and training values that shift stats by how you raise it.</p>
-  <div class="card purple"><b>Monsters are your boost items</b>The gathering, yield and speed buffs live on the creatures, not on decorations.</div>
+  <div class="card purple"><b>No wearable gear</b>&ldquo;The Yakkamon have the stats.&rdquo; Maybe one held item. 13 types at launch, one per monster &mdash; dual types later.</div>
   <div class="like"><em>LIKE THIS</em>Trading cards. Same picture on the front, better numbers on the back.</div>
 </div>
 
@@ -122,7 +122,7 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
   <div class="card"><b>Legendary &middot; NFT</b>Pre-minted, fixed scarce supply. Traits no other tier can have.</div>
   <div class="card"><b>Rare &middot; SFT</b>Time / event limited. Supply set by how hard players hunt.</div>
   <div class="card"><b>Common &middot; no token</b>Plain game asset.</div>
-  <p>Hunting is the primary route at any tier; legendaries lean on events and tournaments.</p>
+  <p>Hunting is the primary route at any tier. The Yakkapedia adds an Uncommon line below Rare.</p>
   <div class="like"><em>LIKE THIS</em>A first-team squad player can outperform a benched international. The badge tells you the ceiling, not the form.</div>
 </div>
 
@@ -150,16 +150,16 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
     <li>It sleeps when tired, recovers, restarts itself.</li>
   </ol>
   <div class="flow"><span>WORKING</span><i>&rarr;</i><span>OUT OF STAMINA</span><i>&rarr;</i><span>SLEEPING</span><i>&rarr;</i><span>WORKING</span></div>
-  <p>Two ways to raise output: level them up, and collect more of them. Tiles decide how many can run at once.</p>
+  <p>No cap on how many work at once &mdash; jobs are the limit, not headcount. Level them up, collect more, claim more tiles.</p>
   <div class="like"><em>LIKE THIS</em>A little worker with a battery. Work drains it, sleep charges it, and it clocks back on unprompted.</div>
 </div>
 
 <div class="panel">
   <h2><i>07</i>UPKEEP &amp; DEGRADATION</h2>
-  <p>A resource sink that does not exist in Sunflower Land &mdash; and the reason you can&rsquo;t set this game up once and leave it.</p>
+  <p>A resource sink that does not exist in Sunflower Land &mdash; but it comes from <b>use</b>, not absence.</p>
   <div class="card red"><b>Plots wear out</b>The job card carries a degradation marker. The example shown read <b style="display:inline;text-transform:none">degraded 1.6&times;</b> &mdash; that plot farms slower until you refertilise it.</div>
   <div class="card yellow"><b>Fertiliser costs resources</b>So upkeep is a permanent drag on production, not a cosmetic status.</div>
-  <div class="card sky"><b>Leave it and you lose twice</b>You hit the bin cap and stop banking &mdash; and the soil degrades, so what does run, runs worse. On every Region you own.</div>
+  <div class="card sky"><b>Being away just pauses it</b>&ldquo;No decay, no neglect feature, no punitive system for not logging in.&rdquo; Bins fill, jobs stop, and the farm waits.</div>
   <div class="card green"><b>Plot groups are non-linear</b>Tiles come in groups of three. Upkeep scales more slowly than production, so filling a group beats spreading thin.</div>
   <p>Not published: degradation rate, fertiliser recipe, live group size.</p>
   <div class="like"><em>LIKE THIS</em>A vegetable patch, not a vending machine. Crop the same soil forever and yields drop until you feed it.</div>
@@ -170,7 +170,7 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
   <p>Resources pile into a bin that keeps filling while you&rsquo;re offline &mdash; until you tap it to collect.</p>
   <div class="flow"><span>EARLY 5 / 20</span><i>&rarr;</i><span>FILLING 84 / 120</span><i>&rarr;</i><span>FULL &mdash; MAX 120 / 120</span></div>
   <div class="card yellow"><b>The catch</b>Bins cap out. Every hour a bin sits at MAX is production you never banked.</div>
-  <div class="card sky"><b>One per Region, probably</b>Once you hold several Regions, expect a bin in each &mdash; and a transport step to bring the haul home.</div>
+  <div class="card sky"><b>One bin per resource</b>The team narrowed it down from many bins. Hold several Regions and expect a set in each &mdash; plus a transport step home.</div>
   <div class="like"><em>LIKE THIS</em>A piggy bank that fills itself. Once full, extra coins bounce off the top.</div>
 </div>
 
@@ -193,19 +193,38 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
   <div class="like"><em>LIKE THIS</em>Two identical umbrellas keep you exactly as dry as one. An umbrella and a raincoat is the upgrade.</div>
 </div>
 
+<div class="panel new">
+  <span class="tag">NEW 2 SEP</span>
+  <h2><i>11</i>UTILITIES &amp; AURAS</h2>
+  <p>The boosts come from the Yakkamon themselves. Legendaries have named ones (name &middot; total supply &middot; airdrop ranks):</p>
+  <table>
+    <tr><th style="width:38%">Genesis</th><th>Utility</th></tr>
+    <tr><td><b>Storm</b> &middot; 75<br>ranks 1&ndash;50</td><td>Within range work <b>2&times; as fast</b> &middot; <b>large</b> AOE</td></tr>
+    <tr><td><b>Echo</b> &middot; 275<br>51&ndash;250</td><td>Within range produce <b>double</b> &middot; small AOE</td></tr>
+    <tr><td><b>Ghost</b> &middot; 400<br>251&ndash;500</td><td>Within range <b>always at max stamina</b> &middot; small AOE</td></tr>
+    <tr><td><b>Bloom</b> &middot; 2,000<br>501&ndash;2,000</td><td>Regenerates <b>% of Max HP</b> every combat turn</td></tr>
+  </table>
+  <div class="card yellow"><b>Small vs large AOE</b>Small: the job it stands on and the 2&ndash;3 nodes beside it. Large: a whole section of the farm.</div>
+  <div class="card green"><b>They stack &mdash; some multiply</b>Storm + Echo confirmed: twice the speed on double the output.</div>
+  <div class="card sky"><b>Rares &amp; Uncommons roll theirs</b>Utility, species and stats are separate dice. Keepers rolled all three.</div>
+  <div class="card red"><b>Tide is gone</b>The 251&ndash;500 monster is now Ghost; the 501&ndash;2,000 monster is now Bloom. Same boosts, renamed to match types.</div>
+  <p>Numbers &mdash; radii, percentages &mdash; still unpublished. 68 Legendaries hide in the 14 Sep free mint.</p>
+  <div class="like"><em>LIKE THIS</em>A good foreman. He doesn&rsquo;t lay bricks &mdash; everyone within earshot lays them faster.</div>
+</div>
+
 <div class="panel">
-  <h2><i>11</i>BREEDING &amp; GENETICS</h2>
+  <h2><i>12</i>BREEDING &amp; GENETICS</h2>
   <p>Genetics carry down the line. Breed two strong individuals of the same species and their stats and traits propagate.</p>
-  <div class="card sky"><b>No hard cap &mdash; degradation instead</b>Random noise increases the more you breed from one individual. Never blocked, just diminishing returns.</div>
+  <div class="card sky"><b>A breeding limit, scaled by rarity</b>Bred Yakkamon are tradable, so: commons breed above replacement, rares around it, some Legendaries once. Noise still creeps in per generation.</div>
   <div class="card green"><b>80&ndash;90% predictable</b>One RNG component plus one fixed. You can build a best-case / worst-case range before committing.</div>
   <div class="card yellow"><b>Designed for 1&ndash;3 year projects</b>Long-running attempts to move a trait set onto a perfect monster. Later: across species, then across type groups.</div>
   <div class="card red"><b>No forging</b>Ten commons into one rare was rejected &mdash; tonally wrong for a cosy collector.</div>
-  <div class="card purple"><b>Evolutions: per monster, triggers hidden</b>A level, an item or a species-specific condition. The game hints that something is required without saying what.</div>
+  <div class="card purple"><b>Evolutions: not at launch</b>Confirmed, per monster, triggers hidden &mdash; but held back until the supply problem (everyone evolving up) is solved.</div>
   <p>Advanced breeding is not in early access. It arrives post-launch.</p>
 </div>
 
 <div class="panel">
-  <h2><i>12</i>YOUR BASE &amp; YOUR GYM</h2>
+  <h2><i>13</i>YOUR BASE &amp; YOUR GYM</h2>
   <div class="card yellow"><b>Expand your land, tile by tile</b>Each tile has a resource price on the button &mdash; the starter reads 10 Wood + 1 Stone.</div>
   <div class="card sky"><b>Buildings &amp; stations</b>Workbenches with their own counters, houses with beds, crop plots, rock nodes.</div>
   <div class="card green"><b>Hunting Area</b>A tile you claim, then pay to enter &mdash; 5 berries on the sign at launch.</div>
@@ -213,9 +232,8 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
   <p>Menu: Squad &middot; Items &middot; Quests &middot; Shop &middot; Trade &middot; Log. Built for landscape.</p>
 </div>
 
-<div class="panel new">
-  <span class="tag">NEW 28 AUG</span>
-  <h2><i>13</i>REGIONS &amp; TILES</h2>
+<div class="panel">
+  <h2><i>14</i>REGIONS &amp; TILES</h2>
   <p>Three layers, and nothing you unlock ever closes. Grasslands is the starter.</p>
   <ol class="steps">
     <li><b>Tiles</b> &mdash; gather resources to unlock more. A tile holds resources, build room, or a hunting area &mdash; and each raises how much you can run at once.</li>
@@ -223,13 +241,12 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
     <li><b>Chapters</b> &mdash; Regions get bigger each time, and more arrive with each Chapter alongside new species.</li>
   </ol>
   <div class="card sky"><b>The Water Region</b>Water hunting areas full of Yakkamon you couldn&rsquo;t catch back home. A new Region can&rsquo;t be worked until you catch its first local type.</div>
-  <div class="card yellow"><b>Old Regions stay live</b>They don&rsquo;t pause when you leave &mdash; bins fill and plots degrade. The team&rsquo;s word for the answer: automate.</div>
+  <div class="card yellow"><b>Old Regions stay live</b>You keep every one. Leave one alone and its bins fill and it stops earning &mdash; no decay, but no output. The team&rsquo;s word: automate.</div>
   <div class="like"><em>LIKE THIS</em>A shop that keeps adding aisles &mdash; and you still stock the old ones.</div>
 </div>
 
-<div class="panel new">
-  <span class="tag">NEW 28 AUG</span>
-  <h2><i>14</i>LOGISTICS</h2>
+<div class="panel">
+  <h2><i>15</i>LOGISTICS</h2>
   <p>Moving and sharing resources between your Regions &ldquo;becomes a core part of the strategy&rdquo; &mdash; the trainers who master logistics get ahead.</p>
   <div class="card red"><b>So inventory is per Region</b>That sentence has no meaning with a global bag. Wood gathered in the grasslands stays there until something moves it.</div>
   <div class="card yellow"><b>What follows</b>A new Region has to be fed before it feeds you, and Region-only materials become things you ship.</div>
@@ -238,7 +255,7 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
 </div>
 
 <div class="panel">
-  <h2><i>15</i>DAY, NIGHT &amp; SEASONS</h2>
+  <h2><i>16</i>DAY, NIGHT &amp; SEASONS</h2>
   <div class="card sky"><b>Day &amp; night</b>A clock with a sun / moon icon. What&rsquo;s out in the wild changes with it. Runs on a sped-up in-game clock, not real time &mdash; no timezone advantage.</div>
   <div class="card yellow"><b>Weather</b>Separate indicators next to the clock &mdash; sun and rain both shown.</div>
   <div class="card green"><b>Seasons</b>Reshape the world and each Region with it. New monsters drop into the wild on a schedule players race to claim &mdash; every 3 months per the docs, weekly still under consideration.</div>
@@ -246,27 +263,38 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
 </div>
 
 <div class="panel">
-  <h2><i>16</i>HUNTING &amp; CRAFTING</h2>
-  <div class="card green"><b>How a hunt runs</b>Send a Yakkamon into a hunting area carrying lures. It searches and draws wild monsters back onto your land. You choose where it goes; the monster does the hunting.</div>
-  <div class="card red"><b>Some fight back</b>An aggressive monster can challenge you to a battle instead of being caught.</div>
-  <div class="card yellow"><b>Crafting</b>Refine gathered resources into the gear that captures rarer, tougher monsters. Turning the pile into the specific items a harder hunt needs is what gates progress.</div>
-  <p>Hunting is the primary route to any monster at any rarity. Mechanic not 100% locked as of 21 August.</p>
-  <div class="like"><em>LIKE THIS</em>A better rod to catch the big fish &mdash; built from what the small fish helped you collect.</div>
+  <h2><i>17</i>HUNTING &amp; CRAFTING</h2>
+  <div class="card green"><b>Hunting is a job you assign</b>Same top-down view as the farm. The Yakkamon you send in rolls for a wild monster; resources tilt the odds.</div>
+  <div class="card yellow"><b>Grounds have areas, lures pick the type</b>Three areas shown (a rocky outcrop among them), swamps and water to come. A rock-type lure draws rock types. Lures and baits are crafted.</div>
+  <div class="card red"><b>Aggressive</b>Red alert: something wants to fight. The ground pauses and waits for your move &mdash; hunting hands off to combat.</div>
+  <div class="card sky"><b>Ambient</b>Skittish, never alerts you. Send bait, watch a short emoji conversation, see if it joins or runs.</div>
+  <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon. A hunted-out ground yields less. Contract hunts pay coins.</div>
+  <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot &mdash; and the field empties if you work it daily.</div>
 </div>
 
 <div class="panel">
-  <h2><i>17</i>THE BATTLE SYSTEM</h2>
-  <div class="card sky"><b>Lane-based 3v3 auto-battling</b>Set lane positions before the fight; you can&rsquo;t change them mid-battle unless a skill does. AOE keeps positioning relevant.</div>
-  <div class="card yellow"><b>Skills fire in a fixed order</b>The move list is visible in advance. Type advantage vs skill-loop advantage: a favourable matchup still loses if their shield eats your one big hit.</div>
-  <div class="card green"><b>Pacing</b>3&ndash;5 rounds, under a minute typically &mdash; but the &ldquo;average&rdquo; fight is meant to be under 40% of all fights.</div>
-  <div class="card red"><b>Respeccing is deliberately expensive</b>Find a monster with the skill you want and extract it. Buildcraft comes from breeding, not from swapping loadouts before every fight.</div>
-  <div class="card purple"><b>Matchmaking &amp; anti-bot</b>MMR confirmed. No meaningful rewards below a cutoff, so the low end is worthless to bots.</div>
-  <p>PvE and PvP share the engine. PvP arena, tournaments and guilds arrive after early access.</p>
-  <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad and formation, then watch from the touchline.</div>
+  <h2><i>18</i>THE BATTLE SYSTEM</h2>
+  <div class="card sky"><b>Lane-based 3v3 auto-battling</b>Lanes act top to bottom &mdash; 1, then 2, then 3. Set positions before the fight. AOE keeps positioning relevant.</div>
+  <div class="card yellow"><b>Skills fire in a fixed order</b>Each monster cycles 2&ndash;3 abilities in a preset loop. Type advantage vs skill-loop advantage: a favourable matchup still loses if their shield eats your big hit.</div>
+  <div class="card red"><b>You act inside the fight</b>Not a pure simulation: players influence combat via &ldquo;mechanic swapping&rdquo;. Who goes first is a coin flip &mdash; unless a lane holds type advantage.</div>
+  <div class="card green"><b>Pacing</b>3&ndash;5 rounds, under a minute &mdash; but the &ldquo;average&rdquo; fight is meant to be under 40% of fights.</div>
+  <div class="card purple"><b>Matchmaking &amp; anti-bot</b>MMR confirmed. No meaningful rewards below a cutoff, so the low end is worthless to bots. Respeccing is deliberately expensive &mdash; extract skills, don&rsquo;t hot-swap.</div>
+  <p>PvE and PvP share the engine. Arena, tournaments, guilds, lane and weather effects: after early access.</p>
+  <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad and formation &mdash; and shout one or two things from the touchline.</div>
+</div>
+
+<div class="panel new">
+  <span class="tag">NEW 2 SEP</span>
+  <h2><i>19</i>THE TWO-TRACK ECONOMY</h2>
+  <div class="card green"><b>Track one: free to play</b>Produce without limit. Nothing you make here can be traded.</div>
+  <div class="card yellow"><b>Track two: tradable, gated by coins</b>Making something tradable costs the game&rsquo;s Web2 currency &mdash; coins, maybe &ldquo;new yen&rdquo; later. That gate is the whole design.</div>
+  <div class="card red"><b>Coin faucets are scarce</b>VIP, burning crops or other assets, and contract hunts. Every coin is a sink somebody paid.</div>
+  <p>Marketplace, auctions and $FLOWER withdrawals open at Chapter 0, a month after early access. &ldquo;More free to try than free to play.&rdquo;</p>
+  <div class="like"><em>LIKE THIS</em>A hobby farm with a licence to sell at market. Grow all you like for your own table &mdash; the permit is rationed.</div>
 </div>
 
 <div class="panel">
-  <h2><i>18</i>PROGRESSION &amp; ENDGAME</h2>
+  <h2><i>20</i>PROGRESSION &amp; ENDGAME</h2>
   <div class="card sky"><b>Infinite levels and expansions</b>Plans and sinks are meant to ship at launch; the endgame features themselves arrive after early access.</div>
   <div class="card yellow"><b>The meta is expected to move</b>Early: gathering and hunting specialists are the valuable monsters. Later: once the arena and tournaments establish, demand shifts to battle stats. The team won&rsquo;t intervene.</div>
   <div class="card green"><b>No hard specialisation cap</b>Producer vs fighter emerges from opportunity cost, not a rule.</div>
@@ -275,23 +303,22 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
 </div>
 
 <div class="panel">
-  <h2><i>19</i>NOT CONFIRMED YET</h2>
-  <p>What still blocks a reliable calculator or planner.</p>
-  <div class="card grey"><b>Tile numbers</b>Tiles per Region, the cost curve, parallel jobs per tile.</div>
+  <h2><i>21</i>NOT CONFIRMED YET</h2>
+    <div class="card grey"><b>Tile numbers</b>Tiles per Region, the cost curve, parallel jobs per tile.</div>
   <div class="card grey"><b>The Region unlock</b>&ldquo;Grow your starting Region&rdquo; &mdash; a tile count, quest, level or payment?</div>
   <div class="card grey"><b>The transfer mechanic</b>What moving resources between Regions costs.</div>
-  <div class="card grey"><b>Work cycle numbers</b>Duration, stamina cost, yield, sleep rate.</div>
-  <div class="card grey"><b>Upkeep numbers</b>Degradation rate, fertiliser recipe, real group sizes.</div>
-  <div class="card grey"><b>Full type chart</b>Only Grass&rarr;Wood confirmed; combat effectiveness missing too.</div>
+  <div class="card grey"><b>Work cycle &amp; upkeep numbers</b>Cycle duration, stamina, yield, sleep rate; degradation rate, fertiliser recipe.</div>
+  <div class="card grey"><b>The type chart</b>13 types confirmed, not which; only Grass&rarr;Wood; combat effectiveness missing.</div>
   <div class="card grey"><b>Stats, levels, traits &amp; skills</b>Roll ranges, XP costs, level cap, trait list, respec costs.</div>
-  <div class="card grey"><b>Monster utilities</b>What each Genesis Legendary does. Due September.</div>
+  <div class="card grey"><b>Utility numbers</b>AOE radii, Bloom&rsquo;s regen %, every Rare / Uncommon utility.</div>
+  <div class="card grey"><b>Mechanic swapping &amp; coins</b>What the in-fight action is; what a tradable unit costs.</div>
 </div>
 
 </div>
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet, compiled from the official docs, the official Regions and Economy posts, screenshots and dev stream statements through 28 August 2026. Not an official document &mdash; details are pre-launch and subject to change. Figures drawn from UI mock-ups may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions and Economy posts, screenshots and dev streams through 2 September 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>
@@ -300,7 +327,7 @@ td{border:1.5px solid var(--ink);padding:3px 5px;vertical-align:top}
 window.__rebalance=function(){
   // Split the numbered panels into N columns in reading order, choosing the
   // split points that keep the tallest column as short as possible.
-  var N=10,cols=document.querySelector('.cols'),panels=[].slice.call(cols.querySelectorAll('.panel'));
+  var N=11,cols=document.querySelector('.cols'),panels=[].slice.call(cols.querySelectorAll('.panel'));
   var meas=document.createElement('div');meas.className='col';meas.style.flex='0 0 calc((100% - '+(N-1)*12+'px)/'+N+')';cols.innerHTML='';cols.appendChild(meas);panels.forEach(function(p){meas.appendChild(p)});
   var h=panels.map(function(p){return p.offsetHeight+12}),n=h.length,INF=1e9,dp=[],cut=[];
   for(var i=0;i<=n;i++){dp.push([]);cut.push([]);for(var j=0;j<=N;j++){dp[i].push(INF);cut[i].push(0);}}

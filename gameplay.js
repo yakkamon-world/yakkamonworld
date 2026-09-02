@@ -42,8 +42,8 @@
                contract hunts), combat-system (player actions via mechanic
                swapping, initiative, lane order, preset skill loops),
                platform-access (MMO plaza later).
-    Poster NOT redrawn for this revision - the two new panels are missing
-    from gameplay-poster.png and the page says so.
+    Poster REDRAWN the same day: 21 panels, 11 columns, 1800x1704 /
+    4000x3787 (gameplay-poster-source.html).
   Previous:    28 August 2026, after the official "Yakkamon - Regions" post.
     Rewritten: regional-exploration (tiles, Region unlocks, the Water Region,
                old Regions staying live).
