@@ -29,3 +29,9 @@ One new guideline article and the links that reach it. No evergreen facts change
 - No bespoke cover art; og:image falls back to og-default.png.
 - FAQ untouched — its 14 free-mint answers already match the official page. A "read the full guide" link from the FAQ free-mint intro is a candidate follow-up.
 - Poster not redrawn (no gameplay change).
+
+## Addendum — Home and Early Access banner
+
+- New `free-mint-banner.webp` (1520×848) + `free-mint-banner-2x.webp` (3040×1696), pixel-art "FREE MINT — 14 SEPTEMBER" banner generated from the official roster designs (Nano Banana 2; text rendered in-model).
+- `index.html` and `pre-registration.html`: the `.prereg-ticket` image is now the free mint banner and the `ticket-link` points at `article-ronin-free-mint-guide.html` (same-site, no target=_blank). The access-code / countdown / sign-up panel beneath it is unchanged. `prereg-ticket.webp` stays in the repo — `article-yakkamon-referral-code.html` still embeds it.
+- README image list updated.
