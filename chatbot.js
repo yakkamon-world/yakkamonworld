@@ -97,12 +97,33 @@ const FOLLOW_LINKS = {
   if (history.length) { history.forEach(render); sheet.classList.add("cb-started"); }
   else pushBot({ answer: GREETING, sources: [], link: null }, false);
 
+  /* ---------- usage tracking ----------
+     Two channels, both anonymous:
+     - GA4 events (only when the visitor accepted analytics): chat_open, chat_question,
+       chat_follow_card, chat_follow_click {platform}, chat_unlock.
+     - A one-word ping to the worker's /event for the follow funnel (open, card, follow_x,
+       follow_youtube), which just adds 1 to a daily counter — no cookies, no ids.
+       The owner reads them at WORKER_URL/stats?key=… */
+  function track(name, params) {
+    try { if (typeof window.gtag === "function") window.gtag("event", name, Object.assign({ event_category: "chatbot" }, params || {})); } catch (e) {}
+  }
+  function ping(type) {
+    if (!configured) return;
+    try {
+      const u = WORKER_URL.replace(/\/$/, "") + "/event";
+      if (navigator.sendBeacon) navigator.sendBeacon(u, type);
+      else fetch(u, { method: "POST", body: type, keepalive: true }).catch(function () {});
+    } catch (e) {}
+  }
+  let openedOnce = false;
+
   /* ---------- open / close ---------- */
   function open() {
     if (!sheet.hidden) return;
     lastFocus = document.activeElement;
     scrim.hidden = false; sheet.hidden = false;
     document.documentElement.classList.add("cb-lock");
+    if (!openedOnce) { openedOnce = true; track("chat_open"); ping("open"); }
     bar.classList.remove("cb-hide");
     scrollBottom();
     watchViewport(true);
@@ -194,7 +215,7 @@ const FOLLOW_LINKS = {
         if (res.status === 429) pushBot({ answer: j.answer || "Too many questions at once — give it a minute and try again.", sources: [], link: null }, false);
         else if (typeof j.answer === "string") pushBot(j, true);
         else pushBot({ answer: "Something went wrong on my side. Try again in a moment, or check the FAQ.", sources: [], link: { title: "Browse the FAQ →", url: "faq.html" } }, false);
-        if (typeof window.gtag === "function") window.gtag("event", "chat_question", { event_category: "chatbot" });
+        track("chat_question", { sources: (j.sources || []).join(",") || "none" });
       })
       .catch(function () {
         typing.remove();
@@ -226,8 +247,12 @@ const FOLLOW_LINKS = {
           '</div>' +
           '<p class="cb-follow-note">Or come back tomorrow for ' + FREE_PER_DAY + ' more.</p>' +
         '</div>';
+      track("chat_follow_card"); ping("card");
       card.querySelectorAll("a").forEach(function (a) {
         a.addEventListener("click", function () {
+          const platform = a.classList.contains("cb-follow-x") ? "x" : "youtube";
+          track("chat_follow_click", { platform: platform }); ping("follow_" + platform);
+          track("chat_unlock");
           quota.unlock();
           setTimeout(function () {
             card.remove();
