@@ -1130,12 +1130,13 @@ html.cb-lock, html.cb-lock body{overflow:hidden}
   font-family:var(--font-display); font-size:1.5rem; line-height:1; cursor:pointer; box-shadow:3px 3px 0 var(--ink); flex-shrink:0}
 .cb-close:active{transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink)}
 
-.cb-chips{display:flex; gap:8px; padding:10px 12px 6px; overflow-x:auto; scrollbar-width:none; flex:0 0 auto;
+.cb-chips{display:flex; flex-wrap:wrap; gap:7px 8px; padding:10px 12px 8px; flex:0 0 auto;
   background:var(--cream); background-image:radial-gradient(rgba(26,26,46,.07) 1.6px,transparent 1.8px); background-size:13px 13px}
-.cb-chips::-webkit-scrollbar{display:none}
-.cb-chips button{flex-shrink:0; min-height:40px; font-family:var(--font-display); font-size:.98rem; letter-spacing:.04em;
-  background:var(--yellow); color:var(--ink); border:3px solid var(--ink); border-radius:999px; padding:6px 14px 4px;
+.cb-chips button{min-height:36px; font-family:var(--font-display); font-size:.88rem; letter-spacing:.04em;
+  background:var(--yellow); color:var(--ink); border:3px solid var(--ink); border-radius:999px; padding:5px 12px 3px;
   box-shadow:3px 3px 0 var(--ink); cursor:pointer; white-space:nowrap}
+/* On phones the quick questions step aside once a conversation has started, so answers get the room */
+@media (max-width:759px){.cb-sheet.cb-started .cb-chips{display:none}}
 .cb-chips button:active{transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink)}
 
 .cb-msgs{flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
