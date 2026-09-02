@@ -1,0 +1,49 @@
+# Rebuilds chatbot-knowledge.json whenever site content changes, and commits it
+# back to main. Cloudflare's Git integration then deploys the fresh JSON and the
+# chat worker picks it up within ten minutes.
+#
+# Needs: Settings → Actions → General → Workflow permissions → "Read and write".
+# The [skip ci] in the commit message stops this workflow re-triggering itself.
+name: Rebuild chatbot knowledge
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "faq.js"
+      - "gameplay.js"
+      - "videos.js"
+      - "posts.js"
+      - "chatbot-digest.md"
+      - "build-chatbot-knowledge.mjs"
+  workflow_dispatch:
+
+concurrency:
+  group: chatbot-knowledge
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build chatbot-knowledge.json
+        run: node build-chatbot-knowledge.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "yakkamonworld-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- chatbot-knowledge.json; then
+            echo "No change."
+          else
+            git add chatbot-knowledge.json
+            git commit -m "Rebuild chatbot knowledge [skip ci]"
+            git push
+          fi
