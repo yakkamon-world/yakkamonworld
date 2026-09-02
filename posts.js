@@ -6,6 +6,26 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "ronin-free-mint-guide",
+    category: "guideline",
+    title: "The Ultimate Ronin Free Mint Guide: How to Mint Your Hidden Yakkamon",
+    date: "Sep 2, 2026",
+    excerpt: "10,000 hidden Yakkamon, free on the Ronin Launchpad from 14 September in five rank-gated waves. Which waves your rank unlocks, the four things to have done before the 10 September snapshot, mint day step by step, what is hidden inside \u2014 and the mistakes that will cost you a mint.",
+    body: [
+      "On 14 September, 10,000 hidden Genesis Yakkamon go up for free on the Ronin Launchpad. You pay gas and nothing else, mint blind, and everything is revealed on 14 October. Hidden in the pool are 68 Legendaries. This is the one page to read first.",
+      "## Three dates",
+      "<strong>10 September</strong>: the leaderboard snapshot that builds the whitelists. <strong>14\u201318 September</strong>: the mint, one wave a day. <strong>14 October</strong>: the reveal. Your rank on the 10th decides your waves; nothing after that changes it.",
+      "## Which waves are yours",
+      "Ranks 1\u20131,000: Waves 1, 2, 4 and 5 \u2014 Wave 1 guaranteed, at your own pace. Ranks 1,001\u201310,000: Waves 2, 4 and 5. Ranks 10,001\u201320,000: Waves 4 and 5. Ranks 20,001\u201350,000: Wave 5 only, at 00:00 UTC on the 18th. Waves 2 and 4 need 5 $FLOWER deposited \u2014 fully withdrawable, not a fee. One NFT per wave per account, and every wave past the first is fastest-click.",
+      "## Before the 10th",
+      "Verify your account. Get to the rank you want \u2014 the lines are 1,000, 10,000, 20,000 and 50,000, and the snapshot week runs at 2.4\u00d7. Deposit at least 5 $FLOWER on Base or Ronin. Set up a Ronin wallet and link it: Base deposits count for points, but the mint is Ronin only. Minting earns 250 points on top.",
+      "## Mint day",
+      "Buy RON for gas days ahead. Open marketplace.roninchain.com/launchpads yourself, connect the linked wallet, be there before your wave opens, mint, approve, and come back for every wave you qualify for. It is free, so any page charging a price is a scam.",
+      "## What is inside",
+      "3 Storm, 5 Echo, 10 Ghost, 50 Bloom, 50 Rare and 9,882 Uncommon \u2014 about one mint in 147 is a Legendary. Hidden NFTs are tradable before the reveal, deposit into the game at early access, and this is the ongoing Yakkamon collection. The 10 September snapshot does not lock the trainer airdrop, which keeps running to one week before early access."
+    ]
+  },
+  {
     slug: "free-mint-stream-graded",
     category: "community",
     title: "We Graded Every Decision From Yakkamon\u2019s Free-Mint Dev Stream \u2014 Sixteen Grades, and a 10 September Deadline",
