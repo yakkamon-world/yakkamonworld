@@ -6,6 +6,38 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "tip-deposit-on-ronin",
+    category: "tips",
+    title: "Tip: Deposit on Ronin If You Haven\u2019t Yet",
+    date: "Sep 2, 2026",
+    excerpt: "Points are identical on Base and Ronin, but the 14 September free mint is Ronin-only and gas is in RON. Deposit on Ronin and the wallet, the swap and the gas are all in place before mint day \u2014 and Base depositors lose nothing.",
+    body: [
+      "$FLOWER is the same token at the same contract address on Base and Ronin, and a deposit earns identical points on either chain. Until now the choice didn\u2019t matter. It does now: the free mint on 14 September happens <strong>only on Ronin</strong>, and gas is paid in <strong>RON</strong>.",
+      "## Why Ronin, if the points are the same",
+      "A Base wallet cannot mint. Whoever deposits on Ronin has already installed the Ronin Wallet, already swapped inside it and already holds RON \u2014 the three things a Base depositor has to set up separately in mint week. The 5 $FLOWER condition for Waves 2 and 4 is met on either chain; only the minting wallet has to be Ronin.",
+      "## How to do it",
+      "Install the official Ronin Wallet, fund it with a little RON, swap for $FLOWER inside it (check the contract address first), send it to your own deposit address in one transfer, then <strong>link that wallet to your Yakkamon account before the 10 September snapshot</strong>. Leave the RON in it \u2014 that is your mint-day gas.",
+      "## Already on Base?",
+      "Nothing to undo and nothing to bridge. Your points and the 5 $FLOWER condition are safe. You just need a Ronin wallet as well: set one up, fund it, link it, mint from it. Full table and steps on the Tips page."
+    ]
+  },
+  {
+    slug: "tip-launch-war-chest",
+    category: "tips",
+    title: "Tip: Your $FLOWER Deposit Is Also Your Launch War-Chest",
+    date: "Sep 2, 2026",
+    excerpt: "The official deposit page lists early-access-only offers \u2014 discounted Gems, VIP, exclusive items, Chapter 0 auctions \u2014 that only a balance already in the game can buy. What that changes about how much you deposit, and when.",
+    body: [
+      "Most people deposit $FLOWER for the points. The official deposit page now describes a second return on the same money: a run of <strong>early-access-only offers</strong> that can only be bought with a balance already in the game when the doors open. In the team\u2019s words, \u201ctrainers who arrive with $FLOWER ready are the ones who get first pick.\u201d",
+      "## What a balance buys at launch",
+      "Gems at early-access rates (\u201cthe best pricing we\u2019ll offer\u201d), VIP access, exclusive launch-window gear, cosmetics and collectibles, auctions for rare and one-off items from Chapter 0, and the ordinary in-game economy. Time-limited, and in the case of auctions and exclusive items supply-limited too. Prices unpublished.",
+      "## What that changes",
+      "Don\u2019t size a deposit on points alone \u2014 anything you were going to spend at launch anyway is better deposited now at 2.6\u00d7 than held back to 1.0\u00d7. Don\u2019t plan to pull it straight back out: withdrawals open at Chapter 0, a month after early access, with percentage limits in the first weeks. And keep part of the balance unspent for the Chapter 0 auctions.",
+      "## One caveat",
+      "All of it is gated by your early-access wave, and Wave 4 still has no confirmed date \u2014 so a rank inside the top 20,000 is worth more than the offers table alone suggests. Full table on the Tips page."
+    ]
+  },
+  {
     slug: "ronin-free-mint-guide",
     category: "guideline",
     title: "The Ultimate Ronin Free Mint Guide: How to Mint Your Hidden Yakkamon",

@@ -126,7 +126,7 @@ repo — **none of their code is in here.**
 ```
 yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │
-├─ PAGES (51 .html)
+├─ PAGES (53 .html)
 │  ├─ index.html                  Home — ticket card, counter, timeline, latest news
 │  ├─ pre-registration.html       "Early Access" tab — points, tiers, important dates
 │  ├─ news.html                   News archive with category sidebar
@@ -166,7 +166,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 51 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 53 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config
