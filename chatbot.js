@@ -36,8 +36,31 @@ const FOLLOW_LINKS = {
   if (document.getElementById("cb-bar")) return;
 
   const BIRD = "chatbot-bird.webp";
-  const CHIPS = ["Free mint dates", "This week's multiplier", "Legendary utilities", "Early access date", "Referral rule", "Nurture streak"];
-  const GREETING = "Hi! Ask me anything about Yakkamon — dates, deposits, the free mint, gameplay. I check the official docs first, then YakkamonWorld, then the dev streams, and every answer shows where it came from.";
+  // Starter block: TOPICS (one per FAQ category, each sends a well-formed question) and the five MOST ASKED questions.
+  const TOPICS = [
+    ["Start here", "What is Yakkamon, in short, and who makes it?"],
+    ["Free mint", "How does the Ronin free mint work — dates, waves and what I need to do?"],
+    ["Ranks & waves", "What is the difference between my rank, my tier and my wave?"],
+    ["Legendaries", "What are the four Genesis Legendaries and what does each one do?"],
+    ["$FLOWER deposits", "How do $FLOWER deposits earn points, and what is the multiplier this week?"],
+    ["Leaderboard", "Where can I see the live deposit leaderboard and how often does it update?"],
+    ["Referrals", "How do referral points work now?"],
+    ["Nurture streak", "How does the daily nurture streak work, and what time should I nurture?"],
+    ["Gameplay", "How does Yakkamon gameplay work — the idle half and the active half?"],
+    ["Regions", "How do Regions and tiles work?"],
+    ["Economy", "Is Yakkamon free to play, and how does the in-game market work?"],
+    ["Launch timing", "When does early access start, and what happens at Chapter 0?"],
+    ["Dev streams", "What did the latest dev stream cover?"],
+    ["Stay safe", "How do I know a mint link is real, and what should I never do?"],
+  ];
+  const QUESTIONS = [
+    "When is the free mint, and which wave am I in?",
+    "When does early access start?",
+    "What does my rank get me?",
+    "How do I earn points?",
+    "Do I need a Ronin wallet?",
+  ];
+  const GREETING = "Hi! Pick a topic or one of the most-asked questions, or type your own. I check the official docs first, then YakkamonWorld, then the dev streams — and every answer shows where it came from.";
   const SRC_LABEL = { official: "OFFICIAL DOCS", yw: "YAKKAMONWORLD", stream: "DEV STREAM" };
   const STORE = "yw-chat";
   const QUOTA = "yw-chat-quota";
@@ -62,7 +85,11 @@ const FOLLOW_LINKS = {
       '<div class="cb-title"><b>ASK ME ANYTHING</b><span><i></i>Official docs first, then YakkamonWorld</span></div>' +
       '<button type="button" class="cb-close" aria-label="Close">&times;</button>' +
     '</header>' +
-    '<div class="cb-chips" id="cb-chips"></div>' +
+    '<div class="cb-starter" id="cb-starter">' +
+      '<div class="cb-sec"><span class="cb-sec-h">Topics</span><div class="cb-topics" id="cb-topics"></div></div>' +
+      '<div class="cb-sec"><span class="cb-sec-h">Most asked</span><div class="cb-qs" id="cb-qs"></div></div>' +
+    '</div>' +
+    '<button type="button" class="cb-starter-toggle" id="cb-starter-toggle" hidden aria-expanded="false">Topics &amp; most asked <i>&#9662;</i></button>' +
     '<div class="cb-msgs" id="cb-msgs" role="log" aria-live="polite"></div>' +
     '<form class="cb-form" id="cb-form">' +
       '<label for="cb-input" class="cb-sr">Your question</label>' +
@@ -75,18 +102,33 @@ const FOLLOW_LINKS = {
   document.body.classList.add("cb-bar-on");
 
   const msgs = sheet.querySelector("#cb-msgs");
-  const chips = sheet.querySelector("#cb-chips");
+  const starter = sheet.querySelector("#cb-starter");
+  const starterToggle = sheet.querySelector("#cb-starter-toggle");
   const form = sheet.querySelector("#cb-form");
   const input = sheet.querySelector("#cb-input");
   const sendBtn = sheet.querySelector("#cb-send");
   const handle = sheet.querySelector(".cb-handle");
 
-  CHIPS.forEach(function (c) {
-    const b = el("button", "", { type: "button" });
-    b.textContent = c;
-    b.addEventListener("click", function () { send(c); });
-    chips.appendChild(b);
+  const topicsBox = sheet.querySelector("#cb-topics"), qsBox = sheet.querySelector("#cb-qs");
+  TOPICS.forEach(function (t) {
+    const b = el("button", "cb-topic", { type: "button", title: t[1] });
+    b.textContent = t[0];
+    b.addEventListener("click", function () { send(t[1]); });
+    topicsBox.appendChild(b);
   });
+  QUESTIONS.forEach(function (q) {
+    const b = el("button", "cb-q", { type: "button" });
+    b.innerHTML = '<i>?</i><span></span>';
+    b.querySelector("span").textContent = q;
+    b.addEventListener("click", function () { send(q); });
+    qsBox.appendChild(b);
+  });
+  // After the first question the block folds away into a slim toggle so the answers get the room.
+  function foldStarter(fold) {
+    starter.hidden = fold; starterToggle.hidden = !fold;
+    starterToggle.setAttribute("aria-expanded", fold ? "false" : "true");
+  }
+  starterToggle.addEventListener("click", function () { foldStarter(false); });
 
   /* ---------- state ---------- */
   let history = load();
@@ -94,7 +136,7 @@ const FOLLOW_LINKS = {
   let lastFocus = null;
   let pending = "";
 
-  if (history.length) { history.forEach(render); sheet.classList.add("cb-started"); }
+  if (history.length) { history.forEach(render); foldStarter(true); }
   else pushBot({ answer: GREETING, sources: [], link: null }, false);
 
   /* ---------- usage tracking ----------
@@ -123,6 +165,8 @@ const FOLLOW_LINKS = {
     lastFocus = document.activeElement;
     scrim.hidden = false; sheet.hidden = false;
     document.documentElement.classList.add("cb-lock");
+    // On a phone the starter block needs the room, so a fresh chat opens at full height (the handle shrinks it).
+    if (!history.length && window.innerWidth < 760) sheet.classList.add("cb-full");
     if (!openedOnce) { openedOnce = true; track("chat_open"); ping("open"); }
     bar.classList.remove("cb-hide");
     scrollBottom();
@@ -272,7 +316,7 @@ const FOLLOW_LINKS = {
   function pushUser(text) {
     const m = { role: "user", content: text };
     history.push(m); save(); render(m);
-    sheet.classList.add("cb-started");
+    foldStarter(true);
   }
   function pushBot(res, remember) {
     const m = { role: "assistant", content: res.answer, sources: res.sources || [], link: res.link || null };
