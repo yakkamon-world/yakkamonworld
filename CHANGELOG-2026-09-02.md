@@ -49,6 +49,8 @@ The official ladder now runs **Storm / Echo / Ghost / Bloom**. The 251–500 mon
 
 ## Other
 
+- `gameplay-page.js`: in-page `?system=` links (the banner's "Start with the Legendaries →", cross-links inside a panel, quick-reference links) are now intercepted — panel swaps in place and scrolls into view below the sticky topbar. Previously they did a full reload that landed at the top of the page with the poster in the way, so the click looked like it did nothing. Deep links arriving from other pages with `?system=` now scroll to the panel on load. Sidebar behaviour (swap without scrolling) unchanged.
+
 - `article-after-the-race.html`: update callout at the "market with no sellers" paragraph (tradable from 14 Sep; marketplace at Chapter 0); dateModified → 2026-09-02; posts.js body update line.
 - `article-free-to-play-guide.html`, `article-leaderboard-guideline.html`: mint-change callout at the mint section (waves, snapshot; 250 points still stand).
 - `search.js` 304 → **332 entries**: 11 Gameplay, 15 FAQ, 2 Pre-registration added; 8 evergreen excerpts corrected (Tide/Bloom names, mint date/shape).

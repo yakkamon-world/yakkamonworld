@@ -31,6 +31,15 @@ function gpRenderDetail(current) {
   });
 }
 
+function gpScrollToDetail(behavior) {
+  const layout = document.querySelector(".docs-layout") || document.getElementById("gp-detail");
+  if (!layout) return;
+  const topbar = document.querySelector(".topbar");
+  const offset = topbar && getComputedStyle(topbar).position === "sticky" ? topbar.offsetHeight + 12 : 12;
+  const y = layout.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: Math.max(0, y), behavior: behavior || "smooth" });
+}
+
 function gpSetActive(slug) {
   const sidebar = document.getElementById("gp-sidebar-list");
   if (!sidebar) return;
@@ -85,6 +94,31 @@ function renderGameplayPage() {
     e.preventDefault();
     gpShow(link.dataset.slug);
   });
+
+  // Any other in-page link to ?system=… (the banner's "Start with the
+  // Legendaries", cross-links inside a panel's own text, the quick
+  // reference) swaps the panel too — and scrolls it into view, because a
+  // full reload would land at the top of the page with the poster in the
+  // way, which reads as the link doing nothing.
+  document.addEventListener("click", function (e) {
+    const link = e.target.closest("a[href]");
+    if (!link || link.closest("#gp-sidebar-list")) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    let url;
+    try { url = new URL(link.getAttribute("href"), window.location.href); } catch (err) { return; }
+    if (url.origin !== window.location.origin || url.pathname !== window.location.pathname) return;
+    const s = url.searchParams.get("system");
+    if (!s || !YAKKAMON_GAMEPLAY.some(g => g.slug === s)) return;
+    e.preventDefault();
+    gpShow(s);
+    gpScrollToDetail();
+  });
+
+  // A deep link from another page (?system=slug in the URL on arrival)
+  // should land on the panel it names, not on the poster above it.
+  if (params.get("system") && gpFind(params.get("system")).slug === params.get("system")) {
+    requestAnimationFrame(function () { gpScrollToDetail("auto"); });
+  }
 
   window.addEventListener("popstate", function () {
     const s = new URLSearchParams(window.location.search).get("system");
