@@ -15,7 +15,7 @@
 // style.css under "Ask me anything bar". Loaded with `defer` on every page.
 // The character image is chatbot-bird.webp.
 
-const WORKER_URL = "https://yakkamon-chat-worker.yakkamonworld.workers.dev";   // e.g. https://yakkamon-chat-worker.YOUR-SUBDOMAIN.workers.dev
+const WORKER_URL = "https://yakkamon-chat-worker.yakkamonworld.workers.dev";
 
 // FREE QUESTIONS + FOLLOW NUDGE
 // Each browser gets FREE_PER_DAY questions a day. On the next one a card asks
@@ -94,7 +94,7 @@ const FOLLOW_LINKS = {
   let lastFocus = null;
   let pending = "";
 
-  if (history.length) history.forEach(render);
+  if (history.length) { history.forEach(render); sheet.classList.add("cb-started"); }
   else pushBot({ answer: GREETING, sources: [], link: null }, false);
 
   /* ---------- open / close ---------- */
@@ -247,6 +247,7 @@ const FOLLOW_LINKS = {
   function pushUser(text) {
     const m = { role: "user", content: text };
     history.push(m); save(); render(m);
+    sheet.classList.add("cb-started");
   }
   function pushBot(res, remember) {
     const m = { role: "assistant", content: res.answer, sources: res.sources || [], link: res.link || null };
