@@ -144,7 +144,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
 │  ├─ gameplay.js                 Gameplay systems (25 entries)
-│  ├─ videos.js                   Video index (15 entries, 4 blocks)
+│  ├─ videos.js                   Video index (17 entries, 4 blocks)
 │  └─ search.js                   SEARCH_INDEX + the search overlay behaviour
 │
 ├─ RENDERERS — how that data is displayed

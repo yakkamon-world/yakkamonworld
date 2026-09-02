@@ -24,6 +24,15 @@ const YAKKAMON_VIDEO_BLOCKS = [
 const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
+    id: "iCOqW_yG0gA",
+    ep: "17",
+    runtime: "4:05",
+    block: "analysis",
+    title: "Yakkamon Dev Stream 9-1-26 Recap \u2014 Free Mint, Game Updates & Launch Calendar",
+    blurb: "The free-mint stream in four minutes: 10,000 hidden Yakkamon on the Ronin Launchpad from 14 September, five waves gated by your rank at the 10 September snapshot, one NFT per wave, 68 Legendaries in the pool and a 14 October reveal \u2014 plus the game updates that landed alongside it (utilities as economic auras, absence pauses the farm, no gear, no evolutions at launch) and the calendar from here to Chapter 0.",
+    related: { href: "article-free-mint-stream-graded.html", label: "Read the written version \u2014 every decision graded" },
+  },
+  {
     id: "P-BK9OjLNME",
     ep: "15",
     runtime: "5:04",

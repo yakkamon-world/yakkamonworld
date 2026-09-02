@@ -45,7 +45,7 @@ var FAQ_CATEGORIES = [
    },
    {
     "q": "Is there a video version of any of this?",
-    "a": "<p>Yes. We run a YouTube channel at <a href=\"https://www.youtube.com/@YakkamonWorld\" target=\"_blank\" rel=\"noopener\">youtube.com/@YakkamonWorld</a> with short 2&ndash;3 minute explainers covering pre-registration, access codes, the free mint and each gameplay system. Every episode is indexed on our <a href=\"videos.html\">videos page</a>, each one linked to the written version &mdash; the same ground as this site, for anyone who'd rather watch than read. The channel is also linked from the <a href=\"community.html\">Community page</a>.</p>\n    <p>Two to start with: <a href=\"https://www.youtube.com/watch?v=cLRGC67tmLQ\" target=\"_blank\" rel=\"noopener\">What Is Yakkamon? The 2-Minute Explainer &#8599;</a> covers the game, the team behind it and why pre-registration matters. <a href=\"https://www.youtube.com/watch?v=tkD362tQUa0\" target=\"_blank\" rel=\"noopener\">How To Pre-Register &#8599;</a> walks through signing up, and the verification step you need done before the 10 September whitelist snapshot.</p>",
+    "a": "<p>Yes. We run a YouTube channel at <a href=\"https://www.youtube.com/@YakkamonWorld\" target=\"_blank\" rel=\"noopener\">youtube.com/@YakkamonWorld</a> with short 2&ndash;3 minute explainers covering pre-registration, access codes, the free mint and each gameplay system. Every episode is indexed on our <a href=\"videos.html\">videos page</a>, each one linked to the written version &mdash; the same ground as this site, for anyone who'd rather watch than read. The channel is also linked from the <a href=\"community.html\">Community page</a>.</p>\n    <p>Two to start with: <a href=\"https://www.youtube.com/watch?v=cLRGC67tmLQ\" target=\"_blank\" rel=\"noopener\">What Is Yakkamon? The 2-Minute Explainer &#8599;</a> covers the game, the team behind it and why pre-registration matters. <a href=\"https://www.youtube.com/watch?v=tkD362tQUa0\" target=\"_blank\" rel=\"noopener\">How To Pre-Register &#8599;</a> walks through signing up, and the verification step you need done before the 10 September whitelist snapshot. For the mint itself, <a href=\"https://www.youtube.com/watch?v=iCOqW_yG0gA\" target=\"_blank\" rel=\"noopener\">the 9/1 dev stream recap &#8599;</a> covers the waves, the snapshot and the calendar in four minutes.</p>",
     "id": "is-there-a-video-version-of-any-of-this"
    },
    {
@@ -248,13 +248,13 @@ var FAQ_CATEGORIES = [
  {
   "id": "free-mint",
   "name": "Free mint",
-  "intro": "",
+  "intro": "<p>Everything below is from the official free mint page and the free-mint dev stream. For the whole thing in one place &mdash; which waves your rank unlocks, the pre-snapshot checklist and mint day step by step &mdash; read <a href=\"article-ronin-free-mint-guide.html\">The Ultimate Ronin Free Mint Guide</a>, or <a href=\"https://www.youtube.com/watch?v=iCOqW_yG0gA\" target=\"_blank\" rel=\"noopener\">watch the four-minute stream recap &#8599;</a>.</p>",
   "rich": "",
   "items": [
    {
     "q": "What is the free mint?",
     "id": "what-is-the-free-mint",
-    "a": "<p>On <strong>14 September</strong> a free mint of <strong>10,000 hidden Genesis monster NFTs</strong> opens on the <strong>Ronin Launchpad</strong>. It runs in five whitelisted waves over five days, each open to a different slice of the leaderboard. Mint one and you're holding a sealed Yakkamon that is revealed on <strong>14 October</strong>. It costs nothing beyond the network fee (gas, in RON) &mdash; there's no mint price. <a href=\"pre-registration.html#free-mint\">The full wave table &rarr;</a></p>"
+    "a": "<p>On <strong>14 September</strong> a free mint of <strong>10,000 hidden Genesis monster NFTs</strong> opens on the <strong>Ronin Launchpad</strong>. It runs in five whitelisted waves over five days, each open to a different slice of the leaderboard. Mint one and you're holding a sealed Yakkamon that is revealed on <strong>14 October</strong>. It costs nothing beyond the network fee (gas, in RON) &mdash; there's no mint price. <a href=\"article-ronin-free-mint-guide.html\">The full guide &rarr;</a> &middot; <a href=\"pre-registration.html#free-mint\">The wave table &rarr;</a></p>"
    },
    {
     "q": "When exactly, and what are the waves?",
@@ -269,12 +269,12 @@ var FAQ_CATEGORIES = [
    {
     "q": "Do I need a good rank to take part?",
     "id": "do-i-need-a-good-rank-to-take-part",
-    "a": "<p>You need to be inside the <strong>top 50,000</strong> on the leaderboard to be in any wave, and the higher you are the more waves you're on the list for. Top 1,000 gets a guaranteed mint in Wave 1; top 10,000 with 5 $FLOWER deposited gets Wave 2; top 20,000 with 5 $FLOWER gets Wave 4; top 50,000 gets Wave 5 if anything is left. The rank that counts is your rank at the <strong>10 September snapshot</strong>.</p>"
+    "a": "<p>You need to be inside the <strong>top 50,000</strong> on the leaderboard to be in any wave, and the higher you are the more waves you're on the list for, because the brackets nest. The rank that counts is your rank at the <strong>10 September snapshot</strong>.</p>\n    <div class=\"table-scroll\"><table class=\"prereg-table\">\n      <tr><th>Rank on 10 Sept</th><th>Waves</th><th>Needs 5 $FLOWER?</th></tr>\n      <tr><td>1&ndash;1,000</td><td>1, 2, 4, 5 &mdash; Wave 1 guaranteed</td><td>For Waves 2 and 4</td></tr>\n      <tr><td>1,001&ndash;10,000</td><td>2, 4, 5</td><td>For Waves 2 and 4</td></tr>\n      <tr><td>10,001&ndash;20,000</td><td>4, 5</td><td>For Wave 4</td></tr>\n      <tr><td>20,001&ndash;50,000</td><td>5 only</td><td>No</td></tr>\n      <tr><td>50,001+</td><td>None from the leaderboard &mdash; Wave 3 only if Ronin's gamer list includes you</td><td>&mdash;</td></tr>\n    </table></div>"
    },
    {
     "q": "Do I need to do anything before mint day?",
     "id": "do-i-need-to-do-anything-before-mint-day",
-    "a": "<p>Four things, all before <strong>10 September</strong>:</p>\n    <ul class=\"prereg-list\">\n      <li><strong>Be pre-registered and verified</strong> &mdash; the whitelists are built from the leaderboard inside yakkamon.com.</li>\n      <li><strong>Be at the rank you want.</strong> The snapshot on 10 September fixes which waves you're in.</li>\n      <li><strong>Deposit at least 5 $FLOWER</strong> if you're counting on Wave 2 or Wave 4. It's withdrawable; it exists to make multi-accounting expensive.</li>\n      <li><strong>Connect a Ronin wallet</strong> and hold some RON for gas.</li>\n    </ul>\n    <p>Then be online when your wave opens on the Ronin Launchpad.</p>"
+    "a": "<p>Four things, all before <strong>10 September</strong>:</p>\n    <ul class=\"prereg-list\">\n      <li><strong>Be pre-registered and verified</strong> &mdash; the whitelists are built from the leaderboard inside yakkamon.com.</li>\n      <li><strong>Be at the rank you want.</strong> The snapshot on 10 September fixes which waves you're in.</li>\n      <li><strong>Deposit at least 5 $FLOWER</strong> if you're counting on Wave 2 or Wave 4. It's withdrawable; it exists to make multi-accounting expensive.</li>\n      <li><strong>Connect a Ronin wallet</strong> and hold some RON for gas.</li>\n    </ul>\n    <p>Then be online when your wave opens on the Ronin Launchpad. <a href=\"article-ronin-free-mint-guide.html#mint-day\">Mint day, step by step &rarr;</a></p>"
    },
    {
     "q": "Can I mint more than once?",
@@ -320,6 +320,21 @@ var FAQ_CATEGORIES = [
     "q": "I deposited on Base — do I need a Ronin wallet?",
     "id": "i-deposited-on-base-do-i-need-a-ronin",
     "a": "<p><strong>Yes.</strong> Base is fine for deposits &mdash; the points count the same, and a 5 $FLOWER deposit on Base satisfies the Wave 2 and 4 condition &mdash; but the mint happens <strong>only on Ronin</strong>, through the Ronin Launchpad. If you plan to mint, connect a Ronin-compatible wallet and hold some RON <strong>before your wave opens</strong>; a Base wallet cannot mint, however verified the trainer behind it is.</p>"
+   },
+   {
+    "q": "How do I actually mint on the day?",
+    "a": "<p>Buy a little <strong>RON</strong> for gas days ahead. On the day, open the Ronin Launchpad at <strong>marketplace.roninchain.com/launchpads</strong> yourself &mdash; not from a link in a DM or a reply &mdash; connect the Ronin wallet you linked to your Yakkamon account, and have the page loaded before your wave opens. Click mint, approve the transaction in your wallet, and the hidden NFT lands in that wallet once it confirms. Come back for every wave you qualify for. Only Wave 5 has a published opening time (00:00 UTC on 18 September); the others have dates but no clock time yet. <a href=\"article-ronin-free-mint-guide.html\">The step-by-step guide &rarr;</a></p>",
+    "id": "how-do-i-actually-mint-on-the-day"
+   },
+   {
+    "q": "Is the 10 September snapshot the same as the leaderboard lock?",
+    "a": "<p>No, and this catches people out. The <strong>10 September snapshot</strong> only builds the <em>mint</em> whitelists &mdash; it fixes which waves you can mint in and nothing else. The <strong>leaderboard lock</strong> that decides your Genesis airdrop monster, your trainer number and your early-access wave comes later: one week before early access, with the airdrop landing three days after that. So you can keep climbing after 10 September, and the 250 points from minting count towards that later lock.</p>",
+    "id": "is-the-10-september-snapshot-the-same-as-the-leaderboard-lock"
+   },
+   {
+    "q": "How do I know a mint link is real?",
+    "a": "<p>The mint is free, so anything asking for a price, a deposit or approval over your whole wallet is not Yakkamon. Mint only at <strong>marketplace.roninchain.com</strong> &mdash; bookmark it now, because look-alike launchpads appear around every popular free mint. The team will not DM you a link, an early mint or a &ldquo;whitelist fix&rdquo;, and nobody legitimate ever needs your recovery phrase. If you are new to Ronin, keep only the RON you need for gas in the wallet you mint with, and read every wallet prompt before approving it.</p>",
+    "id": "how-do-i-know-a-mint-link-is-real"
    }
   ]
  },
