@@ -58,9 +58,10 @@ hard offset shadows, cream background with a subtle dot texture.
 Home / Early Access / News / Gameplay / Community / Leaderboard / Tips /
 Videos / FAQ / Contact.
 
-> The "Early Access" tab still points at `pre-registration.html`, and that
-> page's own title, `<h1>` and search entries still say "Pre-registration."
-> Known wording mismatch, deliberately left alone.
+> The "Early Access" tab still points at `pre-registration.html` (the URL is
+> kept so inbound links don't break), but since 2 Sep 2026 the page's title,
+> `<h1>`, footer link, home tile, breadcrumb and search entries all say
+> "Early Access" too. One label per page — see House rules.
 
 `about.html`, `privacy.html` and `gameplay-guide.html` are intentionally **not**
 in the nav — the mobile header is already tall — and are reached from the footer
@@ -200,10 +201,14 @@ that 404s, so these always ship together.
    `guideline`, `tips`.
 2. **`article-<slug>.html`** — copy the most recent article file so you inherit
    the current header and footer. The filename slug must match `slug` exactly.
-   Then update `<title>`, the canonical link, all four OG/Twitter
-   title+description pairs, the JSON-LD block (`headline`, `description`,
-   `mainEntityOfPage`, `datePublished`, `dateModified`), the `<h1>`, the badge
-   class and the date.
+   Then update `<title>` (ends in ` | YakkamonWorld`), the canonical link, all
+   four OG/Twitter title+description pairs, the Article JSON-LD block
+   (`headline`, `description`, `mainEntityOfPage`, `datePublished`,
+   `dateModified`), the `<h1>`, the badge class and the date. Every article
+   also carries a breadcrumb: the visible `<nav class="crumbs">` trail at the
+   top of `.article-head` (Home › News › *article title*) and a matching
+   `BreadcrumbList` JSON-LD block — the third item's `name` in both must be the
+   new `<h1>` text.
 3. **`search.js`** — add entries near the top. The convention is one for the
    article itself plus a few phrased as questions a reader would actually type,
    all pointing at the same URL.
@@ -243,12 +248,28 @@ masthead, tab strip, search overlay and footer all come along for free.
 - [ ] Search overlay markup + `<script src="search.js"></script>` before `</body>`
 - [ ] `active` class on the correct nav tab
 - [ ] Canonical, OG and Twitter tags updated (all four title/description pairs)
+- [ ] `<title>` is front-loaded with the page name and ends in ` | YakkamonWorld`
+- [ ] Breadcrumb: `<nav class="crumbs">` as the first child of `.page-head`
+      (Home › *page label*) plus a `BreadcrumbList` JSON-LD block in `<head>`;
+      the label must match the nav tab / footer link text for that page
 - [ ] Entries added to `search.js`
 - [ ] `<url>` added to `sitemap.xml`
 
 ---
 
 ## House rules
+
+**One label per page, everywhere.** A page is called the same thing in its nav
+tab, footer link, `<title>`, `<h1>`, breadcrumb and search entries — Google
+builds sitelinks from titles and anchor text, and three names for one URL
+dilute all three. `<title>` is front-loaded with that name and ends in
+` | YakkamonWorld`. (`pre-registration.html` = "Early Access".)
+
+**Breadcrumbs are structural, not editorial.** Adding or relabelling the
+crumbs / `BreadcrumbList` on an article is a nav-only change: no
+`dateModified` bump. `faq.html` and `videos.html` now carry two JSON-LD
+blocks (FAQPage/CollectionPage + BreadcrumbList) — when regenerating the FAQ
+block from `faq.js`, replace only the FAQPage one.
 
 **British English throughout.** "Optimise", "the maths checks out",
 "refertilise". The X account is American — that split is known and accepted.

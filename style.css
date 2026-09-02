@@ -247,9 +247,14 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .roster-embed figcaption{font-size:.85rem; color:#6a6a80; font-weight:600; margin-top:14px; text-align:center}
 .article-body p{margin:0 0 18px; font-weight:600}
 .article-body h2{font-size:1.5rem; margin:28px 0 12px}
-.back-link{display:inline-flex; align-items:center; gap:6px; color:var(--ink); text-decoration:none; font-size:.95rem; font-weight:800}
-@media(max-width:760px){.back-link{padding:6px 0}}
-.back-link:hover{color:var(--red)}
+/* Breadcrumb trail (articles: Home › News › title; hub pages: Home › page). Replaced .back-link 2 Sep 2026 */
+.crumbs{display:flex; align-items:center; gap:8px; min-width:0; color:var(--ink); font-size:.95rem; font-weight:800; line-height:1.3}
+.crumbs a{color:var(--ink); text-decoration:none; white-space:nowrap}
+.crumbs a:hover{color:var(--red)}
+.crumb-sep{opacity:.55; font-size:1.1em}
+.crumb-here{flex:1 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:700; opacity:.72}
+.page-head .crumbs{margin-bottom:16px}
+@media(max-width:760px){.crumbs a{padding:6px 0}}
 .empty-state{text-align:center; padding:56px 20px; font-size:1.1rem; font-weight:700}
 
 footer{border-top:5px solid var(--red); margin-top:70px; padding:22px 0 40px; background:var(--ink); color:#fff}

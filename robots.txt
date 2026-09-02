@@ -4,5 +4,9 @@
 
 User-agent: *
 Allow: /
+# Repo housekeeping files are served too (assets.directory is "."); keep them out of results.
+Disallow: /*.md$
+Disallow: /wrangler.jsonc
+Disallow: /*.zip$
 
 Sitemap: https://yakkamonworld.com/sitemap.xml

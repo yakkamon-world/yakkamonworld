@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="analytics.js"></script>
-<title>Yakkamon Deposit Leaderboard &mdash; Base + Ronin Points</title>
+<title>Yakkamon Deposit Leaderboard: Base + Ronin Points | YakkamonWorld</title>
 <link rel="canonical" href="https://yakkamonworld.com/leaderboard.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="YakkamonWorld">
@@ -218,6 +218,25 @@
   .lb-points-row input{flex:1 1 100%}
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://yakkamonworld.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Leaderboard"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -270,6 +289,7 @@
 
 
 <div class="wrap page-head">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="crumb-sep" aria-hidden="true">&rsaquo;</span><span class="crumb-here" aria-current="page">Leaderboard</span></nav>
   <h1>DEPOSIT LEADERBOARD</h1>
   <p>Every $FLOWER deposit on Base and Ronin, scored on the published rules and ranked. Read straight off both blockchains, not from anyone's word for it.</p>
 </div>
@@ -390,7 +410,7 @@
   <div class="footer-col">
     <h3>START HERE</h3>
     <a href="index.html">Home</a>
-    <a href="pre-registration.html">Pre-registration guide</a>
+    <a href="pre-registration.html">Early Access guide</a>
     <a href="pre-registration.html#important-dates">Important dates</a>
     <a href="faq.html">FAQ</a>
     <a href="about.html">About us</a>
