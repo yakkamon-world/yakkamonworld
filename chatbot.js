@@ -60,7 +60,7 @@ const FOLLOW_LINKS = {
     "How do I earn points?",
     "Do I need a Ronin wallet?",
   ];
-  const GREETING = "Hi! Pick a topic or one of the most-asked questions, or type your own. I check the official docs first, then YakkamonWorld, then the dev streams — and every answer shows where it came from.";
+  const GREETING = "Hi! Ask me anything about Yakkamon — or tap Topics & most asked above for ideas. I check the official docs first, then YakkamonWorld, then the dev streams, and every answer shows where it came from.";
   const SRC_LABEL = { official: "OFFICIAL DOCS", yw: "YAKKAMONWORLD", stream: "DEV STREAM" };
   const STORE = "yw-chat";
   const QUOTA = "yw-chat-quota";
@@ -85,11 +85,13 @@ const FOLLOW_LINKS = {
       '<div class="cb-title"><b>ASK ME ANYTHING</b><span><i></i>Official docs first, then YakkamonWorld</span></div>' +
       '<button type="button" class="cb-close" aria-label="Close">&times;</button>' +
     '</header>' +
-    '<div class="cb-starter" id="cb-starter">' +
-      '<div class="cb-sec"><span class="cb-sec-h">Topics</span><div class="cb-topics" id="cb-topics"></div></div>' +
-      '<div class="cb-sec"><span class="cb-sec-h">Most asked</span><div class="cb-qs" id="cb-qs"></div></div>' +
+    '<div class="cb-starter-wrap">' +
+      '<button type="button" class="cb-starter-toggle" id="cb-starter-toggle" aria-expanded="false" aria-controls="cb-starter">Topics &amp; most asked <i aria-hidden="true">&#9662;</i></button>' +
+      '<div class="cb-starter" id="cb-starter" hidden>' +
+        '<div class="cb-sec"><span class="cb-sec-h">Topics</span><div class="cb-topics" id="cb-topics"></div></div>' +
+        '<div class="cb-sec"><span class="cb-sec-h">Most asked</span><div class="cb-qs" id="cb-qs"></div></div>' +
+      '</div>' +
     '</div>' +
-    '<button type="button" class="cb-starter-toggle" id="cb-starter-toggle" hidden aria-expanded="false">Topics &amp; most asked <i>&#9662;</i></button>' +
     '<div class="cb-msgs" id="cb-msgs" role="log" aria-live="polite"></div>' +
     '<form class="cb-form" id="cb-form">' +
       '<label for="cb-input" class="cb-sr">Your question</label>' +
@@ -123,12 +125,23 @@ const FOLLOW_LINKS = {
     b.addEventListener("click", function () { send(q); });
     qsBox.appendChild(b);
   });
-  // After the first question the block folds away into a slim toggle so the answers get the room.
-  function foldStarter(fold) {
-    starter.hidden = fold; starterToggle.hidden = !fold;
-    starterToggle.setAttribute("aria-expanded", fold ? "false" : "true");
+  // The block is a dropdown: closed by default on every device, opened from the toggle bar, and it
+  // closes itself as soon as the visitor picks something, starts typing, or taps the conversation.
+  function setStarter(open) {
+    starter.hidden = !open;
+    starterToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) {
+      // on a phone, give the list the full sheet height so most of it shows without scrolling
+      if (window.innerWidth < 760) sheet.classList.add("cb-full");
+      // never let the dropdown cover the input box — it stops just above the form and scrolls inside
+      const room = form.getBoundingClientRect().top - starter.getBoundingClientRect().top - 10;
+      starter.style.maxHeight = Math.max(160, room) + "px";
+    }
   }
-  starterToggle.addEventListener("click", function () { foldStarter(false); });
+  starterToggle.addEventListener("click", function () { setStarter(starter.hidden); });
+  input.addEventListener("focus", function () { setStarter(false); });
+  input.addEventListener("input", function () { setStarter(false); });
+  sheet.addEventListener("pointerdown", function (e) { if (!starter.hidden && !e.target.closest(".cb-starter-wrap")) setStarter(false); });
 
   /* ---------- state ---------- */
   let history = load();
@@ -136,7 +149,7 @@ const FOLLOW_LINKS = {
   let lastFocus = null;
   let pending = "";
 
-  if (history.length) { history.forEach(render); foldStarter(true); }
+  if (history.length) history.forEach(render);
   else pushBot({ answer: GREETING, sources: [], link: null }, false);
 
   /* ---------- usage tracking ----------
@@ -165,13 +178,11 @@ const FOLLOW_LINKS = {
     lastFocus = document.activeElement;
     scrim.hidden = false; sheet.hidden = false;
     document.documentElement.classList.add("cb-lock");
-    // On a phone the starter block needs the room, so a fresh chat opens at full height (the handle shrinks it).
-    if (!history.length && window.innerWidth < 760) sheet.classList.add("cb-full");
     if (!openedOnce) { openedOnce = true; track("chat_open"); ping("open"); }
     bar.classList.remove("cb-hide");
     scrollBottom();
     watchViewport(true);
-    setTimeout(function () { input.focus({ preventScroll: true }); }, reduceMotion ? 0 : 260);
+    if (!window.matchMedia("(pointer: coarse)").matches) setTimeout(function () { input.focus({ preventScroll: true }); }, reduceMotion ? 0 : 260);
   }
   function close() {
     if (sheet.hidden) return;
@@ -316,7 +327,7 @@ const FOLLOW_LINKS = {
   function pushUser(text) {
     const m = { role: "user", content: text };
     history.push(m); save(); render(m);
-    foldStarter(true);
+    setStarter(false);
   }
   function pushBot(res, remember) {
     const m = { role: "assistant", content: res.answer, sources: res.sources || [], link: res.link || null };
