@@ -41,7 +41,7 @@
   // How often the worker rebuilds the board from Dune (its REFRESH_HOURS
   // setting). Only used for the "next update in..." countdown - keep in sync
   // with the worker if that cadence ever changes.
-  var REFRESH_MS = 6 * 60 * 60 * 1000;
+  var REFRESH_MS = 12 * 60 * 60 * 1000;
 
   // The published airdrop ladder. Ranks are inclusive, and the reward is what
   // you get for finishing anywhere INSIDE the range - so 51st and 250th both
