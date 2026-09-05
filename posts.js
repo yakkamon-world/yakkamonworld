@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "hunting-explained",
+    category: "event",
+    title: "Every Wild Yakkamon Wants Something \u2014 What the Official Hunting Post Means for Players",
+    date: "Sep 5, 2026",
+    excerpt: "The official Hunting post gives every wild Yakkamon a place, a time and a temperament: spawns on an in-game clock, hunters that roam while you farm, affectionate, greedy and angry encounters, Legendaries turning up in ordinary grounds, grounds that deplete and a map that rotates each Season. What it means for players, and how to get an edge.",
+    body: [
+      "The Yakkamon team\u2019s guide series has reached hunting: eight points, and the first official description of the active half of the game that is about catching rather than fighting. Read slowly, it says every wild Yakkamon has <strong>a place, a time and a price</strong> \u2014 and none of the three is optional.",
+      "## The eight points",
+      "Grounds reveal different Yakkamon at different <strong>times of day</strong>; you send a Yakkamon to <strong>passively roam</strong> while you farm; some wild monsters are <strong>affectionate</strong> and must be won over, some are <strong>greedy</strong> and want resources, some are angry and it is a <strong>battle</strong>; <strong>Legendaries and Rares</strong> appear sporadically with no schedule; grounds <strong>deplete</strong>, so spread hunts across grounds and Regions; and future <strong>Seasons</strong> change what is available and where.",
+      "## What it means",
+      "The clock is the sped-up <em>in-game</em> clock, so \u201clearn the clock\u201d means learning a timetable the game will not hand you. The hunter is a worker taken off the line, and its quality decides the catch \u2014 so a hunting squad is a role, not a spare. Greedy monsters are the sink the untradable free layer was missing. Legendaries walking into ordinary grounds, unannounced, reward readiness over reaction. And Season rotation is the mechanism that closes the economy post\u2019s supply windows.",
+      "## How to get an edge",
+      "Keep a hunting log from day one; build a squad with a fighter and a charmer; hold a hunting purse of varied goods; claim a second ground before the first runs dry; catch broad early, especially species likely to rotate out; and check the grounds more often than the bin. Full analysis, a per-wave table and six questions for the team in the article."
+    ]
+  },
+  {
     slug: "tip-deposit-on-ronin",
     category: "tips",
     title: "Tip: Deposit on Ronin If You Haven\u2019t Yet",

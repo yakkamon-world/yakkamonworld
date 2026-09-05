@@ -538,7 +538,27 @@ var FAQ_CATEGORIES = [
    {
     "q": "How does a hunt actually work?",
     "id": "how-does-a-hunt-actually-work",
-    "a": "<p>Hunting is a <strong>job you assign</strong>, not a place you walk to &mdash; the game is the same top-down view as Sunflower Land. Send a Yakkamon into a hunting ground and it rolls for a wild monster; lures and baits, crafted from resources, tilt the roll toward a type, and choosing a specific area of the ground (a rocky outcrop, say) does the same. Two kinds of wild monster turn up: <strong>aggressive</strong> ones raise a red alert and want a fight, <strong>ambient</strong> ones are skittish and have to be won over with bait and a short emoji conversation. There's no limit on hunts per Yakkamon; it's the <strong>ground</strong> that depletes as it's hunted out. <a href=\"gameplay.html?system=crafting-hunting\">Crafting &amp; hunting &rarr;</a></p>"
+    "a": "<p>Hunting is a <strong>job you assign</strong>, not a place you walk to &mdash; the game is the same top-down view as Sunflower Land. You send a Yakkamon out to <strong>passively roam</strong> a hunting ground while you run your farm, and it triggers encounters with the wild monsters living there; lures and baits, crafted from resources, tilt the roll toward a type, and choosing a specific area of the ground (a rocky outcrop, say) does the same. Which monsters are out depends on the <strong>time of day</strong> on the in-game clock. Wild Yakkamon have three temperaments: <strong>affectionate</strong> ones only come home if your hunter wins them over, <strong>greedy</strong> ones want resources first, and <strong>angry</strong> ones start a fight. There's no limit on hunts per Yakkamon; it's the <strong>ground</strong> that depletes as it's hunted out. <a href=\"gameplay.html?system=crafting-hunting\">Crafting &amp; hunting &rarr;</a></p>"
+   },
+   {
+    "q": "What are affectionate, greedy and angry Yakkamon?",
+    "id": "what-are-affectionate-greedy-and-angry-yakkamon",
+    "a": "<p>The three wild temperaments from the official Hunting post. An <strong>affectionate</strong> Yakkamon comes home only if the Yakkamon you sent wins it over &mdash; what it judges (type, level, a bait) isn't published. A <strong>greedy</strong> one wants resources and won't budge until you've paid, so bring the right goods if you're chasing a particular monster. An <strong>angry</strong> one turns the encounter into a battle, and a hunter that can't hold its own comes back empty-handed. In practice that makes a hunting squad three checks at once: strength, charm and stock. <a href=\"article-hunting-explained.html\">What the Hunting post means for players &rarr;</a></p>"
+   },
+   {
+    "q": "Can I catch a Legendary by hunting?",
+    "id": "can-i-catch-a-legendary-by-hunting",
+    "a": "<p>Yes, according to the official Hunting post: <strong>Legendaries and Rares sporadically appear in the hunting grounds</strong>, with no schedule to memorise. The team's advice is to keep a strong, well-supplied team ready to go the moment one shows up &mdash; which reads as needing both a hunter that can win a fight and a stock of goods, in case the Legendary is greedy. How often they appear, and whether wild Legendaries draw on the same limited supply as the Chapter 0 batches, is unpublished. <a href=\"article-hunting-explained.html\">Our reading &rarr;</a></p>"
+   },
+   {
+    "q": "Does the time of day matter for hunting?",
+    "id": "does-the-time-of-day-matter-for-hunting",
+    "a": "<p>Yes. Each hunting ground reveals different Yakkamon at different times of day &mdash; the post says what roams a ground at dawn won't be what you find at midnight. Two things to know: it's the sped-up <strong>in-game clock</strong> in the HUD, not your local time, so no timezone has an advantage; and the team frames &ldquo;learning the clock&rdquo; as the skill, which suggests the game won't simply show you the timetable. Keeping your own log of ground, in-game hour and what appeared is the cheapest edge in the game. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
+   },
+   {
+    "q": "Do hunting grounds run out, and what do I do about it?",
+    "id": "do-hunting-grounds-run-out",
+    "a": "<p>They do. The more you hunt a ground, the less populated it becomes, and the regeneration rate isn't published. The official answer is to <strong>spread your hunts across grounds and Regions</strong>. Since a hunting area is a tile on your own Region, that means budgeting a second hunting tile before the first runs dry &mdash; and eventually a second Region. Future Seasons also change which Yakkamon are available and where, so the map you learn this Chapter won't be next Chapter's. <a href=\"article-hunting-explained.html\">Why depletion is now a reason to own more than one ground &rarr;</a></p>"
    },
    {
     "q": "Is there a limit on how many Yakkamon can work at once?",
