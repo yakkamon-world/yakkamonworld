@@ -48,6 +48,7 @@ const FOLLOW_LINKS = {
     ["Nurture streak", "How does the daily nurture streak work, and what time should I nurture?"],
     ["Gameplay", "How does Yakkamon gameplay work — the idle half and the active half?"],
     ["Regions", "How do Regions and tiles work?"],
+    ["Hunting", "How does hunting work — hunting grounds, times of day and the different wild Yakkamon temperaments?"],
     ["Economy", "Is Yakkamon free to play, and how does the in-game market work?"],
     ["Launch timing", "When does early access start, and what happens at Chapter 0?"],
     ["Dev streams", "What did the latest dev stream cover?"],
