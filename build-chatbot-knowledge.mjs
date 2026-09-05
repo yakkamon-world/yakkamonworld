@@ -16,7 +16,8 @@
 
   What goes in, and in which tier:
     tier 1  OFFICIAL   docs.yakkamon.com pages (markdown snapshot; the worker also
-                       fetches these live and prefers the live copy)
+                       fetches these live and prefers the live copy) and
+                       chatbot-official-posts.md — the team's own X posts, verbatim
     tier 2  SITE       faq.js, gameplay.js, videos.js, every article and hub page
     tier 3  STREAMS    chatbot-digest.md — the Cumulative Dev Stream digest
 
@@ -158,6 +159,16 @@ for (const file of fs.readdirSync(ROOT).filter(f => f.endsWith(".html")).sort())
     add(2, heading ? `${pageTitle} — ${heading}` : pageTitle, url, text, { kind: isArticle ? "article" : "page", ...dates });
   }
 }
+
+/* ---------- tier 1: official posts (verbatim team announcements not on the docs site) ---------- */
+try {
+  const md = fs.readFileSync(path.join(ROOT, "chatbot-official-posts.md"), "utf8").replace(/<!--[\s\S]*?-->/g, "");
+  for (const sec of md.split(/\n(?=## )/)) {
+    const h = sec.match(/^##\s+(.*)$/m);
+    if (!h) continue;
+    add(1, `Official post: ${h[1].trim()}`, "https://x.com/yakkamon_game", sec.replace(/^##\s+.*$/m, "").trim(), { kind: "post" });
+  }
+} catch (e) { console.warn("chatbot-official-posts.md skipped:", e.message); }
 
 /* ---------- tier 3: dev-stream digest ---------- */
 try {
