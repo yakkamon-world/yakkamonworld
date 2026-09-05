@@ -6,7 +6,7 @@
 // stays short on the homepage — full detail lives on the News page.
 
 (function () {
-  const BADGE_LABEL = { patch: "Patch Notes", event: "Event", community: "Community", guideline: "Guideline", tips: "Tip" };
+  const BADGE_LABEL = { official: "Official News", devstream: "Dev Stream", analysis: "Analysis", guide: "Guide", tips: "Tip", portal: "Portal Update" };
 
   function badgeHTML(category) {
     return `<span class="badge badge-${category}">${BADGE_LABEL[category] || category}</span>`;

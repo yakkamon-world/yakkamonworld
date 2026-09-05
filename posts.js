@@ -7,7 +7,7 @@
 const YAKKAMON_POSTS = [
   {
     slug: "hunting-explained",
-    category: "event",
+    category: "analysis",
     title: "Every Wild Yakkamon Wants Something \u2014 What the Official Hunting Post Means for Players",
     date: "Sep 5, 2026",
     excerpt: "The official Hunting post gives every wild Yakkamon a place, a time and a temperament: spawns on an in-game clock, hunters that roam while you farm, affectionate, greedy and angry encounters, Legendaries turning up in ordinary grounds, grounds that deplete and a map that rotates each Season. What it means for players, and how to get an edge.",
@@ -55,7 +55,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "ronin-free-mint-guide",
-    category: "guideline",
+    category: "guide",
     title: "The Ultimate Ronin Free Mint Guide: How to Mint Your Hidden Yakkamon",
     date: "Sep 2, 2026",
     excerpt: "10,000 hidden Yakkamon, free on the Ronin Launchpad from 14 September in five rank-gated waves. Which waves your rank unlocks, the four things to have done before the 10 September snapshot, mint day step by step, what is hidden inside \u2014 and the mistakes that will cost you a mint.",
@@ -75,7 +75,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "free-mint-stream-graded",
-    category: "community",
+    category: "devstream",
     title: "We Graded Every Decision From Yakkamon\u2019s Free-Mint Dev Stream \u2014 Sixteen Grades, and a 10 September Deadline",
     date: "Sep 1, 2026",
     excerpt: "The Ronin free mint is 14 September and the snapshot is 10 September. Sixteen decisions graded A to F: a guaranteed mint for the top 1,000, a click race for everyone else, a 1,500-mint reserve with no published criteria, legendary auras that double production \u2014 and the two-track economy that earns our A.",
@@ -97,7 +97,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "regions-explained",
-    category: "event",
+    category: "analysis",
     title: "Yakkamon\u2019s World Has Three Layers \u2014 And Your Resources Won\u2019t Travel for Free",
     date: "Aug 28, 2026",
     excerpt: "The official Regions post makes expansion tile by tile, gates new Regions behind growing your first one, names a Water Region with its own monster types, keeps every old Region live \u2014 and calls moving resources between them \u201cthe real puzzle\u201d. Our read: inventory is probably per Region. Gameplay section updated, 23 systems.",
@@ -117,7 +117,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "dev-stream-three-recap",
-    category: "community",
+    category: "devstream",
     title: "Third Dev Stream: Combat Finally Has Rules, Farms Now Wear Out, and Rarity Doesn\u2019t Mean What You Thought",
     date: "Aug 21, 2026",
     excerpt: "Yakkamon is a lane-based 3v3 auto-battler. Plots degrade and need refertilising. Identical boosts don\u2019t stack. Rarity is fixed at species level and a good common can out-stat a rare. Our gameplay section is rebuilt around it \u2014 22 systems, new poster.",
@@ -157,7 +157,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "economy-explained",
-    category: "event",
+    category: "analysis",
     title: "Yakkamon Just Split Its Economy in Two \u2014 And It Breaks One of Our Arguments",
     date: "Aug 21, 2026",
     excerpt: "The official economy post walls free-to-play gathered resources off from the tradeable economy, gives basic monsters limited tradeability, gates rares behind an availability window and puts a burning fee on the in-game market. It also undoes part of what we published three days ago.",
@@ -179,7 +179,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "leaderboard-live",
-    category: "community",
+    category: "portal",
     title: "The Whole Deposit Board Is Now Public \u2014 And It Isn't Full",
     date: "Aug 19, 2026",
     excerpt: "A new Leaderboard section ranks every $FLOWER deposit on Base and Ronin, works out what each reward band costs today, and shows something you can't see anywhere else: barely 3,000 addresses have deposited at all, against 5,000 airdrop places.",
@@ -199,7 +199,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "updates-panel",
-    category: "event",
+    category: "analysis",
     title: "Nobody Noticed the Number in Yakkamon's Own Screenshot",
     date: "Aug 18, 2026",
     excerpt: "An official screenshot of the in-game Updates panel: a news feed with nine days of history, bait and berries as a hunting cost, the first named region \u2014 and a storage bin sitting at 20/20 in the background.",
@@ -221,7 +221,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "after-the-race",
-    category: "guideline",
+    category: "analysis",
     title: "The Race Ends in November \u2014 Here's the Game That Starts the Next Morning",
     date: "Aug 18, 2026",
     excerpt: "Your rank decides your monster and your entry date, then stops mattering. An opening-game plan for early access: why breadth beats depth, why your storage bin is your real ceiling, and why your wave is a market position rather than a head start.",
@@ -243,7 +243,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "yakkamon-roster-revealed",
-    category: "event",
+    category: "official",
     title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
     date: "Aug 17, 2026",
     excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated as the sheet grew, twenty-two as of 31 Aug. Portraits only \u2014 no names, no types, no rarities.",
@@ -265,7 +265,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "gameplay-guide-live",
-    category: "community",
+    category: "portal",
     title: "What We Now Know About How Yakkamon Actually Plays",
     date: "Aug 14, 2026",
     excerpt: "Type locking, stamina, storage bins that overflow and monsters with needs \u2014 the gathering loop has far more shape than the docs let on. Our Gameplay section is rebuilt around it, seven systems to fourteen.",
@@ -285,7 +285,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "referral-rule-change-flower-deposit",
-    category: "event",
+    category: "official",
     title: "Referrals Now Cost Your Friend Money \u2014 And Pay You 75 Points",
     date: "Aug 14, 2026",
     excerpt: "Discord and X no longer verify a referral. From your sixth onward the friend must link a wallet and deposit 100 $FLOWER of their own \u2014 and each counting referral rises from 30 points to 75.",
@@ -308,7 +308,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "important-dates-roadmap",
-    category: "event",
+    category: "official",
     title: "The Launch Schedule, Finally \u2014 And the Free Mint Just Moved Two Weeks Earlier",
     date: "Aug 14, 2026",
     excerpt: "An official Important Dates page puts early access in November or December, moves the Ronin free mint to mid-September, and dates the leaderboard lock for the first time.",
@@ -330,7 +330,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "dev-stream-two-recap",
-    category: "community",
+    category: "devstream",
     title: "Second Dev Stream: The Airdrop U-Turn Explained, and a Free Mint That May Move to September",
     date: "Aug 14, 2026",
     excerpt: "Adam owns the airdrop announcement, the 501\u20132,000 band is confirmed Legendary, 2.5M $FLOWER is already deposited, and the free mint was described as likely landing in mid-September.",
@@ -355,7 +355,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "airdrop-breakdown",
-    category: "community",
+    category: "analysis",
     title: "What Actually Changed in the Airdrop \u2014 A Full Breakdown",
     date: "Aug 14, 2026",
     excerpt: "Legendary supply doubled, Storm was added above the old top tier, and the leaderboard now locks. Every band, the odds, and the problem this update makes worse.",
@@ -387,7 +387,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "genesis-legendaries",
-    category: "event",
+    category: "official",
     title: "Meet Storm, Echo, Bloom and Tide",
     date: "Aug 14, 2026",
     excerpt: "The four Genesis Legendaries have names \u2014 and Legendary monsters now run to rank 2,000 instead of 1,000. Twice as many as before. Updated 2 Sep: Bloom and Tide are now called Ghost and Bloom.",
@@ -409,7 +409,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "reward-ladder-analysis",
-    category: "community",
+    category: "analysis",
     title: "We Got The Reward Ladder Wrong \u2014 The Correction",
     date: "Aug 14, 2026",
     excerpt: "We said Legendary supply halved and 500 trainers lost a tier. It doubled, and nobody lost. The full correction, with the real numbers.",
@@ -429,7 +429,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "reward-egg-ladder-update",
-    category: "event",
+    category: "official",
     title: "The Airdrop Ladder Just Changed",
     date: "Aug 12, 2026",
     excerpt: "The top 10 now receive two monsters, a new top-tier monster was added above the old ladder, and Legendary monsters run twice as far down the leaderboard.",
@@ -447,7 +447,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "dev-stream-graded",
-    category: "community",
+    category: "devstream",
     title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream (6 August)",
     date: "Aug 11, 2026",
     excerpt: "Nine decisions, graded A to C. Three A's, one C \u2014 and a wallet-splitting hole in the deposit system that costs 10% of your points and multiplies your reward slots by ten.",
@@ -473,7 +473,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "flower-deposit-guideline",
-    category: "guideline",
+    category: "guide",
     title: "The Official $FLOWER Deposit Guideline, Explained",
     date: "Aug 10, 2026",
     excerpt: "Yakkamon has published its deposit guideline. What a deposit actually does, the week-by-week rate schedule, and the withdrawal limit nobody's discussing.",
@@ -496,7 +496,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "dev-stream-aug-7-recap",
-    category: "community",
+    category: "devstream",
     title: "First Yakkamon Dev Stream (6 August): Everything They Announced",
     date: "Aug 7, 2026",
     excerpt: "The deposit system has been rebuilt, there's a new official X account worth 10 bonus points, and PvP won't be in early access. Full recap.",
@@ -525,8 +525,24 @@ const YAKKAMON_POSTS = [
     ]
   },
   {
+    slug: "tip-split-flower-deposits",
+    category: "tips",
+    title: "Tip: Deposit Your $FLOWER Early, In One Transfer",
+    date: "Aug 7, 2026",
+    excerpt: "Updated after the dev stream \u2014 the weekly multiplier decays from 3x and the size bonus is per deposit, so splitting now costs you.",
+    body: [
+      "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on 6 August described a different structure, and the advice reverses with it.",
+      "## Two bonuses, both rewarding early",
+      "The <strong>weekly multiplier</strong> pays <strong>3\u00d7</strong> through the opening week, then falls 0.2\u00d7 every week until it settles at 1\u00d7. The same 5,000 $FLOWER is worth 17,000 points in the opening week and 7,000 once it bottoms out. It applies to points, not your balance \u2014 you keep the $FLOWER and can withdraw it once you have game access.",
+      "The <strong>size bonus</strong> is rated <strong>per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount must land in one transfer \u2014 ten deposits of 500 earn ten 20% bonuses instead of one 40% bonus.",
+      "## What to do",
+      "Deposit as early in the window as you're comfortable with, and send it in a single transfer so the size bonus lands on the full amount. Holding back to deposit near the end is exactly what this structure penalises \u2014 and the leaderboard gets hidden close to launch anyway.",
+      "The full schedule lives in the deposit panel on your own trainer dashboard. Check it there before sending, rather than trusting any published figure, including ours."
+    ]
+  },
+  {
     slug: "referral-rule-change-100-points",
-    category: "community",
+    category: "official",
     title: "Referral Rule Change: Friends Now Need 100 Points to Count",
     date: "Aug 5, 2026",
     excerpt: "SUPERSEDED on 14 Aug \u2014 Discord and X no longer verify a referral at all. After 4,783 farming accounts were banned, referrals 6+ needed the friend to verify Discord, verify Twitter/X and reach 100 points.",
@@ -545,7 +561,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "free-to-play-guide",
-    category: "guideline",
+    category: "guide",
     title: "The Free-to-Play Guide to Early Access",
     date: "Aug 5, 2026",
     excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realistic free total.",
@@ -583,24 +599,8 @@ const YAKKAMON_POSTS = [
     ]
   },
   {
-    slug: "tip-split-flower-deposits",
-    category: "tips",
-    title: "Tip: Deposit Your $FLOWER Early, In One Transfer",
-    date: "Aug 7, 2026",
-    excerpt: "Updated after the dev stream \u2014 the weekly multiplier decays from 3x and the size bonus is per deposit, so splitting now costs you.",
-    body: [
-      "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on 6 August described a different structure, and the advice reverses with it.",
-      "## Two bonuses, both rewarding early",
-      "The <strong>weekly multiplier</strong> pays <strong>3\u00d7</strong> through the opening week, then falls 0.2\u00d7 every week until it settles at 1\u00d7. The same 5,000 $FLOWER is worth 17,000 points in the opening week and 7,000 once it bottoms out. It applies to points, not your balance \u2014 you keep the $FLOWER and can withdraw it once you have game access.",
-      "The <strong>size bonus</strong> is rated <strong>per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount must land in one transfer \u2014 ten deposits of 500 earn ten 20% bonuses instead of one 40% bonus.",
-      "## What to do",
-      "Deposit as early in the window as you're comfortable with, and send it in a single transfer so the size bonus lands on the full amount. Holding back to deposit near the end is exactly what this structure penalises \u2014 and the leaderboard gets hidden close to launch anyway.",
-      "The full schedule lives in the deposit panel on your own trainer dashboard. Check it there before sending, rather than trusting any published figure, including ours."
-    ]
-  },
-  {
     slug: "flower-deposits-open-august-9",
-    category: "event",
+    category: "official",
     title: "$FLOWER Deposits Open Sunday, August 9 at 8:00 PM ET",
     date: "Aug 5, 2026",
     excerpt: "The biggest points lever in pre-registration goes live. Your deposit address is issued the same moment \u2014 and how you time your deposits matters more than you'd think.",
@@ -619,7 +619,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "tips-section-live",
-    category: "community",
+    category: "portal",
     title: "New on the Portal: Trainer Tips",
     date: "Aug 5, 2026",
     excerpt: "A new section for leaderboard tactics, worked through with real numbers rather than asserted.",
@@ -637,7 +637,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "youtube-channel-live",
-    category: "community",
+    category: "portal",
     title: "YakkamonWorld Is Now on YouTube",
     date: "Aug 4, 2026",
     excerpt: "Our brand-new channel is live \u2014 short, plain-language explainer videos on pre-registration, the free mint, and every gameplay system.",
@@ -653,56 +653,56 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "yakkamon-referral-code",
-    category: "event",
+    category: "official",
     title: "Yakkamon Referral Code: Pre-Registration Opens to Everyone Aug 4",
     date: "Aug 3, 2026",
     excerpt: "Referral codes open Aug 4 at 8:00 PM ET \u2014 no Sunflower Land account, no Bumpkin Level, no wallet. How to get a Yakkamon access code and where to enter it."
   },
   {
     slug: "leaderboard-guideline",
-    category: "guideline",
+    category: "guide",
     title: "Early Access Leaderboard Guideline: How to Climb",
     date: "Aug 3, 2026",
     excerpt: "Every way to earn points ranked by value, what each rank actually takes, and the mistakes that cost people their place."
   },
   {
     slug: "access-code-20-plus",
-    category: "event",
+    category: "official",
     title: "Sunflower Land Players (20+ Bumpkin Level): The Final Wave Opens Tonight",
     date: "Aug 2, 2026",
     excerpt: "Bumpkin Level 20+? The last Sunflower Land access wave unlocks tonight at 8:00 PM ET \u2014 and referral codes open Aug 4 for everyone else."
   },
   {
     slug: "access-code-50-plus",
-    category: "event",
+    category: "official",
     title: "Sunflower Land Players (50+ Bumpkin Level): Get Your Access Code Tonight",
     date: "Aug 1, 2026",
     excerpt: "Bumpkin Level 50+? Your access code unlocks tonight at 8:00 PM ET \u2014 find Yakkamon in the Plaza, then sign up at yakkamon.com."
   },
   {
     slug: "access-code-100-plus",
-    category: "event",
+    category: "official",
     title: "Sunflower Land Players (100+ Bumpkin Level): Get Your Access Code Today",
     date: "Jul 31, 2026",
     excerpt: "Bumpkin Level 100+? Your access code unlocks today \u2014 same steps as yesterday's Lv 150+ drop: find Yakkamon in the Plaza, then sign up at yakkamon.com."
   },
   {
     slug: "faq-page-live",
-    category: "event",
+    category: "portal",
     title: "New: FAQ Page Answers Your Trickiest Pre-Reg Questions",
     date: "Jul 30, 2026",
     excerpt: "Wallets, gas, Ronin, and the difference between the Free Mint and the Genesis Airdrop — all explained in plain language."
   },
   {
     slug: "access-code-today",
-    category: "event",
+    category: "official",
     title: "Sunflower Land Players (150+ Bumpkin Level): Get Your Access Code Today",
     date: "Jul 30, 2026",
     excerpt: "Bumpkin Level 150+? Click the Yakkamon sign next to Stella in the Plaza to claim your access code, then sign up at yakkamon.com."
   },
   {
     slug: "free-mint-october-1",
-    category: "event",
+    category: "official",
     title: "Free Mint Goes Live October 1st",
     date: "Jul 29, 2026",
     excerpt: "SUPERSEDED \u2014 the mint has since moved to mid-September. Pre-registered trainers can claim a Genesis Monster NFT for free on Ronin, no purchase, just a small network fee.",
@@ -717,7 +717,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "genesis-airdrop-5000",
-    category: "event",
+    category: "official",
     title: "The Genesis Airdrop: 5,000 Monsters, One Chance",
     date: "Jul 27, 2026",
     excerpt: "The top 5,000 trainers on the leaderboard get a free reward egg at launch \u2014 the top 500 get a Legendary.",
@@ -732,7 +732,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "flower-deposits-explained",
-    category: "community",
+    category: "guide",
     title: "FLOWER Deposits: Deposit Early, Climb the Board",
     date: "Jul 23, 2026",
     excerpt: "Depositing $FLOWER now does two things at once \u2014 it saves your balance for launch, and earns points today.",
@@ -747,7 +747,7 @@ const YAKKAMON_POSTS = [
   },
   {
     slug: "reward-track-explained",
-    category: "community",
+    category: "guide",
     title: "Reward Track: What You Unlock as You Climb",
     date: "Jul 20, 2026",
     excerpt: "Rewards rotate on a 7-day cycle \u2014 here's how the track works and why you need to check back weekly.",

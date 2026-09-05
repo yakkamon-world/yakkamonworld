@@ -245,8 +245,14 @@ Four files. A `posts.js` entry without a matching article file produces a card
 that 404s, so these always ship together.
 
 1. **`posts.js`** — copy a whole `{ … }` block to the **top** of the array
-   (newest first) and edit it. `category` must be one of `community`, `event`,
-   `guideline`, `tips`.
+   (newest first) and edit it. `category` must be one of `official` (Official
+   News — announcements, rule changes, dates, reveals from the team), `devstream`
+   (Dev Stream — recaps and gradings of the streams), `analysis` (Analysis —
+   YakkamonWorld's own readings, strategy pieces, open corrections), `guide`
+   (Guide — how-to walkthroughs), `tips` (Tip — one actionable tip) or `portal`
+   (Portal Update — new site features). Labels and colours live in `news.js`,
+   `home-news.js` and the `.badge-*` rules in `style.css`; the article's own
+   badge must use the same key.
 2. **`article-<slug>.html`** — copy the most recent article file so you inherit
    the current header and footer. The filename slug must match `slug` exactly.
    Then update `<title>` (ends in ` | YakkamonWorld`), the canonical link, all
