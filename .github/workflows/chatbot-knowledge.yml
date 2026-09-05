@@ -16,6 +16,7 @@ on:
       - "videos.js"
       - "posts.js"
       - "chatbot-digest.md"
+      - "chatbot-official-posts.md"
       - "build-chatbot-knowledge.mjs"
   workflow_dispatch:
 
@@ -30,8 +31,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 20
       - name: Build chatbot-knowledge.json
