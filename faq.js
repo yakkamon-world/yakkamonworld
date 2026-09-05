@@ -536,6 +536,24 @@ var FAQ_CATEGORIES = [
     "a": "<p>You'll get to act. The team decided at the end of August that players can take actions inside combat, through a mechanic Bryn called <strong>&ldquo;mechanic swapping&rdquo;</strong> &mdash; influencing which mechanic is in play rather than pressing attack every turn. What that looks like on screen hasn't been shown. The rest is settled: lanes act top to bottom, each monster cycles through two or three abilities in a preset order, and who goes first is a coin flip unless one lane holds the <strong>type advantage</strong>, which overrides everything.</p>"
    },
    {
+    "q": "Is there a limit on how many Yakkamon can work at once?",
+    "id": "is-there-a-limit-on-how-many-yakkamon-can-work-at-once",
+    "a": "<p>No. If you can find the jobs for them and set their cycles up so they don't compete, <strong>as many Yakkamon as you have can be working at once</strong>. Jobs, not headcount, are the ceiling &mdash; every tile you claim adds jobs, and the pressure as you grow is to keep the whole farm staffed and the supply chains behind each processing building actually delivering.</p>"
+   },
+   {
+    "q": "Are there evolutions?",
+    "id": "are-there-evolutions",
+    "a": "<p>Confirmed, but <strong>not at launch</strong>. The reason is supply: launch with evolutions and the lower tiers gradually filter out as everyone evolves upward, until the population piles up at the top tier. The team wants to solve that before shipping the feature. Breeding has a limit for a related reason &mdash; bred Yakkamon are tradable, so commons breed above replacement, rarer species around it, and some Legendaries may breed only once.</p>"
+   }
+  ]
+ },
+ {
+  "id": "hunting",
+  "name": "Hunting",
+  "intro": "<p>Everything from the official Hunting post &mdash; the in-game clock, roaming hunters, the three temperaments, wild Legendaries, depleting grounds and Seasons &mdash; plus what the dev streams and in-game notices added. Long version: <a href=\"article-hunting-explained.html\">what the Hunting post means for players</a>.</p>",
+  "rich": "",
+  "items": [
+   {
     "q": "How does a hunt actually work?",
     "id": "how-does-a-hunt-actually-work",
     "a": "<p>Hunting is a <strong>job you assign</strong>, not a place you walk to &mdash; the game is the same top-down view as Sunflower Land. You send a Yakkamon out to <strong>passively roam</strong> a hunting ground while you run your farm, and it triggers encounters with the wild monsters living there; lures and baits, crafted from resources, tilt the roll toward a type, and choosing a specific area of the ground (a rocky outcrop, say) does the same. Which monsters are out depends on the <strong>time of day</strong> on the in-game clock. Wild Yakkamon have three temperaments: <strong>affectionate</strong> ones only come home if your hunter wins them over, <strong>greedy</strong> ones want resources first, and <strong>angry</strong> ones start a fight. There's no limit on hunts per Yakkamon; it's the <strong>ground</strong> that depletes as it's hunted out. <a href=\"gameplay.html?system=crafting-hunting\">Crafting &amp; hunting &rarr;</a></p>"
@@ -561,14 +579,59 @@ var FAQ_CATEGORIES = [
     "a": "<p>They do. The more you hunt a ground, the less populated it becomes, and the regeneration rate isn't published. The official answer is to <strong>spread your hunts across grounds and Regions</strong>. Since a hunting area is a tile on your own Region, that means budgeting a second hunting tile before the first runs dry &mdash; and eventually a second Region. Future Seasons also change which Yakkamon are available and where, so the map you learn this Chapter won't be next Chapter's. <a href=\"article-hunting-explained.html\">Why depletion is now a reason to own more than one ground &rarr;</a></p>"
    },
    {
-    "q": "Is there a limit on how many Yakkamon can work at once?",
-    "id": "is-there-a-limit-on-how-many-yakkamon-can-work-at-once",
-    "a": "<p>No. If you can find the jobs for them and set their cycles up so they don't compete, <strong>as many Yakkamon as you have can be working at once</strong>. Jobs, not headcount, are the ceiling &mdash; every tile you claim adds jobs, and the pressure as you grow is to keep the whole farm staffed and the supply chains behind each processing building actually delivering.</p>"
+    "q": "What is a hunting ground, and where do I find one?",
+    "id": "what-is-a-hunting-ground",
+    "a": "<p>A hunting ground is a place in your world where wild Yakkamon live. Per the official Regions post, hunting areas are one of the three things a <strong>tile</strong> can hold (the others being fresh resources and build room), so you reveal a ground by unlocking tiles on your own Region with gathered resources. The Hunting post adds that grounds are <strong>scattered across your Regions</strong>, and that each Region brings its own monster types &mdash; the Water Region comes with water hunting areas. Whether every ground is private to your Region or some are shared instances hasn't been stated; the site's reading is private, because the post talks about &ldquo;your Regions&rdquo;. <a href=\"gameplay.html?system=regional-exploration\">Regions, tiles &amp; the world &rarr;</a></p>"
    },
    {
-    "q": "Are there evolutions?",
-    "id": "are-there-evolutions",
-    "a": "<p>Confirmed, but <strong>not at launch</strong>. The reason is supply: launch with evolutions and the lower tiers gradually filter out as everyone evolves upward, until the population piles up at the top tier. The team wants to solve that before shipping the feature. Breeding has a limit for a related reason &mdash; bred Yakkamon are tradable, so commons breed above replacement, rarer species around it, and some Legendaries may breed only once.</p>"
+    "q": "Do I have to sit and watch a hunt, or does it run while I farm?",
+    "id": "does-hunting-run-while-i-farm",
+    "a": "<p>It runs while you farm. The post's wording is that you send a Yakkamon out to <strong>passively roam</strong> a hunting ground and it triggers encounters &ldquo;while you get on with running your farm&rdquo; &mdash; so hunting is another job you assign, in the same idle style as gathering. Two things aren't published: whether a roaming hunter keeps triggering encounters after you close the game (the free-mint stream said absence <em>pauses</em> the farm rather than punishing it, so expect the hunt to wait for you too), and whether an encounter needs you present to resolve. <a href=\"article-hunting-explained.html\">What the Hunting post means for players &rarr;</a></p>"
+   },
+   {
+    "q": "Which Yakkamon should I send hunting?",
+    "id": "which-yakkamon-should-i-send-hunting",
+    "a": "<p>One that can pass all three tests at once. An <strong>angry</strong> wild Yakkamon forces a battle, and the post says a hunter that &ldquo;can't hold its own&rdquo; comes back empty-handed, so it needs to fight. An <strong>affectionate</strong> one only comes home if your hunter wins it over, and what that check uses (type, level, species, a bait) isn't published. A <strong>greedy</strong> one is about your stock, not your hunter. The catch is that every hunter is a worker taken off a type-locked gathering line &mdash; so the real question is which production you can spare, not which monster is strongest. <a href=\"article-hunting-explained.html\">Why a hunting squad is a fighter plus a charmer &rarr;</a></p>"
+   },
+   {
+    "q": "What do greedy Yakkamon want, and what does it cost me?",
+    "id": "what-do-greedy-yakkamon-want",
+    "a": "<p>Resources. The post says greedy Yakkamon &ldquo;want resources, and they won't budge until you've paid up &mdash; so bring the right goods if you're chasing a particular monster&rdquo;. Which goods, how many, and whether the price scales with rarity are all unpublished. What the wording implies is that the demand is <strong>specific</strong>: a monster wants particular goods, not a generic fee, so a hunting purse of assorted gathered resources is part of being ready. The site's reading is that this is where the free, untradeable gathering layer finally gets a sink &mdash; goods you can't sell can still buy a monster. <a href=\"article-hunting-explained.html\">The hunting purse &rarr;</a></p>"
+   },
+   {
+    "q": "What happens if my hunter loses a fight?",
+    "id": "what-happens-if-my-hunter-loses",
+    "a": "<p>You come back empty-handed &mdash; that's the only consequence the post names. It doesn't say the hunter is injured, loses items, or is set back in any other way. The in-game states shown so far include <strong>hurt or knocked out</strong>, and an earlier in-game notice told trainers to rest their squad before a hunt, so expect a lost battle to cost at least the stamina and time of the trip and possibly a recovery period. How long that is, and whether a knocked-out hunter needs an item to recover, is unpublished. <a href=\"gameplay.html?system=monster-care\">Monster care &rarr;</a></p>"
+   },
+   {
+    "q": "Do I need bait or lures to hunt?",
+    "id": "do-i-need-bait-or-lures-to-hunt",
+    "a": "<p>Probably, though the official Hunting post doesn't mention them. Two other official sources do: an in-game notice told trainers to &ldquo;prepare bait and monsters, bring berries&rdquo; before hunting, and the dev streams described crafted <strong>lures</strong> that tilt an encounter toward a type (a rock-type lure draws rock types) and <strong>bait</strong> used to coax ambient monsters. So the picture is: lures narrow <em>what</em> you meet, bait helps <em>win over</em> what you meet, and both are crafted from gathered resources. Whether bait is required or just improves the odds isn't stated. <a href=\"article-updates-panel.html\">The in-game notice that named bait and berries &rarr;</a></p>"
+   },
+   {
+    "q": "Are the same wild Yakkamon in every Region?",
+    "id": "are-the-same-wild-yakkamon-in-every-region",
+    "a": "<p>No. The Regions post says each Region has <strong>its own resources and its own monster types</strong>, and names the Water Region with its water hunting areas as the example. The Hunting post layers time of day on top of that: within a Region, each ground reveals different Yakkamon at different hours. Put together, the set of monsters you can catch is a grid of Region &times; ground &times; in-game hour &mdash; and since type locking means a Region's local monsters are what can work its local resources, unlocking a new Region is also how you reach the types you're missing. <a href=\"gameplay.html?system=type-locking\">Type locking &rarr;</a></p>"
+   },
+   {
+    "q": "Do Seasons change what I can hunt?",
+    "id": "do-seasons-change-what-i-can-hunt",
+    "a": "<p>Yes, and it's the last point of the official post: <strong>future Seasons will affect which Yakkamon are available and where</strong>, so &ldquo;the hunting map you master today won't be the one you're working next Chapter&rdquo;. The dev streams suggested the Season cadence may end up weekly rather than quarterly, which would make the rotation fast. Practically it means a ground-and-clock log is never finished, and it lines up with the economy post's rule that Legendaries and rares drop in limited windows &mdash; Season rotation looks like the mechanism that opens and closes those windows. <a href=\"gameplay.html?system=seasonal-system\">The seasonal system &rarr;</a></p>"
+   },
+   {
+    "q": "Is there a hunting schedule or spawn table I can look up?",
+    "id": "is-there-a-hunting-schedule",
+    "a": "<p>Not an official one. The post frames &ldquo;learning the clock&rdquo; as the player's job, and says outright that Legendaries and Rares appear sporadically with <strong>no schedule to memorise</strong>. The Yakkapedia in the official docs lists species and Legendary abilities, not where or when anything spawns. Expect spawn tables to be community-built, and expect them to go stale each Season. The one thing you can rely on is that the timing runs on the sped-up <strong>in-game clock</strong>, not real time, so a log of ground plus in-game hour transfers between players. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
+   },
+   {
+    "q": "What is a contract hunt?",
+    "id": "what-is-a-contract-hunt",
+    "a": "<p>A hunt someone else has ordered. The free-mint stream described a <strong>contract hunt system</strong> that pays <strong>coins</strong> for finding a requested Yakkamon, and named it as one of the few faucets for coins &mdash; the currency that gates the tradeable layer of the economy. It's not in the Hunting post, and details such as who posts contracts, how the payout is set, and whether the caught monster goes to you or the requester are unpublished. The site's reading is that ordinary hunting fills your roster and contract hunting is how a free player earns their way into the market. <a href=\"gameplay.html?system=economy-layers\">The two-track economy &rarr;</a></p>"
+   },
+   {
+    "q": "Will hunting be available on day one of Early Access?",
+    "id": "will-hunting-be-available-on-day-one",
+    "a": "<p>The basic loop should be &mdash; hunting is described everywhere as core gameplay, alongside gathering and crafting &mdash; but nothing official pins it to a date. What <em>is</em> dated is the Important Dates page's <strong>Chapter 0</strong>, one month after Early Access opens, which lists &ldquo;the first NFT monster hunt&rdquo; and the first batch of Legendaries. The site's reading is that catching ordinary wild Yakkamon is a launch feature and that hunting for tradeable, NFT-grade monsters starts in Chapter 0. Treat that as inference until the team says so. <a href=\"pre-registration.html\">Launch timeline &rarr;</a></p>"
    }
   ]
  },
