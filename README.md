@@ -174,7 +174,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ index.html                  Home — ticket card, counter, timeline, latest news
 │  ├─ pre-registration.html       "Early Access" tab — points, tiers, important dates
 │  ├─ news.html                   News archive with category sidebar
-│  ├─ gameplay.html               25 gameplay systems, sidebar + detail panel
+│  ├─ gameplay.html               26 gameplay systems, sidebar + detail panel
 │  ├─ gameplay-guide.html         Same material as one long mobile-readable page
 │  ├─ community.html              Our channels, then the official ones
 │  ├─ leaderboard.html            Deposit leaderboard (Base + Ronin, via Dune)
@@ -188,7 +188,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
-│  ├─ gameplay.js                 Gameplay systems (25 entries)
+│  ├─ gameplay.js                 Gameplay systems (26 entries)
 │  ├─ videos.js                   Video index (17 entries, 4 blocks)
 │  ├─ search.js                   SEARCH_INDEX + the search overlay behaviour
 │  └─ chatbot.js                  "Ask me anything" bar + sheet (talks to yakkamon-chat-worker)
@@ -224,8 +224,8 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 └─ IMAGES
    ├─ favicon.ico / -32 / -192 / apple-touch-icon
    ├─ og-default.png              1200×630 — default social card
-   ├─ gameplay-poster.png         1800×1704 — in-page field guide poster (rendered from gameplay-poster-source.html)
-   ├─ gameplay-poster-full.png    4000×3787 — full size, under X's 4096px limit
+   ├─ gameplay-poster.png         1800×1898 — in-page field guide poster (rendered from gameplay-poster-source.html)
+   ├─ gameplay-poster-full.png    3885×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
    ├─ yakkamon-roster*.jpg        Official roster sheets — original 18, the 21-sheet (25 Aug), current 22-sheet (31 Aug), each with a -2x
    ├─ free-mint-banner.webp       Free mint banner (Home + Early Access), links to the guide

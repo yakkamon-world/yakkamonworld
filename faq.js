@@ -442,7 +442,7 @@ var FAQ_CATEGORIES = [
  {
   "id": "gameplay",
   "name": "Playing the game",
-  "intro": "<p>Short answers on how the game itself plays. The long versions live on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; 25 systems, each explained with a plain-English analogy &mdash; and in the <a href=\"gameplay-guide.html\">field guide</a>.</p>",
+  "intro": "<p>Short answers on how the game itself plays. The long versions live on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; 26 systems, each explained with a plain-English analogy &mdash; and in the <a href=\"gameplay-guide.html\">field guide</a>.</p>",
   "rich": "",
   "items": [
    {
@@ -556,7 +556,7 @@ var FAQ_CATEGORIES = [
    {
     "q": "How does a hunt actually work?",
     "id": "how-does-a-hunt-actually-work",
-    "a": "<p>Hunting is a <strong>job you assign</strong>, not a place you walk to &mdash; the game is the same top-down view as Sunflower Land. You send a Yakkamon out to <strong>passively roam</strong> a hunting ground while you run your farm, and it triggers encounters with the wild monsters living there; lures and baits, crafted from resources, tilt the roll toward a type, and choosing a specific area of the ground (a rocky outcrop, say) does the same. Which monsters are out depends on the <strong>time of day</strong> on the in-game clock. Wild Yakkamon have three temperaments: <strong>affectionate</strong> ones only come home if your hunter wins them over, <strong>greedy</strong> ones want resources first, and <strong>angry</strong> ones start a fight. There's no limit on hunts per Yakkamon; it's the <strong>ground</strong> that depletes as it's hunted out. <a href=\"gameplay.html?system=crafting-hunting\">Crafting &amp; hunting &rarr;</a></p>"
+    "a": "<p>Hunting is a <strong>job you assign</strong>, not a place you walk to &mdash; the game is the same top-down view as Sunflower Land. You send a Yakkamon out to <strong>passively roam</strong> a hunting ground while you run your farm, and it triggers encounters with the wild monsters living there; lures and baits, crafted from resources, tilt the roll toward a type, and choosing a specific area of the ground (a rocky outcrop, say) does the same. Which monsters are out depends on the <strong>time of day</strong> on the in-game clock. Wild Yakkamon have three temperaments: <strong>affectionate</strong> ones only come home if your hunter wins them over, <strong>greedy</strong> ones want resources first, and <strong>angry</strong> ones start a fight. There's no limit on hunts per Yakkamon; it's the <strong>ground</strong> that depletes as it's hunted out. <a href=\"gameplay.html?system=hunting\">Hunting, system by system &rarr;</a></p>"
    },
    {
     "q": "What are affectionate, greedy and angry Yakkamon?",

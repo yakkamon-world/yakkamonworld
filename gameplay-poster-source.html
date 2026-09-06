@@ -5,11 +5,12 @@
 <meta name="robots" content="noindex">
 <title>How Yakkamon Works — poster source (render at 1800px wide)</title>
 <!--
-  SOURCE for gameplay-poster.png (1800 wide) and gameplay-poster-full.png (4000 wide).
+  SOURCE for gameplay-poster.png (1800 wide) and gameplay-poster-full.png (X-size).
   Render: open in Chromium at a 1800px-wide viewport, full-page screenshot;
-  the 4000px version is the same page at deviceScaleFactor 2.222.
+  the full version is the same page at deviceScaleFactor min(2.222, 4096/height)
+  so its longest side never exceeds X's 4096px resize threshold (3885x4096 now).
   Edit the panels below, re-render, replace both PNGs and the width/height
-  attributes on gameplay.html's <img>. Revision: 2 September 2026 (21 panels).
+  attributes on gameplay.html's <img>. Revision: 5 September 2026 (22 panels, 12 columns).
 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
@@ -39,11 +40,12 @@ body{width:1800px;background:var(--cream);background-image:radial-gradient(rgba(
 h2{font-family:Bangers,Impact,sans-serif;font-size:17px;letter-spacing:.04em;margin:0 0 8px;padding-bottom:5px;border-bottom:3px solid var(--ink)}
 h2 i{font-style:normal;color:var(--red);margin-right:6px}
 .card{border:2.5px solid var(--ink);border-radius:9px;padding:4px 7px;margin:0 0 5px;background:#fff}
+.card em{font-style:normal;font-weight:900}
 .card b{display:block;font-weight:900;font-size:10.2px;letter-spacing:.02em;text-transform:uppercase;margin-bottom:1px}
 .sky{background:#D9EEFB}.green{background:#DDF1E3}.yellow{background:#FFF0B8}.red{background:#FFDADA}.purple{background:#E7DDFB}.grey{background:#EEEEF3}
 p{margin:0 0 6px}
 .like{background:#DDF1E3;border:2.5px solid var(--ink);border-radius:9px;padding:6px 8px;margin:2px 0 0;font-weight:700}
-.like em{font-style:normal;background:var(--ink);color:#fff;font-family:Bangers,Impact,sans-serif;font-size:10px;letter-spacing:.08em;padding:2px 6px;border-radius:5px;margin-right:5px;vertical-align:1px}
+.like em{font-style:normal;white-space:nowrap;background:var(--ink);color:#fff;font-family:Bangers,Impact,sans-serif;font-size:10px;letter-spacing:.08em;padding:2px 6px;border-radius:5px;margin-right:5px;vertical-align:1px}
 ol.steps{list-style:none;margin:0 0 6px;padding:0;counter-reset:s}
 ol.steps li{counter-increment:s;position:relative;padding:4px 6px 4px 24px;border:2.5px solid var(--ink);border-radius:8px;margin-bottom:4px;background:#fff}
 ol.steps li::before{content:"0" counter(s);position:absolute;left:7px;top:5px;font-family:Bangers,Impact,sans-serif;color:var(--red);font-size:12px}
@@ -72,12 +74,12 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED 2 SEP 2026 &mdash; YAKKAPEDIA + FREE-MINT STREAM. UTILITIES &amp; AURAS, TWO-TRACK ECONOMY, HUNTING GROUNDS, GHOST &amp; BLOOM.</div>
+    <div class="rev">REVISED 5 SEP 2026 &mdash; OFFICIAL HUNTING POST. THE CLOCK, THREE TEMPERAMENTS, WILD LEGENDARIES, DEPLETING GROUNDS, SEASONS THAT MOVE THE MAP.</div>
   </div>
 </div>
 
 <div class="chips">
-  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">3v3 AUTO-BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">50&ndash;60 YAKKAMON AT LAUNCH</span><span class="chip green">13 TYPES</span>
+  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">3v3 AUTO-BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">50&ndash;60 YAKKAMON AT LAUNCH</span><span class="chip green">13 TYPES</span>
 </div>
 
 <div class="cols">
@@ -194,8 +196,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="like"><em>LIKE THIS</em>Two identical umbrellas keep you exactly as dry as one. An umbrella and a raincoat is the upgrade.</div>
 </div>
 
-<div class="panel new">
-  <span class="tag">NEW 2 SEP</span>
+<div class="panel">
   <h2><i>11</i>UTILITIES &amp; AURAS</h2>
   <p>The boosts come from the Yakkamon themselves. Legendaries have named ones (name &middot; total supply &middot; airdrop ranks):</p>
   <table>
@@ -257,24 +258,33 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="panel">
   <h2><i>16</i>DAY, NIGHT &amp; SEASONS</h2>
-  <div class="card sky"><b>Day &amp; night</b>A clock with a sun / moon icon. What&rsquo;s out in the wild changes with it. Runs on a sped-up in-game clock, not real time &mdash; no timezone advantage.</div>
+  <div class="card sky"><b>Day &amp; night is the hunting timetable</b>A clock with a sun / moon icon. Each ground shows different Yakkamon at dawn and at midnight. Runs on a sped-up in-game clock, not real time &mdash; no timezone advantage, and one player&rsquo;s log works for everyone.</div>
   <div class="card yellow"><b>Weather</b>Separate indicators next to the clock &mdash; sun and rain both shown.</div>
-  <div class="card green"><b>Seasons</b>Reshape the world and each Region with it. New monsters drop into the wild on a schedule players race to claim &mdash; every 3 months per the docs, weekly still under consideration.</div>
+  <div class="card green"><b>Seasons move the hunting map</b>New monsters drop into the wild each Season &mdash; and per the Hunting post, Seasons change which Yakkamon are available and where, so today&rsquo;s spawn table won&rsquo;t survive the Chapter. Every 3 months per the docs, weekly still under consideration.</div>
   <div class="card purple"><b>Player lore, warmly received</b>Legendaries as the in-world cause of weather and seasons. Not confirmed &mdash; but &ldquo;there&rsquo;s a good home for it&rdquo;.</div>
 </div>
 
-<div class="panel">
-  <h2><i>17</i>HUNTING &amp; CRAFTING</h2>
-  <div class="card green"><b>Hunting is a job you assign</b>Same top-down view as the farm. The Yakkamon you send in rolls for a wild monster; resources tilt the odds.</div>
-  <div class="card yellow"><b>Grounds have areas, lures pick the type</b>Three areas shown (a rocky outcrop among them), swamps and water to come. A rock-type lure draws rock types. Lures and baits are crafted.</div>
-  <div class="card red"><b>Aggressive</b>Red alert: something wants to fight. The ground pauses and waits for your move &mdash; hunting hands off to combat.</div>
-  <div class="card sky"><b>Ambient</b>Skittish, never alerts you. Send bait, watch a short emoji conversation, see if it joins or runs.</div>
-  <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon. A hunted-out ground yields less. Contract hunts pay coins.</div>
-  <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot &mdash; and the field empties if you work it daily.</div>
+<div class="panel new">
+  <span class="tag">NEW 5 SEP</span>
+  <h2><i>17</i>HUNTING</h2>
+  <div class="card green"><b>A place: grounds are tiles</b>On your own Regions &mdash; one of the three things a tile can hold. Each Region has its own wild types.</div>
+  <div class="card sky"><b>A time: learn the clock</b>Each ground shows different Yakkamon at different in-game hours. No timetable is given &mdash; discovering it is the skill.</div>
+  <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (18).</div>
+  <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty.</div>
+  <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule. Keep a strong, well-supplied team ready.</div>
+  <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon; a hunted-out ground yields less. Spread hunts across grounds <i>and Regions</i>.</div>
+  <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot, some want paying &mdash; and the field empties if you work it daily.</div>
 </div>
 
 <div class="panel">
-  <h2><i>18</i>THE BATTLE SYSTEM</h2>
+  <h2><i>18</i>CRAFTING, LURES &amp; BAIT</h2>
+  <div class="card yellow"><b>Lures pick the type</b>Grounds have areas (a rocky outcrop among them; swamps and water to come). A rock-type lure draws rock types. Lures and bait are crafted from resources.</div>
+  <div class="card sky"><b>Bait does the talking</b>Bait and a short emoji chat win over an affectionate monster; a stock of goods pays a greedy one. In-game notice: &ldquo;prepare bait and monsters, bring berries&rdquo;.</div>
+  <div class="card green"><b>Contract hunts pay coins</b>Find a requested Yakkamon, earn the currency that gates the tradable layer &mdash; one of the few coin faucets.</div>
+</div>
+
+<div class="panel">
+  <h2><i>19</i>THE BATTLE SYSTEM</h2>
   <div class="card sky"><b>Lane-based 3v3 auto-battling</b>Lanes act top to bottom &mdash; 1, then 2, then 3. Set positions before the fight. AOE keeps positioning relevant.</div>
   <div class="card yellow"><b>Skills fire in a fixed order</b>Each monster cycles 2&ndash;3 abilities in a preset loop. Type advantage vs skill-loop advantage: a favourable matchup still loses if their shield eats your big hit.</div>
   <div class="card red"><b>You act inside the fight</b>Not a pure simulation: players influence combat via &ldquo;mechanic swapping&rdquo;. Who goes first is a coin flip &mdash; unless a lane holds type advantage.</div>
@@ -284,9 +294,8 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad and formation &mdash; and shout one or two things from the touchline.</div>
 </div>
 
-<div class="panel new">
-  <span class="tag">NEW 2 SEP</span>
-  <h2><i>19</i>THE TWO-TRACK ECONOMY</h2>
+<div class="panel">
+  <h2><i>20</i>THE TWO-TRACK ECONOMY</h2>
   <div class="card green"><b>Track one: free to play</b>Produce without limit. Nothing you make here can be traded.</div>
   <div class="card yellow"><b>Track two: tradable, gated by coins</b>Making something tradable costs the game&rsquo;s Web2 currency &mdash; coins, maybe &ldquo;new yen&rdquo; later. That gate is the whole design.</div>
   <div class="card red"><b>Coin faucets are scarce</b>VIP, burning crops or other assets, and contract hunts. Every coin is a sink somebody paid.</div>
@@ -295,7 +304,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>20</i>PROGRESSION &amp; ENDGAME</h2>
+  <h2><i>21</i>PROGRESSION &amp; ENDGAME</h2>
   <div class="card sky"><b>Infinite levels and expansions</b>Plans and sinks are meant to ship at launch; the endgame features themselves arrive after early access.</div>
   <div class="card yellow"><b>The meta is expected to move</b>Early: gathering and hunting specialists are the valuable monsters. Later: once the arena and tournaments establish, demand shifts to battle stats. The team won&rsquo;t intervene.</div>
   <div class="card green"><b>No hard specialisation cap</b>Producer vs fighter emerges from opportunity cost, not a rule.</div>
@@ -304,14 +313,12 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>21</i>NOT CONFIRMED YET</h2>
-    <div class="card grey"><b>Tile numbers</b>Tiles per Region, the cost curve, parallel jobs per tile.</div>
-  <div class="card grey"><b>The Region unlock</b>&ldquo;Grow your starting Region&rdquo; &mdash; a tile count, quest, level or payment?</div>
-  <div class="card grey"><b>The transfer mechanic</b>What moving resources between Regions costs.</div>
+  <h2><i>22</i>NOT CONFIRMED YET</h2>
+  <div class="card grey"><b>Regions &amp; tiles</b>Tiles per Region, the cost curve, parallel jobs per tile; what &ldquo;grow your starting Region&rdquo; means; what moving resources between Regions costs.</div>
   <div class="card grey"><b>Work cycle &amp; upkeep numbers</b>Cycle duration, stamina, yield, sleep rate; degradation rate, fertiliser recipe.</div>
   <div class="card grey"><b>The type chart</b>13 types confirmed, not which; only Grass&rarr;Wood; combat effectiveness missing.</div>
-  <div class="card grey"><b>Stats, levels, traits &amp; skills</b>Roll ranges, XP costs, level cap, trait list, respec costs.</div>
-  <div class="card grey"><b>Utility numbers</b>AOE radii, Bloom&rsquo;s regen %, every Rare / Uncommon utility.</div>
+  <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>Roll ranges, XP costs, level cap, trait list, respec costs; AOE radii, Bloom&rsquo;s regen %, every Rare / Uncommon utility.</div>
+  <div class="card grey"><b>Hunting rates</b>Day length, ground regeneration, Legendary odds, a greedy monster&rsquo;s price; private or shared grounds.</div>
   <div class="card grey"><b>Mechanic swapping &amp; coins</b>What the in-fight action is; what a tradable unit costs.</div>
 </div>
 
@@ -319,7 +326,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions and Economy posts, screenshots and dev streams through 2 September 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy and Hunting posts, screenshots and dev streams through 5 September 2026, plus the official Hunting post. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>
@@ -328,7 +335,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 window.__rebalance=function(){
   // Split the numbered panels into N columns in reading order, choosing the
   // split points that keep the tallest column as short as possible.
-  var N=11,cols=document.querySelector('.cols'),panels=[].slice.call(cols.querySelectorAll('.panel'));
+  var N=12,cols=document.querySelector('.cols'),panels=[].slice.call(cols.querySelectorAll('.panel'));
   var meas=document.createElement('div');meas.className='col';meas.style.flex='0 0 calc((100% - '+(N-1)*12+'px)/'+N+')';cols.innerHTML='';cols.appendChild(meas);panels.forEach(function(p){meas.appendChild(p)});
   var h=panels.map(function(p){return p.offsetHeight+12}),n=h.length,INF=1e9,dp=[],cut=[];
   for(var i=0;i<=n;i++){dp.push([]);cut.push([]);for(var j=0;j<=N;j++){dp[i].push(INF);cut[i].push(0);}}
