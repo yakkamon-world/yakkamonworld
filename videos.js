@@ -100,6 +100,15 @@ const YAKKAMON_VIDEOS = [
 
   // ---------- START HERE ----------
   {
+    id: "-JBLHOuFE5E",
+    ep: "18",
+    runtime: "3:01",
+    block: "start",
+    title: "Yakkamon \u2014 Hunting",
+    blurb: "The official Hunting post in three minutes. Every wild Yakkamon has a place, a time and a price: spawns run on the in-game clock, your hunter roams a ground while the farm keeps working, and what it meets is affectionate, greedy or angry \u2014 each wanting something different before it comes home. Legendaries and Rares can turn up in ordinary grounds with no schedule, grounds deplete, and the map rotates every Season.",
+    related: { href: "article-hunting-explained.html", label: "Read the full hunting breakdown" },
+  },
+  {
     id: "hY5VxK3_Wo8",
     ep: "16",
     runtime: "1:58",
