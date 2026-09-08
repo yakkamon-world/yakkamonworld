@@ -336,6 +336,10 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .prereg-callout.success{background:#CFEFD6}
 .prereg-callout.warning{background:#FBE7A8}
 .prereg-callout.info{background:#CDE9F7}
+/* Financial-information note on every page that discusses $FLOWER deposits */
+.money-note{display:block; margin:28px 0 8px; padding:14px 18px; border:3px solid var(--ink); border-left-width:10px; background:#fff; box-shadow:5px 5px 0 var(--ink); font-size:.92rem; font-weight:600; line-height:1.5; min-width:0}
+.money-note strong{font-weight:900; letter-spacing:.02em}
+.money-note a{color:var(--ink); font-weight:800; white-space:nowrap}
 .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:16px 0 20px; border-radius:var(--radius); max-width:100%; min-width:0}
 .prereg-table{width:100%; border-collapse:separate; border-spacing:0; margin:0; font-size:.95rem; border:3px solid var(--ink); border-radius:var(--radius); overflow:hidden}
 @media(max-width:600px){

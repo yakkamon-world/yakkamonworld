@@ -410,6 +410,9 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
+- Every page that discusses putting $FLOWER in (tips, pre-registration §8, leaderboard, FAQ, and every article that explains or advises on deposits — the deposit guideline, the four deposit tips/guides, the deposits-open and deposits-explained posts, the referral-deposit rule change, the free mint guide and the leaderboard launch post) ends with a `.money-note` financial-information callout. Any new deposit-related page or article should carry the same block, copied verbatim.
+
+
 Hard-won, easy to re-break.
 
 **`overflow-x: clip`, not `hidden`.** `html,body{overflow-x:hidden}` turns
