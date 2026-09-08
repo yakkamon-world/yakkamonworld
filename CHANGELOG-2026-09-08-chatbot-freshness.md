@@ -47,11 +47,26 @@ both (the earlier batch today worked around it by summarising the page in `chatb
   normal path). The Ronin Wave summary section is left in place as a safety net; it can be deleted once
   a rebuild's log shows `kept as snapshot-only: pre-registration/free-mint/ronin-wave`.
 
-## Not changed (needs the worker repo)
-- `yakkamon-chat-worker` still caches the JSON for up to 10 minutes and fetches only its fixed 9 docs
-  pages. Planned: `POST /refresh` (drop caches; throttled), docs discovery from `llms.txt` + sub-pages
-  (then move those slugs into `DOCS_PAGES` here), and a priority rule that lets YakkamonWorld content
-  answer when the official docs are silent instead of "not confirmed".
+## Second upload, same day (workflow v2)
+The first upload landed as two commits 14 seconds apart (`bd148b7` content, `8ab3416` workflow). Run #16
+built on the first, and its `git push` was rejected because main had already moved to the second — the
+old "Commit if changed" step had no retry, so the run failed and nothing was committed. The second commit
+did not start a run at all because the workflow file was not in the `paths` filter.
+- Commit step now retries: on a rejected push it fetches main, rebuilds on the new head and pushes again
+  (three tries), then fails loudly.
+- `.github/workflows/chatbot-knowledge.yml` added to `paths`, so a workflow change triggers a run.
+
+## Worker (shipped separately as `yakkamon-chat-worker-freshness.zip`)
+- `POST /refresh` (rate-limited, 20 s gap) — the Action calls it after every deploy.
+- Official pages discovered from `llms.txt` + in-page `.md` links (sub-pages), `DOCS` kept as fallback;
+  `/status` now lists `docs.slugs`.
+- Site JSON re-checked every 3 minutes with `If-None-Match` (a 304 is free); no edge caching of it.
+- Cached answers keyed by the JSON's `built` stamp + a docs fingerprint — the six-hour answer cache can
+  no longer serve a pre-change answer (this affected the five "most asked" chip questions most).
+- Snapshot official chunks are replaced by URL (any page fetched live wins), so the `Source:` summary
+  in `chatbot-official-posts.md` is automatically superseded by the live page.
+- Rule 2b: when the official pages are silent, YakkamonWorld content answers (attributed) instead of
+  "not confirmed".
 
 ## Verify after pushing
 1. Actions tab → the run should end with `Deployed after ~N s.` and `worker /refresh → HTTP 200` (or 404
