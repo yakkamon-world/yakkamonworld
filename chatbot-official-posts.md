@@ -10,9 +10,11 @@
   Format: one post per "## " heading. Put the title, where it was posted and the
   date (or "early September 2026" if you only know roughly) in the heading line,
   then the post text exactly as written. Newest post at the top.
-  A docs.yakkamon.com page the chat worker does not fetch live (anything missing
-  from docs.yakkamon.com/llms.txt) can go here too: put "Source: <page url>" as the
-  first line under the heading and the bot cites that page instead of the X account.
+  A docs.yakkamon.com page the chat worker does not fetch live can go here too:
+  put "Source: <page url>" as the first line under the heading and the bot cites
+  that page instead of the X account. Since 8 Sep the builder discovers such pages
+  by itself (llms.txt + every sub-page linked from a docs page) and snapshots them
+  verbatim, so this is only needed for a page the builder cannot reach.
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 

@@ -32,6 +32,19 @@ const SITE = "https://yakkamonworld.com/";
 const OUT = path.join(ROOT, "chatbot-knowledge.json");
 const MAX_CHUNK = 1500;   // characters; long sections are split on paragraph breaks
 
+/*
+  Official docs pages. The list is DISCOVERED at build time:
+    1. https://docs.yakkamon.com/llms.txt  — GitBook's own index of top-level pages
+    2. every ".md" link found inside those pages — sub-pages that llms.txt does not
+       list (e.g. /pre-registration/free-mint/ronin-wave, published 8 Sep 2026)
+  DOCS_PAGES below is (a) the fallback if llms.txt cannot be fetched and (b) the
+  set of pages the chat worker fetches LIVE by itself. Those are tagged kind "docs"
+  (the worker swaps in its live copy); every other page discovered here is tagged
+  kind "post" so the worker keeps the snapshot next to its live docs — the same
+  path the "Source:" sections of chatbot-official-posts.md use. When the worker
+  learns to discover pages itself, add them to DOCS_PAGES.
+*/
+const DOCS_HOST = "https://docs.yakkamon.com/";
 const DOCS_PAGES = [
   ["about-yakkamon", "About Yakkamon"],
   ["team", "The Team"],
@@ -43,6 +56,8 @@ const DOCS_PAGES = [
   ["pre-registration/free-mint", "Free Mint"],
   ["content/yakkapedia", "Yakkapedia"],
 ];
+// Legal / press pages: true but useless for a visitor's question — skipped.
+const DOCS_SKIP = /(^|\/)(media-kit|terms[^/]*|privacy[^/]*|legal[^/]*)$/i;
 
 const chunks = [];
 let seq = 0;
@@ -190,31 +205,100 @@ try {
 function docsToText(md) {
   return clean(stripHtml(
     md.replace(/^>.*?\n/, "")                                   // GitBook's llms.txt banner line
-      .replace(/\n---\n# Agent Instructions[\s\S]*$/, "")     // GitBook's trailing agent notes
+      .replace(/\n-{3,}\s*\n\s*#\s*Agent Instructions[\s\S]*$/, "")   // GitBook's trailing agent notes (blank line after --- or not)
+      .replace(/\n#\s*Agent Instructions\s*\n[\s\S]*$/, "")
       .replace(/\{%\s*hint[^%]*%\}/g, "\n").replace(/\{%\s*endhint\s*%\}/g, "\n")
       .replace(/<figure>[\s\S]*?<\/figure>/g, "")
       .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")                 // links → text
       .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
   ));
 }
+/* Normalise any docs link (absolute, root-relative, or relative to `fromSlug`) to a slug like
+   "pre-registration/free-mint/ronin-wave"; null for anything off-site or not a page. */
+function docsSlug(href, fromSlug = "") {
+  if (!href) return null;
+  href = href.trim().replace(/[)>"']+$/, "");
+  if (/^(mailto:|tel:|javascript:)/i.test(href)) return null;
+  let p;
+  if (/^https?:\/\//i.test(href)) {
+    if (!href.toLowerCase().startsWith(DOCS_HOST)) return null;
+    p = href.slice(DOCS_HOST.length);
+  } else if (href.startsWith("/")) {
+    p = href.slice(1);
+  } else if (!href.startsWith("#")) {
+    const base = fromSlug.includes("/") ? fromSlug.slice(0, fromSlug.lastIndexOf("/") + 1) : "";
+    p = base + href;
+  } else return null;
+  p = p.split(/[?#]/)[0].replace(/\.md$/i, "").replace(/\/+$/, "");
+  if (!p || p === "llms.txt" || /\.(png|jpe?g|gif|webp|svg|pdf|csv|zip)$/i.test(p)) return null;
+  const segs = [];
+  for (const s of p.split("/")) { if (s === "..") segs.pop(); else if (s && s !== ".") segs.push(s); }
+  return segs.join("/") || null;
+}
+function docsTitle(md, fallback) {
+  const h = md.match(/^#\s+(.+)$/m);
+  return h ? h[1].replace(/[*_`]/g, "").trim() : fallback;
+}
+async function fetchDocs(slug) {
+  const r = await fetch(`${DOCS_HOST}${slug}.md`, { headers: { "user-agent": "YakkamonWorld-Portal/1.0" } });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.text();
+}
 if (typeof fetch === "function") {
-  for (const [slug, title] of DOCS_PAGES) {
-    const url = `https://docs.yakkamon.com/${slug}`;
+  const LIVE = new Map(DOCS_PAGES);            // slug → title of the pages the worker fetches live
+  const queue = [];                            // [slug, title, fromIndex]
+  const seen = new Set();
+  const enqueue = (slug, title, fromIndex) => {
+    if (!slug || seen.has(slug) || DOCS_SKIP.test(slug)) return;
+    seen.add(slug); queue.push([slug, title || slug, fromIndex]);
+  };
+  // 1. index pages from llms.txt (fallback: the static list)
+  try {
+    const idx = await (await fetch(`${DOCS_HOST}llms.txt`, { headers: { "user-agent": "YakkamonWorld-Portal/1.0" } })).text();
+    for (const m of idx.matchAll(/\[([^\]]*)\]\((https?:\/\/[^)\s]+|\/[^)\s]+)\)/g)) enqueue(docsSlug(m[2]), m[1].trim(), true);
+    if (!queue.length) throw new Error("no page links found");
+    console.log(`docs index: ${queue.length} pages from llms.txt`);
+  } catch (e) {
+    console.warn(`llms.txt unavailable (${e.message}) — using the built-in page list`);
+  }
+  for (const [slug, title] of DOCS_PAGES) enqueue(slug, title, true);   // never lose the known pages
+  // 2. fetch each page; any ".md" link inside it that is not yet known is a sub-page → fetch that too
+  let extra = 0;
+  const fetched = [];
+  for (let i = 0; i < queue.length && i < 60; i++) {
+    const [slug, queuedTitle, fromIndex] = queue[i];
+    const url = DOCS_HOST + slug;
     try {
-      const r = await fetch(url + ".md", { headers: { "user-agent": "YakkamonWorld-Portal/1.0" } });
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      const text = docsToText(await r.text());
+      const md = await fetchDocs(slug);
+      fetched.push(slug);
+      const title = LIVE.get(slug) || (fromIndex ? queuedTitle : docsTitle(md, queuedTitle));
+      // markdown links "](/x.md)" and HTML links 'href="/x.md"' (GitBook emits tables as HTML)
+      for (const m of md.matchAll(/(?:\]\(|href=")([^)"\s]+\.md(?:[#?][^)"\s]*)?)[)"]/g)) {
+        const s = docsSlug(m[1], slug);
+        if (s && !seen.has(s)) { enqueue(s, s.split("/").pop(), false); extra++; }
+      }
+      const text = docsToText(md);
       const parts = text.split(/\n(?=#{1,3} )/);
+      const kind = LIVE.has(slug) ? "docs" : "post";
       for (const part of parts) {
         const h = part.match(/^#{1,3}\s+(.*)$/m);
-        add(1, h && h[1].trim() !== title ? `Official docs: ${title} — ${h[1].trim()}` : `Official docs: ${title}`, url, part.replace(/^#{1,3}\s+/gm, ""), { kind: "docs" });
+        add(1, h && h[1].trim() !== title ? `Official docs: ${title} — ${h[1].trim()}` : `Official docs: ${title}`, url,
+            part.replace(/^#{1,3}\s+/gm, ""), { kind });
       }
     } catch (e) { console.warn(`docs snapshot skipped for ${slug}: ${e.message}`); }
   }
+  const kept = fetched.filter(s => !LIVE.has(s));
+  console.log(`docs snapshot: ${fetched.length} pages (${extra} sub-pages found via in-page links); kept as snapshot-only: ${kept.join(", ") || "none"}`);
 }
 
 /* ---------- write ---------- */
 const out = { built: new Date().toISOString(), site: SITE, counts: { official: 0, site: 0, streams: 0 }, chunks };
 for (const c of chunks) out.counts[c.t === 1 ? "official" : c.t === 2 ? "site" : "streams"]++;
+// Same content as last time → keep the old "built" stamp so the file is byte-identical and
+// the GitHub Action has nothing to commit (matters for the 6-hourly scheduled runs).
+try {
+  const prev = JSON.parse(fs.readFileSync(OUT, "utf8"));
+  if (prev && prev.built && JSON.stringify(prev.chunks) === JSON.stringify(chunks)) out.built = prev.built;
+} catch { /* no previous file, or unreadable — write a fresh one */ }
 fs.writeFileSync(OUT, JSON.stringify(out));
-console.log(`chatbot-knowledge.json: ${chunks.length} chunks (${out.counts.official} official, ${out.counts.site} site, ${out.counts.streams} streams), ${(fs.statSync(OUT).size / 1024).toFixed(0)} KB`);
+console.log(`chatbot-knowledge.json: ${chunks.length} chunks (${out.counts.official} official, ${out.counts.site} site, ${out.counts.streams} streams), ${(fs.statSync(OUT).size / 1024).toFixed(0)} KB, built ${out.built}`);

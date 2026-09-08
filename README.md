@@ -131,7 +131,12 @@ character `chatbot-bird.webp`). It talks to the `yakkamon-chat-worker`, which
 answers with Claude after searching three tiers **in this order**:
 
 1. **Official** — `docs.yakkamon.com`, fetched live by the worker (markdown
-   pages, cached one hour). Always wins on a conflict.
+   pages, cached one hour). Always wins on a conflict. The builder also
+   snapshots every docs page it can discover (the `llms.txt` index plus any
+   sub-page linked from a page, e.g. `free-mint/ronin-wave`) into
+   `chatbot-knowledge.json`, so an official page the worker does not fetch
+   itself still reaches the chat. `chatbot-official-posts.md` (the team's own X
+   posts, verbatim) sits in this tier too.
 2. **This site** — everything in `chatbot-knowledge.json`: `faq.js`,
    `gameplay.js`, `videos.js`, every article and hub page.
 3. **Dev streams** — `chatbot-digest.md`, the Cumulative Dev Stream digest
@@ -148,10 +153,25 @@ node build-chatbot-knowledge.mjs
 ```
 
 The GitHub Action in `.github/workflows/chatbot-knowledge.yml` runs that on
-every push to `main` and commits the result, so in normal use you never run it
-yourself. When a new dev-stream digest is published, replace
+every push to `main` (and every six hours, to catch new official docs pages),
+commits the result, waits until Cloudflare has deployed the commit, then pings
+the worker's `/refresh` so it reloads at once. In normal use you never run the
+builder yourself. When a new dev-stream digest is published, replace
 `chatbot-digest.md` with the new markdown and push — the Action does the rest.
-The worker picks up a new JSON within ten minutes; no worker redeploy needed.
+
+> **House rule — never put `[skip ci]` in a commit message.** Cloudflare's Git
+> integration skips the deploy of any commit whose message contains
+> `[skip ci]` / `[ci skip]`. The Action used to commit that way, so the rebuilt
+> JSON only went live with the *next* manual upload and the chat was always one
+> update behind (found 8 Sep 2026). The Action now commits with "(auto)"; GitHub
+> never re-runs a workflow from a push made with the workflow's own token, so
+> there is no loop to guard against.
+
+**How long until the chat knows?** Upload → Action (~1 min) → Cloudflare deploy
+(~1–2 min) → worker refresh (instant with `/refresh`; otherwise within its
+10-minute cache window). Check it with
+`https://yakkamon-chat-worker.yakkamonworld.workers.dev/status` — `knowledge.built`
+must match the `built` stamp at the top of the live `chatbot-knowledge.json`.
 
 **Free questions.** `FREE_PER_DAY` (default 3) questions a day per browser,
 then a follow-us card (X / YouTube) unlocks the chat for `UNLOCK_DAYS`. It is
@@ -353,6 +373,10 @@ quick-reference table names its source per row.
 
 **Game content and images are © Thought Farm**, used for reference and
 commentary. Every page footer says so and links to `about.html#usage`.
+
+**Never `[skip ci]` in a commit message.** Cloudflare skips deploying that
+commit (see *The chatbot → Keeping it current*). Applies to uploads through the
+GitHub web UI too — leave the default "Add files via upload".
 
 **No ads.** `privacy.html` and `about.html` both state this plainly. If that
 ever changes, both pages must be rewritten *first*.
