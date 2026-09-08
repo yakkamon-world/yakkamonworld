@@ -806,10 +806,10 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 }
 .fm-chars{position:absolute; inset:0; z-index:1; pointer-events:none}
 .fm-hero .fm-chars img{position:absolute; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}  /* widths below beat .prereg-ticket img{width:100%} */
-.fm-hero .fm-bat{top:16px; right:330px; width:92px; transform:rotate(-8deg)}
-.fm-hero .fm-moth{top:206px; left:186px; width:86px; animation:fm-hover 3.2s ease-in-out infinite}
-.fm-hero .fm-pony{top:232px; left:40px; width:120px}
-.fm-hero .fm-duck{top:258px; right:56px; width:108px}
+.fm-hero .fm-bat{top:22px; right:316px; width:120px; transform:rotate(-8deg)}
+.fm-hero .fm-moth{top:204px; left:196px; width:100px; animation:fm-hover 3.2s ease-in-out infinite}
+.fm-hero .fm-pony{top:226px; left:36px; width:132px}
+.fm-hero .fm-duck{top:256px; right:52px; width:112px}
 @keyframes fm-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .fm-top{display:grid; grid-template-columns:1fr auto; gap:18px; padding:26px 28px 0; align-items:start; position:relative; z-index:2}
 .fm-eyebrow{margin:0; font-weight:900; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--yellow)}

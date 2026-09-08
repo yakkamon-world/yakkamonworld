@@ -14,9 +14,10 @@ main `0229c62`, which matched the uploaded zip after the roster-23 batch landed.
   OPEN · REVEAL IN" → "MINT WEEK IS OVER · REVEAL IN" (from 19 Sep) → "REVEALED".
   Tiles get `.next` (yellow, NEXT tag), `.open` (green OPEN NOW), `.done` (dimmed,
   CLOSED). Pauses on hidden tabs. Verified at six simulated moments.
-- `fm-bat.webp`, `fm-moth.webp`, `fm-pony.webp`, `fm-duck.webp`, `fm-egg.webp` —
-  transparent sprites cut out of the old banner, 2× display size. Swap in place when
-  new AI Studio sprites are ready (keep names and proportions).
+- `fm-bat.webp`, `fm-moth.webp`, `fm-pony.webp`, `fm-duck.webp` — transparent sprites
+  generated in Google AI Studio (Nano Banana 2, magenta key, style-matched to the old
+  banner) and keyed out; `fm-egg.webp` — cut from the original 2K banner render. All at
+  2× display size; swap in place, keeping names and proportions.
 - `CHANGELOG-2026-09-08-free-mint-hero.md` — this file.
 
 ## Changed files
