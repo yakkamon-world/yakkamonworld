@@ -182,6 +182,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ videos.html                 Video index
 │  ├─ faq.html                    FAQ
 │  ├─ contact.html                Contact form
+│  ├─ 404.html                    Not-found page (served by `not_found_handling` in wrangler.jsonc; noindex, not in sitemap/search)
 │  ├─ about.html                  Who we are, how we work, content usage
 │  ├─ privacy.html                Privacy + analytics consent controls
 │  └─ article-*.html              One static page per news post (35)
