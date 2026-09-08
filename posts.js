@@ -10,15 +10,15 @@ const YAKKAMON_POSTS = [
     category: "analysis",
     title: "Wave 5 Probably Doesn\u2019t Exist: The Yakkamon Free Mint by the Numbers",
     date: "Sep 8, 2026",
-    excerpt: "Live numbers on the free mint \u2014 133,408 registered, 5,219 depositors, 68 Legendaries in 10,000. Why Wave 5 probably doesn\u2019t exist, a 73% chance nobody mints a Storm on day one, what $1.25 buys before the 10 September snapshot, and what a hidden egg is worth.",
+    excerpt: "Live numbers on the free mint \u2014 133,408 registered, 5,219 depositors, 68 Legendaries in 10,000. Why Wave 5 probably doesn\u2019t exist, a 73% chance nobody mints a Storm on day one, what $1.25 buys before the September 10 snapshot, and what a hidden egg is worth.",
     body: [
-      "Six days before the first wave, almost nobody has done the arithmetic on the free mint. I did, with live data: <strong>133,408 trainers</strong> registered, <strong>5,219 wallets</strong> with a $FLOWER deposit, $FLOWER at $0.25 \u2014 all read at 18:40 UTC on 8 September \u2014 plus the official pool of 68 Legendaries, 50 Rares and 9,882 Uncommons.",
+      "Six days before the first wave, almost nobody has done the arithmetic on the free mint. I did, with live data: <strong>133,408 trainers</strong> registered, <strong>5,219 wallets</strong> with a $FLOWER deposit, $FLOWER at $0.25 \u2014 all read at 18:40 UTC on September 8 \u2014 plus the official pool of 68 Legendaries, 50 Rares and 9,882 Uncommons.",
       "## The odds",
       "One mint is a <strong>1-in-147</strong> shot at a Legendary, 1-in-85 at Rare or better, 1-in-3,333 at a Storm, and a 98.8% chance of an Uncommon. Stacking waves helps less than people assume: the best-placed wallet in the game, with five tickets, has a 3.35% Legendary chance. Rank buys certainty, not odds.",
       "## Wave 5 probably doesn\u2019t exist",
       "The headline wave sizes add up to 11,000 for 10,000 NFTs. If Waves 1\u20133 sell out, Wave 4 opens with 4,000; if Wave 4 sells out, Wave 5 opens with nothing. Whether it does comes down to turnout: Waves 2 and 4 both need a deposit, only 5,219 wallets have one, and Wave 4 sells out only if 77\u201396% of them come back a second day. Wave 4 is the swing wave.",
       "## What $1.25 buys",
-      "Five $FLOWER is $1.25 today and it is the entry condition for both deposit waves \u2014 withdrawable, not a fee, but the snapshot is 10 September. Meanwhile 83,408 registered trainers (62.5%) sit below rank 50,000 and have no wave at all unless they are on the Ronin gamers list.",
+      "Five $FLOWER is $1.25 today and it is the entry condition for both deposit waves \u2014 withdrawable, not a fee, but the snapshot is September 10. Meanwhile 83,408 registered trainers (62.5%) sit below rank 50,000 and have no wave at all unless they are on the Ronin gamers list.",
       "## Where the Legendaries land",
       "If rarity is drawn at the reveal, there is a 73% chance nobody mints a Storm on day one, a 49% chance one of the three goes to a Ronin gamer, and the leftover Wave 4 is statistically the richest wave. The mint holds 2.5% of all Genesis Legendaries; the airdrop hands out 73%. The article closes with what a hidden egg is worth in Uncommons, a per-rank action list, and five questions for the team."
     ]
@@ -28,15 +28,15 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "The Ronin Wave: Who Gets Yakkamon\u2019s 2,000 Gamer Mints, and How to Check If You\u2019re One of Them",
     date: "Sep 8, 2026",
-    excerpt: "A new official page explains Wave 3 of the free mint: 2,000 hidden Genesis NFTs on 16 September for active Ronin gamers, picked by a 90-day on-chain snapshot of Axie Infinity, Craft World, Pixels, Ronkeverse and Moku \u2014 42,730 candidate wallets, a Sunflower Land list still to come, and lists that finalise on 10 September. How the score works, how to check your address, the arithmetic behind the cut, and what to do if you are not on it.",
+    excerpt: "A new official page explains Wave 3 of the free mint: 2,000 hidden Genesis NFTs on September 16 for active Ronin gamers, picked by a 90-day on-chain snapshot of Axie Infinity, Craft World, Pixels, Ronkeverse and Moku \u2014 42,730 candidate wallets, a Sunflower Land list still to come, and lists that finalize on September 10. How the score works, how to check your address, the arithmetic behind the cut, and what to do if you are not on it.",
     body: [
-      "On 8 September the Yakkamon team published the missing page of the free mint: what <strong>Wave 3 \u2014 the Ronin Wave</strong> is. It is the one wave that ignores the Yakkamon leaderboard. No rank, no snapshot position and no $FLOWER deposit are needed; it is decided by what your Ronin wallet did in other games over the last 90 days.",
+      "On September 8 the Yakkamon team published the missing page of the free mint: what <strong>Wave 3 \u2014 the Ronin Wave</strong> is. It is the one wave that ignores the Yakkamon leaderboard. No rank, no snapshot position and no $FLOWER deposit are needed; it is decided by what your Ronin wallet did in other games over the last 90 days.",
       "## What the page says",
-      "A <strong>90-day on-chain snapshot ending 8 September</strong> across five Ronin games \u2014 Axie Infinity (20,040 wallets), Craft World (14,422), Pixels (4,247), Ronkeverse (3,658) and Moku (2,354) \u2014 gives <strong>42,730 unique candidate wallets</strong> for <strong>2,000 spots</strong>. A Sunflower Land list is still being pulled and a separate whitelist comes from the Ronin team. Active days matter most, signals are capped per day, cross-game players sort to the top, bots and custodial wallets are pushed down. Lists are candidates, not the whitelist, and they finalise on <strong>10 September</strong>.",
+      "A <strong>90-day on-chain snapshot ending September 8</strong> across five Ronin games \u2014 Axie Infinity (20,040 wallets), Craft World (14,422), Pixels (4,247), Ronkeverse (3,658) and Moku (2,354) \u2014 gives <strong>42,730 unique candidate wallets</strong> for <strong>2,000 spots</strong>. A Sunflower Land list is still being pulled and a separate whitelist comes from the Ronin team. Active days matter most, signals are capped per day, cross-game players sort to the top, bots and custodial wallets are pushed down. Lists are candidates, not the whitelist, and they finalize on <strong>September 10</strong>.",
       "## What to do",
-      "Search the candidate lists for your Ronin address in lowercase 0x form (not ronin:), check the right wallet if you play Craft World, and check again before the 10th. On the day, mint from the wallet that appears on the list \u2014 one per wallet per wave, on top of any trainer waves you qualify for. Not on any list? The trainer route is still open: verify and deposit 5 $FLOWER before 10 September for Waves 2 and 4.",
+      "Search the candidate lists for your Ronin address in lowercase 0x form (not ronin:), check the right wallet if you play Craft World, and check again before the 10th. On the day, mint from the wallet that appears on the list \u2014 one per wallet per wave, on top of any trainer waves you qualify for. Not on any list? The trainer route is still open: verify and deposit 5 $FLOWER before September 10 for Waves 2 and 4.",
       "## The catch",
-      "As of 14:00 UTC on 8 September the list links point to a GitHub repository that returns \u201cpage not found\u201d. The article covers the overlap arithmetic (why multi-game players may fill most of the 2,000), the two readings of \u201c2,000 spots\u201d, and five questions for the team."
+      "As of 14:00 UTC on September 8 the list links point to a GitHub repository that returns \u201cpage not found\u201d. The article covers the overlap arithmetic (why multi-game players may fill most of the 2,000), the two readings of \u201c2,000 spots\u201d, and five questions for the team."
     ]
   },
   {
@@ -60,13 +60,13 @@ const YAKKAMON_POSTS = [
     category: "tips",
     title: "Tip: Deposit on Ronin If You Haven\u2019t Yet",
     date: "Sep 2, 2026",
-    excerpt: "Points are identical on Base and Ronin, but the 14 September free mint is Ronin-only and gas is in RON. Deposit on Ronin and the wallet, the swap and the gas are all in place before mint day \u2014 and Base depositors lose nothing.",
+    excerpt: "Points are identical on Base and Ronin, but the September 14 free mint is Ronin-only and gas is in RON. Deposit on Ronin and the wallet, the swap and the gas are all in place before mint day \u2014 and Base depositors lose nothing.",
     body: [
-      "$FLOWER is the same token at the same contract address on Base and Ronin, and a deposit earns identical points on either chain. Until now the choice didn\u2019t matter. It does now: the free mint on 14 September happens <strong>only on Ronin</strong>, and gas is paid in <strong>RON</strong>.",
+      "$FLOWER is the same token at the same contract address on Base and Ronin, and a deposit earns identical points on either chain. Until now the choice didn\u2019t matter. It does now: the free mint on September 14 happens <strong>only on Ronin</strong>, and gas is paid in <strong>RON</strong>.",
       "## Why Ronin, if the points are the same",
       "A Base wallet cannot mint. Whoever deposits on Ronin has already installed the Ronin Wallet, already swapped inside it and already holds RON \u2014 the three things a Base depositor has to set up separately in mint week. The 5 $FLOWER condition for Waves 2 and 4 is met on either chain; only the minting wallet has to be Ronin.",
       "## How to do it",
-      "Install the official Ronin Wallet, fund it with a little RON, swap for $FLOWER inside it (check the contract address first), send it to your own deposit address in one transfer, then <strong>link that wallet to your Yakkamon account before the 10 September snapshot</strong>. Leave the RON in it \u2014 that is your mint-day gas.",
+      "Install the official Ronin Wallet, fund it with a little RON, swap for $FLOWER inside it (check the contract address first), send it to your own deposit address in one transfer, then <strong>link that wallet to your Yakkamon account before the September 10 snapshot</strong>. Leave the RON in it \u2014 that is your mint-day gas.",
       "## Already on Base?",
       "Nothing to undo and nothing to bridge. Your points and the 5 $FLOWER condition are safe. You just need a Ronin wallet as well: set one up, fund it, link it, mint from it. Full table and steps on the Tips page."
     ]
@@ -92,11 +92,11 @@ const YAKKAMON_POSTS = [
     category: "guide",
     title: "The Ultimate Ronin Free Mint Guide: How to Mint Your Hidden Yakkamon",
     date: "Sep 2, 2026",
-    excerpt: "10,000 hidden Yakkamon, free on the Ronin Launchpad from 14 September in five rank-gated waves. Which waves your rank unlocks, the four things to have done before the 10 September snapshot, mint day step by step, what is hidden inside \u2014 and the mistakes that will cost you a mint.",
+    excerpt: "10,000 hidden Yakkamon, free on the Ronin Launchpad from September 14 in five rank-gated waves. Which waves your rank unlocks, the four things to have done before the September 10 snapshot, mint day step by step, what is hidden inside \u2014 and the mistakes that will cost you a mint.",
     body: [
-      "On 14 September, 10,000 hidden Genesis Yakkamon go up for free on the Ronin Launchpad. You pay gas and nothing else, mint blind, and everything is revealed on 14 October. Hidden in the pool are 68 Legendaries. This is the one page to read first.",
+      "On September 14, 10,000 hidden Genesis Yakkamon go up for free on the Ronin Launchpad. You pay gas and nothing else, mint blind, and everything is revealed on October 14. Hidden in the pool are 68 Legendaries. This is the one page to read first.",
       "## Three dates",
-      "<strong>10 September</strong>: the leaderboard snapshot that builds the whitelists. <strong>14\u201318 September</strong>: the mint, one wave a day. <strong>14 October</strong>: the reveal. Your rank on the 10th decides your waves; nothing after that changes it.",
+      "<strong>September 10</strong>: the leaderboard snapshot that builds the whitelists. <strong>14\u201318 September</strong>: the mint, one wave a day. <strong>October 14</strong>: the reveal. Your rank on the 10th decides your waves; nothing after that changes it.",
       "## Which waves are yours",
       "Ranks 1\u20131,000: Waves 1, 2, 4 and 5 \u2014 Wave 1 guaranteed, at your own pace. Ranks 1,001\u201310,000: Waves 2, 4 and 5. Ranks 10,001\u201320,000: Waves 4 and 5. Ranks 20,001\u201350,000: Wave 5 only, at 00:00 UTC on the 18th. Waves 2 and 4 need 5 $FLOWER deposited \u2014 fully withdrawable, not a fee. One NFT per wave per account, and every wave past the first is fastest-click.",
       "## Before the 10th",
@@ -104,30 +104,30 @@ const YAKKAMON_POSTS = [
       "## Mint day",
       "Buy RON for gas days ahead. Open marketplace.roninchain.com/launchpads yourself, connect the linked wallet, be there before your wave opens, mint, approve, and come back for every wave you qualify for. It is free, so any page charging a price is a scam.",
       "## What is inside",
-      "3 Storm, 5 Echo, 10 Ghost, 50 Bloom, 50 Rare and 9,882 Uncommon \u2014 about one mint in 147 is a Legendary. Hidden NFTs are tradable before the reveal, deposit into the game at early access, and this is the ongoing Yakkamon collection. The 10 September snapshot does not lock the trainer airdrop, which keeps running to one week before early access."
+      "3 Storm, 5 Echo, 10 Ghost, 50 Bloom, 50 Rare and 9,882 Uncommon \u2014 about one mint in 147 is a Legendary. Hidden NFTs are tradable before the reveal, deposit into the game at early access, and this is the ongoing Yakkamon collection. The September 10 snapshot does not lock the trainer airdrop, which keeps running to one week before early access."
     ]
   },
   {
     slug: "free-mint-stream-graded",
     category: "devstream",
-    title: "We Graded Every Decision From Yakkamon\u2019s Free-Mint Dev Stream \u2014 Sixteen Grades, and a 10 September Deadline",
+    title: "We Graded Every Decision From Yakkamon\u2019s Free-Mint Dev Stream \u2014 Sixteen Grades, and a September 10 Deadline",
     date: "Sep 1, 2026",
-    excerpt: "The Ronin free mint is 14 September and the snapshot is 10 September. Sixteen decisions graded A to F: a guaranteed mint for the top 1,000, a click race for everyone else, a 1,500-mint reserve with no published criteria, legendary auras that double production \u2014 and the two-track economy that earns our A.",
+    excerpt: "The Ronin free mint is September 14 and the snapshot is September 10. Sixteen decisions graded A to F: a guaranteed mint for the top 1,000, a click race for everyone else, a 1,500-mint reserve with no published criteria, legendary auras that double production \u2014 and the two-track economy that earns our A.",
     body: [
       "The free mint finally has a date, a structure and a deadline \u2014 and following <a href=\"article-dev-stream-graded.html\">our grading of the first dev stream</a>, we graded all sixteen decisions from this one. Nothing scored an F. Nothing beat the pattern either: game design earns A\u2019s, distribution keeps importing web3\u2019s bad habits.",
       "## The dates",
-      "<strong>10 September</strong>: leaderboard snapshot \u2014 the rank you hold that day builds the waves. <strong>14 September</strong>: free mint on the Ronin Launchpad, hidden Yakkamon, gas only. <strong>14 October</strong>: the reveal. Minted Yakkamon are NFTs and tradable the whole time, and this collection is THE Yakkamon collection every future release joins.",
+      "<strong>September 10</strong>: leaderboard snapshot \u2014 the rank you hold that day builds the waves. <strong>September 14</strong>: free mint on the Ronin Launchpad, hidden Yakkamon, gas only. <strong>October 14</strong>: the reveal. Minted Yakkamon are NFTs and tradable the whole time, and this collection is THE Yakkamon collection every future release joins.",
       "## The waves",
       "Top 1,000 trainers: a guaranteed mint at your own pace \u2014 the best community decision since the referral fix (A). Top 10,000: a race for 3,000 supply, with a withdrawable five-flower minimum deposit as bot protection (B+). A \u201cRonin wave\u201d hands 2,000 mints to players from other Ronin games for exposure (B). Then ranks 1\u201320,000 and 1\u201350,000 chase whatever remains. Hidden inside: 3 Storm, 5 Echo, 10 Ghost and 50 Bloom \u2014 68 legendary-tier pulls in 10,000.",
       "## Our lowest grade: the click race (C+)",
       "Every wave past the first is fastest-click-wins \u2014 the team said so plainly. Wave 2 manufactures at least 7,000 disappointed eligible trainers, sorted by time zone and latency. A raffle among opted-in eligible wallets inside a 24-hour window keeps the scarcity and deletes the race. And the 1,500-mint manual reserve (B\u2212) \u2014 15% of supply \u2014 still has no published criteria.",
       "## The snapshot contradiction",
-      "Stream one told us the leaderboard would hide near deadlines to stop sniping. Instead: a hard 10 September deadline announced with exact ranks fully visible, during a 2.6\u00d7-falling-to-2.4\u00d7 deposit week (B). If you sit near rank 1,000 or 10,000, your rank today is not your rank on the 10th \u2014 move early, in one large transfer.",
+      "Stream one told us the leaderboard would hide near deadlines to stop sniping. Instead: a hard September 10 deadline announced with exact ranks fully visible, during a 2.6\u00d7-falling-to-2.4\u00d7 deposit week (B). If you sit near rank 1,000 or 10,000, your rank today is not your rank on the 10th \u2014 move early, in one large transfer.",
       "## The game half keeps earning A\u2019s",
       "The two-track economy is the decision of the stream (A): an infinite, untradable free-to-play layer, with tradable production gated behind limited coin faucets \u2014 free players get a real game that cannot crush the market. No wearable gear, again, under direct questioning (A). Logging off pauses the game rather than punishing you (A). Breeding caps scale with rarity, so supply grows where assets are cheap and freezes where scarcity carries value (A\u2212). Legendary utilities are economic auras \u2014 storm-charged doubles work speed in range (A\u2212). Combat gets real player input on a swappable architecture (A\u2212), rare/uncommon utilities are random-rolled (B+), and evolutions wait past launch for an honest supply-dynamics reason (B+).",
       "## Before the 10th",
       "Check your rank against the 1,000 and 10,000 lines, move early if you\u2019re near one, and get mint-ready: Ronin wallet, RON for gas, five-flower minimum deposited, online when your wave opens. The full sixteen grades, the wave table and our questions for the next stream are in the article.",
-      "<strong>Update, 8 September:</strong> the Ronin wave criteria asked for in grade 5 are now published \u2014 the team built the list itself from a 90-day on-chain snapshot of five Ronin games. <a href=\"article-ronin-wave.html\">The Ronin Wave, explained \u2192</a>"
+      "<strong>Update, September 8:</strong> the Ronin wave criteria asked for in grade 5 are now published \u2014 the team built the list itself from a 90-day on-chain snapshot of five Ronin games. <a href=\"article-ronin-wave.html\">The Ronin Wave, explained \u2192</a>"
     ]
   },
   {
@@ -155,16 +155,16 @@ const YAKKAMON_POSTS = [
     category: "devstream",
     title: "Third Dev Stream: Combat Finally Has Rules, Farms Now Wear Out, and Rarity Doesn\u2019t Mean What You Thought",
     date: "Aug 21, 2026",
-    excerpt: "Yakkamon is a lane-based 3v3 auto-battler. Plots degrade and need refertilising. Identical boosts don\u2019t stack. Rarity is fixed at species level and a good common can out-stat a rare. Our gameplay section is rebuilt around it \u2014 22 systems, new poster.",
+    excerpt: "Yakkamon is a lane-based 3v3 auto-battler. Plots degrade and need refertilizing. Identical boosts don\u2019t stack. Rarity is fixed at species level and a good common can out-stat a rare. Our gameplay section is rebuilt around it \u2014 22 systems, new poster.",
     body: [
       "The third dev stream ran an hour with Adam, Craig and Bryn \u2014 Spencer was off sick, so his work got narrated rather than demoed. It was the most mechanically dense hour the team has done, and unlike the last two it was almost entirely about <em>the game</em> rather than the pre-registration race.",
       "Four things changed how you should plan a roster. Our <a href=\"gameplay.html\">Gameplay section</a> has gone from 14 systems to 22, and the <a href=\"gameplay-poster-full.png\">field guide poster</a> has been redrawn.",
       "## 1. Combat is a lane-based 3v3 auto-battler",
       "Until this week, \u201cbasic combat\u201d was a bullet point. Now it has rules. Monsters hold <strong>assigned lanes in a 3v3 formation</strong>, you set positions <em>before</em> the fight, and you cannot move them mid-battle unless a skill does it for you. Skills fire in a <strong>fixed, visible order</strong>. Battles run on an animation timer you can speed up but probably not skip.",
-      "The interesting tension Bryn named is <strong>type advantage versus skill-loop advantage</strong>: you can hold a favourable elemental matchup and still lose because their shield lands before your one big hit. Target pacing is <strong>three to five rounds</strong>, under a minute \u2014 but with deliberate variance, such that the \u201caverage\u201d fight is meant to be <em>under 40%</em> of all fights.",
-      "The part that matters most for planning: <strong>respeccing is deliberately expensive.</strong> The intended route is to find a monster carrying the skill you want and extract it onto another. Buildcraft is supposed to come out of <a href=\"gameplay.html?system=breeding-genetics\">breeding</a>, not out of swapping loadouts before every fight. This is explicitly <em>not</em> a game where you re-optimise per encounter.",
+      "The interesting tension Bryn named is <strong>type advantage versus skill-loop advantage</strong>: you can hold a favorable elemental matchup and still lose because their shield lands before your one big hit. Target pacing is <strong>three to five rounds</strong>, under a minute \u2014 but with deliberate variance, such that the \u201caverage\u201d fight is meant to be <em>under 40%</em> of all fights.",
+      "The part that matters most for planning: <strong>respeccing is deliberately expensive.</strong> The intended route is to find a monster carrying the skill you want and extract it onto another. Buildcraft is supposed to come out of <a href=\"gameplay.html?system=breeding-genetics\">breeding</a>, not out of swapping loadouts before every fight. This is explicitly <em>not</em> a game where you re-optimize per encounter.",
       "## 2. Your farm now wears out",
-      "The single most consequential mechanic revealed, and it arrived almost in passing from a job-card screenshot. <strong>Farm plots degrade as you use them.</strong> The example on screen read <strong>degraded 1.6\u00d7</strong> \u2014 that plot farms slower until you refertilise it, and fertiliser costs resources.",
+      "The single most consequential mechanic revealed, and it arrived almost in passing from a job-card screenshot. <strong>Farm plots degrade as you use them.</strong> The example on screen read <strong>degraded 1.6\u00d7</strong> \u2014 that plot farms slower until you refertilize it, and fertilizer costs resources.",
       "Read that against the <a href=\"gameplay.html?system=storage-bins\">storage bin cap</a> and a long absence now costs you twice: you stop banking output at MAX, <em>and</em> your soil quality decays so that what does run, runs worse. Bryn was clear the intent isn\u2019t to punish going wide \u2014 but an unattended Yakkamon farm decays rather than simply pausing, which is a real departure from Sunflower Land.",
       "There\u2019s a second half to it. Growing tiles come in <strong>groups of three</strong>, and <strong>upkeep scales more slowly than production does</strong>. Filling out a group is strictly better value per unit of upkeep than spreading thin \u2014 a deliberate push toward investing deep rather than wide.",
       "## 3. Identical boosts do not stack",
@@ -175,7 +175,7 @@ const YAKKAMON_POSTS = [
       "Second, and more surprising: <strong>the best commons can beat middling rares and roughly match a low-end legendary</strong> on raw stat outlay. What rarity actually buys is a higher ceiling as the monster levels, scarcer and higher-impact utility, and traits no other tier can access. Some commons carry unique traits you will need and cannot get anywhere else.",
       "That should temper how the airdrop bands get read. A <a href=\"gameplay.html?system=genesis-legendaries\">Genesis Legendary</a> is a ceiling and a set of exclusive tools, not an automatic win \u2014 and utilities still don\u2019t land until September.",
       "## What else moved",
-      "<strong>Gyms get full customisation; land probably doesn\u2019t.</strong> Land layout is unlikely to be player-controlled at launch, but you\u2019ll decorate a core gym that visiting trainers see when they come to battle you. Decoration becomes a social display rather than a private hobby.",
+      "<strong>Gyms get full customization; land probably doesn\u2019t.</strong> Land layout is unlikely to be player-controlled at launch, but you\u2019ll decorate a core gym that visiting trainers see when they come to battle you. Decoration becomes a social display rather than a private hobby.",
       "<strong>Evolutions are per-monster and deliberately hidden.</strong> Triggers vary by species \u2014 a level, an item, some other condition \u2014 and many will be undocumented by design. The game will hint that something is required without saying what. Expect this to be the first real community research project.",
       "<strong>Matchmaking is confirmed, with an anti-bot design.</strong> MMR-based, with <em>no meaningful rewards below a cutoff</em> \u2014 the band where weak human players sit, which makes the low end worthless to unsophisticated bots. Better bots get flagged through event tracking.",
       "<strong>The meta is expected to move, and the team isn\u2019t going to stop it.</strong> Early on, gathering and hunting specialists are the valuable monsters because throughput funds everything else. Once the arena and tournaments establish, demand should shift toward battle-stat monsters. They know, and they\u2019re letting community demand set the pace \u2014 which leaves a genuine window for anyone reading the market early.",
@@ -209,7 +209,7 @@ const YAKKAMON_POSTS = [
       "## Shinies, and the burn nobody can check",
       "Every monster carries rolled traits, and <strong>collectible shinies</strong> are confirmed for the first time \u2014 a rarity axis running crosswise to the Legendary/rare ladder, which means a common can outprice a rare. Whether that scarcity holds depends on breeding rules nobody has published. The in-game market runs on $FLOWER with a percentage fee described as a soft burn, either destroyed or recycled into rewards \u2014 two very different mechanisms with no split given. The fee rate, the burn share and the emission rate are all unpublished, so the deflationary claim is not false so much as <strong>currently unfalsifiable</strong>. Treat it as stated intent, not as a fact about the token.",
       "## What to do about it",
-      "Get a Ronin wallet ready before the mid-September mint even if you deposited on Base; don't budget around flipping your airdrop monster; plan a week-one catching campaign rather than a shopping trip; and don't pay a premium for shinies until breeding is explained. None of it changes the deposit maths \u2014 the multiplier still steps down 0.2\u00d7 a week and the board still locks a week before early access."
+      "Get a Ronin wallet ready before the mid-September mint even if you deposited on Base; don't budget around flipping your airdrop monster; plan a week-one catching campaign rather than a shopping trip; and don't pay a premium for shinies until breeding is explained. None of it changes the deposit math \u2014 the multiplier still steps down 0.2\u00d7 a week and the board still locks a week before early access."
     ]
   },
   {
@@ -229,7 +229,7 @@ const YAKKAMON_POSTS = [
       "## What the board does not count",
       "<strong>Nurture streaks and referral points do not exist on any blockchain</strong>, so nobody outside the team can see them. Every score here is a <em>floor</em>: real totals are higher and the official ranking will differ. A daily nurturer with a few referrals may be carrying a thousand-odd points we cannot see \u2014 enough to clear a great many small depositors, nowhere near enough to matter at the top, where single addresses hold six figures. Good picture of the top of the race, rough picture of the middle, poor one of the tail.",
       "## The clock behind it",
-      "The multiplier steps down 0.2\u00d7 a week to a 1.0\u00d7 floor from 26 October (week 3 held at 2.8\u00d7 after the week-2 deposit pause), windows turn at <strong>02:00 UTC</strong> rather than midnight, and the final window closes at <strong>01:59 UTC on 16 November</strong>. Every line on the page only moves upwards from here, because everyone else is still depositing \u2014 which is why the planner asks how much headroom you want rather than aiming at today's number."
+      "The multiplier steps down 0.2\u00d7 a week to a 1.0\u00d7 floor from October 26 (week 3 held at 2.8\u00d7 after the week-2 deposit pause), windows turn at <strong>02:00 UTC</strong> rather than midnight, and the final window closes at <strong>01:59 UTC on November 16</strong>. Every line on the page only moves upwards from here, because everyone else is still depositing \u2014 which is why the planner asks how much headroom you want rather than aiming at today's number."
     ]
   },
   {
@@ -260,7 +260,7 @@ const YAKKAMON_POSTS = [
     title: "The Race Ends in November \u2014 Here's the Game That Starts the Next Morning",
     date: "Aug 18, 2026",
     excerpt: "Your rank decides your monster and your entry date, then stops mattering. An opening-game plan for early access: why breadth beats depth, why your storage bin is your real ceiling, and why your wave is a market position rather than a head start.",
-    body: ["<em>Update, 2 September:</em> the free-mint stream retires the “market with no sellers” detail — hidden free-mint NFTs are tradable on Ronin from 14 September, and the in-game marketplace opens at Chapter 0, a month after early access. The broader wave-as-market-position point survives; the seven-day monopoly does not.",
+    body: ["<em>Update, September 2:</em> the free-mint stream retires the “market with no sellers” detail — hidden free-mint NFTs are tradable on Ronin from September 14, and the in-game marketplace opens at Chapter 0, a month after early access. The broader wave-as-market-position point survives; the seven-day monopoly does not.",
       "Every serious piece written about Yakkamon so far \u2014 ours very much included \u2014 has been about the same eleven weeks. But the race does end. The board locks, the airdrop lands three days later, the doors open four days after that, and a completely different game begins that almost nobody has planned for.",
       "## What your rank actually bought",
       "Exactly three things: a monster if you land top 5,000, a trainer number that is pure cosmetics, and an entry date. It buys no resources, no land, no gear, no currency. A rank-800 trainer and a rank-15,000 trainer both start with an empty base and the same tutorial.",
@@ -281,20 +281,20 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
     date: "Aug 17, 2026",
-    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated as the sheet grew, twenty-three as of 8 Sep. Portraits only \u2014 no names, no types, no rarities.",
+    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated as the sheet grew, twenty-three as of Sep 8. Portraits only \u2014 no names, no types, no rarities.",
     body: [
-      "<em>Update, 8 September:</em> the sheet has grown to <strong>twenty-three</strong> \u2014 a green, snail-like creature with two pink flowers on its stalks and a leaf-shaped shell joins the fourth row, and the whole grid has been reordered, with one slot still empty. Still no names, no types, no rarities; the reshuffle is one more reason not to read anything into grid position.",
-      "<em>Update, 31 August:</em> the sheet has grown to <strong>twenty-two</strong> \u2014 the fourth row gains a <strong>pastel moth</strong> with patterned wings, with two slots still empty. The other twenty-one are unchanged and in the same order; still no names, no types, no rarities.",
-      "<em>Update, 25 August:</em> a newer official sheet starts a fourth row with <strong>three new creatures</strong> \u2014 a pink owl, a blossom-pink creature carrying a small bowl, and a pale hooded creature \u2014 and a follow-up version corrects one of the original eighteen: the badger's slot now holds an upright purple-and-cream creature with a red nose. Twenty-one shown in total, roughly two-fifths of the expected 50\u201360; still no names, no types, no rarities. The original piece follows as written.",
+      "<em>Update, September 8:</em> the sheet has grown to <strong>twenty-three</strong> \u2014 a green, snail-like creature with two pink flowers on its stalks and a leaf-shaped shell joins the fourth row, and the whole grid has been reordered, with one slot still empty. Still no names, no types, no rarities; the reshuffle is one more reason not to read anything into grid position.",
+      "<em>Update, August 31:</em> the sheet has grown to <strong>twenty-two</strong> \u2014 the fourth row gains a <strong>pastel moth</strong> with patterned wings, with two slots still empty. The other twenty-one are unchanged and in the same order; still no names, no types, no rarities.",
+      "<em>Update, August 25:</em> a newer official sheet starts a fourth row with <strong>three new creatures</strong> \u2014 a pink owl, a blossom-pink creature carrying a small bowl, and a pale hooded creature \u2014 and a follow-up version corrects one of the original eighteen: the badger's slot now holds an upright purple-and-cream creature with a red nose. Twenty-one shown in total, roughly two-fifths of the expected 50\u201360; still no names, no types, no rarities. The original piece follows as written.",
       "An official roster sheet has surfaced showing <strong>eighteen Yakkamon</strong> side by side \u2014 the first proper look at the creatures themselves rather than the systems around them.",
       "## The one number that gives it context",
       "The team has said to expect roughly <strong>50 to 60 Yakkamon at launch</strong>. Against that, eighteen is about <strong>a third of the early access roster</strong> \u2014 enough to read the art direction, nowhere near enough to plan around. Roughly two in every three creatures you'll meet are still unseen.",
       "## What's actually on the sheet",
-      "Portraits, and nothing else: <strong>no names, no types, no rarities, no stats</strong>. The line-up leans on real animals given a chunky, expressive treatment \u2014 bears, foxes, pandas, badgers, ducks, frogs, deer, horses, a boar \u2014 plus two clear dragons and at least one plant-based creature. If there's a design thesis, it's recognisable rather than abstract: animals first, monsters second.",
+      "Portraits, and nothing else: <strong>no names, no types, no rarities, no stats</strong>. The line-up leans on real animals given a chunky, expressive treatment \u2014 bears, foxes, pandas, badgers, ducks, frogs, deer, horses, a boar \u2014 plus two clear dragons and at least one plant-based creature. If there's a design thesis, it's recognizable rather than abstract: animals first, monsters second.",
       "## The missing field that matters most is type",
       "Because of type locking, a monster's type decides which resources it can gather at all \u2014 a Grass type gathers Wood, a Fire type is refused outright. A portrait therefore tells you almost nothing about whether you'd want one on a farm. Until types are attached, nobody can say which of these eighteen are worth chasing.",
       "## What we're not going to do with it",
-      "We're not guessing types from colours (red might be Fire, or might be a Rock type that happens to be red), not reading rarity from grid position (that's production order, not a tier list), not attaching names (none are published, and the team has said names aren't final and may be community-influenced), and not assuming any of these are the Genesis Legendaries \u2014 Storm, Echo, Bloom and Tide are a separate pre-minted supply.",
+      "We're not guessing types from colors (red might be Fire, or might be a Rock type that happens to be red), not reading rarity from grid position (that's production order, not a tier list), not attaching names (none are published, and the team has said names aren't final and may be community-influenced), and not assuming any of these are the Genesis Legendaries \u2014 Storm, Echo, Bloom and Tide are a separate pre-minted supply.",
       "## What it does confirm",
       "Modestly but genuinely: the creatures exist, they're finished to a consistent standard, and the art style is settled. For a project with early access in November or December, a coherent roster sheet a third of the way to the launch count is a reasonable place to be. It also lines up with the September commitment on monster and egg utilities \u2014 that's the release where these portraits start to mean something."
     ]
@@ -311,11 +311,11 @@ const YAKKAMON_POSTS = [
       "<strong>Type locking.</strong> Every resource is gated to a monster type \u2014 a Grass type gathers Wood, and a Fire type simply can't, with the game refusing outright. Your roster caps what you're able to produce at all, so collecting more species is how you unlock more of the map's materials.",
       "<strong>Stamina.</strong> Monsters work a timed cycle, burn stamina, drop a haul, and repeat automatically \u2014 then sleep, recover and restart by themselves. Output is bounded by stamina rather than by how long you leave the game open.",
       "<strong>Storage bins.</strong> Resources stack in a bin that fills offline but caps at 20 early and 120 later. Every hour a bin sits at MAX is production you never banked, which quietly makes check-in frequency a real variable.",
-      "<strong>Upkeep.</strong> Monsters get hungry, hurt, tired or ask for a specific item, and a monster in a bad state stops producing. Upkeep is part of the economy, not flavour.",
+      "<strong>Upkeep.</strong> Monsters get hungry, hurt, tired or ask for a specific item, and a monster in a bad state stops producing. Upkeep is part of the economy, not flavor.",
       "## Plus the dev stream detail",
       "Around <strong>50\u201360 species at launch</strong> with real genetics and base stats; randomly rolled traits that define your build, roughly 80\u201390% predictable; breeding with line degradation but no hard cap, and evolutions planned. Day and night run on a sped-up in-game clock rather than real time, so no timezone gets an advantage. Weather is a separate system. PvP is still not in early access.",
       "## What we've deliberately not done",
-      "A lot of circulating numbers come from <strong>UI mock-ups rather than tuned builds</strong> \u2014 the 999,999 currency figures and the level 99 cap are almost certainly filler. Every figure in our quick-reference table is labelled with where it came from, and we've kept an honest list of what isn't confirmed: stat ranges, rarity tiers, work-cycle durations, the full type chart, the levelling curve, the trait list and the battle rules. That list is why nobody can build a trustworthy farming calculator yet.",
+      "A lot of circulating numbers come from <strong>UI mock-ups rather than tuned builds</strong> \u2014 the 999,999 currency figures and the level 99 cap are almost certainly filler. Every figure in our quick-reference table is labeled with where it came from, and we've kept an honest list of what isn't confirmed: stat ranges, rarity tiers, work-cycle durations, the full type chart, the leveling curve, the trait list and the battle rules. That list is why nobody can build a trustworthy farming calculator yet.",
       "The rebuilt <a href=\"gameplay.html\">Gameplay section</a> now runs to fourteen systems, each with a plain-English analogy, and the new <a href=\"gameplay-guide.html\">full field guide</a> reads the whole thing top to bottom on any screen size."
     ]
   },
@@ -351,17 +351,17 @@ const YAKKAMON_POSTS = [
     body: [
       "Yakkamon has published an Important Dates page \u2014 the first time everything between now and early access has been laid out in one place. It narrows early access from \u201cQ4\u201d to November or December, dates the leaderboard lock, and quietly moves the free mint two weeks earlier.",
       "## The five things that changed",
-      "<strong>The free mint moved to mid-September</strong>, from October 1st. <strong>The reveal is mid-October</strong>, one month after the mint rather than at launch. <strong>Early access is November or December.</strong> <strong>The leaderboard finalises one week before launch</strong>, with rewards sent three days later. And <strong>waves have a cadence</strong>: Wave 1 on launch day, Wave 2 a week later, Wave 3 a week after that.",
+      "<strong>The free mint moved to mid-September</strong>, from October 1st. <strong>The reveal is mid-October</strong>, one month after the mint rather than at launch. <strong>Early access is November or December.</strong> <strong>The leaderboard finalizes one week before launch</strong>, with rewards sent three days later. And <strong>waves have a cadence</strong>: Wave 1 on launch day, Wave 2 a week later, Wave 3 a week after that.",
       "## The real deadline",
       "Nothing on the page is a fixed date \u2014 everything hangs off a launch window that spans two months. Chaining it together gives roughly <strong>11 to 16 more weeks of leaderboard</strong> from today. Plan for the short end: if it runs long you keep the points anyway.",
       "## The asymmetry worth acting on",
-      "The deposit multiplier reaches its 1\u00d7 floor on 26 October \u2014 a week later than first scheduled after the week-2 pause, still between one and six weeks <em>before</em> the leaderboard locks. The most competitive stretch of the race is also the stretch where $FLOWER buys the fewest points, which front-loads every deposit decision to right now.",
+      "The deposit multiplier reaches its 1\u00d7 floor on October 26 \u2014 a week later than first scheduled after the week-2 pause, still between one and six weeks <em>before</em> the leaderboard locks. The most competitive stretch of the race is also the stretch where $FLOWER buys the fewest points, which front-loads every deposit decision to right now.",
       "## What's good",
       "The lock is anchored and will be announced with notice, so nobody wakes up to a board that closed overnight. Rewards land three days after the lock and before launch. The mint reveal in mid-October arrives while you can still climb. And Waves 1 to 3 are only two weeks apart, so mid-table finishes cost far less time than the rank gap suggests.",
       "## What's concerning",
       "Wave 4 \u2014 ranks 20,001 to 100,000, most of everyone who gets in \u2014 has no timing at all. Deposited $FLOWER only unlocks when you get access, so for those trainers it is an undated lockup on real money. Two official pages also still disagree on the mint date: the free mint page says mid-September, the Early Access comparison table still says October 1st.",
       "## What we'd do",
-      "Treat 1 September as your verification deadline. Front-load deposits, because it's the only variable that strictly worsens with time. Aim at a band edge \u2014 2,000, 5,000, 20,000, 100,000 \u2014 since the ladder is flat between them. Protect the nurture streak through mid-November. And don't move a sealed mint before mid-October."
+      "Treat September 1 as your verification deadline. Front-load deposits, because it's the only variable that strictly worsens with time. Aim at a band edge \u2014 2,000, 5,000, 20,000, 100,000 \u2014 since the ladder is flat between them. Protect the nurture streak through mid-November. And don't move a sealed mint before mid-October."
     ]
   },
   {
@@ -378,7 +378,7 @@ const YAKKAMON_POSTS = [
       "## Legendary vs Rare is a capability gap",
       "New definitions: <strong>Legendary</strong> means pre-minted, fixed, scarce supply. <strong>Rare</strong> means time-limited availability, with supply set by how much players hunt. And Legendaries will carry <strong>traits no other monster can have</strong>. Full utilities land in September.",
       "## The free mint may move to mid-September",
-      "Answering a leaderboard question, Adam laid out the sequence: free mint <strong>likely mid-September</strong>, reveal mid-October, leaderboard finalised after that, then rewards and early access. The published date is still October 1st \u2014 but if it moves, your verification deadline moves up two weeks with it. Supply may also land between 10,000 and 15,000, with a whitelist deliberately larger than supply.",
+      "Answering a leaderboard question, Adam laid out the sequence: free mint <strong>likely mid-September</strong>, reveal mid-October, leaderboard finalized after that, then rewards and early access. The published date is still October 1st \u2014 but if it moves, your verification deadline moves up two weeks with it. Supply may also land between 10,000 and 15,000, with a whitelist deliberately larger than supply.",
       "## 2.5 million $FLOWER is already deposited",
       "Craig's number, estimated at a fifth to a quarter of Sunflower Land's circulating $FLOWER. The paid bracket is being contested harder than most assume, and the points cost of a given rank keeps climbing.",
       "## OG status has an exact price",
@@ -395,12 +395,12 @@ const YAKKAMON_POSTS = [
     title: "What Actually Changed in the Airdrop \u2014 A Full Breakdown",
     date: "Aug 14, 2026",
     excerpt: "Legendary supply doubled, Storm was added above the old top tier, and the leaderboard now locks. Every band, the odds, and the problem this update makes worse.",
-    body: ["<em>Update, 2 September:</em> the names used below have changed — the 251–500 Legendary is now called <strong>Ghost</strong> and the 501–2,000 Legendary is now <strong>Bloom</strong> (formerly Bloom and Tide). Bands and supply are unchanged; utilities are now published in the official Yakkapedia.",
-      "Yakkamon rewrote the Monster NFT airdrop on 12 August and published the monster names on the 14th. Between the two, the picture only became legible this week \u2014 and it's a bigger change than the first announcement suggested.",
+    body: ["<em>Update, September 2:</em> the names used below have changed — the 251–500 Legendary is now called <strong>Ghost</strong> and the 501–2,000 Legendary is now <strong>Bloom</strong> (formerly Bloom and Tide). Bands and supply are unchanged; utilities are now published in the official Yakkapedia.",
+      "Yakkamon rewrote the Monster NFT airdrop on August 12 and published the monster names on the 14th. Between the two, the picture only became legible this week \u2014 and it's a bigger change than the first announcement suggested.",
       "## The mapping that explains everything",
       "One line in the team's comparison table is the key: <strong>\u201cEcho <em>is</em> the old Legendary A.\u201d</strong> Bloom was Legendary Egg B, Tide was Egg C, and <strong>Storm is entirely new</strong> \u2014 added <em>above</em> the existing ladder rather than inserted into it.",
       "With that, every band becomes comparable: <strong>1,200 ranks improved, 3,800 held their slot with utility lifted, and zero moved down.</strong> That's why \u201cnothing has been nerfed\u201d survives scrutiny.",
-      "## The supply maths",
+      "## The supply math",
       "Genesis Legendaries went from <strong>1,000 to 2,010</strong>. Rare Eggs fell from 4,000 to 3,000. Total Monster NFTs went 5,000 to 5,010 \u2014 the extra ten are the second monsters at ranks 1\u201310. Official counts: Storm 50, Echo 203, Bloom 257, Tide 1,500.",
       "The striking part is composition: <strong>Legendaries went from 20% of all airdropped NFTs to 40%.</strong> And nobody was diluted \u2014 nothing has been minted yet, so doubling the supply of an asset nobody holds costs nobody anything.",
       "## Your actual odds",
@@ -426,9 +426,9 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "Meet Storm, Echo, Bloom and Tide",
     date: "Aug 14, 2026",
-    excerpt: "The four Genesis Legendaries have names \u2014 and Legendary monsters now run to rank 2,000 instead of 1,000. Twice as many as before. Updated 2 Sep: Bloom and Tide are now called Ghost and Bloom.",
-    body: ["<em>Update, 2 September:</em> two of the four names have changed. The official Yakkapedia now runs <strong>Storm / Echo / Ghost / Bloom</strong> — the 251–500 monster called Bloom here is now <strong>Ghost</strong>, and the 501–2,000 monster called Tide is now <strong>Bloom</strong>. Same monsters, same boosts. Utilities are published too: Storm, in-range work 2× as fast (large AOE); Echo, in-range double resources (small AOE); Ghost, in-range always at max stamina (small AOE); Bloom, HP regeneration every combat turn.",
-      "The founding Legendary monsters have names. Yakkamon has published the four <strong>Genesis Legendaries</strong> \u2014 and with them, the detail that makes the 12 August ladder change finally legible.",
+    excerpt: "The four Genesis Legendaries have names \u2014 and Legendary monsters now run to rank 2,000 instead of 1,000. Twice as many as before. Updated Sep 2: Bloom and Tide are now called Ghost and Bloom.",
+    body: ["<em>Update, September 2:</em> two of the four names have changed. The official Yakkapedia now runs <strong>Storm / Echo / Ghost / Bloom</strong> — the 251–500 monster called Bloom here is now <strong>Ghost</strong>, and the 501–2,000 monster called Tide is now <strong>Bloom</strong>. Same monsters, same boosts. Utilities are published too: Storm, in-range work 2× as fast (large AOE); Echo, in-range double resources (small AOE); Ghost, in-range always at max stamina (small AOE); Bloom, HP regeneration every combat turn.",
+      "The founding Legendary monsters have names. Yakkamon has published the four <strong>Genesis Legendaries</strong> \u2014 and with them, the detail that makes the August 12 ladder change finally legible.",
       "## The four",
       "<strong>Storm</strong> goes to ranks 1\u201350 and is new. <strong>Echo</strong> to 51\u2013250 (previously Legendary Egg A). <strong>Bloom</strong> to 251\u2013500 (Egg B). <strong>Tide</strong> to 501\u20132,000 (Egg C). Ranks 2,001\u20135,000 receive a Rare Egg, and 5,001+ receive no airdrop.",
       "## Storm is the one that matters",
@@ -438,7 +438,7 @@ const YAKKAMON_POSTS = [
       "Legendary monsters used to stop at rank 1,000. They now run to rank <strong>2,000</strong>. A thousand trainers who were in line for a Rare Egg now receive Tide. Total Legendary supply went from about 1,000 to about <strong>2,010</strong>.",
       "## Nobody moved down",
       "Echo, Bloom and Tide are the monsters previously called Legendary Eggs A, B and C, each with utility lifted. Storm was added <em>above</em> the ladder rather than pushing anyone down it. Band by band: 1,200 ranks improved, 3,800 held their slot, none moved down.",
-      "<strong>We got this wrong first time.</strong> Our 12 August analysis read \u201cRare Egg A\u201d at ranks 501\u20132,000 as a tier below Legendary, and concluded supply had halved and 500 trainers had lost out. The names show that band receives Tide, a Legendary. The full correction is on our analysis page.",
+      "<strong>We got this wrong first time.</strong> Our August 12 analysis read \u201cRare Egg A\u201d at ranks 501\u20132,000 as a tier below Legendary, and concluded supply had halved and 500 trainers had lost out. The names show that band receives Tide, a Legendary. The full correction is on our analysis page.",
       "## What we still don't know",
       "Monster utilities land in <strong>September</strong>. The one number that changed for planning: the Legendary line moved from rank 1,000 to rank 2,000 \u2014 twice as reachable as it was."
     ]
@@ -450,16 +450,16 @@ const YAKKAMON_POSTS = [
     date: "Aug 14, 2026",
     excerpt: "We said Legendary supply halved and 500 trainers lost a tier. It doubled, and nobody lost. The full correction, with the real numbers.",
     body: [
-      "<strong>Correction.</strong> An earlier version of this article said the 12 August update halved Legendary supply and cost around 500 trainers a tier. Both claims were wrong. Legendary supply roughly doubled, and no band lost out.",
+      "<strong>Correction.</strong> An earlier version of this article said the August 12 update halved Legendary supply and cost around 500 trainers a tier. Both claims were wrong. Legendary supply roughly doubled, and no band lost out.",
       "## Legendary supply doubled",
       "Legendary monsters used to stop at rank 1,000. They now run to rank <strong>2,000</strong> \u2014 twice as far down the leaderboard. Supply went from about 1,000 to about <strong>2,010</strong>, while Rare Eggs fell from 4,000 to 3,000 and the total held at roughly 5,010.",
       "## Nobody lost a band",
       "Checked against the original ladder: <strong>1,200 ranks improved, 3,800 held their slot with utility lifted, and zero moved down.</strong> The band that gained most is 1,001\u20132,000, which was in line for a Rare Egg and now receives Tide, a Genesis Legendary.",
-      "So \u201cnothing has been nerfed\u201d holds up. We questioned that framing when the bands first changed. With the names published, the claim is simply accurate \u2014 and scarcity moved in players' favour rather than against them.",
+      "So \u201cnothing has been nerfed\u201d holds up. We questioned that framing when the bands first changed. With the names published, the claim is simply accurate \u2014 and scarcity moved in players' favor rather than against them.",
       "## Storm is the real story",
       "<strong>Storm sits above the previous top tier</strong> and only a top-50 finish is airdropped one. That creates a genuine gradient at the top, where ranks 1 and 99 previously received an identical reward \u2014 a design weakness we flagged after the first dev stream.",
       "## How we got it wrong",
-      "The 12 August update published bands without monster names, listing ranks 501\u20132,000 as \u201cRare Egg A\u201d. We read \u201cRare\u201d as a tier below Legendary and built arithmetic on it. The names show that band receives Tide, a Genesis Legendary.",
+      "The August 12 update published bands without monster names, listing ranks 501\u20132,000 as \u201cRare Egg A\u201d. We read \u201cRare\u201d as a tier below Legendary and built arithmetic on it. The names show that band receives Tide, a Genesis Legendary.",
       "The lesson: we ran the numbers confidently on labels we didn't understand, when the honest move was to say the labels were ambiguous and wait."
     ]
   },
@@ -484,12 +484,12 @@ const YAKKAMON_POSTS = [
   {
     slug: "dev-stream-graded",
     category: "devstream",
-    title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream (6 August)",
+    title: "We Graded Every Decision From Yakkamon\u2019s First Dev Stream (August 6)",
     date: "Aug 11, 2026",
     excerpt: "Nine decisions, graded A to C. Three A's, one C \u2014 and a wallet-splitting hole in the deposit system that costs 10% of your points and multiplies your reward slots by ten.",
     body: [
       "We've already published the factual recap of Thought Farm's first Yakkamon dev stream. This is the other half: what we think of it. Nine decisions, graded. Some of it is critical \u2014 that's the point.",
-      "The team asked people not to screen-record the stream because things will change. We've respected that, and everything below is where the project stood on 6 August rather than a promise.",
+      "The team asked people not to screen-record the stream because things will change. We've respected that, and everything below is where the project stood on August 6 rather than a promise.",
       "## What they got right",
       "<strong>Specialization comes from your monsters</strong>, not from separate boost items. Best decision of the stream, and the one that makes everything else cohere \u2014 it means the creatures <em>are</em> the game, so hunting, breeding and trading reinforce each other instead of competing.",
       "<strong>Abandoning the compromised X account fast.</strong> Every hour it stayed compromised it was a weapon pointed at their own community, with their verification badge on it. Wiring the reconnect into the dashboard as a points reward was smart \u2014 it makes the migration actually happen.",
@@ -523,7 +523,7 @@ const YAKKAMON_POSTS = [
       "Buried in the guideline is the detail most worth knowing: <strong>percentage-based withdrawal limits may apply for the first few weeks after launch</strong>. It caps how much can be withdrawn in a given period, not whether you can withdraw, and the limits lift as the project settles. Reasonable and common \u2014 but it does mean your deposit isn't instantly liquid on day one.",
       "## The rates the docs don't give you",
       "The guideline says bigger deposits earn <strong>exponentially</strong> more, which is accurate but vague. The numbers live in your dashboard's deposit panel, and there are two bonuses stacked together.",
-      "<strong>The weekly multiplier decays.</strong> The opening week (10\u201316 Aug) pays <strong>3\u00d7</strong>, falling 0.2\u00d7 every week \u2014 held at 2.8\u00d7 in week 3 after the week-2 deposit pause \u2014 until it rests at 1\u00d7 from around 26 October.",
+      "<strong>The weekly multiplier decays.</strong> The opening week (10\u201316 Aug) pays <strong>3\u00d7</strong>, falling 0.2\u00d7 every week \u2014 held at 2.8\u00d7 in week 3 after the week-2 deposit pause \u2014 until it rests at 1\u00d7 from around October 26.",
       "<strong>The size bonus is per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount has to land in one transfer \u2014 25 then another 25 does not reach the 50 tier.",
       "## What that means",
       "Both bonuses push the same way: deposit early, in single larger transfers. The same 5,000 $FLOWER is worth <strong>17,000 points</strong> as one transfer in the opening week, and <strong>6,000</strong> as ten deposits of 500 after the multiplier bottoms out. Same money, a 65% swing.",
@@ -533,7 +533,7 @@ const YAKKAMON_POSTS = [
   {
     slug: "dev-stream-aug-7-recap",
     category: "devstream",
-    title: "First Yakkamon Dev Stream (6 August): Everything They Announced",
+    title: "First Yakkamon Dev Stream (August 6): Everything They Announced",
     date: "Aug 7, 2026",
     excerpt: "The deposit system has been rebuilt, there's a new official X account worth 10 bonus points, and PvP won't be in early access. Full recap.",
     body: [
@@ -567,12 +567,12 @@ const YAKKAMON_POSTS = [
     date: "Aug 7, 2026",
     excerpt: "Updated after the dev stream \u2014 the weekly multiplier decays from 3x and the size bonus is per deposit, so splitting now costs you.",
     body: [
-      "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on 6 August described a different structure, and the advice reverses with it.",
+      "<strong>This tip previously said the opposite.</strong> It advised splitting deposits across weeks, because the bonus appeared to follow your cumulative deposited total. The first dev stream on August 6 described a different structure, and the advice reverses with it.",
       "## Two bonuses, both rewarding early",
       "The <strong>weekly multiplier</strong> pays <strong>3\u00d7</strong> through the opening week, then falls 0.2\u00d7 every week until it settles at 1\u00d7. The same 5,000 $FLOWER is worth 17,000 points in the opening week and 7,000 once it bottoms out. It applies to points, not your balance \u2014 you keep the $FLOWER and can withdraw it once you have game access.",
       "The <strong>size bonus</strong> is rated <strong>per deposit</strong>, doubling at every step: +10% at 50 $FLOWER, +20% at 500, +40% at 5,000, +80% at 50,000. The full amount must land in one transfer \u2014 ten deposits of 500 earn ten 20% bonuses instead of one 40% bonus.",
       "## What to do",
-      "Deposit as early in the window as you're comfortable with, and send it in a single transfer so the size bonus lands on the full amount. Holding back to deposit near the end is exactly what this structure penalises \u2014 and the leaderboard gets hidden close to launch anyway.",
+      "Deposit as early in the window as you're comfortable with, and send it in a single transfer so the size bonus lands on the full amount. Holding back to deposit near the end is exactly what this structure penalizes \u2014 and the leaderboard gets hidden close to launch anyway.",
       "The full schedule lives in the deposit panel on your own trainer dashboard. Check it there before sending, rather than trusting any published figure, including ours."
     ]
   },
@@ -581,7 +581,7 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "Referral Rule Change: Friends Now Need 100 Points to Count",
     date: "Aug 5, 2026",
-    excerpt: "SUPERSEDED on 14 Aug \u2014 Discord and X no longer verify a referral at all. After 4,783 farming accounts were banned, referrals 6+ needed the friend to verify Discord, verify Twitter/X and reach 100 points.",
+    excerpt: "SUPERSEDED on Aug 14 \u2014 Discord and X no longer verify a referral at all. After 4,783 farming accounts were banned, referrals 6+ needed the friend to verify Discord, verify Twitter/X and reach 100 points.",
     body: [
       "The Yakkamon team has raised the bar for what counts as a valid referral. <strong>Your first five referrals still pay instantly</strong> \u2014 from the sixth onward, your friend must verify their Discord, verify their Twitter/X, and reach 100 points before you receive anything.",
       "## Why it changed",
@@ -645,7 +645,7 @@ const YAKKAMON_POSTS = [
       "## What you can do from that moment",
       "Send any amount of $FLOWER to your deposit address on <strong>Base or Ronin</strong>, minimum 5 $FLOWER. Points are boosted two ways: a <strong>weekly multiplier</strong> of 3\u00d7 through the opening week, falling 0.2\u00d7 weekly to a floor of 1\u00d7, and a <strong>size bonus rated per deposit</strong> doubling from +10% at 50 $FLOWER to +80% at 50,000. Points land in the week the deposit confirms.",
       "It's the single biggest points lever in pre-registration \u2014 a large deposit is worth tens of thousands of points, which no amount of daily nurturing will match. We're not telling you to deposit; we're telling you what the numbers say.",
-      "## Why the docs say \"10 August\"",
+      "## Why the docs say \"August 10\"",
       "Because they're quoting the <strong>UTC</strong> date. 8:00 PM ET on Sunday Aug 9 is midnight UTC, which is already Monday Aug 10 in London and everywhere east of it. Same instant, two calendar dates \u2014 if you're in the Americas, the evening you want is <strong>Sunday the 9th</strong>.",
       "## Deposit early, and in one transfer",
       "The instinct is to wait \u2014 watch the leaderboard, see where you stand, and deposit near the end to lock in a rank. The deposit system is built specifically to punish that.",
@@ -660,13 +660,13 @@ const YAKKAMON_POSTS = [
     date: "Aug 5, 2026",
     excerpt: "A new section for leaderboard tactics, worked through with real numbers rather than asserted.",
     body: [
-      "There's a new tab on the portal. <strong>Trainer Tips</strong> is where we work through the tactical side of the pre-registration leaderboard \u2014 the decisions that actually change what you walk away with, with the maths shown rather than asserted.",
+      "There's a new tab on the portal. <strong>Trainer Tips</strong> is where we work through the tactical side of the pre-registration leaderboard \u2014 the decisions that actually change what you walk away with, with the math shown rather than asserted.",
       "## Why a separate section",
       "The rest of the site explains what the rules <em>are</em>. The FAQ decodes terminology, the pre-registration guide walks through signing up, and the leaderboard guideline lists every points value. None of that tells you what to <em>do</em> with the rules. Tips is for that, and keeping it separate means the reference pages stay neutral.",
       "## The first tip: how to time your $FLOWER deposits",
       "The leaderboard is really two competitions running at once. Your <strong>final ranking</strong> is your all-time points total and pays out once, at early access in November or December 2026. The <strong>weekly ranking</strong> resets every week and pays resource boxes, food boxes, raffle tickets and loot boxes each time.",
       "Deposits carry a <strong>weekly multiplier</strong> \u2014 3\u00d7 in the opening week, falling 0.2\u00d7 weekly to a floor of 1\u00d7 \u2014 plus a <strong>size bonus rated per deposit</strong> that doubles at every step up to +80%. Both reward depositing early, in single larger transfers.",
-      "Note: this tip originally said the opposite \u2014 split weekly, because the bonus appeared to follow your cumulative total. The dev stream on 6 August described a different structure, and the tip was rewritten to match.",
+      "Note: this tip originally said the opposite \u2014 split weekly, because the bonus appeared to follow your cumulative total. The dev stream on August 6 described a different structure, and the tip was rewritten to match.",
       "## More to come",
       "Tips will grow as the leaderboard runs and patterns become clear. The full write-up, including the case study and the numbers at every stack size, is on the Tips page."
     ]
@@ -756,9 +756,9 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "The Genesis Airdrop: 5,000 Monsters, One Chance",
     date: "Jul 27, 2026",
-    excerpt: "SUPERSEDED \u2014 the ladder changed on 12 August: Legendaries now go to ranks 1\u20132,000 and Rare Eggs to 2,001\u20135,000. Original July post on the 5,000-trainer Genesis airdrop.",
+    excerpt: "SUPERSEDED \u2014 the ladder changed on August 12: Legendaries now go to ranks 1\u20132,000 and Rare Eggs to 2,001\u20135,000. Original July post on the 5,000-trainer Genesis airdrop.",
     body: [
-      "**Superseded (8 September).** The ladder changed on 12 August: ranks 1\u20132,000 now receive a Genesis Legendary and 2,001\u20135,000 a Rare Egg, and a separate 10,000-NFT free mint runs on Ronin from 14 September. See the full airdrop breakdown for the current rules; the text below is kept as published.",
+      "**Superseded (September 8).** The ladder changed on August 12: ranks 1\u20132,000 now receive a Genesis Legendary and 2,001\u20135,000 a Rare Egg, and a separate 10,000-NFT free mint runs on Ronin from September 14. See the full airdrop breakdown for the current rules; the text below is kept as published.",
       "When early access opens, 5,000 Genesis Monster NFTs will be airdropped to the players who registered earliest and ranked highest. There's no sale and no second window \u2014 once the leaderboard locks, the Genesis line closes for good.",
       "## Who gets what",
       "Ranks 1\u20131,000 receive a Legendary Genesis Monster, the rarest tier that will ever be minted. Ranks 1,001\u20135,000 receive a standard Genesis Monster. Every Genesis creature arrives already carrying in-game XP, and some are built for battle while others excel at gathering.",
@@ -774,7 +774,7 @@ const YAKKAMON_POSTS = [
     date: "Jul 23, 2026",
     excerpt: "SUPERSEDED \u2014 deposit rules have changed: withdrawals open at Chapter 0, and points follow the weekly multiplier plus size bonus. Original July explainer of $FLOWER deposits.",
     body: [
-      "**Superseded (8 September).** Withdrawals are not \u2018any time\u2019 \u2014 deposited $FLOWER stays locked until Chapter 0, about a month after early access \u2014 and points are now amount \u00d7 (weekly multiplier + size bonus). See the deposit guideline explained for the current rules; the text below is kept as published.",
+      "**Superseded (September 8).** Withdrawals are not \u2018any time\u2019 \u2014 deposited $FLOWER stays locked until Chapter 0, about a month after early access \u2014 and points are now amount \u00d7 (weekly multiplier + size bonus). See the deposit guideline explained for the current rules; the text below is kept as published.",
       "Yakkamon doesn't launch a new token \u2014 it reuses $FLOWER, the same currency used across the studio's other games. That means trainers can start building an in-game balance before early access even opens.",
       "## Two things, one deposit",
       "Every deposit is held for you and ready the moment you get game access, and it converts into pre-registration points at the same time \u2014 bigger deposits earn exponentially more.",

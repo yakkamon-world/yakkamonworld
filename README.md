@@ -60,7 +60,7 @@ Home / Early Access / News / Gameplay / Community / Leaderboard / Tips /
 Videos / FAQ / Contact.
 
 > The "Early Access" tab still points at `pre-registration.html` (the URL is
-> kept so inbound links don't break), but since 2 Sep 2026 the page's title,
+> kept so inbound links don't break), but since Sep 2, 2026 the page's title,
 > `<h1>`, footer link, home tile, breadcrumb and search entries all say
 > "Early Access" too. One label per page — see House rules.
 
@@ -163,7 +163,7 @@ builder yourself. When a new dev-stream digest is published, replace
 > integration skips the deploy of any commit whose message contains
 > `[skip ci]` / `[ci skip]`. The Action used to commit that way, so the rebuilt
 > JSON only went live with the *next* manual upload and the chat was always one
-> update behind (found 8 Sep 2026). The Action now commits with "(auto)"; GitHub
+> update behind (found Sep 8, 2026). The Action now commits with "(auto)"; GitHub
 > never re-runs a workflow from a push made with the workflow's own token, so
 > there is no loop to guard against.
 
@@ -175,7 +175,7 @@ must match the `built` stamp at the top of the live `chatbot-knowledge.json`.
 
 **Free questions.** `FREE_PER_DAY` (default 3) questions a day per browser,
 then a follow-us card (X / YouTube) unlocks the chat for `UNLOCK_DAYS`. It is
-counted in the visitor's `localStorage` only — an honour system and a nudge,
+counted in the visitor's `localStorage` only — an honor system and a nudge,
 not a wall; the worker's rate limit and `DAILY_CAP` are the real cost control.
 
 **Wiring.** `WORKER_URL` at the top of `chatbot.js` must be the worker's URL.
@@ -275,7 +275,7 @@ that 404s, so these always ship together.
    (Dev Stream — recaps and gradings of the streams), `analysis` (Analysis —
    YakkamonWorld's own readings, strategy pieces, open corrections), `guide`
    (Guide — how-to walkthroughs), `tips` (Tip — one actionable tip) or `portal`
-   (Portal Update — new site features). Labels and colours live in `news.js`,
+   (Portal Update — new site features). Labels and colors live in `news.js`,
    `home-news.js` and the `.badge-*` rules in `style.css`; the article's own
    badge must use the same key.
 2. **`article-<slug>.html`** — copy the most recent article file so you inherit
@@ -293,7 +293,7 @@ that 404s, so these always ship together.
    all pointing at the same URL.
 4. **`sitemap.xml`** — add a `<url>` block **with a `<lastmod>`** equal to the
    article's `dateModified`. Every URL in the sitemap carries one (backfilled
-   2 Sep 2026), so whenever you bump an article's `dateModified`, mirror it
+   Sep 2, 2026), so whenever you bump an article's `dateModified`, mirror it
    here — a sitemap whose dates are only sometimes right gets ignored.
 
 > After any content change the chatbot index rebuilds itself on push (see
@@ -363,14 +363,13 @@ builds sitelinks from titles and anchor text, and three names for one URL
 dilute all three. `<title>` is front-loaded with that name and ends in
 ` | YakkamonWorld`. (`pre-registration.html` = "Early Access".)
 
-**Breadcrumbs are structural, not editorial.** Adding or relabelling the
+**Breadcrumbs are structural, not editorial.** Adding or relabeling the
 crumbs / `BreadcrumbList` on an article is a nav-only change: no
 `dateModified` bump. `faq.html` and `videos.html` now carry two JSON-LD
 blocks (FAQPage/CollectionPage + BreadcrumbList) — when regenerating the FAQ
 block from `faq.js`, replace only the FAQPage one.
 
-**British English throughout.** "Optimise", "the maths checks out",
-"refertilise". The X account is American — that split is known and accepted.
+**American English throughout** (since Sept 8, 2026 — the site was British English before that). "Optimize", "the math checks out", "refertilize"; dates are written month-first ("Sept 14", "September 14–18, 2026"). The X account has always been American, so the two now match. The chat worker's system prompt tells the bot to answer in American English too. How the switch was made (dictionary, date regexes, what was deliberately left verbatim) is in `CHANGELOG-2026-09-08-american-english.md`.
 
 **Corrections are published, not hidden.** Evergreen and reference pages get
 fixed in place. Dated news posts get a visible correction callout and a bumped
@@ -488,14 +487,14 @@ explicit `[hidden]{display:none}` rule.
 **The footer "LATEST NEWS" column is static** across all 48 pages and is not
 generated from `posts.js`. It has not been refreshed for recent articles.
 
-**`deposit-week.js` starts week 1 at 00:00 UTC on 10 Aug**, but the official
+**`deposit-week.js` starts week 1 at 00:00 UTC on Aug 10**, but the official
 deposit windows turn at **02:00 UTC** — so for two hours every Monday the site
 shows next week's multiplier early. Not fixed.
 
 **Nine pages load `deposit-week.js` without containing a `.deposit-week`
 element.** Harmless, but they are dead script tags.
 
-**`index.html` is canonicalised to `/`**, not `/index.html`, and the sitemap
+**`index.html` is canonicalized to `/`**, not `/index.html`, and the sitemap
 matches. Keep those two agreeing.
 
 **Search is a hand-maintained index.** There is no crawler. If you don't add a

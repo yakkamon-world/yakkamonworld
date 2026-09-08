@@ -33,7 +33,7 @@ const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
   }
 
   function fmt(ms) {
-    return new Date(ms).toLocaleDateString("en-GB", {
+    return new Date(ms).toLocaleDateString("en-US", {
       day: "numeric", month: "short", timeZone: "UTC",
     });
   }

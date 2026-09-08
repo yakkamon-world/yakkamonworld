@@ -76,7 +76,7 @@
     });
   }
   function fmt(n, dp) {
-    return Number(n || 0).toLocaleString("en-GB", {
+    return Number(n || 0).toLocaleString("en-US", {
       minimumFractionDigits: dp || 0,
       maximumFractionDigits: dp || 0
     });
@@ -151,7 +151,7 @@
   function usd(flower) {
     if (!price || !isFinite(price)) return "";
     var v = flower * price;
-    return "\u2248 $" + v.toLocaleString("en-GB", {
+    return "\u2248 $" + v.toLocaleString("en-US", {
       minimumFractionDigits: v < 100 ? 2 : 0, maximumFractionDigits: v < 100 ? 2 : 0
     });
   }
@@ -159,7 +159,7 @@
     var start = WINDOWS[i].start;
     var end = (i + 1 < WINDOWS.length) ? WINDOWS[i + 1].start : CLOSES;
     var d = function (ts) {
-      return new Date(ts * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+      return new Date(ts * 1000).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
     };
     return d(start) + " \u2013 " + d(end);
   }

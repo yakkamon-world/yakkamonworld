@@ -29,7 +29,7 @@ const YAKKAMON_VIDEOS = [
     runtime: "4:05",
     block: "analysis",
     title: "Yakkamon Dev Stream 9-1-26 Recap \u2014 Free Mint, Game Updates & Launch Calendar",
-    blurb: "The free-mint stream in four minutes: 10,000 hidden Yakkamon on the Ronin Launchpad from 14 September, five waves gated by your rank at the 10 September snapshot, one NFT per wave, 68 Legendaries in the pool and a 14 October reveal \u2014 plus the game updates that landed alongside it (utilities as economic auras, absence pauses the farm, no gear, no evolutions at launch) and the calendar from here to Chapter 0.",
+    blurb: "The free-mint stream in four minutes: 10,000 hidden Yakkamon on the Ronin Launchpad from September 14, five waves gated by your rank at the September 10 snapshot, one NFT per wave, 68 Legendaries in the pool and a October 14 reveal \u2014 plus the game updates that landed alongside it (utilities as economic auras, absence pauses the farm, no gear, no evolutions at launch) and the calendar from here to Chapter 0.",
     related: { href: "article-free-mint-stream-graded.html", label: "Read the written version \u2014 every decision graded" },
   },
   {
@@ -38,7 +38,7 @@ const YAKKAMON_VIDEOS = [
     runtime: "5:04",
     block: "analysis",
     title: "Yakkamon Dev Stream 8-21-26 Recap and Game Economy",
-    blurb: "The third dev stream in five minutes, plus the economy post that landed the same day. Combat turned out to be a lane-based 3v3 auto-battler, farm plots now degrade and need refertilising, identical boosts don't stack, and rarity is fixed at species level \u2014 so a good common can out-stat a middling rare. The economy half covers the split between free-to-play gathered resources and the tradeable layer, and what that does to the Wave 1 argument.",
+    blurb: "The third dev stream in five minutes, plus the economy post that landed the same day. Combat turned out to be a lane-based 3v3 auto-battler, farm plots now degrade and need refertilizing, identical boosts don't stack, and rarity is fixed at species level \u2014 so a good common can out-stat a middling rare. The economy half covers the split between free-to-play gathered resources and the tradeable layer, and what that does to the Wave 1 argument.",
     related: { href: "article-dev-stream-three-recap.html", label: "Read the written version" },
   },
   {
@@ -65,7 +65,7 @@ const YAKKAMON_VIDEOS = [
     runtime: "14:28",
     block: "analysis",
     title: "The Yakkamon Reward Ladder Changed \u2014 I Was Wrong About How Bad It Was",
-    blurb: "A full breakdown of the 12 August ladder change. \u26a0 Its supply conclusion was later corrected \u2014 the monster names published on 14 August show Legendary supply doubled rather than halved, and no band lost out. EP 11 above has the corrected version.",
+    blurb: "A full breakdown of the August 12 ladder change. \u26a0 Its supply conclusion was later corrected \u2014 the monster names published on August 14 show Legendary supply doubled rather than halved, and no band lost out. EP 11 above has the corrected version.",
     related: { href: "article-reward-ladder-analysis.html", label: "Read the written analysis" },
   },
   {
@@ -73,8 +73,8 @@ const YAKKAMON_VIDEOS = [
     ep: "09",
     runtime: "22:11",
     block: "analysis",
-    title: "I Graded Yakkamon's First Dev Stream (6 Aug) \u2014 One Decision Gets a C",
-    blurb: "Nine decisions from the 6 August dev stream, graded A to C \u2014 what the team got right, and the one call that makes the top of the leaderboard purchased rather than contested.",
+    title: "I Graded Yakkamon's First Dev Stream (Aug 6) \u2014 One Decision Gets a C",
+    blurb: "Nine decisions from the August 6 dev stream, graded A to C \u2014 what the team got right, and the one call that makes the top of the leaderboard purchased rather than contested.",
     related: { href: "article-dev-stream-graded.html", label: "Read the written version" },
   },
 
