@@ -1,10 +1,11 @@
-# Rebuilds chatbot-knowledge.json whenever site content changes, and commits it
-# back to main. Cloudflare's Git integration then deploys the fresh JSON and the
+# Rebuilds chatbot-knowledge.json AND the static copies of the JS-rendered hubs
+# (news / home news / videos / FAQ, see build-static-hubs.mjs) whenever site
+# content changes, and commits them back to main. Cloudflare's Git integration then deploys the fresh JSON and the
 # chat worker picks it up within ten minutes.
 #
 # Needs: Settings → Actions → General → Workflow permissions → "Read and write".
 # The [skip ci] in the commit message stops this workflow re-triggering itself.
-name: Rebuild chatbot knowledge
+name: Rebuild chatbot knowledge and static hubs
 
 on:
   push:
@@ -18,6 +19,7 @@ on:
       - "chatbot-digest.md"
       - "chatbot-official-posts.md"
       - "build-chatbot-knowledge.mjs"
+      - "build-static-hubs.mjs"
   workflow_dispatch:
 
 concurrency:
@@ -35,16 +37,19 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
+      - name: Build static hubs (news, home news, videos, FAQ)
+        run: node build-static-hubs.mjs
       - name: Build chatbot-knowledge.json
         run: node build-chatbot-knowledge.mjs
       - name: Commit if changed
         run: |
           git config user.name "yakkamonworld-bot"
           git config user.email "actions@users.noreply.github.com"
-          if git diff --quiet -- chatbot-knowledge.json; then
+          FILES="chatbot-knowledge.json index.html news.html videos.html faq.html"
+          if git diff --quiet -- $FILES; then
             echo "No change."
           else
-            git add chatbot-knowledge.json
-            git commit -m "Rebuild chatbot knowledge [skip ci]"
+            git add $FILES
+            git commit -m "Rebuild chatbot knowledge and static hubs [skip ci]"
             git push
           fi
