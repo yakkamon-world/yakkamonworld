@@ -78,7 +78,7 @@ const FALLBACK_EMAIL = "yakkamonworld@gmail.com";
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      say("That email address doesn't look right — we can't reply without it.", "err");
+      say("That email address doesn't look right — I can't reply without it.", "err");
       return;
     }
 
@@ -97,7 +97,7 @@ const FALLBACK_EMAIL = "yakkamonworld@gmail.com";
 
       if (res.ok && result.success !== false) {
         form.reset();
-        say("Thanks — that's landed. We read everything, and we'll reply if it needs one.", "ok");
+        say("Thanks — that's landed. I read everything, and I'll reply if it needs one.", "ok");
       } else {
         throw new Error(result.message || "Relay returned " + res.status);
       }

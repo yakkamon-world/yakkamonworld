@@ -296,7 +296,7 @@ const FOLLOW_LINKS = {
       card = el("div", "cb-m cb-bot cb-follow");
       card.innerHTML =
         '<div class="cb-bub">' +
-          '<p><strong>Enjoying this?</strong> That was today\u2019s ' + FREE_PER_DAY + ' free questions. Follow us and the chat stays open \u2014 no sign-up, we just ask.</p>' +
+          '<p><strong>Enjoying this?</strong> That was today\u2019s ' + FREE_PER_DAY + ' free questions. Follow YakkamonWorld and the chat stays open \u2014 no sign-up, I just ask.</p>' +
           '<div class="cb-follow-btns">' +
             '<a class="cb-follow-x" href="' + FOLLOW_LINKS.x + '" target="_blank" rel="noopener">Follow on X</a>' +
             '<a class="cb-follow-yt" href="' + FOLLOW_LINKS.youtube + '" target="_blank" rel="noopener">Subscribe on YouTube</a>' +

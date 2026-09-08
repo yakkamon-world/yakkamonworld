@@ -55,9 +55,9 @@ const CONSENT_KEY = "yw-analytics-consent";   // "granted" | "denied"
     bar.setAttribute("role", "dialog");
     bar.setAttribute("aria-label", "Analytics consent");
     bar.innerHTML =
-      '<p>We\u2019d like to count visits with Google Analytics so we know which guides are worth writing. ' +
+      '<p>I\u2019d like to count visits with Google Analytics so I know which guides are worth writing. ' +
       'No ads, no tracking you across other sites, nothing sold. ' +
-      '<a href="privacy.html">What we collect &rarr;</a></p>' +
+      '<a href="privacy.html">What I collect &rarr;</a></p>' +
       '<div class="consent-actions">' +
       '<button type="button" class="pixel-btn sky consent-yes">ALLOW</button>' +
       '<button type="button" class="consent-no">No thanks</button>' +
