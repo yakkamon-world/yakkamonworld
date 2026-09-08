@@ -206,7 +206,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ 404.html                    Not-found page (served by `not_found_handling` in wrangler.jsonc; noindex, not in sitemap/search)
 │  ├─ about.html                  Who we are, how we work, content usage
 │  ├─ privacy.html                Privacy + analytics consent controls
-│  └─ article-*.html              One static page per news post (35)
+│  └─ article-*.html              One static page per news post (43)
 │
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
@@ -237,7 +237,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 55 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 56 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config
@@ -247,6 +247,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 └─ IMAGES
    ├─ favicon.ico / -32 / -192 / apple-touch-icon
    ├─ og-default.png              1200×630 — default social card
+   ├─ free-mint-by-the-numbers-og.png  1600×900 — social card for the free-mint odds article (the X infographic at 1×)
    ├─ gameplay-poster.png         1800×1898 — in-page field guide poster (rendered from gameplay-poster-source.html)
    ├─ gameplay-poster-full.png    3885×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs

@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "free-mint-by-the-numbers",
+    category: "analysis",
+    title: "Wave 5 Probably Doesn\u2019t Exist: The Yakkamon Free Mint by the Numbers",
+    date: "Sep 8, 2026",
+    excerpt: "Live numbers on the free mint \u2014 133,408 registered, 5,219 depositors, 68 Legendaries in 10,000. Why Wave 5 probably doesn\u2019t exist, a 73% chance nobody mints a Storm on day one, what $1.25 buys before the 10 September snapshot, and what a hidden egg is worth.",
+    body: [
+      "Six days before the first wave, almost nobody has done the arithmetic on the free mint. I did, with live data: <strong>133,408 trainers</strong> registered, <strong>5,219 wallets</strong> with a $FLOWER deposit, $FLOWER at $0.25 \u2014 all read at 18:40 UTC on 8 September \u2014 plus the official pool of 68 Legendaries, 50 Rares and 9,882 Uncommons.",
+      "## The odds",
+      "One mint is a <strong>1-in-147</strong> shot at a Legendary, 1-in-85 at Rare or better, 1-in-3,333 at a Storm, and a 98.8% chance of an Uncommon. Stacking waves helps less than people assume: the best-placed wallet in the game, with five tickets, has a 3.35% Legendary chance. Rank buys certainty, not odds.",
+      "## Wave 5 probably doesn\u2019t exist",
+      "The headline wave sizes add up to 11,000 for 10,000 NFTs. If Waves 1\u20133 sell out, Wave 4 opens with 4,000; if Wave 4 sells out, Wave 5 opens with nothing. Whether it does comes down to turnout: Waves 2 and 4 both need a deposit, only 5,219 wallets have one, and Wave 4 sells out only if 77\u201396% of them come back a second day. Wave 4 is the swing wave.",
+      "## What $1.25 buys",
+      "Five $FLOWER is $1.25 today and it is the entry condition for both deposit waves \u2014 withdrawable, not a fee, but the snapshot is 10 September. Meanwhile 83,408 registered trainers (62.5%) sit below rank 50,000 and have no wave at all unless they are on the Ronin gamers list.",
+      "## Where the Legendaries land",
+      "If rarity is drawn at the reveal, there is a 73% chance nobody mints a Storm on day one, a 49% chance one of the three goes to a Ronin gamer, and the leftover Wave 4 is statistically the richest wave. The mint holds 2.5% of all Genesis Legendaries; the airdrop hands out 73%. The article closes with what a hidden egg is worth in Uncommons, a per-rank action list, and five questions for the team."
+    ]
+  },
+  {
     slug: "ronin-wave",
     category: "official",
     title: "The Ronin Wave: Who Gets Yakkamon\u2019s 2,000 Gamer Mints, and How to Check If You\u2019re One of Them",

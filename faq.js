@@ -319,7 +319,17 @@ var FAQ_CATEGORIES = [
    {
     "q": "Is there anything rare in there?",
     "id": "is-there-anything-rare-in-there",
-    "a": "<p>Yes. Hidden in the 10,000 are <strong>68 Genesis Legendaries</strong> &mdash; 3 Storm, 5 Echo, 10 Ghost and 50 Bloom &mdash; and 50 Rares; the other 9,882 are Uncommons, described in the Yakkapedia as normal working Yakkamon. That's roughly a 0.7% chance of a Legendary per mint. The old docs' figure of five Legendaries is out of date.</p>"
+    "a": "<p>Yes. Hidden in the 10,000 are <strong>68 Genesis Legendaries</strong> &mdash; 3 Storm, 5 Echo, 10 Ghost and 50 Bloom &mdash; and 50 Rares; the other 9,882 are Uncommons, described in the Yakkapedia as normal working Yakkamon. That's roughly a 0.7% chance of a Legendary per mint. The old docs' figure of five Legendaries is out of date. The full odds, wave by wave, are in <a href=\"article-free-mint-by-the-numbers.html\">the free mint by the numbers</a>.</p>"
+   },
+   {
+    "q": "What are my odds of a Legendary in the free mint?",
+    "id": "what-are-my-odds-of-a-legendary-in-the-free-mint",
+    "a": "<p>Per mint: <strong>1 in 147</strong> for any Legendary (0.68%), 1 in 85 for Rare or better, 1 in 3,333 for a Storm, and a 98.8% chance of an Uncommon. Because you can mint once in every wave you qualify for, a top-1,000 trainer with a deposit gets three tickets (Waves 1, 2 and 4) and a <strong>2.03%</strong> Legendary chance; the best-placed wallet in the game, with five tickets, gets 3.35%. Rank buys you a guaranteed ticket, not a better one &mdash; the only thing that improves the odds is more tickets. Worked through in <a href=\"article-free-mint-by-the-numbers.html#odds\">the free mint by the numbers</a>.</p>"
+   },
+   {
+    "q": "Does Wave 5 actually exist?",
+    "id": "does-wave-5-actually-exist",
+    "a": "<p>Only if an earlier wave doesn't sell out. The headline wave sizes add up to <strong>11,000 for 10,000 NFTs</strong>: if Waves 1&ndash;3 sell out, Wave 4 opens with 4,000 rather than 5,000 (the docs say it ends early once the 10,000 are gone), and if Wave 4 sells out too, Wave 5 opens with nothing. The swing is Wave 4 &mdash; it needs most of the roughly 5,200 depositing wallets to mint a second day running. If you are in ranks 20,001&ndash;50,000, be at the launchpad at 00:00 UTC on 18 September and treat anything as a bonus; <a href=\"article-free-mint-by-the-numbers.html#wave-5\">the arithmetic is here</a>.</p>"
    },
    {
     "q": "Why bother if I'm already pre-registered?",
