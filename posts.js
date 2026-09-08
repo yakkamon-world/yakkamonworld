@@ -720,8 +720,9 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "The Genesis Airdrop: 5,000 Monsters, One Chance",
     date: "Jul 27, 2026",
-    excerpt: "The top 5,000 trainers on the leaderboard get a free reward egg at launch \u2014 the top 500 get a Legendary.",
+    excerpt: "SUPERSEDED \u2014 the ladder changed on 12 August: Legendaries now go to ranks 1\u20132,000 and Rare Eggs to 2,001\u20135,000. Original July post on the 5,000-trainer Genesis airdrop.",
     body: [
+      "**Superseded (8 September).** The ladder changed on 12 August: ranks 1\u20132,000 now receive a Genesis Legendary and 2,001\u20135,000 a Rare Egg, and a separate 10,000-NFT free mint runs on Ronin from 14 September. See the full airdrop breakdown for the current rules; the text below is kept as published.",
       "When early access opens, 5,000 Genesis Monster NFTs will be airdropped to the players who registered earliest and ranked highest. There's no sale and no second window \u2014 once the leaderboard locks, the Genesis line closes for good.",
       "## Who gets what",
       "Ranks 1\u20131,000 receive a Legendary Genesis Monster, the rarest tier that will ever be minted. Ranks 1,001\u20135,000 receive a standard Genesis Monster. Every Genesis creature arrives already carrying in-game XP, and some are built for battle while others excel at gathering.",
@@ -735,8 +736,9 @@ const YAKKAMON_POSTS = [
     category: "guide",
     title: "FLOWER Deposits: Deposit Early, Climb the Board",
     date: "Jul 23, 2026",
-    excerpt: "Depositing $FLOWER now does two things at once \u2014 it saves your balance for launch, and earns points today.",
+    excerpt: "SUPERSEDED \u2014 deposit rules have changed: withdrawals open at Chapter 0, and points follow the weekly multiplier plus size bonus. Original July explainer of $FLOWER deposits.",
     body: [
+      "**Superseded (8 September).** Withdrawals are not \u2018any time\u2019 \u2014 deposited $FLOWER stays locked until Chapter 0, about a month after early access \u2014 and points are now amount \u00d7 (weekly multiplier + size bonus). See the deposit guideline explained for the current rules; the text below is kept as published.",
       "Yakkamon doesn't launch a new token \u2014 it reuses $FLOWER, the same currency used across the studio's other games. That means trainers can start building an in-game balance before early access even opens.",
       "## Two things, one deposit",
       "Every deposit is held for you and ready the moment you get game access, and it converts into pre-registration points at the same time \u2014 bigger deposits earn exponentially more.",
