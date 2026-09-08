@@ -1,10 +1,21 @@
 # Rebuilds chatbot-knowledge.json AND the static copies of the JS-rendered hubs
 # (news / home news / videos / FAQ, see build-static-hubs.mjs) whenever site
-# content changes, and commits them back to main. Cloudflare's Git integration then deploys the fresh JSON and the
-# chat worker picks it up within ten minutes.
+# content changes, commits them back to main, waits until Cloudflare has deployed
+# that commit, then tells the chat worker to reload its knowledge right away.
+#
+# WHY THE COMMIT MESSAGE MUST NOT CONTAIN "[skip ci]": Cloudflare's Git
+# integration skips the deploy of any commit whose message contains
+# [skip ci] / [ci skip] (any case). The rebuilt JSON therefore never went live
+# until the NEXT manual upload — the chat was always one update behind
+# (found 8 Sep 2026). GitHub itself never re-triggers a workflow from a push
+# made with the workflow's own GITHUB_TOKEN, so no loop is possible; the
+# "(auto)" check on the job is belt and braces only.
+#
+# The 6-hourly schedule re-snapshots docs.yakkamon.com so a new or changed
+# official page reaches the chat even on days with no site upload. When nothing
+# changed the builder keeps the old "built" stamp and the run commits nothing.
 #
 # Needs: Settings → Actions → General → Workflow permissions → "Read and write".
-# The [skip ci] in the commit message stops this workflow re-triggering itself.
 name: Rebuild chatbot knowledge and static hubs
 
 on:
@@ -20,15 +31,21 @@ on:
       - "chatbot-official-posts.md"
       - "build-chatbot-knowledge.mjs"
       - "build-static-hubs.mjs"
+  schedule:
+    - cron: "23 */6 * * *"
   workflow_dispatch:
 
 concurrency:
   group: chatbot-knowledge
   cancel-in-progress: true
 
+env:
+  SITE_JSON: https://yakkamonworld.com/chatbot-knowledge.json
+  CHAT_WORKER: https://yakkamon-chat-worker.yakkamonworld.workers.dev
+
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    if: "!contains(github.event.head_commit.message, '(auto)')"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -37,19 +54,45 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
+
       - name: Build static hubs (news, home news, videos, FAQ)
         run: node build-static-hubs.mjs
+
       - name: Build chatbot-knowledge.json
         run: node build-chatbot-knowledge.mjs
+
       - name: Commit if changed
+        id: commit
         run: |
           git config user.name "yakkamonworld-bot"
           git config user.email "actions@users.noreply.github.com"
           FILES="chatbot-knowledge.json index.html news.html videos.html faq.html"
           if git diff --quiet -- $FILES; then
             echo "No change."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git add $FILES
-            git commit -m "Rebuild chatbot knowledge and static hubs [skip ci]"
+            git commit -m "Rebuild chatbot knowledge and static hubs (auto)"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Wait for Cloudflare to deploy, then refresh the chat worker
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          WANT=$(node -e 'console.log(JSON.parse(require("fs").readFileSync("chatbot-knowledge.json","utf8")).built)')
+          echo "Waiting for $SITE_JSON to report built=$WANT"
+          LIVE=""
+          for i in $(seq 1 40); do
+            LIVE=$(curl -sS --max-time 20 -H "Cache-Control: no-cache" "$SITE_JSON?v=$WANT-$i" \
+                   | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).built||"")}catch(e){console.log("")}})' || true)
+            if [ "$LIVE" = "$WANT" ]; then echo "Deployed after ~$((i*15)) s."; break; fi
+            sleep 15
+          done
+          if [ "$LIVE" != "$WANT" ]; then
+            echo "::warning::yakkamonworld.com still serves chatbot-knowledge.json built=$LIVE (wanted $WANT) after 10 min. Check Cloudflare → Workers & Pages → yakkamonworld → Deployments. The worker will pick the file up by itself once it is live."
+            exit 0
+          fi
+          # Ask the worker to drop its cached copy now instead of within its normal refresh window.
+          # Older worker builds answer 404 here — harmless, they refresh on their own timer.
+          curl -sS --max-time 20 -X POST "$CHAT_WORKER/refresh" -o /dev/null -w "worker /refresh → HTTP %{http_code}\n" || true
