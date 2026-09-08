@@ -239,6 +239,8 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .article-head .badge{margin-bottom:18px}
 .article-head h1{font-size:clamp(1.7rem,3.6vw,2.3rem); line-height:1.2; margin:0 0 14px}
 .article-meta{font-size:.9rem; color:#5a5a70; font-weight:700}
+.article-meta .byline{color:var(--ink); font-weight:900; text-decoration:none; border-bottom:2px solid var(--yellow)}
+.article-meta .byline:hover{border-bottom-color:var(--red)}
 .article-body{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:32px; margin:26px 0 60px; font-size:1.08rem; overflow-wrap:break-word}
 @media(max-width:500px){.article-body{padding:20px 18px}}
 .article-body img,.prereg-section img{border:3px solid var(--ink); border-radius:14px; margin:18px 0}

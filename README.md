@@ -410,6 +410,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
+- AUTHORSHIP: every article is bylined `By YakkamonWorld` (an `a.byline` in `.article-meta` linking `about.html#author`) and its JSON-LD `author` is the Organization with `@id …/#organization`, `alternateName` "YakkamonW" (the in-game trainer name) and `url` pointing at that anchor. New articles must carry both; there is no per-person byline by design.
+
 - Every page that discusses putting $FLOWER in (tips, pre-registration §8, leaderboard, FAQ, and every article that explains or advises on deposits — the deposit guideline, the four deposit tips/guides, the deposits-open and deposits-explained posts, the referral-deposit rule change, the free mint guide and the leaderboard launch post) ends with a `.money-note` financial-information callout. Any new deposit-related page or article should carry the same block, copied verbatim.
 
 
