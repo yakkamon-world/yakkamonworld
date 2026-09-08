@@ -29,8 +29,13 @@ date order. Built on main `c66ebef`, which matched the uploaded zip byte-for-byt
   spelling inside a quote is the team's, not ours.
 - `chatbot-official-posts.md` — the team's own posts, verbatim by design.
 - Old `CHANGELOG-*.md` files — historical records.
-- `gameplay-poster-source.html` and the rendered poster PNGs — the poster still carries a
-  few British spellings; re-rendering it is a separate job (same recipe as 5 Sept).
+- ~~The gameplay poster~~ — done in a follow-up the same day: `gameplay-poster-source.html`
+  converted (8 words: refertilize, fertilizer ×3, flavor, cozy, customization ×2, favorable,
+  license, specialization; dates "Sep 5, 2026" / "Sep 14" / "September 5, 2026") and both PNGs
+  re-rendered with the usual recipe (fonts as data URIs, `document.fonts.load()` before
+  `__rebalance()`, 1800px wide; full size at dsf = min(2.222, 4096/height)). Layout and
+  height are unchanged (1800×1898 / 3885×4096), so no `height` or `og:image:height`
+  attributes moved and no article was bumped.
 - Attributes that are identifiers — `id`, `href`, `src`, `class`, slugs, `url:` keys, FAQ
   question ids — are byte-identical to before (verified), so no link, anchor or deep link
   moved. Visible attributes (`alt`, `title`, `content` on meta descriptions, `aria-label`,
