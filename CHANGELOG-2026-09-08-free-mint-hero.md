@@ -30,9 +30,13 @@ main `0229c62`, which matched the uploaded zip after the roster-23 batch landed.
   (marketplace.roninchain.com/launchpads). `free-mint-hero.js` added before `</body>`.
   Home keeps the access-code / SIGN UP panel under the board unchanged. All wave text
   is static HTML, so crawlers and the chatbot builder see the dates without JS.
-- `style.css` — new "Free-mint hero" block (after the `.cd-cta` rules): layout, tile
-  states via `::after`, sprites, 760px mobile rules (egg tucks into the corner, sprites
-  hide, tiles go 2-up with Wave 5 full width). Sprite widths are written as
+- `style.css` — new "Free-mint hero" block (after the `.cd-cta` rules). Desktop is a
+  two-column grid: title + clock on the left, a 400×340 `.fm-scene` on the right with the
+  egg centred in a soft glow and the four creatures in its corners (bat / moth above,
+  pony / duck below) — one picture, not scattered sprites. Scene geometry is written in
+  a `--s` scale variable: ≤1000px it shrinks to 300px beside the title and the clock
+  centres underneath; ≤760px only the egg stays, tucked into the top-right corner, and
+  the tiles go 2-up with Wave 5 full width. Sprite widths are written as
   `.fm-hero .fm-bat{…}` on purpose — they must beat `.prereg-ticket img{width:100%}`.
 - `search.js` — two entries: "Free mint countdown — wave by wave" → `index.html#mint-board`
   and "Which free-mint wave is mine?" → `pre-registration.html#mint-board` (397 total).

@@ -798,41 +798,57 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 
 /* ---------- Free-mint hero: wave board + clock (Home, Early Access) ----------
    Lives inside .prereg-ticket, which supplies the ink card, border, shadow and
-   overflow:hidden. Tile states (.next / .open / .done) are set by free-mint-hero.js;
-   without JS the tiles still show every date and the clock shows "--". */
+   overflow:hidden. Two columns on desktop: title + clock on the left, the egg
+   scene (creatures gathered round the egg) on the right; the wave tiles and the
+   footer span both. Tile states (.next / .open / .done) are set by
+   free-mint-hero.js; without JS the tiles still show every date and the clock
+   shows "--". Scene geometry is written in --s so it can scale as one picture. */
 .fm-hero{
   position:relative; color:var(--cream); min-width:0;
+  display:grid; grid-template-columns:minmax(0,1fr) 400px; column-gap:18px;
+  grid-template-areas:"top scene" "clock scene" "waves waves" "foot foot";
   background-image:radial-gradient(rgba(255,244,214,.08) 1.4px,transparent 1.6px); background-size:14px 14px;
 }
-.fm-chars{position:absolute; inset:0; z-index:1; pointer-events:none}
-.fm-hero .fm-chars img{position:absolute; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}  /* widths below beat .prereg-ticket img{width:100%} */
-.fm-hero .fm-bat{top:22px; right:316px; width:120px; transform:rotate(-8deg)}
-.fm-hero .fm-moth{top:204px; left:196px; width:100px; animation:fm-hover 3.2s ease-in-out infinite}
-.fm-hero .fm-pony{top:226px; left:36px; width:132px}
-.fm-hero .fm-duck{top:256px; right:52px; width:112px}
-@keyframes fm-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.fm-top{display:grid; grid-template-columns:1fr auto; gap:18px; padding:26px 28px 0; align-items:start; position:relative; z-index:2}
+.fm-top{grid-area:top; padding:26px 0 0 28px; min-width:0}
 .fm-eyebrow{margin:0; font-weight:900; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--yellow)}
 .fm-title{
   display:block; margin:6px 0 0; font-size:clamp(3.2rem,8.5vw,6.4rem); line-height:.9; color:var(--yellow);
   text-shadow:4px 4px 0 var(--red), 8px 8px 0 rgba(0,0,0,.35); text-wrap:balance;
 }
-.fm-title span{display:block; color:var(--cream); font-size:.42em; line-height:1.05; letter-spacing:.06em; text-shadow:3px 3px 0 var(--red)}
-.fm-egg{position:relative; width:180px; margin-top:14px; filter:drop-shadow(0 0 22px rgba(255,210,63,.55))}
-.fm-hero .fm-egg img{width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}
+.fm-title span{display:block; color:var(--cream); font-size:.4em; line-height:1.05; letter-spacing:.06em; text-shadow:3px 3px 0 var(--red)}
+
+/* The scene: a 400×340 picture. Egg centred, bat and moth in the top corners,
+   pony and duck in the bottom corners. */
+.fm-scene{--s:1; grid-area:scene; position:relative; align-self:center; justify-self:end;
+  width:calc(400px * var(--s)); height:calc(340px * var(--s)); margin:22px 28px 0 0}
+.fm-scene::before{
+  content:''; position:absolute; left:50%; top:calc(150px * var(--s)); width:calc(320px * var(--s)); height:calc(320px * var(--s));
+  transform:translate(-50%,-50%); border-radius:50%;
+  background:radial-gradient(circle, rgba(255,210,63,.26), rgba(255,210,63,0) 62%);
+}
+.fm-hero .fm-scene img{position:absolute; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}  /* widths below beat .prereg-ticket img{width:100%} */
+.fm-hero .fm-bat{left:0; top:calc(26px * var(--s)); width:calc(120px * var(--s)); rotate:-8deg; animation:fm-hover 3.4s ease-in-out infinite}
+.fm-hero .fm-moth{right:0; top:calc(38px * var(--s)); width:calc(100px * var(--s)); rotate:6deg; animation:fm-hover 2.8s ease-in-out infinite reverse}
+.fm-hero .fm-pony{left:0; bottom:0; width:calc(132px * var(--s)); z-index:2}
+.fm-hero .fm-duck{right:0; bottom:0; width:calc(112px * var(--s)); z-index:2}
+.fm-egg{position:absolute; left:50%; top:calc(66px * var(--s)); width:calc(170px * var(--s)); margin-left:calc(-85px * var(--s)); filter:drop-shadow(0 0 22px rgba(255,210,63,.55))}
+.fm-hero .fm-egg img{position:static; width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}
 .fm-q{
-  position:absolute; top:-14px; left:50%; font-family:var(--font-display); font-size:2.2rem; line-height:1;
+  position:absolute; top:calc(-24px * var(--s)); left:50%; font-family:var(--font-display); font-size:calc(2.2rem * var(--s)); line-height:1;
   color:var(--yellow); text-shadow:3px 3px 0 var(--red); animation:fm-bob 2.4s ease-in-out infinite;
 }
+@keyframes fm-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes fm-bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-8px)}}
-.fm-clock{padding:22px 28px 0; text-align:center; position:relative; z-index:2}
+
+.fm-clock{grid-area:clock; padding:18px 0 0 28px; text-align:left; min-width:0}
 .fm-clock-title{margin:0; font-family:var(--font-display); font-size:1.35rem; letter-spacing:.04em; color:var(--cream)}
 .fm-clock-title b{font-weight:400; color:var(--yellow)}
-.fm-hero .countdown{margin-top:12px}
+.fm-hero .countdown{margin-top:12px; justify-content:flex-start}
 .fm-hero .cd-unit{background:rgba(255,244,214,.06); border-color:var(--cream)}
-.fm-local{margin:8px 0 0; font-size:.78rem; color:rgba(255,244,214,.75)}
+.fm-local{margin:10px 0 0; font-size:.78rem; color:rgba(255,244,214,.75); max-width:52ch}
 .fm-local b{color:var(--cream)}
-.fm-waves{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; padding:24px 28px 0; position:relative; z-index:2}
+
+.fm-waves{grid-area:waves; display:grid; grid-template-columns:repeat(5,1fr); gap:10px; padding:26px 28px 0; min-width:0}
 .fm-wave{
   display:flex; flex-direction:column; align-items:flex-start; position:relative; min-width:0;
   color:var(--cream); text-decoration:none; background:rgba(255,244,214,.06);
@@ -856,19 +872,32 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .fm-wave.open::after{display:block; content:'OPEN NOW'; background:var(--green); color:#fff}
 .fm-wave.done{opacity:.45}
 .fm-wave.done::after{display:block; content:'CLOSED'; background:var(--cream); color:var(--ink)}
-.fm-foot{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px 26px; position:relative; z-index:2}
+.fm-foot{grid-area:foot; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px 26px; min-width:0}
 .fm-fine{margin:0; font-size:.78rem; color:rgba(255,244,214,.78); max-width:56ch}
 .fm-fine b{color:var(--yellow)}
 .fm-ctas{display:flex; gap:12px; flex-wrap:wrap}
 .pixel-btn.fm-ghost{background:transparent; color:var(--cream); border-color:var(--cream); box-shadow:5px 5px 0 var(--red)}
 .pixel-btn.fm-ghost:hover{box-shadow:3px 3px 0 var(--red)}
 .pixel-btn.fm-ghost:active{box-shadow:0 0 0 var(--red)}
+
+/* Tablet: smaller scene beside the title, clock centred underneath both */
+@media(max-width:1000px){
+  .fm-hero{grid-template-columns:minmax(0,1fr) 300px; grid-template-areas:"top scene" "clock clock" "waves waves" "foot foot"}
+  .fm-scene{--s:.75; margin:20px 24px 0 0}
+  .fm-clock{padding:20px 28px 0; text-align:center}
+  .fm-hero .countdown{justify-content:center}
+  .fm-local{margin-left:auto; margin-right:auto}
+}
+/* Phone: one column, egg alone in the top-right corner, creatures rest */
 @media(max-width:760px){
-  .fm-chars{display:none}
-  .fm-top{grid-template-columns:1fr; padding:22px 18px 0}
-  .fm-egg{position:absolute; right:14px; top:22px; width:96px; margin:0}
+  .fm-hero{display:block}
+  .fm-top{padding:22px 18px 0}
+  .fm-scene{position:absolute; top:22px; right:14px; width:96px; height:auto; margin:0}
+  .fm-scene::before,.fm-hero .fm-bat,.fm-hero .fm-moth,.fm-hero .fm-pony,.fm-hero .fm-duck{display:none}
+  .fm-egg{position:static; width:96px; margin:0}
+  .fm-q{top:-14px; font-size:2rem}
   .fm-title{font-size:clamp(2.3rem,11vw,4rem); padding-right:104px}
-  .fm-title span{margin-top:.2em; font-size:.38em}
+  .fm-title span{margin-top:.3em; font-size:.5em; line-height:1.1}
   .fm-clock{padding:18px 18px 0}
   .fm-waves{grid-template-columns:1fr 1fr; padding:20px 18px 0}
   .fm-wave:last-child{grid-column:1/-1}
