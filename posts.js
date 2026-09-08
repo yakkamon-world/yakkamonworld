@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "ronin-wave",
+    category: "official",
+    title: "The Ronin Wave: Who Gets Yakkamon\u2019s 2,000 Gamer Mints, and How to Check If You\u2019re One of Them",
+    date: "Sep 8, 2026",
+    excerpt: "A new official page explains Wave 3 of the free mint: 2,000 hidden Genesis NFTs on 16 September for active Ronin gamers, picked by a 90-day on-chain snapshot of Axie Infinity, Craft World, Pixels, Ronkeverse and Moku \u2014 42,730 candidate wallets, a Sunflower Land list still to come, and lists that finalise on 10 September. How the score works, how to check your address, the arithmetic behind the cut, and what to do if you are not on it.",
+    body: [
+      "On 8 September the Yakkamon team published the missing page of the free mint: what <strong>Wave 3 \u2014 the Ronin Wave</strong> is. It is the one wave that ignores the Yakkamon leaderboard. No rank, no snapshot position and no $FLOWER deposit are needed; it is decided by what your Ronin wallet did in other games over the last 90 days.",
+      "## What the page says",
+      "A <strong>90-day on-chain snapshot ending 8 September</strong> across five Ronin games \u2014 Axie Infinity (20,040 wallets), Craft World (14,422), Pixels (4,247), Ronkeverse (3,658) and Moku (2,354) \u2014 gives <strong>42,730 unique candidate wallets</strong> for <strong>2,000 spots</strong>. A Sunflower Land list is still being pulled and a separate whitelist comes from the Ronin team. Active days matter most, signals are capped per day, cross-game players sort to the top, bots and custodial wallets are pushed down. Lists are candidates, not the whitelist, and they finalise on <strong>10 September</strong>.",
+      "## What to do",
+      "Search the candidate lists for your Ronin address in lowercase 0x form (not ronin:), check the right wallet if you play Craft World, and check again before the 10th. On the day, mint from the wallet that appears on the list \u2014 one per wallet per wave, on top of any trainer waves you qualify for. Not on any list? The trainer route is still open: verify and deposit 5 $FLOWER before 10 September for Waves 2 and 4.",
+      "## The catch",
+      "As of 14:00 UTC on 8 September the list links point to a GitHub repository that returns \u201cpage not found\u201d. The article covers the overlap arithmetic (why multi-game players may fill most of the 2,000), the two readings of \u201c2,000 spots\u201d, and five questions for the team."
+    ]
+  },
+  {
     slug: "hunting-explained",
     category: "analysis",
     title: "Every Wild Yakkamon Wants Something \u2014 What the Official Hunting Post Means for Players",
@@ -92,7 +108,8 @@ const YAKKAMON_POSTS = [
       "## The game half keeps earning A\u2019s",
       "The two-track economy is the decision of the stream (A): an infinite, untradable free-to-play layer, with tradable production gated behind limited coin faucets \u2014 free players get a real game that cannot crush the market. No wearable gear, again, under direct questioning (A). Logging off pauses the game rather than punishing you (A). Breeding caps scale with rarity, so supply grows where assets are cheap and freezes where scarcity carries value (A\u2212). Legendary utilities are economic auras \u2014 storm-charged doubles work speed in range (A\u2212). Combat gets real player input on a swappable architecture (A\u2212), rare/uncommon utilities are random-rolled (B+), and evolutions wait past launch for an honest supply-dynamics reason (B+).",
       "## Before the 10th",
-      "Check your rank against the 1,000 and 10,000 lines, move early if you\u2019re near one, and get mint-ready: Ronin wallet, RON for gas, five-flower minimum deposited, online when your wave opens. The full sixteen grades, the wave table and our questions for the next stream are in the article."
+      "Check your rank against the 1,000 and 10,000 lines, move early if you\u2019re near one, and get mint-ready: Ronin wallet, RON for gas, five-flower minimum deposited, online when your wave opens. The full sixteen grades, the wave table and our questions for the next stream are in the article.",
+      "<strong>Update, 8 September:</strong> the Ronin wave criteria asked for in grade 5 are now published \u2014 the team built the list itself from a 90-day on-chain snapshot of five Ronin games. <a href=\"article-ronin-wave.html\">The Ronin Wave, explained \u2192</a>"
     ]
   },
   {

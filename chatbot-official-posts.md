@@ -10,8 +10,25 @@
   Format: one post per "## " heading. Put the title, where it was posted and the
   date (or "early September 2026" if you only know roughly) in the heading line,
   then the post text exactly as written. Newest post at the top.
+  A docs.yakkamon.com page the chat worker does not fetch live (anything missing
+  from docs.yakkamon.com/llms.txt) can go here too: put "Source: <page url>" as the
+  first line under the heading and the bot cites that page instead of the X account.
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
+
+## Wave 3 — The Ronin Wave (official page on docs.yakkamon.com, published 8 September 2026)
+
+Source: https://docs.yakkamon.com/pre-registration/free-mint/ronin-wave
+
+Key facts in plain terms, from the official page (the page itself is the source of record): Wave 3 of the free mint opens on 16 September 2026 with 2,000 spots reserved for active Ronin gamers. No Yakkamon rank, leaderboard position or $FLOWER deposit is needed for this wave. The team took a 90-day snapshot of on-chain activity ending 8 September across five Ronin games: Axie Infinity (Atia's Blessing activations, holding Mystic Axies, Axie marketplace buys and sells, any Axie NFT transfer) — 20,040 wallets; Craft World (DynoCoin/COIN activity on Katana) — 14,422; Pixels ($PIXEL staking and claiming in Pixels and Pixel Dungeons, holding or trading Farm Land, holding or trading Pets) — 4,247; Ronkeverse (holding or trading Ronkeverse NFTs, $RONKE token activity) — 3,658; Moku (holding or trading Moki Genesis NFTs) — 2,354. Deduplicated across the five games: 42,730 unique wallets. The published lists are candidates, not the final whitelist; the final cut of 2,000 is made from these lists plus a whitelist supplied by the Ronin team; being on a list is a strong position, not a guarantee. Lists are finalised on 10 September and may be updated before then. Sunflower Land players get their own spot in this wave; that list is not published yet and is expected to count active farming on a Ronin farm over the same 90-day window, $FLOWER activity on Ronin, holding Sunflower Land collectibles, Bumpkins and Farm NFTs, and marketplace trades.
+
+How to check: open a list (the mega list master_deduped.csv covers every wallet and all games; there are ranked per-game lists for Axie Infinity, Craft World, Pixels, Ronkeverse and Moku, hosted in the sunflower-land/yakkamon-docs GitHub repository under ronin_waves/) and search for your Ronin wallet address in lowercase 0x… format, not the ronin: format. Columns: rank (position in that game's list, lower is better), score (activity, higher is better), active_days_90d (days on-chain in the window), and in the mega list games and games_count (which games you appeared in and how many); later columns are the raw signal counts.
+
+How the score works: active days across the 90-day window are the biggest input; signals are weighted and capped per day, so repeating an action many times in one day does not beat playing across many days; cross-game players sort to the top of the mega list; bot-like wallets (automated flipping, spam) are heavily discounted and rank last but stay in the file, flagged; custodial, guild and escrow wallets are discounted; contracts (marketplaces, DEXes, staking contracts) and a batch of sybil wallets are excluded entirely.
+
+Caveats from the page: Pixels VIP is bought from an in-game custodial balance and is invisible on-chain, so it is not counted; holding NFTs without transacting for 90 days shows as 0 active days and a low score; Craft World creates an embedded smart wallet that may not be the address you would mint from, so Craft World players should check their Ronin Wallet address; Moku Grand Arena entries are not counted yet; only on-chain activity counts.
+
+What happens next: 10 September whitelists finalised; 14 September the free mint goes live on the Ronin Launchpad (marketplace.roninchain.com/launchpads); 16 September Wave 3 opens with 2,000 supply; connect the same Ronin wallet found on the list, keep a little RON for gas, and mint; 14 October every Genesis NFT is revealed together. One mint per wallet per wave — trainers who also qualify through the leaderboard can mint in those waves too. The snapshot is only for the Ronin free mint and does not affect the trainer airdrop leaderboard, which keeps running and finalises separately. Not on the list? Pre-register, verify and deposit 5 $FLOWER to unlock Waves 2 and 4.
 
 ## Yakkamon — Hunting (official post by the Yakkamon team on X, early September 2026)
 

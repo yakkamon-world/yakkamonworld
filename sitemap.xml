@@ -278,7 +278,13 @@
   </url>
   <url>
     <loc>https://yakkamonworld.com/article-free-mint-stream-graded.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yakkamonworld.com/article-ronin-wave.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

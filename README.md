@@ -216,7 +216,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 54 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 55 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config

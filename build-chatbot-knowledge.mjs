@@ -166,7 +166,13 @@ try {
   for (const sec of md.split(/\n(?=## )/)) {
     const h = sec.match(/^##\s+(.*)$/m);
     if (!h) continue;
-    add(1, `Official post: ${h[1].trim()}`, "https://x.com/yakkamon_game", sec.replace(/^##\s+.*$/m, "").trim(), { kind: "post" });
+    let body = sec.replace(/^##\s+.*$/m, "").trim();
+    // Optional first line "Source: <url>" — cite that page instead of the X account
+    // (used for docs.yakkamon.com pages the chat worker does not fetch live).
+    let url = "https://x.com/yakkamon_game";
+    const src = body.match(/^Source:\s*(https?:\/\/\S+)\s*\n?/);
+    if (src) { url = src[1]; body = body.slice(src[0].length).trim(); }
+    add(1, `Official post: ${h[1].trim()}`, url, body, { kind: "post" });
   }
 } catch (e) { console.warn("chatbot-official-posts.md skipped:", e.message); }
 
