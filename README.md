@@ -182,6 +182,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ videos.html                 Video index
 │  ├─ faq.html                    FAQ
 │  ├─ contact.html                Contact form
+│  ├─ build-static-hubs.mjs       Writes static copies of the JS-rendered hubs into index/news/videos/faq (run by the Action)
 │  ├─ 404.html                    Not-found page (served by `not_found_handling` in wrangler.jsonc; noindex, not in sitemap/search)
 │  ├─ about.html                  Who we are, how we work, content usage
 │  ├─ privacy.html                Privacy + analytics consent controls
@@ -409,6 +410,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 ---
 
 ## Known quirks
+
+- STATIC HUBS: `index.html` (latest news), `news.html`, `videos.html` and `faq.html` carry a pre-rendered copy of their JavaScript content between `<!-- static-hubs:start … -->` / `<!-- static-hubs:end … -->` markers, so crawlers and no-JS visitors see real content. Never hand-edit inside the markers — edit `posts.js` / `videos.js` / `faq.js` and run `node build-static-hubs.mjs` (the GitHub Action does this on every push and commits the result). The runtime scripts still replace the block on load.
 
 - AUTHORSHIP: every article is bylined `By YakkamonWorld` (an `a.byline` in `.article-meta` linking `about.html#author`) and its JSON-LD `author` is the Organization with `@id …/#organization`, `alternateName` "YakkamonW" (the in-game trainer name) and `url` pointing at that anchor. New articles must carry both; there is no per-person byline by design. about.html, privacy.html, contact.html and the consent/contact/chatbot UI strings are written in the FIRST PERSON SINGULAR — one developer and player. New site-voice copy should say "I", not "we". (Shared footer keeps "BUILT BY THE COMMUNITY" and "Contact us".)
 
