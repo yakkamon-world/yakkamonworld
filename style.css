@@ -1021,7 +1021,7 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .gp-like p{margin:0; font-weight:700; font-size:.98rem; line-height:1.5}
 
 /* --- Gameplay: quick reference + open questions --- */
-.gp-extra{margin:44px 0 0; min-width:0}
+.gp-extra{margin:44px 0 0; min-width:0; scroll-margin-top:90px}
 .gp-extra h2{margin:0 0 6px}
 .gp-extra .gp-extra-note{margin:0 0 14px; font-size:.92rem; font-weight:700; opacity:.8}
 .gp-unknowns{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:16px 0 0; padding:0; list-style:none}

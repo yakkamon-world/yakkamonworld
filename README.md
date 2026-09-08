@@ -249,7 +249,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ gameplay-poster.png         1800×1898 — in-page field guide poster (rendered from gameplay-poster-source.html)
    ├─ gameplay-poster-full.png    3885×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
-   ├─ yakkamon-roster*.jpg        Official roster sheets — original 18, the 21-sheet (25 Aug), current 22-sheet (31 Aug), each with a -2x
+   ├─ yakkamon-roster*.jpg        Official roster sheets — original 18, the 21-sheet (25 Aug), the 22-sheet (31 Aug), current 23-sheet (8 Sep, reordered), each with a -2x
    ├─ free-mint-banner.webp       Free mint banner (Home + Early Access), links to the guide
    ├─ free-mint-banner-2x.webp    Same, 2x for high-DPI
    ├─ prereg-ticket.webp          Old ticket card art (still used by article-yakkamon-referral-code)
