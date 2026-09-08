@@ -796,6 +796,86 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 }
 
 
+/* ---------- Free-mint hero: wave board + clock (Home, Early Access) ----------
+   Lives inside .prereg-ticket, which supplies the ink card, border, shadow and
+   overflow:hidden. Tile states (.next / .open / .done) are set by free-mint-hero.js;
+   without JS the tiles still show every date and the clock shows "--". */
+.fm-hero{
+  position:relative; color:var(--cream); min-width:0;
+  background-image:radial-gradient(rgba(255,244,214,.08) 1.4px,transparent 1.6px); background-size:14px 14px;
+}
+.fm-chars{position:absolute; inset:0; z-index:1; pointer-events:none}
+.fm-hero .fm-chars img{position:absolute; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}  /* widths below beat .prereg-ticket img{width:100%} */
+.fm-hero .fm-bat{top:16px; right:330px; width:92px; transform:rotate(-8deg)}
+.fm-hero .fm-moth{top:206px; left:186px; width:86px; animation:fm-hover 3.2s ease-in-out infinite}
+.fm-hero .fm-pony{top:232px; left:40px; width:120px}
+.fm-hero .fm-duck{top:258px; right:56px; width:108px}
+@keyframes fm-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.fm-top{display:grid; grid-template-columns:1fr auto; gap:18px; padding:26px 28px 0; align-items:start; position:relative; z-index:2}
+.fm-eyebrow{margin:0; font-weight:900; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--yellow)}
+.fm-title{
+  display:block; margin:6px 0 0; font-size:clamp(3.2rem,8.5vw,6.4rem); line-height:.9; color:var(--yellow);
+  text-shadow:4px 4px 0 var(--red), 8px 8px 0 rgba(0,0,0,.35); text-wrap:balance;
+}
+.fm-title span{display:block; color:var(--cream); font-size:.42em; line-height:1.05; letter-spacing:.06em; text-shadow:3px 3px 0 var(--red)}
+.fm-egg{position:relative; width:180px; margin-top:14px; filter:drop-shadow(0 0 22px rgba(255,210,63,.55))}
+.fm-hero .fm-egg img{width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}
+.fm-q{
+  position:absolute; top:-14px; left:50%; font-family:var(--font-display); font-size:2.2rem; line-height:1;
+  color:var(--yellow); text-shadow:3px 3px 0 var(--red); animation:fm-bob 2.4s ease-in-out infinite;
+}
+@keyframes fm-bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-8px)}}
+.fm-clock{padding:22px 28px 0; text-align:center; position:relative; z-index:2}
+.fm-clock-title{margin:0; font-family:var(--font-display); font-size:1.35rem; letter-spacing:.04em; color:var(--cream)}
+.fm-clock-title b{font-weight:400; color:var(--yellow)}
+.fm-hero .countdown{margin-top:12px}
+.fm-hero .cd-unit{background:rgba(255,244,214,.06); border-color:var(--cream)}
+.fm-local{margin:8px 0 0; font-size:.78rem; color:rgba(255,244,214,.75)}
+.fm-local b{color:var(--cream)}
+.fm-waves{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; padding:24px 28px 0; position:relative; z-index:2}
+.fm-wave{
+  display:flex; flex-direction:column; align-items:flex-start; position:relative; min-width:0;
+  color:var(--cream); text-decoration:none; background:rgba(255,244,214,.06);
+  border:3px solid rgba(255,244,214,.4); border-radius:12px; padding:10px 12px 12px;
+  transition:border-color .12s ease, transform .12s ease;
+}
+.fm-wave:hover{border-color:var(--yellow)}
+.fm-day{font-family:var(--font-display); font-size:2rem; line-height:1; letter-spacing:.03em}
+.fm-day small{font-family:var(--font-body); font-weight:900; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; margin-left:4px; opacity:.8}
+.fm-name{font-weight:900; font-size:.82rem; margin:6px 0 2px}
+.fm-who{font-size:.74rem; line-height:1.35; opacity:.85}
+.fm-supply{display:inline-block; margin-top:8px; font-family:var(--font-display); font-size:1rem; letter-spacing:.04em; background:var(--cream); color:var(--ink); border-radius:999px; padding:1px 10px}
+.fm-wave::after{
+  display:none; position:absolute; top:-12px; right:10px; font-family:var(--font-display); font-size:.85rem; letter-spacing:.08em;
+  border-radius:999px; padding:1px 10px; border:2px solid var(--ink);
+}
+.fm-wave.next{background:var(--yellow); color:var(--ink); border-color:var(--yellow); box-shadow:5px 5px 0 var(--red); transform:translateY(-4px)}
+.fm-wave.next .fm-supply{background:var(--ink); color:var(--yellow)}
+.fm-wave.next::after{display:block; content:'NEXT'; background:var(--red); color:#fff}
+.fm-wave.open{border-color:var(--green); box-shadow:inset 0 0 0 2px var(--green)}
+.fm-wave.open::after{display:block; content:'OPEN NOW'; background:var(--green); color:#fff}
+.fm-wave.done{opacity:.45}
+.fm-wave.done::after{display:block; content:'CLOSED'; background:var(--cream); color:var(--ink)}
+.fm-foot{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px 26px; position:relative; z-index:2}
+.fm-fine{margin:0; font-size:.78rem; color:rgba(255,244,214,.78); max-width:56ch}
+.fm-fine b{color:var(--yellow)}
+.fm-ctas{display:flex; gap:12px; flex-wrap:wrap}
+.pixel-btn.fm-ghost{background:transparent; color:var(--cream); border-color:var(--cream); box-shadow:5px 5px 0 var(--red)}
+.pixel-btn.fm-ghost:hover{box-shadow:3px 3px 0 var(--red)}
+.pixel-btn.fm-ghost:active{box-shadow:0 0 0 var(--red)}
+@media(max-width:760px){
+  .fm-chars{display:none}
+  .fm-top{grid-template-columns:1fr; padding:22px 18px 0}
+  .fm-egg{position:absolute; right:14px; top:22px; width:96px; margin:0}
+  .fm-title{font-size:clamp(2.3rem,11vw,4rem); padding-right:104px}
+  .fm-title span{margin-top:.2em; font-size:.38em}
+  .fm-clock{padding:18px 18px 0}
+  .fm-waves{grid-template-columns:1fr 1fr; padding:20px 18px 0}
+  .fm-wave:last-child{grid-column:1/-1}
+  .fm-foot{padding:20px 18px 22px}
+  .fm-ctas .pixel-btn{font-size:1.05rem; padding:11px 20px}
+}
+
 /* ---------- Tips page: comparison figure ---------- */
 .tip-figure{
   background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius);

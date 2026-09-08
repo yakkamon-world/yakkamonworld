@@ -224,7 +224,8 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │
 ├─ WIDGETS
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
-│  ├─ prereg-ticket.js            Ticket-card countdown (Home)
+│  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
+│  ├─ free-mint-hero.js           Free-mint wave board: live clock + tile states (Home, Early Access) — WAVES dates/hours live here
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
 │  ├─ contact-form.js             Contact form relay
@@ -250,8 +251,9 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ gameplay-poster-full.png    3885×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
    ├─ yakkamon-roster*.jpg        Official roster sheets — original 18, the 21-sheet (25 Aug), the 22-sheet (31 Aug), current 23-sheet (8 Sep, reordered), each with a -2x
-   ├─ free-mint-banner.webp       Free mint banner (Home + Early Access), links to the guide
-   ├─ free-mint-banner-2x.webp    Same, 2x for high-DPI
+   ├─ fm-bat / fm-moth / fm-pony / fm-duck / fm-egg .webp   Free-mint hero sprites (transparent, 2x); swap in place, keep the names
+   ├─ free-mint-banner.webp       Former free-mint banner — no longer referenced since 8 Sep, deletable
+   ├─ free-mint-banner-2x.webp    Same, 2x — deletable
    ├─ prereg-ticket.webp          Old ticket card art (still used by article-yakkamon-referral-code)
    ├─ faq-og-status.png           FAQ social card
    └─ news-*.jpg / news-*.png     Per-article images
@@ -319,6 +321,18 @@ throughout the articles and would break silently.
 
 Then update the quick-reference table in `gameplay.html`, the matching section
 in `gameplay-guide.html`, and add search entries.
+
+### Change a free-mint wave time (or add the published hours)
+
+The board at the top of Home and Early Access (`.fm-hero` inside `.prereg-ticket`)
+takes every date from the `WAVES` list at the top of `free-mint-hero.js`. The
+official page gives dates but no hours, so each entry is `Date.UTC(2026, 8, 14, 0, 0, 0)`
+— month 0-based, then day, hour, minute — and the hero tells visitors the clock
+assumes 00:00 UTC. When hours are published, change the hour/minute arguments and
+delete the "assumes 00:00 UTC" wording in the `local` string of the same file.
+The tile markup on both pages must keep matching `data-fm-wave` ids (`w1`–`w5`).
+To swap the sprites, replace `fm-*.webp` keeping the file names and proportions
+(display size is half the file's pixel size).
 
 ### Add a whole new page
 
@@ -434,6 +448,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 ---
 
 ## Known quirks
+
+- FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates on the tiles, which are static text so crawlers and no-JS visitors see them.
 
 - STATIC HUBS: `index.html` (latest news), `news.html`, `videos.html` and `faq.html` carry a pre-rendered copy of their JavaScript content between `<!-- static-hubs:start … -->` / `<!-- static-hubs:end … -->` markers, so crawlers and no-JS visitors see real content. Never hand-edit inside the markers — edit `posts.js` / `videos.js` / `faq.js` and run `node build-static-hubs.mjs` (the GitHub Action does this on every push and commits the result). The runtime scripts still replace the block on load.
 
