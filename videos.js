@@ -80,6 +80,15 @@ const YAKKAMON_VIDEOS = [
 
   // ---------- TACTICS ----------
   {
+    id: "nFFWZmi9-WE",
+    ep: "19",
+    runtime: "7:27",
+    block: "tactics",
+    title: "Yakkamon \u2014 Ronin Free Mint Guide",
+    blurb: "The free mint from start to finish: the five waves (Sept 14\u201318) and which ones your rank unlocks, the Sept 10 snapshot, the 5 $FLOWER deposit that opens Waves 2 and 4, the Ronin wallet and RON you need, and exactly what to do on mint day.",
+    related: { href: "article-ronin-free-mint-guide.html", label: "Read the Ultimate Ronin Free Mint Guide" },
+  },
+  {
     id: "qz_CFPic72Q",
     ep: "14",
     runtime: "4:33",
