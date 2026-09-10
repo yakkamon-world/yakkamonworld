@@ -178,7 +178,7 @@ const YAKKAMON_VIDEOS = [
     block: "start",
     title: "What Is Yakkamon? The 2-Minute Explainer",
     blurb: "A creature collector that's also an idle farming game. What it is, who's building it, and why pre-registration matters before early access opens in November or December 2026.",
-    related: { href: "index.html", label: "What is Yakkamon?" },
+    related: { href: "/", label: "What is Yakkamon?" },
   },
 
   // ---------- TRAILERS ----------

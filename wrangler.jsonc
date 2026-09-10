@@ -3,6 +3,13 @@
   "compatibility_date": "2026-07-29",
   "assets": {
     "directory": ".",
+    // "none" serves every page at its real ".html" address with a 200.
+    // The default ("auto-trailing-slash") 307-redirected /page.html to /page,
+    // which contradicted every canonical tag and sitemap URL on the site and
+    // put 26 "Page with redirect" + 8 "Duplicate without user-selected
+    // canonical" rows in Search Console. With "none" the root "/" no longer
+    // maps to index.html on its own — the _redirects file rewrites it.
+    "html_handling": "none",
     "not_found_handling": "404-page"
   }
 }
