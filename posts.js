@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "whitelist-live",
+    category: "official",
+    title: "The Free Mint Whitelist Is Live: Check Your Wallet, and Every Wave Now Has an Opening Time",
+    date: "Sep 10, 2026",
+    excerpt: "yakkamon.com/whitelist is live: paste a 0x or ronin: address and see which free-mint waves it is whitelisted for. The snapshot was taken September 10 at 01:00 UTC and the lists are final. Every wave now has an official opening time \u2014 00:00 UTC for Waves 1, 2 and 5, 08:00 UTC for Waves 3 and 4 \u2014 and a name, Sunflower Land is in the Ronin Wave, and Wave 5 \u201cmay never open.\u201d The times in your time zone, what changed, and what to do if your wallet comes back empty.",
+    body: [
+      "The waiting part of the free mint is over. <a href=\"https://yakkamon.com/whitelist\" target=\"_blank\" rel=\"noopener\"><strong>yakkamon.com/whitelist</strong></a> is live: paste a wallet address, <code>0x</code> or <code>ronin:</code> form, and it tells you which of the five waves that wallet is whitelisted for. The snapshot was taken on <strong>September 10 at 01:00 UTC</strong> and the lists are final; nothing you do to your rank or deposit now changes them.",
+      "## Every wave has a time and a name",
+      "<strong>Wave 1 \u00b7 Top Trainers</strong> \u2014 Sept 14, 00:00 UTC, 1,000 mints for the top 1,000, guaranteed. <strong>Wave 2 \u00b7 OG Trainers</strong> \u2014 Sept 15, 00:00 UTC, 3,000 for ranks 1\u201310,000 with 5 $FLOWER deposited. <strong>Wave 3 \u00b7 The Ronin Wave</strong> \u2014 Sept 16, <strong>08:00 UTC</strong>, 2,000 for active Ronin gamers, Sunflower Land now included. <strong>Wave 4 \u00b7 Yakkamon Hunters</strong> \u2014 Sept 17, <strong>08:00 UTC</strong>, 5,000 for ranks 1\u201320,000 with a deposit. <strong>Wave 5 \u00b7 Public Trainers</strong> \u2014 Sept 18, 00:00 UTC, whatever is left for ranks 1\u201350,000, and the page says it \u201cmay never open if the supply is gone.\u201d Waves 2, 3 and 4 are first come, first served. 00:00 UTC is 8:00 PM the evening before in New York; 08:00 UTC is 4:00 AM in New York and 4:00 PM in Manila.",
+      "## What changed",
+      "Until today every countdown, ours included, assumed 00:00 UTC for every wave; Waves 3 and 4 open eight hours later than that, and our clocks now run on the published times. Stacking is official: one mint per eligible trainer per wave, and an earlier wave does not use up a later one. Wave 1\u2019s supply matches its whitelist exactly, so the click races start Monday. The 5 $FLOWER deposit that unlocked Waves 2 and 4 had to be in before 01:00 UTC on the 10th.",
+      "## What to do",
+      "Check the Ronin wallet linked to your Yakkamon account on the checker; if you play other Ronin games, check that wallet too, because the Ronin Wave is decided by on-chain activity, not by your account. Base deposits counted for rank and for the 5 $FLOWER condition, but nothing on Base mints. Put a little RON in the whitelisted wallet before Sunday night. If the checker comes back empty, the free mint is not your route this week: the marketplace opens the moment the first eggs mint, the 1,500-mint ecosystem airdrop has no date yet, and the top-5,000 pre-registration airdrop runs on its own, later snapshot. The article has the two opening hours in nine time zones, live status chips for every wave, and three questions the page leaves open."
+    ]
+  },
+  {
     slug: "free-mint-by-the-numbers",
     category: "analysis",
     title: "Wave 5 Probably Doesn\u2019t Exist: The Yakkamon Free Mint by the Numbers",
@@ -20,7 +36,8 @@ const YAKKAMON_POSTS = [
       "## What $1.25 buys",
       "Five $FLOWER is $1.25 today and it is the entry condition for both deposit waves \u2014 withdrawable, not a fee, but the snapshot is September 10. Meanwhile 83,408 registered trainers (62.5%) sit below rank 50,000 and have no wave at all unless they are on the Ronin gamers list.",
       "## Where the Legendaries land",
-      "If rarity is drawn at the reveal, there is a 73% chance nobody mints a Storm on day one, a 49% chance one of the three goes to a Ronin gamer, and the leftover Wave 4 is statistically the richest wave. The mint holds 2.5% of all Genesis Legendaries; the airdrop hands out 73%. The article closes with what a hidden egg is worth in Uncommons, a per-rank action list, and five questions for the team."
+      "If rarity is drawn at the reveal, there is a 73% chance nobody mints a Storm on day one, a 49% chance one of the three goes to a Ronin gamer, and the leftover Wave 4 is statistically the richest wave. The mint holds 2.5% of all Genesis Legendaries; the airdrop hands out 73%. The article closes with what a hidden egg is worth in Uncommons, a per-rank action list, and five questions for the team.",
+      "<strong>Update, September 10:</strong> the official whitelist page now says Wave 5 \u201cmay never open if the supply is gone\u201d and \u201cgets only what the earlier waves left,\u201d and the deposit window is closed \u2014 the snapshot was taken at 01:00 UTC on September 10. Every wave has an opening hour now: 00:00 UTC for Waves 1, 2 and 5, 08:00 UTC for Waves 3 and 4. <a href=\"article-whitelist-live.html\">The whitelist is live \u2192</a>"
     ]
   },
   {
@@ -36,7 +53,8 @@ const YAKKAMON_POSTS = [
       "## What to do",
       "Search the candidate lists for your Ronin address in lowercase 0x form (not ronin:), check the right wallet if you play Craft World, and check again before the 10th. On the day, mint from the wallet that appears on the list \u2014 one per wallet per wave, on top of any trainer waves you qualify for. Not on any list? The trainer route is still open: verify and deposit 5 $FLOWER before September 10 for Waves 2 and 4.",
       "## The catch",
-      "As of 14:00 UTC on September 8 the list links point to a GitHub repository that returns \u201cpage not found\u201d. The article covers the overlap arithmetic (why multi-game players may fill most of the 2,000), the two readings of \u201c2,000 spots\u201d, and five questions for the team."
+      "As of 14:00 UTC on September 8 the list links point to a GitHub repository that returns \u201cpage not found\u201d. The article covers the overlap arithmetic (why multi-game players may fill most of the 2,000), the two readings of \u201c2,000 spots\u201d, and five questions for the team.",
+      "<strong>Update, September 10:</strong> the candidate lists are superseded \u2014 <a href=\"https://yakkamon.com/whitelist\" target=\"_blank\" rel=\"noopener\">yakkamon.com/whitelist</a> now checks any 0x or ronin: address against the final whitelist. The Ronin Wave opens <strong>September 16 at 08:00 UTC</strong>, and Sunflower Land is in the six games. <a href=\"article-whitelist-live.html\">The whitelist is live \u2192</a>"
     ]
   },
   {
@@ -68,7 +86,8 @@ const YAKKAMON_POSTS = [
       "## How to do it",
       "Install the official Ronin Wallet, fund it with a little RON, swap for $FLOWER inside it (check the contract address first), send it to your own deposit address in one transfer, then <strong>link that wallet to your Yakkamon account before the September 10 snapshot</strong>. Leave the RON in it \u2014 that is your mint-day gas.",
       "## Already on Base?",
-      "Nothing to undo and nothing to bridge. Your points and the 5 $FLOWER condition are safe. You just need a Ronin wallet as well: set one up, fund it, link it, mint from it. Full table and steps on the Tips page."
+      "Nothing to undo and nothing to bridge. Your points and the 5 $FLOWER condition are safe. You just need a Ronin wallet as well: set one up, fund it, link it, mint from it. Full table and steps on the Tips page.",
+      "<strong>Update, September 10:</strong> the snapshot has been taken (01:00 UTC, September 10) and the whitelists are final, so a deposit now no longer changes your waves. Mint from the Ronin wallet that was linked at the snapshot, and confirm it at <a href=\"https://yakkamon.com/whitelist\" target=\"_blank\" rel=\"noopener\">yakkamon.com/whitelist</a>. <a href=\"article-whitelist-live.html\">The whitelist is live \u2192</a>"
     ]
   },
   {
@@ -104,7 +123,8 @@ const YAKKAMON_POSTS = [
       "## Mint day",
       "Buy RON for gas days ahead. Open marketplace.roninchain.com/launchpads yourself, connect the linked wallet, be there before your wave opens, mint, approve, and come back for every wave you qualify for. It is free, so any page charging a price is a scam.",
       "## What is inside",
-      "3 Storm, 5 Echo, 10 Ghost, 50 Bloom, 50 Rare and 9,882 Uncommon \u2014 about one mint in 147 is a Legendary. Hidden NFTs are tradable before the reveal, deposit into the game at early access, and this is the ongoing Yakkamon collection. The September 10 snapshot does not lock the trainer airdrop, which keeps running to one week before early access."
+      "3 Storm, 5 Echo, 10 Ghost, 50 Bloom, 50 Rare and 9,882 Uncommon \u2014 about one mint in 147 is a Legendary. Hidden NFTs are tradable before the reveal, deposit into the game at early access, and this is the ongoing Yakkamon collection. The September 10 snapshot does not lock the trainer airdrop, which keeps running to one week before early access.",
+      "<strong>Update, September 10:</strong> the whitelist is live at <a href=\"https://yakkamon.com/whitelist\" target=\"_blank\" rel=\"noopener\">yakkamon.com/whitelist</a> \u2014 the snapshot was taken at 01:00 UTC and the lists are final. Every wave now has an opening hour (00:00 UTC for Waves 1, 2 and 5; <strong>08:00 UTC</strong> for Waves 3 and 4) and a name, and the guide\u2019s wave table shows live status for each. <a href=\"article-whitelist-live.html\">What the page says \u2192</a>"
     ]
   },
   {
@@ -127,7 +147,8 @@ const YAKKAMON_POSTS = [
       "The two-track economy is the decision of the stream (A): an infinite, untradable free-to-play layer, with tradable production gated behind limited coin faucets \u2014 free players get a real game that cannot crush the market. No wearable gear, again, under direct questioning (A). Logging off pauses the game rather than punishing you (A). Breeding caps scale with rarity, so supply grows where assets are cheap and freezes where scarcity carries value (A\u2212). Legendary utilities are economic auras \u2014 storm-charged doubles work speed in range (A\u2212). Combat gets real player input on a swappable architecture (A\u2212), rare/uncommon utilities are random-rolled (B+), and evolutions wait past launch for an honest supply-dynamics reason (B+).",
       "## Before the 10th",
       "Check your rank against the 1,000 and 10,000 lines, move early if you\u2019re near one, and get mint-ready: Ronin wallet, RON for gas, five-flower minimum deposited, online when your wave opens. The full sixteen grades, the wave table and our questions for the next stream are in the article.",
-      "<strong>Update, September 8:</strong> the Ronin wave criteria asked for in grade 5 are now published \u2014 the team built the list itself from a 90-day on-chain snapshot of five Ronin games. <a href=\"article-ronin-wave.html\">The Ronin Wave, explained \u2192</a>"
+      "<strong>Update, September 8:</strong> the Ronin wave criteria asked for in grade 5 are now published \u2014 the team built the list itself from a 90-day on-chain snapshot of five Ronin games. <a href=\"article-ronin-wave.html\">The Ronin Wave, explained \u2192</a>",
+      "<strong>Update, September 10:</strong> the September 10 deadline has passed \u2014 the snapshot was taken at 01:00 UTC and the whitelist is live, with an opening hour for every wave. <a href=\"article-whitelist-live.html\">Check your wallet \u2192</a>"
     ]
   },
   {

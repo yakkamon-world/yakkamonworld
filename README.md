@@ -110,7 +110,7 @@ anything you wouldn't want served, including working notes.
 (`auto-trailing-slash`) 307-redirects every `/page.html` request to `/page`,
 which contradicted every canonical tag and sitemap URL on the site and filled
 Search Console with "Page with redirect" and "Duplicate without user-selected
-canonical" rows (fixed 10 Sep 2026). With `none`, `/page.html` is served as-is
+canonical" rows (fixed Sep 10, 2026). With `none`, `/page.html` is served as-is
 with a 200 — but `/` no longer maps to `index.html` by itself, which is what
 the first rule in `_redirects` is for.
 
@@ -245,7 +245,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 ├─ WIDGETS
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
 │  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
-│  ├─ free-mint-hero.js           Free-mint wave board: live clock + tile states (Home, Early Access) — WAVES dates/hours live here
+│  ├─ free-mint-hero.js           Free-mint wave clock: hero board (Home, Early Access) + `[data-fm-in]` status chips in wave tables (guide, whitelist article, Early Access, FAQ) — official WAVES dates/hours live here
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
 │  ├─ contact-form.js             Contact form relay
@@ -257,7 +257,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 56 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 57 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
@@ -345,14 +345,22 @@ throughout the articles and would break silently.
 Then update the quick-reference table in `gameplay.html`, the matching section
 in `gameplay-guide.html`, and add search entries.
 
-### Change a free-mint wave time (or add the published hours)
+### Change a free-mint wave time
 
 The board at the top of Home and Early Access (`.fm-hero` inside `.prereg-ticket`)
-takes every date from the `WAVES` list at the top of `free-mint-hero.js`. The
-official page gives dates but no hours, so each entry is `Date.UTC(2026, 8, 14, 0, 0, 0)`
-— month 0-based, then day, hour, minute — and the hero tells visitors the clock
-assumes 00:00 UTC. When hours are published, change the hour/minute arguments and
-delete the "assumes 00:00 UTC" wording in the `local` string of the same file.
+and every "Opens in …" status chip on the site take their times from the `WAVES`
+list at the top of `free-mint-hero.js`. Since Sept 10, 2026 those are the OFFICIAL
+opening times from yakkamon.com/whitelist: each entry is
+`Date.UTC(2026, 8, 14, 0, 0, 0)` — month 0-based, then day, hour, minute — with
+00:00 UTC for Waves 1, 2 and 5 and 08:00 UTC for Waves 3 and 4. The reveal
+(Oct 14) has no published hour, so it is entered as 00:00 UTC and the hero says so.
+If a time changes, edit the entry AND the static text on the tiles/tables
+(`data-fm-wave` tiles on both hero pages; `data-fm-in` chips on the guide,
+`article-whitelist-live.html`, `pre-registration.html` §7 and the FAQ answer
+`when-exactly-and-what-are-the-waves` in `faq.js`), which are what crawlers and
+no-JS visitors read. A chip is any element with `data-fm-in="w1…w5|reveal"`; the
+script re-reads chips every second, so tables a page re-renders at runtime (the
+FAQ) still get them — a page that uses chips must load `free-mint-hero.js`.
 The tile markup on both pages must keep matching `data-fm-wave` ids (`w1`–`w5`).
 To swap the sprites, replace `fm-*.webp` keeping the file names and proportions
 (display size is half the file's pixel size).
@@ -473,7 +481,9 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
-- FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates on the tiles, which are static text so crawlers and no-JS visitors see them.
+- FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates and hours on the tiles, which are static text so crawlers and no-JS visitors see them. The three CTAs are CHECK YOUR WHITELIST (yakkamon.com/whitelist), READ THE GUIDE and LAUNCHPAD.
+
+- SNAPSHOT IS PAST: the Sept 10, 2026 whitelist snapshot (01:00 UTC) has been taken and the lists are final. Evergreen pages (Early Access §7, Tips §4, FAQ) describe the deposit/linking steps in the past tense and point to the checker; dated articles keep their original advice with an "Update, September 10" callout. Don't reintroduce "deposit before the snapshot" wording.
 
 - STATIC HUBS: `index.html` (latest news), `news.html`, `videos.html` and `faq.html` carry a pre-rendered copy of their JavaScript content between `<!-- static-hubs:start … -->` / `<!-- static-hubs:end … -->` markers, so crawlers and no-JS visitors see real content. Never hand-edit inside the markers — edit `posts.js` / `videos.js` / `faq.js` and run `node build-static-hubs.mjs` (the GitHub Action does this on every push and commits the result). The runtime scripts still replace the block on load.
 

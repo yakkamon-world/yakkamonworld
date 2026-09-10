@@ -865,6 +865,14 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
   display:none; position:absolute; top:-12px; right:10px; font-family:var(--font-display); font-size:.85rem; letter-spacing:.08em;
   border-radius:999px; padding:1px 10px; border:2px solid var(--ink);
 }
+.fm-in{display:block; margin-top:8px; font-size:.68rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; opacity:.8}
+.fm-wave.next .fm-in{opacity:1; color:var(--ink)}
+.fm-in.is-open{color:var(--green)}
+/* the same chip inside tables (guide, whitelist article, Early Access §7) */
+td .fm-in, .prereg-list .fm-in{display:inline-block; margin:0; padding:1px 9px; border:2px solid var(--ink); border-radius:999px; background:var(--cream); color:var(--ink); opacity:1; white-space:nowrap}
+td .fm-in.is-next, .prereg-list .fm-in.is-next{background:var(--yellow)}
+td .fm-in.is-open, .prereg-list .fm-in.is-open{background:var(--green); color:#fff; border-color:var(--green)}
+td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6b6b85}
 .fm-wave.next{background:var(--yellow); color:var(--ink); border-color:var(--yellow); box-shadow:5px 5px 0 var(--red); transform:translateY(-4px)}
 .fm-wave.next .fm-supply{background:var(--ink); color:var(--yellow)}
 .fm-wave.next::after{display:block; content:'NEXT'; background:var(--red); color:#fff}
