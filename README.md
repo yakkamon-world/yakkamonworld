@@ -94,13 +94,33 @@ repo — Cloudflare watches the branch directly.
 {
   "name": "yakkamonworld",
   "compatibility_date": "2026-07-29",
-  "assets": { "directory": "." }
+  "assets": {
+    "directory": ".",
+    "html_handling": "none",
+    "not_found_handling": "404-page"
+  }
 }
 ```
 
 `"directory": "."` is why the flat structure matters — the repo root *is* the
 served directory, so **every file here is publicly fetchable.** Don't commit
 anything you wouldn't want served, including working notes.
+
+**`"html_handling": "none"` is load-bearing.** Cloudflare's default
+(`auto-trailing-slash`) 307-redirects every `/page.html` request to `/page`,
+which contradicted every canonical tag and sitemap URL on the site and filled
+Search Console with "Page with redirect" and "Duplicate without user-selected
+canonical" rows (fixed 10 Sep 2026). With `none`, `/page.html` is served as-is
+with a 200 — but `/` no longer maps to `index.html` by itself, which is what
+the first rule in `_redirects` is for.
+
+**`_redirects`** (repo root, not served) is evaluated before any asset:
+`/` is rewritten to `index.html` (200), `/index.html` → `/` (301), the retired
+`/stats` + `/stats.html` → `/leaderboard.html` (301), and every extension-less
+address (`/faq`, `/article-…`) 301s to its `.html` canonical. Query strings are
+carried across. **When you add a page, add its `/<name> /<name>.html 301` line.**
+Home links across the site are `href="/"`, never `index.html`, so they don't
+pass through a redirect.
 
 ---
 
@@ -240,7 +260,9 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ sitemap.xml                 56 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
-│  ├─ wrangler.jsonc              Cloudflare config
+│  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
+│  ├─ _redirects                  / → index.html rewrite, /index.html → /, /stats → leaderboard,
+│                                 every extension-less page → its .html canonical (not served)
 │  └─ CHANGELOG-2026-08-21.md     One-off change log for the 21 Aug gameplay rewrite.
 │                                 Note: publicly fetchable, like everything else here.
 │
@@ -352,6 +374,8 @@ masthead, tab strip, search overlay and footer all come along for free.
       the label must match the nav tab / footer link text for that page
 - [ ] Entries added to `search.js`
 - [ ] `<url>` added to `sitemap.xml`
+- [ ] `/<name> /<name>.html 301` line added to `_redirects`
+- [ ] Home links are `href="/"` (not `index.html`)
 
 ---
 

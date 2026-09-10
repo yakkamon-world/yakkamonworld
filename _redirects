@@ -1,0 +1,73 @@
+# YakkamonWorld redirects (Cloudflare Workers static assets).
+# Evaluated before any asset is served. One rule per line: source destination status.
+#
+# Canonical form of every page is https://yakkamonworld.com/<page>.html
+# (matches every <link rel="canonical"> and every sitemap.xml URL).
+
+# Home: serve index.html at / (html_handling is "none" so this rewrite is required),
+# and send the explicit /index.html address to /.
+/ /index.html 200
+/index.html / 301
+
+# Retired page — stats.html became leaderboard.html on 19 Aug 2026.
+/stats /leaderboard.html 301
+/stats.html /leaderboard.html 301
+
+# Extension-less addresses Google collected while the old html_handling was live.
+# Permanent redirect to the canonical .html address. Keep this list in sync when
+# a page is added: /<name> /<name>.html 301
+/about /about.html 301
+/article-access-code-100-plus /article-access-code-100-plus.html 301
+/article-access-code-20-plus /article-access-code-20-plus.html 301
+/article-access-code-50-plus /article-access-code-50-plus.html 301
+/article-access-code-today /article-access-code-today.html 301
+/article-after-the-race /article-after-the-race.html 301
+/article-airdrop-breakdown /article-airdrop-breakdown.html 301
+/article-dev-stream-aug-7-recap /article-dev-stream-aug-7-recap.html 301
+/article-dev-stream-graded /article-dev-stream-graded.html 301
+/article-dev-stream-three-recap /article-dev-stream-three-recap.html 301
+/article-dev-stream-two-recap /article-dev-stream-two-recap.html 301
+/article-economy-explained /article-economy-explained.html 301
+/article-faq-page-live /article-faq-page-live.html 301
+/article-flower-deposit-guideline /article-flower-deposit-guideline.html 301
+/article-flower-deposits-explained /article-flower-deposits-explained.html 301
+/article-flower-deposits-open-august-9 /article-flower-deposits-open-august-9.html 301
+/article-free-mint-by-the-numbers /article-free-mint-by-the-numbers.html 301
+/article-free-mint-october-1 /article-free-mint-october-1.html 301
+/article-free-mint-stream-graded /article-free-mint-stream-graded.html 301
+/article-free-to-play-guide /article-free-to-play-guide.html 301
+/article-gameplay-guide-live /article-gameplay-guide-live.html 301
+/article-genesis-airdrop-5000 /article-genesis-airdrop-5000.html 301
+/article-genesis-legendaries /article-genesis-legendaries.html 301
+/article-hunting-explained /article-hunting-explained.html 301
+/article-important-dates-roadmap /article-important-dates-roadmap.html 301
+/article-leaderboard-guideline /article-leaderboard-guideline.html 301
+/article-leaderboard-live /article-leaderboard-live.html 301
+/article-referral-rule-change-100-points /article-referral-rule-change-100-points.html 301
+/article-referral-rule-change-flower-deposit /article-referral-rule-change-flower-deposit.html 301
+/article-regions-explained /article-regions-explained.html 301
+/article-reward-egg-ladder-update /article-reward-egg-ladder-update.html 301
+/article-reward-ladder-analysis /article-reward-ladder-analysis.html 301
+/article-reward-track-explained /article-reward-track-explained.html 301
+/article-ronin-free-mint-guide /article-ronin-free-mint-guide.html 301
+/article-ronin-wave /article-ronin-wave.html 301
+/article-tip-deposit-on-ronin /article-tip-deposit-on-ronin.html 301
+/article-tip-launch-war-chest /article-tip-launch-war-chest.html 301
+/article-tip-nurture-after-noon-utc /article-tip-nurture-after-noon-utc.html 301
+/article-tip-split-flower-deposits /article-tip-split-flower-deposits.html 301
+/article-tips-section-live /article-tips-section-live.html 301
+/article-updates-panel /article-updates-panel.html 301
+/article-yakkamon-referral-code /article-yakkamon-referral-code.html 301
+/article-yakkamon-roster-revealed /article-yakkamon-roster-revealed.html 301
+/article-youtube-channel-live /article-youtube-channel-live.html 301
+/community /community.html 301
+/contact /contact.html 301
+/faq /faq.html 301
+/gameplay-guide /gameplay-guide.html 301
+/gameplay /gameplay.html 301
+/leaderboard /leaderboard.html 301
+/news /news.html 301
+/pre-registration /pre-registration.html 301
+/privacy /privacy.html 301
+/tips /tips.html 301
+/videos /videos.html 301

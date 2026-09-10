@@ -169,7 +169,7 @@ for (const file of fs.readdirSync(ROOT).filter(f => f.endsWith(".html")).sort())
     const h = part.match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/i);
     const heading = h ? clean(stripHtml(h[1])) : "";
     const idm = part.match(/<h2\b[^>]*\bid="([^"]+)"/i);
-    const url = SITE + file + (idm ? `#${idm[1]}` : "");
+    const url = SITE + (file === "index.html" ? "" : file) + (idm ? `#${idm[1]}` : "");
     const text = stripHtml(part);
     add(2, heading ? `${pageTitle} — ${heading}` : pageTitle, url, text, { kind: isArticle ? "article" : "page", ...dates });
   }
