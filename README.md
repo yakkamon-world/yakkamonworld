@@ -243,6 +243,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  └─ leaderboard.js              Fetches + renders the board, holds the LADDER bands
 │
 ├─ WIDGETS
+│  ├─ push-alerts.js              NEWS ALERTS bell in the masthead + OneSignal web push + the iPhone install tip (App ID pasted at the top; inert until then)
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
 │  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
 │  ├─ free-mint-hero.js           Free-mint wave clock: hero board (Home, Early Access), `[data-fm-in]` status chips in wave tables (guide, whitelist + mint-page articles, Early Access, FAQ) and the site-wide mint ribbon's `[data-fm-ribbon]` pill — official WAVES dates/hours live here; loaded on EVERY page for the ribbon
@@ -254,6 +255,11 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  └─ build-chatbot-knowledge.mjs Builds chatbot-knowledge.json (also run by the GitHub Action)
 │
 ├─ INFRASTRUCTURE
+│  ├─ manifest.webmanifest        Web-app manifest (name, icons, standalone display) — what iPhones install from Add to Home Screen
+│  ├─ OneSignalSDKWorker.js       Push service worker — MUST stay at root under this exact name
+│  ├─ favicon-512.png             App icon for the manifest (Android/iOS install)
+│  ├─ .github/workflows/push-notify.yml   Sends a push notification when posts.js gains a new post
+│  ├─ .github/scripts/push-notify.mjs     The sender that workflow runs
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
@@ -320,6 +326,18 @@ that 404s, so these always ship together.
 
 > After any content change the chatbot index rebuilds itself on push (see
 > [The chatbot](#the-chatbot)); nothing to do by hand.
+
+### News push notifications
+
+Nothing to do per article: when a new post lands at the top of `posts.js` on
+main, the **Send push notification for new posts** Action sends one OneSignal
+push per new post (title as the text, the article as the click-through) to
+everyone who turned on the NEWS ALERTS bell. Safety rails: only slugs that are
+new vs the previous commit, only posts dated within 3 days, max 3 per push.
+Setup lives in two places: the OneSignal **App ID** pasted at the top of
+`push-alerts.js`, and the repo secrets `ONESIGNAL_APP_ID` +
+`ONESIGNAL_REST_API_KEY` (Settings → Secrets and variables → Actions). To send
+a one-off manual notification, use the OneSignal dashboard → Messages → New push.
 
 ### Add a video
 
@@ -480,6 +498,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 ---
 
 ## Known quirks
+
+- PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.
 
 - FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates and hours on the tiles, which are static text so crawlers and no-JS visitors see them. The three CTAs are OPEN THE MINT PAGE (marketplace.roninchain.com/launchpads/mints/yakkamon, primary), CHECK YOUR WHITELIST (yakkamon.com/whitelist) and READ THE GUIDE.
 

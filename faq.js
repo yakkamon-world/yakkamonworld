@@ -57,8 +57,18 @@ var FAQ_CATEGORIES = [
     "q": "Do I need to know about crypto, or own a wallet, to take part?",
     "a": "<p>Not to pre-register &mdash; that only needs an email address. A wallet only becomes relevant if you want to take part in the <a href=\"pre-registration.html#free-mint\">Free Mint from September 14</a>, since that's an on-chain claim. If you plan to do that, you'll want a <span class=\"jargon\" title=\"A browser extension or app that holds your on-chain items and lets you approve transactions, similar to a bank app but for blockchain assets.\">Ronin-compatible wallet</span> set up beforehand. The <a href=\"pre-registration.html#genesis-monsters\">Genesis Monster airdrop</a> at launch doesn't require any action or wallet setup on your part &mdash; it's based purely on your final leaderboard rank.</p>",
     "id": "do-i-need-to-know-about-crypto-or-own"
-   }
-  ]
+   },
+   {
+    "q": "How do I get notified when news drops?",
+    "a": "<p>Tap the <strong>News Alerts</strong> bell in the header at the top of any page and choose <strong>Allow</strong>. From then on, every new post on the <a href=\"news.html\">news page</a> lands as a notification on your device the moment it's published &mdash; works instantly on desktop browsers and Android. On iPhone there's one extra step; see the next question. Prefer Telegram? The same news hits the <a href=\"https://t.me/YakkamonWorld\" target=\"_blank\" rel=\"noopener\">YakkamonWorld channel</a> too.</p>",
+    "id": "how-do-i-get-notified-when-news-drops"
+   },
+   {
+    "q": "How do I get news alerts on my iPhone?",
+    "a": "<p>iPhones only deliver website notifications from sites saved to the Home Screen (iOS 16.4 or newer). In Safari: tap <strong>Share</strong> (the square with the arrow) &rarr; <strong>Add to Home Screen</strong> &rarr; <strong>Add</strong>. Then open YakkamonWorld <strong>from the new Home Screen icon</strong>, tap the <strong>News Alerts</strong> bell in the header and choose <strong>Allow</strong>. That's it &mdash; tapping the bell in Safari shows you these same steps.</p>",
+    "id": "how-do-i-get-news-alerts-on-my-iphone"
+   },
+ ]
  },
  {
   "id": "sunflowerland-guide",
