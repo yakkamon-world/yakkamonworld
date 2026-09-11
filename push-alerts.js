@@ -13,7 +13,7 @@
 (function () {
   "use strict";
 
-  var APP_ID = "PASTE-YOUR-ONESIGNAL-APP-ID-HERE";
+  var APP_ID = "b4d18e99-4813-4811-a28e-563acfa04874";
 
   // Not configured yet → do nothing, render nothing.
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(APP_ID)) return;
