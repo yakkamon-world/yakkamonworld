@@ -536,6 +536,11 @@ var FAQ_CATEGORIES = [
     "a": "<p>No &mdash; the game is designed against it. <strong>Identically named boosts don't stack</strong>: two monsters with &ldquo;Wood Gatherer I&rdquo; give you the effect once. Differently named or higher-ranked boosts do stack. The stated intent is to reward <strong>breadth</strong> &mdash; a wide roster with one strong specialist per job beats five copies of your best monster. See <a href=\"gameplay.html?system=boost-stacking\">boost stacking</a>.</p>"
    },
    {
+    "id": "does-time-of-day-change-how-well-my-yakkamon-work",
+    "q": "Does the time of day change how well my Yakkamon work?",
+    "a": "<p>For some of them, yes. The official Clock post (September 11) says some Yakkamon carry <strong>traits that make them thrive at certain hours</strong> &mdash; &ldquo;a night-owl Yakkamon on the night shift will outwork one that'd rather be sleeping&rdquo; &mdash; and tells you to <strong>match your roster to the clock</strong>. The in-game day turns every few real hours on a universal clock, so a job staffed only by day-lovers underperforms for a slice of every cycle; a day-shift and a night-shift worker of the same species cover different hours. The post says <em>some</em> monsters carry these traits, so check for one before assuming a monster has a preferred shift &mdash; and before trading away what looks like a duplicate. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
+   },
+   {
     "id": "how-does-the-world-expand",
     "q": "How does the world expand?",
     "a": "<p>In three layers, per the official Regions post. Your Region is made of <strong>tiles</strong>: you gather resources to unlock more of them (the starter one costs <strong>10 Wood + 1 Stone</strong>), and each tile can hold fresh resources, room to build, or a hunting area &mdash; and raises how much you can run at once. Grow your starting Region far enough and you unlock <strong>entirely new Regions</strong>, each with its own resources and monster types. More Regions arrive in later <strong>Chapters</strong>, each bigger than the last. <a href=\"gameplay.html?system=regional-exploration\">Regions, tiles &amp; the world &rarr;</a></p>"
@@ -554,6 +559,11 @@ var FAQ_CATEGORIES = [
     "id": "can-i-use-resources-from-one-region-in-another",
     "q": "Can I use resources from one Region in another?",
     "a": "<p>Only by moving them, it seems. The Regions post says that <strong>moving and sharing resources between your Regions</strong> becomes a core part of the strategy and that &ldquo;the trainers who master logistics get ahead&rdquo; &mdash; which only makes sense if resources are held per Region rather than in one global inventory. What a transfer costs (time, stamina, a building, a fee) is not published. <a href=\"gameplay.html?system=logistics\">Logistics between Regions &rarr;</a></p>"
+   },
+   {
+    "id": "what-are-the-special-weather-events",
+    "q": "What are the special weather events, and do seasons lock anything away?",
+    "a": "<p>Two things from the official Clock post (September 11). <strong>Special weather events</strong> roll in on random days and &ldquo;don't play by the usual rules&rdquo; &mdash; Yakkamon showing up in places and at times they normally wouldn't. The team's advice is literal: &ldquo;when the sky does something strange, get your hunters out.&rdquo; And yes, seasons lock things away: <strong>some resources and items can only be gathered or crafted in certain seasons</strong>, so the play is to prepare before the season turns &mdash; in the team's words, &ldquo;the trainers who plan ahead are the ones with full storehouses when everyone else is scrambling.&rdquo; That makes storage capacity a seasonal warehouse, not just a production ceiling. <a href=\"gameplay.html?system=seasonal-system\">The seasonal system &rarr;</a></p>"
    },
    {
     "id": "does-my-farm-keep-running-while-i-m-offline",
@@ -621,7 +631,7 @@ var FAQ_CATEGORIES = [
    {
     "q": "Does the time of day matter for hunting?",
     "id": "does-the-time-of-day-matter-for-hunting",
-    "a": "<p>Yes. Each hunting ground reveals different Yakkamon at different times of day &mdash; the post says what roams a ground at dawn won't be what you find at midnight. Two things to know: it's the sped-up <strong>in-game clock</strong> in the HUD, not your local time, so no timezone has an advantage; and the team frames &ldquo;learning the clock&rdquo; as the skill, which suggests the game won't simply show you the timetable. Keeping your own log of ground, in-game hour and what appeared is the cheapest edge in the game. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
+    "a": "<p>Yes. Each hunting ground reveals different Yakkamon at different times of day &mdash; what roams a ground at dawn won't be what you find at midnight. The official Clock post filled in the pace: time of day <strong>rolls over every few real hours</strong> on a <strong>universal clock</strong> &mdash; no personal timezones, no resetting &mdash; so several dawns and nights pass in one real day, every time band comes to every player (&ldquo;miss one, and another is never far away&rdquo;), and trainers worldwide hunt <strong>the same windows at the same moment</strong>. The team frames &ldquo;learning the clock&rdquo; as the skill, which suggests the game won't simply show you the timetable &mdash; keeping your own log of ground, in-game hour and what appeared is the cheapest edge in the game, and it is valid worldwide. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
    },
    {
     "q": "Do hunting grounds run out, and what do I do about it?",
@@ -666,12 +676,12 @@ var FAQ_CATEGORIES = [
    {
     "q": "Do Seasons change what I can hunt?",
     "id": "do-seasons-change-what-i-can-hunt",
-    "a": "<p>Yes, and it's the last point of the official post: <strong>future Seasons will affect which Yakkamon are available and where</strong>, so &ldquo;the hunting map you master today won't be the one you're working next Chapter&rdquo;. The dev streams suggested the Season cadence may end up weekly rather than quarterly, which would make the rotation fast. Practically it means a ground-and-clock log is never finished, and it lines up with the economy post's rule that Legendaries and rares drop in limited windows &mdash; Season rotation looks like the mechanism that opens and closes those windows. <a href=\"gameplay.html?system=seasonal-system\">The seasonal system &rarr;</a></p>"
+    "a": "<p>Yes, and it's the last point of the official post: <strong>future Seasons will affect which Yakkamon are available and where</strong>, so &ldquo;the hunting map you master today won't be the one you're working next Chapter&rdquo;. The dev streams suggested the Season cadence may end up weekly rather than quarterly, which would make the rotation fast. The Clock post went further: <strong>some resources and items can only be gathered or crafted in certain seasons</strong>, and seasonal weather influences the grounds, what's available in them and how your Yakkamon work &mdash; so prepare before the season turns. Practically it means a ground-and-clock log is never finished, and it lines up with the economy post's rule that Legendaries and rares drop in limited windows &mdash; Season rotation looks like the mechanism that opens and closes those windows. <a href=\"gameplay.html?system=seasonal-system\">The seasonal system &rarr;</a></p>"
    },
    {
     "q": "Is there a hunting schedule or spawn table I can look up?",
     "id": "is-there-a-hunting-schedule",
-    "a": "<p>Not an official one. The post frames &ldquo;learning the clock&rdquo; as the player's job, and says outright that Legendaries and Rares appear sporadically with <strong>no schedule to memorize</strong>. The Yakkapedia in the official docs lists species and Legendary abilities, not where or when anything spawns. Expect spawn tables to be community-built, and expect them to go stale each Season. The one thing you can rely on is that the timing runs on the sped-up <strong>in-game clock</strong>, not real time, so a log of ground plus in-game hour transfers between players. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
+    "a": "<p>Not an official one. The post frames &ldquo;learning the clock&rdquo; as the player's job, and says outright that Legendaries and Rares appear sporadically with <strong>no schedule to memorize</strong> &mdash; and the Clock post added that when one lands it is <strong>in real time on the universal clock</strong>: no pausing, no catching up later, the same window for everyone. The Yakkapedia in the official docs lists species and Legendary abilities, not where or when anything spawns. Expect spawn tables to be community-built, and expect them to go stale each Season. The one thing you can rely on is that the timing runs on the sped-up <strong>in-game clock</strong>, not real time, so a log of ground plus in-game hour transfers between players. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
    },
    {
     "q": "What is a contract hunt?",

@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "the-clock-explained",
+    category: "analysis",
+    title: "One World, One Clock \u2014 What the Official Clock Post Means for Players",
+    date: "Sep 11, 2026",
+    excerpt: "The official Clock post: the in-game day turns every few real hours on a universal clock with no timezones and no resetting, some Yakkamon carry traits that peak at certain hours, seasons gate what can be gathered and crafted, special weather events break the spawn rules \u2014 and Legendary appearances happen in real time, with the same window for everyone. What each point means for players.",
+    body: [
+      "Three days before the free mint, the team\u2019s guide series turned to time. Seven points that read like housekeeping \u2014 and one line that isn\u2019t: <strong>\u201cno pausing, no catching up later.\u201d</strong>",
+      "## The seven points",
+      "Time of day <strong>rolls over every few real hours</strong>, so several dawns and nights pass in one real day; the clock is <strong>universal</strong> \u2014 no personal timezones, no resetting, and trainers worldwide hunt the same windows at the same moment; some Yakkamon carry <strong>traits that thrive at certain hours</strong>, so a night-owl outworks a sleeper on the night shift; seasons roll on top of the daily cycle and seasonal weather touches the grounds, availability and <strong>how your Yakkamon work</strong>; some resources and items can <strong>only be gathered or crafted in certain seasons</strong>; <strong>special weather events</strong> arrive on random days and break the usual spawn rules; and <strong>Legendary appearances happen in real time</strong> \u2014 when one lands, everyone gets the same window.",
+      "## What it means",
+      "The short day means every time band reaches every player \u2014 the timetable is forgiving by design. Hour traits make the clock a roster-building axis alongside the type chart: two same-species workers with different shifts are not duplicates. Seasonal gather-and-craft gates make the last week of a season a deadline, and the team endorsed stockpiling in their own words \u2014 full storehouses beat scrambling. Weather events are spawn-table exceptions worth logging separately. And the real-time Legendary windows draw the line the game is built on: <strong>your farm runs on your time; the world runs on its own.</strong>",
+      "## How to get an edge",
+      "Time the in-game day against a stopwatch on day one; check every catch for an hour trait before trading \u201cduplicates\u201d; staff jobs in shifts; treat each season\u2019s end as a gather-and-craft deadline; keep the hunting squad permanently on standby; and log season and weather with every sighting. Full reading, tables and the five questions we\u2019d put to the team in the article."
+    ]
+  },
+  {
     slug: "mint-page-live",
     category: "official",
     title: "The Official Mint Page Is Live: One Link for All Five Waves of the Yakkamon Genesis Mint",

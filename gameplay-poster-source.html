@@ -8,7 +8,7 @@
   SOURCE for gameplay-poster.png (1800 wide) and gameplay-poster-full.png (X-size).
   Render: open in Chromium at a 1800px-wide viewport, full-page screenshot;
   the full version is the same page at deviceScaleFactor min(2.222, 4096/height)
-  so its longest side never exceeds X's 4096px resize threshold (3885x4096 now).
+  so its longest side never exceeds X's 4096px resize threshold (3882x4096 now).
   Edit the panels below, re-render, replace both PNGs and the width/height
   attributes on gameplay.html's <img>. Revision: September 5, 2026 (22 panels, 12 columns).
 -->
@@ -74,7 +74,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED SEP 5, 2026 &mdash; OFFICIAL HUNTING POST. THE CLOCK, THREE TEMPERAMENTS, WILD LEGENDARIES, DEPLETING GROUNDS, SEASONS THAT MOVE THE MAP.</div>
+    <div class="rev">REVISED SEP 11, 2026 &mdash; OFFICIAL CLOCK POST. A DAY EVERY FEW REAL HOURS, ONE UNIVERSAL CLOCK, HOUR TRAITS, SEASONAL GATHER/CRAFT GATES, WEATHER EVENTS, REAL-TIME LEGENDARY WINDOWS.</div>
   </div>
 </div>
 
@@ -256,22 +256,24 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="like"><em>LIKE THIS</em>Two warehouses in two towns. Doubling the shelves is easy &mdash; the lorry between them is the business.</div>
 </div>
 
-<div class="panel">
+<div class="panel new">
+  <span class="tag">NEW SEP 11</span>
   <h2><i>16</i>DAY, NIGHT &amp; SEASONS</h2>
-  <div class="card sky"><b>Day &amp; night is the hunting timetable</b>A clock with a sun / moon icon. Each ground shows different Yakkamon at dawn and at midnight. Runs on a sped-up in-game clock, not real time &mdash; no timezone advantage, and one player&rsquo;s log works for everyone.</div>
-  <div class="card yellow"><b>Weather</b>Separate indicators next to the clock &mdash; sun and rain both shown.</div>
-  <div class="card green"><b>Seasons move the hunting map</b>New monsters drop into the wild each Season &mdash; and per the Hunting post, Seasons change which Yakkamon are available and where, so today&rsquo;s spawn table won&rsquo;t survive the Chapter. Every 3 months per the docs, weekly still under consideration.</div>
+  <div class="card sky"><b>A day every few real hours</b>Time of day rolls over every few real hours &mdash; several dawns and nights pass in one day at your desk, so every time band reaches every player. &ldquo;Miss one, and another is never far away.&rdquo;</div>
+  <div class="card"><b>One universal clock</b>No personal timezones, no resetting &mdash; night in Yakkamon is night for everyone, and trainers worldwide hunt the same windows at the same moment. One player&rsquo;s spawn log works everywhere.</div>
+  <div class="card yellow"><b>The night shift is a stat</b>Some Yakkamon carry traits that thrive at certain hours &mdash; a night-owl on the night shift outworks a sleeper. Match your roster to the clock, and check for the trait before trading a &ldquo;duplicate&rdquo;.</div>
+  <div class="card green"><b>Seasons gate the shop</b>Seasons ride on the daily cycle and change the weather &mdash; which touches grounds, availability <i>and how monsters work</i>. Some resources and items can only be gathered or crafted in season: &ldquo;full storehouses&rdquo; beat scrambling. Map still rotates each Season (Hunting post); 3 months per the docs, weekly under consideration.</div>
+  <div class="card red"><b>Strange skies, real-time windows</b>Special weather events land on random days and break the spawn rules &mdash; &ldquo;get your hunters out&rdquo;. Legendary appearances and special events run in real time on the universal clock: no pausing, no catching up, the same window for everyone.</div>
   <div class="card purple"><b>Player lore, warmly received</b>Legendaries as the in-world cause of weather and seasons. Not confirmed &mdash; but &ldquo;there&rsquo;s a good home for it&rdquo;.</div>
 </div>
 
-<div class="panel new">
-  <span class="tag">NEW SEP 5</span>
+<div class="panel">
   <h2><i>17</i>HUNTING</h2>
   <div class="card green"><b>A place: grounds are tiles</b>On your own Regions &mdash; one of the three things a tile can hold. Each Region has its own wild types.</div>
   <div class="card sky"><b>A time: learn the clock</b>Each ground shows different Yakkamon at different in-game hours. No timetable is given &mdash; discovering it is the skill.</div>
   <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (18).</div>
   <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty.</div>
-  <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule. Keep a strong, well-supplied team ready.</div>
+  <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule &mdash; and in real time: when one lands, everyone gets the same window. Keep a strong, well-supplied team ready.</div>
   <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon; a hunted-out ground yields less. Spread hunts across grounds <i>and Regions</i>.</div>
   <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot, some want paying &mdash; and the field empties if you work it daily.</div>
 </div>
@@ -326,7 +328,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy and Hunting posts, screenshots and dev streams through September 5, 2026, plus the official Hunting post. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting and Clock posts, screenshots and dev streams through September 11, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>

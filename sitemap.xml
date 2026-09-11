@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://yakkamonworld.com/gameplay.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -242,7 +242,7 @@
   </url>
   <url>
     <loc>https://yakkamonworld.com/gameplay-guide.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -307,8 +307,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://yakkamonworld.com/article-the-clock-explained.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yakkamonworld.com/article-hunting-explained.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

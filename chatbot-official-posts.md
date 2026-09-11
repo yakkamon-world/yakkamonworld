@@ -18,6 +18,30 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Yakkamon — The Clock (official post by the Yakkamon team on X, September 11, 2026)
+
+G'day trainers. Back with another guide — today we're talking time.
+
+Yakkamon runs on a living world clock. It never stops, it's the same for every trainer on the planet, and it quietly shapes everything from what's roaming the hunting grounds to how hard your monsters are working. Learn to read it and you'll always be one step ahead.
+
+1. The world moves faster than you do. Time of day rolls over every few real hours, so across a single day at your desk you'll see multiple dawns, days, dusks and nights pass over your farm. Miss one, and another is never far away.
+
+2. The clock is universal. No personal timezones, no resetting — when it's night in Yakkamon, it's night for everyone. That means trainers across the globe are hunting the same windows at the same moment.
+
+3. Your Yakkamon feel it too. Some monsters carry traits that make them thrive at certain hours — a night-owl Yakkamon on the night shift will outwork one that'd rather be sleeping. Match your roster to the clock.
+
+4. Seasons roll through on top of the daily cycle, changing the weather across the world. Seasonal weather influences the hunting grounds, what's available in them, and how your Yakkamon go about their work.
+
+5. Some resources and items can only be gathered or crafted in certain seasons. If you want them, you'll need to prepare before the season turns — the trainers who plan ahead are the ones with full storehouses when everyone else is scrambling.
+
+6. Keep an eye on the sky. Special weather events will roll in on random days, and they don't play by the usual rules — think Yakkamon showing up in places and at times they normally wouldn't. When the sky does something strange, get your hunters out.
+
+7. Legendary appearances and special events happen in real time, on the universal clock. No pausing, no catching up later — when one lands, everyone gets the same window.
+
+TLDR: The clock shapes almost everything in Yakkamon so become familiar with it!
+
+Key facts in plain terms: the in-game day rolls over every few real hours, so several dawns and nights pass in one real day; the clock is universal — no personal timezones, no resetting, night in Yakkamon is night for everyone, and trainers worldwide hunt the same windows at the same moment; some Yakkamon carry traits that make them work better at certain in-game hours (a night-owl outworks a sleeper on the night shift), so rosters should be matched to the clock; seasons run on top of the daily cycle and seasonal weather influences hunting grounds, availability and how Yakkamon work; some resources and items can only be gathered or crafted in certain seasons, so stockpile before the season turns; special weather events arrive on random days and break the usual spawn rules, with Yakkamon appearing in unusual places and times; Legendary appearances and special events happen in real time on the universal clock with no pausing and no catching up — everyone gets the same window.
+
 ## Official mint page on Ronin Market — "Yakkamon Genesis Mint" (live since September 11, 2026)
 
 Source: https://marketplace.roninchain.com/launchpads/mints/yakkamon
