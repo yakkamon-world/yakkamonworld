@@ -109,6 +109,15 @@ const YAKKAMON_VIDEOS = [
 
   // ---------- START HERE ----------
   {
+    id: "cgFA2XYNink",
+    ep: "20",
+    runtime: "5:04",
+    block: "start",
+    title: "Yakkamon \u2014 The Clock",
+    blurb: "The official Clock post in five minutes. The in-game day turns every few real hours on one universal clock \u2014 no timezones, no resetting, the same windows for everyone \u2014 so every time band reaches every player. Some Yakkamon carry hour traits that change how hard they work, seasons gate what can be gathered and crafted, random weather events break the spawn rules, and Legendary appearances happen in real time with no pausing and no catching up later.",
+    related: { href: "article-the-clock-explained.html", label: "Read the full breakdown \u2014 One World, One Clock" },
+  },
+  {
     id: "-JBLHOuFE5E",
     ep: "18",
     runtime: "3:01",

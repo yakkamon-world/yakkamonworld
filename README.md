@@ -231,7 +231,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
 │  ├─ gameplay.js                 Gameplay systems (26 entries)
-│  ├─ videos.js                   Video index (19 entries, 4 blocks)
+│  ├─ videos.js                   Video index (20 entries, 4 blocks)
 │  ├─ search.js                   SEARCH_INDEX + the search overlay behavior
 │  └─ chatbot.js                  "Ask me anything" bar + sheet (talks to yakkamon-chat-worker)
 │
