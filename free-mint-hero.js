@@ -140,6 +140,18 @@
       chip.classList.remove("is-next", "is-open", "is-done");
       if (cs) chip.classList.add("is-" + cs);
     }
+
+    // The site-wide mint ribbon's little status pill. Static fallback text
+    // ("September 14–18") stands when JS is off or the script is missing.
+    var ribbons = document.querySelectorAll("[data-fm-ribbon]");
+    if (ribbons.length) {
+      var rtext;
+      if (!st.next) rtext = "Revealed";
+      else if (toReveal) rtext = now < MINT_CLOSES ? "Wave 5 is open now" : "Mint week is over \u00b7 reveal Oct 14";
+      else if (st.open) rtext = st.open.name + " is open now";
+      else rtext = st.next.name + " opens in " + shortLeft(st.next.at - now);
+      for (var r = 0; r < ribbons.length; r++) ribbons[r].textContent = rtext;
+    }
     lastTitle = title;
   }
 

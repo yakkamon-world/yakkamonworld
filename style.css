@@ -37,6 +37,31 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
   transform:rotate(-8deg);
 }
 
+/* ---------- Genesis Mint ribbon (site-wide, above the masthead) ----------
+   One yellow bar, one link, straight to the official mint page on Ronin
+   Market. It sits on every page except the poster source; free-mint-hero.js
+   keeps the [data-fm-ribbon] chip live ("Opens in 2d 14h" / "Wave 2 is open
+   now"). Remove the <a class="mint-ribbon"> block from every page, the
+   script tags it brought with it, and this CSS once the mint is history. */
+.mint-ribbon{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:7px 14px;
+  background:var(--yellow); color:var(--ink); text-decoration:none; padding:9px 16px;
+  border-bottom:3px solid var(--ink)}
+.mint-ribbon:hover{background:#FFDD66}
+.mint-ribbon .mr-tag{font-family:var(--font-display); font-size:.95rem; letter-spacing:1px; line-height:1.2;
+  background:var(--red); color:#fff; padding:3px 10px 2px; border:2px solid var(--ink); border-radius:999px; transform:rotate(-2deg)}
+.mint-ribbon .mr-title{font-family:var(--font-display); font-size:1.3rem; letter-spacing:1.5px; line-height:1.1}
+.mint-ribbon .mr-when{font-weight:800; font-size:.82rem; background:#fff; border:2px solid var(--ink); border-radius:999px; padding:2px 10px; white-space:nowrap}
+.mint-ribbon .mr-cta{font-weight:900; font-size:.84rem; letter-spacing:.3px; background:var(--ink); color:#fff;
+  padding:6px 13px; border-radius:9px; box-shadow:3px 3px 0 rgba(26,26,46,.3); white-space:nowrap}
+.mint-ribbon:hover .mr-cta{background:var(--sky)}
+@media (max-width:760px){
+  .mint-ribbon{gap:6px 10px; padding:8px 12px}
+  .mint-ribbon .mr-title{font-size:1.1rem}
+}
+@media (max-width:430px){
+  .mint-ribbon .mr-when{display:none}
+}
+
 /* ---------- Site header ----------
    Two stacked --ink blocks with no seam between them, so they read as one
    dark header. Only .topbar is sticky: the wordmark scrolls away and the

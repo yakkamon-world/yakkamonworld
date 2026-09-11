@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "mint-page-live",
+    category: "official",
+    title: "The Official Mint Page Is Live: One Link for All Five Waves of the Yakkamon Genesis Mint",
+    date: "Sep 11, 2026",
+    excerpt: "marketplace.roninchain.com/launchpads/mints/yakkamon is live on Ronin Market \u2014 the \u201cYakkamon Genesis Mint,\u201d the one page every free-mint wave mints from. The listing prints the drop in its own words: 10,000 total supply, every NFT minted blind, all revealed October 14 with 68 Legendaries and 50 Rares in the pool, and minted Yakkamon deposit into the game once early access begins. Bookmark the exact address before Sunday.",
+    body: [
+      "The last link in the chain is live. <a href=\"https://marketplace.roninchain.com/launchpads/mints/yakkamon\" target=\"_blank\" rel=\"noopener\"><strong>marketplace.roninchain.com/launchpads/mints/yakkamon</strong></a> is the official mint page on Ronin Market \u2014 the page every one of the five free-mint waves mints from, starting with Wave 1 on Sunday night. The listing carries the drop\u2019s official name, <strong>Yakkamon Genesis Mint</strong>, the golden egg as its artwork, and a total supply of <strong>10,000</strong>.",
+      "## What the listing says",
+      "In plain terms: your first chance to mint a Yakkamon on the Ronin chain; every NFT minted <strong>blind</strong>; all revealed together on <strong>October 14</strong>, when <strong>68 Legendaries and 50 Rares</strong> emerge from the drop; and once early access begins, a minted Yakkamon can be <strong>deposited straight into the game</strong>. The \u201cprices and purchase limits may vary between wallets\u201d fine print is Ronin Market\u2019s wording for a wallet-gated drop \u2014 whitelisted wallets see free plus gas and one mint per wave; a wallet on no list gets no mint button at all.",
+      "## What it settles",
+      "The name \u201cGenesis\u201d is now official on the marketplace itself, and the numbers \u2014 10,000 total, 68 Legendaries, 50 Rares \u2014 now match in three official places: the docs, the whitelist page and the listing. \u201cMinted blind\u201d sits where the trading happens: every secondary-market buyer of a hidden egg sees on the listing that no seller can know what is inside.",
+      "## Before Sunday",
+      "Bookmark the exact address today and open it from the bookmark on the day \u2014 look-alike pages appear around every popular mint, the real one is free plus RON gas, and nobody legitimate ever needs your recovery phrase. Which waves your wallet can mint in is the whitelist checker\u2019s job: yakkamon.com/whitelist. Waves 1, 2 and 5 open at 00:00 UTC, Waves 3 and 4 at 08:00 UTC."
+    ]
+  },
+  {
     slug: "whitelist-live",
     category: "official",
     title: "The Free Mint Whitelist Is Live: Check Your Wallet, and Every Wave Now Has an Opening Time",
@@ -18,7 +34,8 @@ const YAKKAMON_POSTS = [
       "## What changed",
       "Until today every countdown, ours included, assumed 00:00 UTC for every wave; Waves 3 and 4 open eight hours later than that, and our clocks now run on the published times. Stacking is official: one mint per eligible trainer per wave, and an earlier wave does not use up a later one. Wave 1\u2019s supply matches its whitelist exactly, so the click races start Monday. The 5 $FLOWER deposit that unlocked Waves 2 and 4 had to be in before 01:00 UTC on the 10th.",
       "## What to do",
-      "Check the Ronin wallet linked to your Yakkamon account on the checker; if you play other Ronin games, check that wallet too, because the Ronin Wave is decided by on-chain activity, not by your account. Base deposits counted for rank and for the 5 $FLOWER condition, but nothing on Base mints. Put a little RON in the whitelisted wallet before Sunday night. If the checker comes back empty, the free mint is not your route this week: the marketplace opens the moment the first eggs mint, the 1,500-mint ecosystem airdrop has no date yet, and the top-5,000 pre-registration airdrop runs on its own, later snapshot. The article has the two opening hours in nine time zones, live status chips for every wave, and three questions the page leaves open."
+      "Check the Ronin wallet linked to your Yakkamon account on the checker; if you play other Ronin games, check that wallet too, because the Ronin Wave is decided by on-chain activity, not by your account. Base deposits counted for rank and for the 5 $FLOWER condition, but nothing on Base mints. Put a little RON in the whitelisted wallet before Sunday night. If the checker comes back empty, the free mint is not your route this week: the marketplace opens the moment the first eggs mint, the 1,500-mint ecosystem airdrop has no date yet, and the top-5,000 pre-registration airdrop runs on its own, later snapshot. The article has the two opening hours in nine time zones, live status chips for every wave, and three questions the page leaves open.",
+      "<strong>Update, September 11:</strong> the official mint page is live \u2014 <a href=\"https://marketplace.roninchain.com/launchpads/mints/yakkamon\" target=\"_blank\" rel=\"noopener\">the Yakkamon Genesis Mint on Ronin Market</a>, the same page for all five waves. <a href=\"article-mint-page-live.html\">What the listing says \u2192</a>"
     ]
   },
   {
@@ -124,7 +141,8 @@ const YAKKAMON_POSTS = [
       "Buy RON for gas days ahead. Open marketplace.roninchain.com/launchpads yourself, connect the linked wallet, be there before your wave opens, mint, approve, and come back for every wave you qualify for. It is free, so any page charging a price is a scam.",
       "## What is inside",
       "3 Storm, 5 Echo, 10 Ghost, 50 Bloom, 50 Rare and 9,882 Uncommon \u2014 about one mint in 147 is a Legendary. Hidden NFTs are tradable before the reveal, deposit into the game at early access, and this is the ongoing Yakkamon collection. The September 10 snapshot does not lock the trainer airdrop, which keeps running to one week before early access.",
-      "<strong>Update, September 10:</strong> the whitelist is live at <a href=\"https://yakkamon.com/whitelist\" target=\"_blank\" rel=\"noopener\">yakkamon.com/whitelist</a> \u2014 the snapshot was taken at 01:00 UTC and the lists are final. Every wave now has an opening hour (00:00 UTC for Waves 1, 2 and 5; <strong>08:00 UTC</strong> for Waves 3 and 4) and a name, and the guide\u2019s wave table shows live status for each. <a href=\"article-whitelist-live.html\">What the page says \u2192</a>"
+      "<strong>Update, September 10:</strong> the whitelist is live at <a href=\"https://yakkamon.com/whitelist\" target=\"_blank\" rel=\"noopener\">yakkamon.com/whitelist</a> \u2014 the snapshot was taken at 01:00 UTC and the lists are final. Every wave now has an opening hour (00:00 UTC for Waves 1, 2 and 5; <strong>08:00 UTC</strong> for Waves 3 and 4) and a name, and the guide\u2019s wave table shows live status for each. <a href=\"article-whitelist-live.html\">What the page says \u2192</a>",
+      "<strong>Update, September 11:</strong> the official mint page is live on Ronin Market \u2014 <a href=\"https://marketplace.roninchain.com/launchpads/mints/yakkamon\" target=\"_blank\" rel=\"noopener\">marketplace.roninchain.com/launchpads/mints/yakkamon</a>, the \u201cYakkamon Genesis Mint.\u201d Bookmark the exact address and open it from the bookmark on the day \u2014 the same page serves every wave. <a href=\"article-mint-page-live.html\">What the listing says \u2192</a>"
     ]
   },
   {

@@ -232,7 +232,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
 │  ├─ gameplay.js                 Gameplay systems (26 entries)
 │  ├─ videos.js                   Video index (19 entries, 4 blocks)
-│  ├─ search.js                   SEARCH_INDEX + the search overlay behaviour
+│  ├─ search.js                   SEARCH_INDEX + the search overlay behavior
 │  └─ chatbot.js                  "Ask me anything" bar + sheet (talks to yakkamon-chat-worker)
 │
 ├─ RENDERERS — how that data is displayed
@@ -245,7 +245,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 ├─ WIDGETS
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
 │  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
-│  ├─ free-mint-hero.js           Free-mint wave clock: hero board (Home, Early Access) + `[data-fm-in]` status chips in wave tables (guide, whitelist article, Early Access, FAQ) — official WAVES dates/hours live here
+│  ├─ free-mint-hero.js           Free-mint wave clock: hero board (Home, Early Access), `[data-fm-in]` status chips in wave tables (guide, whitelist + mint-page articles, Early Access, FAQ) and the site-wide mint ribbon's `[data-fm-ribbon]` pill — official WAVES dates/hours live here; loaded on EVERY page for the ribbon
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
 │  ├─ contact-form.js             Contact form relay
@@ -257,7 +257,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 57 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 58 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
@@ -481,7 +481,9 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
-- FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates and hours on the tiles, which are static text so crawlers and no-JS visitors see them. The three CTAs are CHECK YOUR WHITELIST (yakkamon.com/whitelist), READ THE GUIDE and LAUNCHPAD.
+- FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates and hours on the tiles, which are static text so crawlers and no-JS visitors see them. The three CTAs are OPEN THE MINT PAGE (marketplace.roninchain.com/launchpads/mints/yakkamon, primary), CHECK YOUR WHITELIST (yakkamon.com/whitelist) and READ THE GUIDE.
+
+- MINT RIBBON: every page except `gameplay-poster-source.html` opens with `<a class="mint-ribbon">` above the masthead — one yellow bar linking straight to the official mint page (marketplace.roninchain.com/launchpads/mints/yakkamon). Its `[data-fm-ribbon]` pill is kept live by `free-mint-hero.js`, which every page now loads (`defer`, before `</body>`); the static pill text ("September 14–18") is the no-JS fallback. AFTER THE MINT WINDOW IS HISTORY, remove the ribbon in one pass: delete the `<a class="mint-ribbon">…</a>` block from all 58 pages, drop the `free-mint-hero.js` script tag from pages that only loaded it for the ribbon (keep it on index, pre-registration, faq, the guide and the whitelist + mint-page articles while their chips still matter), and delete the "Genesis Mint ribbon" block in `style.css`.
 
 - SNAPSHOT IS PAST: the Sept 10, 2026 whitelist snapshot (01:00 UTC) has been taken and the lists are final. Evergreen pages (Early Access §7, Tips §4, FAQ) describe the deposit/linking steps in the past tense and point to the checker; dated articles keep their original advice with an "Update, September 10" callout. Don't reintroduce "deposit before the snapshot" wording.
 

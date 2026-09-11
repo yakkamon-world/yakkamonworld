@@ -18,6 +18,14 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Official mint page on Ronin Market — "Yakkamon Genesis Mint" (live since September 11, 2026)
+
+Source: https://marketplace.roninchain.com/launchpads/mints/yakkamon
+
+Key facts in plain terms, from the official mint listing on Ronin Market (the page itself is the source of record; it is a JavaScript app, so this summary is what it shows): the official mint page for the Yakkamon free mint is live at https://marketplace.roninchain.com/launchpads/mints/yakkamon. The listing is titled "Yakkamon Genesis Mint," under the Yakkamon collection, with the golden egg as its artwork. This is the one and only official mint page — every one of the five free-mint waves (September 14–18, 2026) mints from this same page. Anyone asking where to mint should be given this exact address and told to bookmark it and open it from the bookmark on mint day, never from a link in a DM or a reply, because look-alike pages appear around popular mints.
+
+What the listing states: total supply is 10,000. It is the first chance to mint a Yakkamon on the Ronin chain. Every NFT is minted blind, and all of them are revealed on October 14, 2026, when 68 Legendaries and 50 Rares emerge from the drop and each minter finds out which monster they got. Once early access begins, a minted Yakkamon can be deposited straight into the game — so minted monsters are playable, not just collectible. The listing also carries Ronin Market's standard fine print that prices and purchase limits may vary between wallets: this is a wallet-gated drop, so what a visitor sees depends on the connected wallet — a whitelisted wallet mints free plus RON gas, one mint per wave, while a wallet on no whitelist cannot mint at all. Which waves a given wallet can mint in is shown by the official checker at yakkamon.com/whitelist, not by the mint page. The wave-by-wave table on the listing renders live in the app; wave names, supplies, eligibility and opening times are as published on the whitelist page (00:00 UTC for Waves 1, 2 and 5; 08:00 UTC for Waves 3 and 4).
+
 ## Free mint whitelist page (yakkamon.com/whitelist, official, live since September 10, 2026)
 
 Source: https://yakkamon.com/whitelist
