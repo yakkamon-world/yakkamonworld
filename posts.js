@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "collection-page-live",
+    category: "official",
+    title: "The Collection Page Is Live: Where the Yakkamon Genesis NFTs Will Trade on Ronin Market",
+    date: "Sep 12, 2026",
+    excerpt: "marketplace.roninchain.com/collections/yakkamon is live \u2014 the official Ronin Market home for the Yakkamon Genesis collection, and the venue where minted eggs will be viewed, listed, bought and sold. Two official pages now, one for each job: you mint on the Launchpad page, you trade on the collection page. Here is the difference, why the blind-egg market that runs until the October 14 reveal happens here, and the safety rules that cover both.",
+    body: [
+      "The trading side of the drop now has an address. <a href=\"https://marketplace.roninchain.com/collections/yakkamon\" target=\"_blank\" rel=\"noopener\"><strong>marketplace.roninchain.com/collections/yakkamon</strong></a> is the official <strong>Yakkamon collection</strong> page on Ronin Market \u2014 the home for every Genesis Yakkamon NFT, and the place they will be viewed, listed, bought and sold. It is the same collection the <a href=\"article-mint-page-live.html\">Genesis Mint listing</a> already sits inside; now that collection has its own public front door, live before a single egg has been minted.",
+      "## Two official pages, two jobs",
+      "You <strong>mint</strong> on the Launchpad page, <a href=\"https://marketplace.roninchain.com/launchpads/mints/yakkamon\" target=\"_blank\" rel=\"noopener\">marketplace.roninchain.com/launchpads/mints/yakkamon</a> \u2014 whitelisted wallets only, one mint per wave, free plus RON gas, September 14\u201318. You <strong>view and trade</strong> on the collection page, <a href=\"https://marketplace.roninchain.com/collections/yakkamon\" target=\"_blank\" rel=\"noopener\">marketplace.roninchain.com/collections/yakkamon</a> \u2014 open to anyone with a Ronin wallet, no whitelist needed to buy. You never mint from the collection page. Bookmark both, and mint only ever from the Launchpad.",
+      "## Where the hidden-egg market happens",
+      "Every Yakkamon is minted <strong>blind</strong> and stays blind until the reveal on <strong>October 14</strong>, and the drop is tradable in the meantime \u2014 so there is a real market in sealed eggs for about a month, and this page is the room it happens in. Every listing carries the same fact on its face: no seller can know what is inside. We <a href=\"article-free-mint-by-the-numbers.html#hidden-value\">ran the math on what a hidden egg is worth</a> before there was a venue to point at; the floor price on this page, once eggs are minting, is the market\u2019s live answer.",
+      "## What\u2019s there today",
+      "Nothing to buy yet \u2014 Wave 1 opens September 14, so today the collection is an empty shelf with the official name on it. That is why it is worth bookmarking now: it is the page you refresh the moment Wave 1 mints. Full reading, the mint-versus-collection table and the safety rules in the article."
+    ]
+  },
+  {
     slug: "the-clock-explained",
     category: "analysis",
     title: "One World, One Clock \u2014 What the Official Clock Post Means for Players",
