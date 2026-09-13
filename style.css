@@ -274,6 +274,10 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .roster-embed{margin:18px 0 8px}
 .roster-embed img{width:100%; height:auto; display:block; border:3px solid var(--ink); border-radius:12px; box-shadow:6px 6px 0 var(--ink)}
 .roster-embed figcaption{font-size:.85rem; color:#6a6a80; font-weight:600; margin-top:14px; text-align:center}
+/* Roster sheet inside the roster article. Only `max-width:100%` applied here, so
+   the width shrank on a phone while the height attribute held — the sheet rendered
+   stretched (fixed 13 Sep 2026, when the five-row sheet made it obvious). */
+.roster-figure img{height:auto}
 .article-body p{margin:0 0 18px; font-weight:600}
 .article-body h2{font-size:1.5rem; margin:28px 0 12px}
 /* Breadcrumb trail (articles: Home › News › title; hub pages: Home › page). Replaced .back-link 2 Sep 2026 */

@@ -279,7 +279,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ gameplay-poster.png         1800×1899 — in-page field guide poster (rendered from gameplay-poster-source.html)
    ├─ gameplay-poster-full.png    3882×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
-   ├─ yakkamon-roster*.jpg        Official roster sheets — original 18, the 21-sheet (25 Aug), the 22-sheet (31 Aug), current 23-sheet (8 Sep, reordered), each with a -2x
+   ├─ yakkamon-roster*.jpg        Official roster sheets, each with a -2x. LIVE: the original 18 (the dated figure in the roster article) and the current 26-sheet (13 Sep, five rows, 688×469). SUPERSEDED and now referenced by nothing — the 21- (25 Aug), 22- (31 Aug) and 23-sheets (8 Sep): ~603 KB, deletable by hand on GitHub
    ├─ fm-bat / fm-moth / fm-pony / fm-duck / fm-egg .webp   Free-mint hero sprites (transparent, 2x); swap in place, keep the names
    ├─ free-mint-banner.webp       Former free-mint banner — no longer referenced since 8 Sep, deletable
    ├─ free-mint-banner-2x.webp    Same, 2x — deletable
@@ -382,6 +382,37 @@ FAQ) still get them — a page that uses chips must load `free-mint-hero.js`.
 The tile markup on both pages must keep matching `data-fm-wave` ids (`w1`–`w5`).
 To swap the sprites, replace `fm-*.webp` keeping the file names and proportions
 (display size is half the file's pixel size).
+
+### Swap in a new roster sheet
+
+The official "YAKKAMONS" sheet grows every few weeks. Resize the new source to
+**688** and **1376** wide (JPEG q82) as `yakkamon-roster-<n>.jpg` and
+`-<n>-2x.jpg`, `<n>` being the creature count — and **recompute the height from
+the source rather than reusing the last one**: the sheet was four rows (688×384)
+until Sept 13, 2026 and five rows (688×469) after it, so the `width`/`height`
+attributes move with it. Then:
+
+1. `gameplay.html` `#roster` and `gameplay-guide.html` `#your-yakkamon` — in each
+   `.roster-embed` figure: the link, `src`, `width`/`height`, alt text and caption.
+2. The `page-updated` line at the top of `gameplay.html`.
+3. `article-yakkamon-roster-revealed.html` — a new update callout above the last
+   one, the `.roster-figure`, the four description fields, the three share-image
+   URLs, `og:image:height`, `dateModified` and the "Updated …" line in
+   `.article-meta`. The headline and the original August 17 text never change
+   (editorial line), and the original 18-sheet figure stays below.
+4. `posts.js` — the excerpt, plus an update line at the top of the body mirror.
+5. `faq.js` → "How many Yakkamon are there?", then `node build-static-hubs.mjs`
+   **and** `node build-faq-jsonld.mjs` (the first does not touch the JSON-LD).
+6. `search.js` roster entries; `sitemap.xml` `lastmod` on the five touched pages.
+7. The "The N Yakkamon shown so far" read-next labels in
+   `article-after-the-race.html` and `article-updates-panel.html` — nav-only, so
+   no `dateModified` bump on those two.
+
+The chatbot needs no hand edit: every one of those is a tier-2 source and the
+Action rebuilds the knowledge on push. Diff the new sheet against the previous one
+cell by cell before writing the callout — the Sept 8 sheet silently reordered all
+twenty-two earlier portraits, the Sept 13 one left them alone, and the difference
+is the whole story of the update.
 
 ### Add a whole new page
 
@@ -506,6 +537,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 - MINT RIBBON: every page except `gameplay-poster-source.html` opens with `<a class="mint-ribbon">` above the masthead — one yellow bar linking straight to the official mint page (marketplace.roninchain.com/launchpads/mints/yakkamon). Its `[data-fm-ribbon]` pill is kept live by `free-mint-hero.js`, which every page now loads (`defer`, before `</body>`); the static pill text ("September 14–18") is the no-JS fallback. AFTER THE MINT WINDOW IS HISTORY, remove the ribbon in one pass: delete the `<a class="mint-ribbon">…</a>` block from all 58 pages, drop the `free-mint-hero.js` script tag from pages that only loaded it for the ribbon (keep it on index, pre-registration, faq, the guide and the whitelist + mint-page articles while their chips still matter), and delete the "Genesis Mint ribbon" block in `style.css`.
 
 - SNAPSHOT IS PAST: the Sept 10, 2026 whitelist snapshot (01:00 UTC) has been taken and the lists are final. Evergreen pages (Early Access §7, Tips §4, FAQ) describe the deposit/linking steps in the past tense and point to the checker; dated articles keep their original advice with an "Update, September 10" callout. Don't reintroduce "deposit before the snapshot" wording.
+
+- ROSTER SHEET CSS: two different rules, both needed. `.roster-embed img` (the gameplay page and the field guide) sets `width:100%; height:auto`; `.roster-figure img` (the two figures inside the roster article) sets `height:auto` only, deliberately — `width:100%` there would upscale a 688px-wide JPEG into the wider desktop article column. Without `height:auto` on either, the global `img{max-width:100%}` shrinks the width on a phone while the `height` attribute holds, and the sheet renders stretched (the bug fixed 13 Sep 2026, when the five-row sheet made it obvious).
 
 - STATIC HUBS: `index.html` (latest news), `news.html`, `videos.html` and `faq.html` carry a pre-rendered copy of their JavaScript content between `<!-- static-hubs:start … -->` / `<!-- static-hubs:end … -->` markers, so crawlers and no-JS visitors see real content. Never hand-edit inside the markers — edit `posts.js` / `videos.js` / `faq.js` and run `node build-static-hubs.mjs` (the GitHub Action does this on every push and commits the result). The runtime scripts still replace the block on load.
 
