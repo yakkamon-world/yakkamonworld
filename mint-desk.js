@@ -20,7 +20,7 @@
 (function () {
   "use strict";
 
-  var WORKER = ""; // e.g. "https://yakkamon-mint-worker.yakkamonworld.workers.dev"
+  var WORKER = "yakkamon-mint-worker.yakkamonworld.workers.dev"; // e.g. "https://yakkamon-mint-worker.yakkamonworld.workers.dev"
   var FALLBACK_EVERY = 120000;
   var MIN_GAP = 15000; // never refetch more often than this, whatever the clock says
 
