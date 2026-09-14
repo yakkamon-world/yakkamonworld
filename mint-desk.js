@@ -57,8 +57,13 @@
     return isFinite(n) ? n.toLocaleString("en-US") : null;
   }
 
-  function usd(v, rate) {
-    if (!rate || v === null || v === undefined || v === "") return "";
+  /* Rates arrive symbol-keyed ({RON: 0.0549, ETH: 2460}), so a value converts
+     using whatever currency it is actually denominated in — floors and offers
+     in RON, volume in ETH. An unknown symbol simply gets no dollar line. */
+  function usd(v, symbol, rates) {
+    if (!rates || v === null || v === undefined || v === "") return "";
+    var rate = Number(rates[String(symbol || "").toUpperCase()]);
+    if (!isFinite(rate) || rate <= 0) return "";
     var n = Number(v) * rate;
     if (!isFinite(n) || n <= 0) return "";
     return "\u2248 $" + n.toLocaleString("en-US", {
@@ -70,15 +75,15 @@
   /* Both marketplaces render identically — same four fields, same units.
      `prefix` is "os" (OpenSea) or "rm" (Ronin Market). A venue with no data
      yet leaves every dash in place rather than printing zeros. */
-  function venue(prefix, v, minted, rate, ethRate) {
+  function venue(prefix, v, minted, rates) {
     if (!v) return;
     var sym = v.symbol || "RON";
 
     setText(prefix + "-floor", price(v.floor, sym));
-    setText(prefix + "-floor-usd", usd(v.floor, rate));
+    setText(prefix + "-floor-usd", usd(v.floor, sym, rates));
 
     setText(prefix + "-offer", price(v.offer, sym));
-    setText(prefix + "-offer-usd", usd(v.offer, rate));
+    setText(prefix + "-offer-usd", usd(v.offer, sym, rates));
 
     if (v.listed !== null && v.listed !== undefined) {
       setText(prefix + "-listed", count(v.listed) + (v.listedCapped ? "+" : ""));
@@ -89,8 +94,9 @@
 
     // Volume is reported in ETH even where the collection prices in RON, so it
     // carries its own symbol and converts at its own rate.
-    setText(prefix + "-vol24", price(v.vol24, v.vol24Symbol || sym));
-    setText(prefix + "-vol24-usd", usd(v.vol24, v.vol24Symbol === "ETH" ? ethRate : rate));
+    var volSym = v.vol24Symbol || sym;
+    setText(prefix + "-vol24", price(v.vol24, volSym));
+    setText(prefix + "-vol24-usd", usd(v.vol24, volSym, rates));
   }
 
   function clock(ms) {
@@ -147,12 +153,10 @@
       node.classList.toggle("is-open", !!w.open);
     });
 
-    var rate = Number(data.ronUsd) > 0 ? Number(data.ronUsd) : 0;
+    var rates = data.rates || {};
 
-    var ethRate = Number(data.ethUsd) > 0 ? Number(data.ethUsd) : 0;
-
-    venue("os", data.os, minted, rate, ethRate);
-    venue("rm", data.ronin, minted, rate, ethRate);
+    venue("os", data.os, minted, rates);
+    venue("rm", data.ronin, minted, rates);
 
     renderHeader();
   }
