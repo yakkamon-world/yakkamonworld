@@ -20,7 +20,7 @@
 (function () {
   "use strict";
 
-  var WORKER = "https://yakkamon-mint-worker.yakkamonworld.workers.dev"; // e.g. "https://yakkamon-mint-worker.yakkamonworld.workers.dev"
+  var WORKER = "https://yakkamon-mint-worker.yakkamonworld.workers.dev";
   var FALLBACK_EVERY = 120000;
   var MIN_GAP = 15000; // never refetch more often than this, whatever the clock says
 
@@ -39,11 +39,13 @@
     if (node && value !== null && value !== undefined && value !== "") node.textContent = value;
   }
 
-  function money(v) {
+  function price(v, symbol) {
     if (v === null || v === undefined || v === "") return null;
     var n = Number(v);
     if (!isFinite(n)) return null;
-    return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var decimals = n >= 100 ? 0 : n >= 1 ? 2 : 4;
+    var text = n.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+    return symbol ? text + " " + symbol : text;
   }
 
   function count(v) {
@@ -107,12 +109,13 @@
     });
 
     var os = data.os || {};
-    setText("floor", money(os.floor));
-    setText("offer", money(os.offer));
+    var sym = os.floorSymbol || "RON";
+    setText("floor", price(os.floor, sym));
+    setText("offer", price(os.offer, sym));
     setText("listed", os.listed === null || os.listed === undefined ? null
       : count(os.listed) + (isFinite(minted) && minted > 0
         ? " \u00b7 " + ((os.listed / minted) * 100).toFixed(1) + "%" : ""));
-    setText("vol24", money(os.vol24));
+    setText("vol24", price(os.vol24, sym));
 
     renderHeader();
   }
