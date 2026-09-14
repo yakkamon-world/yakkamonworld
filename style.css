@@ -933,6 +933,13 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 .md-waves b{display:block; font-size:.58rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:rgba(255,244,214,.6)}
 .md-waves i{font-family:var(--font-display); font-style:normal; font-size:.95rem; letter-spacing:.03em; color:var(--cream)}
 .md-waves i.is-open{color:var(--green)}
+.md-venue{margin-bottom:10px}
+.md-venue:last-of-type{margin-bottom:0}
+.md-vname{margin:0 0 6px; font-family:var(--font-display); font-size:1rem; letter-spacing:.04em; color:var(--cream)}
+.md-vtag{font-family:var(--font-body,inherit); font-size:.58rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,244,214,.6); border:2px solid rgba(255,244,214,.25); border-radius:20px; padding:1px 8px; margin-left:6px; vertical-align:2px}
+.md-vtag.live{color:var(--ink); background:var(--green); border-color:var(--green)}
+.md-kv em{font-style:normal; font-size:.62rem; font-weight:800; letter-spacing:.03em; color:rgba(255,244,214,.55)}
+.md-kv em:empty{display:none}
 .md-note{margin:9px 0 0; font-size:.72rem; color:rgba(255,244,214,.72); line-height:1.5}
 .md-note b{color:var(--yellow)}
 .md-note a{color:var(--cream)}

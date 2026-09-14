@@ -36,7 +36,10 @@
 
   function setText(name, value) {
     var node = el(name);
-    if (node && value !== null && value !== undefined && value !== "") node.textContent = value;
+    if (!node || value === null || value === undefined) return;
+    // "" is meaningful for the USD sub-lines: it clears a stale conversion.
+    if (value === "" && node.tagName !== "EM") return;
+    node.textContent = value;
   }
 
   function price(v, symbol) {
@@ -52,6 +55,40 @@
     if (v === null || v === undefined || v === "") return null;
     var n = Number(v);
     return isFinite(n) ? n.toLocaleString("en-US") : null;
+  }
+
+  function usd(v, rate) {
+    if (!rate || v === null || v === undefined || v === "") return "";
+    var n = Number(v) * rate;
+    if (!isFinite(n) || n <= 0) return "";
+    return "\u2248 $" + n.toLocaleString("en-US", {
+      minimumFractionDigits: n >= 1000 ? 0 : 2,
+      maximumFractionDigits: n >= 1000 ? 0 : 2
+    });
+  }
+
+  /* Both marketplaces render identically — same four fields, same units.
+     `prefix` is "os" (OpenSea) or "rm" (Ronin Market). A venue with no data
+     yet leaves every dash in place rather than printing zeros. */
+  function venue(prefix, v, minted, rate) {
+    if (!v) return;
+    var sym = v.symbol || "RON";
+
+    setText(prefix + "-floor", price(v.floor, sym));
+    setText(prefix + "-floor-usd", usd(v.floor, rate));
+
+    setText(prefix + "-offer", price(v.offer, sym));
+    setText(prefix + "-offer-usd", usd(v.offer, rate));
+
+    if (v.listed !== null && v.listed !== undefined) {
+      setText(prefix + "-listed", count(v.listed) + (v.listedCapped ? "+" : ""));
+      if (isFinite(minted) && minted > 0) {
+        setText(prefix + "-listed-pct", ((v.listed / minted) * 100).toFixed(1) + "% of minted");
+      }
+    }
+
+    setText(prefix + "-vol24", price(v.vol24, sym));
+    setText(prefix + "-vol24-usd", usd(v.vol24, rate));
   }
 
   function clock(ms) {
@@ -108,14 +145,10 @@
       node.classList.toggle("is-open", !!w.open);
     });
 
-    var os = data.os || {};
-    var sym = os.floorSymbol || "RON";
-    setText("floor", price(os.floor, sym));
-    setText("offer", price(os.offer, sym));
-    setText("listed", os.listed === null || os.listed === undefined ? null
-      : count(os.listed) + (isFinite(minted) && minted > 0
-        ? " \u00b7 " + ((os.listed / minted) * 100).toFixed(1) + "%" : ""));
-    setText("vol24", price(os.vol24, sym));
+    var rate = Number(data.ronUsd) > 0 ? Number(data.ronUsd) : 0;
+
+    venue("os", data.os, minted, rate);
+    venue("rm", data.ronin, minted, rate);
 
     renderHeader();
   }
