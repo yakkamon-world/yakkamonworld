@@ -46,7 +46,7 @@
     if (v === null || v === undefined || v === "") return null;
     var n = Number(v);
     if (!isFinite(n)) return null;
-    var decimals = n >= 100 ? 0 : n >= 1 ? 2 : 4;
+    var decimals = n >= 100 ? 0 : n >= 1 ? 2 : n >= 0.01 ? 4 : 6;
     var text = n.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
     return symbol ? text + " " + symbol : text;
   }
@@ -70,7 +70,7 @@
   /* Both marketplaces render identically — same four fields, same units.
      `prefix` is "os" (OpenSea) or "rm" (Ronin Market). A venue with no data
      yet leaves every dash in place rather than printing zeros. */
-  function venue(prefix, v, minted, rate) {
+  function venue(prefix, v, minted, rate, ethRate) {
     if (!v) return;
     var sym = v.symbol || "RON";
 
@@ -87,8 +87,10 @@
       }
     }
 
-    setText(prefix + "-vol24", price(v.vol24, sym));
-    setText(prefix + "-vol24-usd", usd(v.vol24, rate));
+    // Volume is reported in ETH even where the collection prices in RON, so it
+    // carries its own symbol and converts at its own rate.
+    setText(prefix + "-vol24", price(v.vol24, v.vol24Symbol || sym));
+    setText(prefix + "-vol24-usd", usd(v.vol24, v.vol24Symbol === "ETH" ? ethRate : rate));
   }
 
   function clock(ms) {
@@ -147,8 +149,10 @@
 
     var rate = Number(data.ronUsd) > 0 ? Number(data.ronUsd) : 0;
 
-    venue("os", data.os, minted, rate);
-    venue("rm", data.ronin, minted, rate);
+    var ethRate = Number(data.ethUsd) > 0 ? Number(data.ethUsd) : 0;
+
+    venue("os", data.os, minted, rate, ethRate);
+    venue("rm", data.ronin, minted, rate, ethRate);
 
     renderHeader();
   }
