@@ -77,6 +77,7 @@ const YAKKAMON_POSTS = [
     date: "Sep 8, 2026",
     excerpt: "Live numbers on the free mint \u2014 133,408 registered, 5,219 depositors, 68 Legendaries in 10,000. Why Wave 5 probably doesn\u2019t exist, a 73% chance nobody mints a Storm on day one, what $1.25 buys before the September 10 snapshot, and what a hidden egg is worth.",
     body: [
+      "<em>Update, September 13:</em> the mint\u2019s 250 points are paid <strong>per mint</strong>, so the ticket table below doubles as a points table \u2014 1 ticket 250, up to 5 tickets 1,250. The odds barely move with extra tickets; the points do.",
       "Six days before the first wave, almost nobody has done the arithmetic on the free mint. I did, with live data: <strong>133,408 trainers</strong> registered, <strong>5,219 wallets</strong> with a $FLOWER deposit, $FLOWER at $0.25 \u2014 all read at 18:40 UTC on September 8 \u2014 plus the official pool of 68 Legendaries, 50 Rares and 9,882 Uncommons.",
       "## The odds",
       "One mint is a <strong>1-in-147</strong> shot at a Legendary, 1-in-85 at Rare or better, 1-in-3,333 at a Storm, and a 98.8% chance of an Uncommon. Stacking waves helps less than people assume: the best-placed wallet in the game, with five tickets, has a 3.35% Legendary chance. Rank buys certainty, not odds.",
@@ -162,9 +163,10 @@ const YAKKAMON_POSTS = [
     date: "Sep 2, 2026",
     excerpt: "10,000 hidden Yakkamon, free on the Ronin Launchpad from September 14 in five rank-gated waves. Which waves your rank unlocks, the four things to have done before the September 10 snapshot, mint day step by step, what is hidden inside \u2014 and the mistakes that will cost you a mint.",
     body: [
+      "<em>Update, September 13:</em> two things from the team about the <strong>+250 points</strong>. They appear on the trainer dashboard <strong>once the minting period has ended</strong>, not when your transaction confirms \u2014 so expect your total to sit still on the 14th. And the 250 is paid <strong>per mint</strong>, not once per trainer: four waves is 1,000 points, five is 1,250.",
       "On September 14, 10,000 hidden Genesis Yakkamon go up for free on the Ronin Launchpad. You pay gas and nothing else, mint blind, and everything is revealed on October 14. Hidden in the pool are 68 Legendaries. This is the one page to read first.",
       "## Three dates",
-      "<strong>September 10</strong>: the leaderboard snapshot that builds the whitelists. <strong>14\u201318 September</strong>: the mint, one wave a day. <strong>October 14</strong>: the reveal. Your rank on the 10th decides your waves; nothing after that changes it.",
+      "<strong>September 10</strong>: the leaderboard snapshot that builds the whitelists. <strong>September 14\u201318</strong>: the mint, one wave a day. <strong>October 14</strong>: the reveal. Your rank on the 10th decides your waves; nothing after that changes it.",
       "## Which waves are yours",
       "Ranks 1\u20131,000: Waves 1, 2, 4 and 5 \u2014 Wave 1 guaranteed, at your own pace. Ranks 1,001\u201310,000: Waves 2, 4 and 5. Ranks 10,001\u201320,000: Waves 4 and 5. Ranks 20,001\u201350,000: Wave 5 only, at 00:00 UTC on the 18th. Waves 2 and 4 need 5 $FLOWER deposited \u2014 fully withdrawable, not a fee. One NFT per wave per account, and every wave past the first is fastest-click.",
       "## Before the 10th",
@@ -674,6 +676,7 @@ const YAKKAMON_POSTS = [
     date: "Aug 5, 2026",
     excerpt: "Reaching early access without depositing: the two-minute daily routine, the one date that matters, and why referrals are 60% of a realistic free total.",
     body: [
+      "<em>Update, September 13:</em> the free mint\u2019s 250 points are paid <strong>per mint</strong> and credited <strong>once the minting period has ended</strong>, not on mint day \u2014 both confirmed by the team. For a player who never deposits that still means one wave, or two with the Ronin Wave.",
       "You can reach early access without spending anything. You can't reach the top of the leaderboard without spending \u2014 a 50,000 $FLOWER deposit is worth 70,000 points, more than a hundred days of perfect free play. This guide is about playing the game that's actually winnable.",
       "## Aim at top 5,000",
       "Top 5,000 is where a Monster NFT starts and top 100,000 is where early access starts. The genuinely paid bracket is the <strong>top 100</strong>, not the top 1,000 \u2014 referrals are uncapped, so a Legendary band is reachable free if you can drive enough of them. Everything between the thresholds is a question of which wave you get in, not whether you get in.",

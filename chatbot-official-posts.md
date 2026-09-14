@@ -18,6 +18,12 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Free-mint points timing (official Yakkamon Discord announcement, September 13, 2026)
+
+The team announced in Discord that the +250 points for taking part in the free mint will appear on the trainer dashboard "once the minting period has ended" — they are not credited at the moment a trainer mints. The team also confirmed that the 250 is paid per mint, not once per trainer.
+
+Key facts in plain terms: minting in the Genesis free mint is worth +250 pre-registration points on the trainer dashboard. Those points do NOT appear when the mint transaction confirms; they are added after the minting period is over. A trainer whose dashboard total has not moved on mint day has not lost the points, does not need to mint again from another wallet, and does not need to contact support. The 250 is paid PER MINT, not once per trainer: a trainer who mints in more than one wave earns 250 for each mint. Because the wave brackets nest, that means up to 1,000 points for a top-1,000 trainer with a 5 $FLOWER deposit (Waves 1, 2, 4 and 5) and up to 1,250 if the same wallet is also on the Ronin Wave list; 750 for ranks 1,001-10,000 with a deposit; 500 for ranks 10,001-20,000 with a deposit; 250 for ranks 20,001-50,000 with no deposit; and 250 for a Ronin Wave wallet with no leaderboard rank. Those are ceilings, not expectations: only Wave 1 is guaranteed and the rest are first come, first served against a supply of 10,000. The announcement gives no hour or date for the crediting. The last wave (Wave 5, Public Trainers) opens September 18, 2026 at 00:00 UTC, and the official whitelist page says Wave 5 may never open if the supply is gone, so the end of the minting period itself has no published moment. The leaderboard that decides the Genesis airdrop, the trainer number and the early-access wave does not finalize until one week before early access in November or December, so points credited after mint week still count toward a trainer's final rank.
+
 ## Yakkamon — The Clock (official post by the Yakkamon team on X, September 11, 2026)
 
 G'day trainers. Back with another guide — today we're talking time.
