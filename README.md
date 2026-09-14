@@ -246,6 +246,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ push-alerts.js              NEWS ALERTS bell in the masthead + OneSignal web push + the iPhone install tip (App ID pasted at the top; inert until then)
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
 │  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
+│  ├─ mint-desk.js               The Mint Desk under the wave tiles (Home, Early Access) — reads /mint on the separate yakkamon-mint-worker; INERT until its WORKER constant is set
 │  ├─ free-mint-hero.js           Free-mint wave clock: hero board (Home, Early Access), `[data-fm-in]` status chips in wave tables (guide, whitelist + mint-page articles, Early Access, FAQ) and the site-wide mint ribbon's `[data-fm-ribbon]` pill — official WAVES dates/hours live here; loaded on EVERY page for the ribbon
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
@@ -382,6 +383,23 @@ FAQ) still get them — a page that uses chips must load `free-mint-hero.js`.
 The tile markup on both pages must keep matching `data-fm-wave` ids (`w1`–`w5`).
 To swap the sprites, replace `fm-*.webp` keeping the file names and proportions
 (display size is half the file's pixel size).
+
+### Change what The Mint Desk shows
+
+The desk is the block under the wave tiles on `index.html` and `pre-registration.html`
+(`<div class="md" id="mint-desk">` — same markup in both, edit them together). The
+dashes in that markup are what visitors see with no JavaScript, and what stays on
+screen if the feed is down; they are not placeholders to fill in by hand.
+
+Live values come from `mint-desk.js`, which reads `/mint` on the separate
+**yakkamon-mint-worker**. That script is INERT until its `WORKER` constant at the top
+holds a real URL — deliberately, because a desk showing frozen numbers during mint
+week is worse than one showing none. To add a field: add a `data-md-<name>` slot to
+both pages, a line in `render()`, and the field to the worker's payload.
+
+Per-wave counts are DERIVED. The worker records total supply at each wave boundary
+and subtracts; nothing publishes a per-wave figure. A wave whose mark was missed
+reports null and shows a dash.
 
 ### Swap in a new roster sheet
 

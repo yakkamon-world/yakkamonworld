@@ -835,7 +835,7 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 .fm-hero{
   position:relative; color:var(--cream); min-width:0;
   display:grid; grid-template-columns:minmax(0,1fr) 400px; column-gap:18px;
-  grid-template-areas:"top scene" "clock scene" "waves waves" "foot foot";
+  grid-template-areas:"top scene" "clock scene" "waves waves" "desk desk" "foot foot";
   background-image:radial-gradient(rgba(255,244,214,.08) 1.4px,transparent 1.6px); background-size:14px 14px;
 }
 .fm-top{grid-area:top; padding:26px 0 0 28px; min-width:0}
@@ -910,8 +910,32 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 .fm-wave.done{opacity:.45}
 .fm-wave.done::after{display:block; content:'CLOSED'; background:var(--cream); color:var(--ink)}
 .fm-foot{grid-area:foot; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px 26px; min-width:0}
-.fm-fine{margin:0; font-size:.78rem; color:rgba(255,244,214,.78); max-width:56ch}
-.fm-fine b{color:var(--yellow)}
+/* The Mint Desk — live numbers under the wave tiles (index + pre-registration).
+   Values are filled by mint-desk.js from the mint worker; the markup's dashes
+   are what shows with no JS or no worker. Replaced the old .fm-fine line. */
+.md{grid-area:desk; margin:20px 28px 0; border:3px solid var(--cream); border-radius:14px; overflow:hidden; min-width:0}
+.md-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap; background:var(--yellow); color:var(--ink); padding:6px 14px}
+.md-t{font-family:var(--font-display); font-size:1.3rem; letter-spacing:.04em}
+.md-u{font-size:.68rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase}
+.md-u i{font-style:normal}
+.md-u i+i:not(:empty)::before{content:" \00b7 "}
+.md-band{padding:11px 14px; border-bottom:2px solid rgba(255,244,214,.22)}
+.md-band:last-child{border-bottom:0}
+.md-lab{margin:0 0 8px; font-size:.64rem; font-weight:900; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,244,214,.6)}
+.md-bar{height:13px; border:2px solid var(--cream); border-radius:8px; overflow:hidden; background:rgba(0,0,0,.25); margin-bottom:9px}
+.md-bar span{display:block; height:100%; width:0; background:var(--yellow); transition:width .4s ease}
+.md-row{display:flex; gap:8px; flex-wrap:wrap}
+.md-kv{display:flex; flex-direction:column; background:rgba(255,244,214,.06); border:2px solid rgba(255,244,214,.25); border-radius:9px; padding:4px 10px; min-width:0}
+.md-kv b{font-size:.6rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:rgba(255,244,214,.6)}
+.md-kv i{font-family:var(--font-display); font-style:normal; font-size:1.1rem; letter-spacing:.04em; color:var(--cream)}
+.md-waves{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:6px; margin-top:9px}
+.md-waves span{display:block; background:rgba(255,244,214,.06); border:2px solid rgba(255,244,214,.25); border-radius:8px; padding:4px 6px; text-align:center; min-width:0}
+.md-waves b{display:block; font-size:.58rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:rgba(255,244,214,.6)}
+.md-waves i{font-family:var(--font-display); font-style:normal; font-size:.95rem; letter-spacing:.03em; color:var(--cream)}
+.md-waves i.is-open{color:var(--green)}
+.md-note{margin:9px 0 0; font-size:.72rem; color:rgba(255,244,214,.72); line-height:1.5}
+.md-note b{color:var(--yellow)}
+.md-note a{color:var(--cream)}
 .fm-ctas{display:flex; gap:12px; flex-wrap:wrap}
 .pixel-btn.fm-ghost{background:transparent; color:var(--cream); border-color:var(--cream); box-shadow:5px 5px 0 var(--red)}
 .pixel-btn.fm-ghost:hover{box-shadow:3px 3px 0 var(--red)}
@@ -919,7 +943,7 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 
 /* Tablet: smaller scene beside the title, clock centred underneath both */
 @media(max-width:1000px){
-  .fm-hero{grid-template-columns:minmax(0,1fr) 300px; grid-template-areas:"top scene" "clock clock" "waves waves" "foot foot"}
+  .fm-hero{grid-template-columns:minmax(0,1fr) 300px; grid-template-areas:"top scene" "clock clock" "waves waves" "desk desk" "foot foot"}
   .fm-scene{--s:.75; margin:20px 24px 0 0}
   .fm-clock{padding:20px 28px 0; text-align:center}
   .fm-hero .countdown{justify-content:center}
@@ -937,6 +961,9 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
   .fm-title span{margin-top:.3em; font-size:.5em; line-height:1.1}
   .fm-clock{padding:18px 18px 0}
   .fm-waves{grid-template-columns:1fr 1fr; padding:20px 18px 0}
+  .md{margin:16px 18px 0}
+  .md-waves{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .md-kv{flex:1 1 auto}
   .fm-wave:last-child{grid-column:1/-1}
   .fm-foot{padding:20px 18px 22px}
   .fm-ctas .pixel-btn{font-size:1.05rem; padding:11px 20px}
