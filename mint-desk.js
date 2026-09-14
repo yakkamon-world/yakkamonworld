@@ -21,7 +21,7 @@
   "use strict";
 
   var WORKER = "https://yakkamon-mint-worker.yakkamonworld.workers.dev";
-  var FALLBACK_EVERY = 120000;
+  var FALLBACK_EVERY = 600000;
   var MIN_GAP = 15000; // never refetch more often than this, whatever the clock says
 
   var root = document.getElementById("mint-desk");
