@@ -397,6 +397,13 @@ holds a real URL — deliberately, because a desk showing frozen numbers during 
 week is worse than one showing none. To add a field: add a `data-md-<name>` slot to
 both pages, a line in `render()`, and the field to the worker's payload.
 
+The OpenSea band leads with **Last sale** (the price someone actually paid, with
+"≈ $x · 3h ago" under it — worker fields `os.lastSale`, `os.lastSaleSymbol`,
+`os.lastSaleAt`, read from OpenSea's `/events/collection/{slug}?event_type=sale`),
+not the floor; the Ronin Market band keeps the floor. `mint-desk.js` fills whichever
+`data-md-<venue>-last` / `-floor` slot the markup has, so swapping a venue between the
+two is a markup-only edit on both pages.
+
 Per-wave counts are DERIVED. The worker records total supply at each wave boundary
 and subtracts; nothing publishes a per-wave figure. A wave whose mark was missed
 reports null and shows a dash.

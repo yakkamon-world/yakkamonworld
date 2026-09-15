@@ -9,7 +9,7 @@
 
    The worker serves JSON at /mint:
      { updated, everyMs, minted, total, owners,
-       waves:{w1..w5}, os:{floor,offer,listed,vol24} }
+       waves:{w1..w5}, os:{lastSale,lastSaleAt,offer,listed,vol24}, ronin:{floor,offer,listed,vol24} }
    Any field the worker cannot fill comes back null and stays a dash here.
 
    The header reads "Updated HH:MM UTC · next in M:SS". The countdown runs off
@@ -72,12 +72,32 @@
     });
   }
 
-  /* Both marketplaces render identically — same four fields, same units.
-     `prefix` is "os" (OpenSea) or "rm" (Ronin Market). A venue with no data
-     yet leaves every dash in place rather than printing zeros. */
+  /* "3h ago" for the last-sale sub-line. Empty when the worker sends no stamp. */
+  function ago(iso) {
+    var t = Date.parse(iso);
+    if (!isFinite(t)) return "";
+    var s = Math.max(0, Math.round((Date.now() - t) / 1000));
+    if (s < 60) return "just now";
+    if (s < 3600) return Math.floor(s / 60) + "m ago";
+    if (s < 86400) return Math.floor(s / 3600) + "h ago";
+    return Math.floor(s / 86400) + "d ago";
+  }
+
+  /* Both marketplaces render the same way — `prefix` is "os" (OpenSea) or "rm"
+     (Ronin Market). The first cell differs: OpenSea shows the LAST SALE (the
+     price the market actually paid, with "≈ $x · 3h ago" underneath), Ronin
+     Market keeps the floor. Each slot is filled only if the page has it, so
+     either cell can be swapped by editing the markup alone. A venue with no
+     data yet leaves every dash in place rather than printing zeros. */
   function venue(prefix, v, minted, rates) {
     if (!v) return;
     var sym = v.symbol || "RON";
+
+    var lastSym = v.lastSaleSymbol || sym;
+    setText(prefix + "-last", price(v.lastSale, lastSym));
+    var lastUsd = usd(v.lastSale, lastSym, rates);
+    var lastAgo = ago(v.lastSaleAt);
+    setText(prefix + "-last-usd", lastUsd && lastAgo ? lastUsd + " \u00b7 " + lastAgo : (lastUsd || lastAgo));
 
     setText(prefix + "-floor", price(v.floor, sym));
     setText(prefix + "-floor-usd", usd(v.floor, sym, rates));
