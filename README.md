@@ -122,6 +122,17 @@ carried across. **When you add a page, add its `/<name> /<name>.html 301` line.*
 Home links across the site are `href="/"`, never `index.html`, so they don't
 pass through a redirect.
 
+**HTTP → HTTPS is a Cloudflare dashboard setting, not a repo file.** Neither
+`_redirects` nor `wrangler.jsonc` can redirect on scheme, so with the setting
+off the whole site is served with a 200 over plain `http://` and every
+`http://yakkamonworld.com/…` address Google finds lands in Search Console as
+"Alternate page with proper canonical tag" (found Sep 16, 2026). Keep
+**SSL/TLS → Edge Certificates → Always Use HTTPS** switched **On** for the
+zone. `_headers` (repo root, not served) adds a one-year
+`Strict-Transport-Security` header on top, so browsers that have visited once
+never ask for `http://` again — it does nothing for Googlebot's first visit,
+which is why the dashboard toggle is the actual fix.
+
 ---
 
 ## The workers
@@ -270,6 +281,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
 │  ├─ _redirects                  / → index.html rewrite, /index.html → /, /stats → leaderboard,
 │                                 every extension-less page → its .html canonical (not served)
+│  ├─ _headers                    Strict-Transport-Security on every path (not served — see Deployment)
 │  └─ CHANGELOG-2026-08-21.md     One-off change log for the 21 Aug gameplay rewrite.
 │                                 Note: publicly fetchable, like everything else here.
 │

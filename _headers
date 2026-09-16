@@ -1,0 +1,13 @@
+# YakkamonWorld response headers (Cloudflare Workers static assets).
+# Applied to every path matched below. Like _redirects, this file is read by
+# Cloudflare and never served.
+#
+# HSTS: once a browser has seen the site over https it will rewrite any later
+# http://yakkamonworld.com/... request to https:// itself before sending it.
+# This complements — does NOT replace — the zone-level "Always Use HTTPS"
+# toggle in the Cloudflare dashboard (SSL/TLS → Edge Certificates), which is
+# what actually 301s a first-time http:// visit (Googlebot included).
+# No "preload" and no "includeSubDomains" on purpose: both are hard to undo.
+
+/*
+  Strict-Transport-Security: max-age=31536000
