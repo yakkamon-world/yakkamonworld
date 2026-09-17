@@ -257,7 +257,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ push-alerts.js              NEWS ALERTS bell in the masthead + OneSignal web push + the iPhone install tip (App ID pasted at the top; inert until then)
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
 │  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
-│  ├─ mint-desk.js               The Mint Desk (Home, Early Access) — Market band only since the mint sold out Sept 17, 2026; reads /mint on the separate yakkamon-mint-worker; INERT until its WORKER constant is set
+│  ├─ mint-desk.js               Former Mint Desk script — the desk came off Home and Early Access on 17 Sep 2026, so no page references it; deletable by hand on GitHub (see "The Mint Desk is gone" below)
 │  ├─ free-mint-hero.js           Free-mint wave clock — official WAVES dates/hours live here. Since Sept 17, 2026 it only drives the `[data-fm-in]` status chips in the wave tables, and only those five pages load it (guide, whitelist + mint-page articles, Early Access, FAQ); the hero board and site-wide ribbon it once drove are gone
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
@@ -394,33 +394,22 @@ what crawlers and no-JS visitors read. A chip is any element with
 page re-renders at runtime (the FAQ) still get them — a page that uses chips
 must load `free-mint-hero.js`, and only the five chip pages still do.
 
-### Change what The Mint Desk shows
+### The Mint Desk is gone (removed September 17, 2026)
 
-The desk is the dark box at the top of the ticket on `index.html` and
-`pre-registration.html` (`<div class="md" id="mint-desk">` — same markup in both,
-edit them together). Since September 17, 2026 it carries the **Market band only**:
-the mint sold out, so the Minted band (bar, minted/owners/left, per-wave cells)
-was removed with the hero. The dashes in the markup are what visitors see with no
-JavaScript, and what stays on screen if the feed is down; they are not
-placeholders to fill in by hand.
-
-Live values come from `mint-desk.js`, which reads `/mint` on the separate
-**yakkamon-mint-worker**. That script is INERT until its `WORKER` constant at the top
-holds a real URL — deliberately, because a desk showing frozen numbers during mint
-week is worse than one showing none. To add a field: add a `data-md-<name>` slot to
-both pages, a line in `render()`, and the field to the worker's payload.
-
-The OpenSea band leads with **Last sale** (the price someone actually paid, with
-"≈ $x · 3h ago" under it — worker fields `os.lastSale`, `os.lastSaleSymbol`,
-`os.lastSaleAt`, read from OpenSea's `/events/collection/{slug}?event_type=sale`),
-not the floor; the Ronin Market band keeps the floor. `mint-desk.js` fills whichever
-`data-md-<venue>-last` / `-floor` slot the markup has, so swapping a venue between the
-two is a markup-only edit on both pages.
-
-The worker still reports the minted totals and DERIVED per-wave counts in its
-`/mint` payload (it recorded total supply at each wave boundary and subtracted);
-the pages simply have no slots for them anymore — `mint-desk.js` fills only the
-slots the markup has, so restoring a cell is a markup-only edit on both pages.
+The live mint/market box that sat on `index.html` and `pre-registration.html`
+was removed the same day the mint sold out — first trimmed to its Market band,
+then taken off entirely. `mint-desk.js` is no longer loaded by any page and can
+be deleted by hand on GitHub. Its data source, the separate
+**yakkamon-mint-worker** (`https://yakkamon-mint-worker.yakkamonworld.workers.dev`,
+deployed by hand on Cloudflare, cron every 10 minutes, KV `MINT_KV`, secrets
+`OPENSEA_API_KEY` + `REFRESH_TOKEN`), now feeds nothing — pause or delete the
+worker and its cron in the Cloudflare dashboard whenever convenient; nothing on
+the site breaks either way. If a market box ever comes back, the desk markup,
+`mint-desk.js` and the worker notes are all in git history (see the Sept 14–17
+changelogs), and the hard-won lessons live there too: chain for supply/owners,
+marketplaces only for prices, never sum listings across venues, OpenSea prices
+arrive in the collection's native currency (RON) with USD converted separately,
+and explorer.roninchain.com blocks browser reads (server-side only).
 
 ### Swap in a new roster sheet
 
@@ -571,7 +560,9 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 - PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.
 
-- MINT CLOSE-OUT (September 17, 2026): the mint sold out during Wave 4, and the planned one-pass removal was executed that day — the `<a class="mint-ribbon">` bar came off all 61 pages, the `.fm-hero` wave board (title, egg scene, clock, tiles) and its three CTAs came off Home and Early Access, and the ribbon + hero CSS left `style.css`. What REMAINS on purpose: The Mint Desk (`#mint-desk`, Market band only) at the top of the ticket on both pages, the `[data-fm-in]` chips in the wave tables, and `free-mint-hero.js` on exactly the five chip pages (index no longer loads it): `pre-registration.html`, `faq.html`, the guide and the whitelist + mint-page articles. Dated mint articles, the guide and most FAQ answers still describe the mint in the wording written while it ran — the FAQ free-mint topic opens with a sold-out notice instead of rewriting them all. The `fm-*.webp` sprites are orphaned and deletable by hand.
+- MINT CLOSE-OUT (September 17, 2026): the mint sold out during Wave 4, and the planned one-pass removal was executed that day — the `<a class="mint-ribbon">` bar came off all 61 pages, the `.fm-hero` wave board (title, egg scene, clock, tiles) and its three CTAs came off Home and Early Access, and the ribbon + hero CSS left `style.css`. The Mint Desk survived a few hours longer (Market band only) and then came off both pages too — see "The Mint Desk is gone" under Common tasks. What REMAINS on purpose: the `[data-fm-in]` chips in the wave tables, and `free-mint-hero.js` on exactly the five chip pages (index no longer loads it): `pre-registration.html`, `faq.html`, the guide and the whitelist + mint-page articles. Dated mint articles, the guide and most FAQ answers still describe the mint in the wording written while it ran — the FAQ free-mint topic opens with a sold-out notice, and the guide, mint-page article, Early Access §7 and the home timeline carry completion callouts instead of rewrites. The `fm-*.webp` sprites and `mint-desk.js` are orphaned and deletable by hand.
+
+- BAD EGG COUNT: the number of flagged Bad Eggs is hand-written, not live — 365 as of Sept 17, 2026, and the team's review is ongoing, so it WILL go stale. When it moves, update together: the `what-is-a-bad-egg` answer in `faq.js` (then rebuild hubs + JSON-LD), the "365 so far" callouts on `index.html` (timeline), `pre-registration.html` (§7) and `article-ronin-free-mint-guide.html`, the Bad Eggs section in `chatbot-official-posts.md`, and the two search.js excerpts that quote it. The dated mentions inside `article-free-mint-complete.html` say "at the time of writing" and stay as published. The live count is the Status filter: marketplace.roninchain.com/collections/yakkamon?Status=Bad%20Egg.
 
 - MINT POINTS: two facts from the team (Discord, Sept 13, 2026) that travel together everywhere on the site — the 250 is paid **per mint**, not once per trainer (so up to 1,250 across five waves), and it is credited to the trainer dashboard **once the minting period has ended**, not when a mint confirms. Every place the site quotes the 250 now says both — `faq.js` (the answers `i-minted-where-are-my-250-points` and `how-many-points-is-the-free-mint-worth-in-total`, plus six others that cite the number), `pre-registration.html` (the points list and §7), and the free-mint guide, free-to-play guide, leaderboard guideline and by-the-numbers article. The per-mint ceilings are computed from the nesting wave brackets, so if a wave's eligibility ever changes, the tables in `how-many-points-is-the-free-mint-worth-in-total` and `do-i-need-a-good-rank-to-take-part` change with it. ONCE THE POINTS ACTUALLY LAND (the minting period ended September 17, when the supply sold out during Wave 4), revisit all of those: the wording is written for the wait, not for after it, and the FAQ answer's one remaining open question — the exact crediting moment — should be answered from what actually happens.
 

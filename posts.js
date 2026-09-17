@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "free-mint-complete",
+    category: "official",
+    title: "The Free Mint Is Complete: Sold Out in Wave 4, 365 Bad Eggs Flagged, and What Comes Next",
+    date: "Sep 17, 2026",
+    excerpt: "All 10,000 hidden Yakkamon are minted — the supply sold out on September 17, during Wave 4, so Wave 5 never opened. The team is still working through who minted: 365 eggs are already flagged with the on-chain “Status: Bad Egg” trait, they reveal nothing on October 14, and the count is climbing. How the mint filled day by day, what a Bad Egg means if you’re buying a sealed egg, and every official date that comes next — from Ronin Market trading on September 21 to the reveal.",
+    body: [
+      "That’s it — the Genesis free mint is over. All <strong>10,000 hidden eggs</strong> are minted; the supply ran out on <strong>September 17</strong>, during <strong>Wave 4</strong>, which by the published rules ended early once the collection was fully minted. Wave 5 was always “whatever is left,” and nothing is left — it never opened. The <a href=\"https://marketplace.roninchain.com/launchpads/mints/yakkamon\" target=\"_blank\" rel=\"noopener\">official mint page</a> is now a sold-out listing; from here on, the only way in is the <a href=\"article-collection-page-live.html\">secondary market</a>.",
+      "## How it filled",
+      "Day by day, as our Mint Desk tracked it: ~993 on Top Trainers day (a handful of guaranteed mints went unclaimed), ~3,376 on OG Trainers day, ~2,676 on the Ronin Wave, and the last ~2,955 gone within hours of Wave 4 opening. Two weeks ago we ran the math and titled the piece <a href=\"article-free-mint-by-the-numbers.html\">“Wave 5 Probably Doesn’t Exist.”</a> It doesn’t.",
+      "## The Bad Egg hunt",
+      "The team is still actively reviewing who minted. Rule-breaking accounts — multi-account farms above all — are getting their minted eggs labeled with a <strong>“Status: Bad Egg”</strong> trait on the NFT itself, and a Bad Egg <strong>reveals nothing</strong> on October 14. At the time of writing there are <strong>365</strong>, up from 53 on September 15, and the count can keep climbing. Buying a sealed egg? Check its Status trait on the collection page first — the filter is public.",
+      "## What comes next",
+      "Per the official Important Dates page: Ronin Market opens for trading <strong>September 21</strong> (until then OpenSea is the only venue, and the team advises waiting); 1,500 extra event eggs mint before the reveal; the <strong>October 14 reveal</strong> opens every egg at once — 68 Legendaries, 50 Rares, 9,882 Uncommons; then the leaderboard lock a week before early access, the airdrop three days later, early access in <strong>November/December</strong>, and Chapter 0 a month after that. The 250-per-mint points’ crediting condition — “once the minting period has ended” — is now met. Full day-by-day table, the Bad Egg rules and the complete schedule in the article."
+    ]
+  },
+  {
     slug: "collection-page-live",
     category: "official",
     title: "The Collection Page Is Live: Where the Yakkamon Genesis NFTs Will Trade on Ronin Market",

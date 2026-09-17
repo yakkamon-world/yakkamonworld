@@ -814,45 +814,6 @@ td .fm-in.is-next, .prereg-list .fm-in.is-next{background:var(--yellow)}
 td .fm-in.is-open, .prereg-list .fm-in.is-open{background:var(--green); color:#fff; border-color:var(--green)}
 td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6b6b85}
 
-/* The Mint Desk — live market numbers (index + pre-registration).
-   Market band only since September 17, 2026: the mint sold out, so the
-   Minted band (bar, totals, per-wave cells) left with the hero. Values are
-   filled by mint-desk.js from the mint worker; the markup's dashes are what
-   shows with no JS or no worker. Sits directly on the .prereg-ticket ink
-   card, which supplies the dark background. */
-.md{margin:20px 28px 26px; border:3px solid var(--cream); border-radius:14px; overflow:hidden; min-width:0}
-.md-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap; background:var(--yellow); color:var(--ink); padding:6px 14px}
-.md-t{font-family:var(--font-display); font-size:1.3rem; letter-spacing:.04em}
-.md-u{display:flex; flex-wrap:wrap; gap:0 5px; font-size:.68rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase}
-.md-u i{font-style:normal; white-space:nowrap}
-.md-u i+i:not(:empty)::before{content:" \00b7 "}
-.md-band{padding:11px 14px; border-bottom:2px solid rgba(255,244,214,.22)}
-.md-band:last-child{border-bottom:0}
-.md-lab{margin:0 0 8px; font-size:.64rem; font-weight:900; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,244,214,.6)}
-.md-row{display:flex; gap:8px; flex-wrap:wrap}
-.md-kv{display:flex; flex-direction:column; background:rgba(255,244,214,.06); border:2px solid rgba(255,244,214,.25); border-radius:9px; padding:4px 10px; min-width:0}
-.md-kv b{font-size:.6rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:rgba(255,244,214,.6)}
-.md-kv i{font-family:var(--font-display); font-style:normal; font-size:1.1rem; letter-spacing:.04em; color:var(--cream); white-space:nowrap}
-.md-venue{margin-bottom:10px}
-.md-venue:last-of-type{margin-bottom:0}
-.md-vname{display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:0 0 6px; font-family:var(--font-display); font-size:1rem; letter-spacing:.04em; color:var(--cream)}
-.md-vtag{font-family:var(--font-body,inherit); font-size:.58rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; color:rgba(255,244,214,.6); border:2px solid rgba(255,244,214,.25); border-radius:20px; padding:1px 8px}
-.md-vtag.live{color:var(--ink); background:var(--green); border-color:var(--green)}
-.md-kv em{font-style:normal; font-size:.62rem; font-weight:800; letter-spacing:.03em; white-space:nowrap; color:rgba(255,244,214,.55)}
-.md-kv em:empty{display:none}
-.md-note{margin:9px 0 0; font-size:.72rem; color:rgba(255,244,214,.72); line-height:1.5}
-.md-note b{color:var(--yellow)}
-.md-note a{color:var(--cream)}
-/* Phone: the desk hugs the ticket edges; stats sit two-up */
-@media(max-width:760px){
-  .md{margin:16px 18px 20px}
-  /* Flex made each stat claim a whole row, which turned the market band into
-     eight stacked cells on a phone. A two-column grid keeps it compact and
-     stops long values dictating the layout. */
-  .md-row{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px}
-  .md-kv{padding:4px 9px}
-  .md-kv i{font-size:1rem}
-}
 
 /* ---------- Tips page: comparison figure ---------- */
 .tip-figure{

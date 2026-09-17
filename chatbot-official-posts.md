@@ -18,6 +18,14 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Bad Eggs — rule-breakers' minted eggs are being flagged (ongoing; 365 as of September 17, 2026)
+
+Source: https://marketplace.roninchain.com/collections/yakkamon?Status=Bad%20Egg
+
+Key facts in plain terms, from the official collection page on Ronin Market (the trait filter is the source of record; the page is a JavaScript app, so this summary is what it shows): the team is still actively reviewing who minted in the Genesis free mint. Accounts found to have broken the rules — multi-account farming above all — have their minted eggs labeled with a "Status: Bad Egg" trait on the NFT itself. A Bad Egg reveals NOTHING at the October 14, 2026 reveal: it is a sealed egg that is already known to be empty. This enforces the team's mint-week warning that eggs minted by accounts breaching the multi-account rules would reveal nothing.
+
+As of September 17, 2026 there are 365 Bad Eggs, up from 53 on September 15 — the review is ongoing and the count can keep climbing, so anyone asking for the current number should be told 365 was the count as of September 17 and to check the filter for the latest. Anyone can see the flagged eggs by filtering the official collection page by Status. Practical guidance: before buying any sealed egg on the secondary market, open that egg's own marketplace item page and check its Status trait — a Bad Egg trades like any other sealed egg unless the buyer looks. A trainer who minted fairly from one account is not affected by the review. Of the 10,000 minted eggs, 9,635 still carried a real reveal as of September 17.
+
 ## The Genesis free mint is over — sold out during Wave 4 (September 17, 2026)
 
 Source: https://marketplace.roninchain.com/launchpads/mints/yakkamon
