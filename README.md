@@ -257,8 +257,8 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ push-alerts.js              NEWS ALERTS bell in the masthead + OneSignal web push + the iPhone install tip (App ID pasted at the top; inert until then)
 │  ├─ signup-counter.js           Live sign-up count (Home, Early Access)
 │  ├─ prereg-ticket.js            Old ticket-card countdown under the Home hero (pre-reg opening — long past, shows the OPEN line)
-│  ├─ mint-desk.js               The Mint Desk under the wave tiles (Home, Early Access) — reads /mint on the separate yakkamon-mint-worker; INERT until its WORKER constant is set
-│  ├─ free-mint-hero.js           Free-mint wave clock: hero board (Home, Early Access), `[data-fm-in]` status chips in wave tables (guide, whitelist + mint-page articles, Early Access, FAQ) and the site-wide mint ribbon's `[data-fm-ribbon]` pill — official WAVES dates/hours live here; loaded on EVERY page for the ribbon
+│  ├─ mint-desk.js               The Mint Desk (Home, Early Access) — Market band only since the mint sold out Sept 17, 2026; reads /mint on the separate yakkamon-mint-worker; INERT until its WORKER constant is set
+│  ├─ free-mint-hero.js           Free-mint wave clock — official WAVES dates/hours live here. Since Sept 17, 2026 it only drives the `[data-fm-in]` status chips in the wave tables, and only those five pages load it (guide, whitelist + mint-page articles, Early Access, FAQ); the hero board and site-wide ribbon it once drove are gone
 │  ├─ timeline-countdown.js       Timeline countdowns (Home, Early Access)
 │  ├─ deposit-week.js             Current $FLOWER multiplier week
 │  ├─ contact-form.js             Contact form relay
@@ -293,7 +293,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ gameplay-poster-full.png    3882×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
    ├─ yakkamon-roster*.jpg        Official roster sheets, each with a -2x. LIVE: the original 18 (the dated figure in the roster article) and the current 26-sheet (13 Sep, five rows, 688×469). SUPERSEDED and now referenced by nothing — the 21- (25 Aug), 22- (31 Aug) and 23-sheets (8 Sep): ~603 KB, deletable by hand on GitHub
-   ├─ fm-bat / fm-moth / fm-pony / fm-duck / fm-egg .webp   Free-mint hero sprites (transparent, 2x); swap in place, keep the names
+   ├─ fm-bat / fm-moth / fm-pony / fm-duck / fm-egg .webp   Former free-mint hero sprites — no longer referenced since the hero came down on 17 Sep 2026, deletable by hand on GitHub
    ├─ free-mint-banner.webp       Former free-mint banner — no longer referenced since 8 Sep, deletable
    ├─ free-mint-banner-2x.webp    Same, 2x — deletable
    ├─ prereg-ticket.webp          Old ticket card art (still used by article-yakkamon-referral-code)
@@ -378,30 +378,31 @@ in `gameplay-guide.html`, and add search entries.
 
 ### Change a free-mint wave time
 
-The board at the top of Home and Early Access (`.fm-hero` inside `.prereg-ticket`)
-and every "Opens in …" status chip on the site take their times from the `WAVES`
-list at the top of `free-mint-hero.js`. Since Sept 10, 2026 those are the OFFICIAL
-opening times from yakkamon.com/whitelist: each entry is
-`Date.UTC(2026, 8, 14, 0, 0, 0)` — month 0-based, then day, hour, minute — with
-00:00 UTC for Waves 1, 2 and 5 and 08:00 UTC for Waves 3 and 4. The reveal
-(Oct 14) has no published hour, so it is entered as 00:00 UTC and the hero says so.
-If a time changes, edit the entry AND the static text on the tiles/tables
-(`data-fm-wave` tiles on both hero pages; `data-fm-in` chips on the guide,
-`article-whitelist-live.html`, `pre-registration.html` §7 and the FAQ answer
-`when-exactly-and-what-are-the-waves` in `faq.js`), which are what crawlers and
-no-JS visitors read. A chip is any element with `data-fm-in="w1…w5|reveal"`; the
-script re-reads chips every second, so tables a page re-renders at runtime (the
-FAQ) still get them — a page that uses chips must load `free-mint-hero.js`.
-The tile markup on both pages must keep matching `data-fm-wave` ids (`w1`–`w5`).
-To swap the sprites, replace `fm-*.webp` keeping the file names and proportions
-(display size is half the file's pixel size).
+The mint is over (sold out September 17, 2026, during Wave 4) and the hero board
+and site-wide ribbon are gone, but the "Closed" status chips in the wave tables
+are still live: their times come from the `WAVES` list at the top of
+`free-mint-hero.js`. Those are the OFFICIAL opening times from
+yakkamon.com/whitelist: each entry is `Date.UTC(2026, 8, 14, 0, 0, 0)` — month
+0-based, then day, hour, minute — with 00:00 UTC for Waves 1, 2 and 5 and
+08:00 UTC for Waves 3 and 4. The reveal (Oct 14) has no published hour, so it is
+entered as 00:00 UTC; its chip flips to "Revealed" when it passes. If a time is
+ever corrected, edit the entry AND the static text in the tables (`data-fm-in`
+chips on the guide, `article-whitelist-live.html`, `pre-registration.html` §7
+and the FAQ answer `when-exactly-and-what-are-the-waves` in `faq.js`), which are
+what crawlers and no-JS visitors read. A chip is any element with
+`data-fm-in="w1…w5|reveal"`; the script re-reads chips every second, so tables a
+page re-renders at runtime (the FAQ) still get them — a page that uses chips
+must load `free-mint-hero.js`, and only the five chip pages still do.
 
 ### Change what The Mint Desk shows
 
-The desk is the block under the wave tiles on `index.html` and `pre-registration.html`
-(`<div class="md" id="mint-desk">` — same markup in both, edit them together). The
-dashes in that markup are what visitors see with no JavaScript, and what stays on
-screen if the feed is down; they are not placeholders to fill in by hand.
+The desk is the dark box at the top of the ticket on `index.html` and
+`pre-registration.html` (`<div class="md" id="mint-desk">` — same markup in both,
+edit them together). Since September 17, 2026 it carries the **Market band only**:
+the mint sold out, so the Minted band (bar, minted/owners/left, per-wave cells)
+was removed with the hero. The dashes in the markup are what visitors see with no
+JavaScript, and what stays on screen if the feed is down; they are not
+placeholders to fill in by hand.
 
 Live values come from `mint-desk.js`, which reads `/mint` on the separate
 **yakkamon-mint-worker**. That script is INERT until its `WORKER` constant at the top
@@ -416,9 +417,10 @@ not the floor; the Ronin Market band keeps the floor. `mint-desk.js` fills which
 `data-md-<venue>-last` / `-floor` slot the markup has, so swapping a venue between the
 two is a markup-only edit on both pages.
 
-Per-wave counts are DERIVED. The worker records total supply at each wave boundary
-and subtracts; nothing publishes a per-wave figure. A wave whose mark was missed
-reports null and shows a dash.
+The worker still reports the minted totals and DERIVED per-wave counts in its
+`/mint` payload (it recorded total supply at each wave boundary and subtracted);
+the pages simply have no slots for them anymore — `mint-desk.js` fills only the
+slots the markup has, so restoring a cell is a markup-only edit on both pages.
 
 ### Swap in a new roster sheet
 
@@ -569,11 +571,9 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 - PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.
 
-- FREE-MINT HERO: the wave board on Home and Early Access is one block of markup in two pages (`index.html`, `pre-registration.html`) — edit both together. Its states (NEXT / OPEN NOW / CLOSED on the tiles, the clock title) come from `free-mint-hero.js`; nothing is hardcoded in the markup except the dates and hours on the tiles, which are static text so crawlers and no-JS visitors see them. The three CTAs are OPEN THE MINT PAGE (marketplace.roninchain.com/launchpads/mints/yakkamon, primary), CHECK YOUR WHITELIST (yakkamon.com/whitelist) and READ THE GUIDE.
+- MINT CLOSE-OUT (September 17, 2026): the mint sold out during Wave 4, and the planned one-pass removal was executed that day — the `<a class="mint-ribbon">` bar came off all 61 pages, the `.fm-hero` wave board (title, egg scene, clock, tiles) and its three CTAs came off Home and Early Access, and the ribbon + hero CSS left `style.css`. What REMAINS on purpose: The Mint Desk (`#mint-desk`, Market band only) at the top of the ticket on both pages, the `[data-fm-in]` chips in the wave tables, and `free-mint-hero.js` on exactly the five chip pages (index no longer loads it): `pre-registration.html`, `faq.html`, the guide and the whitelist + mint-page articles. Dated mint articles, the guide and most FAQ answers still describe the mint in the wording written while it ran — the FAQ free-mint topic opens with a sold-out notice instead of rewriting them all. The `fm-*.webp` sprites are orphaned and deletable by hand.
 
-- MINT RIBBON: every page except `gameplay-poster-source.html` opens with `<a class="mint-ribbon">` above the masthead — one yellow bar linking straight to the official mint page (marketplace.roninchain.com/launchpads/mints/yakkamon). Its `[data-fm-ribbon]` pill is kept live by `free-mint-hero.js`, which every page now loads (`defer`, before `</body>`); the static pill text ("September 14–18") is the no-JS fallback. AFTER THE MINT WINDOW IS HISTORY, remove the ribbon in one pass: delete the `<a class="mint-ribbon">…</a>` block from all 58 pages, drop the `free-mint-hero.js` script tag from pages that only loaded it for the ribbon (keep it on index, pre-registration, faq, the guide and the whitelist + mint-page articles while their chips still matter), and delete the "Genesis Mint ribbon" block in `style.css`.
-
-- MINT POINTS: two facts from the team (Discord, Sept 13, 2026) that travel together everywhere on the site — the 250 is paid **per mint**, not once per trainer (so up to 1,250 across five waves), and it is credited to the trainer dashboard **once the minting period has ended**, not when a mint confirms. Every place the site quotes the 250 now says both — `faq.js` (the answers `i-minted-where-are-my-250-points` and `how-many-points-is-the-free-mint-worth-in-total`, plus six others that cite the number), `pre-registration.html` (the points list and §7), the hero fine print on Home and Early Access, and the free-mint guide, free-to-play guide, leaderboard guideline and by-the-numbers article. The per-mint ceilings are computed from the nesting wave brackets, so if a wave's eligibility ever changes, the tables in `how-many-points-is-the-free-mint-worth-in-total` and `do-i-need-a-good-rank-to-take-part` change with it. ONCE THE POINTS ACTUALLY LAND (after Wave 5, which opens Sept 18), revisit all of those: the wording is written for the wait, not for after it, and the FAQ answer's one remaining open question — the exact crediting moment — should be answered from what actually happens.
+- MINT POINTS: two facts from the team (Discord, Sept 13, 2026) that travel together everywhere on the site — the 250 is paid **per mint**, not once per trainer (so up to 1,250 across five waves), and it is credited to the trainer dashboard **once the minting period has ended**, not when a mint confirms. Every place the site quotes the 250 now says both — `faq.js` (the answers `i-minted-where-are-my-250-points` and `how-many-points-is-the-free-mint-worth-in-total`, plus six others that cite the number), `pre-registration.html` (the points list and §7), and the free-mint guide, free-to-play guide, leaderboard guideline and by-the-numbers article. The per-mint ceilings are computed from the nesting wave brackets, so if a wave's eligibility ever changes, the tables in `how-many-points-is-the-free-mint-worth-in-total` and `do-i-need-a-good-rank-to-take-part` change with it. ONCE THE POINTS ACTUALLY LAND (the minting period ended September 17, when the supply sold out during Wave 4), revisit all of those: the wording is written for the wait, not for after it, and the FAQ answer's one remaining open question — the exact crediting moment — should be answered from what actually happens.
 
 - SNAPSHOT IS PAST: the Sept 10, 2026 whitelist snapshot (01:00 UTC) has been taken and the lists are final. Evergreen pages (Early Access §7, Tips §4, FAQ) describe the deposit/linking steps in the past tense and point to the checker; dated articles keep their original advice with an "Update, September 10" callout. Don't reintroduce "deposit before the snapshot" wording.
 

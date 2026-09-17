@@ -37,31 +37,6 @@ h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:.02em;
   transform:rotate(-8deg);
 }
 
-/* ---------- Genesis Mint ribbon (site-wide, above the masthead) ----------
-   One yellow bar, one link, straight to the official mint page on Ronin
-   Market. It sits on every page except the poster source; free-mint-hero.js
-   keeps the [data-fm-ribbon] chip live ("Opens in 2d 14h" / "Wave 2 is open
-   now"). Remove the <a class="mint-ribbon"> block from every page, the
-   script tags it brought with it, and this CSS once the mint is history. */
-.mint-ribbon{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:7px 14px;
-  background:var(--yellow); color:var(--ink); text-decoration:none; padding:9px 16px;
-  border-bottom:3px solid var(--ink)}
-.mint-ribbon:hover{background:#FFDD66}
-.mint-ribbon .mr-tag{font-family:var(--font-display); font-size:.95rem; letter-spacing:1px; line-height:1.2;
-  background:var(--red); color:#fff; padding:3px 10px 2px; border:2px solid var(--ink); border-radius:999px; transform:rotate(-2deg)}
-.mint-ribbon .mr-title{font-family:var(--font-display); font-size:1.3rem; letter-spacing:1.5px; line-height:1.1}
-.mint-ribbon .mr-when{font-weight:800; font-size:.82rem; background:#fff; border:2px solid var(--ink); border-radius:999px; padding:2px 10px; white-space:nowrap}
-.mint-ribbon .mr-cta{font-weight:900; font-size:.84rem; letter-spacing:.3px; background:var(--ink); color:#fff;
-  padding:6px 13px; border-radius:9px; box-shadow:3px 3px 0 rgba(26,26,46,.3); white-space:nowrap}
-.mint-ribbon:hover .mr-cta{background:var(--sky)}
-@media (max-width:760px){
-  .mint-ribbon{gap:6px 10px; padding:8px 12px}
-  .mint-ribbon .mr-title{font-size:1.1rem}
-}
-@media (max-width:430px){
-  .mint-ribbon .mr-when{display:none}
-}
-
 /* ---------- Site header ----------
    Two stacked --ink blocks with no seam between them, so they read as one
    dark header. Only .topbar is sticky: the wordmark scrolls away and the
@@ -825,95 +800,27 @@ mark{background:var(--yellow); border-radius:3px; padding:0 2px}
 }
 
 
-/* ---------- Free-mint hero: wave board + clock (Home, Early Access) ----------
-   Lives inside .prereg-ticket, which supplies the ink card, border, shadow and
-   overflow:hidden. Two columns on desktop: title + clock on the left, the egg
-   scene (creatures gathered round the egg) on the right; the wave tiles and the
-   footer span both. Tile states (.next / .open / .done) are set by
-   free-mint-hero.js; without JS the tiles still show every date and the clock
-   shows "--". Scene geometry is written in --s so it can scale as one picture. */
-.fm-hero{
-  position:relative; color:var(--cream); min-width:0;
-  display:grid; grid-template-columns:minmax(0,1fr) 400px; column-gap:18px;
-  grid-template-areas:"top scene" "clock scene" "waves waves" "desk desk" "foot foot";
-  background-image:radial-gradient(rgba(255,244,214,.08) 1.4px,transparent 1.6px); background-size:14px 14px;
-}
-.fm-top{grid-area:top; padding:26px 0 0 28px; min-width:0}
-.fm-eyebrow{margin:0; font-weight:900; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--yellow)}
-.fm-title{
-  display:block; margin:6px 0 0; font-size:clamp(3.2rem,8.5vw,6.4rem); line-height:.9; color:var(--yellow);
-  text-shadow:4px 4px 0 var(--red), 8px 8px 0 rgba(0,0,0,.35); text-wrap:balance;
-}
-.fm-title span{display:block; color:var(--cream); font-size:.4em; line-height:1.05; letter-spacing:.06em; text-shadow:3px 3px 0 var(--red)}
-
-/* The scene: a 400×340 picture. Egg centred, bat and moth in the top corners,
-   pony and duck in the bottom corners. */
-.fm-scene{--s:1; grid-area:scene; position:relative; align-self:center; justify-self:end;
-  width:calc(400px * var(--s)); height:calc(340px * var(--s)); margin:22px 28px 0 0}
-.fm-scene::before{
-  content:''; position:absolute; left:50%; top:calc(150px * var(--s)); width:calc(320px * var(--s)); height:calc(320px * var(--s));
-  transform:translate(-50%,-50%); border-radius:50%;
-  background:radial-gradient(circle, rgba(255,210,63,.26), rgba(255,210,63,0) 62%);
-}
-.fm-hero .fm-scene img{position:absolute; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}  /* widths below beat .prereg-ticket img{width:100%} */
-.fm-hero .fm-bat{left:0; top:calc(26px * var(--s)); width:calc(120px * var(--s)); rotate:-8deg; animation:fm-hover 3.4s ease-in-out infinite}
-.fm-hero .fm-moth{right:0; top:calc(38px * var(--s)); width:calc(100px * var(--s)); rotate:6deg; animation:fm-hover 2.8s ease-in-out infinite reverse}
-.fm-hero .fm-pony{left:0; bottom:0; width:calc(132px * var(--s)); z-index:2}
-.fm-hero .fm-duck{right:0; bottom:0; width:calc(112px * var(--s)); z-index:2}
-.fm-egg{position:absolute; left:50%; top:calc(66px * var(--s)); width:calc(170px * var(--s)); margin-left:calc(-85px * var(--s)); filter:drop-shadow(0 0 22px rgba(255,210,63,.55))}
-.fm-hero .fm-egg img{position:static; width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges}
-.fm-q{
-  position:absolute; top:calc(-24px * var(--s)); left:50%; font-family:var(--font-display); font-size:calc(2.2rem * var(--s)); line-height:1;
-  color:var(--yellow); text-shadow:3px 3px 0 var(--red); animation:fm-bob 2.4s ease-in-out infinite;
-}
-@keyframes fm-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes fm-bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-8px)}}
-
-.fm-clock{grid-area:clock; padding:18px 0 0 28px; text-align:left; min-width:0}
-.fm-clock-title{margin:0; font-family:var(--font-display); font-size:1.35rem; letter-spacing:.04em; color:var(--cream)}
-.fm-clock-title b{font-weight:400; color:var(--yellow)}
-.fm-hero .countdown{margin-top:12px; justify-content:flex-start}
-.fm-hero .cd-unit{background:rgba(255,244,214,.06); border-color:var(--cream)}
-.fm-local{margin:10px 0 0; font-size:.78rem; color:rgba(255,244,214,.75); max-width:52ch}
-.fm-local b{color:var(--cream)}
-
-.fm-waves{grid-area:waves; display:grid; grid-template-columns:repeat(5,1fr); gap:10px; padding:26px 28px 0; min-width:0}
-.fm-wave{
-  display:flex; flex-direction:column; align-items:flex-start; position:relative; min-width:0;
-  color:var(--cream); text-decoration:none; background:rgba(255,244,214,.06);
-  border:3px solid rgba(255,244,214,.4); border-radius:12px; padding:10px 12px 12px;
-  transition:border-color .12s ease, transform .12s ease;
-}
-.fm-wave:hover{border-color:var(--yellow)}
-.fm-day{font-family:var(--font-display); font-size:2rem; line-height:1; letter-spacing:.03em}
-.fm-day small{font-family:var(--font-body); font-weight:900; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; margin-left:4px; opacity:.8}
-.fm-name{font-weight:900; font-size:.82rem; margin:6px 0 2px}
-.fm-who{font-size:.74rem; line-height:1.35; opacity:.85}
-.fm-supply{display:inline-block; margin-top:8px; font-family:var(--font-display); font-size:1rem; letter-spacing:.04em; background:var(--cream); color:var(--ink); border-radius:999px; padding:1px 10px}
-.fm-wave::after{
-  display:none; position:absolute; top:-12px; right:10px; font-family:var(--font-display); font-size:.85rem; letter-spacing:.08em;
-  border-radius:999px; padding:1px 10px; border:2px solid var(--ink);
-}
+/* ---------- Free-mint wave chips (guide, whitelist + mint-page articles,
+   Early Access §7, FAQ) ----------
+   Status chips in the wave tables, kept live by free-mint-hero.js — the five
+   pages above still load it. The hero board, its CTAs and the site-wide
+   ribbon these chips arrived with were removed September 17, 2026, once the
+   mint sold out. */
 .fm-in{display:block; margin-top:8px; font-size:.68rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; opacity:.8}
-.fm-wave.next .fm-in{opacity:1; color:var(--ink)}
 .fm-in.is-open{color:var(--green)}
 /* the same chip inside tables (guide, whitelist article, Early Access §7) */
 td .fm-in, .prereg-list .fm-in{display:inline-block; margin:0; padding:1px 9px; border:2px solid var(--ink); border-radius:999px; background:var(--cream); color:var(--ink); opacity:1; white-space:nowrap}
 td .fm-in.is-next, .prereg-list .fm-in.is-next{background:var(--yellow)}
 td .fm-in.is-open, .prereg-list .fm-in.is-open{background:var(--green); color:#fff; border-color:var(--green)}
 td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6b6b85}
-.fm-wave.next{background:var(--yellow); color:var(--ink); border-color:var(--yellow); box-shadow:5px 5px 0 var(--red); transform:translateY(-4px)}
-.fm-wave.next .fm-supply{background:var(--ink); color:var(--yellow)}
-.fm-wave.next::after{display:block; content:'NEXT'; background:var(--red); color:#fff}
-.fm-wave.open{border-color:var(--green); box-shadow:inset 0 0 0 2px var(--green)}
-.fm-wave.open::after{display:block; content:'OPEN NOW'; background:var(--green); color:#fff}
-.fm-wave.done{opacity:.45}
-.fm-wave.done::after{display:block; content:'CLOSED'; background:var(--cream); color:var(--ink)}
-.fm-foot{grid-area:foot; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px 26px; min-width:0}
-/* The Mint Desk — live numbers under the wave tiles (index + pre-registration).
-   Values are filled by mint-desk.js from the mint worker; the markup's dashes
-   are what shows with no JS or no worker. Replaced the old .fm-fine line. */
-.md{grid-area:desk; margin:20px 28px 0; border:3px solid var(--cream); border-radius:14px; overflow:hidden; min-width:0}
+
+/* The Mint Desk — live market numbers (index + pre-registration).
+   Market band only since September 17, 2026: the mint sold out, so the
+   Minted band (bar, totals, per-wave cells) left with the hero. Values are
+   filled by mint-desk.js from the mint worker; the markup's dashes are what
+   shows with no JS or no worker. Sits directly on the .prereg-ticket ink
+   card, which supplies the dark background. */
+.md{margin:20px 28px 26px; border:3px solid var(--cream); border-radius:14px; overflow:hidden; min-width:0}
 .md-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap; background:var(--yellow); color:var(--ink); padding:6px 14px}
 .md-t{font-family:var(--font-display); font-size:1.3rem; letter-spacing:.04em}
 .md-u{display:flex; flex-wrap:wrap; gap:0 5px; font-size:.68rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase}
@@ -922,17 +829,10 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 .md-band{padding:11px 14px; border-bottom:2px solid rgba(255,244,214,.22)}
 .md-band:last-child{border-bottom:0}
 .md-lab{margin:0 0 8px; font-size:.64rem; font-weight:900; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,244,214,.6)}
-.md-bar{height:13px; border:2px solid var(--cream); border-radius:8px; overflow:hidden; background:rgba(0,0,0,.25); margin-bottom:9px}
-.md-bar span{display:block; height:100%; width:0; background:var(--yellow); transition:width .4s ease}
 .md-row{display:flex; gap:8px; flex-wrap:wrap}
 .md-kv{display:flex; flex-direction:column; background:rgba(255,244,214,.06); border:2px solid rgba(255,244,214,.25); border-radius:9px; padding:4px 10px; min-width:0}
 .md-kv b{font-size:.6rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:rgba(255,244,214,.6)}
 .md-kv i{font-family:var(--font-display); font-style:normal; font-size:1.1rem; letter-spacing:.04em; color:var(--cream); white-space:nowrap}
-.md-waves{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:6px; margin-top:9px}
-.md-waves span{display:block; background:rgba(255,244,214,.06); border:2px solid rgba(255,244,214,.25); border-radius:8px; padding:4px 6px; text-align:center; min-width:0}
-.md-waves b{display:block; font-size:.58rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:rgba(255,244,214,.6)}
-.md-waves i{font-family:var(--font-display); font-style:normal; font-size:.95rem; letter-spacing:.03em; color:var(--cream); white-space:nowrap}
-.md-waves i.is-open{color:var(--green)}
 .md-venue{margin-bottom:10px}
 .md-venue:last-of-type{margin-bottom:0}
 .md-vname{display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:0 0 6px; font-family:var(--font-display); font-size:1rem; letter-spacing:.04em; color:var(--cream)}
@@ -943,50 +843,15 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 .md-note{margin:9px 0 0; font-size:.72rem; color:rgba(255,244,214,.72); line-height:1.5}
 .md-note b{color:var(--yellow)}
 .md-note a{color:var(--cream)}
-.fm-ctas{display:flex; gap:12px; flex-wrap:wrap}
-.pixel-btn.fm-ghost{background:transparent; color:var(--cream); border-color:var(--cream); box-shadow:5px 5px 0 var(--red)}
-.pixel-btn.fm-ghost:hover{box-shadow:3px 3px 0 var(--red)}
-.pixel-btn.fm-ghost:active{box-shadow:0 0 0 var(--red)}
-
-/* Tablet: smaller scene beside the title, clock centred underneath both */
-@media(max-width:1000px){
-  .fm-hero{grid-template-columns:minmax(0,1fr) 300px; grid-template-areas:"top scene" "clock clock" "waves waves" "desk desk" "foot foot"}
-  .fm-scene{--s:.75; margin:20px 24px 0 0}
-  .fm-clock{padding:20px 28px 0; text-align:center}
-  .fm-hero .countdown{justify-content:center}
-  .fm-local{margin-left:auto; margin-right:auto}
-}
-/* Phone: one column, egg alone in the top-right corner, creatures rest */
+/* Phone: the desk hugs the ticket edges; stats sit two-up */
 @media(max-width:760px){
-  .fm-hero{display:block}
-  .fm-top{padding:22px 18px 0}
-  .fm-scene{position:absolute; top:22px; right:14px; width:96px; height:auto; margin:0}
-  .fm-scene::before,.fm-hero .fm-bat,.fm-hero .fm-moth,.fm-hero .fm-pony,.fm-hero .fm-duck{display:none}
-  .fm-egg{position:static; width:96px; margin:0}
-  .fm-q{top:-14px; font-size:2rem}
-  .fm-title{font-size:clamp(2.3rem,11vw,4rem); padding-right:104px}
-  .fm-title span{margin-top:.3em; font-size:.5em; line-height:1.1}
-  .fm-clock{padding:18px 18px 0}
-  .fm-waves{grid-template-columns:1fr 1fr; padding:20px 18px 0}
-  .md{margin:16px 18px 0}
-  .md-waves{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .md-waves i{font-size:.82rem}
+  .md{margin:16px 18px 20px}
   /* Flex made each stat claim a whole row, which turned the market band into
      eight stacked cells on a phone. A two-column grid keeps it compact and
      stops long values dictating the layout. */
   .md-row{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px}
-  /* "10,000 / 10,000" cannot fit a half-width cell, and it is the headline
-     number anyway — give it the whole row on phones. Matched on the data slot
-     rather than position: :first-of-type counts elements, not classes, and the
-     first div inside .md is the header, so a positional selector misses. */
-  .md-kv:has(> i[data-md-minted]){grid-column:1 / -1}
-  /* Fallback for anything without :has() — small enough to fit half a row. */
-  .md-kv i{font-size:.92rem; letter-spacing:.02em}
   .md-kv{padding:4px 9px}
   .md-kv i{font-size:1rem}
-  .fm-wave:last-child{grid-column:1/-1}
-  .fm-foot{padding:20px 18px 22px}
-  .fm-ctas .pixel-btn{font-size:1.05rem; padding:11px 20px}
 }
 
 /* ---------- Tips page: comparison figure ---------- */

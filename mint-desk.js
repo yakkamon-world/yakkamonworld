@@ -1,5 +1,8 @@
-/* Mint Desk — the live numbers under the free-mint wave tiles.
+/* Mint Desk — live market numbers for the Genesis collection.
    Renders into the #mint-desk block on index.html and pre-registration.html.
+   Since September 17, 2026 (mint sold out) the pages carry only the Market
+   band; the Minted-band code below stays because every slot is filled only
+   if the page has it, so absent markup simply renders nothing.
 
    DATA SOURCE: the yakkamon-mint-worker (separate repo, deployed by hand).
    Until WORKER is set to a real URL this script does NOTHING — the markup's
