@@ -30,6 +30,12 @@
   // reading "OPEN NOW" a day after it opens.
   var MINT_CLOSES = Date.UTC(2026, 8, 19, 0, 0, 0);
 
+  // The mint SOLD OUT during Wave 4 on September 17, 2026 — all 10,000 minted,
+  // so Wave 5 never opened and never will. With this flag on, the clock counts
+  // only to the reveal, the Wave 4 chip reads "Sold out" and the Wave 5 chip
+  // reads "Never opened".
+  var SOLD_OUT = true;
+
   var SECOND = 1000, MINUTE = 60000, HOUR = 3600000, DAY = 86400000;
 
   // No early return on "nothing found": the FAQ renders its chips only when the
@@ -50,7 +56,8 @@
 
   function state(now) {
     for (var i = 0; i < WAVES.length; i++) {
-      if (now < WAVES[i].at) return { next: WAVES[i], open: i > 0 ? WAVES[i - 1] : null };
+      if (SOLD_OUT && WAVES[i].id !== "reveal") continue; // sold out: only the reveal is ahead
+      if (now < WAVES[i].at) return { next: WAVES[i], open: SOLD_OUT ? null : (i > 0 ? WAVES[i - 1] : null) };
     }
     return { next: null, open: null };
   }
@@ -62,6 +69,7 @@
 
   // Tile / chip state for one wave at a moment: "next", "open", "done" or "".
   function waveState(wave, st, now) {
+    if (SOLD_OUT && wave.id !== "reveal") return "done"; // every wave is history
     if (st.next && wave === st.next) return "next";
     if (now >= wave.at) {
       // The most recently opened wave stays "open" until the next one opens —
@@ -97,7 +105,7 @@
 
     var title;
     if (!st.next) title = "REVEALED &mdash; SEE WHAT YOU MINTED";
-    else if (toReveal) title = (now < MINT_CLOSES ? "<b>WAVE 5 IS OPEN</b> &middot; " : "MINT WEEK IS OVER &middot; ") + "REVEAL IN";
+    else if (toReveal) title = SOLD_OUT ? "SOLD OUT &mdash; ALL 10,000 MINTED &middot; REVEAL IN" : (now < MINT_CLOSES ? "<b>WAVE 5 IS OPEN</b> &middot; " : "MINT WEEK IS OVER &middot; ") + "REVEAL IN";
     else if (st.open) title = "<b>" + st.open.name.toUpperCase() + " IS OPEN</b> &middot; " + st.next.name.toUpperCase() + " IN";
     else title = "<b>" + st.next.name.toUpperCase() + "</b> OPENS IN";
 
@@ -134,7 +142,12 @@
       if (!cw) continue;
       var cs = waveState(cw, st, now), text;
       if (cs === "open") text = "Open now";
-      else if (cs === "done") text = cw.id === "reveal" ? "Revealed" : "Closed";
+      else if (cs === "done") {
+        if (cw.id === "reveal") text = "Revealed";
+        else if (SOLD_OUT && cw.id === "w5") text = "Never opened";
+        else if (SOLD_OUT && cw.id === "w4") text = "Sold out";
+        else text = "Closed";
+      }
       else text = (cw.id === "reveal" ? "Reveal in " : "Opens in ") + shortLeft(cw.at - now);
       chip.textContent = text;
       chip.classList.remove("is-next", "is-open", "is-done");
@@ -147,7 +160,7 @@
     if (ribbons.length) {
       var rtext;
       if (!st.next) rtext = "Revealed";
-      else if (toReveal) rtext = now < MINT_CLOSES ? "Wave 5 is open now" : "Mint week is over \u00b7 reveal Oct 14";
+      else if (toReveal) rtext = SOLD_OUT ? "Sold out \u00b7 reveal Oct 14" : (now < MINT_CLOSES ? "Wave 5 is open now" : "Mint week is over \u00b7 reveal Oct 14");
       else if (st.open) rtext = st.open.name + " is open now";
       else rtext = st.next.name + " opens in " + shortLeft(st.next.at - now);
       for (var r = 0; r < ribbons.length; r++) ribbons[r].textContent = rtext;
