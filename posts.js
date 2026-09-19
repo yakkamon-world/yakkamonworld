@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "dev-stream-sept-17-recap",
+    category: "devstream",
+    title: "Dev Stream Recap: 973 Bad Eggs, the Battle System Unveiled, and Early Access Aimed at November",
+    date: "Sep 18, 2026",
+    excerpt: "The first dev stream after the sell-out: the team’s own mint post-mortem, 973 Bad Eggs flagged — with the Legendaries and Rares going to clean eggs only — around 25,000 hidden dashboard bans, and the first real tour of the auto-battler combat system. Plus the clearest dates yet: beta testing in October, early access aimed at mid-to-late November, and Chapter Zero six to eight weeks after that.",
+    body: [
+      "The first stream since the mint sold out put Adam, Craig, Spencer and Matt on stage for a mint post-mortem, the biggest enforcement update yet, and — at last — a proper look at battles. Everything below was said on September 17 under the team’s standing everything-can-change disclaimer.",
+      "## 973 Bad Eggs — and better odds for everyone else",
+      "The Bad Egg count now stands at <strong>973</strong> — close to one minted egg in ten, and nearly triple the 365 from completion day. The sentence that matters: <strong>Legendaries and Rares will not be distributed among Bad Eggs</strong> — the 68 + 50 land in clean eggs only, so every flagged egg improved honest minters’ reveal odds. The review is essentially done (a few more flags can still land — one more reason not to trade before Ronin Market opens <strong>September 21</strong>), flagged eggs stay visible on the marketplace, and around <strong>25,000 accounts</strong> carry hidden trainer-dashboard bans that bite before the leaderboard finalizes.",
+      "## Battles: an auto battler where the plan is 70% of the fight",
+      "Roughly 40 iterations later, the style is cemented: pick three or four Yakkamon, place them, and they fight — <strong>70% planning, 30% live input</strong> like throwing a potion mid-fight. Skills fire on conditions (a seed Yakkamon that puts enemies to sleep when it dies), chain reactions are the goal, battle items are coming, and the internal meta is already AROC-the-rock-tank up front. Four battle stats — Health, Attack, Defense, Speed — and identical buffs still don’t stack.",
+      "## The build and the dates",
+      "Crunch week put all the early-access content in: <strong>30 Yakkamon</strong> (our public roster shows 23 — seven still unrevealed), 36 levels, Legendaries already in the world, hunting still being prototyped. The dates, stated with honest error bars: <strong>beta testing in October</strong>, <strong>early access aimed at mid-to-late November</strong> (officially still Q4), roughly two weeks’ notice before it opens, the leaderboard finalizing a few days before that, the first hunt about six weeks in, <strong>Chapter Zero six to eight weeks after launch</strong>, and the competition arena early next year. Gyms arrive sooner than expected, lands never reset, and a Yakkamon Training Center slipped out by accident. Full recap, the schedule table and our read in the article."
+    ]
+  },
+  {
     slug: "free-mint-complete",
     category: "official",
     title: "The Free Mint Is Complete: Sold Out in Wave 4, 365 Bad Eggs Flagged, and What Comes Next",

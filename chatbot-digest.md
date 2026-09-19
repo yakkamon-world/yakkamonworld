@@ -2,7 +2,7 @@
 
 # Yakkamon — current state of the game
 
-      Current as of the September 1, 2026 stream · digest version 2026-09-02 · four streams merged
+      Current as of the September 17, 2026 stream · digest version 2026-09-02 plus a September 17 addendum (section 0) · four streams merged, fifth appended
 
       Every statement carries the date of the stream it came from, e.g. Sep 1. Where a later stream changed or contradicted an earlier one, the later stream wins: the current position is stated in the topic section and the old position is logged in section 17 ("Superseded"). Only the four transcripts above were used; nothing here comes from other sources. The team's standing disclaimer applies to everything: the game is in development and anything discussed can change before launch.
 
@@ -16,6 +16,24 @@
 
 - Sep 1, 2026 — Ronin free mint waves, Yakopedia, economy model, hunting
 
+- Sep 17, 2026 — Mint post-mortem, 973 Bad Eggs, battle system overview, October beta / November early-access aims (appended as section 0, not yet merged)
+
+
+## 0. September 17, 2026 stream — addendum (newest; not yet merged into the sections below — where anything conflicts, THIS section wins, per the later-stream-wins rule)
+
+On stage: Adam, Craig, Spencer, Matt (game design intern behind the battle system, final semester of university). Everything below was said on the Sep 17 stream under the standing disclaimer (beta prototyping stage; ideas change up to launch).
+
+- Free mint post-mortem: heavily oversubscribed; Ronin endpoints strained; middle waves chaotic. Contracts performed cleanly — exactly 10,000 minted, none extra. Ronin has recommended its raffle system for future drops of this size; the team says future in-game drops will run through in-game systems (like Sunflower Land's), so on-chain click-races should be the exception. The mint was deliberately free and revenue-less: the goal was visibility and user acquisition on Ronin. The 250 points per mint are LIVE on the trainer dashboard — credited automatically, no claiming, one 250 per NFT minted, secondary-market purchases earn nothing (Sep 17).
+- Bad Eggs: 973 flagged as of this stream (up from 53 on Sep 15) — about 1 in 10 minted eggs vs the ~3% the team says is typical for a free mint. Review essentially complete ("one of the last markings"); a few more can land, no big wave expected. The Legendaries and Rares will NOT be distributed among Bad Eggs — they land in clean eggs only, so honest minters' odds improved. Bad Eggs stay visible on the marketplace (NFTs can't be confiscated); check an egg's Status trait before buying; don't trade before Ronin Market opens Sep 21 (Sep 17).
+- Hidden bans: ~25,000 accounts banned from the trainer dashboard for botting/multi-accounting. Bans are deliberately hidden — banned accounts still log in and still appear on leaderboards so cheaters learn nothing about detection; access is cut and the leaderboard cleaned before it finalizes, before the airdrop and before early access (Sep 17).
+- Battle system (first full overview; ~40 iterations, style now cemented): an AUTO BATTLER — pick three or four Yakkamon (count still settling), place them in the scene, they fight on their own. Target split 70% pre-battle planning (team selection + positioning) / 30% live input (e.g. throwing a health potion mid-fight). Turn-based under the hood but fast enough to feel real-time. This supersedes the Aug 21 "lane-based 3v3" framing — placement is freer now, planning-first spirit unchanged. Skills fire on trigger conditions (example: a seed Yakkamon that puts enemy Yakkamon to sleep when it dies); chain reactions between skills are a design goal. Battle items (health potions; an experimental AoE "blizzard pot" coded the morning of the stream, may not ship). Internal meta: AROC ("the little rock guy") as front-line tank. FOUR battle stats — Health, Attack, Defense, Speed (asked directly against Pokémon's six; other non-battle stats "might happen"). Identical buffs do not stack (two same creatures, or two creatures with the same ability, give the effect once — consistent with Aug 21). Balancing is the big remaining pre-launch hurdle; the team deliberately declined deep stat questions because numbers will change through beta (Sep 17).
+- Build status after a crunch week (goal: all early-access content in the game, polish pending): 30 Yakkamon in the build — the early-access roster; 36 levels built out; Legendaries already in the world; hunting areas exist but the hunting mechanic is still being prototyped; battling "in a pretty solid place"; mobile testing a dedicated focus; onboarding polish called make-or-break (Sep 17).
+- Dates (more specific than the official Q4, with the caveat that nothing is final until close): beta testing internally aimed at OCTOBER 2026; early access mid-to-late NOVEMBER best case; team will give roughly TWO WEEKS' notice before early access opens; leaderboard finalizes a few days before that date. From early access there is a "six weeks of gameplay" runway before the first hunt begins; early access is a head start on onboarding/setup, NOT an exclusive window on Legendaries/Rares — the first hunt opens wider for pre-registered trainers. Chapter Zero lands roughly 6–8 weeks after early access. The full competition arena comes early next year (Sep 17).
+- Gyms: an internal prototype already works — decorate your own gym, visit other trainers' gyms, battle them. A version ships before the arena, initially outside the core reward loop but with leaderboards/status planned; it doubles as the data source for win rates and the future matchmaking system (a Bryn focus from Gods Unchained) (Sep 17).
+- Yakkamon Training Center: semi-leaked by Craig — Yakkamon will have ways to train themselves; a Training Center is being designed. No details published (Sep 17).
+- Land/expansion: works like SFL (pay to expand) with one stated difference — lands NEVER reset. You finish a land, move to a new region, and keep full access to everything built before. Players hating land resets was named as the SFL lesson not being repeated (Sep 17).
+- Automation/stamina: Yakkamon are self-sufficient — assign a job and a tired Yakkamon walks itself to a bed, rests, returns to work (after battles too). Manual override possible. Too few beds = a visible queue of tired Yakkamon, so rest capacity is a real resource (Sep 17).
+- Q&A: no Yakkamon redirect from the Sunflower Land map, but two-way crossovers between the games are planned; dedicated teams per game with rotation to avoid burnout — Craig (technical direction) and Bryn (lead game design) lead across both projects (Sep 17).
 
 ## 1. Key dates and timeline
 
