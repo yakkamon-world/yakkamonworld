@@ -10,7 +10,7 @@
   the full version is the same page at deviceScaleFactor min(2.222, 4096/height)
   so its longest side never exceeds X's 4096px resize threshold (3882x4096 now).
   Edit the panels below, re-render, replace both PNGs and the width/height
-  attributes on gameplay.html's <img>. Revision: September 5, 2026 (22 panels, 12 columns).
+  attributes on gameplay.html's <img>. Revision: September 20, 2026, after the Sep 17 dev stream (22 panels, 12 columns).
 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
@@ -74,12 +74,12 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED SEP 11, 2026 &mdash; OFFICIAL CLOCK POST. A DAY EVERY FEW REAL HOURS, ONE UNIVERSAL CLOCK, HOUR TRAITS, SEASONAL GATHER/CRAFT GATES, WEATHER EVENTS, REAL-TIME LEGENDARY WINDOWS.</div>
+    <div class="rev">REVISED SEP 20, 2026 &mdash; AFTER THE SEP 17 DEV STREAM. A 70/30 AUTO BATTLER, THREE OR FOUR A SIDE, CONDITION SKILLS, FOUR BATTLE STATS, 30 YAKKAMON IN EARLY ACCESS, THE BED QUEUE, GYMS BEFORE THE ARENA.</div>
   </div>
 </div>
 
 <div class="chips">
-  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">3v3 AUTO-BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">50&ndash;60 YAKKAMON AT LAUNCH</span><span class="chip green">13 TYPES</span>
+  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">70/30 AUTO BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">30 YAKKAMON IN EARLY ACCESS</span><span class="chip green">13 TYPES</span>
 </div>
 
 <div class="cols">
@@ -108,9 +108,9 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="panel">
   <h2><i>03</i>YOUR YAKKAMON</h2>
-  <p>Around 50&ndash;60 species at launch, the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
+  <p>30 species in the early-access build (26 shown so far), the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
   <div class="card sky"><b>Its species</b>Decides what it can gather &mdash; and fixes its rarity tier.</div>
-  <div class="card green"><b>Its stats</b>Every monster rolls differently. Two of the same species aren&rsquo;t identical.</div>
+  <div class="card green"><b>Its stats</b>Every monster rolls differently. Two of the same species aren&rsquo;t identical. Battle stats: Health, Attack, Defense, Speed.</div>
   <div class="card yellow"><b>Its utility</b>A boost it carries. Named on Legendaries; randomly rolled on everyone else, separately from stats.</div>
   <div class="card red"><b>Its skills</b>What it actually does in battle.</div>
   <p>Underneath: real genetics, hidden starting values, and training values that shift stats by how you raise it.</p>
@@ -153,7 +153,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
     <li>It sleeps when tired, recovers, restarts itself.</li>
   </ol>
   <div class="flow"><span>WORKING</span><i>&rarr;</i><span>OUT OF STAMINA</span><i>&rarr;</i><span>SLEEPING</span><i>&rarr;</i><span>WORKING</span></div>
-  <p>No cap on how many work at once &mdash; jobs are the limit, not headcount. Level them up, collect more, claim more tiles.</p>
+  <p>No cap on how many work at once &mdash; jobs are the limit, not headcount. So are beds: short of them, tired monsters queue (Sep 17). Level them up, collect more, claim more tiles.</p>
   <div class="like"><em>LIKE THIS</em>A little worker with a battery. Work drains it, sleep charges it, and it clocks back on unprompted.</div>
 </div>
 
@@ -190,7 +190,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="panel">
   <h2><i>10</i>HOW BOOSTS STACK</h2>
-  <div class="card red"><b>Same name &rarr; does not stack</b>Two monsters both carrying &ldquo;Wood Gatherer I&rdquo; give you the effect once. Hoarding duplicates does nothing.</div>
+  <div class="card red"><b>Same ability &rarr; does not stack</b>Two monsters both carrying &ldquo;Wood Gatherer I&rdquo; give you the effect once &mdash; even two different species. Reconfirmed Sep 17.</div>
   <div class="card green"><b>Different name or higher rank &rarr; stacks</b>&ldquo;Wood Gatherer&rdquo; plus &ldquo;Extreme Wood Gatherer&rdquo; is two effects, both apply.</div>
   <div class="card yellow"><b>The roster shape this implies</b>Wide, not deep. One excellent specialist per job beats five copies of your best one.</div>
   <div class="like"><em>LIKE THIS</em>Two identical umbrellas keep you exactly as dry as one. An umbrella and a raincoat is the upgrade.</div>
@@ -210,7 +210,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card green"><b>They stack &mdash; some multiply</b>Storm + Echo confirmed: twice the speed on double the output.</div>
   <div class="card sky"><b>Rares &amp; Uncommons roll theirs</b>Utility, species and stats are separate dice. Keepers rolled all three.</div>
   <div class="card red"><b>Tide is gone</b>The 251&ndash;500 monster is now Ghost; the 501&ndash;2,000 monster is now Bloom. Same boosts, renamed to match types.</div>
-  <p>Numbers &mdash; radii, percentages &mdash; still unpublished. 68 Legendaries hide in the Sep 14 free mint.</p>
+  <p>Numbers &mdash; radii, percentages &mdash; still unpublished. The mint&rsquo;s 68 Legendaries sit in clean eggs only; reveal Oct 14.</p>
   <div class="like"><em>LIKE THIS</em>A good foreman. He doesn&rsquo;t lay bricks &mdash; everyone within earshot lays them faster.</div>
 </div>
 
@@ -230,7 +230,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card yellow"><b>Expand your land, tile by tile</b>Each tile has a resource price on the button &mdash; the starter reads 10 Wood + 1 Stone.</div>
   <div class="card sky"><b>Buildings &amp; stations</b>Workbenches with their own counters, houses with beds, crop plots, rock nodes.</div>
   <div class="card green"><b>Hunting Area</b>A tile you claim, then pay to enter &mdash; 5 berries on the sign at launch.</div>
-  <div class="card purple"><b>Customization splits in two</b>Land: unlikely at launch. Your gym: full customization planned. Visiting trainers see your gym, layout and monsters when they come to battle you.</div>
+  <div class="card purple"><b>Your gym comes first</b>Land customization: unlikely at launch. Your gym: a working prototype, shipping before the arena &mdash; decorate it, visit others&rsquo;, battle them, with leaderboards attached.</div>
   <p>Menu: Squad &middot; Items &middot; Quests &middot; Shop &middot; Trade &middot; Log. Built for landscape.</p>
 </div>
 
@@ -243,7 +243,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
     <li><b>Chapters</b> &mdash; Regions get bigger each time, and more arrive with each Chapter alongside new species.</li>
   </ol>
   <div class="card sky"><b>The Water Region</b>Water hunting areas full of Yakkamon you couldn&rsquo;t catch back home. A new Region can&rsquo;t be worked until you catch its first local type.</div>
-  <div class="card yellow"><b>Old Regions stay live</b>You keep every one. Leave one alone and its bins fill and it stops earning &mdash; no decay, but no output. The team&rsquo;s word: automate.</div>
+  <div class="card yellow"><b>Lands never reset</b>You keep every land and Region. Leave one alone and its bins fill and it stops earning &mdash; no decay, but no output. The team&rsquo;s word: automate.</div>
   <div class="like"><em>LIKE THIS</em>A shop that keeps adding aisles &mdash; and you still stock the old ones.</div>
 </div>
 
@@ -256,8 +256,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="like"><em>LIKE THIS</em>Two warehouses in two towns. Doubling the shelves is easy &mdash; the lorry between them is the business.</div>
 </div>
 
-<div class="panel new">
-  <span class="tag">NEW SEP 11</span>
+<div class="panel">
   <h2><i>16</i>DAY, NIGHT &amp; SEASONS</h2>
   <div class="card sky"><b>A day every few real hours</b>Time of day rolls over every few real hours &mdash; several dawns and nights pass in one day at your desk, so every time band reaches every player. &ldquo;Miss one, and another is never far away.&rdquo;</div>
   <div class="card"><b>One universal clock</b>No personal timezones, no resetting &mdash; night in Yakkamon is night for everyone, and trainers worldwide hunt the same windows at the same moment. One player&rsquo;s spawn log works everywhere.</div>
@@ -275,6 +274,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty.</div>
   <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule &mdash; and in real time: when one lands, everyone gets the same window. Keep a strong, well-supplied team ready.</div>
   <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon; a hunted-out ground yields less. Spread hunts across grounds <i>and Regions</i>.</div>
+  <div class="card grey"><b>Still in prototype</b>Areas exist; the mechanics are still being tuned (Sep 17). First NFT hunt: Chapter 0 per the docs &mdash; about six weeks in, said the stream.</div>
   <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot, some want paying &mdash; and the field empties if you work it daily.</div>
 </div>
 
@@ -285,15 +285,16 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card green"><b>Contract hunts pay coins</b>Find a requested Yakkamon, earn the currency that gates the tradable layer &mdash; one of the few coin faucets.</div>
 </div>
 
-<div class="panel">
+<div class="panel new">
+  <span class="tag">NEW SEP 17</span>
   <h2><i>19</i>THE BATTLE SYSTEM</h2>
-  <div class="card sky"><b>Lane-based 3v3 auto-battling</b>Lanes act top to bottom &mdash; 1, then 2, then 3. Set positions before the fight. AOE keeps positioning relevant.</div>
-  <div class="card yellow"><b>Skills fire in a fixed order</b>Each monster cycles 2&ndash;3 abilities in a preset loop. Type advantage vs skill-loop advantage: a favorable matchup still loses if their shield eats your big hit.</div>
-  <div class="card red"><b>You act inside the fight</b>Not a pure simulation: players influence combat via &ldquo;mechanic swapping&rdquo;. Who goes first is a coin flip &mdash; unless a lane holds type advantage.</div>
-  <div class="card green"><b>Pacing</b>3&ndash;5 rounds, under a minute &mdash; but the &ldquo;average&rdquo; fight is meant to be under 40% of fights.</div>
-  <div class="card purple"><b>Matchmaking &amp; anti-bot</b>MMR confirmed. No meaningful rewards below a cutoff, so the low end is worthless to bots. Respeccing is deliberately expensive &mdash; extract skills, don&rsquo;t hot-swap.</div>
-  <p>PvE and PvP share the engine. Arena, tournaments, guilds, lane and weather effects: after early access.</p>
-  <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad and formation &mdash; and shout one or two things from the touchline.</div>
+  <div class="card sky"><b>An auto battler, 70/30</b>70% planning &mdash; who you bring and where they stand; 30% live input. Turn-based underneath, fast enough to feel real-time. About 40 iterations in.</div>
+  <div class="card yellow"><b>Three or four a side</b>Placed in the scene &mdash; August&rsquo;s fixed-lane 3v3 has loosened. The in-house meta: AROC, the little rock guy, tanks up front while hitters work behind.</div>
+  <div class="card red"><b>Skills fire on conditions</b>A normal attack plus triggered skills: a seed Yakkamon puts enemies to sleep when it dies. Chain reactions are the goal.</div>
+  <div class="card green"><b>The 30%: live items</b>Health potions to keep a key monster standing; an AOE &ldquo;blizzard pot&rdquo; is experimental.</div>
+  <div class="card purple"><b>Four battle stats</b>Health, Attack, Defense, Speed. Identical buffs don&rsquo;t stack. Numbers move through beta &mdash; balancing is the big hurdle.</div>
+  <p>Still planned: MMR with no rewards below a cutoff; skills extracted at a cost, never hot-swapped. Gyms first, the full arena early next year.</p>
+  <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad and where they stand &mdash; and keep a potion in your pocket for the touchline.</div>
 </div>
 
 <div class="panel">
@@ -301,17 +302,17 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card green"><b>Track one: free to play</b>Produce without limit. Nothing you make here can be traded.</div>
   <div class="card yellow"><b>Track two: tradable, gated by coins</b>Making something tradable costs the game&rsquo;s Web2 currency &mdash; coins, maybe &ldquo;new yen&rdquo; later. That gate is the whole design.</div>
   <div class="card red"><b>Coin faucets are scarce</b>VIP, burning crops or other assets, and contract hunts. Every coin is a sink somebody paid.</div>
-  <p>Marketplace, auctions and $FLOWER withdrawals open at Chapter 0, a month after early access. &ldquo;More free to try than free to play.&rdquo;</p>
+  <p>Marketplace, auctions and $FLOWER withdrawals open at Chapter 0 &mdash; a month after early access per the docs (6&ndash;8 weeks, said the Sep 17 stream). &ldquo;More free to try than free to play.&rdquo;</p>
   <div class="like"><em>LIKE THIS</em>A hobby farm with a license to sell at market. Grow all you like for your own table &mdash; the permit is rationed.</div>
 </div>
 
 <div class="panel">
   <h2><i>21</i>PROGRESSION &amp; ENDGAME</h2>
   <div class="card sky"><b>Infinite levels and expansions</b>Plans and sinks are meant to ship at launch; the endgame features themselves arrive after early access.</div>
-  <div class="card yellow"><b>The meta is expected to move</b>Early: gathering and hunting specialists are the valuable monsters. Later: once the arena and tournaments establish, demand shifts to battle stats. The team won&rsquo;t intervene.</div>
+  <div class="card yellow"><b>The meta is expected to move</b>Early: gathering and hunting specialists are the valuable monsters. Later: once the arena (aimed at early next year) and tournaments establish, demand shifts to battle stats. The team won&rsquo;t intervene.</div>
   <div class="card green"><b>No hard specialization cap</b>Producer vs fighter emerges from opportunity cost, not a rule.</div>
   <div class="card red"><b>No resets. Ever.</b>Mistakes get worn and fixed. Inflation is attacked with hard sinks and new content absorbing old.</div>
-  <p>Not all monsters ship at launch &mdash; the rest arrive with each Chapter, each paired with a new, bigger Region.</p>
+  <p>Not all monsters ship at launch &mdash; 30 open early access, the rest arrive with each Chapter, each paired with a new, bigger Region.</p>
 </div>
 
 <div class="panel">
@@ -321,14 +322,15 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card grey"><b>The type chart</b>13 types confirmed, not which; only Grass&rarr;Wood; combat effectiveness missing.</div>
   <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>Roll ranges, XP costs, level cap, trait list, respec costs; AOE radii, Bloom&rsquo;s regen %, every Rare / Uncommon utility.</div>
   <div class="card grey"><b>Hunting rates</b>Day length, ground regeneration, Legendary odds, a greedy monster&rsquo;s price; private or shared grounds.</div>
-  <div class="card grey"><b>Mechanic swapping &amp; coins</b>What the in-fight action is; what a tradable unit costs.</div>
+  <div class="card grey"><b>Battle numbers &amp; coins</b>Squad size (3 or 4?), item limits, skill triggers, type effectiveness; what a tradable unit costs.</div>
+  <div class="card grey"><b>The exact dates</b>Stream aims: beta Oct, early access mid-to-late Nov. Docs: Nov or Dec. The docs are the record.</div>
 </div>
 
 </div>
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting and Clock posts, screenshots and dev streams through September 11, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting and Clock posts, screenshots and dev streams through September 17, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>

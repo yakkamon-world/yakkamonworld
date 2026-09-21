@@ -608,7 +608,7 @@ var FAQ_CATEGORIES = [
    {
     "id": "how-many-yakkamon-are-there",
     "q": "How many Yakkamon are there?",
-    "a": "<p><strong>Twenty-six</strong> have been officially shown so far, on the roster sheet &mdash; you can see it on the <a href=\"gameplay.html#roster\">Gameplay page</a> &mdash; out of roughly <strong>50&ndash;60 species at launch</strong>. The rest of the roster arrives after launch across chapter releases, each typically paired with a new region. No names, types or rarities have been attached to the portraits yet: <a href=\"article-yakkamon-roster-revealed.html\">what can and can't be read into the sheet</a>.</p>"
+    "a": "<p><strong>Twenty-six</strong> have been officially shown so far, on the roster sheet &mdash; you can see it on the <a href=\"gameplay.html#roster\">Gameplay page</a> &mdash; and the September 17 dev stream confirmed <strong>30 Yakkamon in the early-access build</strong>, so four are still unseen (the team&rsquo;s older figure was roughly 50&ndash;60 at launch). The rest of the roster arrives after launch across chapter releases, each typically paired with a new region. No names, types or rarities have been attached to the portraits yet: <a href=\"article-yakkamon-roster-revealed.html\">what can and can't be read into the sheet</a>.</p>"
    },
    {
     "id": "do-the-yakkamon-have-names-yet",
@@ -623,12 +623,12 @@ var FAQ_CATEGORIES = [
    {
     "id": "when-can-i-battle-other-players",
     "q": "When can I battle other players?",
-    "a": "<p>After launch &mdash; the PvP arena and tournaments are <strong>post-launch features</strong>, arriving once the core game has settled. Worth knowing early: the team expects the market to value <strong>gathering specialists first</strong> and shift toward battle-stat monsters once the arena establishes, and they've said they'll let that shift happen rather than intervene.</p>"
+    "a": "<p>After launch &mdash; the PvP arena and tournaments are <strong>post-launch features</strong>. The September 17 dev stream added the order: a version of <strong>gym battles</strong> &mdash; decorate your gym, visit other trainers&rsquo;, challenge them &mdash; ships first, and the full competition arena is aimed at <strong>early next year</strong>. Worth knowing early: the team expects the market to value <strong>gathering specialists first</strong> and shift toward battle-stat monsters once the arena establishes, and they've said they'll let that shift happen rather than intervene.</p>"
    },
    {
     "q": "Is combat a pure simulation, or do I get to do anything?",
     "id": "is-combat-a-pure-simulation-or-do-i-get-to-do-anything",
-    "a": "<p>You'll get to act. The team decided at the end of August that players can take actions inside combat, through a mechanic Bryn called <strong>&ldquo;mechanic swapping&rdquo;</strong> &mdash; influencing which mechanic is in play rather than pressing attack every turn. What that looks like on screen hasn't been shown. The rest is settled: lanes act top to bottom, each monster cycles through two or three abilities in a preset order, and who goes first is a coin flip unless one lane holds the <strong>type advantage</strong>, which overrides everything.</p>"
+    "a": "<p>You'll get to act, but mostly before the fight. The September 17 dev stream described an <strong>auto battler with a 70/30 split</strong>: 70% of a battle is decided by planning &mdash; picking three or four Yakkamon and placing them &mdash; and 30% by live input, such as throwing a <strong>health potion</strong> to keep a key monster standing (an area-of-effect &ldquo;blizzard pot&rdquo; is experimental). Skills fire on trigger conditions on top of a normal attack, and the four battle stats are Health, Attack, Defense and Speed. The August picture of fixed lanes and preset skill loops has loosened. <a href=\"gameplay.html?system=combat-system\">The Battle System, in full</a>.</p>"
    },
    {
     "q": "Is there a limit on how many Yakkamon can work at once?",

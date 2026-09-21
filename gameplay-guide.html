@@ -106,6 +106,7 @@
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep" aria-hidden="true">&rsaquo;</span><a href="gameplay.html">Gameplay</a><span class="crumb-sep" aria-hidden="true">&rsaquo;</span><span class="crumb-here" aria-current="page">Field Guide</span></nav>
   <h1>HOW YAKKAMON WORKS</h1>
   <p>The full field guide &mdash; every mechanic we know about, explained so anyone can follow it. Built from the <a href="https://docs.yakkamon.com" target="_blank" rel="noopener">official docs</a>, the dev streams, and the official screenshots. <a href="gameplay.html">Prefer it split by system? &rarr;</a></p>
+  <p class="page-updated"><strong>Updated September 20, 2026</strong> &mdash; after the <a href="article-dev-stream-sept-17-recap.html">September 17 dev stream</a>: <a href="#combat">the battle system</a> is rewritten (a 70/30 auto battler, three or four a side, condition-triggered skills, live items, four battle stats), plus 30 Yakkamon in the early-access build, the bed queue, gyms before the arena, lands that never reset, hunting still in prototype, and the stream&rsquo;s dates beside the docs&rsquo;.</p>
   <a class="watch-link" href="https://www.youtube.com/watch?v=AeLErRg8Vzk" target="_blank" rel="noopener">&#9654; Prefer to watch? Gameplay explained in 4 minutes &#8599;</a>
 </div>
 
@@ -178,20 +179,20 @@
   <div class="gg-num">03</div>
   <p class="gg-kicker">THE ROSTER</p>
   <h2>Your Yakkamon</h2>
-  <p class="gg-lede">Expect roughly <strong>50&ndash;60 species at launch</strong> &mdash; and four separate things decide whether one individual is worth keeping.</p>
+  <p class="gg-lede"><strong>Thirty species are in the early-access build</strong> (September 17 stream; the older figure was 50&ndash;60 at launch) &mdash; and four separate things decide whether one individual is worth keeping.</p>
   <figure class="roster-embed">
     <a href="yakkamon-roster-26-2x.jpg" target="_blank" rel="noopener" title="Open the roster sheet full size">
       <img src="yakkamon-roster-26.jpg" width="688" height="469" loading="lazy" decoding="async" alt="Official Yakkamon roster sheet headed YAKKAMONS, showing twenty-six creature portraits: four full rows of six and a fifth row of two, with four slots still empty.">
     </a>
-    <figcaption>Twenty-six of the expected 50&ndash;60, as of September 13 &mdash; portraits only, with names and types still to come. <a href="article-yakkamon-roster-revealed.html">What can and can&rsquo;t be read into it &rarr;</a></figcaption>
+    <figcaption>Twenty-six of the thirty in the early-access build, as of September 13 &mdash; so four are still unseen. Portraits only, with names and types still to come. <a href="article-yakkamon-roster-revealed.html">What can and can&rsquo;t be read into it &rarr;</a></figcaption>
   </figure>
   <div class="gg-grid">
     <div class="gg-card"><h3>Its type</h3><p>Type decides what it can gather. A Grass type gathers Wood. A Fire type <em>can't</em> &mdash; the game refuses outright. <strong>Thirteen types at launch, one per monster</strong>; dual types come later.</p></div>
-    <div class="gg-card"><h3>Its stats</h3><p>Every monster rolls slightly different stats. Two of the same species won't be identical, so it's worth hunting the same one again for a better roll.</p></div>
+    <div class="gg-card"><h3>Its stats</h3><p>Every monster rolls slightly different stats. Two of the same species won't be identical, so it's worth hunting the same one again for a better roll. The battle stats are four: <strong>Health, Attack, Defense, Speed</strong>.</p></div>
     <div class="gg-card"><h3>Its rarity</h3><p>Rares sit in tiers, and certain rares are more powerful than other rares in the same tier.</p></div>
     <div class="gg-card"><h3>Its utility</h3><p>Every monster carries a boost. Legendaries have a named one; Rares and Uncommons <strong>roll theirs at random, separately from their stats</strong> &mdash; so great stats and a great utility on one monster is the jackpot. No wearable gear exists to make up the difference.</p></div>
   </div>
-  <p>The second dev stream filled in the machinery underneath: monsters have <strong>real genetics and base stats</strong>, traits are randomly rolled and define your build, and there are <strong>breeding lines with degradation but no hard cap</strong>, with evolutions planned. The team put roll predictability at roughly 80&ndash;90%.</p>
+  <p>The second dev stream filled in the machinery underneath: monsters have <strong>real genetics and base stats</strong>, traits are randomly rolled and define your build, and breeding lines carry a <a href="#breeding">rarity-scaled breeding limit</a>, with evolutions planned for after launch. A <strong>Yakkamon Training Center</strong>, where monsters train themselves up, was teased on the September 17 stream. The team put roll predictability at roughly 80&ndash;90%.</p>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>Think trading cards. Same picture on the front, better numbers on the back — and that's the one everybody wants.</p></div>
 </section>
 
@@ -256,6 +257,7 @@
   </ol>
   <div class="gg-flow"><span>WORKING</span><span class="gg-arrow">&rarr;</span><span>OUT OF STAMINA</span><span class="gg-arrow">&rarr;</span><span>SLEEPING</span><span class="gg-arrow">&rarr;</span><span>WORKING</span></div>
   <p>A monster that's asleep isn't broken, it's recharging. There are two ways to raise output: <strong>level them up</strong>, since higher levels make them more efficient farmers, and <strong>collect more of them</strong>, since that unlocks more resource types and lets you gather several at once.</p>
+  <p><strong>Beds are capacity.</strong> The September 17 stream showed the cycle running itself: out of stamina, a Yakkamon <strong>walks to a bed</strong>, sleeps and goes back to work &mdash; after battles too. You can override it, but your role is overseer, not micromanager. With <strong>too few beds, tired Yakkamon queue for one</strong>, so rest capacity is something you build.</p>
   <div class="prereg-callout info">Cycle duration, stamina cost, yield per cycle and sleep recovery rate are all unpublished. Nobody can build an accurate farming calculator until they land.</div>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>Each monster is a little worker with a battery. Work drains it, sleep charges it, and it clocks back on without being told.</p></div>
 </section>
@@ -313,7 +315,7 @@
   <h2>How boosts stack</h2>
   <p class="gg-lede">A short rule with large consequences for how you build a roster.</p>
   <div class="gg-grid">
-    <div class="gg-card"><h3>Same name &rarr; does not stack</h3><p>Two monsters both carrying &ldquo;Wood Gatherer I&rdquo; give you the effect <strong>once</strong>. Stacking duplicates of your best monster achieves nothing.</p></div>
+    <div class="gg-card"><h3>Same ability &rarr; does not stack</h3><p>Two monsters both carrying &ldquo;Wood Gatherer I&rdquo; give you the effect <strong>once</strong> &mdash; even if they are different species (reconfirmed September 17). Stacking duplicates of your best monster achieves nothing.</p></div>
     <div class="gg-card"><h3>Different name or higher rank &rarr; stacks</h3><p>&ldquo;Wood Gatherer&rdquo; alongside &ldquo;Extreme Wood Gatherer&rdquo; is two separate effects, and both apply.</p></div>
     <div class="gg-card"><h3>What the team wants</h3><p>Stated plainly: kill the reason to hoard copies, and create a strong reason to collect a <strong>broad array of monsters with different skills</strong> so you can layer boosts on one activity.</p></div>
     <div class="gg-card"><h3>The roster shape this implies</h3><p>Wide, not deep. One excellent specialist per job beats five copies of your best one — and combined with type locking, that is now the clearest planning rule available.</p></div>
@@ -345,6 +347,7 @@
     <div class="gg-card"><h3>Expand your land, tile by tile</h3><p>Each tile carries a resource price right on the button &mdash; the starter one reads <strong>10 Wood + 1 Stone</strong>. A tile can hold resource nodes, room for workstations and plots, or a hunting area, and every tile raises how much you can run at once.</p></div>
     <div class="gg-card"><h3>Buildings &amp; stations</h3><p>Workbenches with their own storage counters, a workshop marked with an axe, houses with beds for sleeping monsters, crop plots and rock nodes.</p></div>
     <div class="gg-card"><h3>Hunting Area</h3><p>A dedicated zone with an entry cost shown on the sign &mdash; <strong>5 berries</strong> in the launch screenshot. This is your doorway from farming into hunting.</p></div>
+    <div class="gg-card"><h3>Your gym comes first</h3><p>Land customization is unlikely at launch, but your gym is fully customizable &mdash; and a working prototype was shown on September 17. A version ships <strong>before the competition arena</strong>: decorate it, visit other trainers&rsquo;, battle them, with leaderboards and status attached.</p></div>
   </div>
   <p><strong>The menu buttons you'll live in:</strong> Squad (your active team), Items, Quests, Shop, Trade (the player market) and Log (notification history).</p>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>A workshop yard. More space means more benches — and more benches mean more gets made at once.</p></div>
@@ -367,7 +370,7 @@
     <li><strong>Regions</strong> &mdash; grow your starting Region far enough and you unlock whole new ones. A Water Region has water hunting areas full of Yakkamon you could not catch back home, and its resources need the right type to gather.</li>
     <li><strong>Chapters</strong> &mdash; Regions get bigger each time you expand, and more arrive in upcoming Chapters alongside new species.</li>
   </ol>
-  <div class="prereg-callout warning"><strong>Nothing you unlock ever closes.</strong> Old Regions stay part of your operation, so you end up automating and managing Yakkamon across several at once &mdash; and <strong>moving and sharing resources between Regions</strong> is, in the team&rsquo;s words, &ldquo;the real puzzle&rdquo;. That only makes sense if resources sit in the Region they were gathered in. What moving them costs is not published. <a href="gameplay.html?system=logistics">Logistics between Regions &rarr;</a></div>
+  <div class="prereg-callout warning"><strong>Nothing you unlock ever closes &mdash; and lands never reset.</strong> The September 17 stream said it flatly: build your first land to its finish, move on to a new Region, and keep full access to everything behind you. Old Regions stay part of your operation, so you end up automating and managing Yakkamon across several at once &mdash; and <strong>moving and sharing resources between Regions</strong> is, in the team&rsquo;s words, &ldquo;the real puzzle&rdquo;. That only makes sense if resources sit in the Region they were gathered in. What moving them costs is not published. <a href="gameplay.html?system=logistics">Logistics between Regions &rarr;</a></div>
   <div class="prereg-callout success"><strong>Every three months, new monsters drop into the wild.</strong> Brand-new Yakkamon are released on a quarterly schedule and <strong>players compete to hunt them down and claim them first</strong>. Being ready when a drop lands is a real advantage &mdash; and one of the better reasons to keep your farm and gear strong between seasons.</div>
   <div class="prereg-callout info"><strong>Two caveats.</strong> The team said on August 6 that the cadence may become <strong>weekly</strong> rather than quarterly, Sunflower Land style. And day/night runs on a <strong>sped-up in-game clock, not real time</strong> &mdash; so no timezone gets a better night shift.</div>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>The world has its own little day that runs faster than yours. Nobody gets a head start on sunrise.</p></div>
@@ -393,6 +396,7 @@
     <div class="gg-card"><h3>Three temperaments</h3><p>Affectionate monsters come home only if your hunter wins them over. Greedy ones want resources first &mdash; bring the right goods. Angry ones start a fight a weak hunter loses.</p></div>
     <div class="gg-card"><h3>Legendaries walk in unannounced</h3><p>Legendaries and Rares sporadically appear in ordinary grounds with no schedule &mdash; and per the Clock post they land <strong>in real time, with the same window for everyone</strong>. No pausing, no catching up later. Keep a strong, well-supplied team ready &mdash; and expect Seasons to change what is on the map.</p></div>
   </div>
+  <div class="prereg-callout warning"><strong>Still in prototype.</strong> As of the September 17 stream, hunting areas exist in the build but the mechanics are still being worked out &mdash; treat everything above as published design, not shipped rules. The official docs put the first NFT monster hunt at <strong>Chapter 0</strong>, a month after early access; on the stream the team said about six weeks in. Early access is a head start on your farm, not an exclusive Legendary window.</div>
   <p>The official Hunting post (September 5) is where the timetable, the temperaments and the wild Legendaries come from. Our reading of it: <a href="article-hunting-explained.html">Every Wild Yakkamon Wants Something</a>.</p>
   <p>Crafting is the thing to watch, because it's what actually gates progress. Raw gathering scales easily once you have a roster; what limits most players is turning that pile into the specific items a harder hunt needs.</p>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>You need a better fishing rod to catch the big fish — and you build the rod out of what the small fish helped you collect.</p></div>
@@ -402,19 +406,19 @@
   <div class="gg-num">15</div>
   <p class="gg-kicker">THE ARENA FLOOR</p>
   <h2>The battle system</h2>
-  <p class="gg-lede">Lane-based 3v3 auto-battling. Your skill shows up in the team you built, not the buttons you press.</p>
+  <p class="gg-lede">An auto battler where the plan is 70% of the fight. Your skill shows up in the team you built and where you put it &mdash; plus a potion at the right moment.</p>
   <div class="gg-grid">
-    <div class="gg-card"><h3>Lane-based 3v3</h3><p>Monsters hold assigned lanes and act <strong>top to bottom</strong> &mdash; lane one, then two, then three, every round. You set positions before the fight; AOE attacks keep positioning relevant.</p></div>
-    <div class="gg-card"><h3>Skills fire in a fixed order</h3><p>Each monster cycles through <strong>two to three abilities in a preset order</strong>. The move list is visible in advance, which creates the core tension: <strong>type advantage versus skill-loop advantage</strong>.</p></div>
-    <div class="gg-card"><h3>You act inside the fight</h3><p>Decided at the end of August: it is <strong>not a pure simulation</strong>. Players influence combat through &ldquo;mechanic swapping&rdquo;, on an architecture built to flex once player feedback starts. What the action looks like hasn't been shown.</p></div>
-    <div class="gg-card"><h3>Who goes first</h3><p>A coin flip &mdash; unless a lane holds the <strong>type advantage</strong>, which overrides everything. Fire attacking grass goes first, full stop. Lane one is where a disadvantage hurts most.</p></div>
-    <div class="gg-card"><h3>Pacing</h3><p>Three to five rounds typically, under a minute. But deliberate wide variance — the &ldquo;average&rdquo; fight is meant to be <strong>under 40%</strong> of all fights.</p></div>
-    <div class="gg-card"><h3>Speed up, don’t skip</h3><p>Battles run on an animation timer you can accelerate. Full skipping likely won’t ship, because real-time interaction mechanics are in testing.</p></div>
-    <div class="gg-card"><h3>Respeccing is expensive on purpose</h3><p>The intended route is to find a monster with the skill you want and <strong>extract it</strong> onto another. Buildcraft is meant to come from breeding, not from hot-swapping loadouts before every fight.</p></div>
-    <div class="gg-card"><h3>Matchmaking &amp; anti-bot</h3><p>MMR confirmed. <strong>No meaningful rewards below an MMR cutoff</strong> — that is where weak human players sit, and it makes the low end worthless to bots. Better bots get flagged by event tracking.</p></div>
+    <div class="gg-card"><h3>An auto battler, 70/30</h3><p>70% of a battle is decided by <strong>planning</strong> &mdash; who you bring and where they stand &mdash; and 30% by <strong>live input</strong>. Turn-based under the hood, fast enough to feel real-time. The team is about 40 iterations in.</p></div>
+    <div class="gg-card"><h3>Three or four a side</h3><p>You pick a squad of <strong>three or four Yakkamon</strong> (still settling) and place them in the scene. The August lane-based 3v3 has loosened into something freer about placement.</p></div>
+    <div class="gg-card"><h3>Skills fire on conditions</h3><p>Every Yakkamon has a normal attack; skills trigger when their condition hits. A little seed Yakkamon <strong>puts enemies to sleep when it dies</strong>. Chain reactions &mdash; one effect tripping another &mdash; are a deliberate design goal.</p></div>
+    <div class="gg-card"><h3>The 30%: live items</h3><p><strong>Health potions</strong> to keep a key monster standing, and an experimental area-of-effect <strong>&ldquo;blizzard pot&rdquo;</strong> that may not survive to launch.</p></div>
+    <div class="gg-card"><h3>Four battle stats</h3><p><strong>Health, Attack, Defense, Speed</strong> &mdash; not Pok&eacute;mon&rsquo;s six. Identical buffs still don&rsquo;t stack. Deeper numbers were held back on purpose: balancing is the big remaining hurdle.</p></div>
+    <div class="gg-card"><h3>The meta already has a tank</h3><p>Inside the studio, <strong>AROC</strong>, &ldquo;the little rock guy&rdquo;, sits up front soaking hits while fragile hitters work from behind him.</p></div>
+    <div class="gg-card"><h3>Respeccing is expensive on purpose</h3><p>From August, still the plan: find a monster with the skill you want and <strong>extract it</strong> onto another. Buildcraft comes from breeding, not from hot-swapping loadouts before every fight.</p></div>
+    <div class="gg-card"><h3>Matchmaking &amp; anti-bot</h3><p>MMR confirmed. <strong>No meaningful rewards below an MMR cutoff</strong>, so the low end is worthless to bots. The gym prototype doubles as the team&rsquo;s lab for win rates and matchmaking.</p></div>
   </div>
-  <div class="prereg-callout warning"><strong>That screenshot is a dev gym.</strong> The battle image circulating is an internal design environment with placeholder backgrounds — not the finished battle screen. Skill counts aren’t settled either; around two per monster with more passives is under consideration. Lane effects, ground types and weather are in the back pocket, not in early access.</div>
-  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>You’re a manager, not a player. Pick the squad and the formation, then watch from the touchline.</p></div>
+  <div class="prereg-callout warning"><strong>What the August streams said, and what&rsquo;s been overtaken.</strong> Fixed lanes acting top to bottom, a coin-flip initiative unless a lane held the type advantage, and two or three skills cycling in a preset order were August design &mdash; the September 17 picture replaces them with freer placement and condition-triggered skills. Not restated since: three to five rounds and under a minute typical, with the &ldquo;average&rdquo; fight under 40% of all fights. Lane effects, ground types and weather remain back-pocket ideas, not early access. <a href="article-dev-stream-sept-17-recap.html#battles">The full September 17 battle overview &rarr;</a></div>
+  <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>You&rsquo;re a manager, not a player. Pick the squad and where they stand &mdash; and keep a potion in your pocket for the touchline.</p></div>
 </section>
 
 <section class="gg-sec" id="battle-trade">
@@ -428,7 +432,7 @@
     <div class="gg-card"><h3>Two tracks: free and tradable</h3><p>The free-to-play layer produces without limit but <strong>can't be traded</strong>. Making something tradable costs <strong>coins</strong>, and coins only come from VIP, burning assets or crops, and contract hunts &mdash; so the gate between the tracks is the whole economic design.</p></div>
     <div class="gg-card"><h3>Quests &amp; timed events</h3><p>Quests appear in a feed with names like &ldquo;Capture the Spikemon&rdquo;, and timed events run on a countdown with a milestone bar filling toward marked rewards.</p></div>
   </div>
-  <div class="prereg-callout warning"><strong>PvP is not in early access.</strong> The team confirmed on August 6 that early access &mdash; November or December 2026 &mdash; ships gathering, monsters, hunting and basic combat. PvP, tournaments and advanced breeding arrive after launch in chapter releases. Guilds and alliances were pushed back further still on August 21 — explicitly behind core functionality. <a href="pre-registration.html#important-dates">The full schedule &rarr;</a></div>
+  <div class="prereg-callout warning"><strong>PvP is not in early access.</strong> Early access is officially November or December 2026 in the docs, and the team said on September 17 it is aiming at <strong>mid-to-late November</strong> as a best case, with beta testing in October and about two weeks&rsquo; notice. Gym battles ship before the <strong>full competition arena, aimed at early next year</strong>; tournaments and advanced breeding arrive after launch in chapter releases. Chapter 0 &mdash; trading, auctions, $FLOWER withdrawals &mdash; is a month after early access per the docs (six to eight weeks, said the stream). Guilds and alliances were pushed back further still on August 21 — explicitly behind core functionality. <a href="pre-registration.html#important-dates">The full schedule &rarr;</a></div>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>The farm is practice, the arena is the match — and the market is there if you'd rather buy a good player than raise one.</p></div>
 </section>
 
@@ -439,11 +443,11 @@
   <p class="gg-lede">Infinite levels, chapter releases, and a meta the team expects to move without intervening.</p>
   <div class="gg-grid">
     <div class="gg-card"><h3>Infinite levels and expansions</h3><p>Plans and sinks are meant to ship at launch; the endgame features themselves arrive after early access once the core has been tested.</p></div>
-    <div class="gg-card"><h3>The meta is expected to move</h3><p><strong>Early:</strong> gathering and hunting specialists are the valuable monsters, because throughput funds everything else. <strong>Later:</strong> once the arena and tournaments establish, demand shifts toward battle-stat monsters.</p></div>
+    <div class="gg-card"><h3>The meta is expected to move</h3><p><strong>Early:</strong> gathering and hunting specialists are the valuable monsters, because throughput funds everything else. <strong>Later:</strong> once the arena (aimed at early next year) and tournaments establish, demand shifts toward battle-stat monsters.</p></div>
     <div class="gg-card"><h3>No hard specialization cap</h3><p>Producer versus fighter is meant to emerge from opportunity cost rather than an enforced limit. Top-end players will comfortably do both.</p></div>
     <div class="gg-card"><h3>No resets, ever</h3><p>Mistakes get worn and fixed. Inflation is attacked with hard sinks and new content that absorbs old — the pattern Sunflower Land shipped as an infinite XP sink.</p></div>
   </div>
-  <div class="prereg-callout info"><strong>Not all monsters ship at launch.</strong> Around 50–60 species open the game; new regions and species arrive per chapter, framed internally as roughly the first year of content.</div>
+  <div class="prereg-callout info"><strong>Not all monsters ship at launch.</strong> Thirty species open early access (September 17 stream); new regions and species arrive per chapter, framed internally as roughly the first year of content.</div>
   <div class="gp-like"><span class="gp-like-tag">LIKE THIS</span><p>A long-running league rather than a season that wipes. The table never resets — they just keep adding divisions.</p></div>
 </section>
 
@@ -454,12 +458,16 @@
   <p class="gg-lede">Every figure the team or the screenshots have actually shown, with where each one came from.</p>
   <div class="table-scroll"><table class="prereg-table">
     <tr><th>Thing</th><th>Value</th><th>Source</th></tr>
-    <tr><td>Yakkamon at launch</td><td><strong>50&ndash;60 species</strong>, rest arrive per chapter</td><td>Dev statement</td></tr>
-    <tr><td>Battle format</td><td><strong>Lane-based 3v3 auto-battler</strong></td><td>Aug 21 stream</td></tr>
-    <tr><td>Typical battle length</td><td>3&ndash;5 rounds, under a minute</td><td>Aug 21 stream</td></tr>
-    <tr><td>Battle variance target</td><td>The &ldquo;average&rdquo; fight is under 40% of all fights</td><td>Aug 21 stream</td></tr>
-    <tr><td>Skills per monster</td><td>Around 2 under consideration, plus passives</td><td>Aug 21 stream</td></tr>
-    <tr><td>Boost stacking</td><td><strong>Same name doesn&rsquo;t stack; different name does</strong></td><td>Aug 21 stream</td></tr>
+    <tr><td>Yakkamon in early access</td><td><strong>30 in the build</strong> (26 shown publicly); more per Chapter &mdash; the older figure was 50&ndash;60 at launch</td><td>Sep 17 stream</td></tr>
+    <tr><td>Levels built</td><td>36, with the Legendaries already in the world</td><td>Sep 17 stream</td></tr>
+    <tr><td>Battle format</td><td><strong>Auto battler, 70/30</strong> &mdash; 70% pre-battle planning, 30% live input; turn-based under the hood</td><td>Sep 17 stream (replaces Aug 21&rsquo;s lane-based 3v3)</td></tr>
+    <tr><td>Squad size</td><td>Three or four Yakkamon, still settling; placed freely in the scene</td><td>Sep 17 stream</td></tr>
+    <tr><td>Battle stats</td><td><strong>Health, Attack, Defense, Speed</strong></td><td>Sep 17 stream</td></tr>
+    <tr><td>Skills</td><td>A normal attack plus <strong>condition-triggered</strong> skills; chain reactions are a design goal</td><td>Sep 17 stream</td></tr>
+    <tr><td>Live battle items</td><td>Health potions; an AOE &ldquo;blizzard pot&rdquo; (experimental)</td><td>Sep 17 stream</td></tr>
+    <tr><td>Typical battle length</td><td>3&ndash;5 rounds, under a minute</td><td>Aug 21 stream (not restated since)</td></tr>
+    <tr><td>Battle variance target</td><td>The &ldquo;average&rdquo; fight is under 40% of all fights</td><td>Aug 21 stream (not restated since)</td></tr>
+        <tr><td>Boost stacking</td><td><strong>Same ability doesn&rsquo;t stack</strong> &mdash; even on two different creatures; different abilities do</td><td>Aug 21 stream, reconfirmed Sep 17</td></tr>
     <tr><td>Rarity assignment</td><td><strong>Set at species level</strong> &mdash; no rare variants of commons</td><td>Aug 21 stream</td></tr>
     <tr><td>Types at launch</td><td><strong>13</strong>, one type per Yakkamon; dual types later</td><td>Free-mint stream</td></tr>
     <tr><td>Wearable gear</td><td><strong>None</strong> &mdash; possibly one held item</td><td>Free-mint stream</td></tr>
@@ -468,10 +476,11 @@
     <tr><td>Small vs large AOE</td><td>Small = the job it stands on and the 2&ndash;3 nodes beside it; large = a whole section of the farm</td><td>Free-mint stream</td></tr>
     <tr><td>Utility stacking</td><td>Additive and multiplicative combinations exist &mdash; Storm + Echo confirmed</td><td>Free-mint stream</td></tr>
     <tr><td>Rare / Uncommon utilities</td><td>Randomly rolled at generation, independent of stats</td><td>Free-mint stream</td></tr>
-    <tr><td>Legendaries in the free mint</td><td>68 of 10,000 &mdash; 3 Storm, 5 Echo, 10 Ghost, 50 Bloom (plus 50 Rare)</td><td>Official docs</td></tr>
+    <tr><td>Legendaries in the free mint</td><td>68 of 10,000 &mdash; 3 Storm, 5 Echo, 10 Ghost, 50 Bloom (plus 50 Rare); sold out Sep 17, revealed Oct 14, <strong>clean eggs only</strong> (none in the 973 Bad Eggs)</td><td>Official docs + Sep 17 stream</td></tr>
     <tr><td>Active Yakkamon cap</td><td><strong>None</strong> &mdash; as many as you have jobs for</td><td>Free-mint stream</td></tr>
     <tr><td>Being away</td><td><strong>Pauses</strong> &mdash; bins fill, jobs stop, no decay, no neglect penalty</td><td>Free-mint stream</td></tr>
     <tr><td>Storage bins</td><td>Now one bin per resource</td><td>Free-mint stream</td></tr>
+    <tr><td>Resting</td><td>Tired Yakkamon walk to a bed, sleep and go back to work &mdash; after battles too; too few beds and they <strong>queue</strong></td><td>Sep 17 stream</td></tr>
     <tr><td>Plot degradation example</td><td>1.6&times; slower until refertilized</td><td>Job card screenshot</td></tr>
     <tr><td>Time split the team is aiming at</td><td>Roughly 50/50 or 30/30/30 farm / combat / market</td><td>Aug 21 stream</td></tr>
     <tr><td>Starter storage bin</td><td>Cap of 20</td><td>Early-game screenshot</td></tr>
@@ -482,7 +491,7 @@
     <tr><td>Hunting Area entry</td><td>5 berries</td><td>Early-game screenshot</td></tr>
     <tr><td>New Regions</td><td>Unlocked by growing your starting Region; each has its own resources and monster types</td><td>Regions post (Aug 28)</td></tr>
     <tr><td>Named Regions so far</td><td>Grasslands (starter, from the Updates panel); Water Region (official post)</td><td>Updates panel + Regions post</td></tr>
-    <tr><td>Old Regions</td><td>Stay active &mdash; you manage every Region you have unlocked at once</td><td>Regions post (Aug 28)</td></tr>
+    <tr><td>Old Regions</td><td>Stay active &mdash; you manage every Region you have unlocked at once; <strong>lands never reset</strong></td><td>Regions post (Aug 28) + Sep 17 stream</td></tr>
     <tr><td>Cross-Region resources</td><td>Moved and shared between Regions &mdash; &ldquo;the real puzzle&rdquo;; mechanic unpublished</td><td>Regions post (Aug 28)</td></tr>
     <tr><td>Region size</td><td>Each new Region bigger than the last; more arrive per Chapter</td><td>Regions post (Aug 28)</td></tr>
     <tr><td>New monster drops</td><td>Every 3 months (weekly still under consideration)</td><td>Docs + Aug 6 stream</td></tr>
@@ -495,10 +504,10 @@
     <tr><td>Wild Legendaries &amp; Rares</td><td>Appear <strong>sporadically</strong> in ordinary grounds, no schedule</td><td>Hunting post (Sep 5)</td></tr>
     <tr><td>Depleted grounds</td><td>Spread hunts across grounds <em>and Regions</em>; regeneration rate unpublished</td><td>Hunting post (Sep 5)</td></tr>
     <tr><td>Seasons and hunting</td><td>Change which Yakkamon are available and where, Chapter to Chapter</td><td>Hunting post (Sep 5)</td></tr>
-    <tr><td>Combat inputs</td><td>Player actions via &ldquo;mechanic swapping&rdquo; &mdash; not a pure simulation</td><td>Free-mint stream</td></tr>
-    <tr><td>Initiative</td><td>Coin flip, unless a lane holds the type advantage</td><td>Free-mint stream</td></tr>
-    <tr><td>Lane order</td><td>Lane 1, then 2, then 3, every round</td><td>Free-mint stream</td></tr>
-    <tr><td>Abilities per monster</td><td>2&ndash;3, fired in a preset order</td><td>Free-mint stream</td></tr>
+    <tr><td>Combat inputs</td><td>The 30%: live items such as potions &mdash; the free-mint stream&rsquo;s &ldquo;mechanic swapping&rdquo; not mentioned since</td><td>Sep 17 stream</td></tr>
+    <tr><td>Initiative</td><td>Coin flip, unless a lane holds the type advantage</td><td>Free-mint stream (lane design, since loosened)</td></tr>
+    <tr><td>Lane order</td><td>Lane 1, then 2, then 3, every round</td><td>Free-mint stream (lane design, since loosened)</td></tr>
+    <tr><td>Abilities per monster</td><td>2&ndash;3, fired in a preset order</td><td>Free-mint stream (superseded Sep 17 by condition-triggered skills)</td></tr>
     <tr><td>Trait roll predictability</td><td>Roughly 80&ndash;90%</td><td>Aug 13 stream</td></tr>
     <tr><td>Breeding limit</td><td>Scales with rarity &mdash; commons above replacement, rares around it, some Legendaries once; bred Yakkamon tradable</td><td>Free-mint stream (supersedes Aug 13)</td></tr>
     <tr><td>Evolutions</td><td><strong>Not at launch</strong></td><td>Free-mint stream</td></tr>
@@ -507,9 +516,12 @@
     <tr><td>Orientation</td><td>Landscape; PWA install recommended</td><td>Aug 21 stream</td></tr>
     <tr><td>Client source</td><td>Will be open sourced</td><td>Aug 13 stream</td></tr>
     <tr><td>Chain and token</td><td>Ronin, using $FLOWER &mdash; no new token</td><td>Official docs</td></tr>
-    <tr><td>PvP</td><td>After launch, not in early access</td><td>Aug 6 stream</td></tr>
+    <tr><td>PvP</td><td>After launch, not in early access; the full competition arena is aimed at <strong>early next year</strong></td><td>Aug 6 + Sep 17 streams</td></tr>
+    <tr><td>Gyms</td><td>Working internal prototype; a version ships <strong>before the arena</strong>, outside the core reward loop</td><td>Sep 17 stream</td></tr>
+    <tr><td>Early access</td><td>November or December 2026 (docs); the team aims at <strong>mid-to-late November</strong>, best case, with beta testing in October and ~2 weeks&rsquo; notice</td><td>Official docs + Sep 17 stream</td></tr>
+    <tr><td>Chapter 0 &amp; first hunt</td><td>Docs: Chapter 0 and the first NFT monster hunt one month after early access. Stream: first hunt ~6 weeks in, Chapter Zero 6&ndash;8 weeks in</td><td>Official docs + Sep 17 stream</td></tr>
     <tr><td>Guilds &amp; alliances</td><td>Deferred behind core functionality, no timeline</td><td>Aug 21 stream</td></tr>
-    <tr><td>Economy resets</td><td>Ruled out entirely</td><td>13 &amp; Aug 21 streams</td></tr>
+    <tr><td>Economy resets</td><td>Ruled out entirely</td><td>Aug 13 &amp; Aug 21 streams</td></tr>
   </table></div>
   <div class="prereg-callout warning"><strong>Treat mock-up numbers as placeholders.</strong> Several circulating screenshots are UI mock-ups rather than tuned builds &mdash; the 999,999 currency figures and the level 99 cap are filler, not confirmed limits.</div>
 </section>
@@ -520,30 +532,31 @@
   <h2>Not confirmed yet</h2>
   <p class="gg-lede">If you're planning calculators, roster planners or market tools, these are the numbers that don't exist publicly yet.</p>
   <ul class="gp-unknowns">
-    <li><strong>Stat system</strong><span>Stats vary per individual and there are hidden initial values on spawn, but the roll range, which stats exist, and how much of it is visible in game are all unknown.</span></li>
+    <li><strong>Stat numbers</strong><span>The four battle stats are named &mdash; Health, Attack, Defense, Speed &mdash; and stats vary per individual with hidden initial values on spawn. The roll ranges, any non-battle stats, and how much of it is visible in game are unknown; the team declined deep stat questions until beta.</span></li>
     <li><strong>Work cycle numbers</strong><span>Cycle duration, stamina cost per cycle, yield per cycle, and sleep recovery rate.</span></li>
     <li><strong>Tile numbers</strong><span>How many tiles a Region holds, what each tile past the first costs, and how many parallel jobs a tile actually adds. Only the 10 Wood + 1 Stone starter price is public.</span></li>
     <li><strong>The Region unlock condition</strong><span>&ldquo;Grow your starting Region&rdquo; is all the post says. Whether that is a tile count, a quest, a level or a resource payment is unknown.</span></li>
     <li><strong>The transfer mechanic</strong><span>Moving resources between Regions is called a core strategy, but nothing says what it costs &mdash; time, stamina, a building, a fee &mdash; or whether monsters move freely.</span></li>
     <li><strong>Upkeep numbers</strong><span>The degradation rate, the fertilizer recipe, real plot-group sizes and how steeply upkeep scales. Only the 1.6&times; example figure is public.</span></li>
     <li><strong>Full type chart</strong><span>Only Grass&rarr;Wood is confirmed. The complete type list and the resource each unlocks is missing &mdash; and so is combat type effectiveness.</span></li>
-    <li><strong>Final skill count</strong><span>Around two per monster plus passives is under consideration, not decided. The full skill list, extraction cost and respec cost are all unpublished.</span></li>
-    <li><strong>Real-time battle interaction</strong><span>Mechanics that let you influence a fight as it plays out are in testing. If they ship, you won&rsquo;t be able to skip battles outright &mdash; only speed them up.</span></li>
+    <li><strong>Skills and their triggers</strong><span>Skills fire on conditions on top of a normal attack, but the skill list, how many a monster carries, what the triggers are, and the extraction and respec costs are all unpublished.</span></li>
+    <li><strong>Squad and items</strong><span>Three or four Yakkamon a side is still settling, and how free placement really is has not been shown. Potions are confirmed and the blizzard pot is experimental; how many items a fight allows, and what they cost to make, are unknown.</span></li>
     <li><strong>Leveling &amp; traits</strong><span>XP costs, the real level cap, the full trait list, and how much each level actually adds.</span></li>
     <li><strong>Rarity distribution</strong><span>Tiers are now clear, but not how many species sit in each, nor the drop rates.</span></li>
     <li><strong>Egg mechanics</strong><span>Rare egg breakdowns are separated out, but hatch rates and sources aren&rsquo;t public.</span></li>
     <li><strong>Evolution triggers</strong><span>Confirmed to be per-monster and deliberately hidden. The team has said the game will hint rather than explain, so expect this to stay unknown by design.</span></li>
     <li><strong>Utility numbers</strong><span>The Legendary utilities are published as text only. The radius of a small or large AOE, Bloom&rsquo;s regeneration percentage, and every Rare and Uncommon utility are still unpublished &mdash; the team says values are being balanced up to release.</span></li>
     <li><strong>The type chart, part two</strong><span>Thirteen types are confirmed, and the count of weaknesses per type (two for dragons, three for everyone else) &mdash; but not which thirteen, nor the chart itself.</span></li>
-    <li><strong>Mechanic swapping</strong><span>Players will act inside combat, but what that action is, how often, and what it costs has not been shown.</span></li>
+    <li><strong>Battle numbers</strong><span>Balancing is the team&rsquo;s named remaining hurdle, so round counts, damage, speed order and type effectiveness will keep moving through beta.</span></li>
     <li><strong>Coins</strong><span>How many coins a tradable unit costs, the burn rates that produce them, and whether coins can be bought. Even the name may change.</span></li>
-    <li><strong>Hunting rates</strong><span>The official Hunting post describes the system with no numbers: how long an in-game day lasts, how fast a ground regenerates, how often a Legendary appears, what a greedy monster charges, and what an affectionate one judges a hunter on. Also unstated: whether a ground is your own tile or shared with other trainers.</span></li>
+    <li><strong>Hunting rates</strong><span>The official Hunting post describes the system with no numbers: how long an in-game day lasts, how fast a ground regenerates, how often a Legendary appears, what a greedy monster charges, and what an affectionate one judges a hunter on. Also unstated: whether a ground is your own tile or shared with other trainers &mdash; and as of September 17 the hunting mechanics are still being prototyped.</span></li>
+    <li><strong>The exact dates</strong><span>The team&rsquo;s spoken aims (beta in October, early access mid-to-late November, Chapter Zero six to eight weeks later) sit beside the official docs&rsquo; November-or-December and one-month figures. The docs are the record until they change.</span></li>
     <li><strong>The trainer raffle</strong><span>One of each Genesis Legendary is reserved for a raffle. No rules, date or entry condition has been published.</span></li>
     <li><strong>Endgame features</strong><span>Infinite levels and sinks are planned but explicitly not locked down &mdash; they arrive after early access.</span></li>
   </ul>
 </section>
 
-<div class="prereg-callout info" style="margin-bottom:46px"><strong>This is a player-made reference sheet, last revised September 2, 2026.</strong> Compiled from official Yakkamon screenshots, the official game description and dev stream statements &mdash; not an official document. Everything here is pre-launch and subject to change. <a href="gameplay.html">Browse the same material system by system &rarr;</a></div>
+<div class="prereg-callout info" style="margin-bottom:46px"><strong>This is a player-made reference sheet, last revised September 20, 2026, after the September 17 dev stream.</strong> Compiled from official Yakkamon screenshots, the official game description and dev stream statements &mdash; not an official document. Everything here is pre-launch and subject to change. <a href="gameplay.html">Browse the same material system by system &rarr;</a></div>
 </div>
 
 <footer>
