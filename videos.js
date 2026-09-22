@@ -24,6 +24,15 @@ const YAKKAMON_VIDEO_BLOCKS = [
 const YAKKAMON_VIDEOS = [
   // ---------- ANALYSIS ----------
   {
+    id: "7OXBVY1PTso",
+    ep: "21",
+    runtime: "6:08",
+    block: "analysis",
+    title: "Yakkamon \u2013 Sept 17 Dev Stream Recap: Bad Eggs, Battles & a November Target",
+    blurb: "The first dev stream after the sell-out, in six minutes: the team's own post-mortem on the mint, 973 Bad Eggs (about one egg in ten) with the Legendaries and Rares going to clean eggs only, some 25,000 silent dashboard bans, and the first proper tour of the battle system \u2014 an auto battler where 70% of the fight is the plan, skills fire on conditions, and identical buffs don't stack. Plus where the build stands (30 Yakkamon, 36 levels) and the dates: beta in October, early access aimed at mid-to-late November.",
+    related: { href: "article-dev-stream-sept-17-recap.html", label: "Read the written recap \u2014 every system and date" },
+  },
+  {
     id: "iCOqW_yG0gA",
     ep: "17",
     runtime: "4:05",
