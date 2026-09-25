@@ -237,7 +237,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ 404.html                    Not-found page (served by `not_found_handling` in wrangler.jsonc; noindex, not in sitemap/search)
 │  ├─ about.html                  Who we are, how we work, content usage
 │  ├─ privacy.html                Privacy + analytics consent controls
-│  └─ article-*.html              One static page per news post (46)
+│  └─ article-*.html              One static page per news post (50)
 │
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
@@ -275,7 +275,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 60 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 63 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
@@ -558,6 +558,7 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
+- BATTLES, OFFICIAL POST VS STREAM (Sep 24): the battle system is written from the team's official Battles guide (X, Sept 24, 2026 — verbatim in `chatbot-official-posts.md`) with the Sept 17 stream underneath. Two readings on the site are OURS, flagged as such, and must be revisited when the team publishes numbers: "three or four" = the number on the board at once with a bigger roster on the bench, and "you choose which skills each Yakkamon carries" = a per-fight pick from a pool the monster already owns (vs August's expensive extraction respecs). If either is settled, update together: `gameplay.js` (combat-system, plus the Sept 24 lines in monster-care, your-base, hunting, arena-battles), the battle rows + unknowns on `gameplay.html` AND `gameplay-guide.html`, the guide's #combat cards, `faq.js` (is-combat-a-pure-simulation…, do-types-matter-in-battle, does-battle-damage-carry-over-between-fights, how-many-yakkamon-fight-at-once-and-is-there-a-bench, what-happens-if-my-hunter-loses), the battle entries in `search.js`, and `article-battles-explained.html` (dated — gets a correction callout, not a rewrite). The poster's battle panel (19) still shows the Sept 17 wording and was NOT re-rendered for this post.
 - GAMEPLAY DATES, STREAM VS DOCS (Sep 20): the gameplay section shows the team's spoken aims from the Sept 17 dev stream (beta October, early access mid-to-late November, first hunt ~6 weeks in, Chapter Zero 6–8 weeks in, arena early next year) BESIDE the official docs' figures (early access November or December, Chapter 0 + first NFT hunt one month after, leaderboard final one week before) and treats the docs as the record. When either side changes, update together: `gameplay.js` (platform-access, arena-battles, economy-layers, hunting), the "Early access" and "Chapter 0 & first hunt" quick-reference rows + "The exact dates" unknown on `gameplay.html` AND `gameplay-guide.html`, the guide's battle-trade and hunting callouts, poster panels 17 / 20 / 22 (re-render), and the search.js entries "When is the Yakkamon beta and early access?" / "Is hunting in early access on day one?".
 - ROSTER COUNT: 30 Yakkamon in the early-access build (Sept 17 stream) vs 26 shown on the public sheet (Sept 13). When the sheet grows, update the "four still unseen" wording in `gameplay.js` (creature-collecting), both roster figcaptions, the recap article + its posts.js body, poster panel 3, and the search.js roster / "How many Yakkamon" entries.
 - PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.

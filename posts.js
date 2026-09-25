@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "battles-explained",
+    category: "analysis",
+    title: "Won Before the First Hit \u2014 What the Official Battles Post Means for Players",
+    date: "Sep 24, 2026",
+    excerpt: "The official Battles post, point by point: a setup stage where you place your team freely, real-time fights that scale from 1v1 to team battles with reserves on the bench, skills that fire on conditions and that you choose per fight, a type on every Yakkamon and every skill, live substitutions and dragged-in potions, debuffs and shields plus one preparation item, six kinds of fight including gyms that win for you offline, damage that sticks until a Yakkamon is rested, and rewards in items, Yakkamon XP and trainer XP. What each point means for your roster.",
+    body: [
+      "A week after the September 17 stream showed combat live, the team\u2019s guide series has put it in writing. Eight points, and one line that sums the system up: <strong>battles are won before the first hit lands.</strong>",
+      "## The eight points",
+      "Every fight opens with a <strong>setup stage</strong> \u2014 drag your Yakkamon onto your side of the board and place them however you like; front, back and where each type stands all matter. Battles run in <strong>real time</strong> and scale from one-on-one to team fights with several per side and <strong>reserves on the bench</strong>. Your Yakkamon act on their own, firing skills when their conditions are met (\u201cheal below half health\u201d, \u201cstun whoever fainted me\u201d), and <strong>you choose which skills each carries in</strong>. <strong>Every Yakkamon and every skill has a type</strong>: weaknesses take more, resistances take less, and you can scout the enemy team before you commit. Mid-fight you can <strong>sub in a reserve</strong> and <strong>drag items onto the field</strong> \u2014 a potion, a debuff, a shield \u2014 plus <strong>one preparation item</strong> equipped beforehand. There are wild encounters and hunt battles, event fights, live PvP, and <strong>player-made gyms that earn you wins while you\u2019re offline</strong>. <strong>Damage sticks</strong> until a Yakkamon is rested or healed. Wins pay items, XP for the fighters and <strong>trainer-level XP</strong> \u2014 and a beaten wild Yakkamon might come home with you.",
+      "## What it means",
+      "The bench changes what a squad is: the stream\u2019s three or four is the number on the board, and the roster you bring is bigger \u2014 so depth beats a perfect four. Types on skills make skill selection type selection, and scouting makes every setup a counterpick. Substitutions, three item classes and a preparation slot give the live 30% a real vocabulary, and every item is a consumable from your own crafting bench. Gyms are asynchronous defenses that win or lose entirely on how they were built. And persistent damage makes beds and healing items battle resources: the trainer who can field a second team while the first heals fights twice as often.",
+      "## How to get an edge",
+      "Build six to eight fight-ready Yakkamon before you chase a perfect four; log attacker, skill and defender types from every fight and help crowd-source the chart; equip skills to punish what you can see; rotate two squads and build beds first; save the shield for the big hit; and put a tested formation in your gym. Full reading, the eight-point table and the five questions we\u2019d put to the team in the article."
+    ]
+  },
+  {
     slug: "dev-stream-sept-17-recap",
     category: "devstream",
     title: "Dev Stream Recap: 973 Bad Eggs, the Battle System Unveiled, and Early Access Aimed at November",

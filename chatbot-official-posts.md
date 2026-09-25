@@ -18,6 +18,30 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Yakkamon — Battles (official post by the Yakkamon team on X, September 24, 2026)
+
+G'day trainers. Back with another guide — today we're stepping into the arena.
+
+Battles in Yakkamon aren't about mashing buttons. They're won before the first hit lands — in how you build your team, where you place them, and how well you read the fight as it unfolds. Here's how it works.
+
+1. Every battle starts with a setup stage. You'll drag your chosen Yakkamon onto your side of the board and position them however you like. Placement matters — who's up front, who's tucked behind, and which types you're putting where all shape how the fight plays out.
+
+2. Battles run in real time, and they scale. Some encounters are one-on-one; most are team fights with several Yakkamon per side, with reserves waiting on the bench to jump in when one goes down.
+
+3. Once the fight kicks off, your Yakkamon act on their own — moving into range, attacking, and firing off skills automatically when the conditions are met. Think "heal when health drops below half," or "when this Yakkamon faints, stun whoever took it out." You choose which skills each Yakkamon carries into battle, so building the right combos is half the strategy.
+
+4. Types matter. Every Yakkamon and every skill has a type, and hitting a weakness cranks up your damage while hitting a resistance dulls it. Scout the enemy team in the setup stage and build your lineup to punish them.
+
+5. You're not just watching. Mid-fight you can call a Yakkamon back and sub in a reserve, and you can drag battle items straight onto the field — a potion on a struggling ally, a debuff on a dangerous enemy, a shield before a big hit. You can also equip one preparation item before the fight to give your whole team an edge from the opening bell. Timing is everything.
+
+6. There's plenty to fight. Wild encounters and hunt battles out in the field, event fights, live PvP against other trainers, and player-made gyms where you leave a team behind for others to challenge — your Yakkamon can be earning you wins even while you're offline.
+
+7. Damage sticks. A Yakkamon that limps out of a fight carries that damage with them until they're rested or healed, so you'll need to manage your roster between battles rather than throwing the same team at everything.
+
+8. Win, and everyone gets paid. Victories reward a mix of in-game items, experience for the Yakkamon who fought, and trainer-level experience for you. Beat a wild Yakkamon and you might even bring it home as your own.
+
+Key facts in plain terms: a Yakkamon battle has a setup stage first (place your Yakkamon freely on your side of the board; front/back position and type placement matter; the enemy team can be scouted before the fight), then runs in real time. Fights scale from one-on-one to team fights with several Yakkamon per side plus reserves on a bench that enter when a fighter goes down. Yakkamon act automatically once the fight starts, using a normal attack and skills that trigger on conditions (for example heal when health drops below half; stun the attacker when this Yakkamon faints); the trainer chooses which skills each Yakkamon carries into a battle. Every Yakkamon and every skill has a type; attacking a weakness increases damage and attacking a resistance reduces it (the full type chart has not been published). During a fight the trainer can substitute a reserve for an active Yakkamon and drag battle items onto the field (potions to heal an ally, debuffs on an enemy, shields before a big hit), and can equip exactly one preparation item before the fight that benefits the whole team. Kinds of battle: wild encounters and hunt battles, event fights, live PvP against other trainers, and player-made gyms where a trainer leaves a team behind for others to challenge — a gym can win for its owner while the owner is offline. Damage persists after a battle until the Yakkamon is rested or healed, so trainers must manage their roster between battles. Winning rewards in-game items, experience for the Yakkamon that fought, and trainer-level experience; defeating a wild Yakkamon may let the trainer capture it. Timing context from other official sources: PvP is not part of early access, gym battles are planned to ship before the full competition arena, and the arena is aimed at early 2027 (September 17, 2026 dev stream).
+
 ## Bad Eggs — rule-breakers' minted eggs are flagged (973 as of the September 17, 2026 dev stream; review essentially complete)
 
 Source: https://marketplace.roninchain.com/collections/yakkamon?Status=Bad%20Egg

@@ -623,12 +623,27 @@ var FAQ_CATEGORIES = [
    {
     "id": "when-can-i-battle-other-players",
     "q": "When can I battle other players?",
-    "a": "<p>After launch &mdash; the PvP arena and tournaments are <strong>post-launch features</strong>. The September 17 dev stream added the order: a version of <strong>gym battles</strong> &mdash; decorate your gym, visit other trainers&rsquo;, challenge them &mdash; ships first, and the full competition arena is aimed at <strong>early next year</strong>. Worth knowing early: the team expects the market to value <strong>gathering specialists first</strong> and shift toward battle-stat monsters once the arena establishes, and they've said they'll let that shift happen rather than intervene.</p>"
+    "a": "<p>After launch &mdash; the PvP arena and tournaments are <strong>post-launch features</strong>. The September 17 dev stream added the order: a version of <strong>gym battles</strong> &mdash; decorate your gym, visit other trainers&rsquo;, challenge them &mdash; ships first, and the full competition arena is aimed at <strong>early next year</strong>. The official Battles guide (September 24) describes a gym as a team you <strong>leave behind</strong> for other trainers to challenge &mdash; it can be earning you wins while you're offline. Worth knowing early: the team expects the market to value <strong>gathering specialists first</strong> and shift toward battle-stat monsters once the arena establishes, and they've said they'll let that shift happen rather than intervene.</p>"
    },
    {
     "q": "Is combat a pure simulation, or do I get to do anything?",
     "id": "is-combat-a-pure-simulation-or-do-i-get-to-do-anything",
-    "a": "<p>You'll get to act, but mostly before the fight. The September 17 dev stream described an <strong>auto battler with a 70/30 split</strong>: 70% of a battle is decided by planning &mdash; picking three or four Yakkamon and placing them &mdash; and 30% by live input, such as throwing a <strong>health potion</strong> to keep a key monster standing (an area-of-effect &ldquo;blizzard pot&rdquo; is experimental). Skills fire on trigger conditions on top of a normal attack, and the four battle stats are Health, Attack, Defense and Speed. The August picture of fixed lanes and preset skill loops has loosened. <a href=\"gameplay.html?system=combat-system\">The Battle System, in full</a>.</p>"
+    "a": "<p>You'll get to act, before the fight and during it. The official Battles guide (September 24) lays it out: every battle opens with a <strong>setup stage</strong> where you drag your Yakkamon onto your side of the board and place them however you like, choose which <strong>skills</strong> each carries in, and can equip <strong>one preparation item</strong> for the whole team. Once it starts your Yakkamon fight on their own &mdash; moving into range, attacking, firing skills when their conditions are met &mdash; but you can <strong>call one back and sub in a reserve</strong> from the bench, and <strong>drag battle items onto the field</strong>: a potion on a struggling ally, a debuff on a dangerous enemy, a shield before a big hit. The September 17 dev stream put the split at <strong>70% planning, 30% live input</strong>; the four battle stats are Health, Attack, Defense and Speed. <a href=\"gameplay.html?system=combat-system\">The Battle System, in full</a>.</p>"
+   },
+   {
+    "q": "Do types matter in battle?",
+    "id": "do-types-matter-in-battle",
+    "a": "<p>Yes. Per the official Battles guide (September 24), <strong>every Yakkamon and every skill has a type</strong>. Hitting a weakness cranks up your damage; hitting a resistance dulls it. The enemy team is visible in the setup stage, so the team's own advice is to scout it and build your lineup &mdash; and your skill picks &mdash; to punish it. The full type chart is still unpublished; what's known is thirteen types at launch, and that dragons are weak to two types where every other type is weak to three. <a href=\"article-battles-explained.html#types\">What types on skills mean &rarr;</a></p>"
+   },
+   {
+    "q": "Does battle damage carry over between fights?",
+    "id": "does-battle-damage-carry-over-between-fights",
+    "a": "<p>Yes &mdash; <strong>damage sticks</strong>. The official Battles guide (September 24) says a Yakkamon that limps out of a fight carries that damage with it until it is rested or healed, so you manage your roster between battles rather than sending the same team at everything. Beds (tired Yakkamon queue for one if there are too few) and healing items are battle resources as much as farm ones, and a second fight-ready team is worth more than a bigger front line. Rest times and what heals outside a fight are unpublished. <a href=\"article-battles-explained.html#damage\">Why depth beats a bigger front line &rarr;</a></p>"
+   },
+   {
+    "q": "How many Yakkamon fight at once, and is there a bench?",
+    "id": "how-many-yakkamon-fight-at-once-and-is-there-a-bench",
+    "a": "<p>Some encounters are one-on-one; most are team fights with <strong>several Yakkamon per side</strong> and <strong>reserves waiting on the bench</strong> to jump in when one goes down &mdash; and you can call a fighter back and sub in a reserve mid-fight (official Battles guide, September 24). The September 17 stream's &ldquo;three or four&rdquo; reads as the number on the board at once; the roster you bring is bigger. Exact board and bench sizes are unpublished. <a href=\"article-battles-explained.html#bench\">Why the bench changes what a squad is &rarr;</a></p>"
    },
    {
     "q": "Is there a limit on how many Yakkamon can work at once?",
@@ -696,7 +711,7 @@ var FAQ_CATEGORIES = [
    {
     "q": "What happens if my hunter loses a fight?",
     "id": "what-happens-if-my-hunter-loses",
-    "a": "<p>You come back empty-handed &mdash; that's the only consequence the post names. It doesn't say the hunter is injured, loses items, or is set back in any other way. The in-game states shown so far include <strong>hurt or knocked out</strong>, and an earlier in-game notice told trainers to rest their squad before a hunt, so expect a lost battle to cost at least the stamina and time of the trip and possibly a recovery period. How long that is, and whether a knocked-out hunter needs an item to recover, is unpublished. <a href=\"gameplay.html?system=monster-care\">Monster care &rarr;</a></p>"
+    "a": "<p>You come back empty-handed &mdash; that's the only consequence the Hunting post names. The official Battles guide (September 24) adds the part that applies to every fight, won or lost: <strong>damage sticks</strong>. A Yakkamon that limps out of a battle carries that damage until it is rested or healed, so a hunter that loses (or wins hurt) needs rest or a healing item before it goes out again. How long rest takes, and whether a knocked-out hunter needs an item to recover, is unpublished. Win the fight and you might bring the wild Yakkamon home. <a href=\"gameplay.html?system=monster-care\">Monster care &rarr;</a></p>"
    },
    {
     "q": "Do I need bait or lures to hunt?",
