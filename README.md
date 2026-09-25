@@ -289,8 +289,8 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ favicon.ico / -32 / -192 / apple-touch-icon
    ├─ og-default.png              1200×630 — default social card
    ├─ free-mint-by-the-numbers-og.png  1600×900 — social card for the free-mint odds article (the X infographic at 1×)
-   ├─ gameplay-poster.png         1800×2025 — in-page field guide poster (rendered from gameplay-poster-source.html)
-   ├─ gameplay-poster-full.png    3641×4096 — full size, longest side capped at X's 4096px limit
+   ├─ gameplay-poster.png         1800×2163 — in-page field guide poster (rendered from gameplay-poster-source.html)
+   ├─ gameplay-poster-full.png    3409×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
    ├─ yakkamon-roster*.jpg        Official roster sheets, each with a -2x. LIVE: the original 18 (the dated figure in the roster article) and the current 26-sheet (13 Sep, five rows, 688×469). SUPERSEDED and now referenced by nothing — the 21- (25 Aug), 22- (31 Aug) and 23-sheets (8 Sep): ~603 KB, deletable by hand on GitHub
    ├─ fm-bat / fm-moth / fm-pony / fm-duck / fm-egg .webp   Former free-mint hero sprites — no longer referenced since the hero came down on 17 Sep 2026, deletable by hand on GitHub
@@ -375,6 +375,30 @@ throughout the articles and would break silently.
 
 Then update the quick-reference table in `gameplay.html`, the matching section
 in `gameplay-guide.html`, and add search entries.
+
+### Re-render the gameplay poster
+
+`gameplay-poster-source.html` is the poster as HTML (22 numbered panels, balanced
+into 12 columns by the `__rebalance()` script at the bottom). Edit the panels,
+the red `.rev` banner and the footer's "through <date>" line, then render:
+
+1. Open the source in Chromium at a 1800px-wide viewport, wait for
+   `document.fonts.ready`, call `window.__rebalance()`, full-page screenshot →
+   `gameplay-poster.png`.
+2. Same page at `deviceScaleFactor = min(2.222, 4096 / pageHeight)` →
+   `gameplay-poster-full.png` (longest side never over X's 4096px limit).
+3. Put the new pixel height into the `<img width="1800" height="…">` on the
+   three embedding pages: `gameplay.html`, `article-gameplay-guide-live.html`,
+   `article-dev-stream-three-recap.html`. Update the `poster-rev` paragraph,
+   the `alt` text and the `poster-note` on `gameplay.html`, the poster's
+   `search.js` entry, and the sizes in the repo layout above.
+
+Sandbox gotcha: if `fonts.googleapis.com` is unreachable, fetch
+`Bangers-Regular.ttf` and `Nunito[wght].ttf` from
+`raw.githubusercontent.com/google/fonts/master/ofl/…` (the `master` branch —
+`main` 404s; URL-encode the brackets), embed them as data-URI `@font-face`
+rules (Nunito is variable: `font-weight: 200 1000`) in place of the `@import`,
+and render from a `file://` copy.
 
 ### Change a free-mint wave time
 
@@ -558,7 +582,7 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
-- BATTLES, OFFICIAL POST VS STREAM (Sep 24): the battle system is written from the team's official Battles guide (X, Sept 24, 2026 — verbatim in `chatbot-official-posts.md`) with the Sept 17 stream underneath. Two readings on the site are OURS, flagged as such, and must be revisited when the team publishes numbers: "three or four" = the number on the board at once with a bigger roster on the bench, and "you choose which skills each Yakkamon carries" = a per-fight pick from a pool the monster already owns (vs August's expensive extraction respecs). If either is settled, update together: `gameplay.js` (combat-system, plus the Sept 24 lines in monster-care, your-base, hunting, arena-battles), the battle rows + unknowns on `gameplay.html` AND `gameplay-guide.html`, the guide's #combat cards, `faq.js` (is-combat-a-pure-simulation…, do-types-matter-in-battle, does-battle-damage-carry-over-between-fights, how-many-yakkamon-fight-at-once-and-is-there-a-bench, what-happens-if-my-hunter-loses), the battle entries in `search.js`, and `article-battles-explained.html` (dated — gets a correction callout, not a rewrite). The poster's battle panel (19) still shows the Sept 17 wording and was NOT re-rendered for this post.
+- BATTLES, OFFICIAL POST VS STREAM (Sep 24): the battle system is written from the team's official Battles guide (X, Sept 24, 2026 — verbatim in `chatbot-official-posts.md`) with the Sept 17 stream underneath. Two readings on the site are OURS, flagged as such, and must be revisited when the team publishes numbers: "three or four" = the number on the board at once with a bigger roster on the bench, and "you choose which skills each Yakkamon carries" = a per-fight pick from a pool the monster already owns (vs August's expensive extraction respecs). If either is settled, update together: `gameplay.js` (combat-system, plus the Sept 24 lines in monster-care, your-base, hunting, arena-battles), the battle rows + unknowns on `gameplay.html` AND `gameplay-guide.html`, the guide's #combat cards, `faq.js` (is-combat-a-pure-simulation…, do-types-matter-in-battle, does-battle-damage-carry-over-between-fights, how-many-yakkamon-fight-at-once-and-is-there-a-bench, what-happens-if-my-hunter-loses), the battle entries in `search.js`, and `article-battles-explained.html` (dated — gets a correction callout, not a rewrite). The poster's battle panel (19) was rebuilt around the post's eight points on Sep 24 (NEW SEP 24 tag; panels 09, 13, 17 and 22 each carry a Sep 24 line) — if the readings change, edit `gameplay-poster-source.html` and re-render both PNGs too (see the render recipe under common tasks).
 - GAMEPLAY DATES, STREAM VS DOCS (Sep 20): the gameplay section shows the team's spoken aims from the Sept 17 dev stream (beta October, early access mid-to-late November, first hunt ~6 weeks in, Chapter Zero 6–8 weeks in, arena early next year) BESIDE the official docs' figures (early access November or December, Chapter 0 + first NFT hunt one month after, leaderboard final one week before) and treats the docs as the record. When either side changes, update together: `gameplay.js` (platform-access, arena-battles, economy-layers, hunting), the "Early access" and "Chapter 0 & first hunt" quick-reference rows + "The exact dates" unknown on `gameplay.html` AND `gameplay-guide.html`, the guide's battle-trade and hunting callouts, poster panels 17 / 20 / 22 (re-render), and the search.js entries "When is the Yakkamon beta and early access?" / "Is hunting in early access on day one?".
 - ROSTER COUNT: 30 Yakkamon in the early-access build (Sept 17 stream) vs 26 shown on the public sheet (Sept 13). When the sheet grows, update the "four still unseen" wording in `gameplay.js` (creature-collecting), both roster figcaptions, the recap article + its posts.js body, poster panel 3, and the search.js roster / "How many Yakkamon" entries.
 - PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.

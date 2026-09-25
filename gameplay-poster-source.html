@@ -10,7 +10,7 @@
   the full version is the same page at deviceScaleFactor min(2.222, 4096/height)
   so its longest side never exceeds X's 4096px resize threshold (3882x4096 now).
   Edit the panels below, re-render, replace both PNGs and the width/height
-  attributes on gameplay.html's <img>. Revision: September 20, 2026, after the Sep 17 dev stream (22 panels, 12 columns).
+  attributes on gameplay.html's <img>. Revision: September 24, 2026, after the official Battles guide (22 panels, 12 columns).
 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
@@ -74,7 +74,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED SEP 20, 2026 &mdash; AFTER THE SEP 17 DEV STREAM. A 70/30 AUTO BATTLER, THREE OR FOUR A SIDE, CONDITION SKILLS, FOUR BATTLE STATS, 30 YAKKAMON IN EARLY ACCESS, THE BED QUEUE, GYMS BEFORE THE ARENA.</div>
+    <div class="rev">REVISED SEP 24, 2026 &mdash; AFTER THE OFFICIAL BATTLES GUIDE. A SETUP STAGE, RESERVES ON THE BENCH, SKILLS YOU CHOOSE THAT FIRE ON CONDITIONS, A TYPE ON EVERY SKILL, LIVE SUBS &amp; ITEMS, SIX KINDS OF FIGHT, DAMAGE THAT STICKS.</div>
   </div>
 </div>
 
@@ -181,7 +181,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <h2><i>09</i>LOOKING AFTER THEM</h2>
   <p>Status icons float above a monster and the feed calls it out by name.</p>
   <div class="card red"><b>Hungry</b>Needs feeding before it carries on.</div>
-  <div class="card purple"><b>Hurt</b>Injured or knocked out, out of action.</div>
+  <div class="card purple"><b>Hurt</b>Injured or knocked out, out of action. Battle damage sticks until rested or healed (Sep 24).</div>
   <div class="card sky"><b>Sleeping</b>Recovering stamina. Not broken.</div>
   <div class="card yellow"><b>Needs an item</b>Can ask directly with a speech bubble.</div>
   <p>An item bar sits at the bottom &mdash; milk, flowers, mushrooms, health items. A monster in a bad state isn&rsquo;t earning, so upkeep is economics, not flavor.</p>
@@ -230,7 +230,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card yellow"><b>Expand your land, tile by tile</b>Each tile has a resource price on the button &mdash; the starter reads 10 Wood + 1 Stone.</div>
   <div class="card sky"><b>Buildings &amp; stations</b>Workbenches with their own counters, houses with beds, crop plots, rock nodes.</div>
   <div class="card green"><b>Hunting Area</b>A tile you claim, then pay to enter &mdash; 5 berries on the sign at launch.</div>
-  <div class="card purple"><b>Your gym comes first</b>Land customization: unlikely at launch. Your gym: a working prototype, shipping before the arena &mdash; decorate it, visit others&rsquo;, battle them, with leaderboards attached.</div>
+  <div class="card purple"><b>Your gym comes first</b>Land customization: unlikely at launch. Your gym: a working prototype, shipping before the arena &mdash; decorate it, visit others&rsquo;, battle them, with leaderboards attached. Officially, a gym is a team you leave behind for others to challenge &mdash; it wins for you while you&rsquo;re offline.</div>
   <p>Menu: Squad &middot; Items &middot; Quests &middot; Shop &middot; Trade &middot; Log. Built for landscape.</p>
 </div>
 
@@ -271,7 +271,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card green"><b>A place: grounds are tiles</b>On your own Regions &mdash; one of the three things a tile can hold. Each Region has its own wild types.</div>
   <div class="card sky"><b>A time: learn the clock</b>Each ground shows different Yakkamon at different in-game hours. No timetable is given &mdash; discovering it is the skill.</div>
   <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (18).</div>
-  <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty.</div>
+  <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty. Win and you may bring the wild one home &mdash; but a hunter that wins hurt carries the damage.</div>
   <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule &mdash; and in real time: when one lands, everyone gets the same window. Keep a strong, well-supplied team ready.</div>
   <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon; a hunted-out ground yields less. Spread hunts across grounds <i>and Regions</i>.</div>
   <div class="card grey"><b>Still in prototype</b>Areas exist; the mechanics are still being tuned (Sep 17). First NFT hunt: Chapter 0 per the docs &mdash; about six weeks in, said the stream.</div>
@@ -286,15 +286,21 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel new">
-  <span class="tag">NEW SEP 17</span>
+  <span class="tag">NEW SEP 24</span>
   <h2><i>19</i>THE BATTLE SYSTEM</h2>
-  <div class="card sky"><b>An auto battler, 70/30</b>70% planning &mdash; who you bring and where they stand; 30% live input. Turn-based underneath, fast enough to feel real-time. About 40 iterations in.</div>
-  <div class="card yellow"><b>Three or four a side</b>Placed in the scene &mdash; August&rsquo;s fixed-lane 3v3 has loosened. The in-house meta: AROC, the little rock guy, tanks up front while hitters work behind.</div>
-  <div class="card red"><b>Skills fire on conditions</b>A normal attack plus triggered skills: a seed Yakkamon puts enemies to sleep when it dies. Chain reactions are the goal.</div>
-  <div class="card green"><b>The 30%: live items</b>Health potions to keep a key monster standing; an AOE &ldquo;blizzard pot&rdquo; is experimental.</div>
-  <div class="card purple"><b>Four battle stats</b>Health, Attack, Defense, Speed. Identical buffs don&rsquo;t stack. Numbers move through beta &mdash; balancing is the big hurdle.</div>
-  <p>Still planned: MMR with no rewards below a cutoff; skills extracted at a cost, never hot-swapped. Gyms first, the full arena early next year.</p>
-  <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad and where they stand &mdash; and keep a potion in your pocket for the touchline.</div>
+  <p>&ldquo;Won before the first hit lands&rdquo; &mdash; the team&rsquo;s official Battles guide, in eight points, on top of the Sep 17 stream&rsquo;s 70/30 auto battler.</p>
+  <ol class="steps">
+    <li><b>Setup stage</b> &mdash; drag your Yakkamon onto your side and place them freely. Front or back, and which type stands where, shape the fight. Scout the enemy team here.</li>
+    <li><b>Real time, and it scales</b> &mdash; some fights are 1v1; most are team fights with several a side and reserves on the bench that jump in when one goes down.</li>
+    <li><b>They act on their own</b> &mdash; moving into range, attacking, firing skills when conditions are met: &ldquo;heal below half health&rdquo;, &ldquo;stun whoever fainted me&rdquo;. You choose which skills each carries in.</li>
+    <li><b>Types matter</b> &mdash; every Yakkamon <i>and every skill</i> has a type. Hit a weakness, damage cranks up; hit a resistance, it dulls.</li>
+    <li><b>You&rsquo;re not just watching</b> &mdash; call one back and sub in a reserve; drag battle items onto the field (potion on an ally, debuff on an enemy, shield before a big hit). One preparation item, equipped before the fight, buffs the whole team.</li>
+    <li><b>Plenty to fight</b> &mdash; wild encounters and hunt battles, event fights, live PvP, and player-made gyms that earn you wins while you&rsquo;re offline.</li>
+    <li><b>Damage sticks</b> &mdash; a Yakkamon limps out carrying its damage until rested or healed. Manage the roster between battles.</li>
+    <li><b>Everyone gets paid</b> &mdash; items, XP for the Yakkamon who fought, trainer XP for you. Beat a wild one and you might bring it home.</li>
+  </ol>
+  <div class="card sky"><b>Underneath (Sep 17 stream)</b>70% planning, 30% live input; four stats &mdash; Health, Attack, Defense, Speed; identical buffs don&rsquo;t stack; AROC tanks up front, hitters behind. Gyms first, the full arena early next year.</div>
+  <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad, place it, choose its moves &mdash; then work the touchline with subs and a potion.</div>
 </div>
 
 <div class="panel">
@@ -322,7 +328,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card grey"><b>The type chart</b>13 types confirmed, not which; only Grass&rarr;Wood; combat effectiveness missing.</div>
   <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>Roll ranges, XP costs, level cap, trait list, respec costs; AOE radii, Bloom&rsquo;s regen %, every Rare / Uncommon utility.</div>
   <div class="card grey"><b>Hunting rates</b>Day length, ground regeneration, Legendary odds, a greedy monster&rsquo;s price; private or shared grounds.</div>
-  <div class="card grey"><b>Battle numbers &amp; coins</b>Squad size (3 or 4?), item limits, skill triggers, type effectiveness; what a tradable unit costs.</div>
+  <div class="card grey"><b>Battle numbers &amp; coins</b>How many on the board and on the bench, how many skills each carries and where they come from, item limits, the type chart; what a tradable unit costs.</div>
   <div class="card grey"><b>The exact dates</b>Stream aims: beta Oct, early access mid-to-late Nov. Docs: Nov or Dec. The docs are the record.</div>
 </div>
 
@@ -330,7 +336,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting and Clock posts, screenshots and dev streams through September 17, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting, Clock and Battles posts, screenshots and dev streams through September 24, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>
