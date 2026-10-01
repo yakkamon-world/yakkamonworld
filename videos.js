@@ -118,6 +118,15 @@ const YAKKAMON_VIDEOS = [
 
   // ---------- START HERE ----------
   {
+    id: "ZNnUzn-V4co",
+    ep: "22",
+    runtime: "2:52",
+    block: "start",
+    title: "Yakkamon Battles Explained – Setup, Skills, Types & Why One Squad Isn't Enough",
+    blurb: "The official Battles post in under three minutes. Every fight opens with a setup stage where you place your team however you like — front or back, and which types stand where — and you can scout the enemy team before you commit. Once it starts your Yakkamon act on their own, firing the skills you chose for them when their conditions trip, and every Yakkamon and every skill has a type that cranks damage up against a weakness or dulls it against a resistance. Reserves wait on the bench, you can sub mid-fight and drag in items, and damage sticks until a Yakkamon is rested — which is why one squad isn't enough.",
+    related: { href: "article-battles-explained.html", label: "Read the full breakdown — Won Before the First Hit" },
+  },
+  {
     id: "cgFA2XYNink",
     ep: "20",
     runtime: "5:04",
