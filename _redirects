@@ -9,9 +9,13 @@
 / /index.html 200
 /index.html / 301
 
-# Retired page — stats.html became leaderboard.html on 19 Aug 2026.
-/stats /leaderboard.html 301
-/stats.html /leaderboard.html 301
+# Retired pages — stats.html became leaderboard.html on 19 Aug 2026, and the
+# leaderboard itself was retired on 3 Oct 2026. All of them land on the post
+# that announced the board (it carries the retirement note).
+/stats /article-leaderboard-live.html 301
+/stats.html /article-leaderboard-live.html 301
+/leaderboard /article-leaderboard-live.html 301
+/leaderboard.html /article-leaderboard-live.html 301
 
 # Extension-less addresses Google collected while the old html_handling was live.
 # Permanent redirect to the canonical .html address. Keep this list in sync when
@@ -71,7 +75,6 @@
 /faq /faq.html 301
 /gameplay-guide /gameplay-guide.html 301
 /gameplay /gameplay.html 301
-/leaderboard /leaderboard.html 301
 /news /news.html 301
 /pre-registration /pre-registration.html 301
 /privacy /privacy.html 301

@@ -68,7 +68,12 @@ var FAQ_CATEGORIES = [
     "a": "<p>iPhones only deliver website notifications from sites saved to the Home Screen (iOS 16.4 or newer). In Safari: tap <strong>Share</strong> (the square with the arrow) &rarr; <strong>Add to Home Screen</strong> &rarr; <strong>Add</strong>. Then open YakkamonWorld <strong>from the new Home Screen icon</strong>, tap the <strong>News Alerts</strong> bell in the header and choose <strong>Allow</strong>. That's it &mdash; tapping the bell in Safari shows you these same steps.</p>",
     "id": "how-do-i-get-news-alerts-on-my-iphone"
    },
- ]
+   {
+    "id": "where-can-i-see-the-live-deposit-leaderboard",
+    "q": "What happened to the deposit leaderboard that was on this site?",
+    "a": "<p>It was retired on <strong>October 3, 2026</strong>. For most of the deposit race this site ran its own deposit leaderboard, built from public Base and Ronin blockchain data and scored on the published point rules. The free data feed behind it has ended, and with the race in its final weeks I switched the board off rather than rebuild it.</p>\n    <p>It only ever counted <strong>deposit points</strong> &mdash; streak, referral and quest points live off-chain &mdash; so the place to check your real rank is, as it always was, the trainer dashboard at <a href=\"https://yakkamon.com/\" target=\"_blank\" rel=\"noopener\">yakkamon.com</a>. The deposit math is unchanged: the windows, multipliers and bulk bonuses are on the <a href=\"article-flower-deposit-guideline.html\">deposit guideline</a> and the <a href=\"tips.html\">Trainer Tips</a> page, and <a href=\"article-leaderboard-live.html\">the launch post</a> keeps the record of what the board showed.</p>"
+   }
+  ]
  },
  {
   "id": "sunflowerland-guide",
@@ -493,34 +498,11 @@ var FAQ_CATEGORIES = [
     "id": "when-do-flower-deposits-close",
     "q": "When do $FLOWER deposits close?",
     "a": "<p>The final deposit window ends on <strong>November 16 at 01:59 UTC</strong>. Weeks turn at 02:00 UTC each Monday, and the multiplier sits at its 1.0&times; floor from October 26 through to the close &mdash; so there is no scheduled moment after that where waiting earns you a better rate.</p>"
-   }
-  ]
- },
- {
-  "id": "leaderboard",
-  "name": "Leaderboard",
-  "intro": "<p>About the live <a href=\"leaderboard.html\">deposit leaderboard</a> on this site.</p>",
-  "rich": "",
-  "items": [
-   {
-    "id": "where-can-i-see-the-live-deposit-leaderboard",
-    "q": "Where can I see the live deposit leaderboard?",
-    "a": "<p>Right here on this site &mdash; the <a href=\"leaderboard.html\">Deposit Leaderboard</a> ranks every address that has deposited $FLOWER, built from public blockchain data on <strong>both Base and Ronin</strong>. Paste your deposit address to find your rank, see how far the next reward band is, and plan what a climb would cost.</p>"
-   },
-   {
-    "id": "why-is-my-leaderboard-score-lower-than-the-game",
-    "q": "Why is my leaderboard score lower than the game shows?",
-    "a": "<p>Because the board can only see the blockchain. It counts <strong>deposit points</strong> &mdash; amount &times; (week multiplier + size bonus) &mdash; exactly as the game scores them. Your <strong>streak, referral and quest points live off-chain</strong>, so your real total in the game is higher than your on-chain row. Treat the board as your deposit ranking, not your full score.</p>"
    },
    {
     "id": "what-s-the-difference-between-my-wallet-address-and",
     "q": "What's the difference between my wallet address and my deposit address?",
-    "a": "<p>They are different addresses, and mixing them up is the most common lookup mistake. Every trainer gets their <strong>own deposit address</strong>, shown in the game, valid on both Base and Ronin &mdash; that receiving address is your identity on-chain. You can send $FLOWER to it from any wallet and it still counts to you. When searching the <a href=\"leaderboard.html\">leaderboard</a>, use the <strong>deposit address</strong>, not the wallet you sent from.</p>"
-   },
-   {
-    "id": "how-often-does-the-leaderboard-update",
-    "q": "How often does the leaderboard update?",
-    "a": "<p>Roughly <strong>every six hours</strong>. The page shows when it was last recalculated and a countdown to the next update, both next to the Full Ranking heading and under the table. Deposits confirm on-chain immediately &mdash; they just take up to one refresh cycle to appear in the rankings.</p>"
+    "a": "<p>They are different addresses, and mixing them up is the most common lookup mistake. Every trainer gets their <strong>own deposit address</strong>, shown in the game, valid on both Base and Ronin &mdash; that receiving address is your identity on-chain. You can send $FLOWER to it from any wallet and it still counts to you. If you ever look yourself up on a block explorer, use the <strong>deposit address</strong>, not the wallet you sent from.</p>"
    }
   ]
  },

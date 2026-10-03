@@ -103,12 +103,12 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
   .topbar-inner{flex-wrap:wrap; padding:0 12px}
   .tabs{
     width:100%; padding:6px 0 10px; gap:6px;
-    display:grid; grid-template-columns:repeat(3,1fr);   /* 10 tabs = 3 rows of 3, then .tab-wide (Contact) takes a full row, then Search */
+    display:grid; grid-template-columns:repeat(3,1fr);   /* 9 tabs = 3 rows of 3, then Search (Leaderboard retired 3 Oct 2026; Contact's .tab-wide no longer spans) */
   }
   .tab{padding:9px 4px; text-align:center; font-size:.82rem; white-space:normal; overflow-wrap:break-word; line-height:1.15}
   .tab .label-full{display:none}
   .tab .label-short{display:inline}
-  .tab.tab-wide{grid-column:1 / -1}
+  .tab.tab-wide{grid-column:auto}   /* class kept in the markup; re-enable 1 / -1 if the tab count stops being a multiple of 3 */
 }
 
 /* ---------- Card / panel primitives ---------- */

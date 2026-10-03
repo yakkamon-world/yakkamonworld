@@ -104,7 +104,7 @@ const YAKKAMON_VIDEOS = [
     block: "tactics",
     title: "Yakkamon Leaderboard Is Live",
     blurb: "The deposit leaderboard is now on this site, scored from on-chain Base and Ronin transfers on the published point rules. What it shows once you look: roughly 3,000 addresses have deposited against 5,000 airdrop places, and the weekly multiplier drops 0.2\u00d7 every Monday whether or not the timing ever feels right.",
-    related: { href: "leaderboard.html", label: "Open the deposit leaderboard" },
+    related: { href: "article-leaderboard-live.html", label: "Read the launch post" },
   },
   {
     id: "aJLPrAnhs0I",

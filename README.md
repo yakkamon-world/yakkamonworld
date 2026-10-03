@@ -29,7 +29,7 @@ in this repo is served exactly as it sits here.
 so a page copied from anywhere still resolves.
 
 **One stylesheet.** `style.css` is the single source of truth for site-wide
-styling. A few pages (`leaderboard.html`, some articles) carry a small
+styling. A few pages (`faq.html`, `404.html`, some articles) carry a small
 page-specific `<style>` block inline rather than bloating the shared file.
 
 **Content lives in data files, not markup.** `posts.js`, `gameplay.js` and
@@ -55,9 +55,10 @@ hard offset shadows, cream background with a subtle dot texture.
 | `--green` | `#3FAE5C` | success, "LIKE THIS" blocks |
 | `--purple` | `#8A5CF0` | occasional accent |
 
-**Navigation** is ten tabs, each a real page:
-Home / Early Access / News / Gameplay / Community / Leaderboard / Tips /
-Videos / FAQ / Contact.
+**Navigation** is nine tabs, each a real page:
+Home / Early Access / News / Gameplay / Community / Tips / Videos / FAQ /
+Contact. (A tenth, Leaderboard, existed from 19 Aug to 3 Oct 2026 — see
+"The deposit leaderboard is gone" under Common tasks.)
 
 > The "Early Access" tab still points at `pre-registration.html` (the URL is
 > kept so inbound links don't break), but since Sep 2, 2026 the page's title,
@@ -76,8 +77,8 @@ Clone and open `index.html` in a browser. That's it.
 
 Most things work over `file://`. Two caveats:
 
-- Pages that fetch from a worker (the leaderboard, the sign-up counter) show
-  their empty or fallback state, since the workers are on a different origin.
+- Pages that fetch from a worker (the sign-up counter, the chatbot) show their
+  empty or fallback state, since the workers are on a different origin.
 - For the real thing, any static server will do: `python3 -m http.server 8000`
 
 ---
@@ -116,7 +117,8 @@ the first rule in `_redirects` is for.
 
 **`_redirects`** (repo root, not served) is evaluated before any asset:
 `/` is rewritten to `index.html` (200), `/index.html` → `/` (301), the retired
-`/stats` + `/stats.html` → `/leaderboard.html` (301), and every extension-less
+`/stats`, `/stats.html`, `/leaderboard` and `/leaderboard.html` →
+`/article-leaderboard-live.html` (301), and every extension-less
 address (`/faq`, `/article-…`) 301s to its `.html` canonical. Query strings are
 carried across. **When you add a page, add its `/<name> /<name>.html 301` line.**
 Home links across the site are `href="/"`, never `index.html`, so they don't
@@ -142,8 +144,8 @@ repo — **none of their code is in here.**
 
 | Worker | Repo | Feeds |
 |---|---|---|
-| Counter | `yakkamon-counter-worker` | `signup-counter.js`, plus the `/flower` price route `leaderboard.js` uses |
-| Leaderboard | `yakkamon-leaderboard-worker` | `leaderboard.js` — pulls a Dune query, caches in KV |
+| Counter | `yakkamon-counter-worker` | `signup-counter.js` (its `/flower` price route has had no caller since the leaderboard was retired on 3 Oct 2026) |
+| Leaderboard | `yakkamon-leaderboard-worker` | **nothing since 3 Oct 2026** — the board is gone; pause or delete the worker (see Common tasks) |
 | Access bot | `yakkamon-access-bot` | Telegram only, not used by the site |
 | Chat | `yakkamon-chat-worker` | `chatbot.js` — answers the "Ask me anything" bar (see [The chatbot](#the-chatbot)) |
 
@@ -228,7 +230,6 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ gameplay.html               26 gameplay systems, sidebar + detail panel
 │  ├─ gameplay-guide.html         Same material as one long mobile-readable page
 │  ├─ community.html              Our channels, then the official ones
-│  ├─ leaderboard.html            Deposit leaderboard (Base + Ronin, via Dune)
 │  ├─ tips.html                   Trainer tips
 │  ├─ videos.html                 Video index
 │  ├─ faq.html                    FAQ
@@ -250,8 +251,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ news.js                     News archive + category filtering
 │  ├─ home-news.js                Latest posts on Home
 │  ├─ gameplay-page.js            Gameplay sidebar + detail swap
-│  ├─ videos-render.js            Video list from videos.js
-│  └─ leaderboard.js              Fetches + renders the board, holds the LADDER bands
+│  └─ videos-render.js            Video list from videos.js
 │
 ├─ WIDGETS
 │  ├─ push-alerts.js              NEWS ALERTS bell in the masthead + OneSignal web push + the iPhone install tip (App ID pasted at the top; inert until then)
@@ -275,11 +275,11 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 63 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 62 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
-│  ├─ _redirects                  / → index.html rewrite, /index.html → /, /stats → leaderboard,
+│  ├─ _redirects                  / → index.html rewrite, /index.html → /, retired /stats + /leaderboard → the launch post,
 │                                 every extension-less page → its .html canonical (not served)
 │  ├─ _headers                    Strict-Transport-Security on every path (not served — see Deployment)
 │  └─ CHANGELOG-2026-08-21.md     One-off change log for the 21 Aug gameplay rewrite.
@@ -435,6 +435,35 @@ marketplaces only for prices, never sum listings across venues, OpenSea prices
 arrive in the collection's native currency (RON) with USD converted separately,
 and explorer.roninchain.com blocks browser reads (server-side only).
 
+### The deposit leaderboard is gone (retired October 3, 2026)
+
+The on-chain deposit leaderboard (`leaderboard.html` + `leaderboard.js`, live
+from 19 Aug to 3 Oct 2026) was retired when the free Dune trial behind its
+worker ended and the deposit race had six weeks left — a paid, deposit-only
+copy of a ranking the trainer dashboard already shows wasn't worth keeping.
+What came off: both files (deleted), the Leaderboard tab on all 63 pages, the
+footer "Deposit leaderboard" link, the Home destination tile (now a Tips tile,
+so the five-column grid stays full) and the 404 quick link, the FAQ topic
+"Leaderboard" and the nine `search.js` entries that pointed at the page.
+What stayed, on purpose: the two dated posts (`article-leaderboard-live.html`,
+now opening with a retirement callout, and the leaderboard *guideline*, which
+is about the official ranking), EP 14 on the Videos page (its related link
+now goes to the launch post), the FAQ's wallet-vs-deposit-address answer (moved
+to the $FLOWER topic) and one new FAQ answer, "What happened to the deposit
+leaderboard?", which deliberately keeps the OLD id
+`where-can-i-see-the-live-deposit-leaderboard` so saved links and cached chat
+answers land on the explanation. `_redirects` sends `/leaderboard.html`,
+`/leaderboard`, `/stats` and `/stats.html` to the launch post. Dated articles
+that linked to the board were unlinked or had the clause trimmed, never
+rewritten. Cloudflare: the **yakkamon-leaderboard-worker** (cron `*/30`, KV
+`LEADERBOARD_KV`, secrets `DUNE_API_KEY` / `DUNE_QUERY_ID` / `REFRESH_TOKEN`)
+now feeds nothing — pause or delete it and its cron whenever convenient; the
+counter worker's `/flower` route has no caller either but is harmless. The Dune
+account can be left view-only (query 8381304 is public; its SQL is the record
+of the scoring). If a board ever comes back, build it from chain logs
+server-side rather than a metered query service — the public Ronin RPC and
+explorer APIs block browser reads, not worker reads.
+
 ### Swap in a new roster sheet
 
 The official "YAKKAMONS" sheet grows every few weeks. Resize the new source to
@@ -587,6 +616,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 - ROSTER COUNT: 30 Yakkamon in the early-access build (Sept 17 stream) vs 26 shown on the public sheet (Sept 13). When the sheet grows, update the "four still unseen" wording in `gameplay.js` (creature-collecting), both roster figcaptions, the recap article + its posts.js body, poster panel 3, and the search.js roster / "How many Yakkamon" entries.
 - PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.
 
+- LEADERBOARD RETIRED (October 3, 2026): there is no `leaderboard.html` anymore — do not re-add the tab, footer link or tile when copying an older page as a template, and keep the FAQ answer id `where-can-i-see-the-live-deposit-leaderboard` (it now answers "What happened to the deposit leaderboard?"). Full removal notes under Common tasks → "The deposit leaderboard is gone".
+
 - MINT CLOSE-OUT (September 17, 2026): the mint sold out during Wave 4, and the planned one-pass removal was executed that day — the `<a class="mint-ribbon">` bar came off all 61 pages, the `.fm-hero` wave board (title, egg scene, clock, tiles) and its three CTAs came off Home and Early Access, and the ribbon + hero CSS left `style.css`. The Mint Desk survived a few hours longer (Market band only) and then came off both pages too — see "The Mint Desk is gone" under Common tasks. What REMAINS on purpose: the `[data-fm-in]` chips in the wave tables, and `free-mint-hero.js` on exactly the five chip pages (index no longer loads it): `pre-registration.html`, `faq.html`, the guide and the whitelist + mint-page articles. Since Sept 17 `free-mint-hero.js` carries a `SOLD_OUT = true` flag: the clock counts only to the reveal, the Wave 4 chip reads "Sold out" and the Wave 5 chip "Never opened" (the static fallbacks in all five wave tables say "Never opened" too) — the flag exists because Wave 5 never opened, so the time-based logic alone would have shown it as "Open now" on Sept 18. Dated mint articles, the guide and most FAQ answers still describe the mint in the wording written while it ran — the FAQ free-mint topic opens with a sold-out notice, and the guide, mint-page article and Early Access §7 carry completion callouts instead of rewrites (the Home page's own completion callout came off with the timeline on October 1, 2026 — see EARLY ACCESS MILESTONE CARD below). The `fm-*.webp` sprites and `mint-desk.js` are orphaned and deletable by hand.
 
 - EARLY ACCESS MILESTONE CARD (October 1, 2026): the two-stop `.site-timeline` track (Free Mint → Early Access) and its `timeline-countdown.js` came off Home and Early Access once the mint was history — with one dated milestone left there was nothing to draw a line between. Both pages now carry a `.milestone-card` instead (flag badge, "Next milestone" eyebrow, "EARLY ACCESS LAUNCH" + a `.ms-date` pill reading NOV / DEC 2026, two lines of copy, a SEE THE SCHEDULE button to `pre-registration.html#important-dates`). The copy is hand-written and differs per page on purpose: Home says what early access is, Early Access says how the waves enter and what is measured from launch. When the team announces the date, update together: the `.ms-date` pill and `.ms-meta` line on `index.html` AND `pre-registration.html`, the §2 Important Dates table, the launch answers in `faq.js` (then rebuild hubs + JSON-LD), the "Next milestone" and "When is early access?" search.js excerpts, and the home-page meta description if the wording there goes stale. The Home `<title>`/meta no longer mention the free mint ("Pre-Registration, Points & Early Access"); the Early Access page title still does because that page keeps its §7 history. The timeline CSS block left `style.css` entirely (the dead `.lvl-full/.lvl-short` helpers went with it); `timeline-countdown.js` is orphaned and deletable by hand.
@@ -603,7 +634,7 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 - AUTHORSHIP: every article is bylined `By YakkamonWorld` (an `a.byline` in `.article-meta` linking `about.html#author`) and its JSON-LD `author` is the Organization with `@id …/#organization`, `alternateName` "YakkamonW" (the in-game trainer name) and `url` pointing at that anchor. New articles must carry both; there is no per-person byline by design. about.html, privacy.html, contact.html and the consent/contact/chatbot UI strings are written in the FIRST PERSON SINGULAR — one developer and player. New site-voice copy should say "I", not "we". (Shared footer keeps "BUILT BY THE COMMUNITY" and "Contact us".)
 
-- Every page that discusses putting $FLOWER in (tips, pre-registration §8, leaderboard, FAQ, and every article that explains or advises on deposits — the deposit guideline, the four deposit tips/guides, the deposits-open and deposits-explained posts, the referral-deposit rule change, the free mint guide and the leaderboard launch post) ends with a `.money-note` financial-information callout. Any new deposit-related page or article should carry the same block, copied verbatim (it links about.html#cant and reads "Why I don't give financial advice").
+- Every page that discusses putting $FLOWER in (tips, pre-registration §8, FAQ, and every article that explains or advises on deposits — the deposit guideline, the four deposit tips/guides, the deposits-open and deposits-explained posts, the referral-deposit rule change, the free mint guide and the leaderboard launch post) ends with a `.money-note` financial-information callout. Any new deposit-related page or article should carry the same block, copied verbatim (it links about.html#cant and reads "Why I don't give financial advice").
 
 
 Hard-won, easy to re-break.
