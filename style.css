@@ -251,7 +251,11 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .roster-embed figcaption{font-size:.85rem; color:#6a6a80; font-weight:600; margin-top:14px; text-align:center}
 /* Roster sheet inside the roster article. Only `max-width:100%` applied here, so
    the width shrank on a phone while the height attribute held — the sheet rendered
-   stretched (fixed 13 Sep 2026, when the five-row sheet made it obvious). */
+   stretched (fixed 13 Sep 2026, when the five-row sheet made it obvious). The
+   figure also kept the browser's default 40px side margins, so on a 390px phone
+   the sheet drew 216px wide in a 342px column (fixed 6 Oct 2026); the two
+   figures still start from the left edge on desktop, as before. */
+.roster-figure{margin-left:0; margin-right:0}
 .roster-figure img{height:auto}
 .article-body p{margin:0 0 18px; font-weight:600}
 .article-body h2{font-size:1.5rem; margin:28px 0 12px}

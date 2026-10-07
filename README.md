@@ -292,7 +292,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ gameplay-poster.png         1800×2163 — in-page field guide poster (rendered from gameplay-poster-source.html)
    ├─ gameplay-poster-full.png    3409×4096 — full size, longest side capped at X's 4096px limit
    ├─ gameplay-poster-source.html  the poster as HTML — edit, render at 1800px wide, replace both PNGs
-   ├─ yakkamon-roster*.jpg        Official roster sheets, each with a -2x. LIVE: the original 18 (the dated figure in the roster article) and the current 26-sheet (13 Sep, five rows, 688×469). SUPERSEDED and now referenced by nothing — the 21- (25 Aug), 22- (31 Aug) and 23-sheets (8 Sep): ~603 KB, deletable by hand on GitHub
+   ├─ yakkamon-roster*.jpg        Official roster sheets, each with a -2x. LIVE: the original 18 (the dated figure in the roster article) and the current `-26b` sheet (6 Oct — still twenty-six, one portrait swapped; five rows, 688×469). SUPERSEDED and now referenced by nothing — the 21- (25 Aug), 22- (31 Aug), 23- (8 Sep) and 26-sheets (13 Sep, the one with the blue bird): ~842 KB, deletable by hand on GitHub
    ├─ fm-bat / fm-moth / fm-pony / fm-duck / fm-egg .webp   Former free-mint hero sprites — no longer referenced since the hero came down on 17 Sep 2026, deletable by hand on GitHub
    ├─ free-mint-banner.webp       Former free-mint banner — no longer referenced since 8 Sep, deletable
    ├─ free-mint-banner-2x.webp    Same, 2x — deletable
@@ -471,7 +471,11 @@ The official "YAKKAMONS" sheet grows every few weeks. Resize the new source to
 `-<n>-2x.jpg`, `<n>` being the creature count — and **recompute the height from
 the source rather than reusing the last one**: the sheet was four rows (688×384)
 until Sept 13, 2026 and five rows (688×469) after it, so the `width`/`height`
-attributes move with it. Then:
+attributes move with it. If the count has NOT changed (a swap, as on Oct 6, 2026),
+still use a NEW filename — `-<n>b`, `-<n>c`… — rather than overwriting the old one:
+Cloudflare and browsers cache by URL, so an overwritten `-26.jpg` would keep
+serving the old sheet for days, and the superseded file stays on record for the
+diff. Then:
 
 1. `gameplay.html` `#roster` and `gameplay-guide.html` `#your-yakkamon` — in each
    `.roster-embed` figure: the link, `src`, `width`/`height`, alt text and caption.
@@ -492,8 +496,11 @@ attributes move with it. Then:
 The chatbot needs no hand edit: every one of those is a tier-2 source and the
 Action rebuilds the knowledge on push. Diff the new sheet against the previous one
 cell by cell before writing the callout — the Sept 8 sheet silently reordered all
-twenty-two earlier portraits, the Sept 13 one left them alone, and the difference
-is the whole story of the update.
+twenty-two earlier portraits, the Sept 13 one left them alone, and the Oct 6 one
+kept the count at twenty-six while replacing one portrait (the blue bird with the
+yellow beak → a green dragon); the difference is the whole story of the update.
+The old sheet becomes an orphan the moment the embeds move — add it to the
+deletable list in the repo layout above.
 
 ### Add a whole new page
 
@@ -613,7 +620,7 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 - BATTLES, OFFICIAL POST VS STREAM (Sep 24): the battle system is written from the team's official Battles guide (X, Sept 24, 2026 — verbatim in `chatbot-official-posts.md`) with the Sept 17 stream underneath. Two readings on the site are OURS, flagged as such, and must be revisited when the team publishes numbers: "three or four" = the number on the board at once with a bigger roster on the bench, and "you choose which skills each Yakkamon carries" = a per-fight pick from a pool the monster already owns (vs August's expensive extraction respecs). If either is settled, update together: `gameplay.js` (combat-system, plus the Sept 24 lines in monster-care, your-base, hunting, arena-battles), the battle rows + unknowns on `gameplay.html` AND `gameplay-guide.html`, the guide's #combat cards, `faq.js` (is-combat-a-pure-simulation…, do-types-matter-in-battle, does-battle-damage-carry-over-between-fights, how-many-yakkamon-fight-at-once-and-is-there-a-bench, what-happens-if-my-hunter-loses), the battle entries in `search.js`, and `article-battles-explained.html` (dated — gets a correction callout, not a rewrite). The poster's battle panel (19) was rebuilt around the post's eight points on Sep 24 (NEW SEP 24 tag; panels 09, 13, 17 and 22 each carry a Sep 24 line) — if the readings change, edit `gameplay-poster-source.html` and re-render both PNGs too (see the render recipe under common tasks).
 - GAMEPLAY DATES, STREAM VS DOCS (Sep 20): the gameplay section shows the team's spoken aims from the Sept 17 dev stream (beta October, early access mid-to-late November, first hunt ~6 weeks in, Chapter Zero 6–8 weeks in, arena early next year) BESIDE the official docs' figures (early access November or December, Chapter 0 + first NFT hunt one month after, leaderboard final one week before) and treats the docs as the record. When either side changes, update together: `gameplay.js` (platform-access, arena-battles, economy-layers, hunting), the "Early access" and "Chapter 0 & first hunt" quick-reference rows + "The exact dates" unknown on `gameplay.html` AND `gameplay-guide.html`, the guide's battle-trade and hunting callouts, poster panels 17 / 20 / 22 (re-render), and the search.js entries "When is the Yakkamon beta and early access?" / "Is hunting in early access on day one?".
-- ROSTER COUNT: 30 Yakkamon in the early-access build (Sept 17 stream) vs 26 shown on the public sheet (Sept 13). When the sheet grows, update the "four still unseen" wording in `gameplay.js` (creature-collecting), both roster figcaptions, the recap article + its posts.js body, poster panel 3, and the search.js roster / "How many Yakkamon" entries.
+- ROSTER COUNT: 30 Yakkamon in the early-access build (Sept 17 stream) vs 26 shown on the public sheet (Sept 13, re-issued Oct 6 with one portrait swapped — the blue bird with the yellow beak out, a green dragon in, count unchanged). When the sheet grows, update the "four still unseen" wording in `gameplay.js` (creature-collecting), both roster figcaptions, the recap article + its posts.js body, poster panel 3, and the search.js roster / "How many Yakkamon" entries. The Oct 6 swap is described as unexplained everywhere it is mentioned (roster article callout, posts.js, faq.js, search.js, both figcaptions) — if the team ever says why the bird left (cut, redrawn, held for a later Chapter), settle those spots together.
 - PUSH ALERTS: `push-alerts.js` is INERT until a real OneSignal App ID is pasted at its top — no bell renders, nothing loads. `OneSignalSDKWorker.js` must stay at the repo root under exactly that name forever: browsers cache the service-worker registration, so renaming or moving it silently breaks alerts for every existing subscriber. The bell injects itself into `.mh-social` at runtime — the only per-page additions are the `manifest.webmanifest` link in the head and the `push-alerts.js` script tag before `</body>`; `gameplay-poster-source.html` is the one page without the script (it has no masthead). iPhone: iOS only delivers web push from the installed (Add to Home Screen) app — the bell shows those steps to Safari visitors instead of a broken prompt.
 
 - LEADERBOARD RETIRED (October 3, 2026): there is no `leaderboard.html` anymore — do not re-add the tab, footer link or tile when copying an older page as a template, and keep the FAQ answer id `where-can-i-see-the-live-deposit-leaderboard` (it now answers "What happened to the deposit leaderboard?"). Full removal notes under Common tasks → "The deposit leaderboard is gone".

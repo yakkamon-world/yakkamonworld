@@ -590,7 +590,7 @@ var FAQ_CATEGORIES = [
    {
     "id": "how-many-yakkamon-are-there",
     "q": "How many Yakkamon are there?",
-    "a": "<p><strong>Twenty-six</strong> have been officially shown so far, on the roster sheet &mdash; you can see it on the <a href=\"gameplay.html#roster\">Gameplay page</a> &mdash; and the September 17 dev stream confirmed <strong>30 Yakkamon in the early-access build</strong>, so four are still unseen (the team&rsquo;s older figure was roughly 50&ndash;60 at launch). The rest of the roster arrives after launch across chapter releases, each typically paired with a new region. No names, types or rarities have been attached to the portraits yet: <a href=\"article-yakkamon-roster-revealed.html\">what can and can't be read into the sheet</a>.</p>"
+    "a": "<p><strong>Twenty-six</strong> have been officially shown so far, on the roster sheet &mdash; you can see it on the <a href=\"gameplay.html#roster\">Gameplay page</a> &mdash; and the September 17 dev stream confirmed <strong>30 Yakkamon in the early-access build</strong>, so four are still unseen (the team&rsquo;s older figure was roughly 50&ndash;60 at launch). The sheet was last revised on October 6: the count stayed at twenty-six, but one portrait was swapped &mdash; the blue bird with the yellow beak left the fifth row and a green dragon took its slot, with no word from the team on why. The rest of the roster arrives after launch across chapter releases, each typically paired with a new region. No names, types or rarities have been attached to the portraits yet: <a href=\"article-yakkamon-roster-revealed.html\">what can and can't be read into the sheet</a>.</p>"
    },
    {
     "id": "do-the-yakkamon-have-names-yet",
