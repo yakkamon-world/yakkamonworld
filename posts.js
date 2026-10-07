@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "fan-art-competition",
+    category: "official",
+    title: "Draw a Yakkamon, Win a Sealed Egg: The Official Fan Art Competition Is On, With 20 NFT Eggs and Winners Picked Monday, October 12",
+    date: "Oct 7, 2026",
+    excerpt: "The team\u2019s first official fan art competition: make Yakkamon fan art, post it on X with #yakkamoncompetition and your Trainer Name, and the 20 best entries each win a sealed Yakkamon NFT egg \u2014 the first new way to get one since the mint sold out. AI art is accepted but handcrafted work is heavily prioritized. Winners are picked early Monday, October 12, which is still Sunday for most of the world, so post before then.",
+    body: [
+      "The Yakkamon team has opened its first official fan art competition, and the prize is the one thing nobody has been able to mint since September 17: a sealed <strong>Yakkamon NFT egg</strong> \u2014 twenty of them, one for each of the twenty best entries.",
+      "## The rules, as posted",
+      "Create Yakkamon fan art (AI-generated art is accepted, but \u201chighly original, handcrafted artwork will be heavily prioritized\u201d); post it on X (Twitter) with the hashtag <strong>#yakkamoncompetition</strong>; include your Yakkamon <strong>Trainer Name</strong> in the post; winners are picked <strong>early Monday, October 12</strong>, so post ASAP. The <strong>20 best entries</strong>, selected by the team, each win a Yakkamon NFT egg.",
+      "## What you win",
+      "A sealed Genesis egg \u2014 the same kind the free mint handed out before it sold out in Wave 4. It stays hidden until the October 14 reveal, can be traded on Ronin Market, and can be deposited into the game once early access opens. The official reveal total is 11,500 because 1,500 extra eggs are \u201cdistributed out in special events before the reveal\u201d; a twenty-egg competition two days before the reveal fits that description, though the team hasn\u2019t said so in as many words.",
+      "## The deadline",
+      "No closing hour was given \u2014 only that the team picks early Monday. The team works from Australia, and Monday morning in Sydney is Sunday afternoon in the US and Sunday night in Europe. Post before Sunday, October 11 is over where you live, and earlier if you can.",
+      "## How to enter",
+      "Make the art (any medium; pick a Yakkamon from the official roster sheet and say which); find your Trainer Name on your trainer dashboard at yakkamon.com; post from a public X account with the hashtag and your Trainer Name in the text; leave the post up. Nobody from the team will DM you to \u201cclaim\u201d an egg \u2014 any message asking for a wallet connection, a seed phrase or a fee is a scam. The full rules table, the time-zone table, the AI-art reading and six ways to make an entry stronger are in the article."
+    ]
+  },
+  {
     slug: "battles-explained",
     category: "analysis",
     title: "Won Before the First Hit \u2014 What the Official Battles Post Means for Players",

@@ -488,6 +488,9 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 .twitter-callout p{color:#c9c8d8; font-size:.95rem; margin:0; font-weight:600}
 /* YouTube variant of the same callout — red bubble instead of sky blue */
 .twitter-callout .tw-icon.yt-icon{background:var(--red)}
+/* Event variant (Community page) — yellow bubble, ink glyph */
+.twitter-callout .tw-icon.event-icon{background:var(--yellow)}
+.twitter-callout .tw-icon.event-icon svg{color:var(--ink)}
 
 /* ---------- Discord coming-soon callout (Community page) ---------- */
 .discord-callout{

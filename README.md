@@ -223,7 +223,7 @@ Until it is, the bar renders and replies say the helper isn't connected.
 ```
 yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │
-├─ PAGES (54 .html)
+├─ PAGES (55 .html)
 │  ├─ index.html                  Home — Early Access milestone card (top of page since Oct 3, 2026), ticket card + counter, latest news, what-is, tiles
 │  ├─ pre-registration.html       "Early Access" tab — points, tiers, important dates
 │  ├─ news.html                   News archive with category sidebar
@@ -238,7 +238,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ 404.html                    Not-found page (served by `not_found_handling` in wrangler.jsonc; noindex, not in sitemap/search)
 │  ├─ about.html                  Who we are, how we work, content usage
 │  ├─ privacy.html                Privacy + analytics consent controls
-│  └─ article-*.html              One static page per news post (50)
+│  └─ article-*.html              One static page per news post (51)
 │
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
@@ -275,7 +275,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 62 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 63 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
@@ -298,6 +298,8 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
    ├─ free-mint-banner-2x.webp    Same, 2x — deletable
    ├─ prereg-ticket.webp          Old ticket card art (still used by article-yakkamon-referral-code)
    ├─ faq-og-status.png           FAQ social card
+   ├─ fan-art-competition-poster.jpg  1024×765 — the team's competition poster, embedded in article-fan-art-competition
+   ├─ fan-art-competition-og.jpg      1200×630 — social card for that article (the poster on a blurred field)
    └─ news-*.jpg / news-*.png     Per-article images
 ```
 
@@ -618,6 +620,7 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 ## Known quirks
 
+- FAN ART COMPETITION IS DATED (October 7, 2026): the official fan art competition (post on X with #yakkamoncompetition + Trainer Name; 20 sealed eggs; winners picked early Monday, October 12, 2026) is described in the PRESENT TENSE in several evergreen spots, which all go stale the moment the team posts results. When it ends, update together: the `#fan-art-competition` callout at the top of `community.html` (reword to the results or remove it — it is the first block in `<main>`, with its own `.event-icon` rule in `style.css`), the two `faq.js` answers (`how-do-i-enter-the-yakkamon-fan-art-competition`, and the second paragraph of `what-are-the-extra-1-500-hidden-eggs`; then rebuild hubs + JSON-LD), the twelve `search.js` entries that mention it (the eleven added October 7 under the News, FAQ and Community tags, plus the refreshed "What are the extra 1,500 hidden eggs?" excerpt), the tier-1 entry at the top of `chatbot-official-posts.md` (append the results), and `article-fan-art-competition.html` itself, which is dated and gets a results callout + `dateModified` + sitemap `lastmod`, not a rewrite. The article's time-zone table assumes the team picks on Sydney time — our reading, flagged on the page.
 - BATTLES, OFFICIAL POST VS STREAM (Sep 24): the battle system is written from the team's official Battles guide (X, Sept 24, 2026 — verbatim in `chatbot-official-posts.md`) with the Sept 17 stream underneath. Two readings on the site are OURS, flagged as such, and must be revisited when the team publishes numbers: "three or four" = the number on the board at once with a bigger roster on the bench, and "you choose which skills each Yakkamon carries" = a per-fight pick from a pool the monster already owns (vs August's expensive extraction respecs). If either is settled, update together: `gameplay.js` (combat-system, plus the Sept 24 lines in monster-care, your-base, hunting, arena-battles), the battle rows + unknowns on `gameplay.html` AND `gameplay-guide.html`, the guide's #combat cards, `faq.js` (is-combat-a-pure-simulation…, do-types-matter-in-battle, does-battle-damage-carry-over-between-fights, how-many-yakkamon-fight-at-once-and-is-there-a-bench, what-happens-if-my-hunter-loses), the battle entries in `search.js`, and `article-battles-explained.html` (dated — gets a correction callout, not a rewrite). The poster's battle panel (19) was rebuilt around the post's eight points on Sep 24 (NEW SEP 24 tag; panels 09, 13, 17 and 22 each carry a Sep 24 line) — if the readings change, edit `gameplay-poster-source.html` and re-render both PNGs too (see the render recipe under common tasks).
 - GAMEPLAY DATES, STREAM VS DOCS (Sep 20): the gameplay section shows the team's spoken aims from the Sept 17 dev stream (beta October, early access mid-to-late November, first hunt ~6 weeks in, Chapter Zero 6–8 weeks in, arena early next year) BESIDE the official docs' figures (early access November or December, Chapter 0 + first NFT hunt one month after, leaderboard final one week before) and treats the docs as the record. When either side changes, update together: `gameplay.js` (platform-access, arena-battles, economy-layers, hunting), the "Early access" and "Chapter 0 & first hunt" quick-reference rows + "The exact dates" unknown on `gameplay.html` AND `gameplay-guide.html`, the guide's battle-trade and hunting callouts, poster panels 17 / 20 / 22 (re-render), and the search.js entries "When is the Yakkamon beta and early access?" / "Is hunting in early access on day one?".
 - ROSTER COUNT: 30 Yakkamon in the early-access build (Sept 17 stream) vs 26 shown on the public sheet (Sept 13, re-issued Oct 6 with one portrait swapped — the blue bird with the yellow beak out, a green dragon in, count unchanged). When the sheet grows, update the "four still unseen" wording in `gameplay.js` (creature-collecting), both roster figcaptions, the recap article + its posts.js body, poster panel 3, and the search.js roster / "How many Yakkamon" entries. The Oct 6 swap is described as unexplained everywhere it is mentioned (roster article callout, posts.js, faq.js, search.js, both figcaptions) — if the team ever says why the bird left (cut, redrawn, held for a later Chapter), settle those spots together.

@@ -18,6 +18,24 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Official Fan Art Competition (official announcement by the Yakkamon team, early October 2026 — winners picked Monday, October 12, 2026)
+
+Official Fan Art Competition is Here!
+
+Create Yakkamon fan art! (AI-generated art is accepted, but highly original, handcrafted artwork will be heavily prioritized)
+
+Post your fan art on X (Twitter) using the hashtag #yakkamoncompetition
+
+Include your Yakkamon Trainer Name in the post.
+
+Winners are picked early Monday (Oct 12). Post ASAP.
+
+The Prize: The 20 best fan art entries selected by the team will win a Yakkamon NFT egg!
+
+Poster text: "FAN ART YAKKAMON COMPETITION — WIN A YAKKAMON NFT EGG! POST YOUR ART ON X (TWITTER) WITH #YAKKAMONCOMPETITION. Don't forget to include your Trainer Name!"
+
+Key facts in plain terms: the Yakkamon team is running an official fan art competition in October 2026. To enter, create Yakkamon fan art and post it on X (Twitter) with the hashtag #yakkamoncompetition, and include your Yakkamon Trainer Name in the text of the post. Any medium is allowed; AI-generated art is accepted, but the team said highly original, handcrafted artwork will be heavily prioritized. The prize is a Yakkamon NFT egg (a sealed Genesis egg of the kind the free mint distributed; the free mint itself sold out on September 17, 2026, so this competition is a new way to receive one). Twenty winners — the 20 best entries, selected by the team (not by likes or votes) — each receive one egg. Winners are picked early on Monday, October 12, 2026; no closing time was published, and the post says "Post ASAP". Context not stated in the post: the team is based in Australia, so "early Monday" in Australia is still Sunday afternoon or evening in the Americas and Sunday night in Europe — entrants should post before Sunday, October 11 ends in their time zone. The post does not say whether more than one entry is allowed, how winners are notified, when or how the egg is delivered, or whether the prize eggs come from the 1,500 extra hidden eggs the free mint page says are "distributed out in special events before the reveal" (the reveal is October 14, 2026). The team never asks anyone to pay a fee, connect a wallet through a DM link or share a seed phrase to receive a prize — any such message is a scam.
+
 ## Yakkamon — Battles (official post by the Yakkamon team on X, September 24, 2026)
 
 G'day trainers. Back with another guide — today we're stepping into the arena.
