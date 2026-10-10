@@ -514,7 +514,7 @@ var FAQ_CATEGORIES = [
  {
   "id": "gameplay",
   "name": "Playing the game",
-  "intro": "<p>Short answers on how the game itself plays. The long versions live on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; 26 systems, each explained with a plain-English analogy &mdash; and in the <a href=\"gameplay-guide.html\">field guide</a>.</p>",
+  "intro": "<p>Short answers on how the game itself plays. The long versions live on the <a href=\"gameplay.html\">Gameplay page</a> &mdash; 27 systems, each explained with a plain-English analogy &mdash; and in the <a href=\"gameplay-guide.html\">field guide</a>.</p>",
   "rich": "",
   "items": [
    {
@@ -647,7 +647,7 @@ var FAQ_CATEGORIES = [
  {
   "id": "hunting",
   "name": "Hunting",
-  "intro": "<p>Everything from the official Hunting post &mdash; the in-game clock, roaming hunters, the three temperaments, wild Legendaries, depleting grounds and Seasons &mdash; plus what the dev streams and in-game notices added. Long version: <a href=\"article-hunting-explained.html\">what the Hunting post means for players</a>.</p>",
+  "intro": "<p>Everything from the official Hunting post &mdash; the in-game clock, roaming hunters, the three temperaments, wild Legendaries, depleting grounds and Seasons &mdash; plus what the dev streams and in-game notices added, and the official Contracts post's daily board of requests that tells you what to hunt. Long versions: <a href=\"article-hunting-explained.html\">what the Hunting post means for players</a> and <a href=\"article-contracts-explained.html\">what the Contracts post means</a>.</p>",
   "rich": "",
   "items": [
    {
@@ -663,7 +663,7 @@ var FAQ_CATEGORIES = [
    {
     "q": "Can I catch a Legendary by hunting?",
     "id": "can-i-catch-a-legendary-by-hunting",
-    "a": "<p>Yes, according to the official Hunting post: <strong>Legendaries and Rares sporadically appear in the hunting grounds</strong>, with no schedule to memorize. The team's advice is to keep a strong, well-supplied team ready to go the moment one shows up &mdash; which reads as needing both a hunter that can win a fight and a stock of goods, in case the Legendary is greedy. How often they appear, and whether wild Legendaries draw on the same limited supply as the Chapter 0 batches, is unpublished. <a href=\"article-hunting-explained.html\">Our reading &rarr;</a></p>"
+    "a": "<p>Yes, according to the official Hunting post: <strong>Legendaries and Rares sporadically appear in the hunting grounds</strong>, with no schedule to memorize. The team's advice is to keep a strong, well-supplied team ready to go the moment one shows up &mdash; which reads as needing both a hunter that can win a fight and a stock of goods, in case the Legendary is greedy. How often they appear, and whether wild Legendaries draw on the same limited supply as the Chapter 0 batches, is unpublished. Hunting isn't the only in-game route, either: the official Contracts post (early October 2026) says Contracts will play a big part in grinding toward some of the Legendaries. <a href=\"article-hunting-explained.html\">Our reading &rarr;</a></p>"
    },
    {
     "q": "Does the time of day matter for hunting?",
@@ -721,9 +721,24 @@ var FAQ_CATEGORIES = [
     "a": "<p>Not an official one. The post frames &ldquo;learning the clock&rdquo; as the player's job, and says outright that Legendaries and Rares appear sporadically with <strong>no schedule to memorize</strong> &mdash; and the Clock post added that when one lands it is <strong>in real time on the universal clock</strong>: no pausing, no catching up later, the same window for everyone. The Yakkapedia in the official docs lists species and Legendary abilities, not where or when anything spawns. Expect spawn tables to be community-built, and expect them to go stale each Season. The one thing you can rely on is that the timing runs on the sped-up <strong>in-game clock</strong>, not real time, so a log of ground plus in-game hour transfers between players. <a href=\"gameplay.html?system=day-night-cycle\">Day, night &amp; weather &rarr;</a></p>"
    },
    {
+    "q": "What are Contracts in Yakkamon?",
+    "id": "what-are-contracts-in-yakkamon",
+    "a": "<p>Standing requests for specific Yakkamon, posted on a board that changes every day. Fill one and you're paid in <strong>Coin</strong> and in <strong>specific items you can't just gather or craft</strong>; ignore it and it rotates away. Per the official Contracts post (early October 2026), the wanted Yakkamon may only roam a certain ground at a certain time of day in a certain season, every Contract <strong>expires</strong>, some want the right type, traits or a particular skill, some want goods from your farm alongside the monster, and the high-value ones come with short windows. Contracts will also play a big part in chapter content and in grinding toward some of the Legendaries. <a href=\"article-contracts-explained.html\">What it means for players &rarr;</a></p>"
+   },
+   {
+    "q": "Do I lose the Yakkamon I hand in to a Contract?",
+    "id": "do-i-lose-the-yakkamon-i-hand-in-to-a-contract",
+    "a": "<p>Plan as if you do. The official Contracts post doesn't say what happens to a delivered Yakkamon. The August dev streams did: contract deliveries <strong>consume</strong> the monster &mdash; designed as the main sink for surplus Yakkamon and &ldquo;hungrier&rdquo; than generation, so commons get caught and sunk rather than piling up. The post neither repeats nor retracts that. Until the team says otherwise, fill Contracts with Yakkamon you can catch again, and weigh a request for a particular trait or skill against what that monster earns you on the farm or in a fight. <a href=\"article-contracts-explained.html#windows\">Our reading &rarr;</a></p>"
+   },
+   {
+    "q": "Can Contracts get me a Legendary?",
+    "id": "can-contracts-get-me-a-legendary",
+    "a": "<p>Eventually, for some of them &mdash; through a grind rather than a single Contract, by the sound of it. The official Contracts post says Contracts will play a big part in &ldquo;grinding your way towards <strong>some</strong> of the Legendaries&rdquo;, and that the trainers who keep the board cleared now are setting themselves up for what's coming. It doesn't say which Legendaries or what the grind counts. The published sources are the Genesis remainder the docs hold for &ldquo;future game events&rdquo; (21 Storm, 66 Echo, 133 Ghost and 449 Bloom, by our arithmetic), the first batch of Legendaries the docs put at <strong>Chapter 0</strong>, a month after early access, and the wild Legendaries the Hunting post says turn up in ordinary grounds. <a href=\"article-contracts-explained.html#legendaries\">Our reading &rarr;</a></p>"
+   },
+   {
     "q": "What is a contract hunt?",
     "id": "what-is-a-contract-hunt",
-    "a": "<p>A hunt someone else has ordered. The free-mint stream described a <strong>contract hunt system</strong> that pays <strong>coins</strong> for finding a requested Yakkamon, and named it as one of the few faucets for coins &mdash; the currency that gates the tradeable layer of the economy. It's not in the Hunting post, and details such as who posts contracts, how the payout is set, and whether the caught monster goes to you or the requester are unpublished. The site's reading is that ordinary hunting fills your roster and contract hunting is how a free player earns their way into the market. <a href=\"gameplay.html?system=economy-layers\">The two-track economy &rarr;</a></p>"
+    "a": "<p>What the official Contracts post (early October 2026) now calls <strong>Contracts</strong> &mdash; a hunt someone else has ordered. This site used &ldquo;contract hunt&rdquo; for the contract system the free-mint stream described, which pays coins for requested hunts. The official version: a board of standing requests for specific Yakkamon goes up every day; the wanted monster may only roam a certain ground, at a certain in-game hour, in a certain season, and you deliver it before the Contract expires, for <strong>Coin</strong> and items you can't just gather or craft. The free-mint stream had already named contracts as one of the few faucets for coins, the currency that gates the tradable layer of the economy, and the post confirms the Coin. Still unpublished: how much a Contract pays, whether every trainer sees the same board, and whether a bought Yakkamon can fill one. <a href=\"gameplay.html?system=contracts\">The Contracts system &rarr;</a></p>"
    },
    {
     "q": "Will hunting be available on day one of Early Access?",
@@ -746,12 +761,12 @@ var FAQ_CATEGORIES = [
    {
     "id": "can-i-earn-real-money-playing-for-free",
     "q": "Can I earn real money playing for free?",
-    "a": "<p>The free-mint stream answered this more directly than the economy post did. There is a <strong>completely free-to-play layer</strong> with no limit on what you can produce &mdash; but what it produces <strong>is not tradable</strong>. Making something tradable costs the game's Web2 currency, <strong>coins</strong>, and coins only come from VIP, from actions that help the economy (burning crops or other assets) and from contract hunts. So the honest answer is: a free player can reach the market, but only by feeding the free layer into the coin gate first. Bryn borrowed a phrase for it &mdash; &ldquo;more free to try than free to play&rdquo;. <a href=\"gameplay.html?system=economy-layers\">The two-track economy &rarr;</a></p>"
+    "a": "<p>The free-mint stream answered this more directly than the economy post did. There is a <strong>completely free-to-play layer</strong> with no limit on what you can produce &mdash; but what it produces <strong>is not tradable</strong>. Making something tradable costs the game's Web2 currency, <strong>coins</strong>, and coins only come from VIP, from actions that help the economy (burning crops or other assets) and from Contracts &mdash; which the official Contracts post (early October 2026) confirms pay Coin, plus items you can't gather or craft. So the honest answer is: a free player can reach the market, but only by feeding the free layer into the coin gate first. Bryn borrowed a phrase for it &mdash; &ldquo;more free to try than free to play&rdquo;. <a href=\"gameplay.html?system=economy-layers\">The two-track economy &rarr;</a></p>"
    },
    {
     "q": "What are coins?",
     "id": "what-are-coins",
-    "a": "<p>The in-game Web2 currency &mdash; &ldquo;currently called coins&rdquo;, with a rename to something like &ldquo;new yen&rdquo; floated on the stream. They're the <strong>balancing lever</strong> on the tradable economy: you spend coins to produce tradable assets, and the faucets for coins are deliberately limited. Not to be confused with $FLOWER, which is the on-chain token; how the two relate hasn't been published.</p>"
+    "a": "<p>The in-game Web2 currency &mdash; &ldquo;currently called coins&rdquo; on the stream, which floated a rename to something like &ldquo;new yen&rdquo;; the official Contracts post (early October 2026) writes it <strong>Coin</strong>. It's the <strong>balancing lever</strong> on the tradable economy: you spend Coin to produce tradable assets, and the faucets are deliberately limited &mdash; VIP, burning crops or other assets, and <a href=\"gameplay.html?system=contracts\">Contracts</a>, which the post confirms pay in Coin. Not to be confused with $FLOWER, which is the on-chain token; how the two relate hasn't been published.</p>"
    },
    {
     "id": "where-will-i-trade-monsters",

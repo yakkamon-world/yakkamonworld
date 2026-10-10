@@ -6,6 +6,22 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "contracts-explained",
+    category: "analysis",
+    title: "Wanted, Daily — What the Official Contracts Post Means for Players",
+    date: "Oct 9, 2026",
+    excerpt: "The official Contracts post, point by point: a new board of standing requests for specific Yakkamon every day, paid in Coin and in items you can’t gather or craft; wanted monsters that may only roam one ground, at one hour, in one season, before the Contract expires; requests for the right type, traits or skill, and for farm goods alongside; short windows for the best ones — and a grind toward some of the Legendaries. What it means for your roster, your farm and your wave.",
+    body: [
+      "Since August the team’s guide series has covered what your Yakkamon can do — gather, hunt, battle, breed. The Contracts post is about what the game will <strong>ask</strong> them to do: a board of standing requests for specific Yakkamon that changes every day.",
+      "## The seven points",
+      "A <strong>new board every day</strong>, each Contract asking for different Yakkamon — check in daily and plan your hunts around it. Contracts pay <strong>Coin</strong> plus <strong>items you can’t gather or craft</strong>. The wanted Yakkamon may only roam a certain ground, at a certain time of day, in a certain season, and every Contract <strong>expires</strong>. Some want the right <strong>type, traits or skill</strong> (“a well-sorted roster beats a big one”); some want <strong>goods from your farm</strong> alongside. High-value requests come with <strong>short windows</strong> — keep a few spare Yakkamon tamed and ready. And Contracts will play a big part in <strong>chapter content</strong> and in grinding toward <strong>some of the Legendaries</strong>.",
+      "## What it means",
+      "Coin is the gate between the free layer and the tradable one, so the board is one of a free player’s few doors into the market — monsters and goods in, Coin and items out. The post doesn’t say a delivered Yakkamon is gone, but the August dev streams did: contract deliveries consume the monster. Plan as if every hand-in is permanent, and commons become stock. Your hunting log becomes a Contract planner, your bin a Contract pantry, and the Legendary grind is the first route to one that rewards consistency over rank or luck. On the docs’ dates, Wave 1 gets about a month of boards before Chapter 0 opens the market; Wave 3 a little over two weeks.",
+      "## How to get an edge",
+      "Read the board before the bin; run your hunting log as a Contract planner; keep a few spare Yakkamon of different types rested and unassigned; catalog every monster’s type, traits and skills; stock a spread of goods; hand in only what you can catch again; and bank the items Contracts pay until you know what they unlock. Full reading, the step-by-step table, the wave math and the six questions we’d put to the team in the article."
+    ]
+  },
+  {
     slug: "fan-art-competition",
     category: "official",
     title: "Draw a Yakkamon, Win a Sealed Egg: The Official Fan Art Competition Is On, With 20 NFT Eggs and Winners Picked Monday, October 12",

@@ -223,11 +223,11 @@ Until it is, the bar renders and replies say the helper isn't connected.
 ```
 yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │
-├─ PAGES (55 .html)
+├─ PAGES (66 .html)
 │  ├─ index.html                  Home — Early Access milestone card (top of page since Oct 3, 2026), ticket card + counter, latest news, what-is, tiles
 │  ├─ pre-registration.html       "Early Access" tab — points, tiers, important dates
 │  ├─ news.html                   News archive with category sidebar
-│  ├─ gameplay.html               26 gameplay systems, sidebar + detail panel
+│  ├─ gameplay.html               27 gameplay systems, sidebar + detail panel
 │  ├─ gameplay-guide.html         Same material as one long mobile-readable page
 │  ├─ community.html              Our channels, then the official ones
 │  ├─ tips.html                   Trainer tips
@@ -238,11 +238,11 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ 404.html                    Not-found page (served by `not_found_handling` in wrangler.jsonc; noindex, not in sitemap/search)
 │  ├─ about.html                  Who we are, how we work, content usage
 │  ├─ privacy.html                Privacy + analytics consent controls
-│  └─ article-*.html              One static page per news post (51)
+│  └─ article-*.html              One static page per news post (52)
 │
 ├─ CONTENT DATA — edit these to change what the site says
 │  ├─ posts.js                    News posts (YAKKAMON_POSTS), newest first
-│  ├─ gameplay.js                 Gameplay systems (26 entries)
+│  ├─ gameplay.js                 Gameplay systems (27 entries)
 │  ├─ videos.js                   Video index (22 entries, 4 blocks)
 │  ├─ search.js                   SEARCH_INDEX + the search overlay behavior
 │  └─ chatbot.js                  "Ask me anything" bar + sheet (talks to yakkamon-chat-worker)
@@ -275,7 +275,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ analytics.js                GA4, consent-gated — loaded in <head> everywhere
 │  ├─ privacy-consent.js          Consent controls on privacy.html + about.html
 │  ├─ style.css                   All shared styling
-│  ├─ sitemap.xml                 63 URLs — keep in sync with new pages
+│  ├─ sitemap.xml                 64 URLs — keep in sync with new pages
 │  ├─ robots.txt                  Open to search engines and AI answer engines
 │  ├─ BingSiteAuth.xml            Bing Webmaster verification — must stay at root
 │  ├─ wrangler.jsonc              Cloudflare config (html_handling "none" — see Deployment)
@@ -619,6 +619,8 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 ---
 
 ## Known quirks
+
+- CONTRACTS, OFFICIAL POST VS STREAMS (October 9, 2026): the Contracts system is written from the team's official Contracts post (X, early October 2026 — verbatim at the top of `chatbot-official-posts.md`; the exact post date and URL were not supplied, so every spot says "early October"). One fact on the site comes from the AUGUST DEV STREAMS, not the post, and is labeled that way everywhere: contract deliveries CONSUME the Yakkamon handed in (the main sink for surplus monsters). Our readings, flagged on the page: "every day" = a real-world day (not the faster in-game day), the board may be shared or personal (unknown), a Contract as a Coin converter (time, monsters and goods in, Coin and items out), Contracts as the vehicle for chapter content and an accumulating Legendary grind, and the wave arithmetic (days of Contracts before Chapter 0: ~30 / 23 / 16 for Waves 1–3 on the docs' one-month Chapter 0; 42–56 / 35–49 / 28–42 on the stream's six to eight weeks). When the team answers any of the six questions in the article (hand-in consumed? which day / shared board? bought or bred fills? items tradable? what the Legendary grind counts? live at early access or Chapter 0?), update together: `gameplay.js` (contracts, plus the contract lines in crafting-hunting, hunting, economy-layers and endgame), the six Contract rows + the "Contract numbers" unknown on `gameplay.html` AND `gameplay-guide.html`, the guide's `#contracts` section, `faq.js` (what-are-contracts-in-yakkamon, do-i-lose-the-yakkamon-i-hand-in-to-a-contract, can-contracts-get-me-a-legendary, what-is-a-contract-hunt, what-are-coins; then rebuild hubs + JSON-LD), the Contract entries in `search.js` (the fifteen added October 9 plus the refreshed coins / contract-hunt / two-track / hunting excerpts), and `article-contracts-explained.html` (dated — gets an update callout + `dateModified` + sitemap `lastmod`, not a rewrite). The currency is written "Coin" wherever the post is quoted and "coins" where the streams are; if the team renames it, those spots change together. The chat's starter topics swapped the retired Leaderboard chip for a Contracts chip (`chatbot.js` TOPICS). The gameplay poster has NO Contracts panel yet — optional follow-up (render recipe under Common tasks).
 
 - FAN ART COMPETITION IS DATED (October 7, 2026): the official fan art competition (post on X with #yakkamoncompetition + Trainer Name; 20 sealed eggs; winners picked early Monday, October 12, 2026) is described in the PRESENT TENSE in several evergreen spots, which all go stale the moment the team posts results. When it ends, update together: the `#fan-art-competition` callout at the top of `community.html` (reword to the results or remove it — it is the first block in `<main>`, with its own `.event-icon` rule in `style.css`), the two `faq.js` answers (`how-do-i-enter-the-yakkamon-fan-art-competition`, and the second paragraph of `what-are-the-extra-1-500-hidden-eggs`; then rebuild hubs + JSON-LD), the twelve `search.js` entries that mention it (the eleven added October 7 under the News, FAQ and Community tags, plus the refreshed "What are the extra 1,500 hidden eggs?" excerpt), the tier-1 entry at the top of `chatbot-official-posts.md` (append the results), and `article-fan-art-competition.html` itself, which is dated and gets a results callout + `dateModified` + sitemap `lastmod`, not a rewrite. The article's time-zone table assumes the team picks on Sydney time — our reading, flagged on the page.
 - BATTLES, OFFICIAL POST VS STREAM (Sep 24): the battle system is written from the team's official Battles guide (X, Sept 24, 2026 — verbatim in `chatbot-official-posts.md`) with the Sept 17 stream underneath. Two readings on the site are OURS, flagged as such, and must be revisited when the team publishes numbers: "three or four" = the number on the board at once with a bigger roster on the bench, and "you choose which skills each Yakkamon carries" = a per-fight pick from a pool the monster already owns (vs August's expensive extraction respecs). If either is settled, update together: `gameplay.js` (combat-system, plus the Sept 24 lines in monster-care, your-base, hunting, arena-battles), the battle rows + unknowns on `gameplay.html` AND `gameplay-guide.html`, the guide's #combat cards, `faq.js` (is-combat-a-pure-simulation…, do-types-matter-in-battle, does-battle-damage-carry-over-between-fights, how-many-yakkamon-fight-at-once-and-is-there-a-bench, what-happens-if-my-hunter-loses), the battle entries in `search.js`, and `article-battles-explained.html` (dated — gets a correction callout, not a rewrite). The poster's battle panel (19) was rebuilt around the post's eight points on Sep 24 (NEW SEP 24 tag; panels 09, 13, 17 and 22 each carry a Sep 24 line) — if the readings change, edit `gameplay-poster-source.html` and re-render both PNGs too (see the render recipe under common tasks).

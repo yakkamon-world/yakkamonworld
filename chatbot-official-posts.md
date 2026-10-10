@@ -18,6 +18,28 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Yakkamon — Contracts (official post by the Yakkamon team on X, early October 2026)
+
+G'day trainers. Back with another guide. Yakkamon have all sorts of utility — gathering, battling, hunting, breeding — and today we're digging into one more: Contracts.
+
+Contracts are standing requests for specific Yakkamon. Fill them and you're paid in Coin and items; ignore them and you're leaving good stuff on the table.
+
+1. Every day brings new Contracts, and every Contract asks for different Yakkamon. The board rotates, so what was wanted yesterday won't be what's wanted today — check in daily and plan your hunts around it.
+
+2. Contracts pay in Coin, but they'll also hand over specific items you can't just gather or craft — the kind of things you'll need to push your farm and your roster forward.
+
+3. Timing is everything. The Yakkamon a Contract wants might only roam a certain ground, at a certain time of day, in a certain season. You'll need to know the clock and the grounds to actually track them down before the Contract expires.
+
+4. Some Contracts call for Yakkamon with a bit more to them — the right type, the right traits, maybe a particular skill — so a well-sorted roster beats a big one.
+
+5. Stay on top of your gathering. Contracts don't just want monsters; some want goods your farm produces alongside them. A farm that's humming along is a farm that can answer any request the board throws up.
+
+6. The best Contracts won't sit there forever. High-value requests come with short windows, so keep a few spare Yakkamon tamed and ready rather than scrambling when the big one appears.
+
+7. And they go deeper than daily chores. Contracts will play a big part in chapter-based content and in grinding your way towards some of the Legendaries — so the trainers who keep the board cleared now are setting themselves up for what's coming.
+
+Key facts in plain terms: Contracts are a Yakkamon system alongside gathering, battling, hunting and breeding — standing requests for specific Yakkamon, posted on a board that rotates every day (new Contracts daily, each asking for different Yakkamon). Filling a Contract pays Coin (the in-game currency; the post spells it with a capital C) plus specific items that cannot be gathered or crafted and are needed to progress the farm and the roster. The requested Yakkamon may only appear on a certain hunting ground, at a certain in-game time of day, in a certain season, and every Contract expires, so trainers need to know the in-game clock and the hunting grounds to fill one in time. Some Contracts require a Yakkamon with the right type, the right traits or a particular skill; some also require goods produced on the trainer's farm alongside the monsters. High-value Contracts have short windows, so the team advises keeping a few spare tamed Yakkamon ready. Contracts will play a big part in chapter-based content and in grinding toward some of the Legendaries. The post does not say: whether a delivered Yakkamon is consumed (the August 2026 dev streams described contract deliveries as consuming the Yakkamon — the main sink for surplus monsters), whether "every day" means a real-world day or an in-game day (per the Clock post the in-game day rolls over every few real hours), how many Contracts a board holds, whether every trainer sees the same board, how much Coin or which items a Contract pays, whether those items can be traded, which Legendaries the grind leads to or what it counts, and whether Contracts are available from the first day of early access or arrive with Chapter 0 (one month after early access, per the official docs). The dev streams had already named contracts as one of the few faucets for coins, the currency that gates production of tradable assets.
+
 ## Official Fan Art Competition (official announcement by the Yakkamon team, early October 2026 — winners picked Monday, October 12, 2026)
 
 Official Fan Art Competition is Here!
