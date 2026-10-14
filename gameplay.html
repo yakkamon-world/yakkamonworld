@@ -193,15 +193,12 @@
 
 <section class="gp-extra gp-systems" id="systems">
   <div class="section-head"><h2>EVERY SYSTEM, EXPLAINED</h2><span class="gp-count">27 systems</span></div>
-  <p class="gp-extra-note">Pick a system. The panel swaps in place and the address bar updates, so any panel can be shared as a link.</p>
-  <div class="docs-layout">
-    <aside class="sidebar">
-      <p class="sidebar-label">SYSTEMS</p>
-      <label class="gp-select-wrap"><span class="sr-only">Jump to a system</span><select class="gp-select" id="gp-select" aria-label="Jump to a system"></select></label>
-      <ul class="sidebar-list" id="gp-sidebar-list"></ul>
-    </aside>
-    <div class="gp-detail" id="gp-detail"></div>
-  </div>
+  <p class="gp-extra-note">Seven groups, twenty-seven systems. Pick one and it opens in the reader below &mdash; each system has its own link, so you can share exactly the one you&rsquo;re reading.</p>
+  <nav class="gp-map" id="gp-map" aria-label="All gameplay systems">
+    <button class="gp-map-toggle" id="gp-map-toggle" type="button" aria-expanded="false" aria-controls="gp-map-groups"><span class="gp-map-toggle-label">All 27 systems</span><span class="gp-map-toggle-now" id="gp-map-now"></span></button>
+    <div class="gp-map-groups" id="gp-map-groups"></div>
+  </nav>
+  <article class="gp-reader" id="gp-detail" aria-labelledby="gp-reader-title"></article>
 </section>
 </div>
 

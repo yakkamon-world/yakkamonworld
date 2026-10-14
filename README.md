@@ -227,7 +227,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 │  ├─ index.html                  Home — Early Access milestone card (top of page since Oct 3, 2026), ticket card + counter, latest news, what-is, tiles
 │  ├─ pre-registration.html       "Early Access" tab — points, tiers, important dates
 │  ├─ news.html                   News archive with category sidebar
-│  ├─ gameplay.html               Redesigned Oct 14, 2026: Genesis Yakkamon cards + stat strip, jump bar, 27 systems (grouped sidebar + detail panel; a <select> picker on phones), poster band, folded quick reference (with filter) and unknowns
+│  ├─ gameplay.html               Redesigned Oct 14, 2026: Genesis Yakkamon cards + stat strip, jump bar, 27 systems (wide system board in seven color-coded groups + reader panel with previous / next; the board folds behind one button on phones), poster band, folded quick reference (with filter) and unknowns
 │  ├─ gameplay-guide.html         Same material as one long mobile-readable page
 │  ├─ community.html              Our channels, then the official ones
 │  ├─ tips.html                   Trainer tips
@@ -250,7 +250,7 @@ yakkamonworld/                    ← flat: no css/ or js/ subdirectories
 ├─ RENDERERS — how that data is displayed
 │  ├─ news.js                     News archive + category filtering
 │  ├─ home-news.js                Latest posts on Home
-│  ├─ gameplay-page.js            Gameplay sidebar + detail swap, plus the jump bar, phone picker, quick-reference filter and fold-opening (Oct 14 redesign); `GP_GROUPS` at its top decides the sidebar grouping — a new slug not listed there renders under "More"
+│  ├─ gameplay-page.js            Gameplay system board + reader swap (paragraphs, lead-in subheadings, "In this system" list, previous / next), plus the jump bar, quick-reference filter and fold-opening (Oct 14 redesign); `GP_GROUPS` at its top decides the board's groups, their order (which is also the previous / next order) and their colors — a new slug not listed there renders under "More"
 │  └─ videos-render.js            Video list from videos.js
 │
 ├─ WIDGETS
@@ -374,12 +374,19 @@ third-party request on every page load.
 ### Add a gameplay system
 
 Edit `gameplay.js`. Every entry needs `slug`, `title`, `desc`, `detail`, `icon`
-and `like` (the plain-English analogy that renders as the green "LIKE THIS"
-block). **Never rename an existing slug** — `?system=` deep links are used
+and `like` (the plain-English analogy that renders as the yellow "Like this"
+note). Separate paragraphs in `detail` with `<br><br>`; a paragraph that opens
+with a short bold sentence (`<strong>Beds are capacity.</strong> …`) is shown
+as a subheading, and four or more of those give the system an "In this system"
+list — so start a new topic that way rather than bolding phrases mid-paragraph. **Never rename an existing slug** — `?system=` deep links are used
 throughout the articles and would break silently.
 
 Then add the slug to the right group in `GP_GROUPS` at the top of
-`gameplay-page.js` (anything unlisted renders under a "More" heading), update the
+`gameplay-page.js` (anything unlisted renders under a "More" heading; a new
+group also needs a `key` and a `.gp-g-<key>{--gp-tint:…}` color in
+`style.css`), bump the hand-written counts in `gameplay.html` (the "27 systems" tag in the
+section head and "twenty-seven systems" in the note under it; the board's
+button and the reader count themselves), update the
 quick-reference table in `gameplay.html` (it lives inside the `#numbers-table`
 fold; the "N numbers" count in the section head and the "N rows" line in the
 fold summary are hand-written), the matching section in `gameplay-guide.html`,
@@ -631,7 +638,9 @@ proxy — and when hunting overflow, ignore elements inside an ancestor with
 
 - BAD EGG COUNT: the number of flagged Bad Eggs is hand-written, not live — 831 at the October 14, 2026 reveal (DOWN from the 973 quoted on September 17; 142 flags were lifted, reason unstated). If it moves again, update together: the `what-is-a-bad-egg` answer in `faq.js` (then rebuild hubs + JSON-LD), the "831" callouts on `pre-registration.html` (§7) and `article-ronin-free-mint-guide.html`, the Bad Eggs section and the reveal entry in `chatbot-official-posts.md`, section 0 of `chatbot-digest.md`, the reveal rows in both quick-reference tables and poster panel 04, and the search.js excerpts that quote it ("How many Bad Eggs were there at the reveal?", "What is a Bad Egg?", "How many Bad Eggs are there?"). The dated mentions inside `article-free-mint-complete.html`, `article-dev-stream-sept-17-recap.html` and `article-egg-reveal.html` are tied to their dates and stay as published. The live count is the Status filter: marketplace.roninchain.com/collections/yakkamon?Status=Bad%20Egg.
 
-- GAMEPLAY PAGE FOLDS (October 14, 2026): `gameplay.html` keeps the roster sheet, the quick-reference table and the unknowns inside `<details class="gp-fold">` boxes that are CLOSED by default. Deep links still work because `gameplay-page.js` opens the fold that contains the hash target on load and on `hashchange` (`#roster` is the roster fold itself; `#numbers-table` / `#unknowns-list` are the folds; `#numbers` / `#unknowns` are the sections and open their fold when reached from the jump bar), and typing in the quick-reference filter opens the table. The sidebar is sticky and scrolls on its own above 760px; under 760px it is replaced by a `<select>`. Chatbot builder and crawlers read the folded content normally (it is in the DOM).
+- GAMEPLAY PAGE FOLDS (October 14, 2026): `gameplay.html` keeps the roster sheet, the quick-reference table and the unknowns inside `<details class="gp-fold">` boxes that are CLOSED by default. Deep links still work because `gameplay-page.js` opens the fold that contains the hash target on load and on `hashchange` (`#roster` is the roster fold itself; `#numbers-table` / `#unknowns-list` are the folds; `#numbers` / `#unknowns` are the sections and open their fold when reached from the jump bar), and typing in the quick-reference filter opens the table. Chatbot builder and crawlers read the folded content normally (it is in the DOM).
+
+- GAMEPLAY SYSTEM BOARD + READER (October 14, 2026, second pass): the Systems section has no sidebar any more. `#gp-map` is a wide board — one row per `GP_GROUPS` group, each system a chip — and `#gp-detail` is the reader underneath. Under 760px the board folds behind the "All 27 systems" button (`.gp-map.open`), and the reader's "In this system" list starts closed. The reader builds its body from `detail` at runtime: `<br><br>` → paragraphs, an opening bold sentence → `<h3 class="gp-sub">` with an id `gp-<slug>-<n>` (so `gameplay.html?system=hunting#gp-hunting-3` deep-links a part — the numbers shift if a lead-in is added above it). Body text is weight 500 and inline bold 700 inside `.gp-prose` only; the rest of the site keeps its 600 body. Every link to `?system=…` on the page swaps the reader in place; plain `#anchor` links are left to the browser. The old sidebar's phone rule (`.sidebar-list{display:none}` under 760px) was NOT scoped and had been hiding the category lists on News, Early Access, Tips, About, Contact and Privacy on phones since the first Oct 14 batch — removed with the sidebar; don't reintroduce an unscoped `.sidebar-*` rule.
 
 - CONTRACTS, OFFICIAL POST VS STREAMS (October 9, 2026): the Contracts system is written from the team's official Contracts post (X, early October 2026 — verbatim at the top of `chatbot-official-posts.md`; the exact post date and URL were not supplied, so every spot says "early October"). One fact on the site comes from the AUGUST DEV STREAMS, not the post, and is labeled that way everywhere: contract deliveries CONSUME the Yakkamon handed in (the main sink for surplus monsters). Our readings, flagged on the page: "every day" = a real-world day (not the faster in-game day), the board may be shared or personal (unknown), a Contract as a Coin converter (time, monsters and goods in, Coin and items out), Contracts as the vehicle for chapter content and an accumulating Legendary grind, and the wave arithmetic (days of Contracts before Chapter 0: ~30 / 23 / 16 for Waves 1–3 on the docs' one-month Chapter 0; 42–56 / 35–49 / 28–42 on the stream's six to eight weeks). When the team answers any of the six questions in the article (hand-in consumed? which day / shared board? bought or bred fills? items tradable? what the Legendary grind counts? live at early access or Chapter 0?), update together: `gameplay.js` (contracts, plus the contract lines in crafting-hunting, hunting, economy-layers and endgame), the six Contract rows + the "Contract numbers" unknown on `gameplay.html` AND `gameplay-guide.html`, the guide's `#contracts` section, `faq.js` (what-are-contracts-in-yakkamon, do-i-lose-the-yakkamon-i-hand-in-to-a-contract, can-contracts-get-me-a-legendary, what-is-a-contract-hunt, what-are-coins; then rebuild hubs + JSON-LD), the Contract entries in `search.js` (the fifteen added October 9 plus the refreshed coins / contract-hunt / two-track / hunting excerpts), and `article-contracts-explained.html` (dated — gets an update callout + `dateModified` + sitemap `lastmod`, not a rewrite). The currency is written "Coin" wherever the post is quoted and "coins" where the streams are; if the team renames it, those spots change together. The chat's starter topics swapped the retired Leaderboard chip for a Contracts chip (`chatbot.js` TOPICS). The gameplay poster has NO Contracts panel yet — optional follow-up (render recipe under Common tasks).
 

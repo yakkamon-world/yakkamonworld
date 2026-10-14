@@ -189,12 +189,7 @@ a.mh-wordmark:focus-visible{outline:3px solid var(--yellow); outline-offset:4px;
 .sidebar-list li a.active{background:var(--yellow); border-color:var(--ink)}
 .sidebar-count{float:right; font-size:.9rem; color:#6a6a80}
 
-.gp-detail{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:30px; overflow-anchor:none}
-/* Swapping the detail panel must not let the browser re-anchor the scroll. */
 .docs-layout{overflow-anchor:none}
-.gp-detail-icon{width:44px; height:44px; margin-bottom:16px}
-.gp-detail h2{font-size:1.9rem; margin:0 0 14px}
-.gp-detail p{margin:0; font-size:1.05rem; color:#3d3d50; font-weight:600}
 
 /* ---------- Gameplay teaser tiles ---------- */
 .gameplay-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px}
@@ -414,7 +409,7 @@ footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10
 /* ---------- "What is Yakkamon?" section (Home page) ---------- */
 .about-section{margin:0}
 .about-box{background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); padding:26px}
-@media(max-width:500px){.about-box, .gp-detail, .sidebar{padding:18px}}
+@media(max-width:500px){.about-box, .sidebar{padding:18px}}
 .about-box p{font-size:1.05rem; margin:0 0 16px; font-weight:600}
 .about-box p:last-child{margin-bottom:0}
 .about-basics{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:18px 0}
@@ -1101,8 +1096,6 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 /* --- Gameplay section additions (21 Aug 2026 revision) --- */
 .page-updated{margin:10px 0 0; font-size:.92rem; font-weight:700; padding:10px 14px; border:3px solid var(--ink); border-radius:var(--radius); background:#FFE9A8}
 .page-updated a{font-weight:900}
-.gp-detail .gp-list{margin:12px 0 0; padding:0 0 0 20px}
-.gp-detail .gp-list li{margin:0 0 8px; line-height:1.55}
 .poster-rev{margin:0 0 14px; font-size:.95rem; font-weight:800; color:#1A1A2E; background:#FFD23F; border:3px solid var(--ink); border-radius:var(--radius); padding:9px 14px; display:inline-block}
 
 /* ---------- Ask me anything bar (chatbot.js) ----------
@@ -1289,7 +1282,7 @@ button.yw-alerts-badge{font:inherit; cursor:pointer; -webkit-appearance:none; ap
 .yk-stat.bad{background:#FFD6D6}
 @media(max-width:500px){.yk-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px} .yk-card{padding:10px} .yk-card h3{font-size:1.2rem} .yk-num{font-size:1.4rem} .yk-card p{font-size:.86rem}}
 
-/* ---------- Gameplay page: jump bar, folds, filter, grouped sidebar (October 14, 2026 redesign) ---------- */
+/* ---------- Gameplay page: jump bar, folds, filter (October 14, 2026 redesign) ---------- */
 .gp-jump{position:sticky; top:var(--gp-top,0px); z-index:25; background:var(--cream); border-bottom:3px solid var(--ink); margin:8px 0 6px}
 .gp-jump-inner{display:flex; gap:8px; overflow-x:auto; padding-top:10px; padding-bottom:10px; scrollbar-width:none; -webkit-overflow-scrolling:touch}
 .gp-jump-inner::-webkit-scrollbar{display:none}
@@ -1299,9 +1292,6 @@ button.yw-alerts-badge{font:inherit; cursor:pointer; -webkit-appearance:none; ap
 .gp-jump a.gp-jump-alt:hover{background:var(--red)}
 .gp-count{font-family:var(--font-body); font-size:.85rem; font-weight:900; color:#6a6a80; letter-spacing:.06em; text-transform:uppercase}
 .gp-genesis .section-head{margin-top:14px}
-.gp-systems .docs-layout{margin-top:8px; align-items:start}
-.gp-systems .gp-detail{align-self:start}
-@media(min-width:761px){.gp-systems .sidebar{position:sticky; top:calc(var(--gp-top,0px) + 74px); max-height:calc(100vh - var(--gp-top,0px) - 94px); overflow:auto; overscroll-behavior:contain; scrollbar-width:thin}}
 .gp-fold{border:4px solid var(--ink); border-radius:var(--radius); background:var(--panel); box-shadow:6px 6px 0 var(--ink); margin:18px 0 0; min-width:0; scroll-margin-top:110px}
 .gp-fold summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:14px; padding:14px 18px; flex-wrap:wrap}
 .gp-fold summary::-webkit-details-marker{display:none}
@@ -1319,17 +1309,134 @@ button.yw-alerts-badge{font:inherit; cursor:pointer; -webkit-appearance:none; ap
 .gp-filter:focus{outline:none; background:#FFF9E3}
 .gp-filter-empty{font-weight:800; color:#6a6a80; margin:14px 0 4px}
 .gp-numbers-hit td{background:#FFF9E3}
-.sidebar-group{font-size:.72rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; color:#6a6a80; padding:14px 12px 4px}
-.sidebar-group:first-child{padding-top:0}
-.gp-select-wrap{display:none}
-.gp-select{width:100%; font:inherit; font-weight:800; font-size:1rem; padding:11px 14px; border:3px solid var(--ink); border-radius:12px; background:var(--yellow); color:var(--ink); appearance:auto}
 .sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 @media(max-width:760px){
-  .gp-select-wrap{display:block}
-  .sidebar-list{display:none}
-  .sidebar .sidebar-label{margin-bottom:10px}
   .gp-fold summary{padding:12px 14px; gap:10px}
   .gp-fold-body{padding:4px 12px 14px}
   .gp-jump a{font-size:.92rem; padding:6px 12px}
 }
 @media(max-width:500px){.gp-fold-title{font-size:1.05rem} .gp-fold-sub{font-size:.82rem}}
+
+/* ---------- Gameplay page: "Every system, explained" — system board + reader (October 14, 2026, second pass) ----------
+   Replaces the narrow sticky sidebar. The board shows all 27 systems at once, one row per group; the group's
+   color (.gp-g-<key>, keys set in GP_GROUPS in gameplay-page.js) tints its label, its chip icons and the reader's
+   header band. On phones the board folds behind the "All 27 systems" button. */
+.gp-g-shape{--gp-tint:#ECECF4}
+.gp-g-yakkamon{--gp-tint:#FFF0B3}
+.gp-g-farm{--gp-tint:#D3F0DA}
+.gp-g-world{--gp-tint:#D3ECFA}
+.gp-g-hunting{--gp-tint:#FFE0CC}
+.gp-g-battles{--gp-tint:#FFD9D9}
+.gp-g-economy{--gp-tint:#E9DFFF}
+.gp-g-more{--gp-tint:#ECECF4}
+
+.gp-map{margin:6px 0 0; background:var(--panel); border:4px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); overflow:hidden; min-width:0}
+.gp-map-toggle{display:none}
+.gp-map-row{display:grid; grid-template-columns:176px minmax(0,1fr); border-top:2px solid #E2E2EA}
+.gp-map-row:first-child{border-top:0}
+.gp-map-label{margin:0; padding:12px 16px; background:var(--gp-tint); border-right:3px solid var(--ink); display:flex; flex-direction:column; justify-content:center; gap:1px}
+.gp-map-name{font-family:var(--font-display); font-size:1.2rem; letter-spacing:.03em; line-height:1.1}
+.gp-map-n{font-size:.78rem; font-weight:800; color:#56566c}
+.gp-map-list{list-style:none; margin:0; padding:9px 14px; display:flex; flex-wrap:wrap; gap:7px 8px; align-content:center; min-width:0}
+.gp-map-list li{min-width:0; max-width:100%}
+.gp-chip{display:inline-flex; align-items:center; gap:8px; max-width:100%; padding:3px 12px 3px 3px; border:2px solid var(--ink); border-radius:12px; background:var(--panel); color:var(--ink); text-decoration:none; font-weight:800; font-size:.95rem; line-height:1.2}
+.gp-chip-icon{flex:0 0 auto; width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:var(--gp-tint); border:2px solid var(--ink)}
+.gp-chip-icon svg{width:18px; height:18px}
+.gp-chip-name{min-width:0}
+.gp-chip:hover{background:var(--gp-tint)}
+.gp-chip:hover .gp-chip-name{text-decoration:underline; text-underline-offset:3px}
+.gp-chip.active{background:var(--yellow); box-shadow:3px 3px 0 var(--ink)}
+.gp-chip.active .gp-chip-icon{background:var(--panel)}
+.gp-chip.active:hover .gp-chip-name{text-decoration:none}
+
+.gp-reader{display:block; margin:26px 0 0; background:var(--panel); border:5px solid var(--ink); border-radius:var(--radius); box-shadow:7px 7px 0 var(--ink); overflow-anchor:none; min-width:0}
+.gp-reader-head{background:var(--gp-tint); border-bottom:4px solid var(--ink); border-radius:11px 11px 0 0; padding:16px 28px 26px}
+.gp-reader-bar{display:flex; align-items:center; gap:12px}
+.gp-reader-icon{flex:0 0 auto; width:46px; height:46px; display:grid; place-items:center; border:3px solid var(--ink); border-radius:12px; background:var(--panel)}
+.gp-reader-icon svg{width:26px; height:26px}
+.gp-reader-meta{flex:1 1 auto; min-width:0; display:flex; flex-direction:column}
+.gp-reader-group{font-family:var(--font-display); font-size:1.15rem; letter-spacing:.03em; line-height:1.1}
+.gp-reader-pos{font-size:.85rem; font-weight:700; color:#4a4a60}
+.gp-reader-steps{flex:0 0 auto; display:flex; gap:10px}
+.gp-step{width:42px; height:42px; display:grid; place-items:center; border:3px solid var(--ink); border-radius:50%; background:var(--panel); color:var(--ink); box-shadow:3px 3px 0 var(--ink)}
+.gp-step svg{width:20px; height:20px}
+a.gp-step:hover{background:var(--yellow)}
+.gp-step.off{opacity:.3; box-shadow:none}
+.gp-reader-title{font-size:clamp(1.9rem,4.2vw,2.75rem); line-height:1.05; margin:16px 0 0; overflow-wrap:anywhere}
+.gp-reader-title:focus{outline:none}
+.gp-reader-title:focus-visible{outline:3px solid var(--red); outline-offset:4px}
+.gp-note{max-width:36rem; margin:0 0 28px; padding:12px 18px 14px; background:#FFF8C9; border:3px solid var(--ink); border-radius:4px 4px 4px 18px; box-shadow:4px 4px 0 var(--ink); transform:rotate(-.7deg)}
+.gp-note p{margin:0; font-size:1rem; font-weight:700; line-height:1.5; color:var(--ink)}
+.gp-note .gp-note-tag{margin:0 0 3px; font-family:var(--font-display); font-size:1.02rem; letter-spacing:.04em; color:var(--red)}
+
+.gp-reader-body{max-width:46rem; margin:0 auto; padding:32px 28px 6px; min-width:0}
+.gp-toc{margin:0 0 26px; padding:12px 18px 14px; border:3px dashed #C9C9D6; border-radius:14px}
+.gp-toc summary{list-style:none; cursor:pointer; display:flex; align-items:baseline; gap:10px}
+.gp-toc summary::-webkit-details-marker{display:none}
+.gp-toc summary::after{content:"+"; margin-left:auto; font-family:var(--font-body); font-weight:900; font-size:1.3rem; line-height:1}
+.gp-toc[open] summary::after{content:"\2013"}
+.gp-toc-label{font-family:var(--font-display); font-size:1.05rem; letter-spacing:.04em}
+.gp-toc-n{font-size:.82rem; font-weight:800; color:#6a6a80}
+.gp-toc ul{margin:8px 0 0; padding:0; list-style:none; columns:2; column-gap:28px}
+.gp-toc li{break-inside:avoid; margin:0 0 5px; padding-left:16px; position:relative; font-size:.93rem; line-height:1.35}
+.gp-toc li::before{content:""; position:absolute; left:0; top:.5em; width:7px; height:7px; border-radius:2px; background:var(--ink)}
+.gp-toc a{color:var(--ink); font-weight:700; text-decoration:none}
+.gp-toc a:hover{text-decoration:underline; text-underline-offset:3px}
+.gp-prose{font-size:1.0625rem; line-height:1.75; font-weight:500; color:#34344A; overflow-wrap:break-word}
+.gp-prose p{margin:0 0 1.05em}
+.gp-prose strong{font-weight:700; color:var(--ink)}
+.gp-prose a{color:var(--ink); font-weight:700; text-decoration-color:var(--red); text-decoration-thickness:2px; text-underline-offset:3px}
+.gp-prose a:hover{background:#FFF0B3}
+.gp-prose .gp-sub{font-size:1.5rem; letter-spacing:.03em; line-height:1.15; margin:1.5em 0 .35em; color:var(--ink); scroll-margin-top:calc(var(--gp-top,0px) + 84px)}
+.gp-prose .gp-sub:first-child{margin-top:0}
+.gp-prose .gp-list{margin:0 0 1.05em; padding:0 0 0 22px}
+.gp-prose .gp-list li{margin:0 0 8px; line-height:1.6}
+.gp-prose .table-scroll{margin:4px 0 1.3em}
+.gp-prose .prereg-table{font-weight:600}
+
+.gp-reader-foot{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px; padding:22px 28px 26px; border-top:3px dashed #D8D8E2}
+.gp-pn{display:flex; flex-direction:column; gap:3px; min-width:0; padding:12px 18px; border:3px solid var(--ink); border-radius:14px; background:var(--panel); box-shadow:4px 4px 0 var(--ink); color:var(--ink); text-decoration:none}
+.gp-pn small{font-size:.82rem; font-weight:800; color:#56566c}
+.gp-pn span{font-family:var(--font-display); font-size:1.3rem; letter-spacing:.03em; line-height:1.1; overflow-wrap:anywhere}
+.gp-pn.prev span::before{content:"\2039\00a0"}
+.gp-pn.next{align-items:flex-end; text-align:right}
+.gp-pn.next span::after{content:"\00a0\203A"}
+.gp-pn.gp-pn-all span::before,.gp-pn.gp-pn-all span::after{content:none}
+.gp-pn:hover{background:var(--yellow)}
+
+@media(max-width:900px){
+  .gp-map-row{grid-template-columns:148px minmax(0,1fr)}
+}
+@media(max-width:760px){
+  .gp-map-toggle{display:flex; align-items:center; gap:12px; width:100%; padding:12px 14px; border:0; background:var(--yellow); color:var(--ink); font:inherit; text-align:left; cursor:pointer}
+  .gp-map-toggle::before{content:"+"; flex:0 0 auto; width:32px; height:32px; display:grid; place-items:center; border:3px solid var(--ink); border-radius:10px; background:var(--panel); font-family:var(--font-body); font-weight:900; font-size:1.35rem; line-height:1}
+  .gp-map.open .gp-map-toggle::before{content:"\2013"}
+  .gp-map-toggle-label{font-family:var(--font-display); font-size:1.2rem; letter-spacing:.03em; flex:0 0 auto}
+  .gp-map-toggle-now{flex:1 1 auto; min-width:0; font-size:.86rem; font-weight:700; color:#3a3a50; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:right}
+  .gp-map-groups{display:none; border-top:3px solid var(--ink)}
+  .gp-map.open .gp-map-groups{display:block}
+  .gp-map-row{grid-template-columns:minmax(0,1fr); border-top:3px solid var(--ink)}
+  .gp-map-row:first-child{border-top:0}
+  .gp-map-label{flex-direction:row; align-items:baseline; justify-content:space-between; gap:10px; padding:8px 14px; border-right:0; border-bottom:2px solid var(--ink)}
+  .gp-map-name{font-size:1.1rem}
+  .gp-map-list{padding:10px 12px 12px; gap:7px}
+  .gp-chip{font-size:.9rem}
+  .gp-reader{margin-top:20px}
+  .gp-reader-head{padding:14px 16px 20px}
+  .gp-reader-icon{width:40px; height:40px}
+  .gp-reader-icon svg{width:22px; height:22px}
+  .gp-step{width:38px; height:38px}
+  .gp-reader-title{margin-top:12px}
+  .gp-note{margin:0 4px 22px 0}
+  .gp-reader-body{padding:22px 18px 4px}
+  .gp-toc ul{columns:1}
+  .gp-prose{font-size:1.03rem; line-height:1.7}
+  .gp-prose .gp-sub{font-size:1.32rem}
+  .gp-reader-foot{grid-template-columns:minmax(0,1fr); gap:12px; padding:18px 16px 20px}
+}
+@media(max-width:400px){
+  .gp-reader-icon{display:none}
+  .gp-reader-bar{gap:10px}
+  .gp-reader-pos{font-size:.78rem}
+  .gp-reader-steps{gap:6px}
+}

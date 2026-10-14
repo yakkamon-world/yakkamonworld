@@ -1,6 +1,6 @@
 /*
   YAKKAMON PORTAL — GAMEPLAY SYSTEMS
-  Rendered by gameplay-page.js into the sidebar + detail panel on gameplay.html.
+  Rendered by gameplay-page.js into the system board + reader on gameplay.html.
 
   Last revised: October 14, 2026, after the Genesis egg reveal and the reveal stream.
     Rewritten: genesis-legendaries (the six revealed Yakkamon with their reveal
@@ -19,6 +19,12 @@
                168 creature sounds). gameplay.html itself was redesigned the
                same day (Genesis cards section, jump bar, grouped sidebar,
                folded quick reference and unknowns - see gameplay-page.js).
+               Later the same day the Systems section itself was redesigned
+               again: the narrow sidebar became a wide board of all 27
+               systems in seven groups, and the panel became a reader that
+               splits `detail` at <br><br> into paragraphs and turns a bold
+               lead-in sentence at the start of a paragraph into a subheading
+               (no data changed - see the field notes below).
     Poster REDRAWN the same day: new panel 04 "The Genesis Six" (23 panels).
   Previous:    October 9, 2026, after the official "Yakkamon - Contracts" post.
     Added:     contracts (its own entry, after hunting: a daily board of
@@ -74,11 +80,17 @@
     slug    - URL key (?system=slug). Never rename an existing slug: old
               links fall back to the first entry rather than 404ing, which
               silently shows the wrong panel.
-    title   - sidebar label and panel heading
+    title   - chip label on the system board and the reader's heading
     desc    - one-line summary
-    detail  - the panel body (HTML allowed)
-    like    - plain-English analogy, rendered as the "LIKE THIS" block
-    icon    - inline SVG, currentColor stroke
+    detail  - the reader body (HTML allowed). Separate paragraphs with
+              <br><br>. A paragraph that OPENS with <strong>Short
+              sentence.</strong> (ending . ? or !, or a colon when 30
+              characters or fewer) is shown as a subheading; four or more
+              of those give the system an "In this system" list. Bold
+              anywhere else stays inline bold - use it sparingly.
+    like    - plain-English analogy, rendered as the "Like this" note
+    icon    - inline SVG, currentColor stroke (shown on the board chip and
+              in the reader header)
 
   LAST REVISED: 2 September 2026, after the official Yakkapedia (docs) and the
                free-mint dev stream.
