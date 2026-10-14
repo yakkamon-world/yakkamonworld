@@ -10,7 +10,7 @@
   the full version is the same page at deviceScaleFactor min(2.222, 4096/height)
   so its longest side never exceeds X's 4096px resize threshold (3882x4096 now).
   Edit the panels below, re-render, replace both PNGs and the width/height
-  attributes on gameplay.html's <img>. Revision: September 24, 2026, after the official Battles guide (22 panels, 12 columns).
+  attributes on gameplay.html's <img>. Revision: October 14, 2026, after the Genesis reveal (23 panels, 12 columns; panel 04 "The Genesis Six" is new and uses the yakkamon-*.png sprites, so render from the repo folder).
 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
@@ -59,6 +59,14 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 .flow{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin:0 0 6px}
 .flow span{background:var(--yellow);border:2px solid var(--ink);border-radius:6px;padding:2px 6px;font-family:Bangers,Impact,sans-serif;font-size:10px;letter-spacing:.06em}
 .flow i{font-style:normal;font-weight:900}
+.gx{display:grid;grid-template-columns:40px 1fr;gap:2px 6px;align-items:center;border:2.5px solid var(--ink);border-radius:9px;padding:4px 6px 4px 4px;margin:0 0 5px;background:#fff}
+.gx img{width:40px;height:40px;border:2px solid var(--ink);border-radius:7px;display:block}
+.gx-h{min-width:0;line-height:1.15}
+.gx-h b{display:block;font-family:Bangers,Impact,sans-serif;font-weight:400;font-size:13px;letter-spacing:.04em}
+.gx-h small{display:block;font-size:8.2px;font-weight:800;color:#6a6a80}
+.gx-b{grid-column:1/-1;font-size:9px;line-height:1.3;border-top:1.5px dashed #d8d8e2;padding-top:3px}
+.gx-n{display:block;font-weight:900;color:var(--red);font-size:9.2px;margin:0 0 1px}
+.gx em{font-style:normal;font-weight:900}
 .foot{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;padding:10px 24px;margin:6px -24px 0;font-size:11px;font-weight:700}
 .foot b{font-family:Bangers,Impact,sans-serif;font-size:22px;letter-spacing:.06em;color:var(--yellow);white-space:nowrap;margin-right:24px}
 </style>
@@ -74,12 +82,12 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED SEP 24, 2026 &mdash; AFTER THE OFFICIAL BATTLES GUIDE. A SETUP STAGE, RESERVES ON THE BENCH, SKILLS YOU CHOOSE THAT FIRE ON CONDITIONS, A TYPE ON EVERY SKILL, LIVE SUBS &amp; ITEMS, SIX KINDS OF FIGHT, DAMAGE THAT STICKS.</div>
+    <div class="rev">REVISED OCT 14, 2026 &mdash; AFTER THE GENESIS REVEAL. SIX YAKKAMON NAMED: RAIGO, ONDI, KOVA &amp; SALU (THE LEGENDARY DRAGONS), MALANDRIX THE RARE, BRAZITO THE UNCOMMON. 11,265 EGGS COUNTED, 831 BAD EGGS, INTERNAL BETA NEXT WEEK, EARLY ACCESS AIMED AT THE END OF NOVEMBER.</div>
   </div>
 </div>
 
 <div class="chips">
-  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">70/30 AUTO BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">30 YAKKAMON IN EARLY ACCESS</span><span class="chip green">13 TYPES</span>
+  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">70/30 AUTO BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">30 YAKKAMON IN EARLY ACCESS</span><span class="chip green">13 TYPES</span><span class="chip purple">6 GENESIS YAKKAMON REVEALED</span>
 </div>
 
 <div class="cols">
@@ -108,29 +116,45 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="panel">
   <h2><i>03</i>YOUR YAKKAMON</h2>
-  <p>30 species in the early-access build (26 shown so far), the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
+  <p>30 species in the early-access build (26 shown so far; six named and revealed Oct 14 &mdash; see 04), the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
   <div class="card sky"><b>Its species</b>Decides what it can gather &mdash; and fixes its rarity tier.</div>
   <div class="card green"><b>Its stats</b>Every monster rolls differently. Two of the same species aren&rsquo;t identical. Battle stats: Health, Attack, Defense, Speed.</div>
   <div class="card yellow"><b>Its utility</b>A boost it carries. Named on Legendaries; randomly rolled on everyone else, separately from stats.</div>
-  <div class="card red"><b>Its skills</b>What it actually does in battle.</div>
+  <div class="card red"><b>Its skills</b>What it actually does in battle. Generated per individual: same species, slightly different skills, some rarer (Oct 14).</div>
   <p>Underneath: real genetics, hidden starting values, and training values that shift stats by how you raise it.</p>
-  <div class="card purple"><b>No wearable gear</b>&ldquo;The Yakkamon have the stats.&rdquo; Maybe one held item. 13 types at launch, one per monster &mdash; dual types later.</div>
+  <div class="card purple"><b>No wearable gear</b>&ldquo;The Yakkamon have the stats.&rdquo; Maybe one held item. 13 types at launch, one per monster &mdash; dual types later. Named so far: dragon, psychic, fire, electric, water, grass, spirit.</div>
   <div class="like"><em>LIKE THIS</em>Trading cards. Same picture on the front, better numbers on the back.</div>
 </div>
 
+<div class="panel new">
+  <span class="tag">NEW OCT 14</span>
+  <h2><i>04</i>THE GENESIS SIX</h2>
+  <p>Every one of the 11,265 Genesis eggs opened Oct 14 into one of these &mdash; or into nothing. Pictures are the reveal art on the NFTs; counts are the whole collection.</p>
+  <div class="gx"><img src="yakkamon-raigo.png" alt=""><div class="gx-h"><b>Raigo</b><small>was Storm &middot; Legendary &middot; Dragon</small></div><div class="gx-b"><span class="gx-n">3 &middot; 1 in 3,755 &middot; 75 exist</span>Stormcharged &mdash; in range work <em>2&times; as fast</em> (large AOE)</div></div>
+  <div class="gx"><img src="yakkamon-ondi.png" alt=""><div class="gx-h"><b>Ondi</b><small>was Echo &middot; Legendary &middot; Dragon</small></div><div class="gx-b"><span class="gx-n">5 &middot; 1 in 2,253 &middot; 275 exist</span>In range produce <em>double resources</em> (small AOE)</div></div>
+  <div class="gx"><img src="yakkamon-kova.png" alt=""><div class="gx-h"><b>Kova</b><small>was Ghost &middot; Legendary &middot; Dragon</small></div><div class="gx-b"><span class="gx-n">10 &middot; 1 in 1,127 &middot; 400 exist</span>Unsleeping &mdash; in range <em>always at max stamina</em> (small AOE)</div></div>
+  <div class="gx"><img src="yakkamon-salu.png" alt=""><div class="gx-h"><b>Salu</b><small>was Bloom &middot; Legendary &middot; Dragon</small></div><div class="gx-b"><span class="gx-n">50 &middot; 1 in 225 &middot; 2,000 exist</span>Regenerates <em>% of Max HP</em> every combat turn</div></div>
+  <div class="gx"><img src="yakkamon-malandrix.png" alt=""><div class="gx-h"><b>Malandrix</b><small>Rare &middot; Psychic</small></div><div class="gx-b"><span class="gx-n">50 &middot; 1 in 225 &middot; 4,000 exist</span>Normal working Yakkamon &mdash; no ability yet</div></div>
+  <div class="gx"><img src="yakkamon-brazito.png" alt=""><div class="gx-h"><b>Brazito</b><small>Uncommon &middot; Fire</small></div><div class="gx-b"><span class="gx-n">10,316 &middot; 91.6% &middot; 15,000 exist</span>Normal working Yakkamon &mdash; no ability yet</div></div>
+  <div class="card red"><b>831 Bad Eggs &middot; 7.4%</b>Reveal nothing (multi-wallet minters). Down from the 973 quoted Sep 17. All in the minted 10,000.</div>
+  <div class="card yellow"><b>Minted vs airdropped</b>10,000 minted held 63 Legendaries, 38 Malandrix, 831 Bad Eggs; the 1,265 airdropped Oct 13 held 5 Legendaries, 12 Malandrix, no Bad Eggs. One clean minted egg in <em>146</em> held a Legendary.</div>
+  <div class="card sky"><b>Not on the NFTs yet</b>Unique stats (a small reveal closer to launch) and the two working tiers&rsquo; utilities. The four egg colors were cosmetic.</div>
+  <div class="like"><em>LIKE THIS</em>Nine eggs in ten hatched the same small orange hothead. The floor price is a monster now &mdash; and it has a name.</div>
+</div>
+
 <div class="panel">
-  <h2><i>04</i>RARITY, DECODED</h2>
+  <h2><i>05</i>RARITY, DECODED</h2>
   <div class="card red"><b>Rarity is set at species level</b>Every individual of a species shares its tier. There is no rare version of a common monster. No lucky upgrade roll exists.</div>
   <div class="card yellow"><b>Rarer is not simply stronger</b>The best commons beat middling rares on raw stats. Rarity buys a higher ceiling and exclusive traits.</div>
   <div class="card"><b>Legendary &middot; NFT</b>Pre-minted, fixed scarce supply. Traits no other tier can have.</div>
   <div class="card"><b>Rare &middot; SFT</b>Time / event limited. Supply set by how hard players hunt.</div>
   <div class="card"><b>Common &middot; no token</b>Plain game asset.</div>
-  <p>Hunting is the primary route at any tier. The Yakkapedia adds an Uncommon line below Rare.</p>
+  <p>Hunting is the primary route at any tier. The Genesis set put faces on the tiers: Brazito (Uncommon, 15,000), Malandrix (Rare, 4,000), four Legendary dragons (75&ndash;2,000 each) &mdash; see 04.</p>
   <div class="like"><em>LIKE THIS</em>A first-team squad player can outperform a benched international. The badge tells you the ceiling, not the form.</div>
 </div>
 
 <div class="panel">
-  <h2><i>05</i>TYPE LOCKING</h2>
+  <h2><i>06</i>TYPE LOCKING</h2>
   <p>Every resource is gated to a type &mdash; so your roster decides what you can gather at all.</p>
   <div class="kv"><span>Wood &larr; Grass types</span><span class="pill ok">CONFIRMED</span></div>
   <div class="kv"><span>Wood &larr; Fire types</span><span class="pill no">BLOCKED</span></div>
@@ -143,7 +167,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>06</i>THE WORK CYCLE</h2>
+  <h2><i>07</i>THE WORK CYCLE</h2>
   <ol class="steps">
     <li>Assign a Yakkamon to a resource it&rsquo;s allowed to gather.</li>
     <li>It takes time &mdash; each cycle runs a set duration before paying out.</li>
@@ -158,7 +182,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>07</i>UPKEEP &amp; DEGRADATION</h2>
+  <h2><i>08</i>UPKEEP &amp; DEGRADATION</h2>
   <p>A resource sink that does not exist in Sunflower Land &mdash; but it comes from <b>use</b>, not absence.</p>
   <div class="card red"><b>Plots wear out</b>The job card carries a degradation marker. The example shown read <b style="display:inline;text-transform:none">degraded 1.6&times;</b> &mdash; that plot farms slower until you refertilize it.</div>
   <div class="card yellow"><b>Fertilizer costs resources</b>So upkeep is a permanent drag on production, not a cosmetic status.</div>
@@ -169,7 +193,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>08</i>STORAGE BINS</h2>
+  <h2><i>09</i>STORAGE BINS</h2>
   <p>Resources pile into a bin that keeps filling while you&rsquo;re offline &mdash; until you tap it to collect.</p>
   <div class="flow"><span>EARLY 5 / 20</span><i>&rarr;</i><span>FILLING 84 / 120</span><i>&rarr;</i><span>FULL &mdash; MAX 120 / 120</span></div>
   <div class="card yellow"><b>The catch</b>Bins cap out. Every hour a bin sits at MAX is production you never banked.</div>
@@ -178,7 +202,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>09</i>LOOKING AFTER THEM</h2>
+  <h2><i>10</i>LOOKING AFTER THEM</h2>
   <p>Status icons float above a monster and the feed calls it out by name.</p>
   <div class="card red"><b>Hungry</b>Needs feeding before it carries on.</div>
   <div class="card purple"><b>Hurt</b>Injured or knocked out, out of action. Battle damage sticks until rested or healed (Sep 24).</div>
@@ -189,7 +213,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>10</i>HOW BOOSTS STACK</h2>
+  <h2><i>11</i>HOW BOOSTS STACK</h2>
   <div class="card red"><b>Same ability &rarr; does not stack</b>Two monsters both carrying &ldquo;Wood Gatherer I&rdquo; give you the effect once &mdash; even two different species. Reconfirmed Sep 17.</div>
   <div class="card green"><b>Different name or higher rank &rarr; stacks</b>&ldquo;Wood Gatherer&rdquo; plus &ldquo;Extreme Wood Gatherer&rdquo; is two effects, both apply.</div>
   <div class="card yellow"><b>The roster shape this implies</b>Wide, not deep. One excellent specialist per job beats five copies of your best one.</div>
@@ -197,25 +221,25 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>11</i>UTILITIES &amp; AURAS</h2>
-  <p>The boosts come from the Yakkamon themselves. Legendaries have named ones (name &middot; total supply &middot; airdrop ranks):</p>
+  <h2><i>12</i>UTILITIES &amp; AURAS</h2>
+  <p>The boosts come from the Yakkamon themselves. Legendaries have named ones (real name, working name &middot; total supply &middot; airdrop ranks):</p>
   <table>
     <tr><th style="width:38%">Genesis</th><th>Utility</th></tr>
-    <tr><td><b>Storm</b> &middot; 75<br>ranks 1&ndash;50</td><td>Within range work <b>2&times; as fast</b> &middot; <b>large</b> AOE</td></tr>
-    <tr><td><b>Echo</b> &middot; 275<br>51&ndash;250</td><td>Within range produce <b>double</b> &middot; small AOE</td></tr>
-    <tr><td><b>Ghost</b> &middot; 400<br>251&ndash;500</td><td>Within range <b>always at max stamina</b> &middot; small AOE</td></tr>
-    <tr><td><b>Bloom</b> &middot; 2,000<br>501&ndash;2,000</td><td>Regenerates <b>% of Max HP</b> every combat turn</td></tr>
+    <tr><td><b>Raigo</b> (Storm) &middot; 75<br>ranks 1&ndash;50</td><td>Within range work <b>2&times; as fast</b> &middot; <b>large</b> AOE</td></tr>
+    <tr><td><b>Ondi</b> (Echo) &middot; 275<br>51&ndash;250</td><td>Within range produce <b>double</b> &middot; small AOE</td></tr>
+    <tr><td><b>Kova</b> (Ghost) &middot; 400<br>251&ndash;500</td><td>Within range <b>always at max stamina</b> &middot; small AOE</td></tr>
+    <tr><td><b>Salu</b> (Bloom) &middot; 2,000<br>501&ndash;2,000</td><td>Regenerates <b>% of Max HP</b> every combat turn</td></tr>
   </table>
   <div class="card yellow"><b>Small vs large AOE</b>Small: the job it stands on and the 2&ndash;3 nodes beside it. Large: a whole section of the farm.</div>
-  <div class="card green"><b>They stack &mdash; some multiply</b>Storm + Echo confirmed: twice the speed on double the output.</div>
-  <div class="card sky"><b>Rares &amp; Uncommons roll theirs</b>Utility, species and stats are separate dice. Keepers rolled all three.</div>
-  <div class="card red"><b>Tide is gone</b>The 251&ndash;500 monster is now Ghost; the 501&ndash;2,000 monster is now Bloom. Same boosts, renamed to match types.</div>
-  <p>Numbers &mdash; radii, percentages &mdash; still unpublished. The mint&rsquo;s 68 Legendaries sit in clean eggs only; reveal Oct 14.</p>
+  <div class="card green"><b>They stack &mdash; some multiply</b>Raigo + Ondi (Storm + Echo) confirmed: twice the speed on double the output.</div>
+  <div class="card sky"><b>Rares &amp; Uncommons roll theirs</b>Utility, species and stats are separate dice; the revealed Malandrix and Brazito read &ldquo;no ability yet&rdquo;. Keepers rolled all three.</div>
+  <div class="card red"><b>Working names retired</b>Storm, Echo, Ghost and Bloom (and before that Tide) are now Raigo, Ondi, Kova and Salu. Same monsters, same boosts.</div>
+  <p>Numbers &mdash; radii, percentages &mdash; still unpublished. The Genesis eggs&rsquo; 68 Legendaries are out: 3 Raigo, 5 Ondi, 10 Kova, 50 Salu (see 04); the trainer airdrop places 2,009 more.</p>
   <div class="like"><em>LIKE THIS</em>A good foreman. He doesn&rsquo;t lay bricks &mdash; everyone within earshot lays them faster.</div>
 </div>
 
 <div class="panel">
-  <h2><i>12</i>BREEDING &amp; GENETICS</h2>
+  <h2><i>13</i>BREEDING &amp; GENETICS</h2>
   <p>Genetics carry down the line. Breed two strong individuals of the same species and their stats and traits propagate.</p>
   <div class="card sky"><b>A breeding limit, scaled by rarity</b>Bred Yakkamon are tradable, so: commons breed above replacement, rares around it, some Legendaries once. Noise still creeps in per generation.</div>
   <div class="card green"><b>80&ndash;90% predictable</b>One RNG component plus one fixed. You can build a best-case / worst-case range before committing.</div>
@@ -226,7 +250,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>13</i>YOUR BASE &amp; YOUR GYM</h2>
+  <h2><i>14</i>YOUR BASE &amp; YOUR GYM</h2>
   <div class="card yellow"><b>Expand your land, tile by tile</b>Each tile has a resource price on the button &mdash; the starter reads 10 Wood + 1 Stone.</div>
   <div class="card sky"><b>Buildings &amp; stations</b>Workbenches with their own counters, houses with beds, crop plots, rock nodes.</div>
   <div class="card green"><b>Hunting Area</b>A tile you claim, then pay to enter &mdash; 5 berries on the sign at launch.</div>
@@ -235,7 +259,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>14</i>REGIONS &amp; TILES</h2>
+  <h2><i>15</i>REGIONS &amp; TILES</h2>
   <p>Three layers, and nothing you unlock ever closes. Grasslands is the starter.</p>
   <ol class="steps">
     <li><b>Tiles</b> &mdash; gather resources to unlock more. A tile holds resources, build room, or a hunting area &mdash; and each raises how much you can run at once.</li>
@@ -248,7 +272,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>15</i>LOGISTICS</h2>
+  <h2><i>16</i>LOGISTICS</h2>
   <p>Moving and sharing resources between your Regions &ldquo;becomes a core part of the strategy&rdquo; &mdash; the trainers who master logistics get ahead.</p>
   <div class="card red"><b>So inventory is per Region</b>That sentence has no meaning with a global bag. Wood gathered in the grasslands stays there until something moves it.</div>
   <div class="card yellow"><b>What follows</b>A new Region has to be fed before it feeds you, and Region-only materials become things you ship.</div>
@@ -257,7 +281,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>16</i>DAY, NIGHT &amp; SEASONS</h2>
+  <h2><i>17</i>DAY, NIGHT &amp; SEASONS</h2>
   <div class="card sky"><b>A day every few real hours</b>Time of day rolls over every few real hours &mdash; several dawns and nights pass in one day at your desk, so every time band reaches every player. &ldquo;Miss one, and another is never far away.&rdquo;</div>
   <div class="card"><b>One universal clock</b>No personal timezones, no resetting &mdash; night in Yakkamon is night for everyone, and trainers worldwide hunt the same windows at the same moment. One player&rsquo;s spawn log works everywhere.</div>
   <div class="card yellow"><b>The night shift is a stat</b>Some Yakkamon carry traits that thrive at certain hours &mdash; a night-owl on the night shift outworks a sleeper. Match your roster to the clock, and check for the trait before trading a &ldquo;duplicate&rdquo;.</div>
@@ -267,31 +291,31 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>17</i>HUNTING</h2>
+  <h2><i>18</i>HUNTING</h2>
   <div class="card green"><b>A place: grounds are tiles</b>On your own Regions &mdash; one of the three things a tile can hold. Each Region has its own wild types.</div>
   <div class="card sky"><b>A time: learn the clock</b>Each ground shows different Yakkamon at different in-game hours. No timetable is given &mdash; discovering it is the skill.</div>
-  <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (18).</div>
+  <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (19).</div>
   <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty. Win and you may bring the wild one home &mdash; but a hunter that wins hurt carries the damage.</div>
   <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule &mdash; and in real time: when one lands, everyone gets the same window. Keep a strong, well-supplied team ready.</div>
   <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon; a hunted-out ground yields less. Spread hunts across grounds <i>and Regions</i>.</div>
   <div class="card grey"><b>Still in prototype</b>Areas exist; the mechanics are still being tuned (Sep 17). First NFT hunt: Chapter 0 per the docs &mdash; about six weeks in, said the stream.</div>
+  <div class="card yellow"><b>What hunting is saved for (Oct 14)</b>Most of the roster is found in the game: elemental variety, shinies and variations are reserved for hunting, a small supply of Legendaries appears via hunts, and some Legendaries and Rares exist only in-game.</div>
   <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot, some want paying &mdash; and the field empties if you work it daily.</div>
 </div>
 
 <div class="panel">
-  <h2><i>18</i>CRAFTING, LURES &amp; BAIT</h2>
+  <h2><i>19</i>CRAFTING, LURES &amp; BAIT</h2>
   <div class="card yellow"><b>Lures pick the type</b>Grounds have areas (a rocky outcrop among them; swamps and water to come). A rock-type lure draws rock types. Lures and bait are crafted from resources.</div>
   <div class="card sky"><b>Bait does the talking</b>Bait and a short emoji chat win over an affectionate monster; a stock of goods pays a greedy one. In-game notice: &ldquo;prepare bait and monsters, bring berries&rdquo;.</div>
   <div class="card green"><b>Contract hunts pay coins</b>Find a requested Yakkamon, earn the currency that gates the tradable layer &mdash; one of the few coin faucets.</div>
 </div>
 
 <div class="panel new">
-  <span class="tag">NEW SEP 24</span>
-  <h2><i>19</i>THE BATTLE SYSTEM</h2>
+  <h2><i>20</i>THE BATTLE SYSTEM</h2>
   <p>&ldquo;Won before the first hit lands&rdquo; &mdash; the team&rsquo;s official Battles guide, in eight points, on top of the Sep 17 stream&rsquo;s 70/30 auto battler.</p>
   <ol class="steps">
     <li><b>Setup stage</b> &mdash; drag your Yakkamon onto your side and place them freely. Front or back, and which type stands where, shape the fight. Scout the enemy team here.</li>
-    <li><b>Real time, and it scales</b> &mdash; some fights are 1v1; most are team fights with several a side and reserves on the bench that jump in when one goes down.</li>
+    <li><b>Real time, and it scales</b> &mdash; some fights are 1v1; most are team fights with several a side and reserves on the bench that jump in when one goes down. Oct 14: three on the field, up to three in reserve &mdash; &ldquo;three to six&rdquo; for beta.</li>
     <li><b>They act on their own</b> &mdash; moving into range, attacking, firing skills when conditions are met: &ldquo;heal below half health&rdquo;, &ldquo;stun whoever fainted me&rdquo;. You choose which skills each carries in.</li>
     <li><b>Types matter</b> &mdash; every Yakkamon <i>and every skill</i> has a type. Hit a weakness, damage cranks up; hit a resistance, it dulls.</li>
     <li><b>You&rsquo;re not just watching</b> &mdash; call one back and sub in a reserve; drag battle items onto the field (potion on an ally, debuff on an enemy, shield before a big hit). One preparation item, equipped before the fight, buffs the whole team.</li>
@@ -299,12 +323,12 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
     <li><b>Damage sticks</b> &mdash; a Yakkamon limps out carrying its damage until rested or healed. Manage the roster between battles.</li>
     <li><b>Everyone gets paid</b> &mdash; items, XP for the Yakkamon who fought, trainer XP for you. Beat a wild one and you might bring it home.</li>
   </ol>
-  <div class="card sky"><b>Underneath (Sep 17 stream)</b>70% planning, 30% live input; four stats &mdash; Health, Attack, Defense, Speed; identical buffs don&rsquo;t stack; AROC tanks up front, hitters behind. Gyms first, the full arena early next year.</div>
+  <div class="card sky"><b>Underneath (Sep 17 &amp; Oct 14 streams)</b>70% planning, 30% live input; four stats &mdash; Health, Attack, Defense, Speed; identical buffs don&rsquo;t stack; AROC tanks up front, hitters behind. Skills are generated per individual (same species, different skills, some rarer); a spirit type instead of ghost. Gyms first, the full arena early next year.</div>
   <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad, place it, choose its moves &mdash; then work the touchline with subs and a potion.</div>
 </div>
 
 <div class="panel">
-  <h2><i>20</i>THE TWO-TRACK ECONOMY</h2>
+  <h2><i>21</i>THE TWO-TRACK ECONOMY</h2>
   <div class="card green"><b>Track one: free to play</b>Produce without limit. Nothing you make here can be traded.</div>
   <div class="card yellow"><b>Track two: tradable, gated by coins</b>Making something tradable costs the game&rsquo;s Web2 currency &mdash; coins, maybe &ldquo;new yen&rdquo; later. That gate is the whole design.</div>
   <div class="card red"><b>Coin faucets are scarce</b>VIP, burning crops or other assets, and contract hunts. Every coin is a sink somebody paid.</div>
@@ -313,7 +337,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>21</i>PROGRESSION &amp; ENDGAME</h2>
+  <h2><i>22</i>PROGRESSION &amp; ENDGAME</h2>
   <div class="card sky"><b>Infinite levels and expansions</b>Plans and sinks are meant to ship at launch; the endgame features themselves arrive after early access.</div>
   <div class="card yellow"><b>The meta is expected to move</b>Early: gathering and hunting specialists are the valuable monsters. Later: once the arena (aimed at early next year) and tournaments establish, demand shifts to battle stats. The team won&rsquo;t intervene.</div>
   <div class="card green"><b>No hard specialization cap</b>Producer vs fighter emerges from opportunity cost, not a rule.</div>
@@ -322,21 +346,22 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>22</i>NOT CONFIRMED YET</h2>
+  <h2><i>23</i>NOT CONFIRMED YET</h2>
   <div class="card grey"><b>Regions &amp; tiles</b>Tiles per Region, the cost curve, parallel jobs per tile; what &ldquo;grow your starting Region&rdquo; means; what moving resources between Regions costs.</div>
   <div class="card grey"><b>Work cycle &amp; upkeep numbers</b>Cycle duration, stamina, yield, sleep rate; degradation rate, fertilizer recipe.</div>
-  <div class="card grey"><b>The type chart</b>13 types confirmed, not which; only Grass&rarr;Wood; combat effectiveness missing.</div>
-  <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>Roll ranges, XP costs, level cap, trait list, respec costs; AOE radii, Bloom&rsquo;s regen %, every Rare / Uncommon utility.</div>
+  <div class="card grey"><b>The type chart</b>13 types confirmed; named so far dragon, psychic, fire, electric, water, grass, spirit; only Grass&rarr;Wood; the chart itself missing.</div>
+  <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>Roll ranges (the NFTs carry no stats yet &mdash; a reveal closer to launch), XP costs, level cap, trait list, respec costs; AOE radii, Salu&rsquo;s regen %, every Rare / Uncommon utility.</div>
   <div class="card grey"><b>Hunting rates</b>Day length, ground regeneration, Legendary odds, a greedy monster&rsquo;s price; private or shared grounds.</div>
-  <div class="card grey"><b>Battle numbers &amp; coins</b>How many on the board and on the bench, how many skills each carries and where they come from, item limits, the type chart; what a tradable unit costs.</div>
-  <div class="card grey"><b>The exact dates</b>Stream aims: beta Oct, early access mid-to-late Nov. Docs: Nov or Dec. The docs are the record.</div>
+  <div class="card grey"><b>Battle numbers &amp; coins</b>Whether three-plus-three survives beta, how many skills each carries and where they come from, item limits, the type chart; what a tradable unit costs.</div>
+  <div class="card grey"><b>The exact dates</b>Stream aims: internal beta the week of Oct 19, early access end of Nov, announced 2&ndash;3 weeks ahead. Docs: Nov or Dec. The docs are the record.</div>
+  <div class="card grey"><b>The reveal&rsquo;s loose ends</b>What lifted 142 Bad Egg flags; whether the last 235 of the 1,500 event eggs go out; when trainer-airdrop Legendaries land; the dragons&rsquo; lore.</div>
 </div>
 
 </div>
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting, Clock and Battles posts, screenshots and dev streams through September 24, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting, Clock, Battles and Contracts posts, the NFT metadata of the October 14 reveal, screenshots and dev streams through October 14, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>

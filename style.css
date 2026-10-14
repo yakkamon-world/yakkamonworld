@@ -1038,7 +1038,7 @@ td .fm-in.is-done, .prereg-list .fm-in.is-done{background:var(--panel); color:#6
 .gp-like p{margin:0; font-weight:700; font-size:.98rem; line-height:1.5}
 
 /* --- Gameplay: quick reference + open questions --- */
-.gp-extra{margin:44px 0 0; min-width:0; scroll-margin-top:90px}
+.gp-extra{margin:44px 0 0; min-width:0; scroll-margin-top:calc(var(--gp-top,0px) + 84px)}
 .gp-extra h2{margin:0 0 6px}
 .gp-extra .gp-extra-note{margin:0 0 14px; font-size:.92rem; font-weight:700; opacity:.8}
 .gp-unknowns{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:16px 0 0; padding:0; list-style:none}
@@ -1258,3 +1258,78 @@ button.yw-alerts-badge{font:inherit; cursor:pointer; -webkit-appearance:none; ap
 .yw-tip-note{font-size:.82rem; opacity:.75; margin:8px 0 0}
 .yw-tip-x{position:absolute; top:8px; right:10px; background:none; border:0; font-size:1.6rem; line-height:1; cursor:pointer; color:var(--ink); padding:4px}
 .yw-tip .yw-share-ic{width:16px; height:16px; vertical-align:-2px; color:var(--sky)}
+
+/* ---------- Genesis Yakkamon cards (article-egg-reveal, gameplay.html #genesis, gameplay-guide.html) ---------- */
+.yk-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin:18px 0 10px; padding:0; list-style:none}
+.yk-card{background:var(--panel); border:4px solid var(--ink); border-radius:var(--radius); box-shadow:6px 6px 0 var(--ink); padding:14px; display:flex; flex-direction:column; gap:8px; min-width:0}
+.yk-card img,.article-body .yk-card img{width:100%; height:auto; aspect-ratio:1/1; display:block; margin:0; border:3px solid var(--ink); border-radius:12px; background:#58b853}
+.yk-card h3{margin:4px 0 0; font-size:1.45rem; line-height:1.1; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap}
+.yk-was{font-family:var(--font-body); font-size:.76rem; font-weight:800; color:#6a6a80; letter-spacing:0}
+.yk-chips{display:flex; gap:6px; flex-wrap:wrap}
+.yk-chip{font-size:.72rem; font-weight:900; letter-spacing:.06em; text-transform:uppercase; padding:3px 9px; border:2px solid var(--ink); border-radius:999px; background:var(--panel); line-height:1.3}
+.yk-chip.legendary{background:var(--yellow)}
+.yk-chip.rare{background:var(--purple); color:#fff}
+.yk-chip.uncommon{background:#CFEFD6}
+.yk-chip.bad{background:var(--red); color:#fff}
+.yk-chip.type-dragon{background:#E9DFFF}
+.yk-chip.type-psychic{background:#FBD8F0}
+.yk-chip.type-fire{background:#FFD9C2}
+.yk-num{font-family:var(--font-display); font-size:1.75rem; line-height:1; letter-spacing:.02em; margin-top:2px}
+.yk-num small{display:block; font-family:var(--font-body); font-size:.78rem; font-weight:800; color:#6a6a80; letter-spacing:0; margin-top:4px; line-height:1.35}
+.yk-card p{margin:0; font-size:.92rem; font-weight:600; color:#3d3d50; line-height:1.45}
+.yk-card p.yk-ability{font-weight:800; color:var(--ink); border-top:2px dashed #d8d8e2; padding-top:8px}
+.yk-card.compact{padding:12px; gap:6px}
+.yk-card.compact h3{font-size:1.25rem}
+.yk-card.compact .yk-num{font-size:1.4rem}
+.yk-stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:16px 0 6px; padding:0; list-style:none}
+.yk-stat{border:3px solid var(--ink); border-radius:12px; padding:12px 14px; background:var(--panel); box-shadow:4px 4px 0 var(--ink); min-width:0}
+.yk-stat b{display:block; font-family:var(--font-display); font-size:1.65rem; line-height:1; letter-spacing:.02em; font-weight:400}
+.yk-stat span{display:block; font-size:.8rem; font-weight:800; color:#6a6a80; margin-top:5px; line-height:1.35}
+.yk-stat.hot{background:var(--yellow)}
+.yk-stat.bad{background:#FFD6D6}
+@media(max-width:500px){.yk-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px} .yk-card{padding:10px} .yk-card h3{font-size:1.2rem} .yk-num{font-size:1.4rem} .yk-card p{font-size:.86rem}}
+
+/* ---------- Gameplay page: jump bar, folds, filter, grouped sidebar (October 14, 2026 redesign) ---------- */
+.gp-jump{position:sticky; top:var(--gp-top,0px); z-index:25; background:var(--cream); border-bottom:3px solid var(--ink); margin:8px 0 6px}
+.gp-jump-inner{display:flex; gap:8px; overflow-x:auto; padding-top:10px; padding-bottom:10px; scrollbar-width:none; -webkit-overflow-scrolling:touch}
+.gp-jump-inner::-webkit-scrollbar{display:none}
+.gp-jump a{flex:0 0 auto; font-family:var(--font-display); font-size:1rem; letter-spacing:.03em; padding:7px 14px; border:3px solid var(--ink); border-radius:999px; background:var(--panel); color:var(--ink); text-decoration:none; box-shadow:3px 3px 0 var(--ink); white-space:nowrap}
+.gp-jump a:hover,.gp-jump a.active{background:var(--yellow)}
+.gp-jump a.gp-jump-alt{background:var(--ink); color:#fff; margin-left:auto}
+.gp-jump a.gp-jump-alt:hover{background:var(--red)}
+.gp-count{font-family:var(--font-body); font-size:.85rem; font-weight:900; color:#6a6a80; letter-spacing:.06em; text-transform:uppercase}
+.gp-genesis .section-head{margin-top:14px}
+.gp-systems .docs-layout{margin-top:8px; align-items:start}
+.gp-systems .gp-detail{align-self:start}
+@media(min-width:761px){.gp-systems .sidebar{position:sticky; top:calc(var(--gp-top,0px) + 74px); max-height:calc(100vh - var(--gp-top,0px) - 94px); overflow:auto; overscroll-behavior:contain; scrollbar-width:thin}}
+.gp-fold{border:4px solid var(--ink); border-radius:var(--radius); background:var(--panel); box-shadow:6px 6px 0 var(--ink); margin:18px 0 0; min-width:0; scroll-margin-top:110px}
+.gp-fold summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:14px; padding:14px 18px; flex-wrap:wrap}
+.gp-fold summary::-webkit-details-marker{display:none}
+.gp-fold summary::before{content:"+"; font-family:var(--font-display); font-size:1.5rem; line-height:1; width:34px; height:34px; border:3px solid var(--ink); border-radius:10px; display:grid; place-items:center; background:var(--yellow); flex:0 0 auto}
+.gp-fold[open] summary::before{content:"\2013"}
+.gp-fold summary:hover .gp-fold-title{text-decoration:underline}
+.gp-fold-title{font-family:var(--font-display); font-size:1.2rem; letter-spacing:.03em}
+.gp-fold-sub{font-size:.9rem; font-weight:700; color:#6a6a80; flex:1 1 200px; min-width:0}
+.gp-fold-body{padding:6px 18px 18px; border-top:3px dashed #d8d8e2; min-width:0}
+.gp-fold-body .table-scroll{margin-top:12px}
+.gp-fold-body .roster-embed{margin-top:6px}
+.gp-fold-body .prereg-callout:last-child{margin-bottom:0}
+.gp-filter{width:100%; font:inherit; font-weight:700; font-size:1rem; padding:12px 18px; border:4px solid var(--ink); border-radius:999px; background:var(--panel); box-shadow:4px 4px 0 var(--ink); margin:4px 0 0; min-width:0; color:var(--ink)}
+.gp-filter::placeholder{color:#8a8a9a; font-weight:600}
+.gp-filter:focus{outline:none; background:#FFF9E3}
+.gp-filter-empty{font-weight:800; color:#6a6a80; margin:14px 0 4px}
+.gp-numbers-hit td{background:#FFF9E3}
+.sidebar-group{font-size:.72rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; color:#6a6a80; padding:14px 12px 4px}
+.sidebar-group:first-child{padding-top:0}
+.gp-select-wrap{display:none}
+.gp-select{width:100%; font:inherit; font-weight:800; font-size:1rem; padding:11px 14px; border:3px solid var(--ink); border-radius:12px; background:var(--yellow); color:var(--ink); appearance:auto}
+.sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+@media(max-width:760px){
+  .gp-select-wrap{display:block}
+  .sidebar-list{display:none}
+  .sidebar .sidebar-label{margin-bottom:10px}
+  .gp-fold summary{padding:12px 14px; gap:10px}
+  .gp-fold-body{padding:4px 12px 14px}
+  .gp-jump a{font-size:.92rem; padding:6px 12px}
+}
+@media(max-width:500px){.gp-fold-title{font-size:1.05rem} .gp-fold-sub{font-size:.82rem}}

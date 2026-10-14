@@ -39,9 +39,10 @@ const FOLLOW_LINKS = {
   // Starter block: TOPICS (one per FAQ category, each sends a well-formed question) and the five MOST ASKED questions.
   const TOPICS = [
     ["Start here", "What is Yakkamon, in short, and who makes it?"],
-    ["Free mint", "How does the Ronin free mint work — dates, waves and what I need to do?"],
+    ["Egg reveal", "What did the Genesis eggs reveal on October 14, and what did my egg become?"],
+    ["Free mint", "How did the Ronin free mint work, and is it over?"],
     ["Ranks & waves", "What is the difference between my rank, my tier and my wave?"],
-    ["Legendaries", "What are the four Genesis Legendaries and what does each one do?"],
+    ["Legendaries", "Who are Raigo, Ondi, Kova and Salu, and what does each one do?"],
     ["$FLOWER deposits", "How do $FLOWER deposits earn points, and what is the multiplier this week?"],
     ["Referrals", "How do referral points work now?"],
     ["Nurture streak", "How does the daily nurture streak work, and what time should I nurture?"],
@@ -55,7 +56,7 @@ const FOLLOW_LINKS = {
     ["Stay safe", "How do I know a mint link is real, and what should I never do?"],
   ];
   const QUESTIONS = [
-    "When is the free mint, and which wave am I in?",
+    "What did the Genesis eggs reveal?",
     "When does early access start?",
     "What does my rank get me?",
     "How do I earn points?",

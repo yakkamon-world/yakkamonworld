@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "egg-reveal",
+    category: "official",
+    title: "Welcome to the Brazito Army: The Genesis Eggs Are Open, Six Yakkamon Have Names, and Early Access Is Aimed at Late November",
+    date: "Oct 14, 2026",
+    excerpt: "The October 14 Genesis reveal, counted egg by egg: 11,265 eggs opened into 10,316 Brazito, 50 Malandrix, 50 Salu, 10 Kova, 5 Ondi and 3 Raigo, with 831 Bad Eggs revealing nothing. All six Yakkamon with their pictures, types, rarities and abilities, the odds a minter actually faced, what the 1,265 airdropped eggs held \u2014 and the reveal stream: internal beta next week, early access aimed at the end of November, a six-slot battle bench, 168 creature sounds, and why the four egg colors meant nothing.",
+    body: [
+      "The Genesis collection opened on October 14. Every one of the <strong>11,265</strong> sealed eggs \u2014 10,000 minted on Ronin plus 1,265 airdropped the day before \u2014 now shows what was inside, and for nine eggs in ten it is the same small orange fire-type: <strong>Brazito</strong>. The rest: 50 Malandrix, 50 Salu, 10 Kova, 5 Ondi, 3 Raigo, and 831 Bad Eggs that reveal nothing.",
+      "## Meet the six",
+      "The working names Storm, Echo, Ghost and Bloom are retired. The four Legendaries are <strong>Raigo, Ondi, Kova and Salu</strong> \u2014 a suite of ancient dragons, all Dragon-type, with a backstory held until after launch. <strong>Malandrix</strong> is the Rare (Psychic), <strong>Brazito</strong> the Uncommon (Fire). Pictures, abilities and the one-line descriptions each NFT carries are in the article.",
+      "## The collection, counted",
+      "We read every token\u2019s metadata: 10,316 Brazito (91.6%), 831 Bad Eggs (7.4%), 50 Salu, 50 Malandrix, 10 Kova, 5 Ondi, 3 Raigo. The 68 Legendaries and 50 Rares were drawn across all 11,265 eggs, not the 10,000 minted: minted eggs held 63 Legendaries and 38 Malandrix (plus every Bad Egg), the 1,265 airdropped eggs held 5 Legendaries and 12 Malandrix. A fair minter\u2019s odds came out at one clean egg in 146 for a Legendary \u2014 the published figure was one in 147.",
+      "## What the stream said",
+      "Internal beta testing opens next week (closed, tiny, no applications); early access is aimed at mid-to-late November, \u201cthe end of November\u201d, with the date and the leaderboard lock announced two to three weeks ahead. Battles: three on the field plus up to three in reserve. Skills are generated per individual; types include a spirit type instead of ghost; every creature gets its own sounds (168 queued). The four egg colors were cosmetic; variety, shinies and game-only Legendaries are reserved for hunting. The metadata carries no unique stats yet \u2014 a separate small reveal is due closer to launch. Bad Eggs fell from 973 to 831.",
+      "## What it means",
+      "The floor is a monster, not a blank; the trainer airdrop (2,009 Legendaries, top 2,000) was always the main event; Brazito is a capped worker with a utility still to be written; and today\u2019s metadata is a draft. What to do with your eggs, what to check before buying, and six questions for the team are in the full article."
+    ]
+  },
+  {
     slug: "contracts-explained",
     category: "analysis",
     title: "Wanted, Daily — What the Official Contracts Post Means for Players",
