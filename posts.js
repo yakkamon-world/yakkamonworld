@@ -6,6 +6,26 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "dev-stream-nov-3-graded",
+    category: "devstream",
+    title: "The November 3 Dev Chat, Graded: Eighteen Decisions, a Command Cap Nobody Saw Coming, and the Floodgates by Early December",
+    date: "Nov 9, 2026",
+    excerpt: "An impromptu dev chat with the build open turned out to be the most informative stream this project has done. Eighteen decisions graded A to F: a command cap on how many Yakkamon you can work at once, a coin barrier that makes raw resources untradable, PvP as the primary $FLOWER faucet, growth tiers and archetypes on every monster — and two Legendaries that halve the grind when stacked.",
+    body: [
+      "No slides, no agenda, and half the room could not see the screen share. Just a developer playing the build for two and a half hours, with Spencer and Matt joining partway. It produced more mechanical detail than the three announcement streams before it combined — including a rule that <strong>supersedes something this site has been publishing since September</strong>.",
+      "## The command cap",
+      "There is now a hard limit on how many Yakkamon can work your farm at once: your <strong>trainer level plus four</strong>, and the developer said he will probably cut it to just your trainer level. Trainer level comes from battling. You also cannot command a monster above your trainer level, so buying a level 99 on the marketplace means grinding before you see the benefit. It is the strongest anti-whale rule in the game — and it replaces our old line that there is no cap on concurrent workers. (A−)",
+      "## The coin barrier",
+      "Raw resources are <strong>not tradable at all</strong>. Wood cannot be sold; you take it to the workshop, pay a resource cost and a coin cost to craft it, and only the crafted good reaches the market. It slows bots down, and more importantly it stops anyone squatting on a small farm and strip-mining it forever, because coins come from contracts and contracts need expansion. (A−)",
+      "## Your monsters got three new numbers",
+      "Every Yakkamon carries a <strong>growth tier</strong> (how many stats per level), an <strong>archetype</strong> (glass cannon puts points into attack and speed), and a <strong>leveling type</strong> (how fast it levels at all) — on top of genetics, training values and skills rolled from three separate pools. The egg reveal said unique stats would get their own announcement; this was effectively it. (A−)",
+      "## The lowest grade",
+      "Kova and Raigo stacked are, in the developer’s own words, “absolutely busted — I think it cuts down the time to level 30 expansion by like half.” Kova’s aura means nearby monsters do not spend stamina, which switches off the forced-sleep mechanic that shapes everyone else’s mid-game. Seventy-five of each exist, and the balancing policy announced in the same hour says they will not be nerfed. (B−)",
+      "## And the dates",
+      "The floodgates are aimed at the <strong>end of November, maybe early December</strong> — “that’s not a promise” — with availability for everyone “within this year. It won’t be next year.” But “open beta” was introduced and then disowned on air as not an official term, which leaves it unclear which event the leaderboard lock is measured against. All eighteen grades, the numbers and the questions for next time are in the article."
+    ]
+  },
+  {
     slug: "egg-reveal",
     category: "official",
     title: "Welcome to the Brazito Army: The Genesis Eggs Are Open, Six Yakkamon Have Names, and Early Access Is Aimed at Late November",
@@ -20,7 +40,8 @@ const YAKKAMON_POSTS = [
       "## What the stream said",
       "Internal beta testing opens next week (closed, tiny, no applications); early access is aimed at mid-to-late November, \u201cthe end of November\u201d, with the date and the leaderboard lock announced two to three weeks ahead. Battles: three on the field plus up to three in reserve. Skills are generated per individual; types include a spirit type instead of ghost; every creature gets its own sounds (168 queued). The four egg colors were cosmetic; variety, shinies and game-only Legendaries are reserved for hunting. The metadata carries no unique stats yet \u2014 a separate small reveal is due closer to launch. Bad Eggs fell from 973 to 831.",
       "## What it means",
-      "The floor is a monster, not a blank; the trainer airdrop (2,009 Legendaries, top 2,000) was always the main event; Brazito is a capped worker with a utility still to be written; and today\u2019s metadata is a draft. What to do with your eggs, what to check before buying, and six questions for the team are in the full article."
+      "The floor is a monster, not a blank; the trainer airdrop (2,009 Legendaries, top 2,000) was always the main event; Brazito is a capped worker with a utility still to be written; and today\u2019s metadata is a draft. What to do with your eggs, what to check before buying, and six questions for the team are in the full article.",
+      "<strong>Update, November 3:</strong> the per-monster stat system this piece said was still to come \u2014 growth tier, archetype and leveling type \u2014 was shown running in the build at an impromptu dev chat. <a href=\"article-dev-stream-nov-3-graded.html#stats\">What was shown, and eighteen decisions graded \u2192</a>"
     ]
   },
   {

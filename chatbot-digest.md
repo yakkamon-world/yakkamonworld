@@ -2,7 +2,7 @@
 
 # Yakkamon — current state of the game
 
-      Current as of the October 14, 2026 egg-reveal stream · digest version 2026-09-02 plus a September 17 addendum (section 0b) and an October 14 addendum (section 0) · four streams merged, fifth and sixth appended
+      Current as of the November 3, 2026 dev chat · digest version 2026-09-02 plus a September 17 addendum (section 0c), an October 14 addendum (section 0b) and a November 3 addendum (section 0) · four streams merged, fifth, sixth and seventh appended
 
       Every statement carries the date of the stream it came from, e.g. Sep 1. Where a later stream changed or contradicted an earlier one, the later stream wins: the current position is stated in the topic section and the old position is logged in section 17 ("Superseded"). Only the four transcripts above were used; nothing here comes from other sources. The team's standing disclaimer applies to everything: the game is in development and anything discussed can change before launch.
 
@@ -16,12 +16,38 @@
 
 - Sep 1, 2026 — Ronin free mint waves, Yakopedia, economy model, hunting
 
-- Sep 17, 2026 — Mint post-mortem, 973 Bad Eggs, battle system overview, October beta / November early-access aims (appended as section 0b, not yet merged)
+- Sep 17, 2026 — Mint post-mortem, 973 Bad Eggs, battle system overview, October beta / November early-access aims (appended as section 0c, not yet merged)
+
+- Nov 3, 2026 — Impromptu live build demo: command cap, coin barrier, per-monster stat system, dojo leagues, balancing policy (appended as section 0, not yet merged)
 
 - Oct 14, 2026 — Egg-reveal stream: the six Genesis Yakkamon named, internal beta next week, early access aimed at the end of November, 3+3 battle bench, generated skills, spirit type, 168 creature sounds (appended as section 0, not yet merged)
 
 
-## 0. October 14, 2026 egg-reveal stream — addendum (newest; not yet merged into the sections below — where anything conflicts, THIS section wins, per the later-stream-wins rule)
+## 0. November 3, 2026 dev chat — addendum (newest; not yet merged into the sections below — where anything conflicts, THIS section wins, per the later-stream-wins rule)
+
+An impromptu live demo of the build rather than an announcement stream. The developer drove, with Spencer and Matt joining partway; Adam was not present and date questions were referred to him. The build ran on dev cheats at four times speed with Legendaries spawned on demand, so demo pacing is not real pacing. Much of the UI shown was placeholder and is being rebuilt.
+
+- COMMAND CAP — SUPERSEDES the Sep 1 position. There IS a cap on how many Yakkamon can work at once: the command cap, shown as base trainer level + 4, which the developer said he will probably reduce to simply the trainer level. Trainer level is earned by battling. The Sep 1 answer ("as many Yakkamon as you have can be working at once", logged in section 17) no longer holds. Nov 3
+- You cannot command a Yakkamon above your trainer level — a high-level monster bought on the marketplace is idle until you level up to it. Nov 3
+- THE COIN BARRIER. Basic resources (wood and the like) are not tradable at all. To sell anything you craft it in the workshop, paying a resource cost AND a coin cost; only the crafted good (lumber, clay bricks) can be listed. Coins come from contracts and are used for almost everything. Stated purposes: slow bots down, and stop players squatting on a small expansion and playing extractively, since coins require continued growth. Nov 3
+- TRADING. Rare SFT and NFT Yakkamon trade one for one. Common Yakkamon must be gathered in quantity and forged into a charm, and the charm trades — flagged as current thinking that may change; the quantity is unpublished. On-chain trading outside the game is likely for NFTs and SFTs; everything else stays in-game and off-chain. Yakkamon traded outside the game keep level, stats, genetics and training stats. Nov 3
+- PER-MONSTER STATS (first real look; the Oct 14 stream had said unique stats would get their own reveal). Every Yakkamon carries a growth tier (stat points gained per level; S described as a very low-percentage roll), an archetype (glass cannon = more attack than defense, more speed than HP), and a leveling type (rapid = levels quickly). These sit on top of genetics and training values. Nov 3
+- SKILLS roll from three pools — species, type and general — with rarities up to legendary. Rare skills are locked to their own type at first release: only grass types get Propagate (unlocked at level 51 on the monster shown), so only grass types can regen-tank. Cross-type breeding to move skills between types is planned for later, not launch. Nov 3
+- COMBAT PRIORITY ORDER, stated plainly: type advantage > skill advantage > stat advantage > genetics, then passives. A well-built lower-level team beats a higher-stat one. Positioning matters; 2v1 beats 1v1. Nov 3
+- THE DOJO has leagues defined by level caps — rookie caps monsters above level 10, veterans above level 20, scaled down rather than excluded — with daily fights against teams already beaten. Currently PvE only; PvP is not functioning beyond basic gym challenges and will NOT arrive with open beta. Nov 3
+- PvP is intended to be the PRIMARY faucet for both experience and $FLOWER once built out. Nov 3
+- PvP LEADERBOARDS will be divisions of roughly 100 players of similar rating (modeled on StarCraft II), with a global top 100 above them plus global tournaments. No single global ladder. Nov 3
+- FARM DETAIL. Jobs are queued and cycle automatically (gather berries, fall back to crops while berries are on cooldown). Feeding fills a bar red → yellow; at full yellow the monster MUST sleep next and sleeping takes a long time, so players will want two of each worker role. Storage bins upgrade via a craftable item that doubles capacity, up to 800. Trees and buildings cannot currently be moved; bought decorations can be placed. Fruit no longer feeds monsters — it is used for buffs. Nov 3
+- LEGENDARIES. Kova's ability means monsters around it do not expend stamina while working. Kova and Raigo together are "absolutely busted" and cut the time to a level 30 expansion by about half. Alpha testers have argued Raigo needs a buff and it may get one. Nov 3
+- BALANCING POLICY. Heavy balancing for the first three to six months after release, then as little live balancing as possible — the stated belief is that live balancing is harmful in NFT gaming because players own the assets. Preference: release new content that responds to existing content rather than nerf what exists. Legendaries and rares "will always remain good". Power creep is designed for rather than fought, with breeding slowly raising the ceiling toward a cap. Nov 3
+- OG PERKS are recognition and "more going to be flex" than power. Reasoning: crypto games that hand permanent advantage to the founding cohort lose everyone who arrives later, and the team wants a ten-year game. Nov 3
+- NOT AT LAUNCH: guilds and factions (they want to improve factions on Sunflower Land first), a plaza or trainer avatars ("a faceless goon for open beta"), friends lists, messaging, 2v2. Priority is a game that works as a single-player experience with some PvE and trading. Nov 3
+- PLATFORM: browser and PWA only, no app store (a gray area for blockchain games). Push notifications planned. Nov 3
+- SEASON 0 AUCTIONS will include new NFT monsters, plus competitions, raffles and events. VIP will exist in some form; lifetime VIP probably not. Nov 3
+- PRE-REGISTRATION STARTER EGGS are fixed, not chosen. The developer believed the tier order runs Raigo, then Kova, then Salu, but said twice he was not certain — UNCONFIRMED. Nov 3
+- DATES. The floodgates for what he loosely called "open beta" are aimed at the end of November, maybe early December — explicitly "not a promise". Availability for everyone is "within this year. It won't be next year." He said "open beta" is NOT an official term (it might be the week or two before full release, it might be early access) and referred the naming question to Adam. Which event the leaderboard lock is measured against is currently unclear. Nov 3
+
+## 0b. October 14, 2026 egg-reveal stream — addendum (second newest; not yet merged into the sections below — where anything conflicts with sections 1–17, THIS section wins; section 0 wins over this one)
 
 On stage: Adam (host), Craig (NFT collection, animation and audio), Matt (battle design intern); about 250 trainers in the chat. Streamed on reveal day, October 14, 2026, under the standing disclaimer (pre-launch; anything can change).
 
@@ -43,7 +69,7 @@ On stage: Adam (host), Craig (NFT collection, animation and audio), Matt (battle
 - Fan art competition: the winners were posted on X and all received a Yakkamon. AI was allowed in this competition and much of the best content used it; for future competitions to design a new Yakkamon that goes into the game, hand-drawn high-quality work will be required, and no-AI artist competitions are planned. Favorites: an animated duck going berserk in a fight (Craig), the Star Wars memes (Adam). Shout-out to Gabby and the art team for the pixel art (Oct 14).
 - The game in one line (Adam): a mixture of a builder, a battle game, and a hunting/discovery collectible layer with lore (Oct 14).
 
-## 0b. September 17, 2026 stream — addendum (second newest; not yet merged into the sections below — where anything conflicts with sections 1–17, THIS section wins; section 0 wins over this one)
+## 0c. September 17, 2026 stream — addendum (third newest; not yet merged into the sections below — where anything conflicts with sections 1–17, THIS section wins; sections 0 and 0b win over this one)
 
 On stage: Adam, Craig, Spencer, Matt (game design intern behind the battle system, final semester of university). Everything below was said on the Sep 17 stream under the standing disclaimer (beta prototyping stage; ideas change up to launch).
 
@@ -428,6 +454,15 @@ Chapter-based rollout is the model: polish the core loops first, then build what
 | Topic | Earlier statement | Current statement |
 
 | Pre-registrations | 45,000 Aug 6 | 100,000 Aug 21 |
+
+| Workers per farm | No cap — "as many Yakkamon as you have can be working at once" Sep 1 | Command cap = base trainer level + 4, probably becoming just trainer level Nov 3 |
+
+| Feeding | Food restores stamina so monsters work longer Nov 3 (early demo) | Overfeeding fills a red→yellow bar; at full yellow the monster must sleep next Nov 3 |
+
+| Fruit | Grown as food for monsters Nov 3 (early demo) | No longer eaten — fruit is used for buffs Nov 3 |
+
+| Resource trading | Every core resource tradable on-chain Aug 6 | Basic resources not tradable at all; must pass the coin barrier as crafted goods Nov 3 |
+
 
 | Free-mint supply | 10,000–15,000, being finalized Aug 13 | 10,000 Sep 1 |
 
