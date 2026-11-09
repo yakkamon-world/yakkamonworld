@@ -1440,3 +1440,30 @@ a.gp-step:hover{background:var(--yellow)}
   .gp-reader-pos{font-size:.78rem}
   .gp-reader-steps{gap:6px}
 }
+
+/* ---- The official dex grid (Nov 9, 2026) ---- */
+.dex-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(124px,1fr)); gap:12px; margin:16px 0 8px; padding:0; list-style:none}
+.dex-card{background:var(--panel); border:3px solid var(--ink); border-radius:14px; box-shadow:4px 4px 0 var(--ink); padding:8px 8px 10px; display:flex; flex-direction:column; align-items:center; gap:4px; text-align:center; min-width:0}
+.dex-card.r-legendary{background:#FFF6D6}
+.dex-card.r-rare{background:#F1EBFF}
+.dex-card.r-uncommon{background:#EAF7EE}
+.dex-art{width:100%; aspect-ratio:1/1; background:#58b853; border:2px solid var(--ink); border-radius:10px; display:flex; align-items:center; justify-content:center; overflow:hidden}
+.dex-art img,.article-body .dex-art img{width:84%; height:84%; object-fit:contain; display:block; margin:0; border:0; border-radius:0; background:transparent; image-rendering:pixelated; image-rendering:crisp-edges}
+.dex-no{font-size:.72rem; font-weight:900; letter-spacing:.08em; color:#6a6a80; margin-top:2px}
+.dex-card h4{margin:0; font-family:var(--font-display); font-size:1.05rem; line-height:1.05; letter-spacing:.02em; font-weight:400}
+.dex-card .yk-chips{justify-content:center; gap:4px}
+.dex-card .yk-chip{font-size:.6rem; padding:2px 7px; letter-spacing:.04em}
+.yk-chip.common{background:#EDEDF2}
+.yk-chip.type-normal{background:#E8E8EE}
+.yk-chip.type-grass{background:#CFEFD6}
+.yk-chip.type-water{background:#CFE6FF}
+.yk-chip.type-rock{background:#E9DCC7}
+.yk-chip.type-wind{background:#DDF4F2}
+.yk-chip.type-electric{background:#FFF3B0}
+.yk-chip.type-bug{background:#E4F2B8}
+.yk-chip.type-spirit{background:#E6E6F7}
+.yk-chip.type-dark{background:#D6D2E6; }
+.dex-legend{display:flex; flex-wrap:wrap; gap:8px 14px; margin:10px 0 0; font-size:.82rem; font-weight:800; color:#3d3d50}
+.dex-legend span{display:inline-flex; align-items:center; gap:6px}
+.dex-legend i{width:14px; height:14px; border:2px solid var(--ink); border-radius:4px; display:inline-block}
+@media(max-width:500px){.dex-grid{grid-template-columns:repeat(3,1fr); gap:8px} .dex-card{padding:6px 6px 8px} .dex-card h4{font-size:.95rem}}

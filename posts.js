@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "official-roster-dex",
+    category: "official",
+    title: "The Official Roster: 38 Yakkamon, 12 Types, and a Dex That Runs to #060",
+    date: "Nov 9, 2026",
+    excerpt: "The official Yakkapedia dex lists 38 Yakkamon with a number, a type and a rarity each: 25 Commons, 8 Rares and 5 Legendaries across 12 named types, numbers to #060 with 22 slots hidden. Every sprite in a grid, the type table that type locking has been waiting for, a fifth Legendary nobody had seen, and what the gaps in the numbering give away.",
+    body: [
+      "For three months the roster was a picture — eighteen portraits in August, twenty-six by September, six of them named on October 14. The official <strong>Yakkapedia dex</strong> replaces the picture with a list: <strong>38 Yakkamon</strong>, each with a dex number, a type and a rarity, running from #001 to #060 with gaps.",
+      "## By the numbers",
+      "<strong>25 Commons, 8 Rares, 5 Legendaries.</strong> <strong>Twelve types named</strong> — Normal, Grass, Water, Fire, Rock, Wind, Electric, Bug, Psychic, Spirit, Dark, Dragon — of the thirteen the team has promised. Names for six (the Genesis Yakkamon); 32 cards are types without names. 22 dex slots have no entry yet.",
+      "## The type table",
+      "Normal, Grass and Rock have five species each; Water, Fire, Bug and Dragon four; Psychic three. <strong>Wind and Electric have one Common each</strong> and nothing above it. <strong>Spirit and Dark exist only as Rares.</strong> With type locking deciding what a creature can gather and which jobs it can do, that distribution is the first real planning table the game has had.",
+      "## Five Legendaries, eight Rares",
+      "<strong>#056 is a Psychic Legendary</strong> that was in neither the Genesis eggs nor the trainer airdrop — the first Legendary outside the Genesis four. The Rare shelf holds eight species where Genesis held only Malandrix; six of them have no announced route into the game yet. The dex uses three rarity labels and lists Brazito as Rare; the Genesis NFTs say Uncommon, and this site keeps <strong>Uncommon</strong>.",
+      "## What the gaps say",
+      "The numbering cycles through the types, and the gaps fall where the thin types would sit. Our reading: Commons occupy #001–#035, Rares #036–#055, Legendaries #056–#060 — a <strong>60-species roster</strong> with every Legendary already on the sheet. The grid with every sprite, number, type and rarity is on the Gameplay page."
+    ]
+  },
+  {
     slug: "dev-stream-nov-3-graded",
     category: "devstream",
     title: "The November 3 Dev Chat, Graded: Eighteen Decisions, a Command Cap Nobody Saw Coming, and the Floodgates by Early December",
@@ -476,7 +494,7 @@ const YAKKAMON_POSTS = [
     category: "official",
     title: "Eighteen Yakkamon, No Names \u2014 What the Roster Sheet Tells Us",
     date: "Aug 17, 2026",
-    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated as the sheet changed, twenty-six as of Oct 6 with one portrait swapped for a green dragon. Portraits only \u2014 no names, no types, no rarities.",
+    excerpt: "The official roster sheet shows eighteen creatures against an expected 50\u201360 at launch \u2014 updated as the sheet changed, twenty-six as of Oct 6 with one portrait swapped for a green dragon; superseded Nov 9 by the official dex (38 Yakkamon with types and rarities). Portraits only \u2014 no names, no types, no rarities.",
     body: [
       "<em>Update, October 6:</em> a newer official sheet keeps the count at <strong>twenty-six</strong> but swaps one portrait \u2014 the blue-and-teal bird with the large yellow beak, added September 13 in the fifth row, is gone, and a <strong>green dragon</strong> with pink horns and wings stands in its slot. The other twenty-five are unchanged and in the same order, the same four slots stay empty, and the team has said nothing about why the bird left. Still no names, no types, no rarities; still twenty-six of the thirty in the early-access build.",
       "<em>Update, September 13:</em> the sheet has grown to <strong>twenty-six</strong> \u2014 a horned red creature with a gold crest and flame tufts fills the last empty slot of the fourth row, and a fifth row opens with a pink, long-eared creature carrying a sack of buds and a blue-and-teal bird with a large yellow beak. The earlier twenty-three are unchanged and in the same order, with four slots in the new row still empty; the revealed share moves from roughly two-fifths of the expected 50\u201360 to nearly half. Still no names, no types, no rarities.",

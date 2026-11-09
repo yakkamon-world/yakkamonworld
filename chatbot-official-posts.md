@@ -18,6 +18,18 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## The official Yakkamon dex — 38 Yakkamon with number, type and rarity (official Yakkapedia roster data, as of November 9, 2026)
+
+Source: https://docs.yakkamon.com/content/yakkapedia
+
+The official roster (Yakkapedia dex) lists 38 Yakkamon, each with a dex number, a type and a rarity. Dex numbers run from #001 to #060 with gaps; 22 numbers have no entry yet. Only the six Genesis Yakkamon have names. Rarity labels used by the dex: Common, Rare, Legendary.
+
+COMMON (25): #001 Normal · #002 Grass · #003 Water · #004 Fire · #005 Rock · #006 Wind · #007 Normal · #008 Grass · #009 Water · #010 Fire · #011 Rock · #013 Electric · #014 Bug · #015 Normal · #016 Grass · #017 Water · #018 Fire · #019 Rock · #022 Bug · #023 Normal · #024 Grass · #025 Water · #027 Rock · #030 Bug · #031 Normal.
+RARE (8): #036 Brazito, Fire (the dex lists Brazito as Rare; the Genesis NFT metadata lists him as Uncommon) · #038 Grass · #039 Rock · #042 Bug · #049 Psychic · #053 Malandrix, Psychic · #054 Spirit · #055 Dark.
+LEGENDARY (5): #056 Psychic (unnamed; not part of the Genesis eggs or the trainer airdrop) · #057 Kova, Dragon · #058 Ondi, Dragon · #059 Raigo, Dragon · #060 Salu, Dragon.
+
+Types named by the dex (12 of the 13 the team has announced): Normal, Grass, Water, Fire, Rock, Wind, Electric, Bug, Psychic, Spirit, Dark, Dragon. Species per type: Normal 5, Grass 5, Rock 5, Water 4, Fire 4, Bug 4, Dragon 4, Psychic 3, Wind 1, Electric 1, Spirit 1, Dark 1. The dex gives no stats, abilities, or names beyond the six, and does not say which of the 38 are in the early-access build (the September 17 dev stream said 30).
+
 ## The Genesis egg reveal — all 11,265 eggs opened (October 14, 2026)
 
 Source: https://marketplace.roninchain.com/collections/yakkamon
