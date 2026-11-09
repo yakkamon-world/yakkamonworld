@@ -10,7 +10,7 @@
   the full version is the same page at deviceScaleFactor min(2.222, 4096/height)
   so its longest side never exceeds X's 4096px resize threshold (3882x4096 now).
   Edit the panels below, re-render, replace both PNGs and the width/height
-  attributes on gameplay.html's <img>. Revision: October 14, 2026, after the Genesis reveal (23 panels, 12 columns; panel 04 "The Genesis Six" is new and uses the yakkamon-*.png sprites, so render from the repo folder).
+  attributes on gameplay.html's <img>. Revision: November 9, 2026, after the November 3 dev chat (26 panels, 12 columns; panels 04 "Growth, Archetypes & Skill Pools", 09 "Trainer Level & the Command Cap" and 23 "The Dojo, Leagues & Ladders" are new; panel 05 "The Genesis Six" uses the yakkamon-*.png sprites, so render from the repo folder).
 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&display=swap');
@@ -53,7 +53,7 @@ table{width:100%;border-collapse:collapse;font-size:9.2px;margin:0 0 6px;table-l
 th{background:var(--ink);color:#fff;text-align:left;padding:3px 5px;font-size:9.6px;letter-spacing:.05em;text-transform:uppercase}
 td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wrap:anywhere}
 .kv{display:flex;justify-content:space-between;align-items:center;gap:4px;border-bottom:1.5px solid var(--ink);padding:3px 2px;font-weight:700}
-.kv+.kv+.kv+.kv+.kv{border-bottom:0}
+.kv:last-of-type{border-bottom:0}
 .pill{display:inline-block;white-space:nowrap;font-size:9px;font-weight:900;padding:1px 5px;border:1.5px solid var(--ink);border-radius:5px;letter-spacing:.04em}
 .ok{background:#DDF1E3}.no{background:#FFDADA}.tbc{background:#E7DDFB}
 .flow{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin:0 0 6px}
@@ -82,12 +82,12 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   </div>
   <div class="head-r">
     <div class="oneline"><b>THE WHOLE GAME IN ONE LINE</b><span>It&rsquo;s a farming game where the monsters do the farming &mdash; and your job is to go catch better ones. The world opens up around you in tiles, then Regions, then Chapters.</span></div>
-    <div class="rev">REVISED OCT 14, 2026 &mdash; AFTER THE GENESIS REVEAL. SIX YAKKAMON NAMED: RAIGO, ONDI, KOVA &amp; SALU (THE LEGENDARY DRAGONS), MALANDRIX THE RARE, BRAZITO THE UNCOMMON. 11,265 EGGS COUNTED, 831 BAD EGGS, INTERNAL BETA NEXT WEEK, EARLY ACCESS AIMED AT THE END OF NOVEMBER.</div>
+    <div class="rev">REVISED NOV 9, 2026 &mdash; AFTER THE NOV 3 DEV CHAT. THE COMMAND CAP: YOUR TRAINER LEVEL SETS HOW MANY YAKKAMON CAN WORK. GROWTH TIERS, ARCHETYPES &amp; SKILL POOLS. THE DOJO&rsquo;S LEVEL-CAPPED LEAGUES. THE COIN BARRIER. FORCED SLEEP. FLOODGATES AIMED AT THE END OF NOVEMBER, MAYBE EARLY DECEMBER.</div>
   </div>
 </div>
 
 <div class="chips">
-  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">70/30 AUTO BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">30 YAKKAMON IN EARLY ACCESS</span><span class="chip green">13 TYPES</span><span class="chip purple">6 GENESIS YAKKAMON REVEALED</span>
+  <span class="chip">IDLE FARMING</span><span class="chip sky">CREATURE COLLECTING</span><span class="chip red">HUNTING</span><span class="chip sky">CRAFTING</span><span class="chip green">70/30 AUTO BATTLER</span><span class="chip purple">TILES &rarr; REGIONS &rarr; CHAPTERS</span><span class="chip red">30 YAKKAMON IN EARLY ACCESS</span><span class="chip green">13 TYPES</span><span class="chip purple">6 GENESIS YAKKAMON REVEALED</span><span class="chip red">COMMAND CAP = TRAINER LEVEL</span>
 </div>
 
 <div class="cols">
@@ -116,19 +116,31 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="panel">
   <h2><i>03</i>YOUR YAKKAMON</h2>
-  <p>30 species in the early-access build (26 shown so far; six named and revealed Oct 14 &mdash; see 04), the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
+  <p>30 species in the early-access build (26 shown so far; six named and revealed Oct 14 &mdash; see 05), the rest arriving per Chapter. Four things decide if one individual is worth keeping.</p>
   <div class="card sky"><b>Its species</b>Decides what it can gather &mdash; and fixes its rarity tier.</div>
-  <div class="card green"><b>Its stats</b>Every monster rolls differently. Two of the same species aren&rsquo;t identical. Battle stats: Health, Attack, Defense, Speed.</div>
+  <div class="card green"><b>Its stats</b>Every monster rolls differently. Two of the same species aren&rsquo;t identical. Battle stats: Health, Attack, Defense, Speed. How they grow: growth tier, archetype, leveling type (see 04).</div>
   <div class="card yellow"><b>Its utility</b>A boost it carries. Named on Legendaries; randomly rolled on everyone else, separately from stats.</div>
-  <div class="card red"><b>Its skills</b>What it actually does in battle. Generated per individual: same species, slightly different skills, some rarer (Oct 14).</div>
+  <div class="card red"><b>Its skills</b>What it actually does in battle. Rolled per individual from three pools &mdash; species, type, general &mdash; some rarer than others (see 04).</div>
   <p>Underneath: real genetics, hidden starting values, and training values that shift stats by how you raise it.</p>
   <div class="card purple"><b>No wearable gear</b>&ldquo;The Yakkamon have the stats.&rdquo; Maybe one held item. 13 types at launch, one per monster &mdash; dual types later. Named so far: dragon, psychic, fire, electric, water, grass, spirit.</div>
   <div class="like"><em>LIKE THIS</em>Trading cards. Same picture on the front, better numbers on the back.</div>
 </div>
 
 <div class="panel new">
-  <span class="tag">NEW OCT 14</span>
-  <h2><i>04</i>THE GENESIS SIX</h2>
+  <span class="tag">NEW NOV 3</span>
+  <h2><i>04</i>GROWTH, ARCHETYPES &amp; SKILL POOLS</h2>
+  <p>The Nov 3 build put three labels on a monster&rsquo;s card, shown off by a lucky level-7 catch: growth tier S, glass cannon, rapid.</p>
+  <div class="card green"><b>Growth tier</b>How many stats it gains per level. S is the top; the ladder below is unpublished.</div>
+  <div class="card red"><b>Archetype</b>Where the stats go. Glass cannon: Attack over Defense, Speed over Health, every level. The rock type was &ldquo;a tank&rdquo;.</div>
+  <div class="card sky"><b>Leveling type</b>How fast. Rapid levels &ldquo;very, very quickly&rdquo; &mdash; &ldquo;an excellent starter&rdquo;.</div>
+  <div class="card yellow"><b>Three skill pools</b>Skills roll from the species pool, the type pool and the general pool, with their own rarities. They unlock by level (Propagate, a rare grass skill, at 51) and unlocked skills are swapped in.</div>
+  <div class="card purple"><b>Rare skills stay in their type</b>At first release only Grass types get Propagate &mdash; so only Grass types play regen tank. Cross-type breeding is the way across, later.</div>
+  <p>Kits fire on counts: an AoE every fifth hit, a tackle every third, an opening bonus. A synergistic kit beats ten levels. Legendary skills are meant to be &ldquo;busted&rdquo;: &ldquo;if everything&rsquo;s OP, nothing is.&rdquo;</p>
+  <div class="like"><em>LIKE THIS</em>A scouting report: raw talent, the position they&rsquo;re built for, how fast they develop &mdash; and the moves a coach may teach them.</div>
+</div>
+
+<div class="panel">
+  <h2><i>05</i>THE GENESIS SIX</h2>
   <p>Every one of the 11,265 Genesis eggs opened Oct 14 into one of these &mdash; or into nothing. Pictures are the reveal art on the NFTs; counts are the whole collection.</p>
   <div class="gx"><img src="yakkamon-raigo.png" alt=""><div class="gx-h"><b>Raigo</b><small>was Storm &middot; Legendary &middot; Dragon</small></div><div class="gx-b"><span class="gx-n">3 &middot; 1 in 3,755 &middot; 75 exist</span>Stormcharged &mdash; in range work <em>2&times; as fast</em> (large AOE)</div></div>
   <div class="gx"><img src="yakkamon-ondi.png" alt=""><div class="gx-h"><b>Ondi</b><small>was Echo &middot; Legendary &middot; Dragon</small></div><div class="gx-b"><span class="gx-n">5 &middot; 1 in 2,253 &middot; 275 exist</span>In range produce <em>double resources</em> (small AOE)</div></div>
@@ -143,31 +155,33 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>05</i>RARITY, DECODED</h2>
+  <h2><i>06</i>RARITY, DECODED</h2>
   <div class="card red"><b>Rarity is set at species level</b>Every individual of a species shares its tier. There is no rare version of a common monster. No lucky upgrade roll exists.</div>
   <div class="card yellow"><b>Rarer is not simply stronger</b>The best commons beat middling rares on raw stats. Rarity buys a higher ceiling and exclusive traits.</div>
   <div class="card"><b>Legendary &middot; NFT</b>Pre-minted, fixed scarce supply. Traits no other tier can have.</div>
   <div class="card"><b>Rare &middot; SFT</b>Time / event limited. Supply set by how hard players hunt.</div>
   <div class="card"><b>Common &middot; no token</b>Plain game asset.</div>
-  <p>Hunting is the primary route at any tier. The Genesis set put faces on the tiers: Brazito (Uncommon, 15,000), Malandrix (Rare, 4,000), four Legendary dragons (75&ndash;2,000 each) &mdash; see 04.</p>
+  <p>Hunting is the primary route at any tier. The Genesis set put faces on the tiers: Brazito (Uncommon, 15,000), Malandrix (Rare, 4,000), four Legendary dragons (75&ndash;2,000 each) &mdash; see 05.</p>
   <div class="like"><em>LIKE THIS</em>A first-team squad player can outperform a benched international. The badge tells you the ceiling, not the form.</div>
 </div>
 
 <div class="panel">
-  <h2><i>06</i>TYPE LOCKING</h2>
+  <h2><i>07</i>TYPE LOCKING</h2>
   <p>Every resource is gated to a type &mdash; so your roster decides what you can gather at all.</p>
   <div class="kv"><span>Wood &larr; Grass types</span><span class="pill ok">CONFIRMED</span></div>
   <div class="kv"><span>Wood &larr; Fire types</span><span class="pill no">BLOCKED</span></div>
   <div class="kv"><span>Stone</span><span class="pill tbc">UNKNOWN</span></div>
   <div class="kv"><span>Berries / crops</span><span class="pill tbc">UNKNOWN</span></div>
+  <div class="kv"><span>Regenerate a node &larr; Grass only (Nov 3)</span><span class="pill ok">CONFIRMED</span></div>
   <div class="kv"><span>Region materials &larr; local types</span><span class="pill tbc">TBC</span></div>
   <div class="card yellow"><b>In-game message</b>&ldquo;Fire type cannot harvest wood!&rdquo; Collecting more species literally unlocks more of the map.</div>
   <div class="card red"><b>And you can&rsquo;t buy your way out</b>Basic monsters have limited tradeability, so every missing type is an expedition you fund yourself.</div>
+  <div class="card green"><b>Jobs are type-locked too</b>Many types work the plots, but only Grass types regenerate a depleted node &mdash; and rare type-pool skills stay in their type at first (see 04).</div>
   <div class="like"><em>LIKE THIS</em>You wouldn&rsquo;t ask a fish to chop firewood. Here the game enforces it.</div>
 </div>
 
 <div class="panel">
-  <h2><i>07</i>THE WORK CYCLE</h2>
+  <h2><i>08</i>THE WORK CYCLE</h2>
   <ol class="steps">
     <li>Assign a Yakkamon to a resource it&rsquo;s allowed to gather.</li>
     <li>It takes time &mdash; each cycle runs a set duration before paying out.</li>
@@ -177,12 +191,25 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
     <li>It sleeps when tired, recovers, restarts itself.</li>
   </ol>
   <div class="flow"><span>WORKING</span><i>&rarr;</i><span>OUT OF STAMINA</span><i>&rarr;</i><span>SLEEPING</span><i>&rarr;</i><span>WORKING</span></div>
-  <p>No cap on how many work at once &mdash; jobs are the limit, not headcount. So are beds: short of them, tired monsters queue (Sep 17). Level them up, collect more, claim more tiles.</p>
+  <div class="card yellow"><b>Job lists, not single jobs (Nov 3)</b>Drag jobs above a line in priority order: berries when off cooldown, then crops; regenerate trees &ldquo;when there&rsquo;s nothing else to do&rdquo;. Nothing happens you didn&rsquo;t assign.</div>
+  <div class="card red"><b>Food buys stamina, but only so much</b>Feeding fills a bar red &rarr; yellow; fully yellow and it must sleep next, no more topping up &mdash; and sleep is long. Run two per key role.</div>
+  <p>Headcount is capped by your trainer level (see 09). Beds too: short of them, tired monsters queue (Sep 17). Level them up, collect more, claim more tiles.</p>
   <div class="like"><em>LIKE THIS</em>A little worker with a battery. Work drains it, sleep charges it, and it clocks back on unprompted.</div>
 </div>
 
+<div class="panel new">
+  <span class="tag">NEW NOV 3</span>
+  <h2><i>09</i>TRAINER LEVEL &amp; THE COMMAND CAP</h2>
+  <div class="card red"><b>The command cap</b>How many Yakkamon can work at once. Base trainer level + 4 in the demo (six, then seven after a win); the plus four will probably go, leaving: <em>your trainer level is your crew size</em>.</div>
+  <div class="card yellow"><b>Trainer XP comes from fighting</b>Farm raids (&ldquo;Team Rocco&rdquo;), dojo fights, gym challenges &mdash; every win pays it. PvP is meant to be the primary faucet. Combat is how the farm gets bigger.</div>
+  <div class="card sky"><b>You can&rsquo;t command above your level</b>A traded Yakkamon keeps its level, stats, genetics and training &mdash; but a bought level 99 waits until you&rsquo;ve earned the right to use it.</div>
+  <div class="card green"><b>It pulls against redundancy</b>Forced sleep says own two of every worker; the cap says you can&rsquo;t run them all. &ldquo;You also want to increase your command cap.&rdquo; The tension is designed.</div>
+  <p>Replaces September&rsquo;s &ldquo;as many as you have&rdquo;. Unpublished: the formula at release, XP per win, whether hunters and bench count.</p>
+  <div class="like"><em>LIKE THIS</em>A foreman&rsquo;s license: how big a crew you may run and who you may give orders to &mdash; earned by winning, not bought.</div>
+</div>
+
 <div class="panel">
-  <h2><i>08</i>UPKEEP &amp; DEGRADATION</h2>
+  <h2><i>10</i>UPKEEP &amp; DEGRADATION</h2>
   <p>A resource sink that does not exist in Sunflower Land &mdash; but it comes from <b>use</b>, not absence.</p>
   <div class="card red"><b>Plots wear out</b>The job card carries a degradation marker. The example shown read <b style="display:inline;text-transform:none">degraded 1.6&times;</b> &mdash; that plot farms slower until you refertilize it.</div>
   <div class="card yellow"><b>Fertilizer costs resources</b>So upkeep is a permanent drag on production, not a cosmetic status.</div>
@@ -193,27 +220,29 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>09</i>STORAGE BINS</h2>
+  <h2><i>11</i>STORAGE BINS</h2>
   <p>Resources pile into a bin that keeps filling while you&rsquo;re offline &mdash; until you tap it to collect.</p>
   <div class="flow"><span>EARLY 5 / 20</span><i>&rarr;</i><span>FILLING 84 / 120</span><i>&rarr;</i><span>FULL &mdash; MAX 120 / 120</span></div>
   <div class="card yellow"><b>The catch</b>Bins cap out. Every hour a bin sits at MAX is production you never banked.</div>
+  <div class="card green"><b>Upgrades, up to 800 (Nov 3)</b>A craftable storage upgrade doubles any bin&rsquo;s capacity, up to 800. The 20 and 120 are rungs, not limits.</div>
   <div class="card sky"><b>One bin per resource</b>The team narrowed it down from many bins. Hold several Regions and expect a set in each &mdash; plus a transport step home.</div>
   <div class="like"><em>LIKE THIS</em>A piggy bank that fills itself. Once full, extra coins bounce off the top.</div>
 </div>
 
 <div class="panel">
-  <h2><i>10</i>LOOKING AFTER THEM</h2>
+  <h2><i>12</i>LOOKING AFTER THEM</h2>
   <p>Status icons float above a monster and the feed calls it out by name.</p>
-  <div class="card red"><b>Hungry</b>Needs feeding before it carries on.</div>
+  <div class="card red"><b>Hungry</b>Needs feeding before it carries on. Food restores stamina &mdash; but fills a bar red &rarr; yellow, and fully yellow means it must sleep next (Nov 3).</div>
   <div class="card purple"><b>Hurt</b>Injured or knocked out, out of action. Battle damage sticks until rested or healed (Sep 24).</div>
   <div class="card sky"><b>Sleeping</b>Recovering stamina. Not broken.</div>
   <div class="card yellow"><b>Needs an item</b>Can ask directly with a speech bubble.</div>
   <p>An item bar sits at the bottom &mdash; milk, flowers, mushrooms, health items. A monster in a bad state isn&rsquo;t earning, so upkeep is economics, not flavor.</p>
+  <div class="card yellow"><b>Fruit is buffs, not food (Nov 3)</b>&ldquo;Nothing here eats fruit anymore.&rdquo; Grass and crops feed a working team; fruit goes into buffs. Kova&rsquo;s crew spends no stamina &mdash; buffs only, no food costs.</div>
   <div class="like"><em>LIKE THIS</em>Pets with jobs. Feed them, patch them up, let them nap &mdash; they keep earning.</div>
 </div>
 
 <div class="panel">
-  <h2><i>11</i>HOW BOOSTS STACK</h2>
+  <h2><i>13</i>HOW BOOSTS STACK</h2>
   <div class="card red"><b>Same ability &rarr; does not stack</b>Two monsters both carrying &ldquo;Wood Gatherer I&rdquo; give you the effect once &mdash; even two different species. Reconfirmed Sep 17.</div>
   <div class="card green"><b>Different name or higher rank &rarr; stacks</b>&ldquo;Wood Gatherer&rdquo; plus &ldquo;Extreme Wood Gatherer&rdquo; is two effects, both apply.</div>
   <div class="card yellow"><b>The roster shape this implies</b>Wide, not deep. One excellent specialist per job beats five copies of your best one.</div>
@@ -221,7 +250,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>12</i>UTILITIES &amp; AURAS</h2>
+  <h2><i>14</i>UTILITIES &amp; AURAS</h2>
   <p>The boosts come from the Yakkamon themselves. Legendaries have named ones (real name, working name &middot; total supply &middot; airdrop ranks):</p>
   <table>
     <tr><th style="width:38%">Genesis</th><th>Utility</th></tr>
@@ -233,33 +262,35 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
   <div class="card yellow"><b>Small vs large AOE</b>Small: the job it stands on and the 2&ndash;3 nodes beside it. Large: a whole section of the farm.</div>
   <div class="card green"><b>They stack &mdash; some multiply</b>Raigo + Ondi (Storm + Echo) confirmed: twice the speed on double the output.</div>
   <div class="card sky"><b>Rares &amp; Uncommons roll theirs</b>Utility, species and stats are separate dice; the revealed Malandrix and Brazito read &ldquo;no ability yet&rdquo;. Keepers rolled all three.</div>
-  <div class="card red"><b>Working names retired</b>Storm, Echo, Ghost and Bloom (and before that Tide) are now Raigo, Ondi, Kova and Salu. Same monsters, same boosts.</div>
-  <p>Numbers &mdash; radii, percentages &mdash; still unpublished. The Genesis eggs&rsquo; 68 Legendaries are out: 3 Raigo, 5 Ondi, 10 Kova, 50 Salu (see 04); the trainer airdrop places 2,009 more.</p>
+  <div class="card red"><b>In play (Nov 3)</b>Kova&rsquo;s crew spends no stamina working &mdash; no food, no forced sleep. Raigo is the strongest and may still be buffed. Together &ldquo;absolutely busted&rdquo;: about half the time to the level-30 expansion.</div>
+  <p>Working names retired: Storm, Echo, Ghost, Bloom are Raigo, Ondi, Kova, Salu. Numbers still unpublished. The eggs&rsquo; 68 Legendaries are out: 3 / 5 / 10 / 50 (see 05); the trainer airdrop places 2,009 more.</p>
   <div class="like"><em>LIKE THIS</em>A good foreman. He doesn&rsquo;t lay bricks &mdash; everyone within earshot lays them faster.</div>
 </div>
 
 <div class="panel">
-  <h2><i>13</i>BREEDING &amp; GENETICS</h2>
+  <h2><i>15</i>BREEDING &amp; GENETICS</h2>
   <p>Genetics carry down the line. Breed two strong individuals of the same species and their stats and traits propagate.</p>
   <div class="card sky"><b>A breeding limit, scaled by rarity</b>Bred Yakkamon are tradable, so: commons breed above replacement, rares around it, some Legendaries once. Noise still creeps in per generation.</div>
   <div class="card green"><b>80&ndash;90% predictable</b>One RNG component plus one fixed. You can build a best-case / worst-case range before committing.</div>
   <div class="card yellow"><b>Designed for 1&ndash;3 year projects</b>Long-running attempts to move a trait set onto a perfect monster. Later: across species, then across type groups.</div>
-  <div class="card red"><b>No forging</b>Ten commons into one rare was rejected &mdash; tonally wrong for a cozy collector.</div>
+  <div class="card red"><b>No forging into rares &mdash; but charms</b>Ten commons into one rare was rejected. Gathering enough of a common species to forge a tradable charm is coming (Nov 3).</div>
+  <div class="card yellow"><b>Power creep by design (Nov 3)</b>Two average parents occasionally roll higher, creeping stats toward the cap. Legendaries and Rares &ldquo;always remain good&rdquo;; cross-type breeding later moves type-locked skills.</div>
   <div class="card purple"><b>Evolutions: not at launch</b>Confirmed, per monster, triggers hidden &mdash; but held back until the supply problem (everyone evolving up) is solved.</div>
   <p>Advanced breeding is not in early access. It arrives post-launch.</p>
 </div>
 
 <div class="panel">
-  <h2><i>14</i>YOUR BASE &amp; YOUR GYM</h2>
+  <h2><i>16</i>YOUR BASE &amp; YOUR GYM</h2>
   <div class="card yellow"><b>Expand your land, tile by tile</b>Each tile has a resource price on the button &mdash; the starter reads 10 Wood + 1 Stone.</div>
   <div class="card sky"><b>Buildings &amp; stations</b>Workbenches with their own counters, houses with beds, crop plots, rock nodes.</div>
   <div class="card green"><b>Hunting Area</b>A tile you claim, then pay to enter &mdash; 5 berries on the sign at launch.</div>
   <div class="card purple"><b>Your gym comes first</b>Land customization: unlikely at launch. Your gym: a working prototype, shipping before the arena &mdash; decorate it, visit others&rsquo;, battle them, with leaderboards attached. Officially, a gym is a team you leave behind for others to challenge &mdash; it wins for you while you&rsquo;re offline.</div>
-  <p>Menu: Squad &middot; Items &middot; Quests &middot; Shop &middot; Trade &middot; Log. Built for landscape.</p>
+  <div class="card red"><b>Live on Nov 3</b>Expansion six: crafted lumber + 1 Stone; it regenerated every node and opened the hunting zone and safari zone. Rival teams raid your farm (&ldquo;Team Rocco&rdquo;). The dojo sits in the left menu (see 23). Moving trees and buildings: not currently; decorations yes.</div>
+  <p>Menu: Squad (rename, favorite) &middot; Items &middot; Quests &middot; Shop &middot; Trade &middot; Log. Built for landscape.</p>
 </div>
 
 <div class="panel">
-  <h2><i>15</i>REGIONS &amp; TILES</h2>
+  <h2><i>17</i>REGIONS &amp; TILES</h2>
   <p>Three layers, and nothing you unlock ever closes. Grasslands is the starter.</p>
   <ol class="steps">
     <li><b>Tiles</b> &mdash; gather resources to unlock more. A tile holds resources, build room, or a hunting area &mdash; and each raises how much you can run at once.</li>
@@ -272,7 +303,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>16</i>LOGISTICS</h2>
+  <h2><i>18</i>LOGISTICS</h2>
   <p>Moving and sharing resources between your Regions &ldquo;becomes a core part of the strategy&rdquo; &mdash; the trainers who master logistics get ahead.</p>
   <div class="card red"><b>So inventory is per Region</b>That sentence has no meaning with a global bag. Wood gathered in the grasslands stays there until something moves it.</div>
   <div class="card yellow"><b>What follows</b>A new Region has to be fed before it feeds you, and Region-only materials become things you ship.</div>
@@ -281,7 +312,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>17</i>DAY, NIGHT &amp; SEASONS</h2>
+  <h2><i>19</i>DAY, NIGHT &amp; SEASONS</h2>
   <div class="card sky"><b>A day every few real hours</b>Time of day rolls over every few real hours &mdash; several dawns and nights pass in one day at your desk, so every time band reaches every player. &ldquo;Miss one, and another is never far away.&rdquo;</div>
   <div class="card"><b>One universal clock</b>No personal timezones, no resetting &mdash; night in Yakkamon is night for everyone, and trainers worldwide hunt the same windows at the same moment. One player&rsquo;s spawn log works everywhere.</div>
   <div class="card yellow"><b>The night shift is a stat</b>Some Yakkamon carry traits that thrive at certain hours &mdash; a night-owl on the night shift outworks a sleeper. Match your roster to the clock, and check for the trait before trading a &ldquo;duplicate&rdquo;.</div>
@@ -291,27 +322,29 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 </div>
 
 <div class="panel">
-  <h2><i>18</i>HUNTING</h2>
+  <h2><i>20</i>HUNTING</h2>
   <div class="card green"><b>A place: grounds are tiles</b>On your own Regions &mdash; one of the three things a tile can hold. Each Region has its own wild types.</div>
   <div class="card sky"><b>A time: learn the clock</b>Each ground shows different Yakkamon at different in-game hours. No timetable is given &mdash; discovering it is the skill.</div>
-  <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (19).</div>
+  <div class="card yellow"><b>You don&rsquo;t hunt alone</b>Send a Yakkamon to passively roam a ground while you farm. It rolls for encounters; lures and bait tilt the roll (21).</div>
   <div class="card"><b>A temperament: three kinds of wild</b><em>Affectionate</em> &mdash; only comes home if your hunter wins it over. <em>Greedy</em> &mdash; wants resources first; won&rsquo;t budge till paid. <em>Angry</em> &mdash; a battle; a weak hunter comes home empty. Win and you may bring the wild one home &mdash; but a hunter that wins hurt carries the damage.</div>
   <div class="card red"><b>Legendaries &amp; Rares roam the grounds</b>Sporadically, no schedule &mdash; and in real time: when one lands, everyone gets the same window. Keep a strong, well-supplied team ready.</div>
   <div class="card purple"><b>Grounds deplete, monsters don&rsquo;t</b>No limit on hunts per Yakkamon; a hunted-out ground yields less. Spread hunts across grounds <i>and Regions</i>.</div>
   <div class="card grey"><b>Still in prototype</b>Areas exist; the mechanics are still being tuned (Sep 17). First NFT hunt: Chapter 0 per the docs &mdash; about six weeks in, said the stream.</div>
+  <div class="card green"><b>A catch, live (Nov 3)</b>Expansion six opened the hunting zone; the Clover Meadow held four gray uncaught Yakkamon (water, fire, bug, grass). One woody snack, one roll, one lucky catch. Commons are day one; the Chapter 0 hunt is the Legendary event.</div>
   <div class="card yellow"><b>What hunting is saved for (Oct 14)</b>Most of the roster is found in the game: elemental variety, shinies and variations are reserved for hunting, a small supply of Legendaries appears via hunts, and some Legendaries and Rares exist only in-game.</div>
   <div class="like"><em>LIKE THIS</em>Sending the dog out for rabbits. Some bite, some need a carrot, some want paying &mdash; and the field empties if you work it daily.</div>
 </div>
 
 <div class="panel">
-  <h2><i>19</i>CRAFTING, LURES &amp; BAIT</h2>
+  <h2><i>21</i>CRAFTING, LURES &amp; BAIT</h2>
   <div class="card yellow"><b>Lures pick the type</b>Grounds have areas (a rocky outcrop among them; swamps and water to come). A rock-type lure draws rock types. Lures and bait are crafted from resources.</div>
   <div class="card sky"><b>Bait does the talking</b>Bait and a short emoji chat win over an affectionate monster; a stock of goods pays a greedy one. In-game notice: &ldquo;prepare bait and monsters, bring berries&rdquo;.</div>
   <div class="card green"><b>Contract hunts pay coins</b>Find a requested Yakkamon, earn the currency that gates the tradable layer &mdash; one of the few coin faucets.</div>
+  <div class="card red"><b>The workshop is the coin barrier (Nov 3)</b>Woody snacks are the bait of the build. Lumber (from wood) and clay bricks are the crafted, tradable goods; a storage upgrade is crafted the same way.</div>
 </div>
 
-<div class="panel new">
-  <h2><i>20</i>THE BATTLE SYSTEM</h2>
+<div class="panel">
+  <h2><i>22</i>THE BATTLE SYSTEM</h2>
   <p>&ldquo;Won before the first hit lands&rdquo; &mdash; the team&rsquo;s official Battles guide, in eight points, on top of the Sep 17 stream&rsquo;s 70/30 auto battler.</p>
   <ol class="steps">
     <li><b>Setup stage</b> &mdash; drag your Yakkamon onto your side and place them freely. Front or back, and which type stands where, shape the fight. Scout the enemy team here.</li>
@@ -323,37 +356,55 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
     <li><b>Damage sticks</b> &mdash; a Yakkamon limps out carrying its damage until rested or healed. Manage the roster between battles.</li>
     <li><b>Everyone gets paid</b> &mdash; items, XP for the Yakkamon who fought, trainer XP for you. Beat a wild one and you might bring it home.</li>
   </ol>
-  <div class="card sky"><b>Underneath (Sep 17 &amp; Oct 14 streams)</b>70% planning, 30% live input; four stats &mdash; Health, Attack, Defense, Speed; identical buffs don&rsquo;t stack; AROC tanks up front, hitters behind. Skills are generated per individual (same species, different skills, some rarer); a spirit type instead of ghost. Gyms first, the full arena early next year.</div>
+  <div class="card red"><b>Nov 3: the order of priority</b>Type advantage &rarr; skill advantage &rarr; stat advantage &rarr; genetics. 2v1 beats 1v1: set the tank to soak both while the glass cannon hits from behind. A lower-level team with the type edge &ldquo;destroyed&rdquo; a higher-health rock. Rivals raid your farm; every win pays trainer XP. UI and targeting being redone.</div>
+  <div class="card sky"><b>Underneath (Sep 17 &amp; Oct 14 streams)</b>70% planning, 30% live input; four stats &mdash; Health, Attack, Defense, Speed; identical buffs don&rsquo;t stack; AROC tanks up front, hitters behind. Skills roll per individual from three pools (see 04); a spirit type instead of ghost. Gyms first, the full arena early next year.</div>
   <div class="like"><em>LIKE THIS</em>You&rsquo;re a manager, not a player. Pick the squad, place it, choose its moves &mdash; then work the touchline with subs and a potion.</div>
 </div>
 
+<div class="panel new">
+  <span class="tag">NEW NOV 3</span>
+  <h2><i>23</i>THE DOJO, LEAGUES &amp; LADDERS</h2>
+  <div class="card sky"><b>Leagues are level caps</b>Rookie League: Yakkamon above level 10 capped out. Veterans League: above 20. Daily fights against teams you&rsquo;ve already beaten. PvE now; PvP in the same leagues later.</div>
+  <div class="card yellow"><b>Gym challenges are the PvP that works</b>Pick a trainer from the leaderboard, fight the team they left behind, collect trainer XP. The gym and the dojo may become one thing.</div>
+  <div class="card red"><b>What PvP is for</b>&ldquo;The primary faucet for your experience and for $FLOWER when it&rsquo;s built out&rdquo; &mdash; and it&rsquo;s not in open beta.</div>
+  <div class="card green"><b>Ladders in divisions</b>No single global list: groups of ~100 of similar rating (the StarCraft II model), a global top 100 above, tournaments separate.</div>
+  <div class="card grey"><b>No guilds, factions or friends list at launch</b>Social features are post-beta. First release: a single-player game with PvE and trading.</div>
+  <div class="like"><em>LIKE THIS</em>A boxing gym with weight classes. Spar the people you&rsquo;ve beaten, fight in your own class, and the rankings on the wall are your club&rsquo;s.</div>
+</div>
+
 <div class="panel">
-  <h2><i>21</i>THE TWO-TRACK ECONOMY</h2>
+  <h2><i>24</i>THE TWO-TRACK ECONOMY</h2>
   <div class="card green"><b>Track one: free to play</b>Produce without limit. Nothing you make here can be traded.</div>
   <div class="card yellow"><b>Track two: tradable, gated by coins</b>Making something tradable costs the game&rsquo;s Web2 currency &mdash; coins, maybe &ldquo;new yen&rdquo; later. That gate is the whole design.</div>
-  <div class="card red"><b>Coin faucets are scarce</b>VIP, burning crops or other assets, and contract hunts. Every coin is a sink somebody paid.</div>
+  <div class="card red"><b>Coin faucets are scarce</b>VIP, burning crops or other assets, and Contracts. Every coin is a sink somebody paid.</div>
+  <div class="card sky"><b>The coin barrier (Nov 3)</b>Raw wood is never tradable. A good reaches the market only after it&rsquo;s crafted in the workshop for resources + coins &mdash; lumber, clay bricks. Slows bots, stops squatting: you must expand to earn.</div>
+  <div class="card purple"><b>How Yakkamon trade</b>Commons: forge a set number into a charm. Rares (SFT) and NFTs: one for one. Tokens on-chain too; everything else off-chain. VIP yes, lifetime VIP probably not. &ldquo;Very alpha.&rdquo;</div>
   <p>Marketplace, auctions and $FLOWER withdrawals open at Chapter 0 &mdash; a month after early access per the docs (6&ndash;8 weeks, said the Sep 17 stream). &ldquo;More free to try than free to play.&rdquo;</p>
   <div class="like"><em>LIKE THIS</em>A hobby farm with a license to sell at market. Grow all you like for your own table &mdash; the permit is rationed.</div>
 </div>
 
 <div class="panel">
-  <h2><i>22</i>PROGRESSION &amp; ENDGAME</h2>
+  <h2><i>25</i>PROGRESSION &amp; ENDGAME</h2>
   <div class="card sky"><b>Infinite levels and expansions</b>Plans and sinks are meant to ship at launch; the endgame features themselves arrive after early access.</div>
   <div class="card yellow"><b>The meta is expected to move</b>Early: gathering and hunting specialists are the valuable monsters. Later: once the arena (aimed at early next year) and tournaments establish, demand shifts to battle stats. The team won&rsquo;t intervene.</div>
   <div class="card green"><b>No hard specialization cap</b>Producer vs fighter emerges from opportunity cost, not a rule.</div>
   <div class="card red"><b>No resets. Ever.</b>Mistakes get worn and fixed. Inflation is attacked with hard sinks and new content absorbing old.</div>
+  <div class="card purple"><b>The balancing policy (Nov 3)</b>Heavy for 3&ndash;6 months, then new content over live nerfs. Power creep is intentional; Legendaries and Rares &ldquo;always remain good&rdquo;.</div>
+  <div class="card yellow"><b>OG perks are flex</b>Recognized, not overpowered &mdash; the edge is seasonal Yakkamon that stop being available. New NFTs via Season Zero auctions, events, raffles, a Chapter grind.</div>
   <p>Not all monsters ship at launch &mdash; 30 open early access, the rest arrive with each Chapter, each paired with a new, bigger Region.</p>
 </div>
 
 <div class="panel">
-  <h2><i>23</i>NOT CONFIRMED YET</h2>
+  <h2><i>26</i>NOT CONFIRMED YET</h2>
   <div class="card grey"><b>Regions &amp; tiles</b>Tiles per Region, the cost curve, parallel jobs per tile; what &ldquo;grow your starting Region&rdquo; means; what moving resources between Regions costs.</div>
   <div class="card grey"><b>Work cycle &amp; upkeep numbers</b>Cycle duration, stamina, yield, sleep rate; degradation rate, fertilizer recipe.</div>
   <div class="card grey"><b>The type chart</b>13 types confirmed; named so far dragon, psychic, fire, electric, water, grass, spirit; only Grass&rarr;Wood; the chart itself missing.</div>
-  <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>Roll ranges (the NFTs carry no stats yet &mdash; a reveal closer to launch), XP costs, level cap, trait list, respec costs; AOE radii, Salu&rsquo;s regen %, every Rare / Uncommon utility.</div>
+  <div class="card grey"><b>Stats, levels, traits, skills &amp; utilities</b>The growth-tier ladder below S, the archetype and leveling-type lists, roll ranges (the NFTs carry none yet), XP costs, level cap, trait list; skill slots, unlock levels, pool weights; AOE radii, Salu&rsquo;s regen %, every Rare / Uncommon utility.</div>
+  <div class="card grey"><b>The command cap &amp; the dojo</b>Whether the plus four survives; XP per win; do hunters and the bench count; leagues above Veterans, daily fights and their pay, rating, division size, promotion; is the gym the dojo.</div>
+  <div class="card grey"><b>Forced sleep &amp; the market</b>Feeds to a full bar, the length of a forced sleep; the charm recipe, which crafted goods trade, the coin cost per good; the starter-egg order (Raigo &gt; Kova &gt; Salu, said unsure).</div>
   <div class="card grey"><b>Hunting rates</b>Day length, ground regeneration, Legendary odds, a greedy monster&rsquo;s price; private or shared grounds.</div>
   <div class="card grey"><b>Battle numbers &amp; coins</b>Whether three-plus-three survives beta, how many skills each carries and where they come from, item limits, the type chart; what a tradable unit costs.</div>
-  <div class="card grey"><b>The exact dates</b>Stream aims: internal beta the week of Oct 19, early access end of Nov, announced 2&ndash;3 weeks ahead. Docs: Nov or Dec. The docs are the record.</div>
+  <div class="card grey"><b>The exact dates</b>Nov 3: &ldquo;end of November, maybe early December&rdquo; for the floodgates, &ldquo;not a promise&rdquo;, but within this year; announced 2&ndash;3 weeks ahead. Docs: Nov or Dec. Is &ldquo;open beta&rdquo; early access? The docs are the record.</div>
   <div class="card grey"><b>The reveal&rsquo;s loose ends</b>What lifted 142 Bad Egg flags; whether the last 235 of the 1,500 event eggs go out; when trainer-airdrop Legendaries land; the dragons&rsquo; lore.</div>
 </div>
 
@@ -361,7 +412,7 @@ td{border:1.5px solid var(--ink);padding:3px 4px;vertical-align:top;overflow-wra
 
 <div class="foot">
   <b>YAKKAMONWORLD.COM</b>
-  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting, Clock, Battles and Contracts posts, the NFT metadata of the October 14 reveal, screenshots and dev streams through October 14, 2026. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
+  <span>Player-made reference sheet from the official docs, Yakkapedia, Regions, Economy, Hunting, Clock, Battles and Contracts posts, the NFT metadata of the October 14 reveal, screenshots and dev streams through the November 3, 2026 dev chat. Not official &mdash; pre-launch, subject to change; mock-up figures may be placeholders.</span>
 </div>
 
 </div>

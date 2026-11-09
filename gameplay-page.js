@@ -4,11 +4,13 @@
 // and the collapsible folds.
 //
 // Redesigned October 14, 2026 (second pass): the narrow sticky sidebar and
-// the phone-only <select> are gone. All 27 systems now sit on one wide board,
+// the phone-only <select> are gone. All 30 systems (27 then; three added
+// November 9, 2026 after the November 3 dev chat) now sit on one wide board,
 // a row per group, and the chosen system opens in a reader panel below with
 // lighter body text, the paragraph lead-ins promoted to subheadings, an
 // "In this system" list on the long ones, and previous / next buttons.
-// On phones the board folds behind one "All 27 systems" button.
+// On phones the board folds behind one "All 30 systems" button (the count is
+// read from YAKKAMON_GAMEPLAY at runtime).
 //
 // Picking a system swaps the reader in place instead of reloading the page.
 // The URL still updates (?system=slug), so links stay shareable and the
@@ -20,11 +22,11 @@
 // (.gp-g-<key> in style.css). Previous / next in the reader follow this order.
 const GP_GROUPS = [
   { key: "shape", label: "The shape of it", slugs: ["two-halves", "core-loop"] },
-  { key: "yakkamon", label: "Your Yakkamon", slugs: ["creature-collecting", "genesis-legendaries", "rarity-tiers", "utilities-auras", "boost-stacking", "breeding-genetics", "evolutions"] },
-  { key: "farm", label: "The farm", slugs: ["type-locking", "work-cycle", "upkeep", "storage-bins", "monster-care", "your-base"] },
+  { key: "yakkamon", label: "Your Yakkamon", slugs: ["creature-collecting", "stats-skills", "genesis-legendaries", "rarity-tiers", "utilities-auras", "boost-stacking", "breeding-genetics", "evolutions"] },
+  { key: "farm", label: "The farm", slugs: ["type-locking", "work-cycle", "trainer-level", "upkeep", "storage-bins", "monster-care", "your-base"] },
   { key: "world", label: "The world", slugs: ["regional-exploration", "logistics", "day-night-cycle", "seasonal-system"] },
   { key: "hunting", label: "Hunting", slugs: ["hunting", "crafting-hunting", "contracts"] },
-  { key: "battles", label: "Battles", slugs: ["combat-system", "arena-battles"] },
+  { key: "battles", label: "Battles", slugs: ["combat-system", "dojo-leagues", "arena-battles"] },
   { key: "economy", label: "Economy & launch", slugs: ["economy-layers", "endgame", "platform-access"] }
 ];
 
@@ -98,7 +100,7 @@ function gpSetActive(slug) {
   }
 }
 
-// Phones only: the board folds behind the "All 27 systems" button.
+// Phones only: the board folds behind the "All 30 systems" button.
 function gpMapIsFolding() {
   const toggle = document.getElementById("gp-map-toggle");
   return !!toggle && getComputedStyle(toggle).display !== "none";
