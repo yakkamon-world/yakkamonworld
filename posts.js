@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "safari-zones-explained",
+    category: "analysis",
+    title: "You're in the Grass Now: What the Official Safari Zones Post Means for Players",
+    date: "Nov 11, 2026",
+    excerpt: "The official Safari Zones post rewrites hunting. You go yourself now: 31 catchable Yakkamon at launch, a Codex to track them, zones that open with Trainer Level, snacks with a pity system, regular and Golden Lures, secret haunts, charm-only rares and ultra-rare shinies. What each point means, what it replaces from September, and how it fits the dex, Contracts and the November 3 dev chat.",
+    body: [
+      "The team's second hunting guide opens by saying a lot has changed during alpha testing. What changed is who hunts: in September you sent a Yakkamon to roam a ground while you farmed; now <strong>you are in the grass yourself</strong>, in a zone you travel to from the Map, with snacks to throw and a lure to set.",
+      "## The seven points",
+      "<strong>31 catchable Yakkamon at Early Access launch</strong>, each with a home zone, a time it is out and a taste of its own, tracked in a <strong>Codex</strong> (silhouette until seen, grayscale until caught). <strong>Ultra-rare shinies</strong>. <strong>Safari Zones</strong> starting with Clover Meadow, with new zones opening as your <strong>Trainer Level</strong> rises. <strong>Snacks</strong> with favorites and a <strong>pity system</strong>. <strong>Lures</strong> &mdash; regular for commons, <strong>Golden</strong> for rares, with the spot and the hour deciding who shows up. <strong>Secret haunts</strong> for some rares. And the hardest rares, which only eat <strong>charms</strong> and remember every one.",
+      "## What it replaces",
+      "The roaming hunter, grounds on your own Regions and lures that pick a type are gone. Time of day stays. The September post's three temperaments, depleting grounds and unannounced Legendaries are not mentioned, so we now treat them as unconfirmed.",
+      "## How it fits",
+      "Our arithmetic: the official dex's 38, minus the six Genesis Yakkamon and the Psychic Legendary #056, is exactly 31 &mdash; all 25 Commons plus the six Rares outside Genesis. Trainer Level, earned by fighting, now gates your crew size, the Yakkamon you can command and the zones you can enter. And if the charm a rare eats is the charm the November 3 dev chat said is forged from common Yakkamon, commons become the raw material for rares.",
+      "## What to do",
+      "Keep a log of zone, spot, hour, lure and snack from day one. Use cheap snacks on commons and let pity do the work. Don't spend a Golden Lure until you know a spot and an hour. Take the fights: Trainer Level pays three ways. The full reading, the comparison table and seven questions for the team are in the article."
+    ]
+  },
+  {
     slug: "official-roster-dex",
     category: "official",
     title: "The Official Roster: 38 Yakkamon, 12 Types, and a Dex That Runs to #060",

@@ -18,6 +18,28 @@
   After adding a post, push — the GitHub Action rebuilds chatbot-knowledge.json.
 -->
 
+## Yakkamon — Safari Zones (official post by the Yakkamon team on X, November 2026) — the CURRENT official description of hunting
+
+Key points of the team's official Safari Zones guide, in plain terms (posted on the official Yakkamon X account in November 2026; this is the newest official hunting guide and it supersedes the September 2026 Hunting post wherever the two differ). The post says it has been a while since the last hunting guide and that "a lot has changed during alpha testing". Hunting is now more hands-on: the trainer is in the grass themselves, reading the land, choosing snacks and setting lures for the Yakkamon they are after. Hunting is NO LONGER described as sending a Yakkamon to passively roam a ground while you farm.
+
+1. There are 31 catchable Yakkamon at Early Access launch. Every one has a home zone, a time it is out and a taste of its own. The Codex shows each one as a silhouette until you have seen it and in greyscale until you have caught it, so you always know what is still out there.
+
+2. Ultra-rare shinies exist: shiny colour variations that can be found in the wild.
+
+3. Hunting happens in Safari Zones: dedicated zones you travel to from the Map, starting with Clover Meadow. New zones open as your Trainer Level goes up, each with its own landscape and its own Yakkamon.
+
+4. Snacks: spot a Yakkamon, then throw it a snack. Each Yakkamon has favourites, and the right snack gives a much better chance of a catch. Cheap snacks still work but need more luck. Yakkamon uses a pity system, so even a failed snack moves you closer to catching that Yakkamon.
+
+5. Lures: place a Lure on the map and something will walk up to it and start feeding. A regular Lure draws common Yakkamon. A Golden Lure brings out the rares. Placed in the right spot at the right time of day, a lure lets you decide who shows up.
+
+6. Rare Yakkamon have secret haunts: some rares have a favourite spot (the examples given are a campfire, a big old tree and a hidden clearing). Find it and lay a lure there and they will come. Other rares have no spot to learn and need some luck.
+
+7. Some Yakkamon will not take a snack at all: the hardest rares only eat charms. You win their trust over time, and they remember every charm you have given them, even if it takes a few visits.
+
+The post ends by saying Early Access is close and to start planning your hunts.
+
+What the post does NOT say (do not present these as official): it does not list the 31 Yakkamon; it gives no catch rates, pity numbers, shiny odds or Trainer Level requirements; it does not say where Golden Lures or charms come from; it does not say whether a Safari Zone is private or shared; and it does not mention the September post's three temperaments (affectionate, greedy, angry), depleting hunting grounds, or Legendaries appearing sporadically. Those September points have not been retracted but are unconfirmed for the launch game. Anyone asking how hunting works, what a Safari Zone is, how many Yakkamon can be caught at launch, what snacks, lures, Golden Lures, the pity system, secret haunts, charms-for-rares, shinies or the Codex are should be answered from this entry; the site's full reading is article-safari-zones-explained.html and the system page is gameplay.html?system=hunting.
+
 ## The official Yakkamon dex — 38 Yakkamon with number, type and rarity (official Yakkapedia roster data, as of November 9, 2026)
 
 Source: https://docs.yakkamon.com/content/yakkapedia
@@ -206,7 +228,7 @@ Caveats from the page: Pixels VIP is bought from an in-game custodial balance an
 
 What happens next: September 10 whitelists finalized (snapshot taken 01:00 UTC); September 14 the free mint goes live on the Ronin Launchpad (marketplace.roninchain.com/launchpads); September 16 at 08:00 UTC Wave 3 opens with 2,000 supply; connect the same Ronin wallet the checker lists, keep a little RON for gas, and mint; October 14 every Genesis NFT is revealed together. One mint per wallet per wave — trainers who also qualify through the leaderboard can mint in those waves too. The snapshot is only for the Ronin free mint and does not affect the trainer airdrop leaderboard, which keeps running and finalizes separately. Not on the list? The 5 $FLOWER route into Waves 2 and 4 closed with the September 10 snapshot; what remains is the marketplace from September 14, the 1,500 special-event hidden eggs and the top-5,000 pre-registration airdrop.
 
-## Yakkamon — Hunting (official post by the Yakkamon team on X, early September 2026)
+## Yakkamon — Hunting (official post by the Yakkamon team on X, early September 2026) — OLDER; partly superseded by the Safari Zones post of November 2026: hunting is now hands-on in Safari Zones, not a roaming-hunter job
 
 G'day trainers. Back with another guide — today we're heading into the hunting grounds.
 

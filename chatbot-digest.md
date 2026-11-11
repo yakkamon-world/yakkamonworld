@@ -289,6 +289,8 @@ Waves Sep 1
 
 ## 8. Hunting
 
+- SUPERSEDED IN PART by the official Safari Zones post (X, November 2026; full entry at the top of the official posts): hunting is now hands-on in Safari Zones reached from the Map (Clover Meadow first, more with Trainer Level); 31 catchable Yakkamon at Early Access launch tracked in a Codex; snacks with favourites and a pity system; regular Lures for commons and Golden Lures for rares; secret haunts; charm-only rares; ultra-rare shinies. The stream notes below describe the earlier roaming-hunter design. Nov 2026
+
 - Hunting is the third pillar alongside gathering and combat, and the primary way to obtain any monster. Aug 6, Aug 21
 
 - How it works: hunting is a job. Assign a Yakkamon to a hunting ground; it rolls for a Yakkamon; you influence the outcome with resources (lures, baits). Yakkamon can hunt forever — the limit is the hunting ground, which is progressively hunted out and yields less. Sep 1
