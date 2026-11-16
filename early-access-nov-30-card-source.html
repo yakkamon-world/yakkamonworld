@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="robots" content="noindex">
+<title>Early Access card source</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@600;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1A1A2E;--cream:#FFF3D6;--yel:#FFD23F;--red:#FF3B3B;--blue:#2FA8E8;--grn:#2DB563}
+html,body{width:1376px;height:768px;overflow:hidden}
+body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--cream);background-image:radial-gradient(rgba(26,26,46,.09) 1.1px,transparent 1.2px);background-size:15px 15px;padding:22px 30px 0}
+.hdr{background:var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--red);height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 30px}
+.hdr h1{font-family:'Bangers';font-weight:400;font-size:55px;letter-spacing:1px;color:var(--yel);text-shadow:3px 3px 0 var(--red);transform:skewX(-6deg);white-space:nowrap}
+.hdr h1 span{color:#fff}
+.hdr p{color:#fff;font-weight:800;font-size:17.5px;line-height:1.3;text-align:right}
+.hdr p b{color:var(--yel);font-weight:800}
+.dates{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:17px}
+.dbox{border:3px solid var(--ink);border-radius:9px;box-shadow:5px 5px 0 var(--ink);height:74px;display:flex;align-items:center;gap:12px;padding:0 14px}
+.dbox .d{font-family:'Bangers';font-size:38px;line-height:1;white-space:nowrap;transform:skewX(-6deg)}
+.dbox .t{font-weight:800;font-size:13.2px;line-height:1.22}
+.dbox.y{background:var(--yel)} .dbox.b{background:var(--blue);color:#fff} .dbox.r{background:var(--red);color:#fff} .dbox.g{background:var(--grn);color:#fff}
+.dbox.b .d,.dbox.r .d,.dbox.g .d{text-shadow:2px 2px 0 var(--ink)}
+.cards{display:grid;grid-template-columns:1.06fr 1fr 1fr;gap:16px;margin-top:19px;height:502px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:10px;box-shadow:6px 6px 0 var(--ink);padding:12px 15px 13px;display:flex;flex-direction:column}
+.card h2{font-family:'Bangers';font-weight:400;font-size:31px;letter-spacing:.5px;display:flex;align-items:center;gap:10px;line-height:1;margin-bottom:11px}
+.card h2 i{font-style:normal;background:var(--red);color:#fff;border:2.5px solid var(--ink);border-radius:5px;width:29px;height:29px;display:inline-flex;align-items:center;justify-content:center;font-size:21px}
+.card h2 em{font-style:normal;transform:skewX(-6deg);display:inline-block}
+table{border-collapse:collapse;width:100%;white-space:nowrap;font-size:14.3px;font-weight:700}
+th{background:var(--yel);text-align:left;font-weight:900;padding:6px 9px;border:2px solid var(--ink)}
+td{padding:7px 8px;border:2px solid var(--ink);line-height:1.2;height:62px}
+td b{font-weight:900;font-size:17px}
+.chip{display:inline-block;font-size:9.5px;font-weight:900;letter-spacing:.4px;color:#fff;border:1.8px solid var(--ink);border-radius:4px;padding:1px 5px;vertical-align:2px;margin-left:3px}
+.chip.g{background:var(--grn)} .chip.r{background:var(--red)} .chip.k{background:#8a8a99}
+.note{margin-top:auto;background:var(--yel);border:2.5px solid var(--ink);border-radius:6px;padding:8px 11px;font-size:13.4px;font-weight:800;line-height:1.3}
+ol{list-style:none;display:flex;flex-direction:column;gap:16px}
+ol li{display:flex;gap:10px;font-size:16.6px;font-weight:600;line-height:1.27}
+ol li u{text-decoration:none;flex:none;width:25px;height:25px;border-radius:50%;background:var(--ink);color:var(--yel);font-family:'Bangers';font-size:17px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+ol li b{font-weight:900}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.mini{background:var(--cream);border:2.5px solid var(--ink);border-radius:7px;padding:10px 11px 8px;height:101px}
+.mini .n{font-family:'Bangers';font-size:31px;line-height:1.05;transform:skewX(-6deg);transform-origin:left;white-space:nowrap}
+.mini .k{font-size:11.8px;font-weight:900;letter-spacing:.5px;color:#C22;text-transform:uppercase}
+.mini .s{font-size:13px;font-weight:700;line-height:1.2;margin-top:1px}
+.sub{font-size:13.4px;font-weight:800;margin:-4px 0 9px}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:17px}
+.foot p{font-size:12.6px;font-weight:800}
+.foot .wm{font-family:'Bangers';font-size:29px;letter-spacing:.5px;transform:skewX(-6deg);text-shadow:2px 2px 0 var(--yel)}
+.foot .wm span{color:var(--red)}
+</style></head><body>
+<div class="hdr">
+  <h1>YAKKAMON EARLY ACCESS &ndash; <span>NOV 30</span></h1>
+  <p>An alpha for the top 100,000 trainers &middot; <b>four waves by rank</b><br>You keep your progress &middot; <b>NFT airdrop</b> to the top 5,000</p>
+</div>
+<div class="dates">
+  <div class="dbox y"><div class="d">NOV 26</div><div class="t">Leaderboard hidden at 00:00 UTC. Points still count, ranks out of sight.</div></div>
+  <div class="dbox b"><div class="d">NOV 27</div><div class="t">Final &amp; revealed at UTC midnight. This rank sets your wave and airdrop.</div></div>
+  <div class="dbox r"><div class="d">NOV 30</div><div class="t">Early Access begins. Wave 1: the top 1,000 trainers go in first.</div></div>
+  <div class="dbox g"><div class="d">DEC 2</div><div class="t">The airdrop. Genesis NFTs sent to the top 5,000 trainers.</div></div>
+</div>
+<div class="cards">
+  <div class="card">
+    <h2><i>1</i><em>WHICH WAVE ARE YOU?</em></h2>
+    <table>
+      <tr><th>Wave</th><th>Final rank</th><th>Opens</th></tr>
+      <tr><td><b>1</b> <span class="chip g">DATED</span></td><td>1 &ndash; 1,000</td><td>Nov 30</td></tr>
+      <tr><td><b>2</b> <span class="chip r">EST.</span></td><td>1,001 &ndash; 5,000</td><td>1&ndash;2 weeks after Wave 1</td></tr>
+      <tr><td><b>3</b> <span class="chip r">EST.</span></td><td>5,001 &ndash; 20,000</td><td>1&ndash;2 weeks after Wave 2</td></tr>
+      <tr><td><b>4</b> <span class="chip r">EST.</span></td><td>20,001 &ndash; 100,000</td><td>1&ndash;2 weeks after Wave 3</td></tr>
+      <tr><td><b>&ndash;</b> <span class="chip k">OUT</span></td><td>100,001+</td><td>No early access</td></tr>
+    </table>
+    <div class="note">Each wave is announced before it opens. Chapter 0 &ndash; the first NFT hunt, Legendaries, auctions, $FLOWER withdrawals &ndash; follows once early access is complete.</div>
+  </div>
+  <div class="card">
+    <h2><i>2</i><em>DO BEFORE NOV 26</em></h2>
+    <ol>
+      <li><u>1</u><span><b>Check your rank.</b> After 00:00 UTC on Nov 26 (7 PM ET, Nov 25) it is hidden.</span></li>
+      <li><u>2</u><span><b>Know your line.</b> Waves: 1,000 / 5,000 / 20,000 / 100,000. Airdrop: top 5,000.</span></li>
+      <li><u>3</u><span><b>Build a buffer now.</b> On the blind day you can&rsquo;t see who is catching you.</span></li>
+      <li><u>4</u><span><b>Keep the free points coming.</b> Nurture streak, quests and weekly posts count to the snapshot.</span></li>
+      <li><u>5</u><span><b>Link a wallet</b> if you are near the top 5,000. The airdrop needs one.</span></li>
+    </ol>
+    <div class="note">After the Nov 27 snapshot, new points don&rsquo;t change your wave, your monster or your tier.</div>
+  </div>
+  <div class="card">
+    <h2><i>3</i><em>WHAT YOU GET</em></h2>
+    <div class="sub">Dec 2 airdrop, by final rank:</div>
+    <div class="grid">
+      <div class="mini"><div class="k">Ranks 1 &ndash; 10</div><div class="n">RAIGO + 1</div><div class="s"><span style='white-space:nowrap;font-size:12.2px'>+ Ondi (1&ndash;3) or Kova (4&ndash;10)</span></div></div>
+      <div class="mini"><div class="k">Ranks 11 &ndash; 50</div><div class="n">RAIGO</div><div class="s">Genesis Legendary</div></div>
+      <div class="mini"><div class="k">Ranks 51 &ndash; 250</div><div class="n">ONDI</div><div class="s">Genesis Legendary</div></div>
+      <div class="mini"><div class="k">Ranks 251 &ndash; 500</div><div class="n">KOVA</div><div class="s">Genesis Legendary</div></div>
+      <div class="mini"><div class="k">Ranks 501 &ndash; 2,000</div><div class="n">SALU</div><div class="s">Genesis Legendary</div></div>
+      <div class="mini"><div class="k">Ranks 2,001 &ndash; 5,000</div><div class="n">RARE EGG</div><div class="s">5,001+: no airdrop</div></div>
+    </div>
+    <div class="note">In the alpha you hunt, battle and trade &ndash; and keep your progress and resources for the official launch. Top 1,000 get a feedback channel.</div>
+  </div>
+</div>
+<div class="foot">
+  <p>Source: official Yakkamon Discord announcement &amp; docs.yakkamon.com important dates and early access pages &middot; Wave 2&ndash;4 timings are the team&rsquo;s estimates</p>
+  <div class="wm">YAKKAMON<span>WORLD</span>.COM</div>
+</div>
+</body></html>

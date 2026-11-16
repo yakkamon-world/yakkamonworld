@@ -6,6 +6,24 @@
 */
 const YAKKAMON_POSTS = [
   {
+    slug: "early-access-november-30",
+    category: "official",
+    title: "Early Access Has a Date: November 30, and the Leaderboard Locks on November 27",
+    date: "Nov 16, 2026",
+    excerpt: "Yakkamon Early Access begins November 30 as an alpha for the top 1,000 trainers. The leaderboard is hidden on November 26 and finalized on November 27, and Genesis NFTs are airdropped to the top 5,000 on December 2. The four dates, what moved from the old schedule, the blind final day, when Waves 2 to 4 might open, and what to do before the lock.",
+    body: [
+      "The team has announced that <strong>Yakkamon Early Access begins on November 30, 2026</strong>, and the official docs now carry the dates around it.",
+      "## The four dates",
+      "<strong>November 26, 00:00 UTC</strong> &mdash; the trainer leaderboard is hidden. <strong>November 27</strong> &mdash; it is finalized and revealed; the rank you hold then decides your wave, trainer number and airdrop. <strong>November 30</strong> &mdash; early access begins with the top 1,000. <strong>December 2</strong> &mdash; Genesis NFTs are airdropped to the top 5,000.",
+      "## What moved",
+      "The lock is now three days before launch, not a week. The airdrop lands two days after launch, not before it. Waves 2 to 4 are each an estimated one to two weeks after the wave before, and Chapter 0 follows once the early access stage is complete.",
+      "## What early access is",
+      "An alpha phase: you can hunt Yakkamon, battle and trade, and you keep your progress and resources for the official launch. The top 1,000 Founding Trainers get a feedback channel.",
+      "## What to do",
+      "Check your rank before 7:00 PM Eastern on November 25, know which line you are near, and build your buffer before the board goes dark. The full article has the wave table, the airdrop tiers and the open questions."
+    ]
+  },
+  {
     slug: "safari-zones-explained",
     category: "analysis",
     title: "You're in the Grass Now: What the Official Safari Zones Post Means for Players",
